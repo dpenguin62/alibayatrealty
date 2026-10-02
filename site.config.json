@@ -7,22 +7,33 @@
   "market-data": false
  },
  "details": {
-  "phone_display": null,
-  "phone_e164": null,
-  "email": null,
-  "job_title": null,
-  "reco_number": null,
-  "start_year": null,
+  "phone_display": "(647) 779-7919",
+  "phone_e164": "+16477797919",
+  "email": "abayat327@gmail.com",
+  "job_title": "Salesperson, REALTOR®",
+  "reco_number": "4789920",
+  "start_year": "2016",
   "experience_phrase": null,
-  "brokerage_name": null,
-  "brokerage_address_line": null,
-  "brokerage_franchise_note": null,
-  "brokerage_address": null,
+  "brokerage_name": "Century 21 Heritage Group Ltd., Brokerage",
+  "brokerage_address_line": "7330 Yonge Street, Thornhill, ON L4J 7Y7",
+  "brokerage_franchise_note": " · Independently owned and operated",
+  "brokerage_address": {
+   "streetAddress": "7330 Yonge Street",
+   "addressLocality": "Thornhill",
+   "addressRegion": "ON",
+   "postalCode": "L4J 7Y7",
+   "addressCountry": "CA"
+  },
   "brokerage_url": null,
-  "designations": null,
+  "designations": "Member, Toronto Regional Real Estate Board (TRREB)",
   "referral_disclosure": null
  },
- "approved": [],
+ "approved": [
+  "contact-channels",
+  "experience-claim",
+  "footer-disclaimer",
+  "reply-time"
+ ],
  "same_as": [],
  "site_url_confirmed": false,
  "og_image": null
