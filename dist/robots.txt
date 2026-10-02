@@ -1,0 +1,5 @@
+# Ali Bayat Realty
+User-agent: *
+Allow: /
+
+Sitemap: https://alibayatrealty.com/sitemap.xml

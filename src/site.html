@@ -1,0 +1,1886 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#faf9f5;color:#141413}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>Ali Bayat Realty</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,500;1,6..72,300;1,6..72,400&family=Public+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: editorial 12-col frame with a left label rail; stone paper, ink, one lake-teal accent; architectural elevation drawings as the brand's illustration system */
+:root{
+  --paper:#F3F4F0; --surface:#FFFFFF; --sunk:#E8EBE5; --draw:#E4E8E2; --ink:#14222A; --muted:#566369; --line:#D5DAD3;
+  --lake:#1B5659; --lake-ink:#FFFFFF; --lake-soft:#DDEAE8; --brick:#8A4731;
+  --flag:#F5DE84; --flag-ink:#574100; --ok:#2E6A48;
+  --display:"Newsreader", Georgia, "Times New Roman", serif;
+  --body:"Public Sans", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --mono:"IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+  --frame:1240px; --r:4px; --rail:200px;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --paper:#0F171A; --surface:#152024; --sunk:#1A272B; --draw:#17252A; --ink:#E4EBE9; --muted:#98A7AB; --line:#29383D;
+  --lake:#7DBBB5; --lake-ink:#0B1A1B; --lake-soft:#183134; --brick:#D8957A;
+  --flag:#4A3E12; --flag-ink:#F3DD8E; --ok:#7CC49A; color-scheme:dark }}
+:root[data-theme="dark"]{
+  --paper:#0F171A; --surface:#152024; --sunk:#1A272B; --draw:#17252A; --ink:#E4EBE9; --muted:#98A7AB; --line:#29383D;
+  --lake:#7DBBB5; --lake-ink:#0B1A1B; --lake-soft:#183134; --brick:#D8957A;
+  --flag:#4A3E12; --flag-ink:#F3DD8E; --ok:#7CC49A; color-scheme:dark }
+
+*{box-sizing:border-box}
+@media (prefers-reduced-motion: reduce){*{transition:none!important;animation:none!important;scroll-behavior:auto!important}}
+body{background:var(--paper);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--lake);outline-offset:3px;border-radius:2px}
+.wrap{max-width:var(--frame);margin-inline:auto;padding-inline:clamp(16px,4vw,48px)}
+h1,h2,h3{font-family:var(--display);font-weight:400;line-height:1.08;text-wrap:balance;margin:0;letter-spacing:-.015em}
+h1{font-size:clamp(2.4rem,5.6vw,4.6rem);font-weight:300}
+h2{font-size:clamp(1.85rem,3.4vw,2.75rem);font-weight:300}
+h3{font-size:1.3rem;line-height:1.25;font-weight:400}
+h1 em,h2 em{font-style:italic;color:var(--lake)}
+p{margin:0}
+.lede{font-size:clamp(1.08rem,1.5vw,1.2rem);color:var(--muted);max-width:56ch}
+.prose{max-width:62ch;display:grid;gap:1rem}
+.label{font-family:var(--mono);font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.label.accent{color:var(--lake)}
+.muted{color:var(--muted)}
+.small{font-size:.9rem}
+.num{font-variant-numeric:tabular-nums}
+
+/* Confirm markers */
+.tbc{background:transparent;color:inherit;padding:0}
+.show-tbc .tbc{background:var(--flag);color:var(--flag-ink);padding:0 .3em;border-radius:3px;box-decoration-break:clone;-webkit-box-decoration-break:clone}
+.show-tbc .tbc::after{content:"confirm";font-family:var(--mono);font-size:.6rem;text-transform:uppercase;letter-spacing:.08em;margin-left:.4em;opacity:.8;vertical-align:.12em}
+.tbc-note{display:none}
+.show-tbc .tbc-note{display:block;background:var(--flag);color:var(--flag-ink);border-radius:var(--r);padding:.7rem .9rem;font-size:.86rem}
+
+/* Preview bar */
+.preview{background:var(--ink);color:var(--paper);font-size:.8rem}
+.preview .wrap{display:flex;flex-wrap:wrap;gap:.4rem 1.25rem;align-items:center;justify-content:space-between;padding-block:.45rem}
+.preview label{display:inline-flex;gap:.5rem;align-items:center;cursor:pointer}
+.preview input{accent-color:var(--flag)}
+.preview a{color:var(--paper);text-underline-offset:3px}
+.preview .dot{display:inline-block;width:.5rem;height:.5rem;border-radius:50%;background:var(--flag);margin-right:.45rem}
+
+/* Header */
+.site-head{position:sticky;top:env(safe-area-inset-top,0px);z-index:30;background:color-mix(in srgb,var(--paper) 94%,transparent);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.site-head .wrap{display:flex;align-items:center;justify-content:space-between;gap:1rem;height:74px}
+.brand{display:flex;align-items:center;gap:.7rem;text-decoration:none}
+.brand .mk{width:34px;height:34px;border:1.5px solid var(--ink);display:grid;place-items:center;font-family:var(--display);font-size:1rem;letter-spacing:.02em}
+.brand .wm{display:flex;flex-direction:column;line-height:1}
+.brand b{font-family:var(--display);font-weight:400;font-size:1.4rem;letter-spacing:-.01em}
+.brand small{font-size:.58rem;letter-spacing:.36em;text-transform:uppercase;color:var(--muted);margin-top:.3rem;font-weight:600}
+.nav{display:flex;align-items:center;gap:.15rem}
+.nav a{text-decoration:none;font-size:.94rem;padding:.5rem .7rem;border-radius:3px}
+.nav a:hover{background:var(--sunk)}
+.nav a[aria-current="page"]{color:var(--lake);font-weight:600}
+.nav .talk{margin-left:.6rem}
+.menu-btn{display:none;background:none;border:1.5px solid var(--line);color:var(--ink);border-radius:3px;padding:.55rem .9rem;font:600 .9rem var(--body);cursor:pointer;min-height:44px}
+.site-head .head-talk{display:none}
+@media (max-width:1000px){.nav{display:none}.menu-btn{display:inline-flex}.site-head .head-talk{display:inline-flex}.head-actions{display:flex;gap:.5rem;align-items:center}}
+@media (max-width:340px){.site-head .head-talk{display:none}}
+[tabindex="-1"]:focus{outline:none}
+.drawer{border-top:1px solid var(--line);background:var(--paper);max-height:calc(100dvh - 74px);overflow:auto}
+.drawer nav{display:grid;padding-block:.5rem 1.5rem}
+.drawer a{text-decoration:none;font-family:var(--display);font-size:1.5rem;padding:.7rem 0;border-bottom:1px solid var(--line)}
+.drawer a.minor{font-family:var(--body);font-size:.95rem;color:var(--muted);border:0;padding:.8rem 0 0}
+.drawer .btn{margin-top:1.25rem;justify-content:center;font-family:var(--body);font-size:1rem;border-bottom:1.5px solid var(--lake)}
+
+/* Buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.55rem;font:600 .98rem var(--body);text-decoration:none;padding:.85rem 1.4rem;border-radius:3px;border:1.5px solid var(--lake);background:var(--lake);color:var(--lake-ink);cursor:pointer;transition:transform .15s ease,background .15s ease;min-height:48px}
+.btn:hover{transform:translateY(-1px)}
+.btn:disabled{opacity:.6;cursor:not-allowed;transform:none}
+.btn.ghost{background:transparent;color:var(--lake)}
+.btn.ghost:hover{background:var(--lake-soft)}
+.btn.sm{padding:.5rem 1rem;min-height:42px;font-size:.9rem}
+.link{font-weight:600;color:var(--lake);text-decoration:none;display:inline-flex;gap:.4rem;align-items:center;min-height:32px}
+.link:hover{text-decoration:underline;text-underline-offset:4px}
+.link .ar{transition:transform .15s}
+.link:hover .ar{transform:translateX(3px)}
+.row{display:flex;flex-wrap:wrap;gap:.75rem 1.5rem;align-items:center}
+
+/* Sections with label rail */
+.band{padding-block:clamp(3.5rem,8vw,6.5rem)}
+.band.tight{padding-block:clamp(2.5rem,5vw,4rem)}
+.band.surface{background:var(--surface);border-block:1px solid var(--line)}
+.railed{display:grid;grid-template-columns:var(--rail) minmax(0,1fr);gap:clamp(1.5rem,4vw,3rem)}
+.railed > .rail{padding-top:.5rem;border-top:1px solid var(--ink);align-self:start}
+.railed > .main{min-width:0;display:grid;gap:2.25rem}
+@media (max-width:860px){.railed{grid-template-columns:1fr;gap:1rem}.railed > .rail{border-top:0;padding-top:0}}
+.head-row{display:flex;justify-content:space-between;align-items:end;gap:1rem 2rem;flex-wrap:wrap}
+.head-row > div{display:grid;gap:.9rem;max-width:760px}
+
+/* Drawings */
+.dwg{position:relative;background:var(--draw);color:var(--ink);border-radius:var(--r);overflow:hidden;aspect-ratio:4/3;max-width:100%}
+.dwg svg{position:absolute;inset:0;width:100%;height:100%;display:block}
+.dwg .ttl{position:absolute;left:.8rem;top:.7rem;right:.8rem;display:flex;justify-content:space-between;gap:.5rem}
+.dwg .photo-tag{position:absolute;left:.7rem;bottom:.7rem;max-width:calc(100% - 1.4rem);display:none;font-family:var(--mono);font-size:.66rem;line-height:1.35;background:var(--flag);color:var(--flag-ink);padding:.3rem .5rem;border-radius:3px}
+.show-tbc .dwg .photo-tag{display:block}
+.dwg.wide{aspect-ratio:16/9}
+.dwg.sq{aspect-ratio:1/1}
+.dwg .grid-bg{position:absolute;inset:0;background-image:linear-gradient(color-mix(in srgb,var(--ink) 6%,transparent) 1px,transparent 1px),linear-gradient(90deg,color-mix(in srgb,var(--ink) 6%,transparent) 1px,transparent 1px);background-size:24px 24px}
+
+/* Portrait */
+.portrait{position:relative;aspect-ratio:4/5;background:var(--draw);border-radius:var(--r);overflow:hidden;max-width:100%;display:grid;place-items:center}
+.portrait .frame{position:absolute;inset:14px;border:1px solid color-mix(in srgb,var(--ink) 25%,transparent)}
+.portrait .frame::before,.portrait .frame::after{content:"";position:absolute;width:18px;height:18px;border:2px solid var(--ink)}
+.portrait .frame::before{top:-2px;left:-2px;border-right:0;border-bottom:0}
+.portrait .frame::after{bottom:-2px;right:-2px;border-left:0;border-top:0}
+.portrait .ph{text-align:center;display:grid;gap:.5rem;padding:1.5rem;position:relative}
+.portrait .ab{font-family:var(--display);font-weight:300;font-size:clamp(3.6rem,8vw,5.5rem);line-height:1;color:var(--lake)}
+.portrait .dir{font-family:var(--mono);font-size:.68rem;color:var(--muted);max-width:26ch;margin-inline:auto;line-height:1.5}
+.idcard{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:1rem 1.1rem;display:grid;gap:.25rem}
+.idcard b{font-family:var(--display);font-weight:400;font-size:1.25rem}
+
+/* Hero */
+.hero{padding-block:clamp(2.25rem,5vw,4.25rem) clamp(2.5rem,5vw,4rem)}
+.hero .grid{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(0,.85fr);gap:clamp(2rem,5vw,5rem);align-items:end}
+@media (max-width:860px){.hero .grid{grid-template-columns:1fr}}
+.hero .copy{display:grid;gap:1.5rem;align-content:end}
+.hero .areas{font-family:var(--mono);font-size:.74rem;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);display:flex;flex-wrap:wrap;gap:.2rem .9rem}
+.hero .areas a{text-decoration:none}
+.hero .areas a:hover{color:var(--lake)}
+.hero .meta{display:flex;flex-wrap:wrap;gap:.4rem 1.2rem;font-size:.88rem;color:var(--muted);padding-top:1.1rem;border-top:1px solid var(--line)}
+.hero .meta b{color:var(--ink);font-weight:600}
+.hero .side{display:grid;gap:.75rem}
+@media (max-width:860px){.hero .side{grid-template-columns:.9fr 1.1fr;align-items:end}.hero .portrait{aspect-ratio:4/5}}
+@media (max-width:480px){.hero .side{grid-template-columns:1fr 1.2fr}.hero .portrait .dir{display:none}}
+
+/* Yonge strip */
+.strip{border-block:1px solid var(--line);background:var(--draw);color:var(--ink)}
+.strip .wrap{padding-block:1.75rem 1.25rem;display:grid;gap:.75rem}
+.strip-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:thin}
+.strip svg{display:block;height:auto;width:100%;min-width:760px}
+.strip svg a{cursor:pointer}
+.strip svg a:hover .st,.strip svg a:focus .st{stroke:var(--lake)}
+.strip svg a:hover text,.strip svg a:focus text{fill:var(--lake)}
+.strip svg a:focus-visible{outline:2px solid var(--lake);outline-offset:2px}
+.strip .cap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:.5rem}
+
+/* Services */
+.svc{display:grid;grid-template-columns:1fr 1fr;border-top:1px solid var(--line)}
+.svc > article{padding:2rem 2rem 2rem 0;display:grid;gap:1.1rem;align-content:start}
+.svc > article + article{padding-left:2rem;padding-right:0;border-left:1px solid var(--line)}
+@media (max-width:760px){.svc{grid-template-columns:1fr}.svc > article{padding:1.75rem 0}.svc > article + article{padding-left:0;border-left:0;border-top:1px solid var(--line)}}
+.svc h3{font-size:1.75rem;font-weight:300}
+.mini-steps{list-style:none;margin:0;padding:0;display:grid;gap:0;counter-reset:m}
+.mini-steps li{counter-increment:m;display:grid;grid-template-columns:2.2rem 1fr;gap:.5rem;padding-block:.6rem;border-bottom:1px solid var(--line);font-size:.96rem}
+.mini-steps li::before{content:counter(m,decimal-leading-zero);font-family:var(--mono);font-size:.74rem;color:var(--lake);padding-top:.2rem}
+.unsure{display:flex;flex-wrap:wrap;gap:.5rem 1rem;align-items:center;justify-content:space-between;padding:1.1rem 1.25rem;background:var(--lake-soft);border-radius:var(--r)}
+
+/* Areas */
+.areas-grid{display:grid;grid-template-columns:minmax(0,360px) minmax(0,1fr);gap:clamp(1.5rem,4vw,3.5rem);align-items:start}
+@media (max-width:900px){.areas-grid{grid-template-columns:1fr}}
+.linemap{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:1rem;margin:0}
+.linemap svg{width:100%;height:auto;display:block;max-height:460px}
+.linemap .yl{stroke:var(--lake)}
+.linemap .br{stroke:var(--brick)}
+.linemap .road{stroke:var(--muted)}
+.linemap text{font-family:var(--body);fill:var(--ink)}
+.linemap .sub{font-family:var(--mono);fill:var(--muted)}
+.linemap .node circle{fill:var(--surface);stroke:var(--ink);stroke-width:3}
+.linemap .node{cursor:pointer}
+.linemap .node:hover circle,.linemap .node:focus circle{fill:var(--lake)}
+.linemap .node:focus-visible{outline:2px solid var(--lake);outline-offset:2px}
+.linemap figcaption{font-size:.78rem;color:var(--muted);margin-top:.4rem}
+.alist{list-style:none;margin:0;padding:0;border-top:1px solid var(--line)}
+.alist a{display:grid;grid-template-columns:120px minmax(0,1fr) auto;gap:1.25rem;align-items:center;padding-block:1rem;border-bottom:1px solid var(--line);text-decoration:none}
+.alist a:hover h3{color:var(--lake)}
+.alist .dwg{aspect-ratio:4/3}
+.alist .dwg .ttl,.alist .dwg .photo-tag{display:none!important}
+.alist h3{font-size:1.5rem;font-weight:300}
+.alist p{font-size:.92rem;color:var(--muted);margin-top:.2rem}
+.alist .go{font-family:var(--mono);font-size:.74rem;color:var(--lake)}
+@media (max-width:560px){.alist a{grid-template-columns:84px minmax(0,1fr)}.alist .go{display:none}.alist h3{font-size:1.3rem}}
+
+/* Resources teaser */
+.feature{display:grid;grid-template-columns:1.1fr 1fr;gap:clamp(1.5rem,4vw,3rem);align-items:center;text-decoration:none;padding-bottom:2rem;border-bottom:1px solid var(--line)}
+.feature:hover h3{text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:5px}
+.feature h3{font-size:clamp(1.6rem,3vw,2.2rem);font-weight:300}
+.feature .in{display:grid;gap:.9rem}
+@media (max-width:760px){.feature{grid-template-columns:1fr}}
+.teasers{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem}
+@media (max-width:860px){.teasers{grid-template-columns:1fr}}
+.teaser{display:grid;gap:.5rem;text-decoration:none;align-content:start}
+.teaser h3{font-size:1.2rem}
+.teaser:hover h3{text-decoration:underline;text-underline-offset:4px;text-decoration-thickness:1px}
+.teaser p{font-size:.92rem;color:var(--muted)}
+.status{display:inline-flex;font-family:var(--mono);font-size:.64rem;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);border:1px solid var(--line);border-radius:2px;padding:.1rem .4rem;width:max-content}
+.status.pub{color:var(--ok);border-color:color-mix(in srgb,var(--ok) 40%,transparent)}
+
+/* Trust */
+.principles{display:grid;grid-template-columns:repeat(2,1fr);gap:0;border-top:1px solid var(--line)}
+.principles > div{padding:1.5rem 1.5rem 1.5rem 0;border-bottom:1px solid var(--line);display:grid;gap:.4rem;align-content:start}
+.principles > div:nth-child(even){padding-left:1.5rem;border-left:1px solid var(--line)}
+@media (max-width:700px){.principles{grid-template-columns:1fr}.principles > div:nth-child(even){padding-left:0;border-left:0}}
+.principles h3{font-size:1.25rem}
+.principles p{color:var(--muted);font-size:.95rem;max-width:46ch}
+.verify{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem}
+@media (max-width:900px){.verify{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:480px){.verify{grid-template-columns:1fr}}
+.verify > div{background:var(--paper);border:1px solid var(--line);border-radius:var(--r);padding:1.1rem;display:grid;gap:.35rem;align-content:start}
+.band.surface .verify > div{background:var(--paper)}
+.verify b{font-family:var(--display);font-weight:400;font-size:1.15rem}
+.verify p{font-size:.88rem;color:var(--muted)}
+
+/* CTA band */
+.cta-band{background:var(--lake);color:var(--lake-ink)}
+.cta-band .wrap{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:2rem;align-items:center;padding-block:clamp(3rem,6vw,4.5rem)}
+.cta-band h2{color:var(--lake-ink)}
+.cta-band h2 em{color:var(--lake-ink);opacity:.8}
+.cta-band p{opacity:.9;margin-top:.8rem;max-width:52ch}
+.cta-band .btn{background:var(--lake-ink);color:var(--lake);border-color:var(--lake-ink)}
+.cta-band .row{justify-content:flex-end}
+.cta-band .alt{color:var(--lake-ink);font-size:.92rem;opacity:.9}
+@media (max-width:760px){.cta-band .wrap{grid-template-columns:1fr}.cta-band .row{justify-content:flex-start}}
+
+/* Page head */
+.page-head{padding-block:clamp(2.5rem,6vw,4.5rem) clamp(2rem,4vw,3rem);border-bottom:1px solid var(--line)}
+.page-head .wrap{display:grid;gap:1.1rem}
+.page-head.split .wrap{grid-template-columns:minmax(0,1.3fr) minmax(0,.7fr);gap:clamp(1.5rem,4vw,4rem);align-items:end}
+.page-head.split .wrap > div{display:grid;gap:1.1rem;min-width:0}
+@media (max-width:860px){.page-head.split .wrap{grid-template-columns:1fr}}
+.crumbs{font-size:.84rem;color:var(--muted);display:flex;gap:.5rem;flex-wrap:wrap}
+.crumbs a{text-decoration:none}
+.crumbs a:hover{text-decoration:underline}
+
+/* Timeline */
+.timeline{display:grid;grid-template-columns:repeat(4,1fr);gap:0;position:relative}
+.timeline::before{content:"";position:absolute;left:0;right:0;top:9px;height:2px;background:var(--line)}
+.phase{position:relative;padding-right:1.25rem;display:grid;gap:.7rem;align-content:start}
+.phase .pt{width:20px;height:20px;border-radius:50%;background:var(--paper);border:2px solid var(--lake);position:relative;z-index:1}
+.phase:first-child .pt{background:var(--lake)}
+.phase h3{font-size:1.4rem}
+.phase ul{list-style:none;margin:0;padding:0;display:grid;gap:.35rem}
+.phase li{font-size:.92rem;color:var(--muted)}
+.phase li button{all:unset;cursor:pointer;color:var(--ink);border-bottom:1px solid var(--line);line-height:1.5}
+.phase li button:hover,.phase li button:focus-visible{color:var(--lake);border-color:var(--lake)}
+.phase li button:focus-visible{outline:2px solid var(--lake);outline-offset:3px;border-radius:2px}
+@media (max-width:820px){.timeline{grid-template-columns:1fr;gap:1.5rem;padding-left:2rem}.timeline::before{left:9px;right:auto;top:0;bottom:0;width:2px;height:auto}.phase{padding-right:0}.phase .pt{position:absolute;left:-2rem;top:.2rem}}
+
+.steps{list-style:none;margin:0;padding:0;display:grid}
+.steps li{display:grid;grid-template-columns:var(--rail) minmax(0,1fr);gap:clamp(1rem,3vw,3rem);padding-block:1.6rem;border-top:1px solid var(--line);scroll-margin-top:110px}
+.steps li:last-child{border-bottom:1px solid var(--line)}
+.steps .k{display:grid;gap:.25rem;align-content:start}
+.steps .k span{font-family:var(--mono);font-size:.72rem;color:var(--lake);text-transform:uppercase;letter-spacing:.06em}
+.steps h3{font-size:1.35rem}
+.steps .d{display:grid;gap:.6rem;max-width:62ch}
+.steps .d p{color:var(--muted)}
+.steps .ask{font-size:.9rem;border-left:2px solid var(--lake);padding-left:.8rem;color:var(--ink)}
+@media (max-width:700px){.steps li{grid-template-columns:1fr;gap:.6rem}}
+.flash{animation:flash 1.2s ease}
+@keyframes flash{0%{background:var(--lake-soft)}100%{background:transparent}}
+
+.two{display:grid;grid-template-columns:minmax(0,1fr) 340px;gap:clamp(2rem,5vw,4rem);align-items:start}
+@media (max-width:920px){.two{grid-template-columns:1fr}}
+.aside{position:sticky;top:calc(env(safe-area-inset-top,0px) + 100px);display:grid;gap:1rem}
+@media (max-width:920px){.aside{position:static}}
+.box{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:1.4rem;display:grid;gap:.85rem;align-content:start}
+.box h3{font-size:1.2rem}
+.box p{font-size:.94rem;color:var(--muted)}
+.box.tint{background:var(--lake-soft);border-color:transparent}
+.plain{margin:0;padding-left:1.1rem;display:grid;gap:.4rem;font-size:.94rem}
+.nolist{list-style:none;padding:0;margin:0;display:grid;gap:.5rem}
+
+/* Estimator */
+.calc{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+@media (max-width:760px){.calc{grid-template-columns:1fr}}
+.calc .inputs{padding:1.5rem;display:grid;gap:1rem;border-right:1px solid var(--line);align-content:start}
+@media (max-width:760px){.calc .inputs{border-right:0;border-bottom:1px solid var(--line)}}
+.calc .out{padding:1.5rem;display:grid;gap:.25rem;align-content:start}
+.calc .line{display:flex;justify-content:space-between;gap:1rem;padding-block:.55rem;border-bottom:1px solid var(--line);font-size:.95rem;font-variant-numeric:tabular-nums}
+.calc .line.total{border-bottom:0;padding-top:1rem;font-family:var(--display);font-size:1.6rem;align-items:baseline}
+.calc .line.total span:first-child{font-family:var(--body);font-size:.9rem;font-weight:600}
+.money{position:relative}
+.money span{position:absolute;left:.85rem;top:50%;transform:translateY(-50%);color:var(--muted)}
+.money input{padding-left:1.7rem!important;font-variant-numeric:tabular-nums}
+.check{display:flex;gap:.6rem;align-items:flex-start;font-size:.94rem;cursor:pointer}
+.check input{width:20px;height:20px;accent-color:var(--lake);margin-top:.15rem;flex:none}
+.seg2{display:grid;grid-template-columns:1fr 1fr;gap:.5rem;border:0;margin:0;padding:0}
+.seg2 legend,.seg legend{font-size:.82rem;font-weight:600;margin-bottom:.4rem;padding:0}
+.seg2 input,.seg input{position:absolute;opacity:0;pointer-events:none}
+.seg2 label,.seg label{display:grid;place-items:center;text-align:center;border:1.5px solid var(--line);border-radius:3px;padding:.65rem .5rem;min-height:48px;cursor:pointer;font-weight:600;font-size:.9rem;background:var(--paper);line-height:1.25}
+.seg2 input:checked + label,.seg input:checked + label{border-color:var(--lake);background:var(--lake-soft);color:var(--lake)}
+.seg2 input:focus-visible + label,.seg input:focus-visible + label{outline:2px solid var(--lake);outline-offset:2px}
+.seg{display:grid;grid-template-columns:repeat(3,1fr);gap:.5rem;border:0;margin:0;padding:0}
+
+/* Fields */
+.field{display:grid;gap:.35rem;min-width:0}
+.field label{font-size:.82rem;font-weight:600}
+.field input,.field select,.field textarea{width:100%;font:400 1rem var(--body);color:var(--ink);background:var(--paper);border:1.5px solid var(--line);border-radius:3px;padding:.75rem .85rem;min-height:48px}
+.field textarea{min-height:130px;resize:vertical}
+.field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--lake);box-shadow:0 0 0 3px var(--lake-soft)}
+.err{color:var(--brick);font-size:.84rem}
+.field .check{font-size:.94rem;font-weight:400}
+.field .check input{width:20px;height:20px;min-height:0;padding:0;flex:none}
+.check > span{min-width:0}
+
+/* Neighbourhood detail */
+.a-head{padding-block:clamp(2rem,5vw,3.5rem) 0}
+.a-head .wrap{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(1.5rem,4vw,4rem);align-items:end}
+.a-head .wrap > div{display:grid;gap:1rem;min-width:0}
+@media (max-width:860px){.a-head .wrap{grid-template-columns:1fr}}
+.a-head .eyebrow{display:block;margin-bottom:-.4rem;line-height:1.08;font-family:var(--mono);font-size:.78rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);font-weight:400}
+.a-head h1 small{display:block;font-family:var(--mono);font-size:.78rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:.6rem;font-weight:400}
+.jump{position:sticky;top:calc(env(safe-area-inset-top,0px) + 74px);z-index:20;background:color-mix(in srgb,var(--paper) 95%,transparent);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border-block:1px solid var(--line);margin-top:2.5rem}
+.jump .wrap{display:flex;gap:.25rem;overflow-x:auto;scrollbar-width:none;padding-block:.4rem}
+.jump .wrap::-webkit-scrollbar{display:none}
+.jump button{flex:none;border:0;background:none;font:500 .88rem var(--body);color:var(--muted);padding:.55rem .8rem;border-radius:3px;cursor:pointer;min-height:40px}
+.jump button:hover{color:var(--ink);background:var(--sunk)}
+.facts{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;padding-block:1.25rem;border-bottom:1px solid var(--line)}
+@media (max-width:760px){.facts{grid-template-columns:repeat(2,1fr)}}
+.facts dt{font-family:var(--mono);font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.facts dd{margin:.25rem 0 0;font-family:var(--display);font-size:1.12rem}
+.asec{display:grid;grid-template-columns:var(--rail) minmax(0,1fr);gap:clamp(1rem,3vw,3rem);padding-block:2.25rem;border-bottom:1px solid var(--line);scroll-margin-top:150px}
+@media (max-width:760px){.asec{grid-template-columns:1fr;gap:.8rem}}
+.asec h2{font-size:1.6rem}
+.asec .body{display:grid;gap:1rem;max-width:66ch;min-width:0}
+.pull{font-family:var(--display);font-size:clamp(1.3rem,2.4vw,1.65rem);font-weight:300;font-style:italic;line-height:1.35;border-left:2px solid var(--lake);padding-left:1.1rem}
+.types{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
+@media (max-width:560px){.types{grid-template-columns:1fr 1fr}}
+.types figure{margin:0;display:grid;gap:.4rem}
+.types figcaption{font-size:.84rem}
+.types .dwg .ttl,.types .dwg .photo-tag{display:none!important}
+.bs{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+@media (max-width:700px){.bs{grid-template-columns:1fr}}
+.ticks{list-style:none;padding:0;margin:0;display:grid;gap:.55rem}
+.ticks li{display:grid;grid-template-columns:1rem 1fr;gap:.6rem;align-items:baseline;font-size:.96rem}
+.ticks li::before{content:"";width:.5rem;height:.5rem;border:1.5px solid var(--lake);border-radius:50%}
+.slot{border:1.5px dashed var(--line);border-radius:var(--r);padding:1.25rem;display:grid;gap:1rem;background:var(--surface)}
+.tiles{display:grid;grid-template-columns:repeat(4,1fr);gap:.75rem}
+@media (max-width:640px){.tiles{grid-template-columns:repeat(2,1fr)}}
+.tiles div{background:var(--sunk);border-radius:3px;padding:.8rem;display:grid;gap:.2rem}
+.tiles small{font-size:.7rem;color:var(--muted);text-transform:uppercase;letter-spacing:.07em;font-weight:600}
+.tiles b{font-family:var(--mono);font-weight:500;font-size:1.05rem;color:var(--muted)}
+.pill{display:inline-flex;align-items:center;gap:.4rem;font-size:.74rem;font-weight:600;padding:.25rem .6rem;border-radius:99px;background:var(--sunk);color:var(--muted);width:max-content}
+.pill::before{content:"";width:.45rem;height:.45rem;border-radius:50%;background:var(--muted)}
+
+/* Listings */
+.search{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:1.25rem;display:grid;gap:1rem}
+.tabs{display:inline-flex;background:var(--sunk);border-radius:3px;padding:3px;width:max-content}
+.tabs button{border:0;background:none;font:600 .9rem var(--body);color:var(--muted);padding:.5rem 1rem;border-radius:2px;cursor:pointer;min-height:40px}
+.tabs button[aria-selected="true"]{background:var(--surface);color:var(--ink);box-shadow:0 1px 2px rgba(0,0,0,.08)}
+.filters{display:grid;grid-template-columns:2fr repeat(4,1fr) auto;gap:.75rem;align-items:end}
+@media (max-width:1000px){.filters{grid-template-columns:1fr 1fr}.filters .q{grid-column:1/-1}.filters .btn{grid-column:1/-1}}
+.banner{display:flex;gap:.75rem 1rem;align-items:flex-start;flex-wrap:wrap;border:1px solid var(--line);border-left:3px solid var(--brick);background:var(--surface);border-radius:3px;padding:1rem 1.25rem}
+.banner p{font-size:.93rem;flex:1 1 320px}
+.lgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem}
+@media (max-width:980px){.lgrid{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:600px){.lgrid{grid-template-columns:1fr}}
+.lcard{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;display:grid}
+.lcard .dwg{border-radius:0;aspect-ratio:3/2}
+.lcard .dwg svg{opacity:.45}
+.lcard .dwg .ttl,.lcard .dwg .photo-tag{display:none!important}
+.lcard .flag{position:absolute;top:.7rem;left:.7rem;font-family:var(--mono);font-size:.64rem;text-transform:uppercase;letter-spacing:.06em;background:var(--surface);color:var(--muted);padding:.25rem .5rem;border-radius:2px;border:1px solid var(--line);z-index:1}
+.lcard .in{padding:1rem 1.1rem 1.2rem;display:grid;gap:.45rem}
+.lcard .price{font-family:var(--display);font-size:1.45rem}
+.specs{display:flex;flex-wrap:wrap;gap:.3rem 1rem;font-size:.85rem;color:var(--muted);border-top:1px solid var(--line);padding-top:.6rem;font-variant-numeric:tabular-nums}
+.ph{color:var(--muted);font-family:var(--mono);font-size:.88em}
+
+/* Resources */
+.chips{display:flex;flex-wrap:wrap;gap:.5rem}
+.chip{border:1.5px solid var(--line);background:var(--surface);color:var(--ink);font:600 .86rem var(--body);padding:.5rem .95rem;border-radius:99px;cursor:pointer;min-height:40px}
+.chip[aria-pressed="true"]{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+.kc-cat{display:grid;grid-template-columns:var(--rail) minmax(0,1fr);gap:clamp(1rem,3vw,3rem);padding-block:2rem;border-top:1px solid var(--ink)}
+@media (max-width:760px){.kc-cat{grid-template-columns:1fr;gap:.75rem}}
+.kc-cat h2{font-size:1.5rem}
+.kc-cat .intro p{font-size:.9rem;color:var(--muted);margin-top:.4rem}
+.arts{display:grid;gap:0}
+.art{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:.3rem 1.25rem;padding-block:1rem;border-bottom:1px solid var(--line);text-decoration:none;align-items:baseline}
+.art:first-child{padding-top:0}
+.art h3{font-size:1.2rem}
+a.art:hover h3{color:var(--lake)}
+.art p{font-size:.9rem;color:var(--muted);grid-column:1}
+.art .url{font-family:var(--mono);font-size:.7rem;color:var(--muted);grid-column:1;overflow-wrap:anywhere}
+.report{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:1.5rem;display:grid;gap:1.1rem}
+.report .top{display:flex;justify-content:space-between;flex-wrap:wrap;gap:.5rem;align-items:baseline;border-bottom:1px solid var(--line);padding-bottom:.9rem}
+
+/* Article */
+.article-body{max-width:68ch;display:grid;gap:1.2rem}
+.article-body h2{font-size:1.7rem;margin-top:1.2rem}
+.article-body p{font-size:1.05rem}
+.tbl-wrap{overflow-x:auto;border:1px solid var(--line);border-radius:var(--r);background:var(--surface)}
+table{border-collapse:collapse;width:100%;font-size:.9rem}
+th,td{text-align:left;padding:.7rem 1rem;border-bottom:1px solid var(--line);vertical-align:top}
+th{font-size:.72rem;letter-spacing:.07em;text-transform:uppercase;color:var(--muted);font-weight:600;background:var(--sunk)}
+td.r,th.r{text-align:right;font-variant-numeric:tabular-nums}
+.wide-tbl table{min-width:720px}
+.byline{display:flex;gap:.9rem;align-items:center}
+.byline .av{width:44px;height:44px;border-radius:50%;background:var(--draw);display:grid;place-items:center;font-family:var(--display);color:var(--lake);flex:none}
+code,.code{font-family:var(--mono);font-size:.8rem}
+pre.code{background:var(--sunk);border-radius:var(--r);padding:1rem;overflow-x:auto;margin:0;line-height:1.55}
+
+/* Contact */
+.form{display:grid;gap:1.1rem}
+.form .r2{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+@media (max-width:600px){.form .r2{grid-template-columns:1fr}}
+.sent{border:1px solid var(--line);border-left:3px solid var(--ok);background:var(--surface);border-radius:3px;padding:1.25rem;display:grid;gap:.6rem}
+.clines{display:grid;gap:0}
+.clines > div{display:grid;gap:.15rem;padding-block:.8rem;border-bottom:1px solid var(--line)}
+.clines > div:last-child{border-bottom:0}
+.clines small{font-family:var(--mono);font-size:.66rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+
+.checklist{list-style:none;padding:0;margin:0;display:grid;gap:.55rem}
+.checklist li{display:grid;grid-template-columns:1.3rem 1fr;gap:.6rem;font-size:.95rem}
+.checklist li::before{content:"";width:1rem;height:1rem;border:1.5px solid var(--muted);border-radius:2px;transform:translateY(.25em)}
+
+/* Footer */
+footer{background:var(--surface);border-top:1px solid var(--line);padding-block:3.5rem 2rem;font-size:.92rem}
+.fgrid{display:grid;grid-template-columns:1.5fr repeat(3,1fr);gap:2rem}
+@media (max-width:860px){.fgrid{grid-template-columns:1fr 1fr}}
+@media (max-width:480px){.fgrid{grid-template-columns:1fr}}
+.fgrid h4{font-family:var(--mono);font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin:0 0 .8rem;font-weight:400}
+.fgrid ul{list-style:none;padding:0;margin:0;display:grid;gap:.5rem}
+.fgrid a{text-decoration:none}
+.fgrid a:hover{text-decoration:underline}
+.brokerage{border:1px solid var(--line);border-radius:3px;padding:1rem;display:grid;gap:.25rem;background:var(--paper);font-size:.85rem}
+.legal{margin-top:2.5rem;padding-top:1.5rem;border-top:1px solid var(--line);display:grid;gap:.7rem;font-size:.8rem;color:var(--muted)}
+.legal .links{display:flex;flex-wrap:wrap;gap:.5rem 1.25rem}
+.legal a{text-decoration:none}
+.legal a:hover{text-decoration:underline}
+
+/* Mobile CTA bar */
+.mbar{position:fixed;left:0;right:0;bottom:0;z-index:40;background:var(--surface);border-top:1px solid var(--line);padding:.6rem 16px calc(.6rem + env(safe-area-inset-bottom,0px));display:none;gap:.75rem;align-items:center;justify-content:space-between;box-shadow:0 -6px 20px rgba(0,0,0,.06);transform:translateY(110%);transition:transform .25s ease}
+.mbar.on{transform:none}
+.mbar span{font-size:.88rem;color:var(--muted);line-height:1.3}
+@media (max-width:760px){.mbar{display:flex}footer{padding-bottom:6rem}}
+
+.skip{position:absolute;left:-9999px}
+.skip:focus{left:1rem;top:1rem;z-index:99;background:var(--surface);padding:.5rem 1rem}
+.stack{display:grid;gap:1.25rem}
+
+/* Invest vertical: extensions of existing patterns only */
+.svc.three{grid-template-columns:repeat(3,minmax(0,1fr))}
+.svc.three > article{padding-right:1.75rem}
+.svc.three > article + article{padding-left:1.75rem;padding-right:1.75rem}
+.svc.three > article:last-child{padding-right:0}
+@media (max-width:1080px){.svc.three{grid-template-columns:1fr}.svc.three > article,.svc.three > article + article{padding:1.75rem 0}.svc.three > article + article{border-left:0;border-top:1px solid var(--line)}}
+.seg.four{grid-template-columns:repeat(4,1fr)}
+@media (max-width:560px){.seg.four{grid-template-columns:repeat(2,1fr)}}
+button.link{background:none;border:0;padding:0;font:600 1rem var(--body);cursor:pointer}
+.pct{position:relative}
+.pct span{position:absolute;right:.85rem;top:50%;transform:translateY(-50%);color:var(--muted)}
+.pct input{padding-right:2rem!important;font-variant-numeric:tabular-nums}
+.calc .r2{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+@media (max-width:420px){.calc .r2{grid-template-columns:1fr}}
+.calc .grp{font-family:var(--mono);font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);padding-top:.4rem;border-top:1px solid var(--line)}
+.calc .grp:first-child{border-top:0;padding-top:0}
+.calc .line span:last-child{white-space:nowrap}
+.calc .line.sub{font-weight:600}
+.calc .kpis{display:grid;grid-template-columns:1fr 1fr;gap:.75rem;margin-top:.9rem}
+.calc .kpis div{background:var(--sunk);border-radius:3px;padding:.8rem;display:grid;gap:.15rem}
+.calc .kpis small{font-size:.7rem;color:var(--muted);text-transform:uppercase;letter-spacing:.07em;font-weight:600}
+.calc .kpis b{font-family:var(--display);font-weight:400;font-size:1.45rem;font-variant-numeric:tabular-nums}
+.calc .neg{color:var(--brick)}
+.timeline.t6{grid-template-columns:repeat(6,1fr)}
+.timeline.t6 .phase h3{font-size:1.2rem}
+@media (max-width:820px){.timeline.t6{grid-template-columns:1fr}}
+.verify.v3{grid-template-columns:repeat(3,1fr)}
+@media (max-width:900px){.verify.v3{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:480px){.verify.v3{grid-template-columns:1fr}}
+.types.inv figure{align-content:start}
+.types.inv figcaption{display:grid;gap:.15rem}
+.types.inv figcaption b{font-family:var(--display);font-weight:400;font-size:1.1rem}
+.types.inv figcaption span{color:var(--muted);font-size:.84rem;line-height:1.45}
+@media (max-width:560px){.types.inv{grid-template-columns:1fr 1fr}}
+article.teaser:hover h3{text-decoration:none}
+.railed .two .steps li{grid-template-columns:120px minmax(0,1fr)}
+@media (max-width:700px){.railed .two .steps li{grid-template-columns:1fr}}
+.hp{position:absolute;left:-10000px;width:1px;height:1px;overflow:hidden}
+.req-note{border:1px solid var(--line);border-left:3px solid var(--lake);background:var(--surface);border-radius:3px;padding:.9rem 1.1rem;font-size:.92rem}
+.cta-band .btn.ghost{background:transparent;color:var(--lake-ink);border-color:var(--lake-ink)}
+.cta-band .btn.ghost:hover{background:color-mix(in srgb,var(--lake-ink) 12%,transparent)}
+</style>
+
+<a class="skip" href="#main">Skip to content</a>
+
+<div class="preview" role="region" aria-label="Concept preview controls" data-internal>
+  <div class="wrap">
+    <span><span class="dot" aria-hidden="true"></span>Version 2 · design review. Highlighted items need Ali's confirmation.</span>
+    <span class="row" style="gap:1.25rem">
+      <label for="tbc-toggle"><input type="checkbox" id="tbc-toggle" checked> Highlight items to confirm</label>
+      <a href="#site-plan">Site plan &amp; launch notes</a>
+    </span>
+  </div>
+</div>
+
+<header class="site-head">
+  <div class="wrap">
+    <a class="brand" href="#home" aria-label="Ali Bayat Realty, home"><span class="mk" aria-hidden="true">AB</span><span class="wm"><b>Ali Bayat</b><small>Realty</small></span></a>
+    <nav class="nav" aria-label="Main">
+      <a href="#home">Home</a>
+      <a href="#buy">Buy</a>
+      <a href="#sell">Sell</a>
+      <a href="#invest">Invest</a>
+      <a href="#neighbourhoods">Neighbourhoods</a>
+      <a href="#resources">Resources</a>
+      <a href="#about">About</a>
+      <a class="btn sm talk" href="#contact" data-nav="contact" style="color:var(--lake-ink)">Talk to Ali</a>
+    </nav>
+    <div class="head-actions">
+      <a class="btn sm head-talk" href="#contact" style="color:var(--lake-ink)">Talk to Ali</a>
+      <button class="menu-btn" id="menu-btn" aria-expanded="false" aria-controls="drawer">Menu</button>
+    </div>
+  </div>
+  <div class="drawer" id="drawer" hidden>
+    <nav class="wrap" aria-label="Mobile">
+      <a href="#home">Home</a>
+      <a href="#buy">Buy</a>
+      <a href="#sell">Sell</a>
+      <a href="#invest">Invest</a>
+      <a href="#neighbourhoods">Neighbourhoods</a>
+      <a href="#resources">Resources</a>
+      <a href="#about">About Ali</a>
+      <a href="#contact">Contact</a>
+      <a class="btn" href="#contact" style="color:var(--lake-ink)">Talk to Ali</a>
+      <a class="minor" href="#listings" data-requires="idx">Listing search (preview)</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+<!-- ============ HOME ============ -->
+<div class="page" data-page="home" data-title="Toronto & GTA Real Estate Agent | Ali Bayat Realty">
+  <section class="hero">
+    <div class="wrap grid">
+      <div class="copy">
+        <nav class="areas" aria-label="Areas served"><a href="#north-york">North York</a><a href="#thornhill">Thornhill</a><a href="#richmond-hill">Richmond Hill</a><a href="#vaughan">Vaughan</a><a href="#toronto">Toronto</a></nav>
+        <h1 tabindex="-1">Clear advice for buying and selling a home <em>in the GTA.</em></h1>
+        <p class="lede">I'm Ali Bayat, a real estate agent working across Toronto and York Region. I help buyers and sellers understand the market, see the real numbers, and make decisions they're comfortable with.</p>
+        <div class="row">
+          <a class="btn" href="#contact">Talk to Ali</a>
+          <a class="link" href="#buy">Buy a home <span class="ar" aria-hidden="true">→</span></a>
+          <a class="link" href="#sell">Sell a home <span class="ar" aria-hidden="true">→</span></a>
+        </div>
+        <div class="meta"><span><b>English &amp; Farsi</b></span><span><mark class="tbc" data-tpl="{job_title} · {brokerage_name}">Sales Representative · [Brokerage name], Brokerage</mark></span></div>
+      </div>
+      <div class="side">
+        <div class="portrait" role="img" aria-label="Placeholder for Ali Bayat's professional portrait">
+          <span class="frame" aria-hidden="true"></span>
+          <div class="ph"><span class="ab">AB</span><span class="dir">Portrait to come: natural light, on a North York street, business casual</span></div>
+        </div>
+        <div class="idcard"><b>Ali Bayat</b><span class="small muted">Real estate agent, Toronto &amp; York Region</span><span class="small muted"><mark class="tbc" data-tpl="Real estate since {start_year}">Real estate since [year]</mark></span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="strip" aria-labelledby="strip-t">
+    <div class="wrap">
+      <div class="strip-scroll" data-strip></div>
+      <div class="cap"><span class="label" id="strip-t">Where I work · housing along the Yonge corridor, south to north</span><span class="label">Tap an area</span></div>
+    </div>
+  </section>
+
+  <section class="band">
+    <div class="wrap railed">
+      <div class="rail"><span class="label">How I help</span></div>
+      <div class="main">
+        <h2>Buying, selling and investing are different jobs. <em>Each needs a plan.</em></h2>
+        <div class="svc three">
+          <article>
+            <h3>Buying</h3>
+            <ol class="mini-steps"><li>Set a budget that includes closing costs</li><li>Compare areas on what matters to you</li><li>Evaluate each home before you commit</li><li>Offer with a clear strategy and limits</li></ol>
+            <div class="row"><a class="link" href="#buy">How buying works <span class="ar" aria-hidden="true">→</span></a><a class="link" href="#contact" data-interest="buy">Start your home search <span class="ar" aria-hidden="true">→</span></a></div>
+          </article>
+          <article>
+            <h3>Selling</h3>
+            <ol class="mini-steps"><li>Price from real comparable sales</li><li>Prepare with a practical fix-or-skip list</li><li>Launch with a planned first week</li><li>Negotiate terms as well as price</li></ol>
+            <div class="row"><a class="link" href="#sell">How selling works <span class="ar" aria-hidden="true">→</span></a><a class="link" href="#contact" data-interest="sell">Discuss selling your home <span class="ar" aria-hidden="true">→</span></a></div>
+          </article>
+          <article>
+            <h3>Investing</h3>
+            <p class="muted small">Evaluate income-producing properties with a focus on the numbers.</p>
+            <ol class="mini-steps"><li>Estimate realistic rental income</li><li>Account for every operating cost</li><li>Model financing and cash flow</li><li>Weigh the risks before you commit</li></ol>
+            <div class="row"><a class="link" href="#invest">Explore investment properties <span class="ar" aria-hidden="true">→</span></a></div>
+          </article>
+        </div>
+        <div class="unsure"><span>Not sure yet whether to buy, sell, or wait?</span><a class="link" href="#contact" data-interest="question">Discuss your move <span class="ar" aria-hidden="true">→</span></a></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="band surface">
+    <div class="wrap railed">
+      <div class="rail"><span class="label">Local knowledge</span></div>
+      <div class="main">
+        <div class="head-row"><div><h2>Most of my market sits along <em>one street.</em></h2><p class="lede">Yonge Street runs from downtown through North York, Thornhill and Richmond Hill. Vaughan sits to the west, linked by subway and Highway 7. Each area works differently for buyers and sellers.</p></div></div>
+        <div class="areas-grid">
+          <figure class="linemap" data-linemap></figure>
+          <ul class="alist" data-alist></ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="band">
+    <div class="wrap railed">
+      <div class="rail"><span class="label">Guides</span></div>
+      <div class="main">
+        <a class="feature" href="#guide-land-transfer-tax">
+          <div class="dwg wide" data-dwg="strip2" data-noframe><span class="grid-bg"></span></div>
+          <div class="in"><span class="label accent">Buying guide · with calculator</span><h3>Land transfer tax: why the same price costs more to close in North York than in Vaughan</h3><p class="muted">Toronto adds its own tax on top of Ontario's. Here's how both work, and a calculator to estimate yours.</p><span class="status pub">Published<mark class="tbc" data-note="ltt-guide-review"> · draft for Ali's review</mark></span></div>
+        </a>
+        <div class="teasers">
+          <a class="teaser" href="#resources"><span class="label accent">Selling guide</span><h3>What's worth fixing before you list</h3><p>Which repairs pay off and which don't, from someone who works with contractors every week.</p><span class="status">Planned</span></a>
+          <a class="teaser" href="#resources"><span class="label accent">Market insights</span><h3>Monthly market notes: North York &amp; York Region</h3><p>Prices, sales and days on market by area, once a data source is connected.</p><span class="status">Planned</span></a>
+          <a class="teaser" href="#resources"><span class="label accent">Real estate tips</span><h3>How to read a condo status certificate</h3><p>The pages that matter and the red flags to look for.</p><span class="status">Planned</span></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="band surface">
+    <div class="wrap railed">
+      <div class="rail"><span class="label">How I work</span></div>
+      <div class="main">
+        <h2>What you can expect, <em>and what you can check.</em></h2>
+        <div class="principles">
+          <div><h3>Numbers first</h3><p>Comparable sales, carrying costs and closing costs laid out plainly before you decide anything.</p></div>
+          <div><h3>Straight answers</h3><p>If a property or a price doesn't make sense, I'll tell you, even when it isn't what you hoped to hear.</p></div>
+          <div><h3>Business-minded negotiation</h3><p>Years of managing budgets and negotiating with suppliers taught me to protect terms and timelines as well as price.</p></div>
+          <div><h3>Practical about houses</h3><p>Regular work with contractors means I can help you think through repairs, renovation costs and who to call.</p></div>
+        </div>
+        <div class="row"><a class="link" href="#about">More about how I work <span class="ar" aria-hidden="true">→</span></a></div>
+        <div class="verify">
+          <div><span class="label">Registration</span><b>RECO registrant</b><p><mark class="tbc" data-tpl="Registration no. {reco_number}">Registration no. [000000]</mark>. Every Ontario agent can be looked up on <a href="https://www.reco.on.ca" rel="noopener">RECO's public register</a>.</p></div>
+          <div><span class="label">Brokerage</span><b><mark class="tbc" data-tpl="{brokerage_name}">[Brokerage name]</mark></b><p>Ali works through a registered brokerage, as Ontario law requires.</p></div>
+          <div><span class="label">Languages</span><b>English &amp; Farsi</b><p>Meetings, documents explained and negotiations handled in either language.</p></div>
+          <div><span class="label">Client reviews</span><b>Coming</b><p>Only verified reviews from real clients will be shown here, with a link to their source.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-band">
+    <div class="wrap">
+      <div><h2>Planning a move in the next year? <em>Start with a conversation.</em></h2><p>A short call is usually enough to map out your options. No obligation, in English or Farsi.</p></div>
+      <div class="row"><a class="btn" href="#contact">Talk to Ali</a><span class="alt"><mark class="tbc" data-tpl="{phone_display}">(416) 000-0000</mark></span></div>
+    </div>
+  </section>
+</div>
+
+<!-- ============ ABOUT ============ -->
+<div class="page" data-page="about" data-title="About Ali Bayat | GTA Real Estate Agent" hidden>
+  <header class="page-head split"><div class="wrap">
+    <div>
+      <nav class="crumbs" aria-label="Breadcrumb"><a href="#home">Home</a><span aria-hidden="true">/</span><span>About</span></nav>
+      <h1 tabindex="-1">Hi, I'm Ali. <em>Here's how I work.</em></h1>
+      <p class="lede">A GTA real estate agent with a background in business operations, a habit of explaining things plainly, and clients in two languages.</p>
+      <div class="row"><a class="btn" href="#contact">Talk to Ali</a></div>
+    </div>
+    <div class="portrait" role="img" aria-label="Placeholder for Ali Bayat's professional portrait"><span class="frame" aria-hidden="true"></span><div class="ph"><span class="ab">AB</span><span class="dir">Portrait to come: head and shoulders, relaxed, outdoors in the GTA</span></div></div>
+  </div></header>
+  <section class="band">
+    <div class="wrap two">
+      <div class="stack" style="gap:0">
+        <div class="asec"><h2>In short</h2><div class="body">
+          <dl class="facts" style="border:0;padding:0">
+            <div><dt>Works in</dt><dd>Toronto &amp; York Region</dd></div>
+            <div><dt>Languages</dt><dd>English, Farsi</dd></div>
+            <div><dt>In real estate</dt><dd><mark class="tbc" data-tpl="Since {start_year}">Since [year]</mark></dd></div>
+            <div><dt>Registered as</dt><dd><mark class="tbc" data-tpl="{job_title}">Sales Representative</mark></dd></div>
+          </dl>
+        </div></div>
+        <div class="asec"><h2>My story</h2><div class="body">
+          <p>I've helped people buy and sell homes in the GTA for <mark class="tbc" data-tpl="{experience_phrase}" data-approve="experience-claim">about ten years</mark>. Most of my work is in North York, Thornhill, Richmond Hill, Vaughan and Toronto, the neighbourhoods along and around Yonge Street.</p>
+          <p>People usually come to me at a turning point: a first home, a growing family, a move closer to work or parents, or a sale after many years in one house. Those decisions deserve patience and good information. My job is to give you both.</p>
+          <p class="tbc-note">Ali: this section is written in your voice from what's known so far. Please rewrite it in your own words, including anything personal you're happy to share, such as how long you've lived in the GTA or what drew you to real estate.</p>
+        </div></div>
+        <div class="asec"><h2>Business background</h2><div class="body">
+          <p>Alongside real estate, I've built a career in retail operations and leadership: running large teams, managing budgets, tracking performance, negotiating with suppliers and working with contractors on projects of every size.</p>
+          <p>It carries straight into real estate. I'm comfortable with numbers, I plan ahead, and I keep people informed. I also know what renovations actually cost and how long they take, which matters when you're weighing a fixer-upper or deciding what to repair before a sale.</p>
+          <p class="tbc-note">Ali: decide how much of your current employment to mention publicly, and check the wording meets RECO advertising rules.</p>
+        </div></div>
+        <div class="asec"><h2>How I communicate</h2><div class="body">
+          <ul class="ticks">
+            <li><span><b>You choose the channel.</b> Call or text me at <a href="tel:+16477797919">(647) 779-7919</a>, or email <a href="mailto:abayat327@gmail.com">abayat327@gmail.com</a>, in English or Farsi. <mark class="tbc" data-note="contact-channels">Confirm channels</mark></span></li>
+            <li><span><b>Regular updates.</b> During an active search or listing, you'll hear from me at an agreed rhythm, even when there's nothing new.</span></li>
+            <li><span><b>Reasoning shown.</b> When I suggest a price or a strategy, you'll see the comparables and the thinking behind it.</span></li>
+            <li><span><b>No pressure.</b> The right decision matters more than a fast one.</span></li>
+          </ul>
+        </div></div>
+        <div class="asec" style="border-bottom:0"><h2>Areas I know</h2><div class="body">
+          <p>I focus on communities I know street by street, so I can tell you what the listing photos won't.</p>
+          <ul class="alist" data-alist></ul>
+        </div></div>
+      </div>
+      <aside class="aside">
+        <div class="box">
+          <h3>Registration &amp; brokerage</h3>
+          <ul class="nolist small">
+            <li><mark class="tbc" data-tpl="{job_title}">Sales Representative (or Broker)</mark></li>
+            <li><mark class="tbc" data-tpl="{brokerage_name}">[Brokerage legal name], Brokerage</mark></li>
+            <li><mark class="tbc" data-tpl="RECO registration no. {reco_number}">RECO registration no. [000000]</mark></li>
+            <li><mark class="tbc" data-tpl="{designations}" data-remove-empty="li">Designations or memberships, if any</mark></li>
+          </ul>
+        </div>
+        <div class="box tint"><h3>Let's talk</h3><p>Tell me what you're planning. I'll reply personally.</p><a class="btn" href="#contact">Talk to Ali</a></div>
+      </aside>
+    </div>
+  </section>
+</div>
+
+<!-- ============ BUY ============ -->
+<div class="page" data-page="buy" data-title="Buying a Home in Toronto & the GTA | Ali Bayat Realty" hidden>
+  <header class="page-head"><div class="wrap">
+    <nav class="crumbs" aria-label="Breadcrumb"><a href="#home">Home</a><span aria-hidden="true">/</span><span>Buy</span></nav>
+    <span class="label accent">For buyers</span>
+    <h1 tabindex="-1">Buying a home in Toronto <em>and the GTA</em></h1>
+    <p class="lede">Whether it's a first condo or a next family home, the process is the same: know what you can afford, understand the market, and don't let pressure make the decision for you.</p>
+    <div class="row"><a class="btn" href="#contact" data-interest="buy">Start your home search</a><a class="link" href="#guide-land-transfer-tax">Estimate your land transfer tax <span class="ar" aria-hidden="true">→</span></a></div>
+  </div></header>
+  <section class="band tight">
+    <div class="wrap stack" style="gap:2.5rem">
+      <div class="timeline" data-timeline="buy"></div>
+    </div>
+  </section>
+  <section class="band tight" style="padding-top:0">
+    <div class="wrap two">
+      <ol class="steps" data-steps="buy"></ol>
+      <aside class="aside">
+        <div class="box">
+          <h3>Costs buyers often miss</h3>
+          <ul class="plain">
+            <li>Ontario land transfer tax</li>
+            <li>Toronto municipal land transfer tax, which applies in North York and the rest of the City of Toronto</li>
+            <li>First-time buyer rebates, if you qualify</li>
+            <li>Legal fees and title insurance</li>
+            <li>Home inspection and appraisal</li>
+            <li>Adjustments for prepaid property tax or condo fees</li>
+          </ul>
+          <a class="link" href="#guide-land-transfer-tax">Land transfer tax calculator <span class="ar" aria-hidden="true">→</span></a>
+        </div>
+        <div class="box"><h3>Related</h3><ul class="nolist small"><li><a class="link" href="#neighbourhoods">Compare neighbourhoods <span class="ar" aria-hidden="true">→</span></a></li><li><a class="link" href="#invest">Buying to rent out? See how investment analysis works <span class="ar" aria-hidden="true">→</span></a></li></ul></div>
+        <div class="box tint"><h3>What I won't promise</h3><p>I can't guarantee you'll win a bidding war or buy below asking. I can promise a clear strategy, honest advice, and that you'll never sign an offer you don't understand.</p></div>
+      </aside>
+    </div>
+  </section>
+  <section class="cta-band"><div class="wrap">
+    <div><h2>Ready to start looking?</h2><p>Tell me what you're looking for and your timeline. I'll send a first shortlist and a sense of what your budget buys in each area.</p></div>
+    <div class="row"><a class="btn" href="#contact" data-interest="buy">Start your home search</a></div>
+  </div></section>
+</div>
+
+<!-- ============ SELL ============ -->
+<div class="page" data-page="sell" data-title="Selling a Home in Toronto & the GTA | Ali Bayat Realty" hidden>
+  <header class="page-head"><div class="wrap">
+    <nav class="crumbs" aria-label="Breadcrumb"><a href="#home">Home</a><span aria-hidden="true">/</span><span>Sell</span></nav>
+    <span class="label accent">For sellers</span>
+    <h1 tabindex="-1">Selling a home in Toronto <em>and the GTA</em></h1>
+    <p class="lede">A good sale comes from an evidence-based price, a well-prepared home and a launch that reaches the right buyers. Here's how I approach each part.</p>
+    <div class="row"><a class="btn" href="#contact" data-interest="sell">Let's talk about your home's value</a></div>
+  </div></header>
+  <section class="band tight"><div class="wrap"><div class="timeline" data-timeline="sell"></div></div></section>
+  <section class="band tight" style="padding-top:0">
+    <div class="wrap two">
+      <ol class="steps" data-steps="sell"></ol>
+      <aside class="aside">
+        <div class="box">
+          <h3>What a pricing conversation covers</h3>
+          <ul class="plain"><li>Recent comparable sales near you</li><li>Active, expired and withdrawn listings</li><li>Your home's condition and updates</li><li>Your timeline and your next move</li><li>Estimated selling costs and net proceeds</li></ul>
+        </div>
+        <div class="box"><h3>Related</h3><ul class="nolist small"><li><a class="link" href="#neighbourhoods">What buyers look for in each neighbourhood <span class="ar" aria-hidden="true">→</span></a></li><li><a class="link" href="#invest">Selling an income property? How investors evaluate it <span class="ar" aria-hidden="true">→</span></a></li></ul></div>
+        <div class="box tint"><h3>A realistic promise</h3><p>The market sets the final price. My job is to price with evidence, present your home well, and negotiate carefully so you get the strongest result the market offers at the time.</p></div>
+      </aside>
+    </div>
+  </section>
+  <section class="cta-band"><div class="wrap">
+    <div><h2>Let's talk about <em>your home's value.</em></h2><p>Share your address and a little about your plans. I'll prepare a comparable-sales review and walk you through it.</p></div>
+    <div class="row"><a class="btn" href="#contact" data-interest="sell">Discuss selling your home</a></div>
+  </div></section>
+</div>
+
+<!-- ============ INVEST ============ -->
+<div class="page" data-page="invest" data-title="Investment Properties &amp; Real Estate Investing in the GTA | Ali Bayat Realty" hidden>
+  <header class="page-head"><div class="wrap">
+    <nav class="crumbs" aria-label="Breadcrumb"><a href="#home">Home</a><span aria-hidden="true">/</span><span>Invest</span></nav>
+    <span class="label accent">For investors</span>
+    <h1 tabindex="-1">Investing in GTA real estate <em>with a focus on the numbers.</em></h1>
+    <p class="lede">I help investors evaluate income-producing properties across Toronto and York Region by looking beyond the asking price — including income, expenses, financing, cash flow and long-term potential.</p>
+    <div class="row"><a class="btn" href="#contact" data-interest="invest" data-request="analysis">Request an Investment Property Analysis</a><button type="button" class="link" data-jump="inv-calc">Try the investment calculator <span class="ar" aria-hidden="true">→</span></button></div>
+  </div></header>
+
+  <!-- A · Overview -->
+  <section class="band">
+    <div class="wrap railed">
+      <div class="rail"><span class="label">Overview</span></div>
+      <div class="main">
+        <h2>Real estate is more than <em>the purchase price.</em></h2>
+        <div class="two">
+          <div class="prose">
+            <p>Two properties at the same price can perform very differently once they're rented. What a property earns, what it costs to run, how it's financed and how often it sits empty all decide whether it supports itself or needs money from you every month.</p>
+            <p>My approach is the same one I bring to buying and selling: help you make a clearer decision by understanding the numbers behind the property. For an investment, that means putting every assumption on the table, testing the ones that matter most, and being honest about what the numbers can't tell you.</p>
+            <p class="small muted">I'm a licensed real estate professional, not a financial advisor, accountant, lawyer or mortgage broker. The analysis I provide is real estate education and property analysis. It doesn't replace legal, tax, accounting, mortgage or financial advice.</p>
+            <div class="row"><a class="btn" href="#contact" data-interest="invest">Talk to Ali about an investment property</a></div>
+          </div>
+          <div class="box">
+            <h3>What an investor needs to understand</h3>
+            <ol class="mini-steps"><li>Purchase price</li><li>Rental income</li><li>Operating expenses</li><li>Financing</li><li>Vacancy</li><li>Maintenance</li><li>Net operating income</li><li>Cash flow</li><li>Long-term appreciation potential</li></ol>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- B · What I analyze -->
+  <section class="band surface">
+    <div class="wrap railed">
+      <div class="rail"><span class="label">What I analyze</span></div>
+      <div class="main">
+        <h2>Four questions <em>behind every property.</em></h2>
+        <div class="principles">
+          <div><span class="label accent">01 · Income</span><h3>What can it earn?</h3><p>Current rental income and potential rental income, checked against comparable rentals nearby rather than the listing's projections.</p></div>
+          <div><span class="label accent">02 · Expenses</span><h3>What does it cost to run?</h3><p>Property taxes, insurance, utilities, maintenance, vacancy and other operating costs, including the ones a seller's summary tends to leave out.</p></div>
+          <div><span class="label accent">03 · Financing</span><h3>How will it be paid for?</h3><p>Down payment, mortgage assumptions, interest rate and debt service: the monthly cost of borrowing and how sensitive the result is to it.</p></div>
+          <div><span class="label accent">04 · Returns</span><h3>What's left over?</h3><p>Net operating income (NOI), cap rate, cash flow and cash-on-cash return, each explained in plain language so you know what it measures and what it doesn't.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- C · Property types -->
+  <section class="band">
+    <div class="wrap railed">
+      <div class="rail"><span class="label">Property types</span></div>
+      <div class="main">
+        <div class="head-row"><div><h2>Income properties come <em>in many shapes.</em></h2><p class="lede">Each type has its own rents, costs, rules and buyer pool when it's time to sell. These are the kinds of properties I can help you evaluate.</p></div></div>
+        <div class="types inv">
+          <figure><div class="dwg" data-dwg="duplex"></div><figcaption><b>Duplexes</b><span>Two self-contained units, often one up and one down.</span></figcaption></figure>
+          <figure><div class="dwg" data-dwg="triplex"></div><figcaption><b>Triplexes</b><span>Three units, common in older Toronto neighbourhoods.</span></figcaption></figure>
+          <figure><div class="dwg" data-dwg="fourplex"></div><figcaption><b>Fourplexes</b><span>Four units. Lenders often treat up to four units as residential, but rules vary.</span></figcaption></figure>
+          <figure><div class="dwg" data-dwg="suite"></div><figcaption><b>Legal secondary suites</b><span>A house with a second unit, often in the basement, that meets municipal and code requirements.</span></figcaption></figure>
+          <figure><div class="dwg" data-dwg="walkup"></div><figcaption><b>Small multifamily</b><span>Low-rise buildings with several units, which may be financed and valued differently from houses.</span></figcaption></figure>
+          <figure><div class="dwg" data-dwg="mixed"></div><figcaption><b>Mixed-use properties</b><span>Retail or office at street level with residential units above.</span></figcaption></figure>
+        </div>
+        <p class="small muted" style="border-left:2px solid var(--line);padding-left:.8rem;max-width:72ch">Property use, zoning, financing and rental arrangements should always be independently verified before a purchase decision. A property being marketed as a duplex, a legal suite or an income property doesn't by itself confirm its legal status.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- D · Analysis process -->
+  <section class="band surface" id="inv-analysis">
+    <div class="wrap railed">
+      <div class="rail"><span class="label">Investment property analysis</span></div>
+      <div class="main">
+        <div class="head-row"><div><h2>Considering a property? <em>Let's look at the numbers.</em></h2><p class="lede">A structured review of a specific property, built on assumptions you can see and question. Six steps, in this order.</p></div></div>
+        <div class="timeline t6">
+          <div class="phase"><span class="pt" aria-hidden="true"></span><h3>Property</h3><ul><li><button type="button" data-step="inv-1">Price, type, location</button></li></ul></div>
+          <div class="phase"><span class="pt" aria-hidden="true"></span><h3>Income</h3><ul><li><button type="button" data-step="inv-2">Realistic rents</button></li></ul></div>
+          <div class="phase"><span class="pt" aria-hidden="true"></span><h3>Expenses</h3><ul><li><button type="button" data-step="inv-3">Costs, vacancy, upkeep</button></li></ul></div>
+          <div class="phase"><span class="pt" aria-hidden="true"></span><h3>Financing</h3><ul><li><button type="button" data-step="inv-4">Mortgage and debt service</button></li></ul></div>
+          <div class="phase"><span class="pt" aria-hidden="true"></span><h3>Returns</h3><ul><li><button type="button" data-step="inv-5">NOI, cap rate, cash flow</button></li></ul></div>
+          <div class="phase"><span class="pt" aria-hidden="true"></span><h3>Decision</h3><ul><li><button type="button" data-step="inv-6">Assumptions and risks</button></li></ul></div>
+        </div>
+        <div class="two">
+          <ol class="steps">
+            <li id="inv-1"><div class="k"><span>Step · 01</span><h3>Property</h3></div><div class="d"><p>Review the purchase price, property type and location: how many units, their size and condition, how the property is currently used, and what comparable properties have sold for.</p><p class="ask">Is the current use confirmed with the municipality, or only described in the listing?</p></div></li>
+            <li id="inv-2"><div class="k"><span>Step · 02</span><h3>Income</h3></div><div class="d"><p>Estimate realistic rental income using appropriate market evidence: comparable rentals, existing leases and the current rent roll. Projected rents and actual rents are kept separate.</p><p class="ask">Are current rents at market, and what do the existing leases allow?</p></div></li>
+            <li id="inv-3"><div class="k"><span>Step · 03</span><h3>Expenses</h3></div><div class="d"><p>Account for operating costs, vacancy and maintenance: property tax, insurance, utilities the owner pays, repairs, and any management or other recurring costs.</p><p class="ask">What does the seller's expense summary leave out?</p></div></li>
+            <li id="inv-4"><div class="k"><span>Step · 04</span><h3>Financing</h3></div><div class="d"><p>Model the mortgage and debt-service assumptions: down payment, interest rate and amortization. Your mortgage professional confirms what you actually qualify for.</p><p class="ask">How does the result change if the rate is one point higher?</p></div></li>
+            <li id="inv-5"><div class="k"><span>Step · 05</span><h3>Returns</h3></div><div class="d"><p>Calculate NOI, cap rate, cash flow and cash-on-cash return, with each figure traced back to the assumptions that produced it.</p></div></li>
+            <li id="inv-6"><div class="k"><span>Step · 06</span><h3>Decision</h3></div><div class="d"><p>Identify the assumptions, risks and questions that should be investigated further, and which professionals should look at them, before you commit to anything.</p><p class="ask">Which single assumption, if it's wrong, would change the decision?</p></div></li>
+          </ol>
+          <aside class="aside">
+            <div class="box">
+              <h3>What an analysis covers</h3>
+              <ul class="plain"><li>The income and expense assumptions, written out</li><li>One or more financing scenarios</li><li>Estimated NOI, cap rate, cash flow and cash-on-cash return</li><li>A list of items to verify: zoning and legal unit status, leases, building condition</li></ul>
+            </div>
+            <div class="box tint"><h3>What it isn't</h3><p>It isn't an appraisal, a mortgage approval, or tax, legal or financial advice, and it can't guarantee rent, cash flow, appreciation or returns. It's a clear, honest starting point for your decision.</p></div>
+          </aside>
+        </div>
+        <div class="row"><a class="btn" href="#contact" data-interest="invest" data-request="analysis">Request an Investment Property Analysis</a></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- E · Calculator -->
+  <section class="band" id="inv-calc">
+    <div class="wrap railed">
+      <div class="rail"><span class="label">Calculator</span></div>
+      <div class="main">
+        <div class="head-row"><div><span class="pill">Educational estimate</span><h2>Run the numbers <em>on a property.</em></h2><p class="lede">Change any figure to see how it moves the result. The example below is illustrative, not a real property.</p></div></div>
+        <div class="calc" id="inv-calc-box">
+          <div class="inputs">
+            <span class="grp">Purchase &amp; financing</span>
+            <div class="field"><label for="iv-price">Purchase price</label><div class="money"><span aria-hidden="true">$</span><input id="iv-price" data-iv="money" inputmode="numeric" value="1,400,000" autocomplete="off"></div></div>
+            <div class="r2">
+              <div class="field"><label for="iv-down">Down payment</label><div class="pct"><input id="iv-down" data-iv="pct" inputmode="decimal" value="20" autocomplete="off"><span aria-hidden="true">%</span></div></div>
+              <div class="field"><label for="iv-rate">Interest rate</label><div class="pct"><input id="iv-rate" data-iv="pct" inputmode="decimal" value="5" autocomplete="off"><span aria-hidden="true">%</span></div></div>
+            </div>
+            <div class="field"><label for="iv-amort">Amortization</label><select id="iv-amort" data-iv="sel"><option value="25" selected>25 years</option><option value="30">30 years</option></select></div>
+            <span class="grp">Income</span>
+            <div class="r2">
+              <div class="field"><label for="iv-rent">Annual rental income</label><div class="money"><span aria-hidden="true">$</span><input id="iv-rent" data-iv="money" inputmode="numeric" value="72,000" autocomplete="off"></div></div>
+              <div class="field"><label for="iv-vac">Vacancy</label><div class="pct"><input id="iv-vac" data-iv="pct" inputmode="decimal" value="4" autocomplete="off"><span aria-hidden="true">%</span></div></div>
+            </div>
+            <span class="grp">Annual operating expenses</span>
+            <div class="r2">
+              <div class="field"><label for="iv-tax">Property taxes</label><div class="money"><span aria-hidden="true">$</span><input id="iv-tax" data-iv="money" inputmode="numeric" value="6,500" autocomplete="off"></div></div>
+              <div class="field"><label for="iv-ins">Insurance</label><div class="money"><span aria-hidden="true">$</span><input id="iv-ins" data-iv="money" inputmode="numeric" value="3,000" autocomplete="off"></div></div>
+              <div class="field"><label for="iv-maint">Maintenance</label><div class="money"><span aria-hidden="true">$</span><input id="iv-maint" data-iv="money" inputmode="numeric" value="3,600" autocomplete="off"></div></div>
+              <div class="field"><label for="iv-util">Utilities</label><div class="money"><span aria-hidden="true">$</span><input id="iv-util" data-iv="money" inputmode="numeric" value="4,800" autocomplete="off"></div></div>
+            </div>
+            <div class="field"><label for="iv-other">Other annual expenses</label><div class="money"><span aria-hidden="true">$</span><input id="iv-other" data-iv="money" inputmode="numeric" value="2,000" autocomplete="off"></div></div>
+          </div>
+          <div class="out" aria-live="polite">
+            <div class="line"><span>Annual gross rental income</span><span id="iv-o-gross">—</span></div>
+            <div class="line"><span>Vacancy allowance</span><span id="iv-o-vac">—</span></div>
+            <div class="line sub"><span>Effective rental income</span><span id="iv-o-eff">—</span></div>
+            <div class="line"><span>Annual operating expenses</span><span id="iv-o-opex">—</span></div>
+            <div class="line sub"><span>Net operating income (NOI)</span><span id="iv-o-noi">—</span></div>
+            <div class="line"><span>Estimated annual debt service</span><span id="iv-o-debt">—</span></div>
+            <div class="line total"><span>Estimated annual cash flow</span><span id="iv-o-cf">—</span></div>
+            <div class="kpis">
+              <div><small>Cap rate</small><b id="iv-o-cap">—</b></div>
+              <div><small>Cash-on-cash return</small><b id="iv-o-coc">—</b></div>
+            </div>
+            <p class="small muted" id="iv-o-note" style="margin-top:.8rem"></p>
+          </div>
+        </div>
+        <div class="stack" style="gap:.6rem">
+          <p class="small"><b>Illustration only.</b> Actual financing, expenses, taxes, insurance, vacancy, maintenance and rental income can vary significantly. This calculator is not financial, tax or legal advice.</p>
+          <p class="small muted">How it works: NOI is effective rental income minus operating expenses. Debt service assumes monthly payments with Canadian semi-annual compounding over the amortization chosen. Cap rate is NOI divided by purchase price. Cash-on-cash return is annual cash flow divided by the down payment only; closing costs, land transfer tax, legal fees and any repairs would increase the cash you put in and lower this figure. Results don't include income tax, principal repayment or any change in the property's value.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- F · Education -->
+  <section class="band surface">
+    <div class="wrap railed">
+      <div class="rail"><span class="label">Investor education</span></div>
+      <div class="main">
+        <div class="head-row"><div><h2>The fundamentals, <em>one guide at a time.</em></h2><p class="lede">Plain-language guides for investors are being written now. Each will explain one idea well, with worked examples.</p></div><a class="link" href="#resources" data-cat="investment">All investment resources <span class="ar" aria-hidden="true">→</span></a></div>
+        <div class="teasers">
+          <article class="teaser"><span class="label accent">Fundamentals</span><h3>What is cap rate?</h3><p>What it measures, what it ignores, and why it's only a starting point.</p><span class="status">Planned</span></article>
+          <article class="teaser"><span class="label accent">Fundamentals</span><h3>How to calculate cash flow</h3><p>From gross rent to what's left after expenses and the mortgage.</p><span class="status">Planned</span></article>
+          <article class="teaser"><span class="label accent">Strategy</span><h3>Cash flow vs. appreciation</h3><p>Two different reasons to own a property, and the risks of each.</p><span class="status">Planned</span></article>
+          <article class="teaser"><span class="label accent">Expenses</span><h3>Five expenses investors often overlook</h3><p>The costs that rarely appear in a listing's income summary.</p><span class="status">Coming soon</span></article>
+          <article class="teaser"><span class="label accent">Property types</span><h3>How to analyze a fourplex</h3><p>Rents, expenses and financing for a four-unit property, step by step.</p><span class="status">Planned</span></article>
+          <article class="teaser"><span class="label accent">Due diligence</span><h3>Questions to ask before buying an income property</h3><p>About the units, the tenants, the leases and the building.</p><span class="status">Planned</span></article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- G · GTA focus -->
+  <section class="band">
+    <div class="wrap railed">
+      <div class="rail"><span class="label">GTA focus</span></div>
+      <div class="main">
+        <div class="head-row"><div><h2>Where investment analysis <em>meets local knowledge.</em></h2><p class="lede">Investment decisions are highly location-specific. My investment content and analysis focus on Toronto and York Region, the same communities I work in for buyers and sellers.</p></div></div>
+        <div class="two">
+          <ul class="alist">
+            <li><a href="#toronto"><div class="dwg" data-dwg="bay"></div><div><span class="label">City of Toronto</span><h3>Toronto</h3><p>Older semis and row houses, some already divided into units. Toronto's municipal land transfer tax adds to closing costs.</p></div><span class="go">Guide →</span></a></li>
+            <li><a href="#north-york"><div class="dwg" data-dwg="tower"></div><div><span class="label">City of Toronto</span><h3>North York</h3><p>A busy condo corridor on Yonge and post-war bungalow streets nearby. Check zoning before planning any added units.</p></div><span class="go">Guide →</span></a></li>
+            <li><a href="#thornhill"><div class="dwg" data-dwg="cottage"></div><div><span class="label">Vaughan &amp; Markham</span><h3>Thornhill</h3><p>Split between two cities, so property tax rates and municipal rules depend on which side of Yonge a property is on.</p></div><span class="go">Guide →</span></a></li>
+            <li><a href="#richmond-hill"><div class="dwg" data-dwg="detached"></div><div><span class="label">York Region</span><h3>Richmond Hill</h3><p>Values vary widely by neighbourhood, and some northern areas fall under Oak Ridges Moraine planning rules.</p></div><span class="go">Guide →</span></a></li>
+            <li><a href="#vaughan"><div class="dwg" data-dwg="town"></div><div><span class="label">York Region</span><h3>Vaughan</h3><p>Several distinct markets plus a growing condo district at the VMC, where pre-construction terms need careful review.</p></div><span class="go">Guide →</span></a></li>
+          </ul>
+          <aside class="aside">
+            <div class="box">
+              <h3>What location changes in the numbers</h3>
+              <ul class="ticks"><li><span>Achievable rents and tenant demand</span></li><li><span>Typical property types and their age</span></li><li><span>Neighbourhood characteristics, such as transit and schools</span></li><li><span>Property tax and municipal rules, which differ between cities</span></li><li><span>Future resale and who the likely buyers are</span></li></ul>
+            </div>
+            <div class="box tint"><h3>No "best" area</h3><p>There's no single best place to invest. The right fit depends on your budget, timeline and how much risk you're comfortable with, so each property is analyzed on its own numbers.</p></div>
+          </aside>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- H · Network -->
+  <section class="band surface">
+    <div class="wrap railed">
+      <div class="rail"><span class="label">Investor network</span></div>
+      <div class="main">
+        <div class="head-row"><div><h2>Investing usually takes <em>a team.</em></h2><p class="lede">A single purchase can involve several professionals, each responsible for a different part of the decision.</p></div></div>
+        <div class="verify v3">
+          <div><span class="label">Financing</span><b>Mortgage professionals</b><p>Confirm what you qualify for, the rate, and the lender's rules for rental properties.</p></div>
+          <div><span class="label">Tax</span><b>Accountants</b><p>Advise on how rental income, expenses and ownership structure affect your taxes.</p></div>
+          <div><span class="label">Legal</span><b>Real estate lawyers</b><p>Review title, existing leases, zoning searches and the closing documents.</p></div>
+          <div><span class="label">Operations</span><b>Property managers</b><p>Handle tenants, rent collection and day-to-day upkeep if you'd rather not.</p></div>
+          <div><span class="label">Condition</span><b>Contractors</b><p>Price repairs and upgrades, and flag what an inspection should look at closely.</p></div>
+          <div><span class="label">The property</span><b>Real estate professionals</b><p>Find and evaluate properties, analyze the numbers and negotiate the purchase. That's my part.</p></div>
+        </div>
+        <p class="pull">I can help coordinate the real estate side of the process and connect clients with appropriate professionals where needed.</p>
+        <p class="small muted">Any introduction is a suggestion; you choose who to work with, and each professional is responsible for their own advice. <mark class="tbc" data-tpl="{referral_disclosure}" data-note="referral-disclosure">Disclose any referral arrangements as RECO rules require</mark></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- I · CTA -->
+  <section class="cta-band"><div class="wrap">
+    <div><h2>Thinking about buying <em>an investment property?</em></h2><p>Let's start with the numbers, the property and your goals.</p></div>
+    <div class="row"><a class="btn" href="#contact" data-interest="invest">Talk to Ali</a><a class="btn ghost" href="#contact" data-interest="invest" data-request="analysis">Request an Investment Property Analysis</a></div>
+  </div></section>
+</div>
+
+<!-- ============ NEIGHBOURHOODS ============ -->
+<div class="page" data-page="neighbourhoods" data-title="GTA Neighbourhood Guides | Ali Bayat Realty" hidden>
+  <header class="page-head"><div class="wrap">
+    <nav class="crumbs" aria-label="Breadcrumb"><a href="#home">Home</a><span aria-hidden="true">/</span><span>Neighbourhoods</span></nav>
+    <span class="label accent">Neighbourhood guides</span>
+    <h1 tabindex="-1">The GTA, <em>one community at a time</em></h1>
+    <p class="lede">Housing, transit, daily life and what buyers and sellers should know in the communities I work in most.</p>
+  </div></header>
+  <section class="strip"><div class="wrap"><div class="strip-scroll" data-strip></div><div class="cap"><span class="label">Typical housing, south to north</span><span class="label">Tap an area</span></div></div></section>
+  <section class="band">
+    <div class="wrap areas-grid">
+      <figure class="linemap" data-linemap></figure>
+      <div class="stack">
+        <ul class="alist" data-alist></ul>
+        <p class="small muted">More communities, such as Markham, Aurora and Newmarket, can be added from the same template.</p>
+        <div class="unsure"><span>Comparing areas for a purchase, a sale or an income property?</span><span class="row" style="gap:.5rem 1.25rem"><a class="link" href="#buy">Buying <span class="ar" aria-hidden="true">→</span></a><a class="link" href="#sell">Selling <span class="ar" aria-hidden="true">→</span></a><a class="link" href="#invest">Investing <span class="ar" aria-hidden="true">→</span></a><a class="link" href="#contact" data-cta="compare-areas">Talk to Ali <span class="ar" aria-hidden="true">→</span></a></span></div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ============ AREA DETAIL ============ -->
+<div class="page" data-page="area" hidden></div>
+
+<!-- ============ LISTINGS ============ -->
+<div class="page" data-page="listings" data-title="Toronto & GTA Homes for Sale | Ali Bayat Realty" hidden>
+  <header class="page-head"><div class="wrap">
+    <nav class="crumbs" aria-label="Breadcrumb"><a href="#home">Home</a><span aria-hidden="true">/</span><a href="#buy">Buy</a><span aria-hidden="true">/</span><span>Listings</span></nav>
+    <h1 tabindex="-1">Homes for sale in Toronto <em>and the GTA</em></h1>
+    <p class="lede">Search listings across North York, Thornhill, Richmond Hill, Vaughan and Toronto.</p>
+  </div></header>
+  <section class="band tight">
+    <div class="wrap stack">
+      <div class="banner" role="note"><span class="pill">MLS® feed not connected</span><p>Preview of the search layout only. Live listings will appear once an IDX/VOW feed is set up through Ali's brokerage and board. Nothing below is a real property.</p></div>
+      <form class="search" id="search-form" role="search" aria-label="Listing search">
+        <div class="tabs" role="tablist" aria-label="Listing type">
+          <button type="button" role="tab" aria-selected="true" id="tab-sale">For sale</button>
+          <button type="button" role="tab" aria-selected="false" id="tab-lease">For lease</button>
+        </div>
+        <div class="filters">
+          <div class="field q"><label for="s-q">Location, street or MLS® number</label><input id="s-q" type="search" placeholder="e.g. Yonge & Sheppard"></div>
+          <div class="field"><label for="s-area">Area</label><select id="s-area"><option>All areas</option><option>North York</option><option>Thornhill</option><option>Richmond Hill</option><option>Vaughan</option><option>Toronto</option></select></div>
+          <div class="field"><label for="s-type">Type</label><select id="s-type"><option>Any type</option><option>Detached</option><option>Semi-detached</option><option>Townhouse</option><option>Condo apartment</option></select></div>
+          <div class="field"><label for="s-beds">Beds</label><select id="s-beds"><option>Any</option><option>1+</option><option>2+</option><option>3+</option><option>4+</option></select></div>
+          <div class="field"><label for="s-baths">Baths</label><select id="s-baths"><option>Any</option><option>1+</option><option>2+</option><option>3+</option></select></div>
+          <button class="btn" type="submit">Search</button>
+        </div>
+      </form>
+      <p id="search-msg" class="small muted" role="status"></p>
+      <div class="head-row" style="margin-top:.5rem"><h2 style="font-size:1.5rem">Results layout</h2><div class="field" style="grid-template-columns:auto auto;align-items:center;gap:.6rem"><label for="s-sort">Sort</label><select id="s-sort" style="min-height:42px;padding:.4rem .6rem"><option>Newest</option><option>Price, low to high</option><option>Price, high to low</option></select></div></div>
+      <div class="lgrid" id="lgrid"></div>
+      <div class="svc" style="margin-top:1.5rem">
+        <article><h3 style="font-size:1.35rem">Want listings before you start searching?</h3><p class="muted">Tell me your areas, budget and must-haves. I'll send matching homes as they come up.</p><div><a class="btn" href="#contact" data-interest="buy">Get listing alerts</a></div></article>
+        <article><h3 style="font-size:1.35rem">How this page will work</h3><p class="muted">Each card will show photo, price, address, beds, baths, type and listing brokerage, linking to a full detail page with required MLS® disclaimers. Saved searches will send leads to Ali's own CRM.</p></article>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ============ RESOURCES ============ -->
+<div class="page" data-page="resources" data-title="Real Estate Guides & GTA Market Insights | Ali Bayat Realty" hidden>
+  <header class="page-head"><div class="wrap">
+    <nav class="crumbs" aria-label="Breadcrumb"><a href="#home">Home</a><span aria-hidden="true">/</span><span>Resources</span></nav>
+    <span class="label accent">Knowledge centre</span>
+    <h1 tabindex="-1">Guides for buying, selling <em>and understanding the GTA market</em></h1>
+    <p class="lede">Plain-language answers to the questions clients ask most, investment fundamentals, and monthly market notes by area.</p>
+    <div class="row"><a class="link" href="#buy">How buying works <span class="ar" aria-hidden="true">→</span></a><a class="link" href="#sell">How selling works <span class="ar" aria-hidden="true">→</span></a><a class="link" href="#invest">Investment property analysis <span class="ar" aria-hidden="true">→</span></a></div>
+  </div></header>
+  <section class="band tight">
+    <div class="wrap stack" style="gap:3rem">
+      <a class="feature" href="#guide-land-transfer-tax">
+        <div class="dwg wide" data-dwg="strip2"><span class="grid-bg"></span></div>
+        <div class="in"><span class="label accent">Featured · Buying guide</span><h3>Land transfer tax in Toronto vs. York Region, with a calculator</h3><p class="muted">Why the same price costs more to close on in North York than in Vaughan, and how first-time buyer rebates fit in.</p><span class="status pub">Published<mark class="tbc" data-note="ltt-guide-review"> · draft for Ali's review</mark></span></div>
+      </a>
+      <div class="report" aria-label="Market report template" data-requires="market-data">
+        <div class="top"><div><span class="label accent">GTA Market Insights · monthly template</span><h3 style="font-size:1.5rem;margin-top:.3rem">Market notes: <span class="ph">[Area]</span>, <span class="ph">[Month Year]</span></h3></div><span class="pill">Needs data source</span></div>
+        <div class="tiles"><div><small>Median sale price</small><b>—</b></div><div><small>Sales</small><b>—</b></div><div><small>New listings</small><b>—</b></div><div><small>Avg. days on market</small><b>—</b></div></div>
+        <p class="small muted">Each report follows the same structure: the headline numbers, what changed from last month and last year, and what it means for buyers and sellers in plain language. Figures will come only from board data, never estimated.</p>
+      </div>
+      <div class="stack">
+        <div class="chips" id="chips" role="group" aria-label="Filter by category"></div>
+        <div id="kc"></div>
+      </div>
+    </div>
+  </section>
+  <section class="cta-band"><div class="wrap">
+    <div><h2>Have a question that isn't covered here?</h2><p>Ask me directly. Good questions often become the next guide.</p></div>
+    <div class="row"><a class="btn" href="#contact" data-interest="question">Ask Ali</a></div>
+  </div></section>
+</div>
+
+<!-- ============ GUIDE: LAND TRANSFER TAX ============ -->
+<div class="page" data-page="guide-land-transfer-tax" data-title="Land Transfer Tax in Toronto vs. York Region (2026) | Ali Bayat Realty" hidden>
+  <header class="page-head"><div class="wrap">
+    <nav class="crumbs" aria-label="Breadcrumb"><a href="#home">Home</a><span aria-hidden="true">/</span><a href="#resources">Resources</a><span aria-hidden="true">/</span><span>Buying guides</span></nav>
+    <span class="label accent">Buying guide</span>
+    <h1 tabindex="-1">Land transfer tax in Toronto <em>vs. York Region</em></h1>
+    <p class="lede">Why the same purchase price costs more to close on in North York than in Vaughan, Richmond Hill or Thornhill, and how to estimate yours.</p>
+    <div class="byline"><span class="av" aria-hidden="true">AB</span><div class="small"><b>Ali Bayat</b><br><span class="muted">Rates verified against official sources on October 1, 2026 · <mark class="tbc" data-approve="ltt-guide-review">Reviewed by Ali</mark></span><br><span class="muted" data-meta="dates"></span></div></div>
+  </div></header>
+  <section class="band tight">
+    <div class="wrap two">
+      <div class="article-body">
+        <p>Every buyer in Ontario pays the provincial land transfer tax when a purchase closes. If the home is in the City of Toronto, which includes North York, Scarborough and Etobicoke, you also pay Toronto's municipal land transfer tax. Buyers in York Region communities such as Vaughan, Richmond Hill and Thornhill pay only the provincial tax.</p>
+        <p>On a $1,000,000 home, that difference is about $16,475. It's one of the most important numbers to know when you're comparing homes on either side of Steeles Avenue.</p>
+        <h2>Estimate your land transfer tax</h2>
+        <div class="calc" id="calc">
+          <div class="inputs">
+            <div class="field"><label for="lt-price">Purchase price</label><div class="money"><span aria-hidden="true">$</span><input id="lt-price" inputmode="numeric" value="1,000,000" autocomplete="off"></div></div>
+            <fieldset class="seg2"><legend>Where is the home?</legend>
+              <input type="radio" name="lt-loc" id="lt-to" value="to" checked><label for="lt-to">City of Toronto<br><span class="muted small" style="font-weight:400">incl. North York</span></label>
+              <input type="radio" name="lt-loc" id="lt-on" value="on"><label for="lt-on">Elsewhere in Ontario<br><span class="muted small" style="font-weight:400">e.g. Vaughan</span></label>
+            </fieldset>
+            <label class="check" for="lt-first"><input type="checkbox" id="lt-first"> I'm a first-time buyer</label>
+          </div>
+          <div class="out" aria-live="polite">
+            <div class="line"><span>Ontario land transfer tax</span><span id="o-on">—</span></div>
+            <div class="line" id="o-onr-row"><span>Ontario first-time buyer rebate</span><span id="o-onr">—</span></div>
+            <div class="line" id="o-to-row"><span>Toronto municipal land transfer tax</span><span id="o-to">—</span></div>
+            <div class="line total"><span>Estimated total</span><span id="o-total">—</span></div>
+            <p class="small muted" id="o-note" style="margin-top:.6rem"></p>
+          </div>
+        </div>
+        <p class="small muted">For a home with one or two single-family residences, using the Ontario rates and the City of Toronto rates in effect from April 1, 2026. This is an estimate, not legal or tax advice; your real estate lawyer confirms the final amount.</p>
+        <h2>How the two taxes are calculated</h2>
+        <p>Both taxes are charged in brackets, so each portion of the price is taxed at its own rate. Up to $2,000,000 the Ontario and Toronto rates are the same, which is why buying in Toronto roughly doubles the tax. Above $3,000,000, Toronto's rates rise more steeply.</p>
+        <div class="tbl-wrap"><table>
+          <thead><tr><th>Portion of the price</th><th class="r">Ontario</th><th class="r">Toronto (from Apr 1, 2026)</th></tr></thead>
+          <tbody>
+            <tr><td>Up to $55,000</td><td class="r">0.5%</td><td class="r">0.5%</td></tr>
+            <tr><td>$55,000 to $250,000</td><td class="r">1.0%</td><td class="r">1.0%</td></tr>
+            <tr><td>$250,000 to $400,000</td><td class="r">1.5%</td><td class="r">1.5%</td></tr>
+            <tr><td>$400,000 to $2,000,000</td><td class="r">2.0%</td><td class="r">2.0%</td></tr>
+            <tr><td>$2,000,000 to $3,000,000</td><td class="r">2.5%</td><td class="r">2.5%</td></tr>
+            <tr><td>$3,000,000 to $4,000,000</td><td class="r">2.5%</td><td class="r">4.40%</td></tr>
+            <tr><td>$4,000,000 to $5,000,000</td><td class="r">2.5%</td><td class="r">5.45%</td></tr>
+            <tr><td>$5,000,000 to $10,000,000</td><td class="r">2.5%</td><td class="r">6.50%</td></tr>
+            <tr><td>$10,000,000 to $20,000,000</td><td class="r">2.5%</td><td class="r">7.55%</td></tr>
+            <tr><td>Over $20,000,000</td><td class="r">2.5%</td><td class="r">8.60%</td></tr>
+          </tbody>
+        </table></div>
+        <h2>First-time buyer rebates</h2>
+        <p>Ontario refunds up to $4,000 of the provincial tax for eligible first-time buyers. The City of Toronto has its own first-time buyer rebate of up to $4,475 on the municipal tax. Eligibility rules apply to both, so confirm yours with your lawyer before you budget for it.</p>
+        <h2>What this means when you're choosing where to buy</h2>
+        <p>If you're deciding between, say, a condo near Finch station and one near the Vaughan Metropolitan Centre, the land transfer tax is part of the real price. I include it in every side-by-side comparison I prepare for clients, together with legal fees, adjustments and moving costs.</p>
+        <div class="row"><a class="btn" href="#contact" data-interest="buy">Talk to Ali about your budget</a></div>
+        <p class="small muted">Sources, checked October 1, 2026: <a href="https://www.toronto.ca/services-payments/property-taxes-utilities/municipal-land-transfer-tax-mltt/municipal-land-transfer-tax-mltt-rates-and-fees/" rel="noopener">City of Toronto, MLTT rates and fees</a>; <a href="https://www.toronto.ca/services-payments/property-taxes-utilities/municipal-land-transfer-tax-mltt/municipal-land-transfer-tax-mltt-rebate-opportunities/" rel="noopener">City of Toronto, MLTT rebates</a>; <a href="https://www.ontario.ca/document/land-transfer-tax/calculating-land-transfer-tax" rel="noopener">Ontario, calculating land transfer tax</a>; <a href="https://www.ontario.ca/document/land-transfer-tax/land-transfer-tax-refunds-first-time-homebuyers" rel="noopener">Ontario, refunds for first-time homebuyers</a>.</p>
+      </div>
+      <aside class="aside">
+        <div class="box"><h3>Related</h3><ul class="nolist small"><li><a class="link" href="#buy">How buying with Ali works <span class="ar" aria-hidden="true">→</span></a></li><li><a class="link" href="#north-york">North York guide <span class="ar" aria-hidden="true">→</span></a></li><li><a class="link" href="#vaughan">Vaughan guide <span class="ar" aria-hidden="true">→</span></a></li><li><a class="link" href="#invest">Closing costs in an investment analysis <span class="ar" aria-hidden="true">→</span></a></li></ul></div>
+        <div class="box tint"><h3>Comparing two areas?</h3><p>I'll put the full closing costs side by side for the homes you're considering.</p><a class="btn" href="#contact" data-interest="buy">Talk to Ali</a></div>
+      </aside>
+    </div>
+  </section>
+</div>
+
+<!-- ============ CONTACT ============ -->
+<div class="page" data-page="contact" data-title="Contact Ali Bayat | Toronto & GTA Real Estate" hidden>
+  <header class="page-head"><div class="wrap">
+    <nav class="crumbs" aria-label="Breadcrumb"><a href="#home">Home</a><span aria-hidden="true">/</span><span>Contact</span></nav>
+    <h1 tabindex="-1">Talk to Ali</h1>
+    <p class="lede">Buying, selling, investing, or just weighing your options? Send a note and I'll reply personally, in English or Farsi.</p>
+  </div></header>
+  <section class="band tight">
+    <div class="wrap two">
+      <div>
+        <form class="form" id="contact-form" novalidate>
+          <fieldset class="seg four"><legend>I'm thinking about</legend>
+            <input type="radio" name="interest" id="i-buy" value="buy" checked><label for="i-buy">Buying</label>
+            <input type="radio" name="interest" id="i-sell" value="sell"><label for="i-sell">Selling</label>
+            <input type="radio" name="interest" id="i-invest" value="invest"><label for="i-invest">Investing</label>
+            <input type="radio" name="interest" id="i-question" value="question"><label for="i-question">A question</label>
+          </fieldset>
+          <input type="hidden" name="request" id="c-request" value="">
+          <p class="req-note" id="req-note" hidden><b>Investment Property Analysis request.</b> Include the address or listing link, the asking price, current rents if you know them, and what you're hoping the property will do for you.</p>
+          <div class="r2">
+            <div class="field"><label for="c-name">Name</label><input id="c-name" name="name" autocomplete="name" required aria-describedby="e-name"><span class="err" id="e-name" hidden>Please enter your name.</span></div>
+            <div class="field"><label for="c-phone">Phone <span class="muted" style="font-weight:400">(optional)</span></label><input id="c-phone" name="phone" type="tel" autocomplete="tel"></div>
+          </div>
+          <div class="field"><label for="c-email">Email</label><input id="c-email" name="email" type="email" autocomplete="email" required aria-describedby="e-email"><span class="err" id="e-email" hidden>Please enter a complete email address.</span></div>
+          <div class="field"><label for="c-msg">Message <span class="muted" style="font-weight:400">(optional)</span></label><textarea id="c-msg" name="message" placeholder="Areas, timeline, budget or your address: whatever is useful."></textarea></div>
+          <div class="field" style="max-width:260px"><label for="c-lang">Preferred language</label><select id="c-lang" name="language"><option value="en">English</option><option value="fa" lang="fa">Farsi · فارسی</option></select></div>
+          <div class="field"><label class="check" for="c-consent"><input type="checkbox" id="c-consent" name="consent" value="yes" required aria-describedby="e-consent"> <span><mark class="tbc" data-approve="consent-wording">Ali can use these details to reply to this inquiry, as described in the privacy policy.</mark> <a href="#privacy">Privacy policy</a></span></label><span class="err" id="e-consent" hidden>Please confirm so Ali can reply.</span></div>
+          <input type="hidden" name="consent_version" value="2026-10-01">
+          <input type="hidden" name="form_version" value="contact-1">
+          <input type="hidden" name="source_page" value="">
+          <input type="hidden" name="source_cta" value="">
+          <input type="hidden" name="timestamp" value="">
+          <input type="hidden" name="utm_source" value=""><input type="hidden" name="utm_medium" value=""><input type="hidden" name="utm_campaign" value=""><input type="hidden" name="utm_content" value="">
+          <input type="hidden" name="referrer" value="">
+          <div class="hp" aria-hidden="true"><label for="c-website">Leave this field empty</label><input id="c-website" name="website" type="text" tabindex="-1" autocomplete="off"></div>
+          <div><button class="btn" type="submit" id="c-send">Send to Ali</button></div>
+          <p class="err" id="send-error" role="alert" tabindex="-1" hidden>Sorry, your message didn't go through. Please try again in a moment.</p>
+        </form>
+        <div class="sent" id="sent-live" hidden role="status">
+          <h3 tabindex="-1">Thanks, your message was sent</h3>
+          <p class="muted">Ali will reply personally, in the language you chose.</p>
+        </div>
+        <div class="sent" id="sent" hidden role="status" data-preview-only>
+          <h3 tabindex="-1">Preview only: message not sent</h3>
+          <p class="muted">The form works in this design, but it isn't connected yet. On the live site, messages go to Ali's inbox and CRM, and you'd see a confirmation here.</p>
+          <button class="btn ghost sm" type="button" id="reset-form" style="width:max-content">Back to the form</button>
+        </div>
+      </div>
+      <aside class="aside">
+        <div class="box" style="grid-template-columns:72px 1fr;align-items:center"><div class="portrait" style="aspect-ratio:1;border-radius:50%"><span class="ab" style="font-family:var(--display);color:var(--lake);font-size:1.6rem">AB</span></div><div><b style="font-family:var(--display);font-weight:400;font-size:1.2rem">Ali Bayat</b><p class="small">Replies personally, <mark class="tbc" data-approve="reply-time">usually within one business day</mark></p></div></div>
+        <div class="box">
+          <div class="clines">
+            <div><small>Phone / text</small><span><mark class="tbc" data-tpl="{phone_display}">(416) 000-0000</mark></span></div>
+            <div><small>Email</small><span><mark class="tbc" data-tpl="{email}">ali@alibayatrealty.com</mark></span></div>
+            <div><small>Brokerage office</small><span><mark class="tbc" data-tpl="{brokerage_name}\n{brokerage_address_line}">[Brokerage name], Brokerage<br>[Street address], [City], ON</mark></span></div>
+            <div><small>Languages</small><span>English, Farsi</span></div>
+          </div>
+        </div>
+        <div class="box tint"><h3>What happens next</h3><ol class="plain"><li>Ali reads your message and replies.</li><li>You set up a short call at a time that suits you.</li><li>You leave with a clear next step. No obligation.</li></ol></div>
+      </aside>
+    </div>
+  </section>
+</div>
+
+<!-- ============ LEGAL PLACEHOLDERS (text to come from Ali / brokerage; not indexed until written) ============ -->
+<div class="page" data-page="privacy" data-title="Privacy Policy | Ali Bayat Realty" hidden>
+  <header class="page-head"><div class="wrap">
+    <nav class="crumbs" aria-label="Breadcrumb"><a href="#home">Home</a><span aria-hidden="true">/</span><span>Privacy policy</span></nav>
+    <h1 tabindex="-1">Privacy policy</h1>
+    <p class="lede">How personal information sent through this website is collected, used and protected.</p>
+  </div></header>
+  <section class="band tight"><div class="wrap two"><div class="prose">
+    <div class="box tint" data-pending="privacy-policy"><h3>Policy in preparation</h3><p>The full privacy policy is being prepared with Ali's brokerage. Until it's published, details you send through the contact form are used only to reply to your inquiry.</p></div>
+    <p class="tbc-note">Ali: final privacy policy text needed, reviewed by your brokerage (PIPEDA, plus CASL consent wording for email alerts).</p>
+    <div class="row"><a class="btn" href="#contact" data-interest="question">Questions? Contact Ali</a></div>
+  </div></div></section>
+</div>
+
+<div class="page" data-page="terms" data-title="Terms of Use | Ali Bayat Realty" hidden>
+  <header class="page-head"><div class="wrap">
+    <nav class="crumbs" aria-label="Breadcrumb"><a href="#home">Home</a><span aria-hidden="true">/</span><span>Terms of use</span></nav>
+    <h1 tabindex="-1">Terms of use</h1>
+    <p class="lede">The terms that apply to using this website and its guides and calculators.</p>
+  </div></header>
+  <section class="band tight"><div class="wrap two"><div class="prose">
+    <div class="box tint" data-pending="terms-of-use"><h3>Terms in preparation</h3><p>The full terms of use are being prepared. The guides and calculators on this site are for general information only and are not legal, tax, financial or mortgage advice.</p></div>
+    <p class="tbc-note">Ali: terms of use text needed, including the brokerage's required disclaimers.</p>
+  </div></div></section>
+</div>
+
+<div class="page" data-page="accessibility" data-title="Accessibility | Ali Bayat Realty" hidden>
+  <header class="page-head"><div class="wrap">
+    <nav class="crumbs" aria-label="Breadcrumb"><a href="#home">Home</a><span aria-hidden="true">/</span><span>Accessibility</span></nav>
+    <h1 tabindex="-1">Accessibility</h1>
+    <p class="lede">This website is being built to be usable by everyone, including people who use a keyboard or assistive technology.</p>
+  </div></header>
+  <section class="band tight"><div class="wrap two"><div class="prose">
+    <div class="box tint" data-pending="accessibility-statement"><h3>Statement in preparation</h3><p>If anything on this site is hard to use, please contact Ali and the information will be provided in another format.</p></div>
+    <p class="tbc-note">Ali: accessibility statement needed (AODA). Confirm the contact method for accessibility requests.</p>
+    <div class="row"><a class="btn" href="#contact" data-interest="question">Contact Ali</a></div>
+  </div></div></section>
+</div>
+
+<div class="page" data-page="not-found" data-title="Page Not Found | Ali Bayat Realty" hidden>
+  <header class="page-head"><div class="wrap">
+    <span class="label accent">Error 404</span>
+    <h1 tabindex="-1">This page <em>isn't here.</em></h1>
+    <p class="lede">The link may be out of date, or the page may have moved. These are good places to start.</p>
+    <div class="row"><a class="btn" href="#home">Go to the home page</a><a class="link" href="#buy">Buy <span class="ar" aria-hidden="true">→</span></a><a class="link" href="#sell">Sell <span class="ar" aria-hidden="true">→</span></a><a class="link" href="#invest">Invest <span class="ar" aria-hidden="true">→</span></a><a class="link" href="#neighbourhoods">Neighbourhoods <span class="ar" aria-hidden="true">→</span></a></div>
+  </div></header>
+</div>
+
+<!-- ============ SITE PLAN ============ -->
+<div class="page" data-page="site-plan" data-title="Site Plan & Launch Notes | Ali Bayat Realty (internal)" hidden>
+  <header class="page-head"><div class="wrap">
+    <nav class="crumbs" aria-label="Breadcrumb"><a href="#home">Home</a><span aria-hidden="true">/</span><span>Site plan (internal)</span></nav>
+    <span class="label accent">Internal · not part of the public site</span>
+    <h1 tabindex="-1">Site plan, SEO and launch notes</h1>
+    <p class="lede">Page titles and descriptions, URL structure, the integrations that keep Ali in control of his data, and everything waiting on his input.</p>
+  </div></header>
+  <section class="band tight"><div class="wrap stack" style="gap:3.5rem">
+    <div class="stack"><h2>Pages, titles and meta descriptions</h2>
+      <div class="tbl-wrap wide-tbl"><table><thead><tr><th>URL</th><th>Title tag</th><th>Meta description</th><th>H1</th><th>Indexing</th></tr></thead><tbody id="seo-rows"></tbody></table></div></div>
+    <div class="svc" style="border:0">
+      <article class="stack"><h2>URL structure</h2><pre class="code">Built now (build.py, real crawlable pages)
+/                                Home
+/about/  /buy/  /sell/
+/invest/                         Investment vertical
+/neighbourhoods/
+  /neighbourhoods/north-york/  /thornhill/
+  /richmond-hill/  /vaughan/  /toronto/
+/listings/                       noindex until IDX
+/resources/
+  /resources/buying/land-transfer-tax-toronto-york-region/
+/contact/
+/privacy/  /terms/  /accessibility/   noindex (text pending)
+/404.html  /sitemap.xml  /robots.txt
+
+Planned (not built yet)
+/invest/duplexes/  /invest/triplexes/  /invest/fourplexes/
+/invest/cash-flow/  /invest/cap-rate/
+/invest/investment-analysis/
+/resources/buying/[slug]/  /selling/[slug]/
+/resources/market/[yyyy-mm]-[area]/  /tips/[slug]/
+/listing/[mls-id]/               once IDX is live</pre></article>
+      <article class="stack"><h2>Structured data (JSON-LD)</h2><pre class="code">Every page
+  WebSite + RealEstateAgent (one @graph)
+  RealEstateAgent: name, url, areaServed,
+    knowsLanguage en/fa
+  telephone, email, address, brokerage
+    (parentOrganization) and RECO details
+    are added ONLY once confirmed in
+    build.py CONFIG. Never placeholders.
+Inner pages
+  BreadcrumbList matching the visible path
+Neighbourhood pages
+  WebPage, about: Place
+Land transfer tax guide
+  Article, author Ali Bayat
+  (no dates until Ali sets them)
+Not used
+  Reviews/ratings (none verified yet),
+  FAQ, Offer, Listing schema</pre></article>
+    </div>
+    <div class="stack"><h2>Technical SEO in the build</h2>
+      <div class="tbl-wrap wide-tbl"><table><thead><tr><th>Item</th><th>What's implemented</th><th>Still needed</th></tr></thead><tbody>
+        <tr><td>Crawlable URLs</td><td>Each route is pre-rendered to its own <code>/path/index.html</code> with full HTML content and real links. The site works without JavaScript except the calculators.</td><td>Hosting that serves <code>index.html</code> for folders (almost all static hosts do).</td></tr>
+        <tr><td>Metadata</td><td>Unique title, meta description, canonical, robots, Open Graph and Twitter tags per page, from the table above.</td><td>A 1200×630 share image (og:image) once photography exists.</td></tr>
+        <tr><td>Canonicals</td><td>Absolute, trailing-slash URLs on the configured domain. Query-string variants (e.g. <code>/contact/?interest=invest</code>) point to the clean URL.</td><td>Confirm the final domain and www/non-www choice, then rebuild.</td></tr>
+        <tr><td>Sitemap</td><td><code>/sitemap.xml</code> lists indexable pages only.</td><td>Submit in Google Search Console and Bing Webmaster Tools after launch.</td></tr>
+        <tr><td>Robots</td><td><code>/robots.txt</code> allows crawling and points to the sitemap. Unfinished pages use a noindex meta tag instead of being blocked, so search engines can see the instruction.</td><td>Remove noindex from legal pages and listings when their content is real.</td></tr>
+        <tr><td>Internal pages</td><td>This site plan, the preview bar and draft notes to Ali are stripped from the public build.</td><td>—</td></tr>
+        <tr><td>Languages</td><td>English only; <code>lang="en-CA"</code>.</td><td>hreflang tags once Farsi pages exist.</td></tr>
+        <tr><td>Content governance</td><td><code>content.json</code> records each page's review status, tied to its exact content. Dates come only from Ali's approvals and are the only source of <code>lastmod</code>.</td><td>Ali reviews each page: <code>python build.py approve &lt;page&gt; --by "Ali Bayat"</code>.</td></tr>
+        <tr><td>Lead form</td><td>Payload contract in <code>LEADS.md</code> / <code>lead.schema.json</code>; consent, source page/CTA and first-party UTM fields; honest "not connected" state.</td><td>A real endpoint, plus legal approval of the consent wording.</td></tr>
+      </tbody></table></div></div>
+    <div class="stack"><h2>Keeping Ali independent of any one platform</h2>
+      <div class="tbl-wrap wide-tbl"><table><thead><tr><th>Piece</th><th>Recommendation</th><th>Why</th></tr></thead><tbody>
+        <tr><td>Domain</td><td>alibayatrealty.com registered in Ali's own name and account. Not connected yet.</td><td>The domain is the business address; it should never belong to a brokerage or vendor.</td></tr>
+        <tr><td>Website</td><td>This design as static HTML/CSS on a low-cost host, or a standard CMS such as WordPress. Content kept in Ali's own files.</td><td>Can move hosts without a rebuild.</td></tr>
+        <tr><td>Contact form &amp; leads</td><td>Form posts to a small endpoint that emails Ali, forwards to his CRM and logs to a sheet he owns. Fields: name, email, phone, interest, message, language.</td><td>Leads never live only inside a portal.</td></tr>
+        <tr><td>CRM</td><td>Any CRM with an API or webhooks. A spreadsheet is fine to start.</td><td>Easy to switch later.</td></tr>
+        <tr><td>Listings</td><td>IDX/VOW feed from TRREB (PropTx) via a board-approved vendor, authorized by the brokerage. Drops into the existing results grid.</td><td>Board rules and fees apply; confirm with the brokerage first.</td></tr>
+        <tr><td>Analytics</td><td>GA4 or a privacy-friendly option such as Plausible, in Ali's own account.</td><td>History stays with him.</td></tr>
+        <tr><td>Compliance</td><td>Brokerage name and title, RECO advertising rules, MLS®/REALTOR® trademark notices, privacy policy, AODA accessibility statement, CASL consent for email alerts.</td><td>Slots already exist in header meta, footer and contact page.</td></tr>
+      </tbody></table></div></div>
+    <div class="svc" style="border:0">
+      <article class="stack"><h2>Needs Ali's input</h2><ul class="checklist">
+        <li>Registration title (Salesperson or Broker), RECO number and start year</li>
+        <li>Exact real estate experience and how to phrase it</li>
+        <li>Brokerage legal name, address and required disclaimer wording</li>
+        <li>How much of his current employment to mention publicly</li>
+        <li>Phone, email, preferred channels and reply time</li>
+        <li>About page story in his own words</li>
+        <li>"Ali's take" notes for each neighbourhood</li>
+        <li>Seller marketing package (photography, video, staging)</li>
+        <li>Professional portrait and licensed GTA photography</li>
+        <li>Review of the land transfer tax guide</li>
+        <li>Brokerage review of the Invest page wording and calculator disclaimer</li>
+        <li>Any referral arrangements with mortgage, legal or other professionals, and how they're disclosed</li>
+        <li>Default example figures in the investment calculator</li>
+        <li>Final domain (and www or not) for canonicals and the sitemap</li>
+        <li>A share image for social previews (1200×630)</li>
+        <li>Privacy policy, terms of use and accessibility statement text</li>
+        <li>Review and approve each page as written (content governance)</li>
+        <li>Consent wording on the contact form (legal / brokerage)</li>
+        <li>Optional: his own perspective for each neighbourhood (drafts are not published)</li>
+      </ul></article>
+      <article class="stack"><h2>Before launch</h2><ul class="checklist">
+        <li>Brokerage reviews the site for RECO and brokerage compliance</li>
+        <li>Fill confirmed details into build.py CONFIG, rebuild, and spot-check every page</li>
+        <li>Replace drawings in photo slots with real, licensed photography</li>
+        <li>Connect the form to email and CRM; add privacy policy and CASL consent</li>
+        <li>Set up Google Business Profile, Search Console and analytics in Ali's accounts; submit the sitemap</li>
+        <li>Choose hosting, then point alibayatrealty.com at it</li>
+        <li>Later: IDX feed, live market data, Farsi page versions with hreflang</li>
+      </ul></article>
+    </div>
+  </div></section>
+</div>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="fgrid">
+      <div class="stack" style="gap:1rem">
+        <a class="brand" href="#home"><span class="mk" aria-hidden="true">AB</span><span class="wm"><b>Ali Bayat</b><small>Realty</small></span></a>
+        <p class="muted" style="max-width:34ch">Real estate advice for buyers, sellers and investors across Toronto and York Region. English and Farsi.</p>
+        <div class="brokerage">
+          <strong><mark class="tbc" data-tpl="Ali Bayat, {job_title}">Ali Bayat, Sales Representative</mark></strong>
+          <span class="muted"><mark class="tbc" data-tpl="{brokerage_name}">[Brokerage legal name], Brokerage</mark></span>
+          <span class="muted"><mark class="tbc" data-tpl="{brokerage_address_line}{brokerage_franchise_note}">[Brokerage address] · Independently owned and operated</mark></span>
+        </div>
+      </div>
+      <div><h4>Work with Ali</h4><ul><li><a href="#buy">Buy a home</a></li><li><a href="#sell">Sell a home</a></li><li><a href="#invest">Investment properties</a></li><li data-requires="idx"><a href="#listings">Listing search</a></li><li><a href="#contact">Talk to Ali</a></li></ul></div>
+      <div><h4>Neighbourhoods</h4><ul><li><a href="#north-york">North York real estate</a></li><li><a href="#thornhill">Thornhill real estate</a></li><li><a href="#richmond-hill">Richmond Hill real estate</a></li><li><a href="#vaughan">Vaughan real estate</a></li><li><a href="#toronto">Toronto real estate</a></li></ul></div>
+      <div><h4>Contact</h4><ul><li><mark class="tbc" data-tpl="{phone_display}">(416) 000-0000</mark></li><li><mark class="tbc" data-tpl="{email}">ali@alibayatrealty.com</mark></li><li><a href="#about">About Ali</a></li><li><a href="#resources">Resources</a></li></ul></div>
+    </div>
+    <div class="legal">
+      <p>Not intended to solicit properties currently listed for sale or buyers or sellers currently under contract with a brokerage. <mark class="tbc" data-note="footer-disclaimer">Final disclaimer wording from brokerage</mark></p><p>Century 21 Heritage Group Ltd., Brokerage. Independently owned and operated. ®/™ trademarks owned by Century 21 Real Estate LLC used under license or authorized sub-license.</p><p>The trademarks REALTOR®, REALTORS® and the REALTOR® logo are controlled by The Canadian Real Estate Association (CREA) and identify real estate professionals who are members of CREA. Used under license.</p>
+      <p data-requires="idx">The trademarks MLS®, Multiple Listing Service® and the associated logos identify professional services rendered by REALTOR® members of CREA. <mark class="tbc" data-note="mls-notice">Include once IDX is live, if required</mark></p>
+      <div class="links"><span>© 2026 Ali Bayat Realty</span><a href="#privacy">Privacy policy</a><a href="#terms">Terms of use</a><a href="#accessibility">Accessibility</a><a href="#site-plan" data-internal>Site plan (internal)</a></div>
+    </div>
+  </div>
+</footer>
+
+<div class="mbar" id="mbar" aria-hidden="true"><span>Buying, selling or investing? Ask Ali.</span><a class="btn sm" href="#contact" tabindex="-1">Talk to Ali</a></div>
+
+<script>
+(function(){
+"use strict";
+
+/*<prototype>*/
+/* ---------- Elevation drawings (brand illustration system) ---------- */
+const L=(a,b,c,d)=>`<line x1="${a}" y1="${b}" x2="${c}" y2="${d}"/>`;
+const R=(x,y,w,h)=>`<rect x="${x}" y="${y}" width="${w}" height="${h}"/>`;
+const PL=p=>`<polyline points="${p}"/>`;
+const win=(x,y,w,h,v=1,hz=0)=>{let s=R(x,y,w,h);for(let i=1;i<=v;i++)s+=L(x+w*i/(v+1),y,x+w*i/(v+1),y+h);for(let i=1;i<=hz;i++)s+=L(x,y+h*i/(hz+1),x+w,y+h*i/(hz+1));return s};
+const D={
+ bay(){return L(20,260,380,260)+R(130,110,140,150)+PL("116,114 200,32 284,114")+PL("134,112 200,50 266,112")+win(188,66,24,30,0,1)+R(238,50,14,26)
+   +R(140,128,64,127)+L(134,126,210,126)+win(147,140,50,42,2)+win(147,200,50,42,2)+win(222,132,34,42,0,1)+R(223,194,30,66)+L(223,204,253,204)
+   +L(214,184,282,184)+L(218,184,218,260)+L(278,184,278,260)+L(130,248,270,248)},
+ bungalow(){return L(20,260,380,260)+R(60,172,280,88)+PL("44,174 108,116 292,116 356,174")+L(44,174,356,174)+R(250,94,20,24)
+   +win(86,190,106,48,2)+R(214,190,30,70)+win(268,194,50,38,1)+L(0,260,60,260)+L(340,236,380,236)},
+ tower(){let s=L(20,260,380,260)+R(60,212,280,48)+R(140,24,120,188)+R(166,10,68,14)+L(60,222,340,222);
+   for(let y=38;y<212;y+=13)s+=L(134,y,266,y);for(const x of [170,200,230])s+=L(x,24,x,212);for(const x of [100,140,180,220,260,300])s+=L(x,222,x,260);return s},
+ detached(){return L(20,260,380,260)+R(70,122,170,138)+PL("56,124 155,60 254,124")+L(56,124,254,124)+R(240,170,122,90)+PL("234,172 301,134 368,172")+L(234,172,368,172)
+   +R(258,196,86,64)+L(258,212,344,212)+L(258,228,344,228)+L(258,244,344,244)+win(88,142,44,40,1)+win(174,142,44,40,1)+R(142,198,30,62)+L(134,190,180,190)+win(86,202,42,38,1)},
+ cottage(){return L(20,260,380,260)+R(90,140,220,120)+PL("76,142 128,98 272,98 324,142")+L(76,142,324,142)+PL("164,142 200,74 236,142")
+   +`<path d="M190 128 V104 Q200 86 210 104 V128 Z"/>`+win(112,166,40,60,1,1)+win(248,166,40,60,1,1)+R(186,184,28,76)+L(180,184,180,260)+L(220,184,220,260)+R(98,106,12,18)+R(290,106,12,18)},
+ town(){let s=L(20,260,380,260);for(let i=0;i<3;i++){const x=65+i*90;s+=R(x,120,90,140)+R(x-2,110,94,10)+win(x+14,134,62,36,2)+R(x+10,200,44,60)+L(x+10,215,x+54,215)+L(x+10,230,x+54,230)+R(x+62,206,20,54)}return s},
+ /* Income-property elevations (Invest page) */
+ duplex(){return L(20,260,380,260)+R(110,112,180,148)+PL("96,114 200,52 304,114")+L(96,114,304,114)+L(110,186,290,186)
+   +win(130,130,46,40,1)+win(224,130,46,40,1)+win(126,202,48,38,1)+R(194,206,28,54)+R(240,206,28,54)+L(186,198,276,198)},
+ triplex(){let s=L(20,260,380,260)+R(130,60,140,200)+R(122,52,156,8)+L(130,126,270,126)+L(130,193,270,193);
+   for(const y of [74,141])s+=win(148,y,40,40,1)+win(212,y,40,40,1);
+   return s+win(148,208,40,36,1)+R(214,206,32,54)+L(204,206,256,206)},
+ fourplex(){let s=L(20,260,380,260)+R(70,120,260,140)+PL("58,122 110,80 290,80 342,122")+L(58,122,342,122)+L(70,190,330,190)+L(200,120,200,260);
+   s+=win(86,136,40,38,1)+win(144,136,40,38,1)+win(216,136,40,38,1)+win(274,136,40,38,1);
+   return s+win(86,206,52,36,1)+R(156,206,28,54)+R(216,206,28,54)+win(262,206,52,36,1)},
+ suite(){return L(20,232,380,232)+R(110,112,180,120)+PL("96,114 200,52 304,114")+L(96,114,304,114)
+   +`<path d="M110 232 V264 H290 V232" stroke-dasharray="5 5"/>`
+   +win(130,132,44,38,1)+win(226,132,44,38,1)+win(130,182,44,34,1)+R(224,178,28,54)
+   +win(136,240,40,16,1)+win(224,240,40,16,1)+PL("300,232 300,264 336,264")+R(306,236,24,28)+L(296,232,340,232)},
+ walkup(){let s=L(20,260,380,260)+R(50,80,300,180)+R(42,72,316,8);
+   for(const y of [94,150,206])for(const x of [66,120,240,294])s+=win(x,y,40,34,1);
+   return s+win(180,94,40,34,1)+win(180,150,40,34,1)+R(184,210,32,50)+L(172,204,228,204)},
+ mixed(){let s=L(20,260,380,260)+R(100,60,200,200)+R(92,52,216,8)+L(100,180,300,180);
+   for(const y of [76,128])for(const x of [120,180,240])s+=win(x,y,40,36,0,1);
+   return s+PL("100,180 112,194 288,194 300,180")+R(114,202,118,58)+L(153,202,153,260)+L(193,202,193,260)+R(248,202,34,58)}
+};
+const TYPES={bay:"Bay-and-gable semi",bungalow:"Post-war bungalow",tower:"Condo tower",detached:"Two-storey detached",cottage:"Ontario cottage",town:"Townhouse row",duplex:"Duplex",triplex:"Triplex",fourplex:"Fourplex",suite:"House with secondary suite",walkup:"Low-rise walk-up",mixed:"Mixed-use building"};
+function dwgSVG(k,sw){return `<svg viewBox="0 0 400 290" preserveAspectRatio="xMidYMid meet" aria-hidden="true" focusable="false"><g fill="none" stroke="currentColor" stroke-width="${sw||1.5}" stroke-linejoin="round" stroke-linecap="round">${D[k]()}</g></svg>`}
+function stripSVG(){
+  const seq=[["bay","toronto","Toronto"],["tower","north-york","North York"],["bungalow","north-york","North York"],["cottage","thornhill","Thornhill"],["detached","richmond-hill","Richmond Hill"],["town","vaughan","Vaughan"],["tower","vaughan","Vaughan · VMC"]];
+  const W=300;let g="";
+  seq.forEach(([k,slug,name],i)=>{const x=i*W;g+=`<a href="#${slug}" aria-label="${name}: ${TYPES[k]}"><g transform="translate(${x-20},0) scale(.85)"><g class="st" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round">${D[k]()}</g></g>
+    <text x="${x+150}" y="262" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="13" fill="currentColor" letter-spacing="1">${name.toUpperCase()}</text>
+    <text x="${x+150}" y="280" text-anchor="middle" font-family="Public Sans, sans-serif" font-size="12" fill="currentColor" opacity=".6">${TYPES[k]}</text></a>`});
+  const w=seq.length*W;
+  return `<svg viewBox="-10 0 ${w+20} 300" role="img" aria-label="Elevation drawings of typical housing from Toronto north along Yonge Street to Richmond Hill, and west to Vaughan"><line x1="-10" y1="221" x2="${w+10}" y2="221" stroke="currentColor" stroke-width="1.6"/>${g}<text x="${w}" y="296" text-anchor="end" font-family="IBM Plex Mono, monospace" font-size="11" fill="currentColor" opacity=".6">SOUTH → NORTH · NOT TO SCALE</text></svg>`}
+function fillDwgs(root){
+  root.querySelectorAll("[data-strip]:not([data-done])").forEach(el=>{el.innerHTML=stripSVG();el.dataset.done=1});
+  root.querySelectorAll(".dwg[data-dwg]:not([data-done])").forEach(el=>{
+    const k=el.dataset.dwg;let svg;
+    if(k==="strip2"){svg=`<svg viewBox="0 0 800 290" preserveAspectRatio="xMidYMid meet" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"><g transform="translate(0,0)">${D.tower()}</g><g transform="translate(400,0)">${D.detached()}</g></g><line x1="400" y1="20" x2="400" y2="270" stroke="currentColor" stroke-dasharray="4 6" opacity=".5"/><text x="390" y="40" text-anchor="end" font-family="IBM Plex Mono, monospace" font-size="12" fill="currentColor">CITY OF TORONTO</text><text x="410" y="40" font-family="IBM Plex Mono, monospace" font-size="12" fill="currentColor">YORK REGION</text><text x="400" y="284" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="11" fill="currentColor" opacity=".6">STEELES AVE</text></svg>`}
+    else svg=dwgSVG(k);
+    const ttl=el.dataset.ttl?`<div class="ttl"><span class="label">${el.dataset.ttl}</span><span class="label">${el.dataset.no||""}</span></div>`:"";
+    const tag=el.dataset.photo?`<span class="photo-tag">Photo to come: ${el.dataset.photo}</span>`:"";
+    el.insertAdjacentHTML("beforeend",svg+ttl+tag);el.setAttribute("role","img");el.setAttribute("aria-label",el.dataset.photo?`Drawing placeholder; photo to come: ${el.dataset.photo}`:"Architectural drawing");el.dataset.done=1})}
+
+/* ---------- Neighbourhood data: add a community by adding one object ---------- */
+const AREAS=[
+ {slug:"north-york",investor:["Condo investors should check building rules on rentals, monthly fees and the reserve fund before relying on rental income","Toronto's municipal land transfer tax adds to the purchase cost and to the cash you put in","On lower-density streets, confirm with the City what additional units zoning allows before counting on them"],name:"North York",region:"City of Toronto",where:"Yonge & Sheppard",hero:"tower",types:["tower","bungalow","detached"],
+  photo:"Yonge & Sheppard towers at dusk, from street level",
+  tagline:"Condo towers along Yonge, quiet residential streets a few blocks away.",
+  facts:[["Municipality","City of Toronto"],["Main corridor","Yonge St"],["Subway","Lines 1 & 4"],["School boards","TDSB, TCDSB"]],
+  overview:["North York was its own city until it became part of Toronto in 1998. Today it covers much of the city's north end, from established family neighbourhoods to one of the busiest condo corridors in the GTA along Yonge Street.","Because it's part of the City of Toronto, buyers here pay Toronto's municipal land transfer tax on top of the provincial tax. It's worth factoring in when comparing North York with York Region communities just north of Steeles."],
+  perspective:null, /* Ali's own words, only when he supplies them */
+  perspectiveDraft:"Two North Yorks share one postal area: the tower corridor on Yonge, and the bungalow streets a few minutes away. They attract different buyers and need different strategies.",
+  housing:"High-rise condos cluster around North York Centre, Sheppard-Yonge and Finch. A few blocks off Yonge, many streets have original post-war bungalows alongside newer custom-built homes, with townhouses and low-rise condos in between.",
+  lifestyle:"Yonge Street has a wide mix of restaurants and shops, including many Persian businesses north of Sheppard. Mel Lastman Square hosts community events, and Yorkdale and Fairview are a short drive away.",
+  transit:["Line 1 Yonge–University: North York Centre, Sheppard-Yonge and Finch stations","Line 4 Sheppard east from Sheppard-Yonge","Highway 401 and the Don Valley Parkway nearby"],
+  schools:"Public schools are run by the Toronto District School Board and Catholic schools by the Toronto Catholic District School Board. Boundaries can change, so confirm them with the board for any address.",
+  amenities:["Mel Lastman Square and North York Civic Centre","Earl Bales Park and the West Don trails","North York Central Library","Yorkdale and Fairview shopping centres"],
+  buyer:["Condo supply is high; compare building fees, reserve funds and rental ratios carefully","Budget for Toronto's municipal land transfer tax","Older bungalow lots can suit a future renovation or rebuild; check zoning first"],
+  seller:["Your competition may include similar units in the same building, so presentation and pricing matter","Detached homes on larger lots often attract builders as well as families","Walking distance to a subway station is a real selling point; lead with it"]},
+ {slug:"thornhill",investor:["Property tax rates and municipal rules differ between the Vaughan and Markham sides; use the actual municipality in your numbers","Secondary-suite rules are set by each city, so confirm what's permitted at the specific address","Planned transit can affect future demand, but timing isn't guaranteed; don't build your returns on it"],name:"Thornhill",region:"Vaughan & Markham, York Region",where:"Yonge & Centre",hero:"cottage",types:["cottage","detached","tower"],
+  photo:"Thornhill Village streetscape near Yonge & Centre",
+  tagline:"An established community just north of Toronto, split between two cities.",
+  facts:[["Municipality","Vaughan & Markham"],["Main corridors","Yonge, Bathurst, Centre"],["Transit","YRT/Viva, Line 1 nearby"],["School boards","YRDSB, YCDSB"]],
+  overview:["Thornhill sits just north of Steeles Avenue, the boundary between Toronto and York Region. It isn't a municipality on its own: the part west of Yonge is in Vaughan and the part east is in Markham, which affects property tax rates and city services.","It's popular with families who want established neighbourhoods and quick access to Toronto without the city's municipal land transfer tax."],
+  perspective:null, /* Ali's own words, only when he supplies them */
+  perspectiveDraft:"The first question for any Thornhill home is which side of Yonge it's on. Vaughan or Markham changes the tax bill and the services, even on streets that look the same.",
+  housing:"The historic village area near Yonge and Centre has some of the oldest homes in the region. Much of the rest is detached and semi-detached homes from the 1970s to the 1990s, with newer condos and townhouses along Yonge, Bathurst and Centre Street.",
+  lifestyle:"Mature trees, ravines and parks, with shopping at Promenade and along Yonge. Community centres and places of worship serve a diverse population.",
+  transit:["York Region Transit and Viva rapid transit on Yonge and Highway 7","Finch station on Line 1 is a short trip south","The Yonge North Subway Extension is planned for this area; check Metrolinx for current timelines","Highways 407, 404 and 400 nearby"],
+  schools:"Schools are run by the York Region District School Board and York Catholic District School Board. Boundaries vary street by street; confirm with the board.",
+  amenities:["Thornhill Village heritage area","Promenade Shopping Centre","Pomona Mills Park and the Don River trails","Thornhill Community Centre"],
+  buyer:["Check whether the address is in Vaughan or Markham; tax rates and services differ","Subway construction may affect some streets near Yonge for a while","Older homes may need updates; budget for what an inspection finds"],
+  seller:["Buyers moving north from Toronto are a key audience; highlight the commute and the tax savings","Updated kitchens and baths stand out in neighbourhoods of similar-age homes","Homes in the heritage area may have rules that need to be disclosed"]},
+ {slug:"richmond-hill",investor:["Rents and values vary widely by neighbourhood; base income estimates on comparable rentals nearby","Some northern areas fall under Oak Ridges Moraine planning rules that can limit additions","Confirm whether an existing basement unit is registered or legal before counting its rent"],name:"Richmond Hill",region:"York Region",where:"Yonge & Major Mackenzie",hero:"detached",types:["detached","cottage","tower"],
+  photo:"Detached homes on a mature Richmond Hill street",
+  tagline:"Established neighbourhoods, newer subdivisions and green space to the north.",
+  facts:[["Municipality","City of Richmond Hill"],["Main corridor","Yonge St"],["Transit","Viva, GO train"],["School boards","YRDSB, YCDSB"]],
+  overview:["Richmond Hill runs north along Yonge Street from Highway 7 to beyond Lake Wilcox. It combines an older downtown core, established family neighbourhoods and newer subdivisions toward Oak Ridges.","The city has a large Persian community, with many businesses along Yonge Street."],
+  perspective:null, /* Ali's own words, only when he supplies them */
+  perspectiveDraft:"Richmond Hill prices vary a lot from one neighbourhood to the next. City-wide averages can mislead buyers and sellers alike, so I always price from the nearest comparable streets.",
+  housing:"Mostly detached and semi-detached homes, with townhouses and condos concentrated along Yonge and Highway 7. Lot sizes and home ages differ widely between neighbourhoods.",
+  lifestyle:"Lakes and trails in the north end, the Mill Pond area near the old downtown, and a wide range of restaurants and shops along Yonge.",
+  transit:["Viva Blue rapid transit on Yonge; Viva Pink along Highway 7","Richmond Hill GO line, with stations at Langstaff, Richmond Hill and Gormley","Highways 404 and 407 nearby","Yonge North Subway Extension planned toward Richmond Hill Centre"],
+  schools:"Schools are run by the York Region District School Board and York Catholic District School Board. Confirm boundaries and programs with the board for any address.",
+  amenities:["Richmond Green Sports Centre and Park","Lake Wilcox and the Oak Ridges Moraine trails","Mill Pond Park","Richmond Hill Centre for the Performing Arts"],
+  buyer:["Compare within the same neighbourhood; home ages and lot sizes vary widely","Check GO and Viva access against your daily routine","Some northern areas fall under Oak Ridges Moraine planning rules"],
+  seller:["Family buyers look closely at school boundaries and nearby parks","Transit access near Yonge and Highway 7 is worth highlighting","Price against your own neighbourhood's comparables, not city-wide averages"]},
+ {slug:"vaughan",investor:["Pre-construction condos near the VMC involve deposits, occupancy fees and assignment rules that affect cash flow before closing","Compare rents within the specific community, not Vaughan as a whole","New condo supply nearby can affect achievable rents and resale; check what's under construction"],name:"Vaughan",region:"York Region",where:"Highway 7 & Jane",hero:"town",types:["detached","town","tower"],
+  photo:"Vaughan Metropolitan Centre towers and a nearby residential street",
+  tagline:"Established communities and a new downtown built around the subway.",
+  facts:[["Municipality","City of Vaughan"],["Communities","Woodbridge, Maple, Kleinburg, Concord"],["Subway","Line 1 to VMC"],["School boards","YRDSB, YCDSB"]],
+  overview:["Vaughan is made up of several distinct communities, including Woodbridge, Maple, Kleinburg, Concord and the western half of Thornhill, each with its own character.","The Vaughan Metropolitan Centre around Highway 7 and Jane Street is a newer downtown with high-rise condos and a Line 1 subway station, giving the city a direct rail link to Toronto."],
+  perspective:null, /* Ali's own words, only when he supplies them */
+  perspectiveDraft:"Treat Vaughan as several markets, not one. Woodbridge, Maple, Kleinburg and the VMC condo district each have their own buyers, prices and pace.",
+  housing:"Mostly detached family homes in established subdivisions, larger properties in areas such as Kleinburg, townhouses throughout, and a growing condo market around the Vaughan Metropolitan Centre.",
+  lifestyle:"Suburban neighbourhoods, historic village cores and major attractions, with plenty of shopping and dining.",
+  transit:["Line 1 subway to Vaughan Metropolitan Centre","Viva Orange rapid transit along Highway 7","Barrie GO line, with stations including Maple and Rutherford","Highways 400, 407 and 427 nearby"],
+  schools:"Schools are run by the York Region District School Board and York Catholic District School Board. Confirm boundaries with the board.",
+  amenities:["Vaughan Mills shopping centre","Canada's Wonderland","McMichael Canadian Art Collection in Kleinburg","Boyd Conservation Area and the Humber River trails"],
+  buyer:["Compare within each community, not against Vaughan as a whole","Pre-construction buyers near VMC should review assignment rules, occupancy fees and closing adjustments carefully","If you commute by car, test your route at rush hour"],
+  seller:["Buyers often compare your home with new builds, so condition and updates matter","Nearness to the subway or a GO station is a strong selling point","Larger lots, as in Kleinburg, attract a specific buyer pool and need careful comparables"]},
+ {slug:"toronto",investor:["Many older semis and row houses have been divided into units; confirm each unit's legal status with the City before relying on its rent","Budget for both provincial and municipal land transfer tax in the cash you put in","Older buildings can carry higher maintenance and insurance costs; get quotes during due diligence"],name:"Toronto",region:"City of Toronto",where:"Downtown & midtown",hero:"bay",types:["bay","town","tower"],
+  photo:"Bay-and-gable semis on a downtown Toronto street",
+  tagline:"Victorian semis, midtown family streets and downtown condos.",
+  facts:[["Municipality","City of Toronto"],["Housing mix","Condos, semis, rows"],["Transit","TTC, GO, UP Express"],["School boards","TDSB, TCDSB"]],
+  overview:["Toronto's older core has some of the most recognizable housing in Canada: Victorian and Edwardian semis and row houses, bay-and-gable facades, and walkable main streets. Downtown and along the subway lines, condos make up much of the market.","As in North York, buyers in the City of Toronto pay both the provincial and municipal land transfer tax."],
+  perspective:null, /* Ali's own words, only when he supplies them */
+  perspectiveDraft:"In older Toronto homes, the details drive value: parking, laneway access, basement height and the state of the wiring. I look at those before the finishes.",
+  housing:"Condos downtown and along transit lines; semi-detached and row houses in older neighbourhoods; detached homes across much of midtown.",
+  lifestyle:"Walkable neighbourhoods, parks and ravines, and easy access to restaurants, culture and work.",
+  transit:["TTC subway, streetcar and bus network","GO Transit and UP Express from Union Station","Gardiner Expressway and Don Valley Parkway"],
+  schools:"Schools are run by the Toronto District School Board and Toronto Catholic District School Board, with French-language boards also available. Confirm boundaries with the board.",
+  amenities:["Waterfront trails and the Toronto Islands","High Park and the ravine system","Major hospitals, universities and cultural venues","Neighbourhood main streets and markets"],
+  buyer:["Budget for both provincial and municipal land transfer tax","Older homes may need electrical or other updates; inspect carefully","For condos, review the status certificate and reserve fund study"],
+  seller:["Buyers often see several similar homes in one week; preparation matters","Present parking, updates and basement condition clearly","Set timing and offer strategy based on current local activity"]}
+];
+
+/* ---------- Line map ---------- */
+function lineMap(){
+  const nodes={"richmond-hill":[220,60],"thornhill":[220,170],"north-york":[220,280],"toronto":[220,400],"vaughan":[90,165]};
+  const n=(slug,label,sub,right=true)=>{const [x,y]=nodes[slug];const tx=right?x+18:x-18,a=right?"start":"end";
+    return `<a class="node" href="#${slug}" aria-label="${label}"><circle cx="${x}" cy="${y}" r="9"/><text x="${tx}" y="${y-2}" font-size="17" font-weight="600" text-anchor="${a}">${label}</text><text class="sub" x="${tx}" y="${y+16}" font-size="11" text-anchor="${a}">${sub}</text></a>`};
+  return `<svg viewBox="0 0 360 440" role="img" aria-labelledby="lm-t"><title id="lm-t">Schematic map: Yonge Street connects Toronto, North York, Thornhill and Richmond Hill; Vaughan is to the west</title>
+    <line class="road" x1="20" y1="222" x2="345" y2="222" stroke-width="1.5" stroke-dasharray="4 5"/>
+    <text class="sub" x="345" y="214" font-size="10" text-anchor="end">STEELES AVE · TORONTO / YORK REGION</text>
+    <line class="road" x1="20" y1="118" x2="345" y2="118" stroke-width="1" stroke-dasharray="2 6" opacity=".6"/>
+    <text class="sub" x="345" y="110" font-size="10" text-anchor="end">HWY 7 / 407</text>
+    <line class="yl" x1="220" y1="40" x2="220" y2="410" stroke-width="7" stroke-linecap="round"/>
+    <path class="br" d="M220 400 L150 340 L90 280 L90 165" fill="none" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+    <text class="sub" x="232" y="434" font-size="10">YONGE ST</text>
+    <text class="sub" x="102" y="300" font-size="10" transform="rotate(-90 102 300)">LINE 1 TO VMC</text>
+    ${n("richmond-hill","Richmond Hill","Yonge & Major Mackenzie")}${n("thornhill","Thornhill","Yonge & Centre")}${n("north-york","North York","Sheppard-Yonge · Finch")}${n("toronto","Toronto","Downtown & midtown")}${n("vaughan","Vaughan","Hwy 7 & Jane",false)}
+  </svg><figcaption>Schematic, not to scale.</figcaption>`}
+function renderAlists(){document.querySelectorAll("[data-alist]").forEach(el=>{el.innerHTML=AREAS.map(a=>`<li><a href="#${a.slug}"><div class="dwg" data-dwg="${a.hero}"></div><div><span class="label">${a.region}</span><h3>${a.name}</h3><p>${a.tagline}</p></div><span class="go">Guide →</span></a></li>`).join("")})}
+
+/* ---------- Area page ---------- */
+function renderArea(a){
+  const ul=arr=>`<ul class="ticks">${arr.map(x=>`<li><span>${x}</span></li>`).join("")}</ul>`;
+  const others=AREAS.filter(x=>x.slug!==a.slug);
+  const secs=[["ov","Overview"],["life","Lifestyle"],["housing","Housing"],["transit","Getting around"],["amen","Amenities"],["market","Market","market-data"],["advice","Buyers & sellers"],["invest","Investors"],["guides","Related guides"],["listings","Listings","idx"]];
+  return `<header class="a-head"><div class="wrap">
+    <div>
+      <nav class="crumbs" aria-label="Breadcrumb"><a href="#home">Home</a><span aria-hidden="true">/</span><a href="#neighbourhoods">Neighbourhoods</a><span aria-hidden="true">/</span><span>${a.name}</span></nav>
+      <span class="eyebrow">${a.region} · ${a.where}</span>
+      <h1 tabindex="-1">${a.name} real estate</h1>
+      <p class="lede">${a.tagline}</p>
+      <div class="row"><a class="btn" href="#contact">Talk to Ali about ${a.name}</a></div>
+    </div>
+    <div class="dwg" data-dwg="${a.hero}" data-ttl="${TYPES[a.hero]}" data-no="${a.name.toUpperCase()}" data-photo="${a.photo}"><span class="grid-bg"></span></div>
+  </div>
+  <div class="wrap"><dl class="facts" style="margin-top:2rem;border-top:1px solid var(--line)">${a.facts.map(([k,v])=>`<div><dt>${k}</dt><dd>${v}</dd></div>`).join("")}</dl></div>
+  <nav class="jump" aria-label="On this page"><div class="wrap">${secs.map(([id,t,req])=>`<button type="button" data-jump="${id}"${req?` data-requires="${req}"`:""}>${t}</button>`).join("")}</div></nav>
+  </header>
+  <div class="wrap two" style="padding-block:1rem 4rem">
+    <div>
+      <section class="asec" id="ov"><h2>Overview</h2><div class="body">${a.overview.map(p=>`<p>${p}</p>`).join("")}${a.perspective?`<p class="pull">“${a.perspective}”</p><p class="small muted">Ali's perspective</p>`:`<div data-internal><p class="pull">“${a.perspectiveDraft}”</p><p class="tbc-note">Draft perspective written for Ali to replace or approve. Not published: production shows Ali's perspective only once he supplies it.</p></div>`}</div></section>
+      <section class="asec" id="life"><h2>Lifestyle</h2><div class="body"><p>${a.lifestyle}</p></div></section>
+      <section class="asec" id="housing"><h2>Housing</h2><div class="body"><p>${a.housing}</p><div class="types">${a.types.map(t=>`<figure><div class="dwg" data-dwg="${t}"></div><figcaption>${TYPES[t]}</figcaption></figure>`).join("")}</div></div></section>
+      <section class="asec" id="transit"><h2>Getting around</h2><div class="body">${ul(a.transit)}</div></section>
+      <section class="asec" id="amen"><h2>Amenities &amp; schools</h2><div class="body">${ul(a.amenities)}<p class="small muted">${a.schools}</p></div></section>
+      <section class="asec" id="market" data-requires="market-data"><h2>Market</h2><div class="body"><div class="slot"><span class="pill">Live data not connected</span><div class="tiles"><div><small>Median price</small><b>—</b></div><div><small>Sales, 30 days</small><b>—</b></div><div><small>Days on market</small><b>—</b></div><div><small>Active listings</small><b>—</b></div></div><p class="small muted">Monthly figures for ${a.name} will appear once a board-approved data source is connected. They are never estimated by hand.</p></div></div></section>
+      <section class="asec" id="advice"><h2>Buyers &amp; sellers</h2><div class="body"><div class="bs"><div class="box"><h3>If you're buying</h3>${ul(a.buyer)}<a class="link" href="#buy">How buying works <span class="ar" aria-hidden="true">→</span></a></div><div class="box"><h3>If you're selling</h3>${ul(a.seller)}<a class="link" href="#sell">How selling works <span class="ar" aria-hidden="true">→</span></a></div></div></div></section>
+      <section class="asec" id="invest"><h2>Investors</h2><div class="body"><p>Considerations specific to income properties in ${a.name}. They're questions to investigate, not predictions.</p>${ul(a.investor)}<a class="link" href="#invest">How investment property analysis works <span class="ar" aria-hidden="true">→</span></a></div></section>
+      <section class="asec" id="guides"><h2>Related guides</h2><div class="body"><ul class="ticks"><li><span><a class="link" href="#guide-land-transfer-tax">Land transfer tax in Toronto vs. York Region</a>: ${a.region==="City of Toronto"?`buyers in ${a.name} pay both the provincial and the municipal tax.`:`buyers in ${a.name} pay the provincial tax only.`}</span></li><li><span><a class="link" href="#neighbourhoods">Compare all neighbourhood guides</a></span></li></ul></div></section>
+      <section class="asec" id="listings" style="border-bottom:0" data-requires="idx"><h2>Listings</h2><div class="body"><div class="slot"><span class="pill">MLS® feed not connected</span><p class="small muted">Current ${a.name} listings will appear here, filtered automatically by area.</p><a class="link" href="#listings">Open the listing search preview <span class="ar" aria-hidden="true">→</span></a></div></div></section>
+    </div>
+    <aside class="aside" style="padding-top:2.25rem">
+      <div class="box tint"><h3>Thinking about ${a.name}?</h3><p>I can walk you through recent sales, what your budget buys here, or what your home might sell for.</p><a class="btn" href="#contact" data-cta="area-sidebar">Talk to Ali</a></div>
+      <div class="box"><h3>Other areas</h3><ul class="nolist small">${others.map(o=>`<li><a class="link" href="#${o.slug}">${o.name} <span class="ar" aria-hidden="true">→</span></a></li>`).join("")}</ul></div>
+    </aside>
+  </div>`}
+
+/* ---------- Buy / Sell processes ---------- */
+const PROC={
+ buy:[
+  ["Prepare",[["goals","Understanding your goals","We talk through what you need, where, and why: space, commute, schools, and how long you plan to stay.","What would make you regret this purchase in five years?"],
+    ["budget","Budget and financing","We work out a comfortable monthly cost including taxes, fees and closing costs. I'll suggest speaking with a mortgage professional early so your budget rests on a real pre-approval.","Is your pre-approval rate held, and for how long?"]]],
+  ["Search",[["research","Market research","Before touring, you'll see what recent sales look like in the areas you're considering: price ranges, how quickly homes sell, and what that means for timing.",""],
+    ["search","Property search","You get listings matched to your criteria, including new ones as they appear. Fewer, better-fitting homes beat long lists of maybes.",""],
+    ["evaluate","Property evaluation","For each serious contender we review comparable sales, condition, likely repair costs and, for condos, the status certificate and reserve fund. I'll tell you what I see, good and bad.","What would this home cost to own and maintain each month?"]]],
+  ["Offer",[["offer","Offer strategy","We decide on price, deposit, conditions and closing date for this home and this level of competition, including how to handle an offer date or multiple offers.",""],
+    ["negotiate","Negotiation","I negotiate on your behalf within limits we've agreed on together. Terms and timelines can matter as much as the price.",""]]],
+  ["Close",[["close","Closing coordination","I work with your lawyer, lender, inspector and the other agent to keep conditions, deadlines and paperwork on track, and stay in touch after you move in.",""]]]],
+ sell:[
+  ["Plan",[["analysis","Market analysis","I review recent comparable sales, what's currently listed, and what hasn't sold. That shows how buyers near you are behaving right now.",""],
+    ["pricing","Pricing strategy","We choose a price and approach together, such as pricing to market or setting an offer date. You'll see the comparables behind my recommendation.","What would you need to net from this sale for your next move to work?"]]],
+  ["Prepare",[["prep","Property preparation","A walk-through with a practical list: what's worth fixing, what to leave alone, and what to simply clean and stage. If you need trades, I can suggest people to call.",""],
+    ["marketing","Marketing","Professional photography, a clear description, MLS® exposure and online promotion aimed at the buyers most likely to want your home.",""]]],
+  ["Launch",[["launch","Listing launch","We pick a launch date and plan the first week carefully, since that's usually when buyer interest is highest.",""],
+    ["showings","Showing strategy","Showing windows that suit your household, secure access, and buyer-agent feedback passed to you promptly.",""]]],
+  ["Close",[["negotiate","Negotiation","We compare offers on price, deposit, conditions and closing date, and I walk you through each one so you can decide with the full picture.",""],
+    ["transaction","Transaction management","Conditions, deadlines, paperwork and communication with your lawyer are handled so closing day stays on schedule.",""]]]]
+};
+function renderProc(){
+  document.querySelectorAll("[data-timeline]").forEach(el=>{const k=el.dataset.timeline;
+    el.innerHTML=PROC[k].map(([ph,steps])=>`<div class="phase"><span class="pt" aria-hidden="true"></span><h3>${ph}</h3><ul>${steps.map(s=>`<li><button type="button" data-step="${k}-${s[0]}">${s[1]}</button></li>`).join("")}</ul></div>`).join("")});
+  document.querySelectorAll("[data-steps]").forEach(el=>{const k=el.dataset.steps;let n=0;
+    el.innerHTML=PROC[k].flatMap(([ph,steps])=>steps.map(s=>{n++;return `<li id="${k}-${s[0]}"><div class="k"><span>${ph} · ${String(n).padStart(2,"0")}</span><h3>${s[1]}</h3></div><div class="d"><p>${s[2]}</p>${s[3]?`<p class="ask">${s[3]}</p>`:""}</div></li>`})).join("")})}
+
+/* ---------- Listings placeholder ---------- */
+function renderListings(lease){
+  if(!document.getElementById("lgrid"))return;
+  const t=["Condo apartment","Semi-detached","Detached","Townhouse","Detached","Condo apartment"],d=["tower","bay","detached","town","cottage","tower"];
+  document.getElementById("lgrid").innerHTML=t.map((x,i)=>`<article class="lcard" aria-label="Example listing card, not a real property"><div class="dwg" data-dwg="${d[i]}"><span class="flag">Layout example</span></div>
+    <div class="in"><div class="price">${lease?"$ —,——/mo":"$ —,———,———"}</div><div class="small"><span class="ph">[Street address]</span><br><span class="muted">${AREAS[i%5].name}</span></div>
+    <div class="specs"><span><span class="ph">—</span> bd</span><span><span class="ph">—</span> ba</span><span>${x}</span></div><span class="muted" style="font-size:.75rem">Listing brokerage: <span class="ph">[from MLS®]</span></span></div></article>`).join("");
+  fillDwgs(document.getElementById("lgrid"))}
+
+/*</prototype>*/
+
+/* ---------- In-page jumps ---------- */
+function jumpTo(id){const t=document.getElementById(id);if(!t)return;t.scrollIntoView({behavior:matchMedia("(prefers-reduced-motion: reduce)").matches?"auto":"smooth",block:"start"});t.classList.remove("flash");void t.offsetWidth;t.classList.add("flash")}
+document.addEventListener("click",e=>{const s=e.target.closest("[data-step]");if(s)jumpTo(s.dataset.step);const j=e.target.closest("[data-jump]");if(j)jumpTo(j.dataset.jump)});
+
+/* ---------- Knowledge centre ---------- */
+const CATS=[
+ {id:"buying",name:"Buying Guides",d:"From budget to closing day."},
+ {id:"selling",name:"Selling Guides",d:"Preparing, pricing and selling."},
+ {id:"investment",name:"Investment",d:"Analyzing income properties: cash flow, cap rate, financing and strategy."},
+ {id:"market",name:"GTA Market Insights",d:"Monthly notes by area, from board data."},
+ {id:"areas",name:"Neighbourhood Guides",d:"What it's like to live in each community."},
+ {id:"tips",name:"Real Estate Tips",d:"Short answers to common questions."}];
+const ARTS=[
+ {c:"buying",t:"Land transfer tax in Toronto vs. York Region, with a calculator",d:"Why the same price costs more to close on in North York than in Vaughan.",u:"/resources/buying/land-transfer-tax-toronto-york-region/",href:"#guide-land-transfer-tax",pub:1},
+ {c:"buying",t:"Buying your first home in Toronto: a step-by-step plan",d:"From pre-approval to closing, with the costs at each stage.",u:"/resources/buying/first-home-toronto/"},
+ {c:"buying",t:"Pre-construction condos: questions to ask before you sign",d:"Deposits, occupancy fees, assignment rules and closing adjustments.",u:"/resources/buying/pre-construction-condo-questions/"},
+ {c:"selling",t:"What's worth fixing before you list",d:"Which repairs pay off, which don't, and how to get them done on time.",u:"/resources/selling/what-to-fix-before-listing/"},
+ {c:"selling",t:"Offer dates vs. pricing to market",d:"How each strategy works and when each tends to make sense.",u:"/resources/selling/offer-date-vs-pricing-to-market/"},
+ {c:"investment",t:"Investment property analysis: a step-by-step framework",d:"The six steps from property review to a decision, with the questions to ask at each.",u:"/invest/investment-analysis/"},
+ {c:"investment",t:"How to calculate cash flow on a rental property",d:"From gross rent to what's left after expenses, vacancy and the mortgage.",u:"/invest/cash-flow/"},
+ {c:"investment",t:"What is cap rate, and what it doesn't tell you",d:"How to calculate it, how to compare it, and its limits.",u:"/invest/cap-rate/"},
+ {c:"investment",t:"Financing an investment property: what to ask",d:"Down payments, rates and lender rules, and the questions to bring to a mortgage professional.",u:"/resources/investment/financing/"},
+ {c:"investment",t:"Income properties in the GTA: duplexes, triplexes and fourplexes",d:"How each type works, and what to verify about zoning and legal units.",u:"/invest/duplexes/ · /invest/triplexes/ · /invest/fourplexes/"},
+ {c:"investment",t:"Cash flow vs. appreciation: choosing an investor strategy",d:"Two reasons to own a property, the trade-offs, and the risks of each.",u:"/resources/investment/investor-strategy/"},
+ {c:"market",t:"Monthly market notes: North York",d:"First report using the monthly template, once a data source is connected.",u:"/resources/market/2026-10-north-york/"},
+ {c:"market",t:"Monthly market notes: York Region",d:"Vaughan, Richmond Hill and Thornhill in one monthly summary.",u:"/resources/market/2026-10-york-region/"},
+ {c:"areas",t:"North York neighbourhood guide",d:"Condo corridor, bungalow streets, transit and advice.",u:"/neighbourhoods/north-york/",href:"#north-york",pub:1},
+ {c:"areas",t:"Thornhill: the Vaughan side vs. the Markham side",d:"How the two halves differ on taxes, services and housing.",u:"/neighbourhoods/thornhill/",href:"#thornhill",pub:1},
+ {c:"areas",t:"Vaughan neighbourhood guide",d:"Woodbridge, Maple, Kleinburg and the VMC.",u:"/neighbourhoods/vaughan/",href:"#vaughan",pub:1},
+ {c:"tips",t:"How to read a condo status certificate",d:"The pages that matter and the red flags to look for.",u:"/resources/tips/condo-status-certificate/"},
+ {c:"tips",t:"Home inspections in the GTA: what to expect",d:"What inspectors check and how to use the report.",u:"/resources/tips/home-inspection-gta/"},
+ {c:"tips",t:"Choosing a contractor after you buy",d:"Quotes, contracts, permits and payment schedules.",u:"/resources/tips/choosing-a-contractor/"}];
+let activeCat="all";
+function renderKC(){
+  if(!document.getElementById("chips"))return;
+  document.getElementById("chips").innerHTML=[{id:"all",name:"All"},...CATS].map(c=>`<button class="chip" type="button" data-cat="${c.id}" aria-pressed="${c.id===activeCat}">${c.name}</button>`).join("");
+  document.getElementById("kc").innerHTML=CATS.filter(c=>activeCat==="all"||c.id===activeCat).map(c=>`<section class="kc-cat"><div class="intro"><h2>${c.name}</h2><p>${c.d}</p></div><div class="arts">${ARTS.filter(a=>a.c===c.id).map(a=>{const tag=a.href?"a":"div";return `<${tag} class="art"${a.href?` href="${a.href}"`:""}><h3>${a.t}</h3><span class="status${a.pub?" pub":""}">${a.pub?"Live":"Planned"}</span><p>${a.d}</p><span class="url">${a.u}</span></${tag}>`}).join("")}</div></section>`).join("")}
+document.addEventListener("click",e=>{const b=e.target.closest("[data-cat]");if(!b||!document.getElementById("chips"))return;activeCat=b.dataset.cat;renderKC()});
+
+/* ---------- Land transfer tax estimator ---------- */
+const ON=[[55000,.005],[250000,.01],[400000,.015],[2000000,.02],[Infinity,.025]];
+const TO=[[55000,.005],[250000,.01],[400000,.015],[2000000,.02],[3000000,.025],[4000000,.044],[5000000,.0545],[10000000,.065],[20000000,.0755],[Infinity,.086]];
+function tiered(p,br){let t=0,prev=0;for(const [cap,r] of br){if(p>prev)t+=(Math.min(p,cap)-prev)*r;prev=cap}return Math.round(t*100)/100}
+window.__ltt={tiered,ON,TO};
+const fmt=n=>n.toLocaleString("en-CA",{style:"currency",currency:"CAD",maximumFractionDigits:0});
+function calc(){
+  if(!document.getElementById("lt-price"))return;
+  const raw=document.getElementById("lt-price").value.replace(/[^0-9.]/g,"");const p=Math.max(0,parseFloat(raw)||0);
+  const inTO=document.getElementById("lt-to").checked,first=document.getElementById("lt-first").checked;
+  const on=tiered(p,ON),reb=first?Math.min(on,4000):0,to=inTO?tiered(p,TO):0;
+  document.getElementById("o-on").textContent=fmt(on);
+  document.getElementById("o-onr-row").hidden=!first;document.getElementById("o-onr").textContent="−"+fmt(reb);
+  document.getElementById("o-to-row").hidden=!inTO;document.getElementById("o-to").textContent=fmt(to);
+  document.getElementById("o-total").textContent=fmt(on-reb+to);
+  document.getElementById("o-note").textContent=inTO&&first?"Toronto's first-time buyer rebate may lower this further; it isn't included here. Your lawyer will confirm.":inTO?"Buying the same home in York Region would save the municipal tax shown above.":"No municipal land transfer tax outside the City of Toronto."}
+const pr=document.getElementById("lt-price");
+if(pr){pr.addEventListener("input",calc);
+pr.addEventListener("blur",()=>{const v=parseFloat(pr.value.replace(/[^0-9.]/g,""));if(v)pr.value=Math.round(v).toLocaleString("en-CA")});
+["lt-to","lt-on","lt-first"].forEach(id=>document.getElementById(id).addEventListener("change",calc))}
+
+/* ---------- Investment property estimator (educational) ---------- */
+const ivNum=id=>{const v=parseFloat(document.getElementById(id).value.replace(/[^0-9.]/g,""));return isFinite(v)&&v>0?v:0};
+const pctF=n=>isFinite(n)?(n<0?"−":"")+(Math.round(Math.abs(n)*100)/100).toLocaleString("en-CA",{minimumFractionDigits:2,maximumFractionDigits:2})+"%":"—";
+const fmtS=n=>(n<0?"−":"")+fmt(Math.abs(n));
+function mortgageAnnual(loan,ratePct,years){
+  if(loan<=0)return 0;const n=years*12;
+  if(ratePct<=0)return loan/n*12;
+  const i=Math.pow(1+ratePct/100/2,1/6)-1; /* Canadian fixed-rate convention: semi-annual compounding, monthly payments */
+  return loan*i/(1-Math.pow(1+i,-n))*12}
+function invCalc(){
+  if(!document.getElementById("iv-price"))return;
+  const price=ivNum("iv-price"),down=Math.min(100,ivNum("iv-down")),rate=ivNum("iv-rate"),yrs=parseInt(document.getElementById("iv-amort").value,10)||25;
+  const gross=ivNum("iv-rent"),vacP=Math.min(100,ivNum("iv-vac"));
+  const opex=ivNum("iv-tax")+ivNum("iv-ins")+ivNum("iv-maint")+ivNum("iv-util")+ivNum("iv-other");
+  const vac=gross*vacP/100,eff=gross-vac,noi=eff-opex;
+  const cash=price*down/100,debt=mortgageAnnual(price-cash,rate,yrs),cf=noi-debt;
+  const set=(id,t,neg)=>{const el=document.getElementById(id);el.textContent=t;el.classList.toggle("neg",!!neg)};
+  set("iv-o-gross",fmt(gross));set("iv-o-vac",vac?"−"+fmt(vac):fmt(0));set("iv-o-eff",fmt(eff));
+  set("iv-o-opex",opex?"−"+fmt(opex):fmt(0));set("iv-o-noi",fmtS(noi),noi<0);
+  set("iv-o-debt",debt?"−"+fmt(debt):fmt(0));set("iv-o-cf",fmtS(cf),cf<0);
+  set("iv-o-cap",price>0?pctF(noi/price*100):"—",noi<0);
+  set("iv-o-coc",cash>0?pctF(cf/cash*100):"—",cf<0);
+  document.getElementById("iv-o-note").textContent=!price||!gross?"Enter a purchase price and rental income to see an estimate."
+    :cf<0?`At these assumptions the property would need about ${fmt(Math.abs(cf)/12)} a month from you on top of the rent. Some investors accept that in exchange for potential appreciation and mortgage paydown, but neither is guaranteed.`
+    :`Positive at these assumptions, about ${fmt(cf/12)} a month before income tax. Try a higher interest rate, vacancy or maintenance figure to see how much room there is.`}
+window.__inv={mortgageAnnual,invCalc};
+document.querySelectorAll("[data-iv]").forEach(el=>{
+  el.addEventListener(el.tagName==="SELECT"?"change":"input",invCalc);
+  if(el.dataset.iv==="money")el.addEventListener("blur",()=>{const v=parseFloat(el.value.replace(/[^0-9.]/g,""));el.value=isFinite(v)?Math.round(v).toLocaleString("en-CA"):"0"})});
+
+/*<prototype>*/
+/* ---------- Routes: one source of truth for URLs, titles, descriptions, H1s and indexing ---------- */
+/* Used by the prototype router, the internal SEO table and build.py (static, crawlable pages). */
+const ROUTES=[
+ {key:"home",ct:"home",cat:"general",geo:"GTA",evergreen:1,path:"/",name:"Home",index:1,title:"Toronto & GTA Real Estate Agent | Ali Bayat Realty",desc:"Ali Bayat helps buyers and sellers in North York, Thornhill, Richmond Hill, Vaughan and Toronto make clear, well-informed decisions. English and Farsi.",h1:"Clear advice for buying and selling a home in the GTA."},
+ {key:"about",ct:"profile",cat:"general",geo:"GTA",evergreen:1,path:"/about/",name:"About",parent:"home",index:1,title:"About Ali Bayat | GTA Real Estate Agent",desc:"Meet Ali Bayat, a GTA real estate agent with a business operations background who works with clients in English and Farsi.",h1:"Hi, I'm Ali. Here's how I work."},
+ {key:"buy",ct:"service",cat:"buying",geo:"GTA",evergreen:1,path:"/buy/",name:"Buy",parent:"home",index:1,title:"Buying a Home in Toronto & the GTA | Ali Bayat Realty",desc:"How buying with Ali works in Toronto and York Region: goals, budget, research, evaluation, offer strategy, negotiation and closing.",h1:"Buying a home in Toronto and the GTA"},
+ {key:"sell",ct:"service",cat:"selling",geo:"GTA",evergreen:1,path:"/sell/",name:"Sell",parent:"home",index:1,title:"Selling a Home in Toronto & the GTA | Ali Bayat Realty",desc:"Market analysis, pricing, preparation, marketing and negotiation for GTA sellers. Talk to Ali about your home's value.",h1:"Selling a home in Toronto and the GTA"},
+ {key:"invest",ct:"service",cat:"investment",geo:"Toronto & York Region",evergreen:1,path:"/invest/",name:"Invest",parent:"home",index:1,title:"Investment Properties & Real Estate Investing in the GTA | Ali Bayat Realty",desc:"How to evaluate income properties in Toronto and York Region: rental income, expenses, financing, cash flow and cap rate, explained plainly.",h1:"Investing in GTA real estate with a focus on the numbers."},
+ {key:"neighbourhoods",ct:"hub",cat:"neighbourhoods",geo:"GTA",evergreen:1,path:"/neighbourhoods/",name:"Neighbourhoods",parent:"home",index:1,title:"GTA Neighbourhood Guides | Ali Bayat Realty",desc:"Guides to North York, Thornhill, Richmond Hill, Vaughan and Toronto: housing, transit, amenities and advice for buyers and sellers.",h1:"The GTA, one community at a time"},
+ ...AREAS.map(a=>({key:a.slug,page:"area",ct:"neighbourhood-guide",cat:"neighbourhoods",geo:a.name,evergreen:1,path:`/neighbourhoods/${a.slug}/`,name:a.name,parent:"neighbourhoods",index:1,place:a.name,title:`${a.name} Real Estate & Homes for Sale | Ali Bayat Realty`,desc:`${a.tagline} Housing, transit, amenities and advice for buyers and sellers in ${a.name}.`,h1:`${a.name} real estate`})),
+ {key:"listings",ct:"listings",cat:"buying",geo:"GTA",ts:1,path:"/listings/",name:"Listings",parent:"buy",index:0,requires:"idx",why:"noindex until a live IDX feed replaces the layout preview",title:"Toronto & GTA Homes for Sale | Ali Bayat Realty",desc:"Search homes for sale and lease across Toronto, North York, Thornhill, Richmond Hill and Vaughan.",h1:"Homes for sale in Toronto and the GTA"},
+ {key:"resources",ct:"hub",cat:"resources",geo:"GTA",evergreen:1,path:"/resources/",name:"Resources",parent:"home",index:1,title:"Real Estate Guides & GTA Market Insights | Ali Bayat Realty",desc:"Plain-language guides on buying, selling and investing in the GTA, neighbourhood guides and monthly market notes.",h1:"Guides for buying, selling and understanding the GTA market"},
+ {key:"guide-land-transfer-tax",ct:"guide",cat:"buying",geo:"Ontario; City of Toronto; York Region",ts:1,dataPeriod:"Ontario rates in effect since January 1, 2017; City of Toronto MLTT rates in effect from April 1, 2026",verifiedAt:"2026-10-01",sources:[["City of Toronto, MLTT rates and fees","https://www.toronto.ca/services-payments/property-taxes-utilities/municipal-land-transfer-tax-mltt/municipal-land-transfer-tax-mltt-rates-and-fees/"],["City of Toronto, MLTT rebates","https://www.toronto.ca/services-payments/property-taxes-utilities/municipal-land-transfer-tax-mltt/municipal-land-transfer-tax-mltt-rebate-opportunities/"],["Ontario, calculating land transfer tax","https://www.ontario.ca/document/land-transfer-tax/calculating-land-transfer-tax"],["Ontario, refunds for first-time homebuyers","https://www.ontario.ca/document/land-transfer-tax/land-transfer-tax-refunds-first-time-homebuyers"]],path:"/resources/buying/land-transfer-tax-toronto-york-region/",name:"Land transfer tax in Toronto vs. York Region",parent:"resources",type:"article",index:1,title:"Land Transfer Tax in Toronto vs. York Region (2026) | Ali Bayat Realty",desc:"How Ontario and Toronto land transfer taxes work in 2026, why buying in North York costs more at closing than Vaughan, with a calculator.",h1:"Land transfer tax in Toronto vs. York Region"},
+ {key:"contact",ct:"contact",cat:"general",geo:"GTA",evergreen:1,path:"/contact/",name:"Contact",parent:"home",index:1,title:"Contact Ali Bayat | Toronto & GTA Real Estate",desc:"Talk to Ali about buying, selling or investing in GTA real estate. Replies personally, in English or Farsi.",h1:"Talk to Ali"},
+ {key:"privacy",ct:"legal",cat:"legal",geo:"Ontario",evergreen:1,path:"/privacy/",name:"Privacy policy",parent:"home",index:0,why:"noindex until the policy text is written",title:"Privacy Policy | Ali Bayat Realty",desc:"How personal information sent through the Ali Bayat Realty website is collected, used and protected.",h1:"Privacy policy"},
+ {key:"terms",ct:"legal",cat:"legal",geo:"Ontario",evergreen:1,path:"/terms/",name:"Terms of use",parent:"home",index:0,why:"noindex until the terms are written",title:"Terms of Use | Ali Bayat Realty",desc:"The terms that apply to using the Ali Bayat Realty website, guides and calculators.",h1:"Terms of use"},
+ {key:"accessibility",ct:"legal",cat:"legal",geo:"Ontario",evergreen:1,path:"/accessibility/",name:"Accessibility",parent:"home",index:0,why:"noindex until the statement is written",title:"Accessibility | Ali Bayat Realty",desc:"Accessibility of the Ali Bayat Realty website and how to request information in another format.",h1:"Accessibility"},
+ {key:"not-found",ct:"system",cat:"system",path:"/404.html",name:"Page not found",index:0,why:"error page",title:"Page Not Found | Ali Bayat Realty",desc:"The page you were looking for isn't here.",h1:"This page isn't here."},
+
+ /* Planned: the information architecture exists, but these are NOT built or indexed until they have substantive, original content. */
+ ...[["invest-duplexes","/invest/duplexes/","Duplexes"],["invest-triplexes","/invest/triplexes/","Triplexes"],["invest-fourplexes","/invest/fourplexes/","Fourplexes"],["invest-cash-flow","/invest/cash-flow/","Cash flow"],["invest-cap-rate","/invest/cap-rate/","Cap rate"],["invest-analysis","/invest/investment-analysis/","Investment property analysis"]]
+   .map(([key,path,name])=>({key,path,name,parent:"invest",planned:1,ct:"guide",cat:"investment",geo:"Toronto & York Region",index:0,why:"planned; not built until written",title:"",desc:"",h1:""})),
+ {key:"site-plan",ct:"internal",cat:"internal",path:"",name:"Site plan",internal:1,index:0,why:"internal; not published",title:"Site Plan & Launch Notes | Ali Bayat Realty (internal)",desc:"",h1:"Site plan, SEO and launch notes"}
+];
+window.__routes=ROUTES;
+const seoRows=document.getElementById("seo-rows");
+if(seoRows)seoRows.innerHTML=ROUTES.filter(r=>!r.internal&&!r.planned).map(r=>`<tr><td><code>${r.path}</code></td><td>${r.title}<br><span class="muted code">${r.title.length} chars</span></td><td>${r.desc}<br><span class="muted code">${r.desc.length} chars</span></td><td>${r.h1}</td><td>${r.index?'<span class="status pub">index</span>':`<span class="status">noindex</span><br><span class="muted small">${r.why||""}</span>`}</td></tr>`).join("");
+
+/*</prototype>*/
+
+/* ---------- Mode: the prototype uses the hash router; built pages (data-static) are real URLs ---------- */
+const STATIC=document.documentElement.hasAttribute("data-static");
+const params=new URLSearchParams(location.search);
+const LEGACY=/*@legacy*/{}; /* build.py fills: old prototype hash -> real URL */
+
+/* ---------- First-party attribution: no cookies, no third parties, this browser tab only ---------- */
+const ATTR_KEYS=["utm_source","utm_medium","utm_campaign","utm_content"];
+let attrib={};
+try{attrib=JSON.parse(sessionStorage.getItem("abr-attrib")||"{}")}catch(e){}
+if(STATIC&&!attrib.landing_page){
+  const a={landing_page:location.pathname};
+  ATTR_KEYS.forEach(k=>{const v=params.get(k);if(v)a[k]=v.slice(0,100)});
+  try{const r=document.referrer&&new URL(document.referrer);if(r&&r.origin!==location.origin)a.referrer=r.origin}catch(e){}
+  attrib=a;try{sessionStorage.setItem("abr-attrib",JSON.stringify(a))}catch(e){}
+}
+
+/*<prototype>*/
+/* ---------- Router (prototype only) ---------- */
+const pages=[...document.querySelectorAll("[data-page]")],areaPage=document.querySelector('[data-page="area"]');
+const navMap={area:"neighbourhoods","guide-land-transfer-tax":"resources",listings:"buy"};
+function route(){
+  const h=(location.hash||"#home").slice(1)||"home";if(h==="main")return;
+  const area=AREAS.find(a=>a.slug===h);let key=area?"area":h;
+  if(!pages.some(p=>p.dataset.page===key))key="home";
+  pages.forEach(p=>p.hidden=p.dataset.page!==key);
+  if(area){areaPage.innerHTML=renderArea(area);fillDwgs(areaPage);document.title=`${area.name} Real Estate & Homes for Sale | Ali Bayat Realty`}
+  else document.title=pages.find(p=>p.dataset.page===key).dataset.title;
+  const nk=navMap[key]||key;
+  document.querySelectorAll(".nav a, .drawer a").forEach(a=>a.getAttribute("href")==="#"+nk&&!a.classList.contains("btn")?a.setAttribute("aria-current","page"):a.removeAttribute("aria-current"));
+  document.body.dataset.route=key;closeDrawer();window.scrollTo(0,0);updateBar();
+  const h1=document.querySelector(`[data-page="${key}"] h1`);if(h1&&booted)h1.focus({preventScroll:true})}
+let booted=false;
+if(!STATIC)window.addEventListener("hashchange",route);
+
+/*</prototype>*/
+
+/* ---------- Mobile menu & CTA bar ---------- */
+const mb=document.getElementById("menu-btn"),dr=document.getElementById("drawer");
+function closeDrawer(){dr.hidden=true;mb.setAttribute("aria-expanded","false");mb.textContent="Menu"}
+mb.addEventListener("click",()=>{const o=dr.hidden;dr.hidden=!o;mb.setAttribute("aria-expanded",String(o));mb.textContent=o?"Close":"Menu"});
+document.addEventListener("keydown",e=>{if(e.key==="Escape"&&!dr.hidden){closeDrawer();mb.focus()}});
+dr.addEventListener("click",e=>{if(e.target.closest("a"))closeDrawer()});
+const bar=document.getElementById("mbar");
+function updateBar(){const on=window.scrollY>520&&document.body.dataset.route!=="contact";bar.classList.toggle("on",on);bar.setAttribute("aria-hidden",String(!on));bar.querySelector("a").tabIndex=on?0:-1}
+window.addEventListener("scroll",updateBar,{passive:true});
+
+/*<prototype>*/
+/* ---------- Confirm-marker toggle ---------- */
+const tg=document.getElementById("tbc-toggle");
+if(tg){
+function applyTbc(){document.documentElement.classList.toggle("show-tbc",tg.checked);try{localStorage.setItem("abr-tbc",tg.checked?"1":"0")}catch(e){}}
+try{if(localStorage.getItem("abr-tbc")==="0")tg.checked=false}catch(e){}
+tg.addEventListener("change",applyTbc);applyTbc()}
+
+/* ---------- Listings interactions ---------- */
+const tS=document.getElementById("tab-sale"),tL=document.getElementById("tab-lease");
+if(tS){[tS,tL].forEach(b=>b.addEventListener("click",()=>{tS.setAttribute("aria-selected",String(b===tS));tL.setAttribute("aria-selected",String(b===tL));renderListings(b===tL)}));
+document.getElementById("search-form").addEventListener("submit",e=>{e.preventDefault();const q=document.getElementById("s-q").value.trim(),ar=document.getElementById("s-area").value;
+  document.getElementById("search-msg").textContent=`Your search${q?` for "${q}"`:""} in ${ar.toLowerCase()} will run once the MLS® feed is connected. No live results in this preview.`})}
+
+/*</prototype>*/
+
+/* ---------- Contact form (lead contract: see LEADS.md) ---------- */
+const cf=document.getElementById("contact-form");
+if(cf){
+const reqIn=document.getElementById("c-request"),reqNote=document.getElementById("req-note"),sent=document.getElementById("sent");
+const setRequest=v=>{reqIn.value=v||"";reqNote.hidden=v!=="analysis"};
+const setInterest=(i,req)=>{const r=document.getElementById("i-"+i);if(r)r.checked=true;setRequest(req==="analysis"?"analysis":"")};
+/* prototype: buttons on other "pages" preselect the form; built site: /contact/?interest=invest&request=analysis */
+if(!STATIC)document.addEventListener("click",e=>{const a=e.target.closest("[data-interest]");if(a)setInterest(a.dataset.interest,a.dataset.request)});
+else if(params.get("interest"))setInterest(params.get("interest").replace(/[^a-z]/g,""),params.get("request"));
+document.querySelectorAll('input[name="interest"]').forEach(r=>r.addEventListener("change",()=>{if(r.checked&&r.value!=="invest")setRequest("")}));
+cf.noValidate=true; /* JS validates; without JS the browser's own validation applies */
+const setField=(n,v)=>{const el=cf.elements.namedItem(n);if(el&&!el.length)el.value=v||""};
+if(STATIC){
+  try{const r=document.referrer&&new URL(document.referrer);setField("source_page",r&&r.origin===location.origin?r.pathname:"")}catch(e){}
+  setField("source_cta",(params.get("cta")||"").replace(/[^a-z0-9:-]/g,"").slice(0,80));
+  ATTR_KEYS.forEach(k=>setField(k,attrib[k]));setField("referrer",attrib.referrer);
+}
+const sendBtn=document.getElementById("c-send"),sendErr=document.getElementById("send-error"),sentLive=document.getElementById("sent-live");
+cf.addEventListener("submit",async e=>{e.preventDefault();const nm=document.getElementById("c-name"),em=document.getElementById("c-email"),cn=document.getElementById("c-consent");
+  const okN=nm.value.trim().length>0,okE=/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(em.value.trim()),okC=cn.checked;
+  [["e-name",nm,okN],["e-email",em,okE],["e-consent",cn,okC]].forEach(([id,el,ok])=>{document.getElementById(id).hidden=ok;el.setAttribute("aria-invalid",String(!ok))});
+  if(!okN){nm.focus();return}if(!okE){em.focus();return}if(!okC){cn.focus();return}
+  const endpoint=cf.dataset.endpoint;
+  if(!endpoint){if(!STATIC&&sent){cf.hidden=true;sent.hidden=false;sent.querySelector("h3").focus()}return} /* no endpoint: never pretend it was sent */
+  setField("timestamp",new Date().toISOString());
+  sendErr.hidden=true;sendBtn.disabled=true;sendBtn.textContent="Sending…";
+  try{
+    const r=await fetch(endpoint,{method:"POST",body:new FormData(cf),headers:{Accept:"application/json"}});
+    if(!r.ok)throw new Error(String(r.status));
+    cf.hidden=true;sentLive.hidden=false;sentLive.querySelector("h3").focus();
+  }catch(err){sendErr.hidden=false;sendErr.focus()}
+  finally{sendBtn.disabled=false;sendBtn.textContent="Send to Ali"}});
+const rf=document.getElementById("reset-form");if(rf)rf.addEventListener("click",()=>{sent.hidden=true;cf.hidden=false;document.getElementById("c-name").focus()});
+}
+
+/* ---------- Boot ---------- */
+/*<prototype>*/
+if(!STATIC){document.querySelectorAll("[data-linemap]").forEach(el=>el.innerHTML=lineMap());renderAlists();renderProc();renderListings(false);fillDwgs(document)}
+/*</prototype>*/
+if(STATIC){const c=params.get("category");if(c&&CATS.some(x=>x.id===c))activeCat=c}
+renderKC();calc();invCalc();
+if(STATIC){
+  const to=LEGACY[location.hash.slice(1)];
+  if(to&&location.pathname==="/"){location.replace(to);return}
+  updateBar();
+}
+/*<prototype>*/
+else{route();booted=true}
+/*</prototype>*/
+})();
+</script>
+
+</body></html>
