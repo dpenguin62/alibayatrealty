@@ -1,0 +1,8 @@
+{
+  "name": "ali-bayat-realty-site-tools",
+  "private": true,
+  "description": "Verification tooling only. Nothing here ships to the website.",
+  "devDependencies": {
+    "axe-core": "4.10.2"
+  }
+}

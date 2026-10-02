@@ -1,0 +1,30 @@
+{
+ "$schema": "https://json-schema.org/draft/2020-12/schema",
+ "$id": "https://alibayatrealty.com/lead.schema.json",
+ "title": "Ali Bayat Realty lead (contact form submission)",
+ "description": "Sent as multipart/form-data by POST to CONFIG.form_endpoint. Fields arrive as strings. The endpoint owns received_at, deduplication, storage and forwarding.",
+ "type": "object",
+ "required": ["name", "email", "interest", "language", "consent", "consent_version", "form_version"],
+ "properties": {
+  "name":            {"type": "string", "minLength": 1, "maxLength": 200},
+  "email":           {"type": "string", "pattern": "^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$", "maxLength": 254},
+  "phone":           {"type": "string", "maxLength": 40},
+  "interest":        {"enum": ["buy", "sell", "invest", "question"]},
+  "request":         {"enum": ["", "analysis"], "description": "'analysis' = Investment Property Analysis request"},
+  "message":         {"type": "string", "maxLength": 5000},
+  "language":        {"enum": ["en", "fa"]},
+  "consent":         {"const": "yes", "description": "Visitor agreed to the consent wording identified by consent_version"},
+  "consent_version": {"type": "string", "pattern": "^\\d{4}-\\d{2}-\\d{2}$"},
+  "form_version":    {"type": "string"},
+  "source_page":     {"type": "string", "description": "Same-site path the visitor came from (e.g. /invest/); empty if direct or JS off"},
+  "source_cta":      {"type": "string", "pattern": "^[a-z0-9:-]{0,80}$", "description": "page-key:cta-id of the link that led to the form"},
+  "timestamp":       {"type": "string", "description": "Client ISO-8601 time at submit; informational only. Empty without JS."},
+  "utm_source":      {"type": "string", "maxLength": 100},
+  "utm_medium":      {"type": "string", "maxLength": 100},
+  "utm_campaign":    {"type": "string", "maxLength": 100},
+  "utm_content":     {"type": "string", "maxLength": 100},
+  "referrer":        {"type": "string", "description": "Origin only (scheme + host) of an external referring site, e.g. https://www.google.com"},
+  "website":         {"const": "", "description": "Honeypot. Must be empty; discard the submission otherwise."}
+ },
+ "additionalProperties": false
+}

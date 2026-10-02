@@ -1,0 +1,29 @@
+{
+ "_readme": "Owner-confirmed facts only. Leave null until confirmed. Unset values stay visible placeholders in staging and are launch blockers in production. Approval keys for 'approved' are listed in README.md.",
+ "site_url": "https://alibayatrealty.com",
+ "form_endpoint": null,
+ "features": {
+  "idx": false,
+  "market-data": false
+ },
+ "details": {
+  "phone_display": null,
+  "phone_e164": null,
+  "email": null,
+  "job_title": null,
+  "reco_number": null,
+  "start_year": null,
+  "experience_phrase": null,
+  "brokerage_name": null,
+  "brokerage_address_line": null,
+  "brokerage_franchise_note": null,
+  "brokerage_address": null,
+  "brokerage_url": null,
+  "designations": null,
+  "referral_disclosure": null
+ },
+ "approved": [],
+ "same_as": [],
+ "site_url_confirmed": false,
+ "og_image": null
+}

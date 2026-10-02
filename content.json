@@ -1,0 +1,152 @@
+{
+ "_readme": "Editorial register. Only Ali (or someone he names) changes review_status, by running: python build.py approve <key> --by \"Name\". An approval is tied to the exact page content (approved_hash); any later change to that page requires review again. Dates are recorded at approval time and are the only dates used for lastmod and structured data.",
+ "defaults": {
+  "author": "Ali Bayat"
+ },
+ "pages": {
+  "home": {
+   "review_status": "draft",
+   "approved_hash": null,
+   "reviewed_by": null,
+   "reviewed_at": null,
+   "published_at": null,
+   "updated_at": null
+  },
+  "about": {
+   "review_status": "draft",
+   "approved_hash": null,
+   "reviewed_by": null,
+   "reviewed_at": null,
+   "published_at": null,
+   "updated_at": null
+  },
+  "buy": {
+   "review_status": "draft",
+   "approved_hash": null,
+   "reviewed_by": null,
+   "reviewed_at": null,
+   "published_at": null,
+   "updated_at": null
+  },
+  "sell": {
+   "review_status": "draft",
+   "approved_hash": null,
+   "reviewed_by": null,
+   "reviewed_at": null,
+   "published_at": null,
+   "updated_at": null
+  },
+  "invest": {
+   "review_status": "draft",
+   "approved_hash": null,
+   "reviewed_by": null,
+   "reviewed_at": null,
+   "published_at": null,
+   "updated_at": null
+  },
+  "neighbourhoods": {
+   "review_status": "draft",
+   "approved_hash": null,
+   "reviewed_by": null,
+   "reviewed_at": null,
+   "published_at": null,
+   "updated_at": null
+  },
+  "north-york": {
+   "review_status": "draft",
+   "approved_hash": null,
+   "reviewed_by": null,
+   "reviewed_at": null,
+   "published_at": null,
+   "updated_at": null
+  },
+  "thornhill": {
+   "review_status": "draft",
+   "approved_hash": null,
+   "reviewed_by": null,
+   "reviewed_at": null,
+   "published_at": null,
+   "updated_at": null
+  },
+  "richmond-hill": {
+   "review_status": "draft",
+   "approved_hash": null,
+   "reviewed_by": null,
+   "reviewed_at": null,
+   "published_at": null,
+   "updated_at": null
+  },
+  "vaughan": {
+   "review_status": "draft",
+   "approved_hash": null,
+   "reviewed_by": null,
+   "reviewed_at": null,
+   "published_at": null,
+   "updated_at": null
+  },
+  "toronto": {
+   "review_status": "draft",
+   "approved_hash": null,
+   "reviewed_by": null,
+   "reviewed_at": null,
+   "published_at": null,
+   "updated_at": null
+  },
+  "resources": {
+   "review_status": "draft",
+   "approved_hash": null,
+   "reviewed_by": null,
+   "reviewed_at": null,
+   "published_at": null,
+   "updated_at": null
+  },
+  "guide-land-transfer-tax": {
+   "review_status": "draft",
+   "approved_hash": null,
+   "reviewed_by": null,
+   "reviewed_at": null,
+   "published_at": null,
+   "updated_at": null
+  },
+  "contact": {
+   "review_status": "draft",
+   "approved_hash": null,
+   "reviewed_by": null,
+   "reviewed_at": null,
+   "published_at": null,
+   "updated_at": null
+  },
+  "privacy": {
+   "review_status": "draft",
+   "approved_hash": null,
+   "reviewed_by": null,
+   "reviewed_at": null,
+   "published_at": null,
+   "updated_at": null
+  },
+  "terms": {
+   "review_status": "draft",
+   "approved_hash": null,
+   "reviewed_by": null,
+   "reviewed_at": null,
+   "published_at": null,
+   "updated_at": null
+  },
+  "accessibility": {
+   "review_status": "draft",
+   "approved_hash": null,
+   "reviewed_by": null,
+   "reviewed_at": null,
+   "published_at": null,
+   "updated_at": null
+  },
+  "not-found": {
+   "review_status": "draft",
+   "approved_hash": null,
+   "reviewed_by": null,
+   "reviewed_at": null,
+   "published_at": null,
+   "updated_at": null
+  }
+ }
+}
