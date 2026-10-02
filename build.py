@@ -25,7 +25,7 @@ from playwright.sync_api import sync_playwright
 CONFIG = {
     "site_url": "https://alibayatrealty.com",
     "site_url_confirmed": False,      # true once the domain is registered to Ali and hosting is chosen
-    "site_name": "Ali Bayat Realty",
+    "site_name": "Ali Bayat",
     "agent_name": "Ali Bayat",
     "languages": ["en", "fa"],
     "areas_served": ["Toronto, ON", "North York, Toronto, ON", "Thornhill, ON", "Richmond Hill, ON", "Vaughan, ON"],

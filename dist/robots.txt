@@ -1,4 +1,4 @@
-# Ali Bayat Realty
+# Ali Bayat
 User-agent: *
 Allow: /
 
