@@ -34,7 +34,9 @@
   "footer-disclaimer",
   "reply-time"
  ],
- "same_as": [],
- "site_url_confirmed": false,
+ "same_as": [
+  "https://www.instagram.com/ali_bayat_realtor/"
+ ],
+ "site_url_confirmed": true,
  "og_image": null
 }

@@ -1,6 +1,6 @@
 # Ali Bayat Realty: verification report
 
-Output verified: `dist/` · production domain `https://alibayatrealty.com` · 2026-10-01
+Output verified: `dist/` · production domain `https://alibayatrealty.com` · 2026-10-03
 
 ## Final gate status: **PASS WITH OWNER INPUT REQUIRED**
 
@@ -9,7 +9,7 @@ All engineering checks pass. Every remaining failure needs Ali's information, an
 | # | Gate | Result |
 |---|---|---|
 | 1 | Every intended production URL resolves (trailing slashes, 404, planned URLs absent) | ✅ pass |
-| 2 | Title, description, H1, canonical, robots and social metadata | ❌ fail (external) |
+| 2 | Title, description, H1, canonical, robots and social metadata | ✅ pass |
 | 3 | Zero broken internal links | ✅ pass |
 | 4 | No production hash-routing dependency; content works without JavaScript | ✅ pass |
 | 5 | Sitemap: only intended canonical indexable URLs, accurate lastmod | ✅ pass |
@@ -35,10 +35,9 @@ All engineering checks pass. Every remaining failure needs Ali's information, an
 - every page's H1 and main content present with JavaScript disabled
 
 ## SEO
-**2. Title, description, H1, canonical, robots and social metadata: FAIL**
+**2. Title, description, H1, canonical, robots and social metadata: PASS**
 - 18 pages: unique titles and descriptions; descriptions 70–160 characters; one H1 each; OG + Twitter tags
-- titles over 65 characters may be shortened in results (wording as specified): /invest/ (75), /resources/buying/land-transfer-tax-toronto-york-region/ (70)
-- ✗ [external] canonical domain https://alibayatrealty.com not confirmed as registered to Ali with hosting chosen; canonicals and sitemap depend on it
+- titles over 65 characters may be shortened in results (wording as specified): /invest/ (68)
 
 **6. robots.txt behaves correctly (production and staging): PASS**
 - production: everything crawlable, noindex pages reachable so the tag is seen, sitemap declared
@@ -51,7 +50,7 @@ All engineering checks pass. Every remaining failure needs Ali's information, an
 
 ## Internal links
 **3. Zero broken internal links: PASS**
-- 928 links and assets across 18 pages → 20 unique internal targets, 0 broken
+- 932 links and assets across 18 pages → 20 unique internal targets, 0 broken
 
 **13. Internal linking: no orphans, pillars connected, contextual links: PASS**
 - contextual inbound links (main content only): / 17, /contact/ 15, /invest/ 12, /buy/ 10, /neighbourhoods/north-york/ 10, /neighbourhoods/vaughan/ 10, /sell/ 9, /neighbourhoods/thornhill/ 9, /neighbourhoods/ 8, /neighbourhoods/richmond-hill/ 8, /neighbourhoods/toronto/ 8, /resources/buying/land-transfer-tax-toronto-york-region/ 8, /resources/ 3, /about/ 1, /privacy/ 1, /terms/ 0, /accessibility/ 0
@@ -71,7 +70,6 @@ All engineering checks pass. Every remaining failure needs Ali's information, an
 **7. Structured data is valid and truthful (no invented facts): PASS**
 - entities: Ali = Person; Ali Bayat Realty = RealEstateAgent (founder → Ali); brokerage = Organization (parentOrganization / worksFor) once confirmed
 - no ratings, reviews, awards or invented dates; author/dates only on pages Ali has approved
-- omitted until confirmed: phone_e164, email, job_title, brokerage_name, brokerage_address
 
 ## Lead form
 **10. Lead form: production endpoint, payload contract, consent, honest states: FAIL**
@@ -120,39 +118,25 @@ All engineering checks pass. Every remaining failure needs Ali's information, an
 
 ## Production safety
 **11. Production safety: no placeholders, invented facts or interim content: FAIL**
-- spec patterns in published pages: [Brokerage: 40, [to be written / to be written: 0, draft for Ali: 2, Preview only: 0, 000000: 2, (416) 000-0000: 20, [year]: 2, [City]: 1, nan / NaN: 0, TBC: 0, TODO: 0, FIXME: 0
+- spec patterns in published pages: [Brokerage: 0, [to be written / to be written: 0, draft for Ali: 2, Preview only: 0, 000000: 0, (416) 000-0000: 0, [year]: 0, [City]: 0, nan / NaN: 0, TBC: 0, TODO: 0, FIXME: 0
 - every remaining hit comes from a managed placeholder awaiting the owner input listed above; none leak outside it
-- ✗ [owner] needs brokerage_address_line+brokerage_franchise_note (18 pages: /, /404.html, /about/…)
-- ✗ [owner] needs brokerage_name (18 pages: /, /404.html, /about/…)
-- ✗ [owner] needs brokerage_name+brokerage_address_line (1 page: /contact/)
 - ✗ [legal] needs consent-wording (1 page: /contact/)
-- ✗ [owner] needs contact-channels (1 page: /about/)
-- ✗ [owner] needs designations (1 page: /about/)
-- ✗ [owner] needs email (18 pages: /, /404.html, /about/…)
-- ✗ [owner] needs experience-claim (1 page: /about/)
-- ✗ [legal] needs footer-disclaimer (18 pages: /, /404.html, /about/…)
-- ✗ [owner] needs job_title (18 pages: /, /404.html, /about/…)
-- ✗ [owner] needs job_title+brokerage_name (1 page: /)
 - ✗ [owner] needs ltt-guide-review (3 pages: /, /resources/, /resources/buying/land-transfer-tax-toronto-york-region/)
-- ✗ [owner] needs phone_display (18 pages: /, /404.html, /about/…)
-- ✗ [owner] needs reco_number (2 pages: /, /about/)
 - ✗ [legal] needs referral-disclosure (1 page: /invest/)
-- ✗ [owner] needs reply-time (1 page: /contact/)
-- ✗ [owner] needs start_year (2 pages: /, /about/)
 - ✗ [legal] /privacy/: privacy-policy is interim, not final
 - ✗ [legal] /terms/: terms-of-use is interim, not final
 - ✗ [legal] /accessibility/: accessibility-statement is interim, not final
 
 | Pattern | Occurrences in published pages |
 |---|---|
-| `[Brokerage` | 40 |
+| `[Brokerage` | 0 |
 | `[to be written / to be written` | 0 |
 | `draft for Ali` | 2 |
 | `Preview only` | 0 |
-| `000000` | 2 |
-| `(416) 000-0000` | 20 |
-| `[year]` | 2 |
-| `[City]` | 1 |
+| `000000` | 0 |
+| `(416) 000-0000` | 0 |
+| `[year]` | 0 |
+| `[City]` | 0 |
 | `nan / NaN` | 0 |
 | `TBC` | 0 |
 | `TODO` | 0 |
@@ -163,7 +147,7 @@ Every occurrence above comes from a managed placeholder (awaiting the owner inpu
 ## Performance
 **14. Performance budget: weight, requests, DOM size, layout shift, render-blocking: PASS**
 - site.js 15 KB (prototype code stripped), site.css 36 KB, both cached across pages; scripts deferred; no images
-- largest page /invest/ 47 KB HTML; most DOM /invest/ 859 elements; max same-origin requests 3; max layout shift 0.000
+- largest page /invest/ 48 KB HTML; most DOM /invest/ 855 elements; max same-origin requests 3; max layout shift 0.000
 - third-party request on every page: fonts.googleapis.com, fonts.gstatic.com (Google Fonts). Recommendation: self-host the three font families
 
 ## Reproducibility
@@ -172,7 +156,7 @@ Every occurrence above comes from a managed placeholder (awaiting the owner inpu
 
 ## Remaining blockers
 
-### Requires Ali's information or approval (28)
+### Requires Ali's information or approval (15)
 - /: not yet reviewed and approved by Ali
 - /about/: not yet reviewed and approved by Ali
 - /buy/: not yet reviewed and approved by Ali
@@ -187,32 +171,17 @@ Every occurrence above comes from a managed placeholder (awaiting the owner inpu
 - /resources/: not yet reviewed and approved by Ali
 - /resources/buying/land-transfer-tax-toronto-york-region/: not yet reviewed and approved by Ali
 - /sell/: not yet reviewed and approved by Ali
-- needs brokerage_address_line+brokerage_franchise_note (18 pages: /, /404.html, /about/…)
-- needs brokerage_name (18 pages: /, /404.html, /about/…)
-- needs brokerage_name+brokerage_address_line (1 page: /contact/)
-- needs contact-channels (1 page: /about/)
-- needs designations (1 page: /about/)
-- needs email (18 pages: /, /404.html, /about/…)
-- needs experience-claim (1 page: /about/)
-- needs job_title (18 pages: /, /404.html, /about/…)
-- needs job_title+brokerage_name (1 page: /)
 - needs ltt-guide-review (3 pages: /, /resources/, /resources/buying/land-transfer-tax-toronto-york-region/)
-- needs phone_display (18 pages: /, /404.html, /about/…)
-- needs reco_number (2 pages: /, /about/)
-- needs reply-time (1 page: /contact/)
-- needs start_year (2 pages: /, /about/)
 
-### Requires an external service or access (3)
+### Requires an external service or access (2)
 - axe-core is not installed, so the full axe rule set did NOT run. Run `npm install` (package.json pins axe-core) and re-verify
-- canonical domain https://alibayatrealty.com not confirmed as registered to Ali with hosting chosen; canonicals and sitemap depend on it
 - no production endpoint configured (site.config.json form_endpoint): the live form cannot send messages
 
-### Requires legal / brokerage review (6)
+### Requires legal / brokerage review (5)
 - /accessibility/: accessibility-statement is interim, not final
 - /privacy/: privacy-policy is interim, not final
 - /terms/: terms-of-use is interim, not final
 - needs consent-wording (1 page: /contact/)
-- needs footer-disclaimer (18 pages: /, /404.html, /about/…)
 - needs referral-disclosure (1 page: /invest/)
 
 ### Engineering defect (0)

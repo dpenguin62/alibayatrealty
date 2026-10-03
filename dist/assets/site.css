@@ -480,6 +480,9 @@ article.teaser:hover h3{text-decoration:none}
 .railed .two .steps li{grid-template-columns:120px minmax(0,1fr)}
 @media (max-width:700px){.railed .two .steps li{grid-template-columns:1fr}}
 .hp{position:absolute;left:-10000px;width:1px;height:1px;overflow:hidden}
+.faq h3{font-size:1.1rem;margin-top:.6rem}
+.faq h3:first-child{margin-top:0}
+.faq p{color:var(--muted)}
 .req-note{border:1px solid var(--line);border-left:3px solid var(--lake);background:var(--surface);border-radius:3px;padding:.9rem 1.1rem;font-size:.92rem}
 .cta-band .btn.ghost{background:transparent;color:var(--lake-ink);border-color:var(--lake-ink)}
 .cta-band .btn.ghost:hover{background:color-mix(in srgb,var(--lake-ink) 12%,transparent)}

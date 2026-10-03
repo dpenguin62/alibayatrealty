@@ -229,6 +229,18 @@ def approved_live(r, content_hash):
     return st.get("review_status") == "approved" and st.get("approved_hash") == content_hash
 
 
+FAQS = {}  # path -> [(question, answer)], read from the built page's data-faq block
+
+
+def extract_faq(doc):
+    m = re.search(r'<div class="body faq" data-faq[^>]*>(.*?)</div></div>', doc, re.S)
+    if not m:
+        return []
+    pairs = re.findall(r"<h3>(.*?)</h3>\s*<p>(.*?)</p>", m.group(1), re.S)
+    clean = lambda x: re.sub(r"\s+", " ", html.unescape(re.sub(r"<[^>]+>", "", x))).strip()
+    return [(clean(q), clean(a)) for q, a in pairs]
+
+
 def ld_graph(r, routes_by_key, content_hash):
     """JSON-LD from confirmed facts only. Ali is a Person; his practice is a RealEstateAgent;
     the brokerage is an Organization, and appears only once its details are confirmed."""
@@ -236,6 +248,12 @@ def ld_graph(r, routes_by_key, content_hash):
               "url": BASE + "/about/", "knowsLanguage": CONFIG["languages"]}
     if "job_title" in DETAILS:
         person["jobTitle"] = DETAILS["job_title"]
+    if DETAILS.get("reco_number"):
+        person["identifier"] = {"@type": "PropertyValue", "propertyID": "RECO registration number", "value": DETAILS["reco_number"]}
+    if DETAILS.get("designations") and "TRREB" in DETAILS["designations"]:
+        person["memberOf"] = {"@type": "Organization", "name": "Toronto Regional Real Estate Board", "alternateName": "TRREB", "url": "https://trreb.ca"}
+    if CONFIG["same_as"]:
+        person["sameAs"] = CONFIG["same_as"]
     business = {"@type": "RealEstateAgent", "@id": BASE + "/#business", "name": CONFIG["site_name"], "url": BASE + "/",
                 "areaServed": [{"@type": "Place", "name": a} for a in CONFIG["areas_served"]],
                 "knowsLanguage": CONFIG["languages"], "founder": {"@id": BASE + "/#ali"}}
@@ -285,6 +303,10 @@ def ld_graph(r, routes_by_key, content_hash):
                       "itemListElement": [{"@type": "ListItem", "position": i + 1, "name": c["name"], "item": url(c["path"])}
                                           for i, c in enumerate(chain)]})
     graph.append(webpage)
+    faq = FAQS.get(r["path"])
+    if faq:  # visible Q&A on the page, mirrored exactly (answer engines read this)
+        graph.append({"@type": "FAQPage", "@id": page_url + "#faq", "isPartOf": {"@id": page_url + "#webpage"},
+                      "mainEntity": [{"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": a}} for q, a in faq]})
     if r.get("type") == "article":
         art = {"@type": "Article", "@id": page_url + "#article", "headline": r["h1"], "description": r["desc"],
                "mainEntityOfPage": {"@id": page_url + "#webpage"}, "inLanguage": "en-CA",
@@ -469,6 +491,7 @@ def build():
             o = res["out"]
             body = f'{o["header"]}\n<main id="main">\n{o["page"]}\n</main>\n{o["footer"]}\n{o["mbar"]}\n'
             content_hash = hashlib.sha1(main_text(body).encode()).hexdigest()[:16]
+            FAQS[r["path"]] = extract_faq(body)
             hashes[r["path"]] = content_hash
             doc = ('<!doctype html>\n'
                    f'<html lang="en-CA" data-static>\n<head>\n{head(r, by_key, f"/assets/site.css?v={v_css}", content_hash)}\n</head>\n'
