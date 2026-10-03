@@ -269,8 +269,16 @@ def g2(ctx, P, N):
             P.append(f"{r['path']}: {len(d.h1s)} H1 elements")
         elif norm(d.h1s[0]) != r["h1"]:
             P.append(f"{r['path']}: H1 {norm(d.h1s[0])!r} ≠ {r['h1']!r}")
-        if d.lang != "en-CA":
-            P.append(f"{r['path']}: <html lang> is {d.lang!r}")
+        want_lang = "fa" if r.get("lang") == "fa" else "en-CA"
+        if d.lang != want_lang:
+            P.append(f"{r['path']}: <html lang> is {d.lang!r}, expected {want_lang!r}")
+        if r.get("alt") and r["key"] != "not-found":  # hreflang pairs must point at each other
+            alt = by_key[r["alt"]]
+            en, fa = (alt, r) if r.get("lang") == "fa" else (r, alt)
+            body = ctx["html"][r["path"]]
+            for hl, target in (("en-CA", en), ("fa", fa), ("x-default", en)):
+                if f'<link rel="alternate" hreflang="{hl}" href="{BASE + target["path"]}">' not in body:
+                    P.append(f"{r['path']}: missing hreflang {hl} → {target['path']}")
         dupes = {i for i in d.ids if d.ids.count(i) > 1}
         if dupes:
             P.append(f"{r['path']}: duplicate ids {sorted(dupes)}")
@@ -579,17 +587,28 @@ def g8(ctx, P, N):
     dest.update({"About Ali": by_key["about"]["path"], "Talk to Ali": by_key["contact"]["path"]})
     pg = br.new_page(viewport={"width": 1280, "height": 900})
     pg.goto(HOST + "/")
-    labels = [norm(t) for t in pg.locator(".nav a").all_inner_texts()]
+    labels = [norm(t) for t in pg.locator(".nav a:not([data-lang-switch])").all_inner_texts()]
     if labels != want:
         P.append(f"desktop nav is {labels}")
     for i in range(len(labels)):
         pg.goto(HOST + "/")
         with pg.expect_navigation():
-            pg.locator(".nav a").nth(i).click()
+            pg.locator(".nav a:not([data-lang-switch])").nth(i).click()
         if urllib.parse.urlsplit(pg.url).path != dest.get(labels[i]):
             P.append(f"desktop: {labels[i]} went to {urllib.parse.urlsplit(pg.url).path}, expected {dest.get(labels[i])}")
     for r in content_pages:
         pg.goto(HOST + r["path"])
+        # language switch: goes to this page's other-language version, else that language's home page
+        sw = pg.get_attribute(".nav a[data-lang-switch]", "href")
+        want_sw = by_key[r["alt"]]["path"] if r.get("alt") else ("/" if r.get("lang") == "fa" else "/fa/")
+        if sw != want_sw:
+            P.append(f"{r['path']}: language switch goes to {sw}, expected {want_sw}")
+        if r.get("lang") == "fa":
+            cur = pg.eval_on_selector_all(".nav a[aria-current='page']", "e=>e.map(a=>a.getAttribute('href'))")
+            nk = {"fa-area": "fa-neighbourhoods", "fa-guide-land-transfer-tax": "fa-resources"}.get(r.get("page") or r["key"], r["key"])
+            if cur != [by_key[nk]["path"]] and not (r["key"] == "fa-contact" and cur == []):
+                P.append(f"{r['path']}: Farsi menu marks {cur} as current")
+            continue
         key = NAV_PARENT.get(r.get("page") or r["key"], r["key"])
         expect = by_key[key]["name"] if key in ("home", "buy", "sell", "invest", "neighbourhoods", "resources", "about") else None
         cur = [norm(t) for t in pg.locator(".nav a[aria-current='page']").all_inner_texts()]
@@ -601,7 +620,7 @@ def g8(ctx, P, N):
         m.goto(HOST + "/")
         if m.locator(".nav").is_visible() or not m.locator("#menu-btn").is_visible():
             P.append(f"{w}px: menu button / desktop nav visibility wrong")
-        dl = [norm(t) for t in m.locator(".drawer a").all_inner_texts()]
+        dl = [norm(t) for t in m.locator(".drawer a:not([data-lang-switch])").all_inner_texts()]
         for lab in want[:-1]:
             if not any(x.startswith(lab) for x in dl):
                 P.append(f"{w}px: drawer missing {lab}")
@@ -612,7 +631,7 @@ def g8(ctx, P, N):
                 P.append(f"{w}px: menu didn't open")
                 break
             with m.expect_navigation():
-                m.locator(".drawer a").nth(i).tap()
+                m.locator(".drawer a:not([data-lang-switch])").nth(i).tap()
             if urllib.parse.urlsplit(m.url).path != dest.get(dl[i]):
                 P.append(f"{w}px: drawer link {dl[i]} went to {urllib.parse.urlsplit(m.url).path}, expected {dest.get(dl[i])}")
         m.goto(HOST + "/")

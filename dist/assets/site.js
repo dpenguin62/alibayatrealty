@@ -53,7 +53,8 @@ function calc(){
   document.getElementById("o-onr-row").hidden=!first;document.getElementById("o-onr").textContent="−"+fmt(reb);
   document.getElementById("o-to-row").hidden=!inTO;document.getElementById("o-to").textContent=fmt(to);
   document.getElementById("o-total").textContent=fmt(on-reb+to);
-  document.getElementById("o-note").textContent=inTO&&first?"Toronto's first-time buyer rebate may lower this further; it isn't included here. Your lawyer will confirm.":inTO?"Buying the same home in York Region would save the municipal tax shown above.":"No municipal land transfer tax outside the City of Toronto."}
+  const FA=document.documentElement.lang==="fa";
+  document.getElementById("o-note").textContent=inTO&&first?(FA?"بازپرداخت ویژه‌ی خریداران خانه‌ی اول تورنتو ممکن است این مبلغ را باز هم کاهش دهد؛ در این محاسبه منظور نشده است. وکیل شما مبلغ نهایی را تأیید می‌کند.":"Toronto's first-time buyer rebate may lower this further; it isn't included here. Your lawyer will confirm."):inTO?(FA?"خرید همین خانه در منطقه‌ی یورک، مالیات شهرداری نمایش‌داده‌شده در بالا را صرفه‌جویی می‌کند.":"Buying the same home in York Region would save the municipal tax shown above."):(FA?"خارج از شهر تورنتو، مالیات انتقال زمین شهرداری وجود ندارد.":"No municipal land transfer tax outside the City of Toronto.")}
 const pr=document.getElementById("lt-price");
 if(pr){pr.addEventListener("input",calc);
 pr.addEventListener("blur",()=>{const v=parseFloat(pr.value.replace(/[^0-9.]/g,""));if(v)pr.value=Math.round(v).toLocaleString("en-CA")});
@@ -80,9 +81,10 @@ function invCalc(){
   set("iv-o-debt",debt?"−"+fmt(debt):fmt(0));set("iv-o-cf",fmtS(cf),cf<0);
   set("iv-o-cap",price>0?pctF(noi/price*100):"—",noi<0);
   set("iv-o-coc",cash>0?pctF(cf/cash*100):"—",cf<0);
-  document.getElementById("iv-o-note").textContent=!price||!gross?"Enter a purchase price and rental income to see an estimate."
-    :cf<0?`At these assumptions the property would need about ${fmt(Math.abs(cf)/12)} a month from you on top of the rent. Some investors accept that in exchange for potential appreciation and mortgage paydown, but neither is guaranteed.`
-    :`Positive at these assumptions, about ${fmt(cf/12)} a month before income tax. Try a higher interest rate, vacancy or maintenance figure to see how much room there is.`}
+  const FA=document.documentElement.lang==="fa"||!!document.getElementById("iv-price").closest('[lang="fa"]');
+  document.getElementById("iv-o-note").textContent=!price||!gross?(FA?"برای دیدن برآورد، قیمت خرید و درآمد اجاره را وارد کنید.":"Enter a purchase price and rental income to see an estimate.")
+    :cf<0?(FA?`با این فرض‌ها، این ملک ماهانه حدود ${fmt(Math.abs(cf)/12)} علاوه بر اجاره از جیب شما هزینه می‌خواهد. برخی سرمایه‌گذاران این را در ازای رشد احتمالی ارزش ملک و بازپرداخت اصل وام می‌پذیرند، اما هیچ‌کدام تضمین‌شده نیست.`:`At these assumptions the property would need about ${fmt(Math.abs(cf)/12)} a month from you on top of the rent. Some investors accept that in exchange for potential appreciation and mortgage paydown, but neither is guaranteed.`)
+    :(FA?`با این فرض‌ها مثبت است: حدود ${fmt(cf/12)} در ماه، پیش از مالیات بر درآمد. نرخ بهره، خالی ماندن یا هزینه‌ی نگهداری بالاتری را امتحان کنید تا ببینید چقدر حاشیه دارید.`:`Positive at these assumptions, about ${fmt(cf/12)} a month before income tax. Try a higher interest rate, vacancy or maintenance figure to see how much room there is.`)}
 window.__inv={mortgageAnnual,invCalc};
 document.querySelectorAll("[data-iv]").forEach(el=>{
   el.addEventListener(el.tagName==="SELECT"?"change":"input",invCalc);
@@ -90,7 +92,7 @@ document.querySelectorAll("[data-iv]").forEach(el=>{
 /* ---------- Mode: the prototype uses the hash router; built pages (data-static) are real URLs ---------- */
 const STATIC=document.documentElement.hasAttribute("data-static");
 const params=new URLSearchParams(location.search);
-const LEGACY={"home":"/","about":"/about/","buy":"/buy/","sell":"/sell/","invest":"/invest/","neighbourhoods":"/neighbourhoods/","north-york":"/neighbourhoods/north-york/","thornhill":"/neighbourhoods/thornhill/","richmond-hill":"/neighbourhoods/richmond-hill/","vaughan":"/neighbourhoods/vaughan/","toronto":"/neighbourhoods/toronto/","resources":"/resources/","guide-land-transfer-tax":"/resources/buying/land-transfer-tax-toronto-york-region/","contact":"/contact/","privacy":"/privacy/","terms":"/terms/","accessibility":"/accessibility/"}; /* build.py fills: old prototype hash -> real URL */
+const LEGACY={"home":"/","about":"/about/","buy":"/buy/","sell":"/sell/","invest":"/invest/","neighbourhoods":"/neighbourhoods/","north-york":"/neighbourhoods/north-york/","thornhill":"/neighbourhoods/thornhill/","richmond-hill":"/neighbourhoods/richmond-hill/","vaughan":"/neighbourhoods/vaughan/","toronto":"/neighbourhoods/toronto/","resources":"/resources/","guide-land-transfer-tax":"/resources/buying/land-transfer-tax-toronto-york-region/","contact":"/contact/","fa-home":"/fa/","fa-buy":"/fa/buy/","fa-sell":"/fa/sell/","fa-invest":"/fa/invest/","fa-neighbourhoods":"/fa/neighbourhoods/","fa-north-york":"/fa/neighbourhoods/north-york/","fa-thornhill":"/fa/neighbourhoods/thornhill/","fa-richmond-hill":"/fa/neighbourhoods/richmond-hill/","fa-vaughan":"/fa/neighbourhoods/vaughan/","fa-toronto":"/fa/neighbourhoods/toronto/","fa-resources":"/fa/resources/","fa-guide-land-transfer-tax":"/fa/resources/buying/land-transfer-tax-toronto-york-region/","fa-about":"/fa/about/","fa-contact":"/fa/contact/","privacy":"/privacy/","terms":"/terms/","accessibility":"/accessibility/"}; /* build.py fills: old prototype hash -> real URL */
 /* ---------- First-party attribution: no cookies, no third parties, this browser tab only ---------- */
 const ATTR_KEYS=["utm_source","utm_medium","utm_campaign","utm_content"];
 let attrib={};
@@ -103,12 +105,12 @@ if(STATIC&&!attrib.landing_page){
 }
 /* ---------- Mobile menu & CTA bar ---------- */
 const mb=document.getElementById("menu-btn"),dr=document.getElementById("drawer");
-function closeDrawer(){dr.hidden=true;mb.setAttribute("aria-expanded","false");mb.textContent="Menu"}
-mb.addEventListener("click",()=>{const o=dr.hidden;dr.hidden=!o;mb.setAttribute("aria-expanded",String(o));mb.textContent=o?"Close":"Menu"});
+function closeDrawer(){dr.hidden=true;mb.setAttribute("aria-expanded","false");mb.textContent=mb.dataset.open||"Menu"}
+mb.addEventListener("click",()=>{const o=dr.hidden;dr.hidden=!o;mb.setAttribute("aria-expanded",String(o));mb.textContent=o?(mb.dataset.close||"Close"):(mb.dataset.open||"Menu")});
 document.addEventListener("keydown",e=>{if(e.key==="Escape"&&!dr.hidden){closeDrawer();mb.focus()}});
 dr.addEventListener("click",e=>{if(e.target.closest("a"))closeDrawer()});
 const bar=document.getElementById("mbar");
-function updateBar(){const on=window.scrollY>520&&document.body.dataset.route!=="contact";bar.classList.toggle("on",on);bar.setAttribute("aria-hidden",String(!on));bar.querySelector("a").tabIndex=on?0:-1}
+function updateBar(){const on=window.scrollY>520&&!/contact$/.test(document.body.dataset.route||"");bar.classList.toggle("on",on);bar.setAttribute("aria-hidden",String(!on));bar.querySelector("a").tabIndex=on?0:-1}
 window.addEventListener("scroll",updateBar,{passive:true});
 /* ---------- Contact form (lead contract: see LEADS.md) ---------- */
 const cf=document.getElementById("contact-form");
@@ -135,13 +137,14 @@ cf.addEventListener("submit",async e=>{e.preventDefault();const nm=document.getE
   const endpoint=cf.dataset.endpoint;
   if(!endpoint){if(!STATIC&&sent){cf.hidden=true;sent.hidden=false;sent.querySelector("h3").focus()}return} /* no endpoint: never pretend it was sent */
   setField("timestamp",new Date().toISOString());
-  sendErr.hidden=true;sendBtn.disabled=true;sendBtn.textContent="Sending…";
+  const sendLabel=sendBtn.textContent;
+  sendErr.hidden=true;sendBtn.disabled=true;sendBtn.textContent=sendBtn.dataset.sending||"Sending…";
   try{
     const r=await fetch(endpoint,{method:"POST",body:new FormData(cf),headers:{Accept:"application/json"}});
     if(!r.ok)throw new Error(String(r.status));
     cf.hidden=true;sentLive.hidden=false;sentLive.querySelector("h3").focus();
   }catch(err){sendErr.hidden=false;sendErr.focus()}
-  finally{sendBtn.disabled=false;sendBtn.textContent="Send to Ali"}});
+  finally{sendBtn.disabled=false;sendBtn.textContent=sendLabel}});
 const rf=document.getElementById("reset-form");if(rf)rf.addEventListener("click",()=>{sent.hidden=true;cf.hidden=false;document.getElementById("c-name").focus()});
 }
 /* ---------- Boot ---------- */

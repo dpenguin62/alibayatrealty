@@ -483,6 +483,34 @@ article.teaser:hover h3{text-decoration:none}
 .faq h3{font-size:1.1rem;margin-top:.6rem}
 .faq h3:first-child{margin-top:0}
 .faq p{color:var(--muted)}
+.nav .lang{font-weight:600}
+:root[lang="fa"]{--display:"Vazirmatn",Tahoma,"Segoe UI",system-ui,sans-serif;--body:"Vazirmatn",Tahoma,"Segoe UI",system-ui,sans-serif;--mono:"Vazirmatn",Tahoma,system-ui,sans-serif}
+[lang="fa"] h1,[lang="fa"] h2,[lang="fa"] h3{letter-spacing:0;line-height:1.45}
+[lang="fa"] *:not([lang="en"]):not(bdi):not(.brand *){letter-spacing:0!important}
+[lang="fa"] h1{font-weight:400}
+[lang="fa"] h1 em,[lang="fa"] h2 em{font-style:normal}
+[lang="fa"] .lede,[lang="fa"] p,[lang="fa"] li{line-height:1.9}
+[lang="fa"] .label,[lang="fa"] .hero .areas,[lang="fa"] .facts dt,[lang="fa"] .fgrid h4,[lang="fa"] .clines small,[lang="fa"] .brand small{letter-spacing:0;text-transform:none}
+[lang="fa"] .brand small{letter-spacing:.2em}
+[dir="rtl"] .skip{left:auto;right:-9999px}
+[dir="rtl"] .skip:focus{right:1rem}
+[dir="rtl"] .hp{left:auto;right:-10000px}
+[dir="rtl"] .nav .talk{margin-left:0;margin-right:.6rem}
+[dir="rtl"] .link:hover .ar{transform:translateX(-3px)}
+[dir="rtl"] .pull{border-left:0;border-right:2px solid var(--lake);padding-left:0;padding-right:1.1rem}
+[dir="rtl"] .plain{padding-left:0;padding-right:1.1rem}
+[dir="rtl"] .req-note,[dir="rtl"] .sent{border-left-width:1px;border-right-width:3px;border-right-style:solid}
+[dir="rtl"] .req-note{border-left-color:var(--line);border-right-color:var(--lake)}
+[dir="rtl"] .sent{border-left-color:var(--line);border-right-color:var(--ok)}
+[dir="rtl"] .banner{border-left:1px solid var(--line);border-right:3px solid var(--brick)}
+[dir="rtl"] .principles > div{padding:1.5rem 0 1.5rem 1.5rem}
+[dir="rtl"] .principles > div:nth-child(even){padding-left:0;padding-right:1.5rem;border-left:0;border-right:1px solid var(--line)}
+@media (max-width:700px){[dir="rtl"] .principles > div,[dir="rtl"] .principles > div:nth-child(even){padding:1.5rem 0;border-right:0}}
+[dir="rtl"] .svc.three > article{padding-left:1.75rem;padding-right:0}
+[dir="rtl"] .svc.three > article + article{padding-right:1.75rem;padding-left:1.75rem;border-left:0;border-right:1px solid var(--line)}
+[dir="rtl"] .svc.three > article:last-child{padding-left:0}
+@media (max-width:1080px){[dir="rtl"] .svc.three > article,[dir="rtl"] .svc.three > article + article{padding:1.75rem 0;border-right:0}}
+[dir="rtl"] .cta-band .row{justify-content:flex-start}
 .req-note{border:1px solid var(--line);border-left:3px solid var(--lake);background:var(--surface);border-radius:3px;padding:.9rem 1.1rem;font-size:.92rem}
 .cta-band .btn.ghost{background:transparent;color:var(--lake-ink);border-color:var(--lake-ink)}
 .cta-band .btn.ghost:hover{background:color-mix(in srgb,var(--lake-ink) 12%,transparent)}

@@ -486,6 +486,34 @@ article.teaser:hover h3{text-decoration:none}
 .faq h3{font-size:1.1rem;margin-top:.6rem}
 .faq h3:first-child{margin-top:0}
 .faq p{color:var(--muted)}
+.nav .lang{font-weight:600}
+:root[lang="fa"]{--display:"Vazirmatn",Tahoma,"Segoe UI",system-ui,sans-serif;--body:"Vazirmatn",Tahoma,"Segoe UI",system-ui,sans-serif;--mono:"Vazirmatn",Tahoma,system-ui,sans-serif}
+[lang="fa"] h1,[lang="fa"] h2,[lang="fa"] h3{letter-spacing:0;line-height:1.45}
+[lang="fa"] *:not([lang="en"]):not(bdi):not(.brand *){letter-spacing:0!important}
+[lang="fa"] h1{font-weight:400}
+[lang="fa"] h1 em,[lang="fa"] h2 em{font-style:normal}
+[lang="fa"] .lede,[lang="fa"] p,[lang="fa"] li{line-height:1.9}
+[lang="fa"] .label,[lang="fa"] .hero .areas,[lang="fa"] .facts dt,[lang="fa"] .fgrid h4,[lang="fa"] .clines small,[lang="fa"] .brand small{letter-spacing:0;text-transform:none}
+[lang="fa"] .brand small{letter-spacing:.2em}
+[dir="rtl"] .skip{left:auto;right:-9999px}
+[dir="rtl"] .skip:focus{right:1rem}
+[dir="rtl"] .hp{left:auto;right:-10000px}
+[dir="rtl"] .nav .talk{margin-left:0;margin-right:.6rem}
+[dir="rtl"] .link:hover .ar{transform:translateX(-3px)}
+[dir="rtl"] .pull{border-left:0;border-right:2px solid var(--lake);padding-left:0;padding-right:1.1rem}
+[dir="rtl"] .plain{padding-left:0;padding-right:1.1rem}
+[dir="rtl"] .req-note,[dir="rtl"] .sent{border-left-width:1px;border-right-width:3px;border-right-style:solid}
+[dir="rtl"] .req-note{border-left-color:var(--line);border-right-color:var(--lake)}
+[dir="rtl"] .sent{border-left-color:var(--line);border-right-color:var(--ok)}
+[dir="rtl"] .banner{border-left:1px solid var(--line);border-right:3px solid var(--brick)}
+[dir="rtl"] .principles > div{padding:1.5rem 0 1.5rem 1.5rem}
+[dir="rtl"] .principles > div:nth-child(even){padding-left:0;padding-right:1.5rem;border-left:0;border-right:1px solid var(--line)}
+@media (max-width:700px){[dir="rtl"] .principles > div,[dir="rtl"] .principles > div:nth-child(even){padding:1.5rem 0;border-right:0}}
+[dir="rtl"] .svc.three > article{padding-left:1.75rem;padding-right:0}
+[dir="rtl"] .svc.three > article + article{padding-right:1.75rem;padding-left:1.75rem;border-left:0;border-right:1px solid var(--line)}
+[dir="rtl"] .svc.three > article:last-child{padding-left:0}
+@media (max-width:1080px){[dir="rtl"] .svc.three > article,[dir="rtl"] .svc.three > article + article{padding:1.75rem 0;border-right:0}}
+[dir="rtl"] .cta-band .row{justify-content:flex-start}
 .req-note{border:1px solid var(--line);border-left:3px solid var(--lake);background:var(--surface);border-radius:3px;padding:.9rem 1.1rem;font-size:.92rem}
 .cta-band .btn.ghost{background:transparent;color:var(--lake-ink);border-color:var(--lake-ink)}
 .cta-band .btn.ghost:hover{background:color-mix(in srgb,var(--lake-ink) 12%,transparent)}
@@ -514,11 +542,12 @@ article.teaser:hover h3{text-decoration:none}
       <a href="#neighbourhoods">Neighbourhoods</a>
       <a href="#resources">Resources</a>
       <a href="#about">About</a>
+      <a class="lang" href="#fa-home" lang="fa" hreflang="fa" data-lang-switch>فارسی</a>
       <a class="btn sm talk" href="#contact" data-nav="contact" style="color:var(--lake-ink)">Talk to Ali</a>
     </nav>
     <div class="head-actions">
       <a class="btn sm head-talk" href="#contact" style="color:var(--lake-ink)">Talk to Ali</a>
-      <button class="menu-btn" id="menu-btn" aria-expanded="false" aria-controls="drawer">Menu</button>
+      <button class="menu-btn" id="menu-btn" aria-expanded="false" aria-controls="drawer" data-open="Menu" data-close="Close">Menu</button>
     </div>
   </div>
   <div class="drawer" id="drawer" hidden>
@@ -531,6 +560,7 @@ article.teaser:hover h3{text-decoration:none}
       <a href="#resources">Resources</a>
       <a href="#about">About Ali</a>
       <a href="#contact">Contact</a>
+      <a class="minor lang" href="#fa-home" lang="fa" hreflang="fa" data-lang-switch>فارسی · Farsi</a>
       <a class="btn" href="#contact" style="color:var(--lake-ink)">Talk to Ali</a>
       <a class="minor" href="#listings" data-requires="idx">Listing search (preview)</a>
     </nav>
@@ -551,7 +581,7 @@ article.teaser:hover h3{text-decoration:none}
           <a class="btn" href="#contact" data-cta="hero">Talk to Ali</a>
           <a class="link" href="#invest">Explore investing <span class="ar" aria-hidden="true">→</span></a>
         </div>
-        <div class="meta"><span><mark class="tbc" data-tpl="Licensed since {start_year}">Licensed since [year]</mark></span><span><mark class="tbc" data-tpl="RECO #{reco_number}">RECO #[000000]</mark></span><span>TRREB member</span><span><b>English &amp; <span lang="fa">فارسی</span></b></span></div>
+        <div class="meta"><span><mark class="tbc" data-tpl="Licensed since {start_year}">Licensed since [year]</mark></span><span><mark class="tbc" data-tpl="RECO #{reco_number}">RECO #[000000]</mark></span><span>TRREB member</span><span><b>English &amp; <a href="#fa-home" lang="fa" hreflang="fa">فارسی</a></b></span></div>
       </div>
       <div class="side">
         <div class="portrait" role="img" aria-label="Placeholder for Ali Bayat's professional portrait">
@@ -1060,6 +1090,7 @@ article.teaser:hover h3{text-decoration:none}
 
 <!-- ============ AREA DETAIL ============ -->
 <div class="page" data-page="area" hidden></div>
+<div class="page" data-page="fa-area" lang="fa" dir="rtl" hidden></div>
 
 <!-- ============ LISTINGS ============ -->
 <div class="page" data-page="listings" data-title="Toronto & GTA Homes for Sale | Ali Bayat" hidden>
@@ -1257,6 +1288,577 @@ article.teaser:hover h3{text-decoration:none}
   </section>
 </div>
 
+<!-- ============ FARSI (فارسی): real pages, right to left; chrome comes from #fa-chrome ============ -->
+<div class="page" data-page="fa-home" lang="fa" dir="rtl" data-title="علی بیات | مشاور املاک فارسی‌زبان در تورنتو و نورث‌یورک" hidden>
+  <section class="hero">
+    <div class="wrap grid">
+      <div class="copy">
+        <nav class="areas" aria-label="محدوده‌های فعالیت"><a href="#fa-north-york">نورث‌یورک</a><a href="#fa-thornhill">تورنهیل</a><a href="#fa-richmond-hill">ریچموند هیل</a><a href="#fa-vaughan">وان</a><a href="#fa-toronto">تورنتو</a></nav>
+        <h1 tabindex="-1">مشاور املاک فارسی‌زبان در تورنتو و نورث‌یورک، <em>با اعداد واقعی.</em></h1>
+        <p class="lede">من علی بیات هستم، مشاور املاک (<bdi>REALTOR®</bdi>) در Century 21 Heritage Group در تورنهیل. از سال 2016 به مشتریانم در خرید، فروش و اجاره‌ی خانه در نورث‌یورک، تورنهیل، ریچموند هیل، وان و تورنتو کمک کرده‌ام؛ به فارسی یا انگلیسی.</p>
+        <div class="row">
+          <a class="btn" href="#fa-contact" data-cta="hero">گفتگو با علی</a>
+          <a class="link" href="#fa-about">درباره‌ی علی <span class="ar" aria-hidden="true">←</span></a>
+        </div>
+        <div class="meta"><span><mark class="tbc" data-tpl="دارای مجوز از {start_year}">دارای مجوز از [year]</mark></span><span><mark class="tbc" data-tpl="RECO #{reco_number}">RECO #[000000]</mark></span><span>عضو TRREB</span><span><b>فارسی و <a href="#home" lang="en" hreflang="en">English</a></b></span></div>
+      </div>
+      <div class="side">
+        <div class="portrait" role="img" aria-label="Placeholder for Ali Bayat's professional portrait"><span class="frame" aria-hidden="true"></span><div class="ph"><span class="ab">AB</span><span class="dir">Portrait to come</span></div></div>
+        <div class="idcard"><b>علی بیات</b><span class="small muted" dir="ltr" style="text-align:right">REALTOR® · Century 21 Heritage Group</span><span class="small muted">نورث‌یورک، تورنهیل، ریچموند هیل، وان و تورنتو</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="band">
+    <div class="wrap railed">
+      <div class="rail"><span class="label">چطور کمک می‌کنم</span></div>
+      <div class="main">
+        <h2>خرید، فروش و سرمایه‌گذاری؛ <em>هر کدام برنامه‌ی خودش را می‌خواهد.</em></h2>
+        <div class="svc three">
+          <article>
+            <h3>خرید</h3>
+            <ol class="mini-steps"><li>بودجه‌ای که هزینه‌های بستن معامله را هم در بر بگیرد</li><li>مقایسه‌ی محله‌ها بر اساس آنچه برای شما مهم است</li><li>بررسی دقیق هر خانه پیش از تصمیم</li><li>پیشنهاد خرید با استراتژی و سقف مشخص</li></ol>
+            <div class="row"><a class="link" href="#fa-buy">مراحل خرید <span class="ar" aria-hidden="true">←</span></a></div>
+          </article>
+          <article>
+            <h3>فروش</h3>
+            <ol class="mini-steps"><li>قیمت‌گذاری بر اساس فروش‌های مشابه واقعی</li><li>آماده‌سازی خانه با فهرستی عملی از تعمیرات لازم و غیرلازم</li><li>عرضه با برنامه‌ای مشخص برای هفته‌ی اول</li><li>مذاکره روی شرایط، نه فقط قیمت</li></ol>
+            <div class="row"><a class="link" href="#fa-sell">مراحل فروش <span class="ar" aria-hidden="true">←</span></a></div>
+          </article>
+          <article>
+            <h3>سرمایه‌گذاری</h3>
+            <p class="muted small">ارزیابی ملک‌های درآمدزا با تمرکز بر اعداد.</p>
+            <ol class="mini-steps"><li>برآورد واقع‌بینانه‌ی درآمد اجاره</li><li>محاسبه‌ی همه‌ی هزینه‌های جاری</li><li>بررسی وام و جریان نقدی</li><li>سنجیدن ریسک‌ها پیش از تصمیم</li></ol>
+            <div class="row"><a class="link" href="#fa-invest">تحلیل ملک سرمایه‌گذاری <span class="ar" aria-hidden="true">←</span></a></div>
+          </article>
+        </div>
+        <div class="unsure"><span>راهنمای محله‌ها و منابع آموزشی هم به فارسی در دسترس است.</span><span class="row" style="gap:.5rem 1.25rem"><a class="link" href="#fa-neighbourhoods">راهنمای محله‌ها <span class="ar" aria-hidden="true">←</span></a><a class="link" href="#fa-resources">منابع آموزشی <span class="ar" aria-hidden="true">←</span></a></span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="band surface">
+    <div class="wrap railed">
+      <div class="rail"><span class="label">روش کار من</span></div>
+      <div class="main">
+        <h2>آنچه می‌توانید انتظار داشته باشید، <em>و آنچه می‌توانید بررسی کنید.</em></h2>
+        <div class="principles">
+          <div><h3>اول اعداد</h3><p>فروش‌های مشابه، هزینه‌های نگهداری و هزینه‌های بستن معامله، شفاف و پیش از هر تصمیمی.</p></div>
+          <div><h3>پاسخ صریح</h3><p>اگر ملکی یا قیمتی منطقی نباشد، به شما می‌گویم؛ حتی اگر خبر خوشایندی نباشد.</p></div>
+          <div><h3>مذاکره‌ی دقیق</h3><p>ودیعه، شرایط قرارداد و تاریخ تحویل به اندازه‌ی قیمت اهمیت دارند. از همه‌ی آن‌ها محافظت می‌کنم.</p></div>
+          <div><h3>آشنا با همه‌ی جنبه‌های بازسازی</h3><p>تعمیرات، بازسازی و ارتقا: چه کاری ارزش انجامش را دارد، چقدر باید هزینه داشته باشد و با چه کسی تماس بگیرید.</p></div>
+        </div>
+        <div class="row"><a class="link" href="#fa-about">بیشتر درباره‌ی روش کار من <span class="ar" aria-hidden="true">←</span></a></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-band">
+    <div class="wrap">
+      <div><h2>قصد خرید، فروش یا سرمایه‌گذاری دارید؟ <em>با یک گفتگو شروع کنیم.</em></h2><p>یک تماس کوتاه معمولاً برای روشن شدن گزینه‌هایتان کافی است. بدون هیچ تعهدی، به فارسی یا انگلیسی.</p></div>
+      <div class="row"><a class="btn" href="#fa-contact" data-cta="cta-band">گفتگو با علی</a><span class="alt"><span dir="ltr"><mark class="tbc" data-tpl="{phone_display}">(416) 000-0000</mark></span></span></div>
+    </div>
+  </section>
+</div>
+
+<!-- ============ FARSI: NEIGHBOURHOODS / RESOURCES / GUIDE ============ -->
+<div class="page" data-page="fa-neighbourhoods" lang="fa" dir="rtl" data-title="راهنمای محله‌های تورنتو و منطقه‌ی یورک به فارسی | علی بیات" hidden>
+  <header class="page-head"><div class="wrap">
+    <nav class="crumbs" aria-label="Breadcrumb"><a href="#fa-home">خانه</a><span aria-hidden="true">/</span><span>محله‌ها</span></nav>
+    <span class="label accent">راهنمای محله‌ها</span>
+    <h1 tabindex="-1">منطقه‌ی بزرگ تورنتو، <em>محله به محله</em></h1>
+    <p class="lede">مسکن، رفت‌وآمد، زندگی روزمره و آنچه خریداران، فروشندگان و سرمایه‌گذاران باید بدانند، در محله‌هایی که بیشتر در آن‌ها کار می‌کنم.</p>
+  </div></header>
+  <section class="band">
+    <div class="wrap stack">
+      <ul class="alist"><li><a href="#fa-north-york"><div class="dwg" data-dwg="tower"></div><div><span class="label">شهر تورنتو</span><h3>نورث‌یورک</h3><p>برج‌های کاندو در امتداد خیابان یانگ و خیابان‌های آرام مسکونی چند بلوک آن‌طرف‌تر.</p></div><span class="go">راهنما ←</span></a></li><li><a href="#fa-thornhill"><div class="dwg" data-dwg="cottage"></div><div><span class="label">وان و مارکهام، منطقه‌ی یورک</span><h3>تورنهیل</h3><p>محله‌ای جاافتاده درست شمال تورنتو که میان دو شهر تقسیم شده است.</p></div><span class="go">راهنما ←</span></a></li><li><a href="#fa-richmond-hill"><div class="dwg" data-dwg="detached"></div><div><span class="label">منطقه‌ی یورک</span><h3>ریچموند هیل</h3><p>محله‌های جاافتاده، شهرک‌های جدیدتر و فضای سبز در شمال.</p></div><span class="go">راهنما ←</span></a></li><li><a href="#fa-vaughan"><div class="dwg" data-dwg="town"></div><div><span class="label">منطقه‌ی یورک</span><h3>وان</h3><p>محله‌های جاافتاده و یک مرکز شهر جدید که پیرامون مترو ساخته شده است.</p></div><span class="go">راهنما ←</span></a></li><li><a href="#fa-toronto"><div class="dwg" data-dwg="bay"></div><div><span class="label">شهر تورنتو</span><h3>تورنتو</h3><p>خانه‌های ویکتوریایی نیمه‌مستقل، خیابان‌های خانوادگی میدتاون و کاندوهای مرکز شهر.</p></div><span class="go">راهنما ←</span></a></li></ul>
+      <div class="unsure"><span>برای خرید، فروش یا ملک درآمدزا محله‌ها را مقایسه می‌کنید؟</span><span class="row" style="gap:.5rem 1.25rem"><a class="link" href="#fa-buy">خرید <span class="ar" aria-hidden="true">←</span></a><a class="link" href="#fa-sell">فروش <span class="ar" aria-hidden="true">←</span></a><a class="link" href="#fa-invest">سرمایه‌گذاری <span class="ar" aria-hidden="true">←</span></a><a class="link" href="#fa-contact" data-cta="compare-areas">گفتگو با علی <span class="ar" aria-hidden="true">←</span></a></span></div>
+    </div>
+  </section>
+</div>
+
+<div class="page" data-page="fa-resources" lang="fa" dir="rtl" data-title="راهنماهای املاک تورنتو به فارسی | خرید، فروش و سرمایه‌گذاری" hidden>
+  <header class="page-head"><div class="wrap">
+    <nav class="crumbs" aria-label="Breadcrumb"><a href="#fa-home">خانه</a><span aria-hidden="true">/</span><span>منابع</span></nav>
+    <span class="label accent">مرکز آموزش</span>
+    <h1 tabindex="-1">راهنماهای خرید، فروش و <em>شناخت بازار املاک تورنتو</em></h1>
+    <p class="lede">پاسخ ساده به پرسش‌هایی که مشتریان بیشتر می‌پرسند، اصول سرمایه‌گذاری، و راهنمای محله‌ها؛ به فارسی.</p>
+    <div class="row"><a class="link" href="#fa-buy">مراحل خرید <span class="ar" aria-hidden="true">←</span></a><a class="link" href="#fa-sell">مراحل فروش <span class="ar" aria-hidden="true">←</span></a><a class="link" href="#fa-invest">تحلیل ملک سرمایه‌گذاری <span class="ar" aria-hidden="true">←</span></a></div>
+  </div></header>
+  <section class="band tight">
+    <div class="wrap stack" style="gap:3rem">
+      <a class="feature" href="#fa-guide-land-transfer-tax">
+        <div class="dwg wide" data-dwg="strip2"><span class="grid-bg"></span></div>
+        <div class="in"><span class="label accent">راهنمای ویژه · خرید</span><h3>مالیات انتقال زمین در تورنتو و منطقه‌ی یورک، همراه با ماشین‌حساب</h3><p class="muted">چرا خرید با قیمت یکسان در نورث‌یورک هزینه‌ی بیشتری از وان دارد، و بازپرداخت خریداران خانه‌ی اول چطور محاسبه می‌شود.</p><span class="status pub">منتشرشده</span></div>
+      </a>
+      <div class="stack"><section class="kc-cat"><div class="intro"><h2>راهنمای خرید</h2><p>از بودجه تا روز تحویل.</p></div><div class="arts"><a class="art" href="#fa-guide-land-transfer-tax"><h3>مالیات انتقال زمین در تورنتو و منطقه‌ی یورک، همراه با ماشین‌حساب</h3><span class="status pub">منتشرشده</span><p>چرا خرید با قیمت یکسان در نورث‌یورک هزینه‌ی بیشتری از وان دارد.</p></a><div class="art"><h3>خرید اولین خانه در تورنتو: برنامه‌ی قدم به قدم</h3><span class="status">در دست نگارش</span><p>از پیش‌تأیید وام تا روز تحویل، با هزینه‌های هر مرحله.</p></div><div class="art"><h3>کاندوی پیش‌فروش: پرسش‌هایی پیش از امضا</h3><span class="status">در دست نگارش</span><p>ودیعه‌ها، هزینه‌های دوره‌ی سکونت، قوانین واگذاری و تسویه‌های روز تحویل.</p></div></div></section><section class="kc-cat"><div class="intro"><h2>راهنمای فروش</h2><p>آماده‌سازی، قیمت‌گذاری و فروش.</p></div><div class="arts"><div class="art"><h3>چه تعمیراتی پیش از فروش ارزش دارد</h3><span class="status">در دست نگارش</span><p>کدام تعمیرات ارزشش را دارند، کدام‌ها نه، و چطور سر وقت انجامشان دهیم.</p></div><div class="art"><h3>روز پیشنهادها یا قیمت‌گذاری مطابق بازار</h3><span class="status">در دست نگارش</span><p>هر استراتژی چطور کار می‌کند و چه زمانی معمولاً منطقی است.</p></div></div></section><section class="kc-cat"><div class="intro"><h2>سرمایه‌گذاری</h2><p>تحلیل ملک‌های درآمدزا: جریان نقدی، Cap rate، وام و استراتژی.</p></div><div class="arts"><a class="art" href="#fa-invest"><h3>تحلیل ملک سرمایه‌گذاری: چارچوب شش‌مرحله‌ای</h3><span class="status pub">منتشرشده</span><p>از بررسی ملک تا تصمیم، با پرسش‌های هر مرحله.</p></a><div class="art"><h3>نرخ بازده سرمایه (Cap rate) چیست و چه چیزی را نمی‌گوید</h3><span class="status">در دست نگارش</span><p>نحوه‌ی محاسبه، مقایسه و محدودیت‌هایش.</p></div><div class="art"><h3>محاسبه‌ی جریان نقدی ملک اجاره‌ای</h3><span class="status">در دست نگارش</span><p>از اجاره‌ی ناخالص تا آنچه پس از هزینه‌ها، خالی ماندن و وام باقی می‌ماند.</p></div><div class="art"><h3>جریان نقدی یا رشد ارزش: انتخاب استراتژی</h3><span class="status">در دست نگارش</span><p>دو دلیل متفاوت برای مالکیت ملک و ریسک‌های هر کدام.</p></div></div></section><section class="kc-cat"><div class="intro"><h2>راهنمای محله‌ها</h2><p>زندگی در هر محله چطور است.</p></div><div class="arts"><a class="art" href="#fa-north-york"><h3>راهنمای نورث‌یورک</h3><span class="status pub">منتشرشده</span><p>برج‌های کاندو در امتداد خیابان یانگ و خیابان‌های آرام مسکونی چند بلوک آن‌طرف‌تر.</p></a><a class="art" href="#fa-thornhill"><h3>راهنمای تورنهیل</h3><span class="status pub">منتشرشده</span><p>محله‌ای جاافتاده درست شمال تورنتو که میان دو شهر تقسیم شده است.</p></a><a class="art" href="#fa-richmond-hill"><h3>راهنمای ریچموند هیل</h3><span class="status pub">منتشرشده</span><p>محله‌های جاافتاده، شهرک‌های جدیدتر و فضای سبز در شمال.</p></a><a class="art" href="#fa-vaughan"><h3>راهنمای وان</h3><span class="status pub">منتشرشده</span><p>محله‌های جاافتاده و یک مرکز شهر جدید که پیرامون مترو ساخته شده است.</p></a><a class="art" href="#fa-toronto"><h3>راهنمای تورنتو</h3><span class="status pub">منتشرشده</span><p>خانه‌های ویکتوریایی نیمه‌مستقل، خیابان‌های خانوادگی میدتاون و کاندوهای مرکز شهر.</p></a></div></section><section class="kc-cat"><div class="intro"><h2>نکته‌های املاک</h2><p>پاسخ کوتاه به پرسش‌های رایج.</p></div><div class="arts"><div class="art"><h3>خواندن Status Certificate کاندو</h3><span class="status">در دست نگارش</span><p>صفحه‌هایی که مهم‌اند و نشانه‌های هشدار.</p></div><div class="art"><h3>بازرسی خانه در تورنتو: چه انتظاری داشته باشید</h3><span class="status">در دست نگارش</span><p>بازرس چه چیزهایی را بررسی می‌کند و چطور از گزارش استفاده کنید.</p></div></div></section></div>
+    </div>
+  </section>
+  <section class="cta-band"><div class="wrap">
+    <div><h2>سؤالی دارید که اینجا پاسخ داده نشده؟</h2><p>مستقیم از من بپرسید. پرسش‌های خوب اغلب به راهنمای بعدی تبدیل می‌شوند.</p></div>
+    <div class="row"><a class="btn" href="#fa-contact" data-interest="question" data-cta="cta-band">از علی بپرسید</a></div>
+  </div></section>
+</div>
+
+<div class="page" data-page="fa-guide-land-transfer-tax" lang="fa" dir="rtl" data-title="مالیات انتقال زمین در تورنتو و منطقه‌ی یورک (۲۰۲۶) | علی بیات" hidden>
+  <header class="page-head"><div class="wrap">
+    <nav class="crumbs" aria-label="Breadcrumb"><a href="#fa-home">خانه</a><span aria-hidden="true">/</span><a href="#fa-resources">منابع</a><span aria-hidden="true">/</span><span>راهنمای خرید</span></nav>
+    <span class="label accent">راهنمای خرید</span>
+    <h1 tabindex="-1">مالیات انتقال زمین در تورنتو <em>و منطقه‌ی یورک</em></h1>
+    <p class="lede">چرا خرید با قیمت یکسان در نورث‌یورک هزینه‌ی بستن معامله‌ی بیشتری از وان، ریچموند هیل یا تورنهیل دارد، و چطور مبلغ خودتان را برآورد کنید.</p>
+    <div class="byline"><span class="av" aria-hidden="true">AB</span><div class="small"><b>علی بیات</b><br><span class="muted">نرخ‌ها در تاریخ ۱ اکتبر ۲۰۲۶ با منابع رسمی تطبیق داده شده است · <mark class="tbc" data-approve="ltt-guide-review-fa">بازبینی‌شده توسط علی</mark></span><br><span class="muted" data-meta="dates"></span></div></div>
+  </div></header>
+  <section class="band tight">
+    <div class="wrap two">
+      <div class="article-body">
+        <p>هر خریداری در انتاریو هنگام بستن معامله، مالیات انتقال زمین استانی (Land Transfer Tax) را می‌پردازد. اگر خانه در شهر تورنتو باشد، که شامل نورث‌یورک، اسکاربرو و اتوبیکوک هم می‌شود، مالیات انتقال زمین شهرداری تورنتو را هم می‌پردازید. خریداران در محله‌های منطقه‌ی یورک مثل وان، ریچموند هیل و تورنهیل فقط مالیات استانی را می‌پردازند.</p>
+        <p>برای یک خانه‌ی ۱,۰۰۰,۰۰۰ دلاری، این تفاوت حدود ۱۶,۴۷۵ دلار است. این یکی از مهم‌ترین عددهایی است که هنگام مقایسه‌ی خانه‌های دو طرف خیابان استیلز باید بدانید.</p>
+        <h2>مالیات انتقال زمین خود را برآورد کنید</h2>
+        <div class="calc" id="calc">
+          <div class="inputs">
+            <div class="field"><label for="lt-price">قیمت خرید</label><div class="money" dir="ltr"><span aria-hidden="true">$</span><input id="lt-price" inputmode="numeric" value="1,000,000" autocomplete="off"></div></div>
+            <fieldset class="seg2"><legend>خانه کجاست؟</legend>
+              <input type="radio" name="lt-loc" id="lt-to" value="to" checked><label for="lt-to">شهر تورنتو<br><span class="muted small" style="font-weight:400">شامل نورث‌یورک</span></label>
+              <input type="radio" name="lt-loc" id="lt-on" value="on"><label for="lt-on">جای دیگری در انتاریو<br><span class="muted small" style="font-weight:400">مثلاً وان</span></label>
+            </fieldset>
+            <label class="check" for="lt-first"><input type="checkbox" id="lt-first"> خریدار خانه‌ی اول هستم</label>
+          </div>
+          <div class="out" aria-live="polite">
+            <div class="line"><span>مالیات انتقال زمین انتاریو</span><span id="o-on" dir="ltr">—</span></div>
+            <div class="line" id="o-onr-row"><span>بازپرداخت خریدار خانه‌ی اول انتاریو</span><span id="o-onr" dir="ltr">—</span></div>
+            <div class="line" id="o-to-row"><span>مالیات انتقال زمین شهرداری تورنتو</span><span id="o-to" dir="ltr">—</span></div>
+            <div class="line total"><span>برآورد مجموع</span><span id="o-total" dir="ltr">—</span></div>
+            <p class="small muted" id="o-note" style="margin-top:.6rem"></p>
+          </div>
+        </div>
+        <p class="small muted">برای خانه‌ای با یک یا دو واحد مسکونی تک‌خانواری، بر اساس نرخ‌های انتاریو و نرخ‌های شهر تورنتو که از ۱ آوریل ۲۰۲۶ اعمال می‌شوند. این یک برآورد است، نه مشاوره‌ی حقوقی یا مالیاتی؛ مبلغ نهایی را وکیل املاک شما تأیید می‌کند.</p>
+        <h2>این دو مالیات چطور محاسبه می‌شوند</h2>
+        <p>هر دو مالیات پله‌ای محاسبه می‌شوند؛ یعنی هر بخش از قیمت با نرخ خودش مشمول مالیات است. تا ۲,۰۰۰,۰۰۰ دلار، نرخ‌های انتاریو و تورنتو یکسان است؛ به همین دلیل خرید در تورنتو تقریباً مالیات را دو برابر می‌کند. بالای ۳,۰۰۰,۰۰۰ دلار، نرخ‌های تورنتو تندتر بالا می‌روند.</p>
+        <div class="tbl-wrap"><table>
+          <thead><tr><th>بخشی از قیمت</th><th class="r">انتاریو</th><th class="r">تورنتو (از ۱ آوریل ۲۰۲۶)</th></tr></thead>
+          <tbody>
+            <tr><td>تا 55,000 دلار</td><td class="r">0.5%</td><td class="r">0.5%</td></tr>
+            <tr><td>55,000 تا 250,000 دلار</td><td class="r">1.0%</td><td class="r">1.0%</td></tr>
+            <tr><td>250,000 تا 400,000 دلار</td><td class="r">1.5%</td><td class="r">1.5%</td></tr>
+            <tr><td>400,000 تا 2,000,000 دلار</td><td class="r">2.0%</td><td class="r">2.0%</td></tr>
+            <tr><td>2,000,000 تا 3,000,000 دلار</td><td class="r">2.5%</td><td class="r">2.5%</td></tr>
+            <tr><td>3,000,000 تا 4,000,000 دلار</td><td class="r">2.5%</td><td class="r">4.40%</td></tr>
+            <tr><td>4,000,000 تا 5,000,000 دلار</td><td class="r">2.5%</td><td class="r">5.45%</td></tr>
+            <tr><td>5,000,000 تا 10,000,000 دلار</td><td class="r">2.5%</td><td class="r">6.50%</td></tr>
+            <tr><td>10,000,000 تا 20,000,000 دلار</td><td class="r">2.5%</td><td class="r">7.55%</td></tr>
+            <tr><td>بیش از 20,000,000 دلار</td><td class="r">2.5%</td><td class="r">8.60%</td></tr>
+          </tbody>
+        </table></div>
+        <h2>بازپرداخت خریداران خانه‌ی اول</h2>
+        <p>انتاریو تا ۴,۰۰۰ دلار از مالیات استانی را به خریداران خانه‌ی اولِ واجد شرایط بازمی‌گرداند. شهر تورنتو هم بازپرداخت جداگانه‌ای تا ۴,۴۷۵ دلار برای مالیات شهرداری دارد. هر دو شرایط خاص خود را دارند؛ پیش از اینکه روی آن حساب کنید، شرایطتان را با وکیلتان بررسی کنید.</p>
+        <h2>این موضوع هنگام انتخاب محل خرید چه معنایی دارد</h2>
+        <p>اگر مثلاً بین کاندویی نزدیک ایستگاه Finch و کاندویی نزدیک Vaughan Metropolitan Centre مردد هستید، مالیات انتقال زمین بخشی از قیمت واقعی است. من آن را در هر مقایسه‌ای که برای مشتریانم آماده می‌کنم، همراه با هزینه‌ی وکیل، تسویه‌ها و هزینه‌ی اسباب‌کشی، منظور می‌کنم.</p>
+        <div class="row"><a class="btn" href="#fa-contact" data-interest="buy" data-cta="guide-budget">گفتگو با علی درباره‌ی بودجه‌تان</a></div>
+        <p class="small muted">منابع، بررسی‌شده در ۱ اکتبر ۲۰۲۶: <a href="https://www.toronto.ca/services-payments/property-taxes-utilities/municipal-land-transfer-tax-mltt/municipal-land-transfer-tax-mltt-rates-and-fees/" rel="noopener">City of Toronto, MLTT rates and fees</a>؛ <a href="https://www.toronto.ca/services-payments/property-taxes-utilities/municipal-land-transfer-tax-mltt/municipal-land-transfer-tax-mltt-rebate-opportunities/" rel="noopener">City of Toronto, MLTT rebates</a>؛ <a href="https://www.ontario.ca/document/land-transfer-tax/calculating-land-transfer-tax" rel="noopener">Ontario, calculating land transfer tax</a>؛ <a href="https://www.ontario.ca/document/land-transfer-tax/land-transfer-tax-refunds-first-time-homebuyers" rel="noopener">Ontario, refunds for first-time homebuyers</a>.</p>
+      </div>
+      <aside class="aside">
+        <div class="box"><h3>مطالب مرتبط</h3><ul class="nolist small"><li><a class="link" href="#fa-buy">مراحل خرید با علی <span class="ar" aria-hidden="true">←</span></a></li><li><a class="link" href="#fa-north-york">راهنمای نورث‌یورک <span class="ar" aria-hidden="true">←</span></a></li><li><a class="link" href="#fa-vaughan">راهنمای وان <span class="ar" aria-hidden="true">←</span></a></li><li><a class="link" href="#fa-invest">هزینه‌های بستن معامله در تحلیل سرمایه‌گذاری <span class="ar" aria-hidden="true">←</span></a></li></ul></div>
+        <div class="box tint"><h3>دو محله را مقایسه می‌کنید؟</h3><p>هزینه‌های کامل بستن معامله را برای خانه‌هایی که در نظر دارید کنار هم می‌گذارم.</p><a class="btn" href="#fa-contact" data-interest="buy" data-cta="guide-compare">گفتگو با علی</a></div>
+      </aside>
+    </div>
+  </section>
+</div>
+
+<!-- ============ FARSI: BUY / SELL / INVEST ============ -->
+<div class="page" data-page="fa-buy" lang="fa" dir="rtl" data-title="خرید خانه در تورنتو و GTA | علی بیات، مشاور املاک فارسی‌زبان" hidden>
+  <header class="page-head"><div class="wrap">
+    <nav class="crumbs" aria-label="Breadcrumb"><a href="#fa-home">خانه</a><span aria-hidden="true">/</span><span>خرید</span></nav>
+    <span class="label accent">برای خریداران</span>
+    <h1 tabindex="-1">خرید خانه در تورنتو <em>و منطقه‌ی بزرگ تورنتو (GTA)</em></h1>
+    <p class="lede">چه اولین کاندوی شما باشد و چه خانه‌ی بعدی خانواده، روند یکی است: بدانید چقدر توان خرید دارید، بازار را بشناسید و اجازه ندهید فشار به جای شما تصمیم بگیرد.</p>
+    <div class="row"><a class="btn" href="#fa-contact" data-interest="buy">شروع جستجوی خانه</a><a class="link" href="#fa-guide-land-transfer-tax">محاسبه‌ی مالیات انتقال زمین <span class="ar" aria-hidden="true">←</span></a></div>
+  </div></header>
+  <section class="band tight"><div class="wrap stack" style="gap:2.5rem"><div class="timeline" data-timeline="fa-buy"></div></div></section>
+  <section class="band tight" style="padding-top:0">
+    <div class="wrap two">
+      <ol class="steps" data-steps="fa-buy"></ol>
+      <aside class="aside">
+        <div class="box">
+          <h3>هزینه‌هایی که خریداران اغلب در نظر نمی‌گیرند</h3>
+          <ul class="plain">
+            <li>مالیات انتقال زمین انتاریو (Land Transfer Tax)</li>
+            <li>مالیات انتقال زمین شهرداری تورنتو، که در نورث‌یورک و کل شهر تورنتو اعمال می‌شود</li>
+            <li>بازپرداخت ویژه‌ی خریداران خانه‌ی اول، در صورت واجد شرایط بودن</li>
+            <li>هزینه‌ی وکیل و بیمه‌ی سند (Title Insurance)</li>
+            <li>بازرسی و ارزیابی ملک</li>
+            <li>تسویه‌ی مالیات ملک یا شارژ ساختمانِ پیش‌پرداخت‌شده</li>
+          </ul>
+          <a class="link" href="#fa-guide-land-transfer-tax">ماشین‌حساب مالیات انتقال زمین <span class="ar" aria-hidden="true">←</span></a>
+        </div>
+        <div class="box"><h3>مطالب مرتبط</h3><ul class="nolist small"><li><a class="link" href="#fa-neighbourhoods">مقایسه‌ی محله‌ها <span class="ar" aria-hidden="true">←</span></a></li><li><a class="link" href="#fa-invest">برای اجاره دادن می‌خرید؟ تحلیل ملک سرمایه‌گذاری <span class="ar" aria-hidden="true">←</span></a></li></ul></div>
+        <div class="box tint"><h3>آنچه قول نمی‌دهم</h3><p>نمی‌توانم تضمین کنم در رقابت چند پیشنهادی برنده شوید یا زیر قیمت درخواستی بخرید. قول می‌دهم استراتژی روشن، مشاوره‌ی صادقانه، و اینکه هرگز پیشنهادی را که کامل نفهمیده‌اید امضا نکنید.</p></div>
+      </aside>
+    </div>
+  </section>
+  <section class="cta-band"><div class="wrap">
+    <div><h2>آماده‌ی شروع جستجو هستید؟</h2><p>بگویید دنبال چه هستید و زمان‌بندی‌تان چیست. یک فهرست اولیه و تصویری از اینکه بودجه‌تان در هر محله چه چیزی می‌خرد برایتان می‌فرستم.</p></div>
+    <div class="row"><a class="btn" href="#fa-contact" data-interest="buy" data-cta="cta-band">شروع جستجوی خانه</a></div>
+  </div></section>
+</div>
+
+<div class="page" data-page="fa-sell" lang="fa" dir="rtl" data-title="فروش خانه در تورنتو و GTA | علی بیات، مشاور املاک فارسی‌زبان" hidden>
+  <header class="page-head"><div class="wrap">
+    <nav class="crumbs" aria-label="Breadcrumb"><a href="#fa-home">خانه</a><span aria-hidden="true">/</span><span>فروش</span></nav>
+    <span class="label accent">برای فروشندگان</span>
+    <h1 tabindex="-1">فروش خانه در تورنتو <em>و منطقه‌ی بزرگ تورنتو (GTA)</em></h1>
+    <p class="lede">یک فروش خوب حاصل قیمتی مبتنی بر شواهد، خانه‌ای آماده و عرضه‌ای است که به خریداران مناسب برسد. روش من برای هر بخش این است.</p>
+    <div class="row"><a class="btn" href="#fa-contact" data-interest="sell">درباره‌ی ارزش خانه‌تان صحبت کنیم</a></div>
+  </div></header>
+  <section class="band tight"><div class="wrap"><div class="timeline" data-timeline="fa-sell"></div></div></section>
+  <section class="band tight" style="padding-top:0">
+    <div class="wrap two">
+      <ol class="steps" data-steps="fa-sell"></ol>
+      <aside class="aside">
+        <div class="box">
+          <h3>یک گفتگوی قیمت‌گذاری شامل چه چیزهایی است</h3>
+          <ul class="plain"><li>فروش‌های مشابه اخیر در نزدیکی شما</li><li>ملک‌های در حال فروش، منقضی‌شده و پس‌گرفته‌شده</li><li>وضعیت و به‌روزرسانی‌های خانه‌ی شما</li><li>زمان‌بندی و قدم بعدی شما</li><li>برآورد هزینه‌های فروش و مبلغ خالص</li></ul>
+        </div>
+        <div class="box"><h3>مطالب مرتبط</h3><ul class="nolist small"><li><a class="link" href="#fa-neighbourhoods">خریداران در هر محله دنبال چه هستند <span class="ar" aria-hidden="true">←</span></a></li><li><a class="link" href="#fa-invest">ملک درآمدزا می‌فروشید؟ سرمایه‌گذاران چطور آن را ارزیابی می‌کنند <span class="ar" aria-hidden="true">←</span></a></li></ul></div>
+        <div class="box tint"><h3>یک قول واقع‌بینانه</h3><p>قیمت نهایی را بازار تعیین می‌کند. کار من قیمت‌گذاری بر اساس شواهد، معرفی درست خانه‌ی شما و مذاکره‌ی دقیق است تا بهترین نتیجه‌ای را که بازار در آن زمان می‌دهد بگیرید.</p></div>
+      </aside>
+    </div>
+  </section>
+  <section class="cta-band"><div class="wrap">
+    <div><h2>درباره‌ی <em>ارزش خانه‌تان</em> صحبت کنیم.</h2><p>نشانی و کمی از برنامه‌تان را بگویید. یک بررسی فروش‌های مشابه آماده می‌کنم و قدم به قدم برایتان توضیح می‌دهم.</p></div>
+    <div class="row"><a class="btn" href="#fa-contact" data-interest="sell" data-cta="cta-band">گفتگو درباره‌ی فروش خانه</a></div>
+  </div></section>
+</div>
+
+<div class="page" data-page="fa-invest" lang="fa" dir="rtl" data-title="سرمایه‌گذاری در املاک تورنتو | تحلیل ملک درآمدزا به فارسی" hidden>
+  <header class="page-head"><div class="wrap">
+    <nav class="crumbs" aria-label="Breadcrumb"><a href="#fa-home">خانه</a><span aria-hidden="true">/</span><span>سرمایه‌گذاری</span></nav>
+    <span class="label accent">برای سرمایه‌گذاران</span>
+    <h1 tabindex="-1">سرمایه‌گذاری در املاک تورنتو <em>با تمرکز بر اعداد.</em></h1>
+    <p class="lede">به سرمایه‌گذاران کمک می‌کنم ملک‌های درآمدزا را در تورنتو و منطقه‌ی یورک فراتر از قیمت درخواستی ارزیابی کنند: درآمد، هزینه‌ها، وام، جریان نقدی و پتانسیل بلندمدت.</p>
+    <div class="row"><a class="btn" href="#fa-contact" data-interest="invest" data-request="analysis">درخواست تحلیل ملک سرمایه‌گذاری</a><button type="button" class="link" data-jump="fa-inv-calc">امتحان ماشین‌حساب سرمایه‌گذاری <span class="ar" aria-hidden="true">←</span></button></div>
+  </div></header>
+
+  <section class="band">
+    <div class="wrap railed">
+      <div class="rail"><span class="label">نگاه کلی</span></div>
+      <div class="main">
+        <h2>ارزش یک ملک فقط <em>قیمت خرید آن نیست.</em></h2>
+        <div class="two">
+          <div class="prose">
+            <p>دو ملک با قیمت یکسان، وقتی اجاره داده شوند می‌توانند عملکرد کاملاً متفاوتی داشته باشند. اینکه ملک چقدر درآمد دارد، اداره‌اش چقدر هزینه دارد، چطور تأمین مالی شده و چند وقت خالی می‌ماند، تعیین می‌کند که خرج خودش را درمی‌آورد یا هر ماه از جیب شما پول می‌خواهد.</p>
+            <p>روش من همان روشی است که در خرید و فروش به کار می‌برم: کمک به تصمیمی روشن‌تر با فهم اعداد پشت ملک. در سرمایه‌گذاری یعنی همه‌ی فرض‌ها را روی میز بگذاریم، مهم‌ترین‌هایشان را بیازماییم و صادقانه بگوییم اعداد چه چیزی را نمی‌توانند بگویند.</p>
+            <p class="small muted">من مشاور املاک دارای مجوز هستم، نه مشاور مالی، حسابدار، وکیل یا کارگزار وام. تحلیلی که ارائه می‌دهم آموزش و تحلیل املاک است و جایگزین مشاوره‌ی حقوقی، مالیاتی، حسابداری، وام یا مالی نیست.</p>
+            <div class="row"><a class="btn" href="#fa-contact" data-interest="invest">گفتگو با علی درباره‌ی یک ملک سرمایه‌گذاری</a></div>
+          </div>
+          <div class="box">
+            <h3>آنچه یک سرمایه‌گذار باید بداند</h3>
+            <ol class="mini-steps"><li>قیمت خرید</li><li>درآمد اجاره</li><li>هزینه‌های جاری</li><li>تأمین مالی</li><li>خالی ماندن واحد</li><li>نگهداری</li><li>درآمد خالص عملیاتی (NOI)</li><li>جریان نقدی</li><li>پتانسیل رشد ارزش در بلندمدت</li></ol>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="band surface">
+    <div class="wrap railed">
+      <div class="rail"><span class="label">آنچه تحلیل می‌کنم</span></div>
+      <div class="main">
+        <h2>چهار پرسش <em>پشت هر ملک.</em></h2>
+        <div class="principles">
+          <div><span class="label accent">۰۱ · درآمد</span><h3>چقدر درآمد دارد؟</h3><p>درآمد اجاره‌ی فعلی و بالقوه، سنجیده‌شده با اجاره‌های مشابه در اطراف، نه پیش‌بینی‌های آگهی.</p></div>
+          <div><span class="label accent">۰۲ · هزینه‌ها</span><h3>اداره‌اش چقدر هزینه دارد؟</h3><p>مالیات ملک، بیمه، قبوض، نگهداری، خالی ماندن و سایر هزینه‌های جاری؛ از جمله آن‌هایی که خلاصه‌ی فروشنده معمولاً جا می‌اندازد.</p></div>
+          <div><span class="label accent">۰۳ · تأمین مالی</span><h3>هزینه‌اش چطور پرداخت می‌شود؟</h3><p>پیش‌پرداخت، فرض‌های وام، نرخ بهره و اقساط: هزینه‌ی ماهانه‌ی وام و اینکه نتیجه چقدر به آن حساس است.</p></div>
+          <div><span class="label accent">۰۴ · بازده</span><h3>چه چیزی باقی می‌ماند؟</h3><p>درآمد خالص عملیاتی (NOI)، نرخ بازده سرمایه (Cap rate)، جریان نقدی و بازده نقدی (Cash-on-cash)، هر کدام به زبان ساده تا بدانید چه چیزی را می‌سنجد و چه چیزی را نه.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="band">
+    <div class="wrap railed">
+      <div class="rail"><span class="label">انواع ملک</span></div>
+      <div class="main">
+        <div class="head-row"><div><h2>ملک‌های درآمدزا <em>انواع مختلفی دارند.</em></h2><p class="lede">هر نوع اجاره، هزینه، قوانین و خریداران خاص خودش را هنگام فروش دارد. این‌ها انواع ملک‌هایی است که می‌توانم در ارزیابی‌شان کمک کنم.</p></div></div>
+        <div class="types inv">
+          <figure><div class="dwg" data-dwg="duplex"></div><figcaption><b>دوپلکس</b><span>دو واحد مستقل، اغلب یکی بالا و یکی پایین.</span></figcaption></figure>
+          <figure><div class="dwg" data-dwg="triplex"></div><figcaption><b>تریپلکس</b><span>سه واحد؛ در محله‌های قدیمی‌تر تورنتو رایج است.</span></figcaption></figure>
+          <figure><div class="dwg" data-dwg="fourplex"></div><figcaption><b>فورپلکس</b><span>چهار واحد. وام‌دهنده‌ها معمولاً تا چهار واحد را مسکونی حساب می‌کنند، اما قوانین متفاوت است.</span></figcaption></figure>
+          <figure><div class="dwg" data-dwg="suite"></div><figcaption><b>واحد دوم قانونی</b><span>خانه‌ای با یک واحد دوم، اغلب در زیرزمین، که الزامات شهرداری و مقررات ساختمانی را رعایت می‌کند.</span></figcaption></figure>
+          <figure><div class="dwg" data-dwg="walkup"></div><figcaption><b>ساختمان چندواحدی کوچک</b><span>ساختمان‌های کم‌ارتفاع با چند واحد، که ممکن است متفاوت از خانه‌ها تأمین مالی و ارزش‌گذاری شوند.</span></figcaption></figure>
+          <figure><div class="dwg" data-dwg="mixed"></div><figcaption><b>ملک تجاری‌ـ‌مسکونی</b><span>مغازه یا دفتر در طبقه‌ی همکف و واحدهای مسکونی در طبقات بالا.</span></figcaption></figure>
+        </div>
+        <p class="small muted" style="border-right:2px solid var(--line);padding-right:.8rem;max-width:72ch">کاربری ملک، منطقه‌بندی (زونینگ)، تأمین مالی و شرایط اجاره همیشه باید پیش از تصمیم خرید به‌طور مستقل بررسی شوند. اینکه ملکی به‌عنوان دوپلکس، واحد قانونی یا ملک درآمدزا آگهی شده، به‌تنهایی وضعیت قانونی آن را تأیید نمی‌کند.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="band surface" id="fa-inv-analysis">
+    <div class="wrap railed">
+      <div class="rail"><span class="label">تحلیل ملک سرمایه‌گذاری</span></div>
+      <div class="main">
+        <div class="head-row"><div><h2>ملکی را در نظر دارید؟ <em>بیایید اعداد را ببینیم.</em></h2><p class="lede">بررسی ساختاریافته‌ی یک ملک مشخص، بر پایه‌ی فرض‌هایی که می‌توانید ببینید و درباره‌شان بپرسید. شش قدم، به همین ترتیب.</p></div></div>
+        <div class="timeline t6">
+          <div class="phase"><span class="pt" aria-hidden="true"></span><h3>ملک</h3><ul><li><button type="button" data-step="fa-inv-1">قیمت، نوع، موقعیت</button></li></ul></div>
+          <div class="phase"><span class="pt" aria-hidden="true"></span><h3>درآمد</h3><ul><li><button type="button" data-step="fa-inv-2">اجاره‌های واقع‌بینانه</button></li></ul></div>
+          <div class="phase"><span class="pt" aria-hidden="true"></span><h3>هزینه‌ها</h3><ul><li><button type="button" data-step="fa-inv-3">هزینه‌ها، خالی ماندن، نگهداری</button></li></ul></div>
+          <div class="phase"><span class="pt" aria-hidden="true"></span><h3>تأمین مالی</h3><ul><li><button type="button" data-step="fa-inv-4">وام و اقساط</button></li></ul></div>
+          <div class="phase"><span class="pt" aria-hidden="true"></span><h3>بازده</h3><ul><li><button type="button" data-step="fa-inv-5">NOI، Cap rate، جریان نقدی</button></li></ul></div>
+          <div class="phase"><span class="pt" aria-hidden="true"></span><h3>تصمیم</h3><ul><li><button type="button" data-step="fa-inv-6">فرض‌ها و ریسک‌ها</button></li></ul></div>
+        </div>
+        <div class="two">
+          <ol class="steps">
+            <li id="fa-inv-1"><div class="k"><span>قدم · ۰۱</span><h3>ملک</h3></div><div class="d"><p>بررسی قیمت خرید، نوع و موقعیت ملک: تعداد واحدها، اندازه و وضعیت‌شان، کاربری فعلی ملک، و قیمت فروش ملک‌های مشابه.</p><p class="ask">آیا کاربری فعلی از طرف شهرداری تأیید شده، یا فقط در آگهی آمده است؟</p></div></li>
+            <li id="fa-inv-2"><div class="k"><span>قدم · ۰۲</span><h3>درآمد</h3></div><div class="d"><p>برآورد واقع‌بینانه‌ی درآمد اجاره با شواهد مناسب بازار: اجاره‌های مشابه، قراردادهای موجود و فهرست اجاره‌های فعلی. اجاره‌ی پیش‌بینی‌شده و اجاره‌ی واقعی جدا نگه داشته می‌شوند.</p><p class="ask">آیا اجاره‌های فعلی در سطح بازار است و قراردادهای موجود چه اجازه‌ای می‌دهند؟</p></div></li>
+            <li id="fa-inv-3"><div class="k"><span>قدم · ۰۳</span><h3>هزینه‌ها</h3></div><div class="d"><p>در نظر گرفتن هزینه‌های جاری، خالی ماندن و نگهداری: مالیات ملک، بیمه، قبوضی که مالک می‌پردازد، تعمیرات و هر هزینه‌ی مدیریت یا هزینه‌ی تکرارشونده‌ی دیگر.</p><p class="ask">خلاصه‌ی هزینه‌های فروشنده چه چیزهایی را جا انداخته است؟</p></div></li>
+            <li id="fa-inv-4"><div class="k"><span>قدم · ۰۴</span><h3>تأمین مالی</h3></div><div class="d"><p>مدل‌سازی فرض‌های وام و اقساط: پیش‌پرداخت، نرخ بهره و مدت بازپرداخت. اینکه واقعاً واجد شرایط چه وامی هستید را متخصص وام شما تأیید می‌کند.</p><p class="ask">اگر نرخ بهره یک درصد بالاتر باشد، نتیجه چطور تغییر می‌کند؟</p></div></li>
+            <li id="fa-inv-5"><div class="k"><span>قدم · ۰۵</span><h3>بازده</h3></div><div class="d"><p>محاسبه‌ی NOI، نرخ بازده سرمایه (Cap rate)، جریان نقدی و بازده نقدی (Cash-on-cash)، به‌طوری که هر عدد به فرض‌هایی که آن را ساخته‌اند قابل ردیابی باشد.</p></div></li>
+            <li id="fa-inv-6"><div class="k"><span>قدم · ۰۶</span><h3>تصمیم</h3></div><div class="d"><p>مشخص کردن فرض‌ها، ریسک‌ها و پرسش‌هایی که باید بیشتر بررسی شوند، و اینکه کدام متخصص‌ها باید آن‌ها را ببینند، پیش از هر تعهدی.</p><p class="ask">اگر کدام فرض اشتباه باشد، تصمیم عوض می‌شود؟</p></div></li>
+          </ol>
+          <aside class="aside">
+            <div class="box">
+              <h3>یک تحلیل شامل چه چیزهایی است</h3>
+              <ul class="plain"><li>فرض‌های درآمد و هزینه، به‌صورت مکتوب</li><li>یک یا چند سناریوی تأمین مالی</li><li>برآورد NOI، Cap rate، جریان نقدی و بازده نقدی</li><li>فهرست مواردی که باید بررسی شوند: منطقه‌بندی و وضعیت قانونی واحدها، قراردادهای اجاره، وضعیت ساختمان</li></ul>
+            </div>
+            <div class="box tint"><h3>آنچه نیست</h3><p>این تحلیل ارزیابی رسمی (Appraisal)، تأیید وام، یا مشاوره‌ی مالیاتی، حقوقی یا مالی نیست و نمی‌تواند اجاره، جریان نقدی، رشد ارزش یا بازده را تضمین کند. یک نقطه‌ی شروع روشن و صادقانه برای تصمیم شماست.</p></div>
+          </aside>
+        </div>
+        <div class="row"><a class="btn" href="#fa-contact" data-interest="invest" data-request="analysis" data-cta="analysis">درخواست تحلیل ملک سرمایه‌گذاری</a></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="band" id="fa-inv-calc">
+    <div class="wrap railed">
+      <div class="rail"><span class="label">ماشین‌حساب</span></div>
+      <div class="main">
+        <div class="head-row"><div><span class="pill">برآورد آموزشی</span><h2>اعداد یک ملک را <em>حساب کنید.</em></h2><p class="lede">هر عددی را تغییر دهید تا ببینید نتیجه چطور عوض می‌شود. مثال زیر فرضی است، نه یک ملک واقعی.</p></div></div>
+        <div class="calc" id="inv-calc-box" dir="rtl">
+          <div class="inputs">
+            <span class="grp">خرید و تأمین مالی</span>
+            <div class="field"><label for="iv-price">قیمت خرید</label><div class="money" dir="ltr"><span aria-hidden="true">$</span><input id="iv-price" data-iv="money" inputmode="numeric" value="1,400,000" autocomplete="off"></div></div>
+            <div class="r2">
+              <div class="field"><label for="iv-down">پیش‌پرداخت</label><div class="pct" dir="ltr"><input id="iv-down" data-iv="pct" inputmode="decimal" value="20" autocomplete="off"><span aria-hidden="true">%</span></div></div>
+              <div class="field"><label for="iv-rate">نرخ بهره</label><div class="pct" dir="ltr"><input id="iv-rate" data-iv="pct" inputmode="decimal" value="5" autocomplete="off"><span aria-hidden="true">%</span></div></div>
+            </div>
+            <div class="field"><label for="iv-amort">مدت بازپرداخت</label><select id="iv-amort" data-iv="sel"><option value="25" selected>۲۵ سال</option><option value="30">۳۰ سال</option></select></div>
+            <span class="grp">درآمد</span>
+            <div class="r2">
+              <div class="field"><label for="iv-rent">درآمد اجاره‌ی سالانه</label><div class="money" dir="ltr"><span aria-hidden="true">$</span><input id="iv-rent" data-iv="money" inputmode="numeric" value="72,000" autocomplete="off"></div></div>
+              <div class="field"><label for="iv-vac">خالی ماندن</label><div class="pct" dir="ltr"><input id="iv-vac" data-iv="pct" inputmode="decimal" value="4" autocomplete="off"><span aria-hidden="true">%</span></div></div>
+            </div>
+            <span class="grp">هزینه‌های جاری سالانه</span>
+            <div class="r2">
+              <div class="field"><label for="iv-tax">مالیات ملک</label><div class="money" dir="ltr"><span aria-hidden="true">$</span><input id="iv-tax" data-iv="money" inputmode="numeric" value="6,500" autocomplete="off"></div></div>
+              <div class="field"><label for="iv-ins">بیمه</label><div class="money" dir="ltr"><span aria-hidden="true">$</span><input id="iv-ins" data-iv="money" inputmode="numeric" value="3,000" autocomplete="off"></div></div>
+              <div class="field"><label for="iv-maint">نگهداری</label><div class="money" dir="ltr"><span aria-hidden="true">$</span><input id="iv-maint" data-iv="money" inputmode="numeric" value="3,600" autocomplete="off"></div></div>
+              <div class="field"><label for="iv-util">قبوض</label><div class="money" dir="ltr"><span aria-hidden="true">$</span><input id="iv-util" data-iv="money" inputmode="numeric" value="4,800" autocomplete="off"></div></div>
+            </div>
+            <div class="field"><label for="iv-other">سایر هزینه‌های سالانه</label><div class="money" dir="ltr"><span aria-hidden="true">$</span><input id="iv-other" data-iv="money" inputmode="numeric" value="2,000" autocomplete="off"></div></div>
+          </div>
+          <div class="out" aria-live="polite">
+            <div class="line"><span>درآمد ناخالص اجاره‌ی سالانه</span><span id="iv-o-gross" dir="ltr">—</span></div>
+            <div class="line"><span>کسر بابت خالی ماندن</span><span id="iv-o-vac" dir="ltr">—</span></div>
+            <div class="line sub"><span>درآمد مؤثر اجاره</span><span id="iv-o-eff" dir="ltr">—</span></div>
+            <div class="line"><span>هزینه‌های جاری سالانه</span><span id="iv-o-opex" dir="ltr">—</span></div>
+            <div class="line sub"><span>درآمد خالص عملیاتی (NOI)</span><span id="iv-o-noi" dir="ltr">—</span></div>
+            <div class="line"><span>برآورد اقساط سالانه‌ی وام</span><span id="iv-o-debt" dir="ltr">—</span></div>
+            <div class="line total"><span>برآورد جریان نقدی سالانه</span><span id="iv-o-cf" dir="ltr">—</span></div>
+            <div class="kpis">
+              <div><small>نرخ بازده سرمایه (Cap rate)</small><b id="iv-o-cap" dir="ltr">—</b></div>
+              <div><small>بازده نقدی (Cash-on-cash)</small><b id="iv-o-coc" dir="ltr">—</b></div>
+            </div>
+            <p class="small muted" id="iv-o-note" style="margin-top:.8rem"></p>
+          </div>
+        </div>
+        <div class="stack" style="gap:.6rem">
+          <p class="small"><b>فقط برای نمونه.</b> تأمین مالی، هزینه‌ها، مالیات، بیمه، خالی ماندن، نگهداری و درآمد اجاره‌ی واقعی می‌تواند تفاوت زیادی داشته باشد. این ماشین‌حساب مشاوره‌ی مالی، مالیاتی یا حقوقی نیست.</p>
+          <p class="small muted">نحوه‌ی محاسبه: NOI برابر است با درآمد مؤثر اجاره منهای هزینه‌های جاری. اقساط وام با پرداخت ماهانه و ترکیب سود شش‌ماهه به روش کانادا، در مدت بازپرداخت انتخاب‌شده محاسبه می‌شود. Cap rate برابر است با NOI تقسیم بر قیمت خرید. بازده نقدی برابر است با جریان نقدی سالانه تقسیم بر پیش‌پرداخت؛ هزینه‌های بستن معامله، مالیات انتقال زمین، هزینه‌ی وکیل و تعمیرات، پول نقدی را که می‌گذارید افزایش و این عدد را کاهش می‌دهند. نتایج شامل مالیات بر درآمد، بازپرداخت اصل وام یا تغییر ارزش ملک نیست.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="band surface">
+    <div class="wrap railed">
+      <div class="rail"><span class="label">منطقه‌ی بزرگ تورنتو</span></div>
+      <div class="main">
+        <div class="head-row"><div><h2>جایی که تحلیل سرمایه‌گذاری <em>به شناخت محلی می‌رسد.</em></h2><p class="lede">تصمیم‌های سرمایه‌گذاری به‌شدت به موقعیت ملک بستگی دارند. تمرکز من بر تورنتو و منطقه‌ی یورک است؛ همان محله‌هایی که برای خریداران و فروشندگان در آن‌ها کار می‌کنم.</p></div></div>
+        <div class="two">
+          <ul class="ticks">
+            <li><span><b>تورنتو.</b> خانه‌های نیمه‌مستقل و ردیفی قدیمی‌تر، که برخی از قبل به چند واحد تقسیم شده‌اند. مالیات انتقال زمین شهرداری تورنتو به هزینه‌های بستن معامله اضافه می‌شود.</span></li>
+            <li><span><b>نورث‌یورک.</b> کریدور شلوغ کاندو در خیابان یانگ و خیابان‌هایی با خانه‌های ویلایی پس از جنگ در نزدیکی آن. پیش از برنامه‌ریزی برای اضافه کردن واحد، منطقه‌بندی را بررسی کنید.</span></li>
+            <li><span><b>تورنهیل.</b> میان دو شهر تقسیم شده؛ بنابراین نرخ مالیات ملک و قوانین شهرداری به این بستگی دارد که ملک در کدام طرف خیابان یانگ باشد.</span></li>
+            <li><span><b>ریچموند هیل.</b> ارزش ملک‌ها از محله‌ای به محله‌ی دیگر تفاوت زیادی دارد و برخی مناطق شمالی تحت قوانین برنامه‌ریزی Oak Ridges Moraine هستند.</span></li>
+            <li><span><b>وان.</b> چند بازار متمایز، به‌علاوه‌ی منطقه‌ی رو به رشد کاندو در VMC، که شرایط پیش‌فروش در آن نیاز به بررسی دقیق دارد.</span></li>
+          </ul>
+          <aside class="aside">
+            <div class="box tint"><h3>«بهترین» منطقه وجود ندارد</h3><p>هیچ‌جا به‌تنهایی بهترین مکان برای سرمایه‌گذاری نیست. انتخاب درست به بودجه، زمان‌بندی و میزان ریسکی که می‌پذیرید بستگی دارد؛ پس هر ملک بر اساس اعداد خودش تحلیل می‌شود.</p><a class="link" href="#fa-neighbourhoods">راهنمای محله‌ها <span class="ar" aria-hidden="true">←</span></a></div>
+          </aside>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="band">
+    <div class="wrap railed">
+      <div class="rail"><span class="label">شبکه‌ی متخصصان</span></div>
+      <div class="main">
+        <div class="head-row"><div><h2>سرمایه‌گذاری معمولاً <em>یک تیم می‌خواهد.</em></h2><p class="lede">یک خرید می‌تواند چند متخصص را درگیر کند که هر کدام مسئول بخشی از تصمیم‌اند.</p></div></div>
+        <div class="verify v3">
+          <div><span class="label">تأمین مالی</span><b>متخصصان وام مسکن</b><p>تأیید می‌کنند واجد شرایط چه وامی هستید، نرخ چقدر است و قوانین وام‌دهنده برای ملک اجاره‌ای چیست.</p></div>
+          <div><span class="label">مالیات</span><b>حسابداران</b><p>درباره‌ی تأثیر درآمد اجاره، هزینه‌ها و ساختار مالکیت بر مالیات شما مشاوره می‌دهند.</p></div>
+          <div><span class="label">حقوقی</span><b>وکلای املاک</b><p>سند، قراردادهای اجاره‌ی موجود، استعلام‌های منطقه‌بندی و مدارک بستن معامله را بررسی می‌کنند.</p></div>
+          <div><span class="label">اداره‌ی ملک</span><b>مدیران املاک</b><p>اگر نخواهید خودتان درگیر شوید، مستأجران، دریافت اجاره و نگهداری روزمره را مدیریت می‌کنند.</p></div>
+          <div><span class="label">وضعیت ساختمان</span><b>پیمانکاران</b><p>هزینه‌ی تعمیرات و ارتقا را برآورد می‌کنند و مشخص می‌کنند بازرسی باید به چه چیزهایی دقیق‌تر نگاه کند.</p></div>
+          <div><span class="label">خود ملک</span><b>مشاوران املاک</b><p>پیدا کردن و ارزیابی ملک، تحلیل اعداد و مذاکره برای خرید. این بخش کار من است.</p></div>
+        </div>
+        <p class="pull">می‌توانم بخش املاکِ این روند را هماهنگ کنم و در صورت نیاز، مشتریان را با متخصصان مناسب آشنا کنم.</p>
+        <p class="small muted">هر معرفی فقط یک پیشنهاد است؛ انتخاب با شماست و هر متخصص مسئول مشاوره‌ی خودش است. <mark class="tbc" data-tpl="{referral_disclosure}" data-note="referral-disclosure">Disclose any referral arrangements as RECO rules require</mark></p>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-band"><div class="wrap">
+    <div><h2>به خرید یک ملک سرمایه‌گذاری <em>فکر می‌کنید؟</em></h2><p>بیایید از اعداد، ملک و اهداف شما شروع کنیم.</p></div>
+    <div class="row"><a class="btn" href="#fa-contact" data-interest="invest" data-cta="cta-band">گفتگو با علی</a><a class="btn ghost" href="#fa-contact" data-interest="invest" data-request="analysis" data-cta="cta-band-analysis">درخواست تحلیل ملک سرمایه‌گذاری</a></div>
+  </div></section>
+</div>
+
+<div class="page" data-page="fa-about" lang="fa" dir="rtl" data-title="درباره‌ی علی بیات | مشاور املاک فارسی‌زبان تورنتو" hidden>
+  <header class="page-head split"><div class="wrap">
+    <div>
+      <nav class="crumbs" aria-label="Breadcrumb"><a href="#fa-home">خانه</a><span aria-hidden="true">/</span><span>درباره</span></nav>
+      <h1 tabindex="-1">علی بیات، مشاور املاک در تورنتو و <em>نورث‌یورک</em></h1>
+      <p class="lede">علی بیات مشاور املاک (<bdi>Salesperson</bdi> و <bdi>REALTOR®</bdi>) در Century 21 Heritage Group Ltd., Brokerage است و از سال 2016 در انتاریو مجوز فعالیت دارد. او به خریداران، فروشندگان، صاحب‌خانه‌ها و سرمایه‌گذاران در نورث‌یورک، تورنهیل، ریچموند هیل، وان و تورنتو کمک می‌کند و به دو زبان فارسی و انگلیسی کار می‌کند.</p>
+      <div class="row"><a class="btn" href="#fa-contact" data-cta="about-head">گفتگو با علی</a></div>
+    </div>
+    <div class="portrait" role="img" aria-label="Placeholder for Ali Bayat's professional portrait"><span class="frame" aria-hidden="true"></span><div class="ph"><span class="ab">AB</span><span class="dir">Portrait to come</span></div></div>
+  </div></header>
+  <section class="band">
+    <div class="wrap two">
+      <div class="stack" style="gap:0">
+        <div class="asec"><h2>به طور خلاصه</h2><div class="body">
+          <dl class="facts" style="border:0;padding:0">
+            <div><dt>محدوده‌ی کاری</dt><dd>تورنتو و منطقه‌ی یورک</dd></div>
+            <div><dt>زبان‌ها</dt><dd>فارسی، انگلیسی</dd></div>
+            <div><dt>فعالیت در املاک</dt><dd><mark class="tbc" data-tpl="از {start_year}">از [year]</mark></dd></div>
+            <div><dt>عنوان ثبت‌شده</dt><dd><mark class="tbc" data-tpl="{job_title}">Sales Representative</mark></dd></div>
+          </dl>
+        </div></div>
+        <div class="asec"><h2>داستان من</h2><div class="body">
+          <p>بیشتر مردم در یک نقطه‌ی عطف با من تماس می‌گیرند: خرید اولین خانه، بزرگ‌تر شدن خانواده، نزدیک‌تر شدن به محل کار یا پدر و مادر، یا فروش خانه‌ای که بیست سال در آن زندگی کرده‌اند. این تصمیم‌ها به حوصله و اطلاعات صادقانه نیاز دارند، نه فشار.</p>
+          <p>ده سال است که در این کار هستم، از سال 2016 با مجوز رسمی، و تقریباً همه‌ی کارم در امتداد خیابان یانگ و محله‌های اطراف آن است. این خیابان‌ها و ساختمان‌ها را می‌شناسم و می‌دانم واقعاً چه چیزی ارزش ملک را در این منطقه تعیین می‌کند.</p>
+        </div></div>
+        <div class="asec"><h2>آنچه با همکاری با من به دست می‌آورید</h2><div class="body">
+          <ul class="ticks">
+            <li><span><b>اول اعداد، بعد نظر.</b> هر قیمت، پیشنهاد و توصیه‌ای همراه با فروش‌های مشابه، هزینه‌های نگهداری و هزینه‌های بستن معامله است؛ از جمله مالیات انتقال زمین، که دو طرف خیابان استیلز تفاوت زیادی دارد.</span></li>
+            <li><span><b>همه‌ی جنبه‌های بازسازی.</b> تعمیرات، بازسازی و ارتقا: کمکتان می‌کنم بفهمید چه کاری ارزش انجام دادن دارد، چقدر باید هزینه داشته باشد و با چه کسی تماس بگیرید؛ چه خانه‌ای نیازمند تعمیر بخرید و چه برای فروش آماده شوید.</span></li>
+            <li><span><b>مذاکره‌ی دقیق.</b> قیمت مهم است، اما ودیعه، شرایط و تاریخ تحویل هم مهم‌اند. روی همه‌ی آن‌ها مذاکره می‌کنم.</span></li>
+            <li><span><b>نگاه سرمایه‌گذارانه.</b> درآمد اجاره، هزینه‌ها، وام و جریان نقدی پیش از هر تعهدی بررسی می‌شود. این تحلیل املاک است، نه مشاوره‌ی مالی.</span></li>
+            <li><span><b>دو زبان.</b> فارسی یا انگلیسی، هر کدام که راحت‌ترید؛ از اولین تماس تا روز تحویل.</span></li>
+          </ul>
+        </div></div>
+        <div class="asec"><h2>نحوه‌ی ارتباط</h2><div class="body">
+          <ul class="ticks">
+            <li><span><b>خودتان انتخاب کنید.</b> تماس یا پیامک به <a href="tel:+16477797919" dir="ltr">(647) 779-7919</a>، یا ایمیل به <a href="mailto:abayat327@gmail.com" dir="ltr">abayat327@gmail.com</a>، به فارسی یا انگلیسی.</span></li>
+            <li><span><b>به‌روزرسانی منظم.</b> در طول جستجو یا فروش، طبق برنامه‌ای که با هم توافق می‌کنیم از من خبر خواهید داشت، حتی اگر خبر تازه‌ای نباشد.</span></li>
+            <li><span><b>دلیل‌ها را می‌بینید.</b> وقتی قیمت یا استراتژی‌ای پیشنهاد می‌کنم، فروش‌های مشابه و منطق پشت آن را هم می‌بینید.</span></li>
+            <li><span><b>بدون فشار.</b> تصمیم درست مهم‌تر از تصمیم سریع است.</span></li>
+          </ul>
+        </div></div>
+        <div class="asec" id="faq" style="border-bottom:0"><h2>پرسش‌های متداول درباره‌ی علی</h2><div class="body faq" data-faq>
+          <h3>علی بیات کیست؟</h3>
+          <p>علی بیات مشاور املاک (<bdi>REALTOR®</bdi>) و Salesperson ثبت‌شده در Century 21 Heritage Group Ltd., Brokerage است که از سال 2016 در انتاریو مجوز دارد و در نورث‌یورک، تورنهیل، ریچموند هیل، وان و تورنتو فعالیت می‌کند.</p>
+          <h3>آیا علی بیات فارسی صحبت می‌کند؟</h3>
+          <p>بله. علی با مشتریان به فارسی و انگلیسی کار می‌کند و پیشنهادها، قراردادها و مذاکرات را به فارسی توضیح می‌دهد.</p>
+          <h3>علی بیات در چه مناطقی فعالیت می‌کند؟</h3>
+          <p>نورث‌یورک، تورنهیل، ریچموند هیل، وان و تورنتو، با تمرکز بر محله‌های اطراف خیابان یانگ.</p>
+          <h3>علی بیات با کدام بروکریج کار می‌کند؟</h3>
+          <p>Century 21 Heritage Group Ltd., Brokerage، به نشانی 7330 Yonge Street, Thornhill, ON L4J 7Y7.</p>
+          <h3>آیا علی در خرید ملک سرمایه‌گذاری کمک می‌کند؟</h3>
+          <p>بله. او ملک‌های درآمدزا را از نظر درآمد اجاره، هزینه‌های جاری، وام و جریان نقدی ارزیابی می‌کند. این تحلیل املاک است، نه مشاوره‌ی مالی، مالیاتی یا حقوقی.</p>
+          <h3>آیا علی در بازسازی و تعمیرات هم کمک می‌کند؟</h3>
+          <p>بله. علی به مشتریان کمک می‌کند درباره‌ی تعمیرات، بازسازی و ارتقا تصمیم بگیرند: چه کاری پیش از خرید یا فروش ارزش انجام دادن دارد، چقدر باید هزینه داشته باشد و با چه کسی تماس بگیرند.</p>
+          <h3>چطور مطمئن شوم علی بیات مجوز دارد؟</h3>
+          <p>علی در RECO ثبت شده است (شماره‌ی ثبت 4789920). مشخصات همه‌ی مشاوران املاک انتاریو در <a href="https://www.reco.on.ca" rel="noopener">فهرست عمومی RECO</a> قابل جستجوست.</p>
+          <h3>چطور با علی بیات تماس بگیرم؟</h3>
+          <p>تماس یا پیامک به <a href="tel:+16477797919" dir="ltr">(647) 779-7919</a> یا ایمیل به <a href="mailto:abayat327@gmail.com" dir="ltr">abayat327@gmail.com</a>. علی معمولاً ظرف یک روز کاری پاسخ می‌دهد.</p>
+        </div></div>
+      </div>
+      <aside class="aside">
+        <div class="box">
+          <h3>ثبت و بروکریج</h3>
+          <ul class="nolist small">
+            <li><mark class="tbc" data-tpl="{job_title}">Sales Representative</mark></li>
+            <li><mark class="tbc" data-tpl="{brokerage_name}">[Brokerage legal name], Brokerage</mark></li>
+            <li><mark class="tbc" data-tpl="RECO #{reco_number}">RECO #[000000]</mark></li>
+            <li>عضو هیئت املاک تورنتو (TRREB)</li>
+          </ul>
+        </div>
+        <div class="box tint"><h3>با هم صحبت کنیم</h3><p>بگویید چه برنامه‌ای دارید. شخصاً پاسخ می‌دهم.</p><a class="btn" href="#fa-contact" data-cta="about-aside">گفتگو با علی</a></div>
+      </aside>
+    </div>
+  </section>
+</div>
+
+<div class="page" data-page="fa-contact" lang="fa" dir="rtl" data-title="تماس با علی بیات | مشاور املاک فارسی‌زبان" hidden>
+  <header class="page-head"><div class="wrap">
+    <nav class="crumbs" aria-label="Breadcrumb"><a href="#fa-home">خانه</a><span aria-hidden="true">/</span><span>تماس</span></nav>
+    <h1 tabindex="-1">گفتگو با علی</h1>
+    <p class="lede">خرید، فروش، سرمایه‌گذاری، یا فقط بررسی گزینه‌ها؟ پیامی بفرستید؛ شخصاً و به فارسی یا انگلیسی پاسخ می‌دهم.</p>
+  </div></header>
+  <section class="band tight">
+    <div class="wrap two">
+      <div>
+        <form class="form" id="contact-form" novalidate>
+          <fieldset class="seg four"><legend>موضوع درخواست شما</legend>
+            <input type="radio" name="interest" id="i-buy" value="buy" checked><label for="i-buy">خرید</label>
+            <input type="radio" name="interest" id="i-sell" value="sell"><label for="i-sell">فروش</label>
+            <input type="radio" name="interest" id="i-invest" value="invest"><label for="i-invest">سرمایه‌گذاری</label>
+            <input type="radio" name="interest" id="i-question" value="question"><label for="i-question">یک سؤال</label>
+          </fieldset>
+          <input type="hidden" name="request" id="c-request" value="">
+          <p class="req-note" id="req-note" hidden><b>درخواست تحلیل ملک سرمایه‌گذاری.</b> نشانی یا لینک آگهی، قیمت درخواستی، اجاره‌های فعلی (اگر می‌دانید) و انتظارتان از این ملک را بنویسید.</p>
+          <div class="r2">
+            <div class="field"><label for="c-name">نام</label><input id="c-name" name="name" autocomplete="name" required aria-describedby="e-name"><span class="err" id="e-name" hidden>لطفاً نام خود را وارد کنید.</span></div>
+            <div class="field"><label for="c-phone">تلفن <span class="muted" style="font-weight:400">(اختیاری)</span></label><input id="c-phone" name="phone" type="tel" autocomplete="tel" dir="ltr"></div>
+          </div>
+          <div class="field"><label for="c-email">ایمیل</label><input id="c-email" name="email" type="email" autocomplete="email" required aria-describedby="e-email" dir="ltr"><span class="err" id="e-email" hidden>لطفاً یک نشانی ایمیل کامل وارد کنید.</span></div>
+          <div class="field"><label for="c-msg">پیام <span class="muted" style="font-weight:400">(اختیاری)</span></label><textarea id="c-msg" name="message" placeholder="محله‌ها، زمان‌بندی، بودجه یا نشانی ملک؛ هر چیزی که مفید است."></textarea></div>
+          <div class="field" style="max-width:260px"><label for="c-lang">زبان ترجیحی</label><select id="c-lang" name="language"><option value="fa" selected>فارسی</option><option value="en" lang="en">English</option></select></div>
+          <div class="field"><label class="check" for="c-consent"><input type="checkbox" id="c-consent" name="consent" value="yes" required aria-describedby="e-consent"> <span><mark class="tbc" data-approve="consent-wording-fa">علی می‌تواند از این اطلاعات برای پاسخ به این درخواست استفاده کند، طبق آنچه در سیاست حفظ حریم خصوصی آمده است.</mark> <a href="#privacy" hreflang="en">سیاست حفظ حریم خصوصی (انگلیسی)</a></span></label><span class="err" id="e-consent" hidden>لطفاً تأیید کنید تا علی بتواند پاسخ دهد.</span></div>
+          <input type="hidden" name="consent_version" value="2026-10-03-fa">
+          <input type="hidden" name="form_version" value="contact-1-fa">
+          <input type="hidden" name="source_page" value="">
+          <input type="hidden" name="source_cta" value="">
+          <input type="hidden" name="timestamp" value="">
+          <input type="hidden" name="utm_source" value=""><input type="hidden" name="utm_medium" value=""><input type="hidden" name="utm_campaign" value=""><input type="hidden" name="utm_content" value="">
+          <input type="hidden" name="referrer" value="">
+          <div class="hp" aria-hidden="true"><label for="c-website">Leave this field empty</label><input id="c-website" name="website" type="text" tabindex="-1" autocomplete="off"></div>
+          <div><button class="btn" type="submit" id="c-send" data-sending="در حال ارسال…">ارسال برای علی</button></div>
+          <p class="err" id="send-error" role="alert" tabindex="-1" hidden>متأسفانه پیام شما ارسال نشد. لطفاً چند لحظه‌ی دیگر دوباره امتحان کنید.</p>
+        </form>
+        <div class="sent" id="sent-live" hidden role="status">
+          <h3 tabindex="-1">ممنون، پیام شما ارسال شد</h3>
+          <p class="muted">علی شخصاً و به زبانی که انتخاب کرده‌اید پاسخ می‌دهد.</p>
+        </div>
+      </div>
+      <aside class="aside">
+        <div class="box" style="grid-template-columns:72px 1fr;align-items:center"><div class="portrait" style="aspect-ratio:1;border-radius:50%"><span class="ab" style="font-family:var(--display);color:var(--lake);font-size:1.6rem">AB</span></div><div><b style="font-family:var(--display);font-weight:400;font-size:1.2rem">علی بیات</b><p class="small">شخصاً پاسخ می‌دهد، <mark class="tbc" data-approve="reply-time">معمولاً ظرف یک روز کاری</mark></p></div></div>
+        <div class="box">
+          <div class="clines">
+            <div><small>تلفن / پیامک</small><span><span dir="ltr"><mark class="tbc" data-tpl="{phone_display}">(416) 000-0000</mark></span></span></div>
+            <div><small>ایمیل</small><span><span dir="ltr"><mark class="tbc" data-tpl="{email}">ali@alibayatrealty.com</mark></span></span></div>
+            <div><small>دفتر بروکریج</small><span dir="ltr" style="text-align:right"><mark class="tbc" data-tpl="{brokerage_name}\n{brokerage_address_line}">[Brokerage name], Brokerage<br>[Street address], [City], ON</mark></span></div>
+            <div><small>زبان‌ها</small><span>فارسی، انگلیسی</span></div>
+          </div>
+        </div>
+        <div class="box tint"><h3>بعد از ارسال پیام</h3><ol class="plain"><li>علی پیام شما را می‌خواند و پاسخ می‌دهد.</li><li>یک تماس کوتاه در زمانی که برایتان مناسب است هماهنگ می‌کنید.</li><li>با یک قدم بعدی روشن پیش می‌روید، بدون هیچ تعهدی.</li></ol></div>
+      </aside>
+    </div>
+  </section>
+</div>
+
 <!-- ============ LEGAL PLACEHOLDERS (text to come from Ali / brokerage; not indexed until written) ============ -->
 <div class="page" data-page="privacy" data-title="Privacy Policy | Ali Bayat" hidden>
   <header class="page-head"><div class="wrap">
@@ -1441,6 +2043,64 @@ Not used
 </footer>
 
 <div class="mbar" id="mbar" aria-hidden="true"><span>Buying, selling or investing? Ask Ali.</span><a class="btn sm" href="#contact" tabindex="-1">Talk to Ali</a></div>
+
+<template id="fa-chrome">
+<header class="site-head">
+  <div class="wrap">
+    <a class="brand" dir="ltr" href="#fa-home" aria-label="علی بیات، صفحه‌ی اصلی"><span class="mk" aria-hidden="true">AB</span><span class="wm"><b>Ali Bayat</b><small>REALTOR®</small></span></a>
+    <nav class="nav" aria-label="منوی اصلی">
+      <a href="#fa-home">خانه</a>
+      <a href="#fa-buy">خرید</a>
+      <a href="#fa-sell">فروش</a>
+      <a href="#fa-invest">سرمایه‌گذاری</a>
+      <a href="#fa-neighbourhoods">محله‌ها</a>
+      <a href="#fa-resources">منابع</a>
+      <a href="#fa-about">درباره</a>
+      <a href="#fa-contact">تماس</a>
+      <a class="lang" href="#home" lang="en" hreflang="en" data-lang-switch>English</a>
+      <a class="btn sm talk" href="#fa-contact" style="color:var(--lake-ink)">گفتگو با علی</a>
+    </nav>
+    <div class="head-actions">
+      <a class="btn sm head-talk" href="#fa-contact" style="color:var(--lake-ink)">گفتگو با علی</a>
+      <button class="menu-btn" id="menu-btn" aria-expanded="false" aria-controls="drawer" data-open="منو" data-close="بستن">منو</button>
+    </div>
+  </div>
+  <div class="drawer" id="drawer" hidden>
+    <nav class="wrap" aria-label="منوی موبایل">
+      <a href="#fa-home">خانه</a>
+      <a href="#fa-buy">خرید</a>
+      <a href="#fa-sell">فروش</a>
+      <a href="#fa-invest">سرمایه‌گذاری</a>
+      <a href="#fa-neighbourhoods">محله‌ها</a>
+      <a href="#fa-resources">منابع</a>
+      <a href="#fa-about">درباره</a>
+      <a href="#fa-contact">تماس</a>
+      <a class="minor lang" href="#home" lang="en" hreflang="en" data-lang-switch>English · انگلیسی</a>
+      <a class="btn" href="#fa-contact" style="color:var(--lake-ink)">گفتگو با علی</a>
+    </nav>
+  </div>
+</header>
+<footer>
+  <div class="wrap">
+    <div class="fgrid">
+      <div class="stack" style="gap:1rem">
+        <a class="brand" dir="ltr" href="#fa-home"><span class="mk" aria-hidden="true">AB</span><span class="wm"><b>Ali Bayat</b><small>REALTOR®</small></span></a>
+        <p class="muted" style="max-width:34ch">مشاوره‌ی املاک برای خریداران، فروشندگان و سرمایه‌گذاران در تورنتو و منطقه‌ی یورک. به فارسی و انگلیسی.</p>
+        <div class="brokerage" dir="ltr" style="text-align:right">
+          <strong><mark class="tbc" data-tpl="Ali Bayat, {job_title}">Ali Bayat, Sales Representative</mark></strong>
+          <span class="muted"><mark class="tbc" data-tpl="{brokerage_name}">[Brokerage legal name], Brokerage</mark></span>
+          <span class="muted"><mark class="tbc" data-tpl="{brokerage_address_line}{brokerage_franchise_note}">[Brokerage address] · Independently owned and operated</mark></span>
+        </div>
+      </div>
+      <div><h4>صفحات فارسی</h4><ul><li><a href="#fa-home">خانه</a></li><li><a href="#fa-buy">خرید خانه</a></li><li><a href="#fa-sell">فروش خانه</a></li><li><a href="#fa-invest">سرمایه‌گذاری</a></li><li><a href="#fa-resources">منابع آموزشی</a></li><li><a href="#fa-about">درباره‌ی علی</a></li><li><a href="#fa-contact">تماس</a></li></ul></div>
+      <div><h4>محله‌ها</h4><ul><li><a href="#fa-north-york">املاک نورث‌یورک</a></li><li><a href="#fa-thornhill">املاک تورنهیل</a></li><li><a href="#fa-richmond-hill">املاک ریچموند هیل</a></li><li><a href="#fa-vaughan">املاک وان</a></li><li><a href="#fa-toronto">املاک تورنتو</a></li></ul></div>
+      <div><h4>تماس</h4><ul><li><span dir="ltr"><mark class="tbc" data-tpl="{phone_display}">(416) 000-0000</mark></span></li><li><span dir="ltr"><mark class="tbc" data-tpl="{email}">ali@alibayatrealty.com</mark></span></li></ul></div>
+    </div>
+    <div data-legal-from-en></div>
+  </div>
+</footer>
+<div class="mbar" id="mbar" aria-hidden="true"><span>سؤالی درباره‌ی خرید، فروش یا سرمایه‌گذاری دارید؟</span><a class="btn sm" href="#fa-contact" tabindex="-1">گفتگو با علی</a></div>
+</template>
 
 <script>
 (function(){
@@ -1634,8 +2294,65 @@ function renderArea(a){
     </aside>
   </div>`}
 
+
+/* ---------- Farsi neighbourhood guides (same facts as AREAS, written in Persian) ---------- */
+const AREAS_FA={"north-york": {"name": "نورث‌یورک", "region": "شهر تورنتو", "where": "یانگ و شپرد", "tagline": "برج‌های کاندو در امتداد خیابان یانگ و خیابان‌های آرام مسکونی چند بلوک آن‌طرف‌تر.", "facts": [["شهرداری", "شهر تورنتو"], ["محور اصلی", "خیابان یانگ"], ["مترو", "خطوط ۱ و ۴"], ["هیئت‌های آموزشی", "TDSB و TCDSB"]], "overview": ["نورث‌یورک تا سال ۱۹۹۸ شهری مستقل بود و بعد بخشی از تورنتو شد. امروز بخش بزرگی از شمال شهر را در بر می‌گیرد؛ از محله‌های خانوادگیِ جاافتاده تا یکی از شلوغ‌ترین کریدورهای کاندو در منطقه‌ی بزرگ تورنتو در امتداد خیابان یانگ.", "چون نورث‌یورک بخشی از شهر تورنتو است، خریداران این منطقه علاوه بر مالیات استانی، مالیات انتقال زمین شهرداری تورنتو را هم می‌پردازند. این نکته هنگام مقایسه‌ی نورث‌یورک با محله‌های منطقه‌ی یورک، درست شمال خیابان استیلز، اهمیت دارد."], "housing": "کاندوهای بلندمرتبه در اطراف North York Centre، Sheppard-Yonge و Finch متمرکزند. چند بلوک دورتر از یانگ، در بسیاری از خیابان‌ها خانه‌های ویلایی یک‌طبقه‌ی پس از جنگ در کنار خانه‌های نوساز سفارشی قرار دارند و تاون‌هاوس‌ها و کاندوهای کم‌ارتفاع هم در این میان دیده می‌شوند.", "lifestyle": "خیابان یانگ پر از رستوران و مغازه‌های متنوع است، از جمله کسب‌وکارهای ایرانی فراوان در شمال شپرد. میدان Mel Lastman میزبان رویدادهای محلی است و مراکز خرید Yorkdale و Fairview با ماشین فاصله‌ی کمی دارند.", "transit": ["خط ۱ مترو (Yonge–University): ایستگاه‌های North York Centre، Sheppard-Yonge و Finch", "خط ۴ شپرد به سمت شرق از ایستگاه Sheppard-Yonge", "نزدیکی به بزرگراه 401 و Don Valley Parkway"], "schools": "مدارس دولتی زیر نظر Toronto District School Board و مدارس کاتولیک زیر نظر Toronto Catholic District School Board هستند. محدوده‌ی مدارس ممکن است تغییر کند؛ برای هر نشانی، آن را از خود هیئت آموزشی استعلام کنید.", "amenities": ["میدان Mel Lastman و North York Civic Centre", "پارک Earl Bales و مسیرهای West Don", "کتابخانه‌ی مرکزی نورث‌یورک", "مراکز خرید Yorkdale و Fairview"], "buyer": ["عرضه‌ی کاندو زیاد است؛ شارژ ساختمان، صندوق ذخیره و نسبت واحدهای اجاره‌ای را با دقت مقایسه کنید", "مالیات انتقال زمین شهرداری تورنتو را در بودجه‌تان در نظر بگیرید", "زمین‌های خانه‌های ویلایی قدیمی ممکن است برای بازسازی یا ساخت دوباره مناسب باشند؛ اول منطقه‌بندی را بررسی کنید"], "seller": ["رقبای شما ممکن است واحدهای مشابه در همان ساختمان باشند؛ پس نحوه‌ی ارائه و قیمت‌گذاری مهم است", "خانه‌های مستقل روی زمین‌های بزرگ‌تر اغلب علاوه بر خانواده‌ها، سازنده‌ها را هم جذب می‌کنند", "فاصله‌ی پیاده تا ایستگاه مترو یک امتیاز واقعی فروش است؛ آن را برجسته کنید"], "investor": ["پیش از حساب کردن روی درآمد اجاره‌ی کاندو، قوانین ساختمان درباره‌ی اجاره، شارژ ماهانه و صندوق ذخیره را بررسی کنید", "مالیات انتقال زمین شهرداری تورنتو به هزینه‌ی خرید و پول نقدی که می‌گذارید اضافه می‌شود", "در خیابان‌های کم‌تراکم، پیش از حساب کردن روی واحدهای اضافه، از شهرداری بپرسید منطقه‌بندی چه اجازه‌ای می‌دهد"]}, "thornhill": {"name": "تورنهیل", "region": "وان و مارکهام، منطقه‌ی یورک", "where": "یانگ و سنتر", "tagline": "محله‌ای جاافتاده درست شمال تورنتو که میان دو شهر تقسیم شده است.", "facts": [["شهرداری", "وان و مارکهام"], ["محورهای اصلی", "یانگ، باترست، سنتر"], ["حمل‌ونقل", "YRT/Viva، نزدیک به خط ۱"], ["هیئت‌های آموزشی", "YRDSB و YCDSB"]], "overview": ["تورنهیل درست شمال خیابان استیلز قرار دارد، که مرز تورنتو و منطقه‌ی یورک است. تورنهیل به‌تنهایی یک شهرداری نیست: بخش غرب خیابان یانگ جزو شهر وان و بخش شرق آن جزو مارکهام است، و این روی نرخ مالیات ملک و خدمات شهری اثر می‌گذارد.", "تورنهیل میان خانواده‌هایی محبوب است که محله‌های جاافتاده و دسترسی سریع به تورنتو می‌خواهند، بدون مالیات انتقال زمین شهرداری تورنتو."], "housing": "محدوده‌ی تاریخی دهکده در نزدیکی یانگ و سنتر برخی از قدیمی‌ترین خانه‌های منطقه را دارد. بیشتر بخش‌های دیگر خانه‌های مستقل و نیمه‌مستقل دهه‌های ۷۰ تا ۹۰ میلادی هستند، با کاندوها و تاون‌هاوس‌های جدیدتر در امتداد یانگ، باترست و خیابان سنتر.", "lifestyle": "درختان کهنسال، دره‌ها و پارک‌ها، با خرید در Promenade و در امتداد یانگ. مراکز محلی و عبادتگاه‌ها به جمعیتی متنوع خدمت می‌کنند.", "transit": ["حمل‌ونقل York Region Transit و Viva در یانگ و بزرگراه 7", "ایستگاه Finch در خط ۱ مترو با کمی فاصله در جنوب", "توسعه‌ی خط مترو یانگ به سمت شمال برای این منطقه برنامه‌ریزی شده است؛ زمان‌بندی فعلی را از Metrolinx بپرسید", "نزدیکی به بزرگراه‌های 407، 404 و 400"], "schools": "مدارس زیر نظر York Region District School Board و York Catholic District School Board هستند. محدوده‌ی مدارس از خیابانی به خیابان دیگر فرق می‌کند؛ از هیئت آموزشی استعلام کنید.", "amenities": ["محدوده‌ی تاریخی Thornhill Village", "مرکز خرید Promenade", "پارک Pomona Mills و مسیرهای رود Don", "مرکز محلی Thornhill Community Centre"], "buyer": ["بررسی کنید نشانی در وان است یا مارکهام؛ نرخ مالیات و خدمات فرق دارد", "ساخت‌وساز مترو ممکن است تا مدتی برخی خیابان‌های نزدیک یانگ را تحت تأثیر قرار دهد", "خانه‌های قدیمی‌تر ممکن است به نوسازی نیاز داشته باشند؛ برای آنچه بازرسی نشان می‌دهد بودجه کنار بگذارید"], "seller": ["خریدارانی که از تورنتو به شمال می‌آیند مخاطب مهمی هستند؛ رفت‌وآمد و صرفه‌جویی مالیاتی را برجسته کنید", "آشپزخانه و حمام به‌روزشده در محله‌هایی با خانه‌های هم‌سن، شما را متمایز می‌کند", "خانه‌های محدوده‌ی تاریخی ممکن است قوانینی داشته باشند که باید اعلام شود"], "investor": ["نرخ مالیات ملک و قوانین شهرداری در دو طرف وان و مارکهام فرق دارد؛ در محاسبه‌هایتان از شهرداری واقعی ملک استفاده کنید", "قوانین واحد دوم را هر شهر جداگانه تعیین می‌کند؛ مجاز بودن آن را برای همان نشانی بررسی کنید", "حمل‌ونقل برنامه‌ریزی‌شده می‌تواند بر تقاضا اثر بگذارد، اما زمان‌بندی‌اش تضمین‌شده نیست؛ بازده‌تان را بر آن بنا نکنید"]}, "richmond-hill": {"name": "ریچموند هیل", "region": "منطقه‌ی یورک", "where": "یانگ و میجر مکنزی", "tagline": "محله‌های جاافتاده، شهرک‌های جدیدتر و فضای سبز در شمال.", "facts": [["شهرداری", "شهر ریچموند هیل"], ["محور اصلی", "خیابان یانگ"], ["حمل‌ونقل", "Viva و قطار GO"], ["هیئت‌های آموزشی", "YRDSB و YCDSB"]], "overview": ["ریچموند هیل در امتداد خیابان یانگ از بزرگراه 7 تا فراتر از دریاچه‌ی Wilcox به سمت شمال کشیده شده است. این شهر ترکیبی از مرکز قدیمی، محله‌های خانوادگیِ جاافتاده و شهرک‌های جدیدتر به سمت Oak Ridges است.", "این شهر جامعه‌ی ایرانی بزرگی دارد و کسب‌وکارهای ایرانی زیادی در امتداد خیابان یانگ فعال‌اند."], "housing": "بیشتر خانه‌های مستقل و نیمه‌مستقل، با تاون‌هاوس‌ها و کاندوهای متمرکز در امتداد یانگ و بزرگراه 7. اندازه‌ی زمین و سن خانه‌ها از محله‌ای به محله‌ی دیگر تفاوت زیادی دارد.", "lifestyle": "دریاچه‌ها و مسیرهای طبیعی در شمال، محدوده‌ی Mill Pond در نزدیکی مرکز قدیمی، و رستوران‌ها و مغازه‌های متنوع در امتداد یانگ.", "transit": ["خط Viva Blue در یانگ و Viva Pink در امتداد بزرگراه 7", "خط قطار GO ریچموند هیل با ایستگاه‌های Langstaff، Richmond Hill و Gormley", "نزدیکی به بزرگراه‌های 404 و 407", "توسعه‌ی خط مترو یانگ به سمت Richmond Hill Centre برنامه‌ریزی شده است"], "schools": "مدارس زیر نظر York Region District School Board و York Catholic District School Board هستند. محدوده و برنامه‌های مدارس را برای هر نشانی از هیئت آموزشی استعلام کنید.", "amenities": ["مرکز ورزشی و پارک Richmond Green", "دریاچه‌ی Wilcox و مسیرهای Oak Ridges Moraine", "پارک Mill Pond", "مرکز هنرهای نمایشی ریچموند هیل"], "buyer": ["در همان محله مقایسه کنید؛ سن خانه‌ها و اندازه‌ی زمین تفاوت زیادی دارد", "دسترسی به GO و Viva را با برنامه‌ی روزانه‌تان بسنجید", "برخی مناطق شمالی تحت قوانین برنامه‌ریزی Oak Ridges Moraine هستند"], "seller": ["خریداران خانواده‌دار به محدوده‌ی مدارس و پارک‌های نزدیک توجه زیادی دارند", "دسترسی به حمل‌ونقل در نزدیکی یانگ و بزرگراه 7 ارزش برجسته کردن دارد", "بر اساس فروش‌های مشابه محله‌ی خودتان قیمت‌گذاری کنید، نه میانگین کل شهر"], "investor": ["اجاره و ارزش ملک از محله‌ای به محله‌ی دیگر خیلی فرق دارد؛ برآورد درآمد را بر اجاره‌های مشابه نزدیک بنا کنید", "برخی مناطق شمالی تحت قوانین Oak Ridges Moraine هستند که ممکن است اضافه‌سازی را محدود کند", "پیش از حساب کردن روی اجاره‌ی واحد زیرزمین، بررسی کنید ثبت‌شده یا قانونی است"]}, "vaughan": {"name": "وان", "region": "منطقه‌ی یورک", "where": "بزرگراه 7 و جین", "tagline": "محله‌های جاافتاده و یک مرکز شهر جدید که پیرامون مترو ساخته شده است.", "facts": [["شهرداری", "شهر وان"], ["محله‌ها", "وودبریج، میپل، کلاینبرگ، کنکورد"], ["مترو", "خط ۱ تا VMC"], ["هیئت‌های آموزشی", "YRDSB و YCDSB"]], "overview": ["وان از چند محله‌ی متمایز تشکیل شده است، از جمله وودبریج، میپل، کلاینبرگ، کنکورد و نیمه‌ی غربی تورنهیل، که هر کدام حال‌وهوای خودشان را دارند.", "مرکز شهر جدیدتر وان، Vaughan Metropolitan Centre (VMC)، در اطراف بزرگراه 7 و خیابان جین قرار دارد؛ با کاندوهای بلندمرتبه و ایستگاه خط ۱ مترو، که وان را مستقیماً با ریل به تورنتو وصل می‌کند."], "housing": "بیشتر خانه‌های مستقل خانوادگی در شهرک‌های جاافتاده، ملک‌های بزرگ‌تر در مناطقی مثل کلاینبرگ، تاون‌هاوس در سراسر شهر، و بازار رو به رشد کاندو در اطراف VMC.", "lifestyle": "محله‌های حومه‌ای، مرکزهای قدیمی دهکده‌ها و جاذبه‌های بزرگ، با امکانات فراوان خرید و رستوران.", "transit": ["خط ۱ مترو تا Vaughan Metropolitan Centre", "خط Viva Orange در امتداد بزرگراه 7", "خط قطار GO بری، با ایستگاه‌هایی از جمله Maple و Rutherford", "نزدیکی به بزرگراه‌های 400، 407 و 427"], "schools": "مدارس زیر نظر York Region District School Board و York Catholic District School Board هستند. محدوده‌ی مدارس را از هیئت آموزشی استعلام کنید.", "amenities": ["مرکز خرید Vaughan Mills", "پارک تفریحی Canada's Wonderland", "مجموعه‌ی هنری McMichael در کلاینبرگ", "منطقه‌ی حفاظت‌شده‌ی Boyd و مسیرهای رود Humber"], "buyer": ["در هر محله مقایسه کنید، نه با کل وان", "خریداران پیش‌فروش نزدیک VMC باید قوانین واگذاری (Assignment)، هزینه‌های دوره‌ی سکونت پیش از تحویل (Occupancy fees) و تسویه‌های روز تحویل را با دقت بررسی کنند", "اگر با ماشین رفت‌وآمد می‌کنید، مسیرتان را در ساعت شلوغی امتحان کنید"], "seller": ["خریداران اغلب خانه‌ی شما را با نوسازها مقایسه می‌کنند؛ پس وضعیت و به‌روزرسانی‌ها مهم است", "نزدیکی به مترو یا ایستگاه GO امتیاز فروش مهمی است", "زمین‌های بزرگ‌تر، مثل کلاینبرگ، خریداران خاصی دارند و فروش‌های مشابه را باید با دقت انتخاب کرد"], "investor": ["کاندوهای پیش‌فروش نزدیک VMC شامل ودیعه، هزینه‌های دوره‌ی سکونت و قوانین واگذاری هستند که پیش از تحویل بر جریان نقدی اثر می‌گذارند", "اجاره‌ها را در همان محله‌ی مشخص مقایسه کنید، نه کل وان", "عرضه‌ی جدید کاندو در اطراف می‌تواند بر اجاره‌ی قابل دستیابی و فروش مجدد اثر بگذارد؛ پروژه‌های در دست ساخت را بررسی کنید"]}, "toronto": {"name": "تورنتو", "region": "شهر تورنتو", "where": "مرکز شهر و میدتاون", "tagline": "خانه‌های ویکتوریایی نیمه‌مستقل، خیابان‌های خانوادگی میدتاون و کاندوهای مرکز شهر.", "facts": [["شهرداری", "شهر تورنتو"], ["ترکیب مسکن", "کاندو، نیمه‌مستقل، ردیفی"], ["حمل‌ونقل", "TTC، GO، UP Express"], ["هیئت‌های آموزشی", "TDSB و TCDSB"]], "overview": ["هسته‌ی قدیمی تورنتو برخی از شناخته‌شده‌ترین خانه‌های کانادا را دارد: خانه‌های نیمه‌مستقل و ردیفی ویکتوریایی و ادواردی، نماهای Bay-and-gable و خیابان‌های اصلی پیاده‌محور. در مرکز شهر و در امتداد خطوط مترو، کاندوها بخش بزرگی از بازار هستند.", "مانند نورث‌یورک، خریداران در شهر تورنتو هم مالیات انتقال زمین استانی و هم شهرداری را می‌پردازند."], "housing": "کاندو در مرکز شهر و در امتداد خطوط حمل‌ونقل؛ خانه‌های نیمه‌مستقل و ردیفی در محله‌های قدیمی‌تر؛ خانه‌های مستقل در بخش بزرگی از میدتاون.", "lifestyle": "محله‌های پیاده‌محور، پارک‌ها و دره‌ها، و دسترسی آسان به رستوران‌ها، فرهنگ و محل کار.", "transit": ["شبکه‌ی مترو، تراموا و اتوبوس TTC", "قطار GO و UP Express از ایستگاه Union", "بزرگراه Gardiner و Don Valley Parkway"], "schools": "مدارس زیر نظر Toronto District School Board و Toronto Catholic District School Board هستند و هیئت‌های آموزشی فرانسوی‌زبان هم وجود دارند. محدوده‌ی مدارس را از هیئت آموزشی استعلام کنید.", "amenities": ["مسیرهای کنار دریاچه و جزایر تورنتو", "High Park و شبکه‌ی دره‌ها", "بیمارستان‌ها، دانشگاه‌ها و مراکز فرهنگی بزرگ", "خیابان‌های اصلی و بازارهای محله‌ها"], "buyer": ["هم مالیات انتقال زمین استانی و هم شهرداری را در بودجه بگذارید", "خانه‌های قدیمی‌تر ممکن است به نوسازی سیم‌کشی یا موارد دیگر نیاز داشته باشند؛ با دقت بازرسی کنید", "برای کاندو، Status Certificate و گزارش صندوق ذخیره را بررسی کنید"], "seller": ["خریداران اغلب در یک هفته چند خانه‌ی مشابه می‌بینند؛ آماده‌سازی مهم است", "پارکینگ، به‌روزرسانی‌ها و وضعیت زیرزمین را روشن ارائه کنید", "زمان‌بندی و استراتژی پیشنهادها را بر اساس فعالیت فعلی محله تعیین کنید"], "investor": ["بسیاری از خانه‌های نیمه‌مستقل و ردیفی قدیمی به چند واحد تقسیم شده‌اند؛ پیش از حساب کردن روی اجاره‌ی هر واحد، وضعیت قانونی آن را از شهرداری استعلام کنید", "مالیات انتقال زمین استانی و شهرداری را در پول نقدی که می‌گذارید منظور کنید", "ساختمان‌های قدیمی‌تر ممکن است هزینه‌ی نگهداری و بیمه‌ی بالاتری داشته باشند؛ در مرحله‌ی بررسی، استعلام قیمت بگیرید"]}};
+const TYPES_FA={bay:"نیمه‌مستقل Bay-and-gable",bungalow:"ویلایی یک‌طبقه‌ی پس از جنگ",tower:"برج کاندو",detached:"خانه‌ی مستقل دوطبقه",cottage:"کلبه به سبک انتاریو",town:"ردیف تاون‌هاوس"};
+function renderAreaFa(a){
+  const f=AREAS_FA[a.slug],ar='<span class="ar" aria-hidden="true">←</span>';
+  const ul=arr=>`<ul class="ticks">${arr.map(x=>`<li><span>${x}</span></li>`).join("")}</ul>`;
+  const others=AREAS.filter(x=>x.slug!==a.slug);
+  const secs=[["fa-ov","نگاه کلی"],["fa-life","سبک زندگی"],["fa-housing","مسکن"],["fa-transit","رفت‌وآمد"],["fa-amen","امکانات و مدارس"],["fa-advice","خریداران و فروشندگان"],["fa-inv","سرمایه‌گذاران"],["fa-guides","راهنماهای مرتبط"]];
+  return `<header class="a-head"><div class="wrap">
+    <div>
+      <nav class="crumbs" aria-label="Breadcrumb"><a href="#fa-home">خانه</a><span aria-hidden="true">/</span><a href="#fa-neighbourhoods">محله‌ها</a><span aria-hidden="true">/</span><span>${f.name}</span></nav>
+      <span class="eyebrow">${f.region} · ${f.where}</span>
+      <h1 tabindex="-1">املاک ${f.name}</h1>
+      <p class="lede">${f.tagline}</p>
+      <div class="row"><a class="btn" href="#fa-contact" data-cta="area-head">گفتگو با علی درباره‌ی ${f.name}</a></div>
+    </div>
+    <div class="dwg" data-dwg="${a.hero}" data-ttl="${TYPES_FA[a.hero]}" data-no="${f.name}"><span class="grid-bg"></span></div>
+  </div>
+  <div class="wrap"><dl class="facts" style="margin-top:2rem;border-top:1px solid var(--line)">${f.facts.map(([k,v])=>`<div><dt>${k}</dt><dd>${v}</dd></div>`).join("")}</dl></div>
+  <nav class="jump" aria-label="در این صفحه"><div class="wrap">${secs.map(([id,t])=>`<button type="button" data-jump="${id}">${t}</button>`).join("")}</div></nav>
+  </header>
+  <div class="wrap two" style="padding-block:1rem 4rem">
+    <div>
+      <section class="asec" id="fa-ov"><h2>نگاه کلی</h2><div class="body">${f.overview.map(x=>`<p>${x}</p>`).join("")}</div></section>
+      <section class="asec" id="fa-life"><h2>سبک زندگی</h2><div class="body"><p>${f.lifestyle}</p></div></section>
+      <section class="asec" id="fa-housing"><h2>مسکن</h2><div class="body"><p>${f.housing}</p><div class="types">${a.types.map(t=>`<figure><div class="dwg" data-dwg="${t}"></div><figcaption>${TYPES_FA[t]}</figcaption></figure>`).join("")}</div></div></section>
+      <section class="asec" id="fa-transit"><h2>رفت‌وآمد</h2><div class="body">${ul(f.transit)}</div></section>
+      <section class="asec" id="fa-amen"><h2>امکانات و مدارس</h2><div class="body">${ul(f.amenities)}<p class="small muted">${f.schools}</p></div></section>
+      <section class="asec" id="fa-advice"><h2>خریداران و فروشندگان</h2><div class="body"><div class="bs"><div class="box"><h3>اگر می‌خرید</h3>${ul(f.buyer)}<a class="link" href="#fa-buy">مراحل خرید ${ar}</a></div><div class="box"><h3>اگر می‌فروشید</h3>${ul(f.seller)}<a class="link" href="#fa-sell">مراحل فروش ${ar}</a></div></div></div></section>
+      <section class="asec" id="fa-inv"><h2>سرمایه‌گذاران</h2><div class="body"><p>نکته‌های مخصوص ملک‌های درآمدزا در ${f.name}. این‌ها پرسش‌هایی برای بررسی‌اند، نه پیش‌بینی.</p>${ul(f.investor)}<a class="link" href="#fa-invest">تحلیل ملک سرمایه‌گذاری چطور انجام می‌شود ${ar}</a></div></section>
+      <section class="asec" id="fa-guides" style="border-bottom:0"><h2>راهنماهای مرتبط</h2><div class="body"><ul class="ticks"><li><span><a class="link" href="#fa-guide-land-transfer-tax">مالیات انتقال زمین در تورنتو و منطقه‌ی یورک</a>: ${a.region==="City of Toronto"?`خریداران در ${f.name} هم مالیات استانی و هم مالیات شهرداری را می‌پردازند.`:`خریداران در ${f.name} فقط مالیات استانی را می‌پردازند.`}</span></li><li><span><a class="link" href="#fa-neighbourhoods">مقایسه‌ی همه‌ی محله‌ها</a></span></li></ul></div></section>
+    </div>
+    <aside class="aside" style="padding-top:2.25rem">
+      <div class="box tint"><h3>به ${f.name} فکر می‌کنید؟</h3><p>می‌توانم فروش‌های اخیر، اینکه بودجه‌تان اینجا چه چیزی می‌خرد، یا ارزش احتمالی فروش خانه‌تان را برایتان توضیح دهم.</p><a class="btn" href="#fa-contact" data-cta="area-sidebar">گفتگو با علی</a></div>
+      <div class="box"><h3>محله‌های دیگر</h3><ul class="nolist small">${others.map(o=>`<li><a class="link" href="#fa-${o.slug}">${AREAS_FA[o.slug].name} ${ar}</a></li>`).join("")}</ul></div>
+    </aside>
+  </div>`}
+
 /* ---------- Buy / Sell processes ---------- */
 const PROC={
+ "fa-buy":[
+  ["آمادگی",[["goals","شناخت اهداف شما","درباره‌ی آنچه نیاز دارید، کجا و چرا صحبت می‌کنیم: فضا، رفت‌وآمد، مدرسه، و اینکه چند سال قصد دارید در آن خانه بمانید.","چه چیزی باعث می‌شود پنج سال بعد از این خرید پشیمان شوید؟"],
+    ["budget","بودجه و تأمین مالی","یک هزینه‌ی ماهانه‌ی راحت را محاسبه می‌کنیم، با احتساب مالیات، شارژ ساختمان و هزینه‌های بستن معامله. پیشنهاد می‌کنم زود با یک متخصص وام مسکن صحبت کنید تا بودجه‌تان بر پایه‌ی یک پیش‌تأیید واقعی باشد.","نرخ پیش‌تأیید وام شما تضمین شده است؟ تا چه مدت؟"]]],
+  ["جستجو",[["research","بررسی بازار","پیش از بازدید، فروش‌های اخیر در محله‌های مورد نظرتان را می‌بینید: محدوده‌ی قیمت‌ها، سرعت فروش خانه‌ها و معنای آن برای زمان‌بندی شما.",""],
+    ["search","جستجوی ملک","آگهی‌هایی متناسب با معیارهای شما دریافت می‌کنید، از جمله آگهی‌های تازه به محض انتشار. چند خانه‌ی مناسب بهتر از یک فهرست طولانی از «شاید»هاست.",""],
+    ["evaluate","ارزیابی ملک","برای هر گزینه‌ی جدی، فروش‌های مشابه، وضعیت ساختمان، هزینه‌ی احتمالی تعمیرات و در مورد کاندو، Status Certificate و صندوق ذخیره را بررسی می‌کنیم. آنچه می‌بینم را صادقانه می‌گویم، خوب و بد.","هزینه‌ی ماهانه‌ی مالکیت و نگهداری این خانه چقدر خواهد بود؟"]]],
+  ["پیشنهاد",[["offer","استراتژی پیشنهاد خرید","قیمت، ودیعه، شرایط و تاریخ تحویل را متناسب با همین خانه و میزان رقابت تعیین می‌کنیم؛ از جمله اینکه با روز پیشنهادها (Offer Date) یا پیشنهادهای چندگانه چطور برخورد کنیم.",""],
+    ["negotiate","مذاکره","در چارچوب سقفی که با هم توافق کرده‌ایم از طرف شما مذاکره می‌کنم. شرایط و زمان‌بندی می‌توانند به اندازه‌ی قیمت مهم باشند.",""]]],
+  ["تحویل",[["close","هماهنگی تا روز تحویل","با وکیل، وام‌دهنده، بازرس و مشاور طرف مقابل کار می‌کنم تا شرایط، مهلت‌ها و مدارک سر وقت انجام شوند، و بعد از نقل‌مکان هم در ارتباط می‌مانم.",""]]]],
+ "fa-sell":[
+  ["برنامه‌ریزی",[["analysis","تحلیل بازار","فروش‌های مشابه اخیر، ملک‌های در حال فروش و ملک‌هایی که فروش نرفته‌اند را بررسی می‌کنم. این نشان می‌دهد خریداران اطراف شما همین حالا چطور رفتار می‌کنند.",""],
+    ["pricing","استراتژی قیمت‌گذاری","قیمت و روش را با هم انتخاب می‌کنیم؛ مثلاً قیمت‌گذاری مطابق بازار یا تعیین روز پیشنهادها (Offer Date). فروش‌های مشابهی را که پشتوانه‌ی پیشنهاد من است می‌بینید.","برای اینکه قدم بعدی‌تان عملی باشد، مبلغ خالص فروش باید چقدر باشد؟"]]],
+  ["آماده‌سازی",[["prep","آماده‌سازی ملک","یک بازدید با فهرستی عملی: چه چیزی ارزش تعمیر دارد، چه چیزی را باید رها کرد و چه چیزی فقط تمیزکاری و چیدمان می‌خواهد. اگر به استادکار نیاز داشته باشید، افرادی را معرفی می‌کنم.",""],
+    ["marketing","بازاریابی","عکاسی حرفه‌ای، توضیحات روشن، نمایش در MLS® و تبلیغات آنلاین برای خریدارانی که به احتمال زیاد به خانه‌ی شما علاقه دارند.",""]]],
+  ["عرضه",[["launch","شروع فروش","تاریخ عرضه را انتخاب می‌کنیم و هفته‌ی اول را با دقت برنامه‌ریزی می‌کنیم، چون معمولاً بیشترین علاقه‌ی خریداران در همین هفته است.",""],
+    ["showings","برنامه‌ی بازدیدها","زمان‌های بازدید متناسب با خانواده‌ی شما، دسترسی امن، و انتقال سریع بازخورد مشاوران خریدار به شما.",""]]],
+  ["تحویل",[["negotiate","مذاکره","پیشنهادها را از نظر قیمت، ودیعه، شرایط و تاریخ تحویل مقایسه می‌کنیم و هر کدام را برایتان توضیح می‌دهم تا با تصویر کامل تصمیم بگیرید.",""],
+    ["transaction","مدیریت معامله","شرایط، مهلت‌ها، مدارک و ارتباط با وکیل شما مدیریت می‌شود تا روز تحویل طبق برنامه پیش برود.",""]]]],
  buy:[
   ["Prepare",[["goals","Understanding your goals","We talk through what you need, where, and why: space, commute, schools, and how long you plan to stay.","What would make you regret this purchase in five years?"],
     ["budget","Budget and financing","We work out a comfortable monthly cost including taxes, fees and closing costs. I'll suggest speaking with a mortgage professional early so your budget rests on a real pre-approval.","Is your pre-approval rate held, and for how long?"]]],
@@ -1726,7 +2443,8 @@ function calc(){
   document.getElementById("o-onr-row").hidden=!first;document.getElementById("o-onr").textContent="−"+fmt(reb);
   document.getElementById("o-to-row").hidden=!inTO;document.getElementById("o-to").textContent=fmt(to);
   document.getElementById("o-total").textContent=fmt(on-reb+to);
-  document.getElementById("o-note").textContent=inTO&&first?"Toronto's first-time buyer rebate may lower this further; it isn't included here. Your lawyer will confirm.":inTO?"Buying the same home in York Region would save the municipal tax shown above.":"No municipal land transfer tax outside the City of Toronto."}
+  const FA=document.documentElement.lang==="fa";
+  document.getElementById("o-note").textContent=inTO&&first?(FA?"بازپرداخت ویژه‌ی خریداران خانه‌ی اول تورنتو ممکن است این مبلغ را باز هم کاهش دهد؛ در این محاسبه منظور نشده است. وکیل شما مبلغ نهایی را تأیید می‌کند.":"Toronto's first-time buyer rebate may lower this further; it isn't included here. Your lawyer will confirm."):inTO?(FA?"خرید همین خانه در منطقه‌ی یورک، مالیات شهرداری نمایش‌داده‌شده در بالا را صرفه‌جویی می‌کند.":"Buying the same home in York Region would save the municipal tax shown above."):(FA?"خارج از شهر تورنتو، مالیات انتقال زمین شهرداری وجود ندارد.":"No municipal land transfer tax outside the City of Toronto.")}
 const pr=document.getElementById("lt-price");
 if(pr){pr.addEventListener("input",calc);
 pr.addEventListener("blur",()=>{const v=parseFloat(pr.value.replace(/[^0-9.]/g,""));if(v)pr.value=Math.round(v).toLocaleString("en-CA")});
@@ -1754,9 +2472,10 @@ function invCalc(){
   set("iv-o-debt",debt?"−"+fmt(debt):fmt(0));set("iv-o-cf",fmtS(cf),cf<0);
   set("iv-o-cap",price>0?pctF(noi/price*100):"—",noi<0);
   set("iv-o-coc",cash>0?pctF(cf/cash*100):"—",cf<0);
-  document.getElementById("iv-o-note").textContent=!price||!gross?"Enter a purchase price and rental income to see an estimate."
-    :cf<0?`At these assumptions the property would need about ${fmt(Math.abs(cf)/12)} a month from you on top of the rent. Some investors accept that in exchange for potential appreciation and mortgage paydown, but neither is guaranteed.`
-    :`Positive at these assumptions, about ${fmt(cf/12)} a month before income tax. Try a higher interest rate, vacancy or maintenance figure to see how much room there is.`}
+  const FA=document.documentElement.lang==="fa"||!!document.getElementById("iv-price").closest('[lang="fa"]');
+  document.getElementById("iv-o-note").textContent=!price||!gross?(FA?"برای دیدن برآورد، قیمت خرید و درآمد اجاره را وارد کنید.":"Enter a purchase price and rental income to see an estimate.")
+    :cf<0?(FA?`با این فرض‌ها، این ملک ماهانه حدود ${fmt(Math.abs(cf)/12)} علاوه بر اجاره از جیب شما هزینه می‌خواهد. برخی سرمایه‌گذاران این را در ازای رشد احتمالی ارزش ملک و بازپرداخت اصل وام می‌پذیرند، اما هیچ‌کدام تضمین‌شده نیست.`:`At these assumptions the property would need about ${fmt(Math.abs(cf)/12)} a month from you on top of the rent. Some investors accept that in exchange for potential appreciation and mortgage paydown, but neither is guaranteed.`)
+    :(FA?`با این فرض‌ها مثبت است: حدود ${fmt(cf/12)} در ماه، پیش از مالیات بر درآمد. نرخ بهره، خالی ماندن یا هزینه‌ی نگهداری بالاتری را امتحان کنید تا ببینید چقدر حاشیه دارید.`:`Positive at these assumptions, about ${fmt(cf/12)} a month before income tax. Try a higher interest rate, vacancy or maintenance figure to see how much room there is.`)}
 window.__inv={mortgageAnnual,invCalc};
 document.querySelectorAll("[data-iv]").forEach(el=>{
   el.addEventListener(el.tagName==="SELECT"?"change":"input",invCalc);
@@ -1766,17 +2485,27 @@ document.querySelectorAll("[data-iv]").forEach(el=>{
 /* ---------- Routes: one source of truth for URLs, titles, descriptions, H1s and indexing ---------- */
 /* Used by the prototype router, the internal SEO table and build.py (static, crawlable pages). */
 const ROUTES=[
- {key:"home",ct:"home",cat:"general",geo:"GTA",evergreen:1,path:"/",name:"Home",index:1,title:"Ali Bayat | North York & Toronto Real Estate Agent",desc:"REALTOR® licensed since 2016, Century 21 Heritage Group. Buy, sell, lease or invest in North York, Thornhill, Richmond Hill, Vaughan & Toronto. English & Farsi.",h1:"A North York real estate agent who shows you the real numbers."},
- {key:"about",ct:"profile",cat:"general",geo:"GTA",evergreen:1,path:"/about/",name:"About",parent:"home",index:1,title:"About Ali Bayat, REALTOR® | Farsi-Speaking Toronto Agent",desc:"Meet Ali Bayat: licensed since 2016, Century 21 Heritage Group, RECO #4789920. Clear numbers, straight answers, and service in English and Farsi.",h1:"Ali Bayat, Toronto & North York Real Estate Agent"},
- {key:"buy",ct:"service",cat:"buying",geo:"GTA",evergreen:1,path:"/buy/",name:"Buy",parent:"home",index:1,title:"Buying a Home in Toronto & the GTA | Ali Bayat",desc:"How buying with Ali works in Toronto and York Region: goals, budget, research, evaluation, offer strategy, negotiation and closing.",h1:"Buying a home in Toronto and the GTA"},
- {key:"sell",ct:"service",cat:"selling",geo:"GTA",evergreen:1,path:"/sell/",name:"Sell",parent:"home",index:1,title:"Selling a Home in Toronto & the GTA | Ali Bayat",desc:"Market analysis, pricing, preparation, marketing and negotiation for GTA sellers. Talk to Ali about your home's value.",h1:"Selling a home in Toronto and the GTA"},
- {key:"invest",ct:"service",cat:"investment",geo:"Toronto & York Region",evergreen:1,path:"/invest/",name:"Invest",parent:"home",index:1,title:"Investment Properties & Real Estate Investing in the GTA | Ali Bayat",desc:"How to evaluate income properties in Toronto and York Region: rental income, expenses, financing, cash flow and cap rate, explained plainly.",h1:"Investing in GTA real estate with a focus on the numbers."},
- {key:"neighbourhoods",ct:"hub",cat:"neighbourhoods",geo:"GTA",evergreen:1,path:"/neighbourhoods/",name:"Neighbourhoods",parent:"home",index:1,title:"GTA Neighbourhood Guides | Ali Bayat",desc:"Guides to North York, Thornhill, Richmond Hill, Vaughan and Toronto: housing, transit, amenities and advice for buyers and sellers.",h1:"The GTA, one community at a time"},
- ...AREAS.map(a=>({key:a.slug,page:"area",ct:"neighbourhood-guide",cat:"neighbourhoods",geo:a.name,evergreen:1,path:`/neighbourhoods/${a.slug}/`,name:a.name,parent:"neighbourhoods",index:1,place:a.name,title:`${a.name} Real Estate & Homes for Sale | Ali Bayat`,desc:`${a.tagline} Housing, transit, amenities and advice for buyers and sellers in ${a.name}.`,h1:`${a.name} real estate`})),
+ {key:"home",alt:"fa-home",ct:"home",cat:"general",geo:"GTA",evergreen:1,path:"/",name:"Home",index:1,title:"Ali Bayat | North York & Toronto Real Estate Agent",desc:"REALTOR® licensed since 2016, Century 21 Heritage Group. Buy, sell, lease or invest in North York, Thornhill, Richmond Hill, Vaughan & Toronto. English & Farsi.",h1:"A North York real estate agent who shows you the real numbers."},
+ {key:"about",alt:"fa-about",ct:"profile",cat:"general",geo:"GTA",evergreen:1,path:"/about/",name:"About",parent:"home",index:1,title:"About Ali Bayat, REALTOR® | Farsi-Speaking Toronto Agent",desc:"Meet Ali Bayat: licensed since 2016, Century 21 Heritage Group, RECO #4789920. Clear numbers, straight answers, and service in English and Farsi.",h1:"Ali Bayat, Toronto & North York Real Estate Agent"},
+ {key:"buy",alt:"fa-buy",ct:"service",cat:"buying",geo:"GTA",evergreen:1,path:"/buy/",name:"Buy",parent:"home",index:1,title:"Buying a Home in Toronto & the GTA | Ali Bayat",desc:"How buying with Ali works in Toronto and York Region: goals, budget, research, evaluation, offer strategy, negotiation and closing.",h1:"Buying a home in Toronto and the GTA"},
+ {key:"sell",alt:"fa-sell",ct:"service",cat:"selling",geo:"GTA",evergreen:1,path:"/sell/",name:"Sell",parent:"home",index:1,title:"Selling a Home in Toronto & the GTA | Ali Bayat",desc:"Market analysis, pricing, preparation, marketing and negotiation for GTA sellers. Talk to Ali about your home's value.",h1:"Selling a home in Toronto and the GTA"},
+ {key:"invest",alt:"fa-invest",ct:"service",cat:"investment",geo:"Toronto & York Region",evergreen:1,path:"/invest/",name:"Invest",parent:"home",index:1,title:"Investment Properties & Real Estate Investing in the GTA | Ali Bayat",desc:"How to evaluate income properties in Toronto and York Region: rental income, expenses, financing, cash flow and cap rate, explained plainly.",h1:"Investing in GTA real estate with a focus on the numbers."},
+ {key:"neighbourhoods",alt:"fa-neighbourhoods",ct:"hub",cat:"neighbourhoods",geo:"GTA",evergreen:1,path:"/neighbourhoods/",name:"Neighbourhoods",parent:"home",index:1,title:"GTA Neighbourhood Guides | Ali Bayat",desc:"Guides to North York, Thornhill, Richmond Hill, Vaughan and Toronto: housing, transit, amenities and advice for buyers and sellers.",h1:"The GTA, one community at a time"},
+ ...AREAS.map(a=>({key:a.slug,alt:"fa-"+a.slug,page:"area",ct:"neighbourhood-guide",cat:"neighbourhoods",geo:a.name,evergreen:1,path:`/neighbourhoods/${a.slug}/`,name:a.name,parent:"neighbourhoods",index:1,place:a.name,title:`${a.name} Real Estate & Homes for Sale | Ali Bayat`,desc:`${a.tagline} Housing, transit, amenities and advice for buyers and sellers in ${a.name}.`,h1:`${a.name} real estate`})),
  {key:"listings",ct:"listings",cat:"buying",geo:"GTA",ts:1,path:"/listings/",name:"Listings",parent:"buy",index:0,requires:"idx",why:"noindex until a live IDX feed replaces the layout preview",title:"Toronto & GTA Homes for Sale | Ali Bayat",desc:"Search homes for sale and lease across Toronto, North York, Thornhill, Richmond Hill and Vaughan.",h1:"Homes for sale in Toronto and the GTA"},
- {key:"resources",ct:"hub",cat:"resources",geo:"GTA",evergreen:1,path:"/resources/",name:"Resources",parent:"home",index:1,title:"Real Estate Guides & GTA Market Insights | Ali Bayat",desc:"Plain-language guides on buying, selling and investing in the GTA, neighbourhood guides and monthly market notes.",h1:"Guides for buying, selling and understanding the GTA market"},
- {key:"guide-land-transfer-tax",ct:"guide",cat:"buying",geo:"Ontario; City of Toronto; York Region",ts:1,dataPeriod:"Ontario rates in effect since January 1, 2017; City of Toronto MLTT rates in effect from April 1, 2026",verifiedAt:"2026-10-01",sources:[["City of Toronto, MLTT rates and fees","https://www.toronto.ca/services-payments/property-taxes-utilities/municipal-land-transfer-tax-mltt/municipal-land-transfer-tax-mltt-rates-and-fees/"],["City of Toronto, MLTT rebates","https://www.toronto.ca/services-payments/property-taxes-utilities/municipal-land-transfer-tax-mltt/municipal-land-transfer-tax-mltt-rebate-opportunities/"],["Ontario, calculating land transfer tax","https://www.ontario.ca/document/land-transfer-tax/calculating-land-transfer-tax"],["Ontario, refunds for first-time homebuyers","https://www.ontario.ca/document/land-transfer-tax/land-transfer-tax-refunds-first-time-homebuyers"]],path:"/resources/buying/land-transfer-tax-toronto-york-region/",name:"Land transfer tax in Toronto vs. York Region",parent:"resources",type:"article",index:1,title:"Land Transfer Tax in Toronto vs. York Region (2026) | Ali Bayat",desc:"How Ontario and Toronto land transfer taxes work in 2026, why buying in North York costs more at closing than Vaughan, with a calculator.",h1:"Land transfer tax in Toronto vs. York Region"},
- {key:"contact",ct:"contact",cat:"general",geo:"GTA",evergreen:1,path:"/contact/",name:"Contact",parent:"home",index:1,title:"Contact Ali Bayat | Toronto & GTA Real Estate",desc:"Talk to Ali about buying, selling or investing in GTA real estate. Replies personally, in English or Farsi.",h1:"Talk to Ali"},
+ {key:"resources",alt:"fa-resources",ct:"hub",cat:"resources",geo:"GTA",evergreen:1,path:"/resources/",name:"Resources",parent:"home",index:1,title:"Real Estate Guides & GTA Market Insights | Ali Bayat",desc:"Plain-language guides on buying, selling and investing in the GTA, neighbourhood guides and monthly market notes.",h1:"Guides for buying, selling and understanding the GTA market"},
+ {key:"guide-land-transfer-tax",alt:"fa-guide-land-transfer-tax",ct:"guide",cat:"buying",geo:"Ontario; City of Toronto; York Region",ts:1,dataPeriod:"Ontario rates in effect since January 1, 2017; City of Toronto MLTT rates in effect from April 1, 2026",verifiedAt:"2026-10-01",sources:[["City of Toronto, MLTT rates and fees","https://www.toronto.ca/services-payments/property-taxes-utilities/municipal-land-transfer-tax-mltt/municipal-land-transfer-tax-mltt-rates-and-fees/"],["City of Toronto, MLTT rebates","https://www.toronto.ca/services-payments/property-taxes-utilities/municipal-land-transfer-tax-mltt/municipal-land-transfer-tax-mltt-rebate-opportunities/"],["Ontario, calculating land transfer tax","https://www.ontario.ca/document/land-transfer-tax/calculating-land-transfer-tax"],["Ontario, refunds for first-time homebuyers","https://www.ontario.ca/document/land-transfer-tax/land-transfer-tax-refunds-first-time-homebuyers"]],path:"/resources/buying/land-transfer-tax-toronto-york-region/",name:"Land transfer tax in Toronto vs. York Region",parent:"resources",type:"article",index:1,title:"Land Transfer Tax in Toronto vs. York Region (2026) | Ali Bayat",desc:"How Ontario and Toronto land transfer taxes work in 2026, why buying in North York costs more at closing than Vaughan, with a calculator.",h1:"Land transfer tax in Toronto vs. York Region"},
+ {key:"contact",alt:"fa-contact",ct:"contact",cat:"general",geo:"GTA",evergreen:1,path:"/contact/",name:"Contact",parent:"home",index:1,title:"Contact Ali Bayat | Toronto & GTA Real Estate",desc:"Talk to Ali about buying, selling or investing in GTA real estate. Replies personally, in English or Farsi.",h1:"Talk to Ali"},
+ {key:"fa-home",lang:"fa",alt:"home",ct:"home",cat:"general",geo:"GTA",evergreen:1,path:"/fa/",name:"خانه",index:1,title:"علی بیات | مشاور املاک فارسی‌زبان در تورنتو و نورث‌یورک",desc:"علی بیات، مشاور املاک فارسی‌زبان در Century 21 Heritage Group با مجوز از 2016. خرید، فروش، اجاره و سرمایه‌گذاری در نورث‌یورک، تورنهیل، ریچموند هیل، وان، تورنتو.",h1:"مشاور املاک فارسی‌زبان در تورنتو و نورث‌یورک، با اعداد واقعی."},
+ {key:"fa-buy",lang:"fa",alt:"buy",ct:"service",cat:"buying",geo:"GTA",evergreen:1,path:"/fa/buy/",name:"خرید",parent:"fa-home",index:1,title:"خرید خانه در تورنتو و GTA | علی بیات، مشاور املاک فارسی‌زبان",desc:"راهنمای خرید خانه در تورنتو و منطقه‌ی یورک به فارسی: بودجه، بررسی بازار، ارزیابی ملک، پیشنهاد خرید، مذاکره و تحویل، همراه با علی بیات.",h1:"خرید خانه در تورنتو و منطقه‌ی بزرگ تورنتو (GTA)"},
+ {key:"fa-sell",lang:"fa",alt:"sell",ct:"service",cat:"selling",geo:"GTA",evergreen:1,path:"/fa/sell/",name:"فروش",parent:"fa-home",index:1,title:"فروش خانه در تورنتو و GTA | علی بیات، مشاور املاک فارسی‌زبان",desc:"فروش خانه در تورنتو و منطقه‌ی یورک به فارسی: تحلیل بازار، قیمت‌گذاری، آماده‌سازی، بازاریابی و مذاکره. درباره‌ی ارزش خانه‌تان با علی بیات صحبت کنید.",h1:"فروش خانه در تورنتو و منطقه‌ی بزرگ تورنتو (GTA)"},
+ {key:"fa-invest",lang:"fa",alt:"invest",ct:"service",cat:"investment",geo:"Toronto & York Region",evergreen:1,path:"/fa/invest/",name:"سرمایه‌گذاری",parent:"fa-home",index:1,title:"سرمایه‌گذاری در املاک تورنتو | تحلیل ملک درآمدزا به فارسی",desc:"ارزیابی ملک‌های درآمدزا در تورنتو و منطقه‌ی یورک به فارسی: درآمد اجاره، هزینه‌ها، وام، جریان نقدی و نرخ بازده سرمایه (Cap rate)، همراه با ماشین‌حساب.",h1:"سرمایه‌گذاری در املاک تورنتو با تمرکز بر اعداد."},
+ {key:"fa-neighbourhoods",lang:"fa",alt:"neighbourhoods",ct:"hub",cat:"neighbourhoods",geo:"GTA",evergreen:1,path:"/fa/neighbourhoods/",name:"محله‌ها",parent:"fa-home",index:1,title:"راهنمای محله‌های تورنتو و منطقه‌ی یورک به فارسی | علی بیات",desc:"راهنمای فارسی نورث‌یورک، تورنهیل، ریچموند هیل، وان و تورنتو: مسکن، رفت‌وآمد، امکانات و نکته‌هایی برای خریداران، فروشندگان و سرمایه‌گذاران.",h1:"منطقه‌ی بزرگ تورنتو، محله به محله"},
+ ...AREAS.map(a=>{const f=AREAS_FA[a.slug];return {key:"fa-"+a.slug,page:"fa-area",lang:"fa",alt:a.slug,ct:"neighbourhood-guide",cat:"neighbourhoods",geo:a.name,evergreen:1,path:`/fa/neighbourhoods/${a.slug}/`,name:f.name,parent:"fa-neighbourhoods",index:1,place:a.name,title:`خرید و فروش خانه در ${f.name} | راهنمای محله به فارسی`,desc:`راهنمای فارسی ${f.name}: مسکن، رفت‌وآمد، امکانات و نکته‌هایی برای خریداران، فروشندگان و سرمایه‌گذاران، همراه با علی بیات.`,h1:`املاک ${f.name}`}}),
+ {key:"fa-resources",lang:"fa",alt:"resources",ct:"hub",cat:"resources",geo:"GTA",evergreen:1,path:"/fa/resources/",name:"منابع",parent:"fa-home",index:1,title:"راهنماهای املاک تورنتو به فارسی | خرید، فروش و سرمایه‌گذاری",desc:"راهنماهای فارسی خرید، فروش و سرمایه‌گذاری در املاک تورنتو و منطقه‌ی یورک، راهنمای محله‌ها و ماشین‌حساب مالیات انتقال زمین.",h1:"راهنماهای خرید، فروش و شناخت بازار املاک تورنتو"},
+ {key:"fa-guide-land-transfer-tax",lang:"fa",alt:"guide-land-transfer-tax",ct:"guide",cat:"buying",geo:"Ontario; City of Toronto; York Region",ts:1,dataPeriod:"Ontario rates in effect since January 1, 2017; City of Toronto MLTT rates in effect from April 1, 2026",verifiedAt:"2026-10-01",sources:[["City of Toronto, MLTT rates and fees","https://www.toronto.ca/services-payments/property-taxes-utilities/municipal-land-transfer-tax-mltt/municipal-land-transfer-tax-mltt-rates-and-fees/"],["City of Toronto, MLTT rebates","https://www.toronto.ca/services-payments/property-taxes-utilities/municipal-land-transfer-tax-mltt/municipal-land-transfer-tax-mltt-rebate-opportunities/"],["Ontario, calculating land transfer tax","https://www.ontario.ca/document/land-transfer-tax/calculating-land-transfer-tax"],["Ontario, refunds for first-time homebuyers","https://www.ontario.ca/document/land-transfer-tax/land-transfer-tax-refunds-first-time-homebuyers"]],path:"/fa/resources/buying/land-transfer-tax-toronto-york-region/",name:"مالیات انتقال زمین در تورنتو و منطقه‌ی یورک",parent:"fa-resources",type:"article",index:1,title:"مالیات انتقال زمین در تورنتو و منطقه‌ی یورک (۲۰۲۶) | علی بیات",desc:"مالیات انتقال زمین انتاریو و تورنتو در ۲۰۲۶ چطور محاسبه می‌شود، چرا خرید در نورث‌یورک گران‌تر از وان تمام می‌شود، همراه با ماشین‌حساب.",h1:"مالیات انتقال زمین در تورنتو و منطقه‌ی یورک"},
+ {key:"fa-about",lang:"fa",alt:"about",ct:"profile",cat:"general",geo:"GTA",evergreen:1,path:"/fa/about/",name:"درباره",parent:"fa-home",index:1,title:"درباره‌ی علی بیات | مشاور املاک فارسی‌زبان تورنتو",desc:"علی بیات، مشاور املاک با مجوز از 2016، Century 21 Heritage Group، شماره‌ی ثبت RECO 4789920. اعداد شفاف، پاسخ صریح و خدمات به فارسی و انگلیسی.",h1:"علی بیات، مشاور املاک در تورنتو و نورث‌یورک"},
+ {key:"fa-contact",lang:"fa",alt:"contact",ct:"contact",cat:"general",geo:"GTA",evergreen:1,path:"/fa/contact/",name:"تماس",parent:"fa-home",index:1,title:"تماس با علی بیات | مشاور املاک فارسی‌زبان",desc:"برای خرید، فروش، اجاره یا سرمایه‌گذاری در تورنتو و منطقه‌ی یورک به فارسی با علی بیات گفتگو کنید. معمولاً ظرف یک روز کاری پاسخ می‌دهد.",h1:"گفتگو با علی"},
  {key:"privacy",ct:"legal",cat:"legal",geo:"Ontario",evergreen:1,path:"/privacy/",name:"Privacy policy",parent:"home",index:0,why:"noindex until the policy text is written",title:"Privacy Policy | Ali Bayat",desc:"How personal information sent through the Ali Bayat website is collected, used and protected.",h1:"Privacy policy"},
  {key:"terms",ct:"legal",cat:"legal",geo:"Ontario",evergreen:1,path:"/terms/",name:"Terms of use",parent:"home",index:0,why:"noindex until the terms are written",title:"Terms of Use | Ali Bayat",desc:"The terms that apply to using the Ali Bayat website, guides and calculators.",h1:"Terms of use"},
  {key:"accessibility",ct:"legal",cat:"legal",geo:"Ontario",evergreen:1,path:"/accessibility/",name:"Accessibility",parent:"home",index:0,why:"noindex until the statement is written",title:"Accessibility | Ali Bayat",desc:"Accessibility of the Ali Bayat website and how to request information in another format.",h1:"Accessibility"},
@@ -1811,14 +2540,15 @@ if(STATIC&&!attrib.landing_page){
 
 /*<prototype>*/
 /* ---------- Router (prototype only) ---------- */
-const pages=[...document.querySelectorAll("[data-page]")],areaPage=document.querySelector('[data-page="area"]');
+const pages=[...document.querySelectorAll("[data-page]")],areaPage=document.querySelector('[data-page="area"]'),faAreaPage=document.querySelector('[data-page="fa-area"]');
 const navMap={area:"neighbourhoods","guide-land-transfer-tax":"resources",listings:"buy"};
 function route(){
   const h=(location.hash||"#home").slice(1)||"home";if(h==="main")return;
-  const area=AREAS.find(a=>a.slug===h);let key=area?"area":h;
+  const area=AREAS.find(a=>a.slug===h),faArea=AREAS.find(a=>"fa-"+a.slug===h);let key=area?"area":faArea?"fa-area":h;
   if(!pages.some(p=>p.dataset.page===key))key="home";
   pages.forEach(p=>p.hidden=p.dataset.page!==key);
   if(area){areaPage.innerHTML=renderArea(area);fillDwgs(areaPage);document.title=`${area.name} Real Estate & Homes for Sale | Ali Bayat`}
+  else if(faArea){faAreaPage.innerHTML=renderAreaFa(faArea);fillDwgs(faAreaPage);document.title=ROUTES.find(r=>r.key===h).title}
   else document.title=pages.find(p=>p.dataset.page===key).dataset.title;
   const nk=navMap[key]||key;
   document.querySelectorAll(".nav a, .drawer a").forEach(a=>a.getAttribute("href")==="#"+nk&&!a.classList.contains("btn")?a.setAttribute("aria-current","page"):a.removeAttribute("aria-current"));
@@ -1831,12 +2561,12 @@ if(!STATIC)window.addEventListener("hashchange",route);
 
 /* ---------- Mobile menu & CTA bar ---------- */
 const mb=document.getElementById("menu-btn"),dr=document.getElementById("drawer");
-function closeDrawer(){dr.hidden=true;mb.setAttribute("aria-expanded","false");mb.textContent="Menu"}
-mb.addEventListener("click",()=>{const o=dr.hidden;dr.hidden=!o;mb.setAttribute("aria-expanded",String(o));mb.textContent=o?"Close":"Menu"});
+function closeDrawer(){dr.hidden=true;mb.setAttribute("aria-expanded","false");mb.textContent=mb.dataset.open||"Menu"}
+mb.addEventListener("click",()=>{const o=dr.hidden;dr.hidden=!o;mb.setAttribute("aria-expanded",String(o));mb.textContent=o?(mb.dataset.close||"Close"):(mb.dataset.open||"Menu")});
 document.addEventListener("keydown",e=>{if(e.key==="Escape"&&!dr.hidden){closeDrawer();mb.focus()}});
 dr.addEventListener("click",e=>{if(e.target.closest("a"))closeDrawer()});
 const bar=document.getElementById("mbar");
-function updateBar(){const on=window.scrollY>520&&document.body.dataset.route!=="contact";bar.classList.toggle("on",on);bar.setAttribute("aria-hidden",String(!on));bar.querySelector("a").tabIndex=on?0:-1}
+function updateBar(){const on=window.scrollY>520&&!/contact$/.test(document.body.dataset.route||"");bar.classList.toggle("on",on);bar.setAttribute("aria-hidden",String(!on));bar.querySelector("a").tabIndex=on?0:-1}
 window.addEventListener("scroll",updateBar,{passive:true});
 
 /*<prototype>*/
@@ -1880,13 +2610,14 @@ cf.addEventListener("submit",async e=>{e.preventDefault();const nm=document.getE
   const endpoint=cf.dataset.endpoint;
   if(!endpoint){if(!STATIC&&sent){cf.hidden=true;sent.hidden=false;sent.querySelector("h3").focus()}return} /* no endpoint: never pretend it was sent */
   setField("timestamp",new Date().toISOString());
-  sendErr.hidden=true;sendBtn.disabled=true;sendBtn.textContent="Sending…";
+  const sendLabel=sendBtn.textContent;
+  sendErr.hidden=true;sendBtn.disabled=true;sendBtn.textContent=sendBtn.dataset.sending||"Sending…";
   try{
     const r=await fetch(endpoint,{method:"POST",body:new FormData(cf),headers:{Accept:"application/json"}});
     if(!r.ok)throw new Error(String(r.status));
     cf.hidden=true;sentLive.hidden=false;sentLive.querySelector("h3").focus();
   }catch(err){sendErr.hidden=false;sendErr.focus()}
-  finally{sendBtn.disabled=false;sendBtn.textContent="Send to Ali"}});
+  finally{sendBtn.disabled=false;sendBtn.textContent=sendLabel}});
 const rf=document.getElementById("reset-form");if(rf)rf.addEventListener("click",()=>{sent.hidden=true;cf.hidden=false;document.getElementById("c-name").focus()});
 }
 

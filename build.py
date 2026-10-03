@@ -44,7 +44,7 @@ CONFIG = {
 # Who has to resolve each kind of blocker.
 OWNER, EXTERNAL, LEGAL, ENGINEERING = "owner", "external", "legal", "engineering"
 KEY_CATEGORY = {
-    "footer-disclaimer": LEGAL, "referral-disclosure": LEGAL, "consent-wording": LEGAL, "mls-notice": LEGAL,
+    "footer-disclaimer": LEGAL, "referral-disclosure": LEGAL, "consent-wording": LEGAL, "consent-wording-fa": LEGAL, "mls-notice": LEGAL,
     "privacy-policy": LEGAL, "terms-of-use": LEGAL, "accessibility-statement": LEGAL,
     "form-endpoint": EXTERNAL,
 }
@@ -112,13 +112,26 @@ TRANSFORM_JS = r"""
   const R = window.__routes, map = {};
   R.forEach(r => { if (r.path && !r.internal && !r.planned && (!r.requires || cfg.features[r.requires])) map[r.key] = r.path; });
   const page = [...document.querySelectorAll('main [data-page]')].find(p => !p.hidden);
-  const parts = { header: document.querySelector('.site-head'), page,
-                  footer: document.querySelector('footer'), mbar: document.getElementById('mbar') };
+  // Farsi pages use the Farsi header/footer/mobile bar from <template id="fa-chrome">.
+  const fa = cfg.lang === 'fa', chrome = fa ? document.getElementById('fa-chrome').content : document;
+  const parts = { header: chrome.querySelector('.site-head'), page,
+                  footer: chrome.querySelector('footer'), mbar: chrome.querySelector('#mbar') };
   const out = {}, warn = [], unresolved = [];
   const fill = tpl => tpl.replace(/\{(\w+)\}/g, (_, k) => cfg.values[k]);
   const slug = t => t.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '').slice(0, 40);
   for (const [k, el] of Object.entries(parts)) {
     const c = el.cloneNode(true);
+    if (k === 'footer' && fa) {  // legal notices stay in their approved English wording
+      const slot = c.querySelector('[data-legal-from-en]');
+      const legal = document.querySelector('footer .legal').cloneNode(true);
+      legal.setAttribute('lang', 'en'); legal.setAttribute('dir', 'ltr');
+      if (slot) slot.replaceWith(legal);
+    }
+    if (k === 'header' && fa) c.querySelectorAll('.nav a, .drawer a').forEach(a => {
+      if (a.getAttribute('href') === '#' + (cfg.navKey || cfg.route) && !a.classList.contains('btn')) a.setAttribute('aria-current', 'page');
+      else a.removeAttribute('aria-current');
+    });
+    c.querySelectorAll('[data-lang-switch]').forEach(a => a.setAttribute('href', '#' + (cfg.altKey || (fa ? 'home' : 'fa-home'))));
     c.querySelectorAll('[data-internal], .tbc-note, .photo-tag, [data-preview-only]').forEach(x => x.remove());
     c.querySelectorAll('[data-requires]').forEach(x => { if (!cfg.features[x.dataset.requires]) x.remove(); else x.removeAttribute('data-requires'); });
     if (k === 'page') c.removeAttribute('hidden');
@@ -142,7 +155,7 @@ TRANSFORM_JS = r"""
 
     // Editorial dates, shown only when real.
     c.querySelectorAll('[data-meta="dates"]').forEach(x => {
-      const t = [cfg.dates.published && 'Published ' + cfg.dates.published, cfg.dates.updated && 'Updated ' + cfg.dates.updated].filter(Boolean).join(' · ');
+      const t = [cfg.dates.published && (fa ? 'تاریخ انتشار: ' : 'Published ') + cfg.dates.published, cfg.dates.updated && (fa ? 'به‌روزرسانی: ' : 'Updated ') + cfg.dates.updated].filter(Boolean).join(' · ');
       if (t) { x.textContent = t; x.removeAttribute('data-meta'); x.setAttribute('data-editorial', ''); } else { const br = x.previousElementSibling; if (br && br.tagName === 'BR') br.remove(); x.remove(); }
     });
 
@@ -159,7 +172,8 @@ TRANSFORM_JS = r"""
         // Honest pending state: the form can't send, so it says so and can't be submitted.
         const n = document.createElement('div');
         n.className = 'banner'; n.setAttribute('role', 'note'); n.setAttribute('data-pending', 'form-endpoint');
-        n.innerHTML = '<p><b>Online messages aren’t available yet.</b> This form will start working once it’s connected to Ali’s inbox.</p>';
+        n.innerHTML = fa ? '<p><b>ارسال پیام آنلاین هنوز فعال نیست.</b> این فرم به‌زودی به صندوق ایمیل علی متصل می‌شود. تا آن زمان لطفاً تماس بگیرید یا پیامک بفرستید.</p>'
+                         : '<p><b>Online messages aren’t available yet.</b> This form will start working once it’s connected to Ali’s inbox.</p>';
         form.before(n);
         const b = form.querySelector('#c-send'); b.disabled = true; b.setAttribute('aria-disabled', 'true');
       }
@@ -175,12 +189,12 @@ TRANSFORM_JS = r"""
       const p = map[key];
       if (!p) { warn.push(key); return; }
       let href = p;
-      if (key === 'contact') {
+      if ((key === 'contact' || key === 'fa-contact') && !a.hasAttribute('data-lang-switch')) {
         const q = [];
         if (a.dataset.interest) q.push('interest=' + a.dataset.interest);
         if (a.dataset.request) q.push('request=' + a.dataset.request);
-        q.push('cta=' + (cfg.route + ':' + (a.dataset.cta || slug(a.textContent))));
-        href += '?' + q.join('&');
+        if (k === 'page' || a.dataset.cta) q.push('cta=' + (cfg.route + ':' + (a.dataset.cta || slug(a.textContent) || 'link')));
+        if (q.length) href += '?' + q.join('&');
       }
       ['interest', 'request', 'cta'].forEach(x => a.removeAttribute('data-' + x));
       a.setAttribute('href', href);
@@ -282,7 +296,7 @@ def ld_graph(r, routes_by_key, content_hash):
     page_url = url(r["path"])
     st, live = page_status(r["key"]), approved_live(r, content_hash)
     webpage = {"@type": "WebPage", "@id": page_url + "#webpage", "url": page_url, "name": r["title"],
-               "description": r["desc"], "inLanguage": "en-CA", "isPartOf": {"@id": BASE + "/#website"}}
+               "description": r["desc"], "inLanguage": "fa" if r.get("lang") == "fa" else "en-CA", "isPartOf": {"@id": BASE + "/#website"}}
     if r.get("place"):
         webpage["about"] = {"@type": "Place", "name": next(a for a in CONFIG["areas_served"] if a.startswith(r["place"]))}
     if live:  # authorship and dates are claimed only for pages Ali has actually approved
@@ -337,7 +351,7 @@ def head(r, routes_by_key, css_href, content_hash):
         tags += [f'<link rel="canonical" href="{esc(url(r["path"]))}">',
                  f'<meta property="og:type" content="{"article" if r.get("type") == "article" else "website"}">',
                  f'<meta property="og:site_name" content="{esc(CONFIG["site_name"])}">',
-                 '<meta property="og:locale" content="en_CA">',
+                 f'<meta property="og:locale" content="{"fa_IR" if r.get("lang") == "fa" else "en_CA"}">',
                  f'<meta property="og:title" content="{esc(r["title"])}">',
                  f'<meta property="og:description" content="{esc(r["desc"])}">',
                  f'<meta property="og:url" content="{esc(url(r["path"]))}">']
@@ -348,6 +362,14 @@ def head(r, routes_by_key, css_href, content_hash):
         tags += [f'<meta name="twitter:title" content="{esc(r["title"])}">', f'<meta name="twitter:description" content="{esc(r["desc"])}">']
     tags += ['<link rel="icon" href="/favicon.svg" type="image/svg+xml">', '<meta name="theme-color" content="#F3F4F0">',
              FONTS, f'<link rel="stylesheet" href="{css_href}">']
+    if r.get("lang") == "fa":
+        tags.insert(-1, '<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;600;700&display=swap">')
+    alt = routes_by_key.get(r.get("alt"))
+    if alt and not is_404:  # hreflang pairs: English <-> Farsi versions of the same page
+        en, fa_ = (alt, r) if r.get("lang") == "fa" else (r, alt)
+        tags += [f'<link rel="alternate" hreflang="en-CA" href="{esc(url(en["path"]))}">',
+                 f'<link rel="alternate" hreflang="fa" href="{esc(url(fa_["path"]))}">',
+                 f'<link rel="alternate" hreflang="x-default" href="{esc(url(en["path"]))}">']
     if not is_404:
         tags.append(f'<script type="application/ld+json">\n{ld_graph(r, routes_by_key, content_hash)}\n</script>')
     return "\n".join(tags)
@@ -482,7 +504,7 @@ def build():
             pg.wait_for_function("e => document.body.dataset.route === e", arg=expect)
             st = page_status(r["key"])
             cfg = {"values": DETAILS, "approved": CONFIG["approved"], "features": CONFIG["features"],
-                   "endpoint": CONFIG["form_endpoint"], "route": r["key"],
+                   "endpoint": CONFIG["form_endpoint"], "route": r["key"], "lang": r.get("lang", "en"), "altKey": r.get("alt"), "navKey": {"fa-area": "fa-neighbourhoods", "fa-guide-land-transfer-tax": "fa-resources"}.get(r.get("page", r["key"]), r["key"]),
                    "dates": {"published": fmt_date(st.get("published_at")), "updated": fmt_date(st.get("updated_at"))}}
             res = pg.evaluate(TRANSFORM_JS, cfg)
             warnings += [f'{r["path"]}: unmapped link #{w}' for w in res["warn"]]
@@ -494,7 +516,7 @@ def build():
             FAQS[r["path"]] = extract_faq(body)
             hashes[r["path"]] = content_hash
             doc = ('<!doctype html>\n'
-                   f'<html lang="en-CA" data-static>\n<head>\n{head(r, by_key, f"/assets/site.css?v={v_css}", content_hash)}\n</head>\n'
+                   f'<html lang="{"fa" if r.get("lang") == "fa" else "en-CA"}"{" dir=\"rtl\"" if r.get("lang") == "fa" else ""} data-static>\n<head>\n{head(r, by_key, f"/assets/site.css?v={v_css}", content_hash)}\n</head>\n'
                    f'<body data-route="{esc(expect)}">\n<a class="skip" href="#main">Skip to content</a>\n'
                    + (STAGING_BAR + "\n" if STAGING else "") + body +
                    f'<script src="/assets/site.js?v={v_js}" defer></script>\n</body>\n</html>\n')
@@ -537,7 +559,7 @@ def build():
                                          | set(re.findall(r'data-pending="([^"]+)"', pages_html[r["path"]])))})
     info = {"base": BASE, "staging": STAGING, "endpoint": CONFIG["form_endpoint"], "features": CONFIG["features"],
             "routes": [{k: r.get(k) for k in ("key", "path", "title", "desc", "h1", "index", "parent", "name", "type",
-                                               "requires", "internal", "page", "planned")} for r in routes],
+                                               "requires", "internal", "page", "planned", "lang", "alt")} for r in routes],
             "built": [r["path"] for r, _ in built], "hashes": hashes,
             "unresolved": {k: sorted(v) for k, v in sorted(unresolved.items())},
             "blockers": [{"category": c, "message": m} for c, m in blockers], "governance": gov,
