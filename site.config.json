@@ -1,7 +1,7 @@
 {
  "_readme": "Owner-confirmed facts only. Leave null until confirmed. Unset values stay visible placeholders in staging and are launch blockers in production. Approval keys for 'approved' are listed in README.md.",
  "site_url": "https://alibayatrealty.com",
- "form_endpoint": null,
+ "form_endpoint": "https://api.hsforms.com/submissions/v3/integration/submit/343743815/b0272653-09e3-4d87-8051-5569da1963dd",
  "features": {
   "idx": false,
   "market-data": false

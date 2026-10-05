@@ -2613,7 +2613,30 @@ cf.addEventListener("submit",async e=>{e.preventDefault();const nm=document.getE
   const sendLabel=sendBtn.textContent;
   sendErr.hidden=true;sendBtn.disabled=true;sendBtn.textContent=sendBtn.dataset.sending||"Sending…";
   try{
-    const r=await fetch(endpoint,{method:"POST",body:new FormData(cf),headers:{Accept:"application/json"}});
+    let r;
+    if(/^https:\/\/api(-[a-z0-9]+)?\.hsforms\.com\//.test(endpoint)){
+      /* HubSpot adapter: map the lead contract onto the HubSpot form's fields (firstname, lastname, email, phone, message) */
+      const fd=new FormData(cf),g=k=>String(fd.get(k)||"").trim();
+      if(g("website")){cf.hidden=true;sentLive.hidden=false;sentLive.querySelector("h3").focus();return} /* honeypot: drop silently */
+      const parts=g("name").split(/\s+/),first=parts.shift()||"",last=parts.join(" ");
+      const lbl={buy:"Buying",sell:"Selling",invest:"Investing",question:"A question"};
+      const ctx=[
+        "Interest: "+(lbl[g("interest")]||g("interest"))+(g("request")==="analysis"?" (Investment Property Analysis request)":""),
+        "Reply in: "+(g("language")==="fa"?"Farsi":"English"),
+        g("source_page")&&("From page: "+g("source_page")),
+        g("source_cta")&&("Clicked: "+g("source_cta")),
+        g("utm_source")&&("Campaign: "+["utm_source","utm_medium","utm_campaign","utm_content"].map(g).filter(Boolean).join(" / ")),
+        g("referrer")&&("Referrer: "+g("referrer")),
+        "Consent: "+g("consent")+" (wording "+g("consent_version")+")"
+      ].filter(Boolean).join("\n");
+      const message=(g("message")?g("message")+"\n\n":"")+"---\n"+ctx;
+      const fields=[["firstname",first],["lastname",last],["email",g("email")],["phone",g("phone")],["message",message]]
+        .filter(([,v])=>v).map(([name,value])=>({objectTypeId:"0-1",name,value}));
+      r=await fetch(endpoint,{method:"POST",headers:{"Content-Type":"application/json",Accept:"application/json"},
+        body:JSON.stringify({submittedAt:String(Date.now()),fields,context:{pageUri:location.href,pageName:document.title}})});
+    }else{
+      r=await fetch(endpoint,{method:"POST",body:new FormData(cf),headers:{Accept:"application/json"}});
+    }
     if(!r.ok)throw new Error(String(r.status));
     cf.hidden=true;sentLive.hidden=false;sentLive.querySelector("h3").focus();
   }catch(err){sendErr.hidden=false;sendErr.focus()}

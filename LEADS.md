@@ -1,7 +1,13 @@
 # Lead integration contract
 
-**Status: pending.** No production endpoint is configured, so the live contact form shows
-"Online messages aren't available yet" and can't be submitted. Nothing pretends to send.
+**Status: connected to HubSpot (2026-10-05).** `form_endpoint` points at the HubSpot Forms API
+(portal 343743815, form "Website Contact Form"). The site's own bilingual form is kept; `site.js`
+detects the `api.hsforms.com` endpoint and sends JSON mapped to HubSpot fields: `name` is split into
+`firstname`/`lastname`; `email`, `phone` go as-is; interest, analysis request, reply language,
+source page/CTA, UTM, referrer and consent are appended to `message` so they show in the
+notification email and on the contact. Honeypot hits are dropped in the browser. HubSpot creates
+the contact and emails abayat327@gmail.com. Without JavaScript the native POST to HubSpot won't
+work (rare; visitors can still call or email).
 
 ```
 Website form ─▶ validation (browser) ─▶ lead payload ─▶ HTTPS endpoint (CONFIG.form_endpoint)
