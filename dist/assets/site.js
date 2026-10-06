@@ -130,10 +130,11 @@ if(STATIC){
   ATTR_KEYS.forEach(k=>setField(k,attrib[k]));setField("referrer",attrib.referrer);
 }
 const sendBtn=document.getElementById("c-send"),sendErr=document.getElementById("send-error"),sentLive=document.getElementById("sent-live");
-cf.addEventListener("submit",async e=>{e.preventDefault();const nm=document.getElementById("c-name"),em=document.getElementById("c-email"),cn=document.getElementById("c-consent");
-  const okN=nm.value.trim().length>0,okE=/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(em.value.trim()),okC=cn.checked;
-  [["e-name",nm,okN],["e-email",em,okE],["e-consent",cn,okC]].forEach(([id,el,ok])=>{document.getElementById(id).hidden=ok;el.setAttribute("aria-invalid",String(!ok))});
-  if(!okN){nm.focus();return}if(!okE){em.focus();return}if(!okC){cn.focus();return}
+cf.addEventListener("submit",async e=>{e.preventDefault();const nm=document.getElementById("c-name"),em=document.getElementById("c-email"),cn=document.getElementById("c-consent"),ph=document.getElementById("c-phone");
+  const pd=ph.value.replace(/[^0-9]/g,"");
+  const okN=nm.value.trim().length>0,okE=/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(em.value.trim()),okC=cn.checked,okP=!ph.value.trim()||(pd.length>=7&&pd.length<=15&&/^[0-9+().\s-]+$/.test(ph.value.trim()));
+  [["e-name",nm,okN],["e-email",em,okE],["e-phone",ph,okP],["e-consent",cn,okC]].forEach(([id,el,ok])=>{document.getElementById(id).hidden=ok;el.setAttribute("aria-invalid",String(!ok))});
+  if(!okN){nm.focus();return}if(!okE){em.focus();return}if(!okP){ph.focus();return}if(!okC){cn.focus();return}
   const endpoint=cf.dataset.endpoint;
   if(!endpoint){if(!STATIC&&sent){cf.hidden=true;sent.hidden=false;sent.querySelector("h3").focus()}return} /* no endpoint: never pretend it was sent */
   setField("timestamp",new Date().toISOString());
@@ -142,25 +143,36 @@ cf.addEventListener("submit",async e=>{e.preventDefault();const nm=document.getE
   try{
     let r;
     if(/^https:\/\/api(-[a-z0-9]+)?\.hsforms\.com\//.test(endpoint)){
-      /* HubSpot adapter: map the lead contract onto the HubSpot form's fields (firstname, lastname, email, phone, message) */
+      /* HubSpot adapter (contact-2): the visitor's own words stay in "message"; everything else goes to its own
+         HubSpot contact property. Property names must exist in HubSpot AND as hidden fields on the HubSpot form.
+         If HubSpot rejects the structured payload (400, e.g. a field missing from the form), the adapter resends
+         the older text-in-message payload so a lead is never lost. See LEADS.md. */
       const fd=new FormData(cf),g=k=>String(fd.get(k)||"").trim();
       if(g("website")){cf.hidden=true;sentLive.hidden=false;sentLive.querySelector("h3").focus();return} /* honeypot: drop silently */
       const parts=g("name").split(/\s+/),first=parts.shift()||"",last=parts.join(" ");
       const lbl={buy:"Buying",sell:"Selling",invest:"Investing",question:"A question"};
-      const ctx=[
-        "Interest: "+(lbl[g("interest")]||g("interest"))+(g("request")==="analysis"?" (Investment Property Analysis request)":""),
-        "Reply in: "+(g("language")==="fa"?"Farsi":"English"),
-        g("source_page")&&("From page: "+g("source_page")),
-        g("source_cta")&&("Clicked: "+g("source_cta")),
-        g("utm_source")&&("Campaign: "+["utm_source","utm_medium","utm_campaign","utm_content"].map(g).filter(Boolean).join(" / ")),
-        g("referrer")&&("Referrer: "+g("referrer")),
-        "Consent: "+g("consent")+" (wording "+g("consent_version")+")"
-      ].filter(Boolean).join("\n");
-      const message=(g("message")?g("message")+"\n\n":"")+"---\n"+ctx;
-      const fields=[["firstname",first],["lastname",last],["email",g("email")],["phone",g("phone")],["message",message]]
-        .filter(([,v])=>v).map(([name,value])=>({objectTypeId:"0-1",name,value}));
-      r=await fetch(endpoint,{method:"POST",headers:{"Content-Type":"application/json",Accept:"application/json"},
-        body:JSON.stringify({submittedAt:String(Date.now()),fields,context:{pageUri:location.href,pageName:document.title}})});
+      const leadType={buy:"buyer",sell:"seller",invest:"investor",question:"general_question"}[g("interest")]||"other";
+      const lang=g("language")==="fa"?"fa":"en";
+      const utm=["utm_source","utm_medium","utm_campaign","utm_content"].map(g).filter(Boolean).join(" / ");
+      const chan=(g("utm_source")+" "+g("referrer")).toLowerCase();
+      const leadSource=/instagram/.test(chan)?"instagram":/facebook|fb\.com/.test(chan)?"facebook":/google/.test(chan)?"google":"website";
+      const consentSrc="Website contact form ("+(g("form_version")||"unknown")+", "+location.pathname+")";
+      const now=Date.now();
+      const message=g("message");
+      const toFields=list=>list.filter(([,v])=>v!==""&&v!=null).map(([name,value])=>({objectTypeId:"0-1",name,value:String(value)}));
+      const structured=toFields([["firstname",first],["lastname",last],["email",g("email")],["phone",g("phone")],["message",message],
+        ["lead_type",leadType],["analysis_requested",g("request")==="analysis"?"true":"false"],["hs_language",lang],
+        /* Lead Status is NOT sent: a repeat submission must never reset a lead Ali is already working back to "New". */["lead_source",leadSource],["source_page",g("source_page")||location.pathname],["source_cta",g("source_cta")],
+        ["source_campaign",utm],["referrer_url",g("referrer")],
+        ["consent_status",g("consent")==="yes"?"given":"not_given"],["consent_source",consentSrc],["consent_version",g("consent_version")]]);
+      const ctx=["Interest: "+(lbl[g("interest")]||g("interest"))+(g("request")==="analysis"?" (Investment Property Analysis request)":""),
+        "Reply in: "+(lang==="fa"?"Farsi":"English"),g("source_page")&&("From page: "+g("source_page")),g("source_cta")&&("Clicked: "+g("source_cta")),
+        utm&&("Campaign: "+utm),g("referrer")&&("Referrer: "+g("referrer")),"Consent: "+g("consent")+" (wording "+g("consent_version")+")"].filter(Boolean).join("\n");
+      const legacy=toFields([["firstname",first],["lastname",last],["email",g("email")],["phone",g("phone")],["message",(message?message+"\n\n":"")+"---\n"+ctx]]);
+      const post=fields=>fetch(endpoint,{method:"POST",headers:{"Content-Type":"application/json",Accept:"application/json"},
+        body:JSON.stringify({submittedAt:String(now),fields,context:{pageUri:location.href,pageName:document.title}})});
+      r=await post(structured);
+      if(r.status===400)r=await post(legacy); /* safety net: never lose a lead over a field-mapping mismatch */
     }else{
       r=await fetch(endpoint,{method:"POST",body:new FormData(cf),headers:{Accept:"application/json"}});
     }

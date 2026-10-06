@@ -1,13 +1,28 @@
 # Lead integration contract
 
-**Status: connected to HubSpot (2026-10-05).** `form_endpoint` points at the HubSpot Forms API
-(portal 343743815, form "Website Contact Form"). The site's own bilingual form is kept; `site.js`
-detects the `api.hsforms.com` endpoint and sends JSON mapped to HubSpot fields: `name` is split into
-`firstname`/`lastname`; `email`, `phone` go as-is; interest, analysis request, reply language,
-source page/CTA, UTM, referrer and consent are appended to `message` so they show in the
-notification email and on the contact. Honeypot hits are dropped in the browser. HubSpot creates
-the contact and emails abayat327@gmail.com. Without JavaScript the native POST to HubSpot won't
-work (rare; visitors can still call or email).
+**Status: connected to HubSpot (2026-10-05), form version contact-2.** `form_endpoint` points at the HubSpot
+Forms API (portal 343743815, form "Website Contact Form"). The site's own bilingual form is kept; `site.js`
+detects the `api.hsforms.com` endpoint and sends JSON mapped to HubSpot contact properties:
+
+| Site field | HubSpot property |
+|---|---|
+| name (split) | `firstname`, `lastname` |
+| email, phone | `email`, `phone` |
+| message | `message` (visitor's own words only) |
+| interest | `lead_type` (buyer / seller / investor / general_question / other) |
+| request=analysis | `analysis_requested` (true/false) |
+| language | `hs_language` (en / fa) |
+| utm_source + referrer | `lead_source` (website / instagram / facebook / google) |
+| source_page | `source_page` (falls back to the contact page path) |
+| source_cta | `source_cta` |
+| utm_* | `source_campaign` ("source / medium / campaign / content") |
+| referrer | `referrer_url` (origin only) |
+| consent | `consent_status` (given), `consent_source`, `consent_version` (consent timestamp = HubSpot's form submission time; `consent_date` is not sent) |
+
+Every property above must exist in HubSpot AND be a hidden field on the HubSpot form, or HubSpot answers 400.
+On a 400 the site resends the old payload (context appended to `message`) so the lead is never lost.
+Lead Status is deliberately not sent, so a repeat submission never resets a lead Ali is working.
+Honeypot hits are dropped in the browser. Without JavaScript the native POST to HubSpot won't work.
 
 ```
 Website form ─▶ validation (browser) ─▶ lead payload ─▶ HTTPS endpoint (CONFIG.form_endpoint)
