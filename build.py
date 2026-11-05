@@ -205,11 +205,11 @@ TRANSFORM_JS = r"""
 }
 """
 
-FAVICON = """<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><rect width="64" height="64" fill="#F3F4F0"/><rect x="7" y="7" width="50" height="50" fill="none" stroke="#14222A" stroke-width="3"/><text x="32" y="41" text-anchor="middle" font-family="Georgia,'Times New Roman',serif" font-size="24" fill="#14222A">AB</text></svg>
+FAVICON = """<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><rect width="64" height="64" rx="12" fill="#14213D"/><g transform="translate(8 14) scale(0.3)"><path d="M12 114 L12 62 Q12 24 50 6 Q88 24 88 62 L88 114 M24 78 L76 78 M106 10 L106 114 M106 10 L128 10 Q150 10 150 35 Q150 60 128 60 L106 60 M106 60 L132 60 Q156 60 156 87 Q156 114 132 114 L106 114" fill="none" stroke="#F7F5F0" stroke-width="14" stroke-linejoin="round"/></g></svg>
 """
 FONTS = ('<link rel="preconnect" href="https://fonts.googleapis.com">\n'
          '<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>\n'
-         '<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,500;1,6..72,300;1,6..72,400&family=Public+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">')
+         '<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">')
 STAGING_BAR = ('<div class="preview" role="note" aria-label="Staging notice"><div class="wrap"><span><span class="dot" aria-hidden="true"></span>'
                'Staging preview, not the live site. Unconfirmed details are shown as placeholders.</span></div></div>')
 
@@ -360,7 +360,7 @@ def head(r, routes_by_key, css_href, content_hash):
         else:
             tags.append('<meta name="twitter:card" content="summary">')
         tags += [f'<meta name="twitter:title" content="{esc(r["title"])}">', f'<meta name="twitter:description" content="{esc(r["desc"])}">']
-    tags += ['<link rel="icon" href="/favicon.svg" type="image/svg+xml">', '<meta name="theme-color" content="#F3F4F0">',
+    tags += ['<link rel="icon" href="/favicon.svg" type="image/svg+xml">', '<meta name="theme-color" content="#F7F5F0">',
              FONTS, f'<link rel="stylesheet" href="{css_href}">']
     if r.get("lang") == "fa":
         tags.insert(-1, '<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;600;700&display=swap">')

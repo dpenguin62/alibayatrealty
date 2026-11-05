@@ -1,6 +1,6 @@
 # Ali Bayat Realty: verification report
 
-Output verified: `dist/` · production domain `https://alibayatrealty.com` · 2026-10-03
+Output verified: `dist/` · production domain `https://alibayatrealty.com` · 2026-11-05
 
 ## Final gate status: **PASS WITH OWNER INPUT REQUIRED**
 
@@ -17,7 +17,7 @@ All engineering checks pass. Every remaining failure needs Ali's information, an
 | 7 | Structured data is valid and truthful (no invented facts) | ✅ pass |
 | 8 | Navigation works on desktop, tablet and mobile | ✅ pass |
 | 9 | Accessibility: axe-core, keyboard, focus, contrast, mobile, reduced motion | ❌ fail (external) |
-| 10 | Lead form: production endpoint, payload contract, consent, honest states | ❌ fail (external) |
+| 10 | Lead form: production endpoint, payload contract, consent, honest states | ✅ pass |
 | 11 | Production safety: no placeholders, invented facts or interim content | ❌ fail (legal, owner) |
 | 12 | Content governance: author, review status, dates, sources, indexability | ❌ fail (owner) |
 | 13 | Internal linking: no orphans, pillars connected, contextual links | ✅ pass |
@@ -72,9 +72,8 @@ All engineering checks pass. Every remaining failure needs Ali's information, an
 - no ratings, reviews, awards or invented dates; author/dates only on pages Ali has approved
 
 ## Lead form
-**10. Lead form: production endpoint, payload contract, consent, honest states: FAIL**
+**10. Lead form: production endpoint, payload contract, consent, honest states: PASS**
 - stand-in endpoint (code path only; NOT the integration): payload matches lead.schema.json; consent required; source_page /invest/ and source_cta from a real click path; UTM from the landing URL; referrer reduced to its origin; error keeps the message; no-JS POST; honeypot; no third-party requests
-- ✗ [external] no production endpoint configured (site.config.json form_endpoint): the live form cannot send messages
 
 ## Content governance
 **12. Content governance: author, review status, dates, sources, indexability: FAIL**
@@ -176,8 +175,8 @@ Every occurrence above comes from a managed placeholder (awaiting the owner inpu
 
 ## Performance
 **14. Performance budget: weight, requests, DOM size, layout shift, render-blocking: PASS**
-- site.js 17 KB (prototype code stripped), site.css 39 KB, both cached across pages; scripts deferred; no images
-- largest page /invest/ 48 KB HTML; most DOM /invest/ 860 elements; max same-origin requests 3; max layout shift 0.000
+- site.js 21 KB (prototype code stripped), site.css 39 KB, both cached across pages; scripts deferred; no images
+- largest page /invest/ 49 KB HTML; most DOM /invest/ 862 elements; max same-origin requests 3; max layout shift 0.000
 - third-party request on every page: fonts.googleapis.com, fonts.gstatic.com (Google Fonts). Recommendation: self-host the three font families
 
 ## Reproducibility
@@ -218,9 +217,8 @@ Every occurrence above comes from a managed placeholder (awaiting the owner inpu
 - needs ltt-guide-review (3 pages: /, /resources/, /resources/buying/land-transfer-tax-toronto-york-region/)
 - needs ltt-guide-review-fa (1 page: /fa/resources/buying/land-transfer-tax-toronto-york-region/)
 
-### Requires an external service or access (2)
+### Requires an external service or access (1)
 - axe-core is not installed, so the full axe rule set did NOT run. Run `npm install` (package.json pins axe-core) and re-verify
-- no production endpoint configured (site.config.json form_endpoint): the live form cannot send messages
 
 ### Requires legal / brokerage review (6)
 - /accessibility/: accessibility-statement is interim, not final

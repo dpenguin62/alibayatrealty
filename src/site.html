@@ -2,25 +2,28 @@
 <title>Ali Bayat</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,500;1,6..72,300;1,6..72,400&family=Public+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
 <style>
-/* Layout: editorial 12-col frame with a left label rail; stone paper, ink, one lake-teal accent; architectural elevation drawings as the brand's illustration system */
+/* Layout: editorial 12-col frame with a left label rail; ivory paper, midnight navy ink, brushed-brass accent (Modern Classic brand); architectural elevation drawings as the brand's illustration system */
 :root{
-  --paper:#F3F4F0; --surface:#FFFFFF; --sunk:#E8EBE5; --draw:#E4E8E2; --ink:#14222A; --muted:#566369; --line:#D5DAD3;
-  --lake:#1B5659; --lake-ink:#FFFFFF; --lake-soft:#DDEAE8; --brick:#8A4731;
+  --paper:#F7F5F0; --surface:#FFFFFF; --sunk:#EFECE4; --draw:#ECE8DF; --ink:#14213D; --muted:#4A5A75; --line:#E2DED4;
+  --lake:#14213D; --lake-ink:#FFFFFF; --lake-soft:#E6E9F0; --brick:#8A4731;
+  --brass:#B8935A; --brass-ink:#14213D; --brass-text:#86662F; --band:#14213D; --band-ink:#F7F5F0;
   --flag:#F5DE84; --flag-ink:#574100; --ok:#2E6A48;
-  --display:"Newsreader", Georgia, "Times New Roman", serif;
-  --body:"Public Sans", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --display:"Playfair Display", Georgia, "Times New Roman", serif;
+  --body:"Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
   --mono:"IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
   --frame:1240px; --r:4px; --rail:200px;
 }
 @media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
-  --paper:#0F171A; --surface:#152024; --sunk:#1A272B; --draw:#17252A; --ink:#E4EBE9; --muted:#98A7AB; --line:#29383D;
-  --lake:#7DBBB5; --lake-ink:#0B1A1B; --lake-soft:#183134; --brick:#D8957A;
+  --paper:#0B1222; --surface:#111A2E; --sunk:#16203A; --draw:#131D35; --ink:#ECEEF3; --muted:#A5AFC3; --line:#253150;
+  --lake:#D9B77E; --lake-ink:#14213D; --lake-soft:#1C2742; --brick:#E0A08A;
+  --brass:#C9A46A; --brass-ink:#14213D; --brass-text:#D9B77E; --band:#1B2A4D; --band-ink:#F7F5F0;
   --flag:#4A3E12; --flag-ink:#F3DD8E; --ok:#7CC49A; color-scheme:dark }}
 :root[data-theme="dark"]{
-  --paper:#0F171A; --surface:#152024; --sunk:#1A272B; --draw:#17252A; --ink:#E4EBE9; --muted:#98A7AB; --line:#29383D;
-  --lake:#7DBBB5; --lake-ink:#0B1A1B; --lake-soft:#183134; --brick:#D8957A;
+  --paper:#0B1222; --surface:#111A2E; --sunk:#16203A; --draw:#131D35; --ink:#ECEEF3; --muted:#A5AFC3; --line:#253150;
+  --lake:#D9B77E; --lake-ink:#14213D; --lake-soft:#1C2742; --brick:#E0A08A;
+  --brass:#C9A46A; --brass-ink:#14213D; --brass-text:#D9B77E; --band:#1B2A4D; --band-ink:#F7F5F0;
   --flag:#4A3E12; --flag-ink:#F3DD8E; --ok:#7CC49A; color-scheme:dark }
 
 *{box-sizing:border-box}
@@ -33,7 +36,7 @@ h1,h2,h3{font-family:var(--display);font-weight:400;line-height:1.08;text-wrap:b
 h1{font-size:clamp(2.4rem,5.6vw,4.6rem);font-weight:300}
 h2{font-size:clamp(1.85rem,3.4vw,2.75rem);font-weight:300}
 h3{font-size:1.3rem;line-height:1.25;font-weight:400}
-h1 em,h2 em{font-style:italic;color:var(--lake)}
+h1 em,h2 em{font-style:italic;color:var(--brass-text)}
 p{margin:0}
 .lede{font-size:clamp(1.08rem,1.5vw,1.2rem);color:var(--muted);max-width:56ch}
 .prose{max-width:62ch;display:grid;gap:1rem}
@@ -62,10 +65,12 @@ p{margin:0}
 .site-head{position:sticky;top:env(safe-area-inset-top,0px);z-index:30;background:color-mix(in srgb,var(--paper) 94%,transparent);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
 .site-head .wrap{display:flex;align-items:center;justify-content:space-between;gap:1rem;height:74px}
 .brand{display:flex;align-items:center;gap:.7rem;text-decoration:none}
-.brand .mk{width:34px;height:34px;border:1.5px solid var(--ink);display:grid;place-items:center;font-family:var(--display);font-size:1rem;letter-spacing:.02em}
+.brand .mk{width:42px;height:32px;flex:none;color:var(--ink)}
 .brand .wm{display:flex;flex-direction:column;line-height:1}
-.brand b{font-family:var(--display);font-weight:400;font-size:1.4rem;letter-spacing:-.01em}
+.brand b{font-family:"Playfair Display",Georgia,serif;font-weight:500;font-size:1.12rem;letter-spacing:.16em;text-transform:uppercase}
 .brand small{font-size:.58rem;letter-spacing:.36em;text-transform:uppercase;color:var(--muted);margin-top:.3rem;font-weight:600}
+.brand b,.site-head .btn{white-space:nowrap}
+@media (max-width:440px){.brand{gap:.5rem}.brand .mk{width:34px;height:26px}.brand b{font-size:.92rem;letter-spacing:.08em}.brand small{letter-spacing:.24em}}
 .nav{display:flex;align-items:center;gap:.15rem}
 .nav a{text-decoration:none;font-size:.94rem;padding:.5rem .7rem;border-radius:3px}
 .nav a:hover{background:var(--sunk)}
@@ -83,10 +88,10 @@ p{margin:0}
 .drawer .btn{margin-top:1.25rem;justify-content:center;font-family:var(--body);font-size:1rem;border-bottom:1.5px solid var(--lake)}
 
 /* Buttons */
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:.55rem;font:600 .98rem var(--body);text-decoration:none;padding:.85rem 1.4rem;border-radius:3px;border:1.5px solid var(--lake);background:var(--lake);color:var(--lake-ink);cursor:pointer;transition:transform .15s ease,background .15s ease;min-height:48px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.55rem;font:600 .98rem var(--body);text-decoration:none;padding:.85rem 1.4rem;border-radius:3px;border:1.5px solid var(--brass);background:var(--brass);color:var(--brass-ink);cursor:pointer;transition:transform .15s ease,background .15s ease;min-height:48px}
 .btn:hover{transform:translateY(-1px)}
 .btn:disabled{opacity:.6;cursor:not-allowed;transform:none}
-.btn.ghost{background:transparent;color:var(--lake)}
+.btn.ghost{background:transparent;color:var(--lake);border-color:var(--lake)}
 .btn.ghost:hover{background:var(--lake-soft)}
 .btn.sm{padding:.5rem 1rem;min-height:42px;font-size:.9rem}
 .link{font-weight:600;color:var(--lake);text-decoration:none;display:inline-flex;gap:.4rem;align-items:center;min-height:32px}
@@ -220,14 +225,14 @@ p{margin:0}
 .verify p{font-size:.88rem;color:var(--muted)}
 
 /* CTA band */
-.cta-band{background:var(--lake);color:var(--lake-ink)}
+.cta-band{background:var(--band);color:var(--band-ink)}
 .cta-band .wrap{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:2rem;align-items:center;padding-block:clamp(3rem,6vw,4.5rem)}
-.cta-band h2{color:var(--lake-ink)}
-.cta-band h2 em{color:var(--lake-ink);opacity:.8}
+.cta-band h2{color:var(--band-ink)}
+.cta-band h2 em{color:var(--brass);opacity:1}
 .cta-band p{opacity:.9;margin-top:.8rem;max-width:52ch}
-.cta-band .btn{background:var(--lake-ink);color:var(--lake);border-color:var(--lake-ink)}
+.cta-band .btn{background:var(--brass);color:var(--brass-ink);border-color:var(--brass)}
 .cta-band .row{justify-content:flex-end}
-.cta-band .alt{color:var(--lake-ink);font-size:.92rem;opacity:.9}
+.cta-band .alt{color:var(--band-ink);font-size:.92rem;opacity:.9}
 @media (max-width:760px){.cta-band .wrap{grid-template-columns:1fr}.cta-band .row{justify-content:flex-start}}
 
 /* Page head */
@@ -515,8 +520,8 @@ article.teaser:hover h3{text-decoration:none}
 @media (max-width:1080px){[dir="rtl"] .svc.three > article,[dir="rtl"] .svc.three > article + article{padding:1.75rem 0;border-right:0}}
 [dir="rtl"] .cta-band .row{justify-content:flex-start}
 .req-note{border:1px solid var(--line);border-left:3px solid var(--lake);background:var(--surface);border-radius:3px;padding:.9rem 1.1rem;font-size:.92rem}
-.cta-band .btn.ghost{background:transparent;color:var(--lake-ink);border-color:var(--lake-ink)}
-.cta-band .btn.ghost:hover{background:color-mix(in srgb,var(--lake-ink) 12%,transparent)}
+.cta-band .btn.ghost{background:transparent;color:var(--band-ink);border-color:var(--band-ink)}
+.cta-band .btn.ghost:hover{background:color-mix(in srgb,var(--band-ink) 12%,transparent)}
 </style>
 
 <a class="skip" href="#main">Skip to content</a>
@@ -533,7 +538,7 @@ article.teaser:hover h3{text-decoration:none}
 
 <header class="site-head">
   <div class="wrap">
-    <a class="brand" href="#home" aria-label="Ali Bayat, home"><span class="mk" aria-hidden="true">AB</span><span class="wm"><b>Ali Bayat</b><small>REALTOR®</small></span></a>
+    <a class="brand" href="#home" aria-label="Ali Bayat, home"><svg class="mk" viewBox="0 0 160 120" width="42" height="32" aria-hidden="true" focusable="false"><path d="M12 114 L12 62 Q12 24 50 6 Q88 24 88 62 L88 114 M24 78 L76 78 M106 10 L106 114 M106 10 L128 10 Q150 10 150 35 Q150 60 128 60 L106 60 M106 60 L132 60 Q156 60 156 87 Q156 114 132 114 L106 114" fill="none" stroke="currentColor" stroke-width="10" stroke-linejoin="round"/></svg><span class="wm"><b>Ali Bayat</b><small>REALTOR®</small></span></a>
     <nav class="nav" aria-label="Main">
       <a href="#home">Home</a>
       <a href="#buy">Buy</a>
@@ -543,10 +548,10 @@ article.teaser:hover h3{text-decoration:none}
       <a href="#resources">Resources</a>
       <a href="#about">About</a>
       <a class="lang" href="#fa-home" lang="fa" hreflang="fa" data-lang-switch>فارسی</a>
-      <a class="btn sm talk" href="#contact" data-nav="contact" style="color:var(--lake-ink)">Talk to Ali</a>
+      <a class="btn sm talk" href="#contact" data-nav="contact" style="color:var(--brass-ink)">Talk to Ali</a>
     </nav>
     <div class="head-actions">
-      <a class="btn sm head-talk" href="#contact" style="color:var(--lake-ink)">Talk to Ali</a>
+      <a class="btn sm head-talk" href="#contact" style="color:var(--brass-ink)">Talk to Ali</a>
       <button class="menu-btn" id="menu-btn" aria-expanded="false" aria-controls="drawer" data-open="Menu" data-close="Close">Menu</button>
     </div>
   </div>
@@ -561,7 +566,7 @@ article.teaser:hover h3{text-decoration:none}
       <a href="#about">About Ali</a>
       <a href="#contact">Contact</a>
       <a class="minor lang" href="#fa-home" lang="fa" hreflang="fa" data-lang-switch>فارسی · Farsi</a>
-      <a class="btn" href="#contact" style="color:var(--lake-ink)">Talk to Ali</a>
+      <a class="btn" href="#contact" style="color:var(--brass-ink)">Talk to Ali</a>
       <a class="minor" href="#listings" data-requires="idx">Listing search (preview)</a>
     </nav>
   </div>
@@ -2022,7 +2027,7 @@ Not used
   <div class="wrap">
     <div class="fgrid">
       <div class="stack" style="gap:1rem">
-        <a class="brand" href="#home"><span class="mk" aria-hidden="true">AB</span><span class="wm"><b>Ali Bayat</b><small>REALTOR®</small></span></a>
+        <a class="brand" href="#home"><svg class="mk" viewBox="0 0 160 120" width="42" height="32" aria-hidden="true" focusable="false"><path d="M12 114 L12 62 Q12 24 50 6 Q88 24 88 62 L88 114 M24 78 L76 78 M106 10 L106 114 M106 10 L128 10 Q150 10 150 35 Q150 60 128 60 L106 60 M106 60 L132 60 Q156 60 156 87 Q156 114 132 114 L106 114" fill="none" stroke="currentColor" stroke-width="10" stroke-linejoin="round"/></svg><span class="wm"><b>Ali Bayat</b><small>REALTOR®</small></span></a>
         <p class="muted" style="max-width:34ch">Real estate advice for buyers, sellers and investors across Toronto and York Region. English and Farsi.</p>
         <div class="brokerage">
           <strong><mark class="tbc" data-tpl="Ali Bayat, {job_title}">Ali Bayat, Sales Representative</mark></strong>
@@ -2047,7 +2052,7 @@ Not used
 <template id="fa-chrome">
 <header class="site-head">
   <div class="wrap">
-    <a class="brand" dir="ltr" href="#fa-home" aria-label="علی بیات، صفحه‌ی اصلی"><span class="mk" aria-hidden="true">AB</span><span class="wm"><b>Ali Bayat</b><small>REALTOR®</small></span></a>
+    <a class="brand" dir="ltr" href="#fa-home" aria-label="علی بیات، صفحه‌ی اصلی"><svg class="mk" viewBox="0 0 160 120" width="42" height="32" aria-hidden="true" focusable="false"><path d="M12 114 L12 62 Q12 24 50 6 Q88 24 88 62 L88 114 M24 78 L76 78 M106 10 L106 114 M106 10 L128 10 Q150 10 150 35 Q150 60 128 60 L106 60 M106 60 L132 60 Q156 60 156 87 Q156 114 132 114 L106 114" fill="none" stroke="currentColor" stroke-width="10" stroke-linejoin="round"/></svg><span class="wm"><b>Ali Bayat</b><small>REALTOR®</small></span></a>
     <nav class="nav" aria-label="منوی اصلی">
       <a href="#fa-home">خانه</a>
       <a href="#fa-buy">خرید</a>
@@ -2058,10 +2063,10 @@ Not used
       <a href="#fa-about">درباره</a>
       <a href="#fa-contact">تماس</a>
       <a class="lang" href="#home" lang="en" hreflang="en" data-lang-switch>English</a>
-      <a class="btn sm talk" href="#fa-contact" style="color:var(--lake-ink)">گفتگو با علی</a>
+      <a class="btn sm talk" href="#fa-contact" style="color:var(--brass-ink)">گفتگو با علی</a>
     </nav>
     <div class="head-actions">
-      <a class="btn sm head-talk" href="#fa-contact" style="color:var(--lake-ink)">گفتگو با علی</a>
+      <a class="btn sm head-talk" href="#fa-contact" style="color:var(--brass-ink)">گفتگو با علی</a>
       <button class="menu-btn" id="menu-btn" aria-expanded="false" aria-controls="drawer" data-open="منو" data-close="بستن">منو</button>
     </div>
   </div>
@@ -2076,7 +2081,7 @@ Not used
       <a href="#fa-about">درباره</a>
       <a href="#fa-contact">تماس</a>
       <a class="minor lang" href="#home" lang="en" hreflang="en" data-lang-switch>English · انگلیسی</a>
-      <a class="btn" href="#fa-contact" style="color:var(--lake-ink)">گفتگو با علی</a>
+      <a class="btn" href="#fa-contact" style="color:var(--brass-ink)">گفتگو با علی</a>
     </nav>
   </div>
 </header>
@@ -2084,7 +2089,7 @@ Not used
   <div class="wrap">
     <div class="fgrid">
       <div class="stack" style="gap:1rem">
-        <a class="brand" dir="ltr" href="#fa-home"><span class="mk" aria-hidden="true">AB</span><span class="wm"><b>Ali Bayat</b><small>REALTOR®</small></span></a>
+        <a class="brand" dir="ltr" href="#fa-home"><svg class="mk" viewBox="0 0 160 120" width="42" height="32" aria-hidden="true" focusable="false"><path d="M12 114 L12 62 Q12 24 50 6 Q88 24 88 62 L88 114 M24 78 L76 78 M106 10 L106 114 M106 10 L128 10 Q150 10 150 35 Q150 60 128 60 L106 60 M106 60 L132 60 Q156 60 156 87 Q156 114 132 114 L106 114" fill="none" stroke="currentColor" stroke-width="10" stroke-linejoin="round"/></svg><span class="wm"><b>Ali Bayat</b><small>REALTOR®</small></span></a>
         <p class="muted" style="max-width:34ch">مشاوره‌ی املاک برای خریداران، فروشندگان و سرمایه‌گذاران در تورنتو و منطقه‌ی یورک. به فارسی و انگلیسی.</p>
         <div class="brokerage" dir="ltr" style="text-align:right">
           <strong><mark class="tbc" data-tpl="Ali Bayat, {job_title}">Ali Bayat, Sales Representative</mark></strong>
@@ -2152,7 +2157,7 @@ function stripSVG(){
   const W=300;let g="";
   seq.forEach(([k,slug,name],i)=>{const x=i*W;g+=`<a href="#${slug}" aria-label="${name}: ${TYPES[k]}"><g transform="translate(${x-20},0) scale(.85)"><g class="st" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round">${D[k]()}</g></g>
     <text x="${x+150}" y="262" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="13" fill="currentColor" letter-spacing="1">${name.toUpperCase()}</text>
-    <text x="${x+150}" y="280" text-anchor="middle" font-family="Public Sans, sans-serif" font-size="12" fill="currentColor" opacity=".6">${TYPES[k]}</text></a>`});
+    <text x="${x+150}" y="280" text-anchor="middle" font-family="Inter, sans-serif" font-size="12" fill="currentColor" opacity=".6">${TYPES[k]}</text></a>`});
   const w=seq.length*W;
   return `<svg viewBox="-10 0 ${w+20} 300" role="img" aria-label="Elevation drawings of typical housing from Toronto north along Yonge Street to Richmond Hill, and west to Vaughan"><line x1="-10" y1="221" x2="${w+10}" y2="221" stroke="currentColor" stroke-width="1.6"/>${g}<text x="${w}" y="296" text-anchor="end" font-family="IBM Plex Mono, monospace" font-size="11" fill="currentColor" opacity=".6">SOUTH → NORTH · NOT TO SCALE</text></svg>`}
 function fillDwgs(root){
