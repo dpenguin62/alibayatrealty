@@ -153,6 +153,13 @@ TRANSFORM_JS = r"""
       unresolved.push(key);
     });
 
+    // Tap-to-call / mailto links: real href only once the confirmed value exists; otherwise plain text.
+    c.querySelectorAll('[data-href-tpl]').forEach(a => {
+      const tpl = a.dataset.hrefTpl, keys = [...tpl.matchAll(/\{(\w+)\}/g)].map(x => x[1]);
+      if (keys.every(x => x in cfg.values && cfg.values[x])) { a.setAttribute('href', fill(tpl)); a.removeAttribute('data-href-tpl'); }
+      else a.replaceWith(...a.childNodes);
+    });
+
     // Editorial dates, shown only when real.
     c.querySelectorAll('[data-meta="dates"]').forEach(x => {
       const t = [cfg.dates.published && (fa ? 'تاریخ انتشار: ' : 'Published ') + cfg.dates.published, cfg.dates.updated && (fa ? 'به‌روزرسانی: ' : 'Updated ') + cfg.dates.updated].filter(Boolean).join(' · ');

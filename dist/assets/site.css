@@ -28,6 +28,7 @@
 body{background:var(--paper);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased}
 a{color:inherit}
 :focus-visible{outline:2px solid var(--lake);outline-offset:3px;border-radius:2px}
+.cta-band :focus-visible{outline-color:var(--brass)}
 .wrap{max-width:var(--frame);margin-inline:auto;padding-inline:clamp(16px,4vw,48px)}
 h1,h2,h3{font-family:var(--display);font-weight:400;line-height:1.08;text-wrap:balance;margin:0;letter-spacing:-.015em}
 h1{font-size:clamp(2.4rem,5.6vw,4.6rem);font-weight:300}
@@ -138,6 +139,7 @@ p{margin:0}
 .hero .areas{font-family:var(--mono);font-size:.74rem;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);display:flex;flex-wrap:wrap;gap:.2rem .9rem}
 .hero .areas a{text-decoration:none}
 .hero .areas a:hover{color:var(--lake)}
+@media (max-width:600px){.hero .copy{gap:1.25rem}.hero .areas{order:9;gap:0 .9rem}.hero .areas a{display:inline-flex;align-items:center;min-height:32px}}
 .hero .meta{display:flex;flex-wrap:wrap;gap:.4rem 1.2rem;font-size:.88rem;color:var(--muted);padding-top:1.1rem;border-top:1px solid var(--line)}
 .hero .meta b{color:var(--ink);font-weight:600}
 .hero .side{display:grid;gap:.75rem}
@@ -230,6 +232,7 @@ p{margin:0}
 .cta-band .btn{background:var(--brass);color:var(--brass-ink);border-color:var(--brass)}
 .cta-band .row{justify-content:flex-end}
 .cta-band .alt{color:var(--band-ink);font-size:.92rem;opacity:.9}
+.cta-band .alt a{color:inherit;text-underline-offset:3px;display:inline-flex;align-items:center;min-height:44px}
 @media (max-width:760px){.cta-band .wrap{grid-template-columns:1fr}.cta-band .row{justify-content:flex-start}}
 
 /* Page head */
@@ -427,7 +430,7 @@ footer{background:var(--surface);border-top:1px solid var(--line);padding-block:
 .fgrid{display:grid;grid-template-columns:1.5fr repeat(3,1fr);gap:2rem}
 @media (max-width:860px){.fgrid{grid-template-columns:1fr 1fr}}
 @media (max-width:480px){.fgrid{grid-template-columns:1fr}}
-.fgrid h4{font-family:var(--mono);font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin:0 0 .8rem;font-weight:400}
+.fgrid h2{font-family:var(--mono);font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin:0 0 .8rem;font-weight:400}
 .fgrid ul{list-style:none;padding:0;margin:0;display:grid;gap:.5rem}
 .fgrid a{text-decoration:none}
 .fgrid a:hover{text-decoration:underline}

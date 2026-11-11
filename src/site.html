@@ -31,6 +31,7 @@
 body{background:var(--paper);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased}
 a{color:inherit}
 :focus-visible{outline:2px solid var(--lake);outline-offset:3px;border-radius:2px}
+.cta-band :focus-visible{outline-color:var(--brass)}
 .wrap{max-width:var(--frame);margin-inline:auto;padding-inline:clamp(16px,4vw,48px)}
 h1,h2,h3{font-family:var(--display);font-weight:400;line-height:1.08;text-wrap:balance;margin:0;letter-spacing:-.015em}
 h1{font-size:clamp(2.4rem,5.6vw,4.6rem);font-weight:300}
@@ -141,6 +142,7 @@ p{margin:0}
 .hero .areas{font-family:var(--mono);font-size:.74rem;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);display:flex;flex-wrap:wrap;gap:.2rem .9rem}
 .hero .areas a{text-decoration:none}
 .hero .areas a:hover{color:var(--lake)}
+@media (max-width:600px){.hero .copy{gap:1.25rem}.hero .areas{order:9;gap:0 .9rem}.hero .areas a{display:inline-flex;align-items:center;min-height:32px}}
 .hero .meta{display:flex;flex-wrap:wrap;gap:.4rem 1.2rem;font-size:.88rem;color:var(--muted);padding-top:1.1rem;border-top:1px solid var(--line)}
 .hero .meta b{color:var(--ink);font-weight:600}
 .hero .side{display:grid;gap:.75rem}
@@ -233,6 +235,7 @@ p{margin:0}
 .cta-band .btn{background:var(--brass);color:var(--brass-ink);border-color:var(--brass)}
 .cta-band .row{justify-content:flex-end}
 .cta-band .alt{color:var(--band-ink);font-size:.92rem;opacity:.9}
+.cta-band .alt a{color:inherit;text-underline-offset:3px;display:inline-flex;align-items:center;min-height:44px}
 @media (max-width:760px){.cta-band .wrap{grid-template-columns:1fr}.cta-band .row{justify-content:flex-start}}
 
 /* Page head */
@@ -430,7 +433,7 @@ footer{background:var(--surface);border-top:1px solid var(--line);padding-block:
 .fgrid{display:grid;grid-template-columns:1.5fr repeat(3,1fr);gap:2rem}
 @media (max-width:860px){.fgrid{grid-template-columns:1fr 1fr}}
 @media (max-width:480px){.fgrid{grid-template-columns:1fr}}
-.fgrid h4{font-family:var(--mono);font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin:0 0 .8rem;font-weight:400}
+.fgrid h2{font-family:var(--mono);font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin:0 0 .8rem;font-weight:400}
 .fgrid ul{list-style:none;padding:0;margin:0;display:grid;gap:.5rem}
 .fgrid a{text-decoration:none}
 .fgrid a:hover{text-decoration:underline}
@@ -655,9 +658,9 @@ article.teaser:hover h3{text-decoration:none}
           <div class="in"><span class="label accent">Buying guide · with calculator</span><h3>Land transfer tax: why the same price costs more to close in North York than in Vaughan</h3><p class="muted">Toronto adds its own tax on top of Ontario's. Here's how both work, and a calculator to estimate yours.</p><span class="status pub">Published<mark class="tbc" data-note="ltt-guide-review"> · draft for Ali's review</mark></span></div>
         </a>
         <div class="teasers">
-          <a class="teaser" href="#resources"><span class="label accent">Selling guide</span><h3>What's worth fixing before you list</h3><p>Which repairs pay off and which don't, from someone who works with contractors every week.</p><span class="status">Planned</span></a>
-          <a class="teaser" href="#resources"><span class="label accent">Market insights</span><h3>Monthly market notes: North York &amp; York Region</h3><p>Prices, sales and days on market by area, once a data source is connected.</p><span class="status">Planned</span></a>
-          <a class="teaser" href="#resources"><span class="label accent">Real estate tips</span><h3>How to read a condo status certificate</h3><p>The pages that matter and the red flags to look for.</p><span class="status">Planned</span></a>
+          <a class="teaser" href="#sell"><span class="label accent">Selling</span><h3>How I price, prepare and launch a home for sale</h3><p>The comparable sales behind the price, a practical fix-or-skip walk-through, and a planned first week on the market.</p></a>
+          <a class="teaser" href="#invest"><span class="label accent">Investing · with calculator</span><h3>Run the numbers on an income property</h3><p>Income, operating costs, financing and cash flow in one estimate, with every assumption on the table.</p></a>
+          <a class="teaser" href="#thornhill"><span class="label accent">Neighbourhood guide</span><h3>Thornhill: the Vaughan side vs. the Markham side</h3><p>One community split between two cities, and why the side you buy on affects property taxes and city services.</p></a>
         </div>
       </div>
     </div>
@@ -688,7 +691,7 @@ article.teaser:hover h3{text-decoration:none}
   <section class="cta-band">
     <div class="wrap">
       <div><h2>Planning a move in the next year? <em>Start with a conversation.</em></h2><p>A short call is usually enough to map out your options. No obligation, in English or Farsi.</p></div>
-      <div class="row"><a class="btn" href="#contact">Talk to Ali</a><span class="alt"><mark class="tbc" data-tpl="{phone_display}">(416) 000-0000</mark></span></div>
+      <div class="row"><a class="btn" href="#contact">Talk to Ali</a><span class="alt"><a data-href-tpl="tel:{phone_e164}"><mark class="tbc" data-tpl="{phone_display}">(416) 000-0000</mark></a></span></div>
     </div>
   </section>
 </div>
@@ -749,7 +752,7 @@ article.teaser:hover h3{text-decoration:none}
           <h3>What areas does Ali Bayat serve?</h3>
           <p>North York, Thornhill, Richmond Hill, Vaughan and Toronto, with a focus on the communities along Yonge Street.</p>
           <h3>Which brokerage is Ali Bayat with?</h3>
-          <p>Century 21 Heritage Group Ltd., Brokerage, 7330 Yonge Street, Thornhill, ON L4J 7Y7.</p>
+          <p>Century 21 Heritage Group Ltd., Brokerage, 7330 Yonge Street, Unit 116, Thornhill, ON L4J 7Y7.</p>
           <h3>Can Ali help with investment properties?</h3>
           <p>Yes. He helps investors evaluate income properties by looking at rental income, operating costs, financing and cash flow. This is real estate analysis, not financial, tax or legal advice.</p>
           <h3>Can Ali help with home improvements?</h3>
@@ -1281,8 +1284,8 @@ article.teaser:hover h3{text-decoration:none}
         <div class="box" style="grid-template-columns:72px 1fr;align-items:center"><div class="portrait" style="aspect-ratio:1;border-radius:50%"><span class="ab" style="font-family:var(--display);color:var(--lake);font-size:1.6rem">AB</span></div><div><b style="font-family:var(--display);font-weight:400;font-size:1.2rem">Ali Bayat</b><p class="small">Replies personally, <mark class="tbc" data-approve="reply-time">usually within one business day</mark></p></div></div>
         <div class="box">
           <div class="clines">
-            <div><small>Phone / text</small><span><mark class="tbc" data-tpl="{phone_display}">(416) 000-0000</mark></span></div>
-            <div><small>Email</small><span><mark class="tbc" data-tpl="{email}">ali@alibayatrealty.com</mark></span></div>
+            <div><small>Phone / text</small><span><a data-href-tpl="tel:{phone_e164}"><mark class="tbc" data-tpl="{phone_display}">(416) 000-0000</mark></a></span></div>
+            <div><small>Email</small><span><a data-href-tpl="mailto:{email}"><mark class="tbc" data-tpl="{email}">ali@alibayatrealty.com</mark></a></span></div>
             <div><small>Brokerage office</small><span><mark class="tbc" data-tpl="{brokerage_name}\n{brokerage_address_line}">[Brokerage name], Brokerage<br>[Street address], [City], ON</mark></span></div>
             <div><small>Languages</small><span>English, Farsi</span></div>
           </div>
@@ -1361,7 +1364,7 @@ article.teaser:hover h3{text-decoration:none}
   <section class="cta-band">
     <div class="wrap">
       <div><h2>قصد خرید، فروش یا سرمایه‌گذاری دارید؟ <em>با یک گفتگو شروع کنیم.</em></h2><p>یک تماس کوتاه معمولاً برای روشن شدن گزینه‌هایتان کافی است. بدون هیچ تعهدی، به فارسی یا انگلیسی.</p></div>
-      <div class="row"><a class="btn" href="#fa-contact" data-cta="cta-band">گفتگو با علی</a><span class="alt"><span dir="ltr"><mark class="tbc" data-tpl="{phone_display}">(416) 000-0000</mark></span></span></div>
+      <div class="row"><a class="btn" href="#fa-contact" data-cta="cta-band">گفتگو با علی</a><span class="alt"><span dir="ltr"><a data-href-tpl="tel:{phone_e164}"><mark class="tbc" data-tpl="{phone_display}">(416) 000-0000</mark></a></span></span></div>
     </div>
   </section>
 </div>
@@ -1779,7 +1782,7 @@ article.teaser:hover h3{text-decoration:none}
           <h3>علی بیات در چه مناطقی فعالیت می‌کند؟</h3>
           <p>نورث‌یورک، تورنهیل، ریچموند هیل، وان و تورنتو، با تمرکز بر محله‌های اطراف خیابان یانگ.</p>
           <h3>علی بیات با کدام بروکریج کار می‌کند؟</h3>
-          <p>Century 21 Heritage Group Ltd., Brokerage، به نشانی 7330 Yonge Street, Thornhill, ON L4J 7Y7.</p>
+          <p>Century 21 Heritage Group Ltd., Brokerage، به نشانی 7330 Yonge Street, Unit 116, Thornhill, ON L4J 7Y7.</p>
           <h3>آیا علی در خرید ملک سرمایه‌گذاری کمک می‌کند؟</h3>
           <p>بله. او ملک‌های درآمدزا را از نظر درآمد اجاره، هزینه‌های جاری، وام و جریان نقدی ارزیابی می‌کند. این تحلیل املاک است، نه مشاوره‌ی مالی، مالیاتی یا حقوقی.</p>
           <h3>آیا علی در بازسازی و تعمیرات هم کمک می‌کند؟</h3>
@@ -1852,8 +1855,8 @@ article.teaser:hover h3{text-decoration:none}
         <div class="box" style="grid-template-columns:72px 1fr;align-items:center"><div class="portrait" style="aspect-ratio:1;border-radius:50%"><span class="ab" style="font-family:var(--display);color:var(--lake);font-size:1.6rem">AB</span></div><div><b style="font-family:var(--display);font-weight:400;font-size:1.2rem">علی بیات</b><p class="small">شخصاً پاسخ می‌دهد، <mark class="tbc" data-approve="reply-time">معمولاً ظرف یک روز کاری</mark></p></div></div>
         <div class="box">
           <div class="clines">
-            <div><small>تلفن / پیامک</small><span><span dir="ltr"><mark class="tbc" data-tpl="{phone_display}">(416) 000-0000</mark></span></span></div>
-            <div><small>ایمیل</small><span><span dir="ltr"><mark class="tbc" data-tpl="{email}">ali@alibayatrealty.com</mark></span></span></div>
+            <div><small>تلفن / پیامک</small><span><span dir="ltr"><a data-href-tpl="tel:{phone_e164}"><mark class="tbc" data-tpl="{phone_display}">(416) 000-0000</mark></a></span></span></div>
+            <div><small>ایمیل</small><span><span dir="ltr"><a data-href-tpl="mailto:{email}"><mark class="tbc" data-tpl="{email}">ali@alibayatrealty.com</mark></a></span></span></div>
             <div><small>دفتر بروکریج</small><span dir="ltr" style="text-align:right"><mark class="tbc" data-tpl="{brokerage_name}\n{brokerage_address_line}">[Brokerage name], Brokerage<br>[Street address], [City], ON</mark></span></div>
             <div><small>زبان‌ها</small><span>فارسی، انگلیسی</span></div>
           </div>
@@ -1894,11 +1897,28 @@ article.teaser:hover h3{text-decoration:none}
   <header class="page-head"><div class="wrap">
     <nav class="crumbs" aria-label="Breadcrumb"><a href="#home">Home</a><span aria-hidden="true">/</span><span>Accessibility</span></nav>
     <h1 tabindex="-1">Accessibility</h1>
-    <p class="lede">This website is being built to be usable by everyone, including people who use a keyboard or assistive technology.</p>
+    <p class="lede">This website should be usable by everyone, including people who use a keyboard, a screen reader, magnification or other assistive technology.</p>
   </div></header>
   <section class="band tight"><div class="wrap two"><div class="prose">
-    <div class="box tint" data-pending="accessibility-statement"><h3>Statement in preparation</h3><p>If anything on this site is hard to use, please contact Ali and the information will be provided in another format.</p></div>
-    <p class="tbc-note">Ali: accessibility statement needed (AODA). Confirm the contact method for accessibility requests.</p>
+    <h2>What has been done</h2>
+    <ul>
+      <li>Pages are built as plain HTML with headings, landmarks and labelled form fields, so their content works without JavaScript.</li>
+      <li>Every page can be used with a keyboard alone. A "Skip to content" link comes first, and the element in focus is outlined.</li>
+      <li>Text and controls are checked for colour contrast in both the light and dark colour schemes.</li>
+      <li>Animation is turned off when your device asks for reduced motion.</li>
+      <li>English pages are marked as English, and Farsi pages as Farsi with right-to-left layout, so screen readers use the right voice.</li>
+    </ul>
+    <h2>How it's checked</h2>
+    <p>Each release is tested with automated checks for labels, landmarks, colour contrast, keyboard access and visible focus, at desktop and phone widths, in light and dark mode.</p>
+    <p>Automated testing doesn't find every barrier. The site hasn't had an independent audit or testing by people who use assistive technology, so it doesn't claim to fully meet any accessibility standard.</p>
+    <h2>Known limitations</h2>
+    <ul>
+      <li>The neighbourhood drawings are decorative or summarised in nearby text; they don't describe every detail of each building.</li>
+      <li>The calculators give estimates. If you can't use them, ask and Ali will work out the numbers with you.</li>
+    </ul>
+    <h2>Ask for another format, or report a problem</h2>
+    <p>If something on this site is hard to use, or you'd like information in another format, call or text <a data-href-tpl="tel:{phone_e164}"><mark class="tbc" data-tpl="{phone_display}">(416) 000-0000</mark></a> or email <a data-href-tpl="mailto:{email}"><mark class="tbc" data-tpl="{email}">ali@alibayatrealty.com</mark></a>. Please say which page and what went wrong. Ali will reply and provide the information in a format that works for you.</p>
+    <p class="small muted">Statement last reviewed November 11, 2026.</p>
     <div class="row"><a class="btn" href="#contact" data-interest="question">Contact Ali</a></div>
   </div></div></section>
 </div>
@@ -2035,9 +2055,9 @@ Not used
           <span class="muted"><mark class="tbc" data-tpl="{brokerage_address_line}{brokerage_franchise_note}">[Brokerage address] · Independently owned and operated</mark></span>
         </div>
       </div>
-      <div><h4>Work with Ali</h4><ul><li><a href="#buy">Buy a home</a></li><li><a href="#sell">Sell a home</a></li><li><a href="#invest">Investment properties</a></li><li data-requires="idx"><a href="#listings">Listing search</a></li><li><a href="#contact">Talk to Ali</a></li></ul></div>
-      <div><h4>Neighbourhoods</h4><ul><li><a href="#north-york">North York real estate</a></li><li><a href="#thornhill">Thornhill real estate</a></li><li><a href="#richmond-hill">Richmond Hill real estate</a></li><li><a href="#vaughan">Vaughan real estate</a></li><li><a href="#toronto">Toronto real estate</a></li></ul></div>
-      <div><h4>Contact</h4><ul><li><mark class="tbc" data-tpl="{phone_display}">(416) 000-0000</mark></li><li><mark class="tbc" data-tpl="{email}">ali@alibayatrealty.com</mark></li><li><a href="#about">About Ali</a></li><li><a href="#resources">Resources</a></li></ul></div>
+      <div><h2>Work with Ali</h2><ul><li><a href="#buy">Buy a home</a></li><li><a href="#sell">Sell a home</a></li><li><a href="#invest">Investment properties</a></li><li data-requires="idx"><a href="#listings">Listing search</a></li><li><a href="#contact">Talk to Ali</a></li></ul></div>
+      <div><h2>Neighbourhoods</h2><ul><li><a href="#north-york">North York real estate</a></li><li><a href="#thornhill">Thornhill real estate</a></li><li><a href="#richmond-hill">Richmond Hill real estate</a></li><li><a href="#vaughan">Vaughan real estate</a></li><li><a href="#toronto">Toronto real estate</a></li></ul></div>
+      <div><h2>Contact</h2><ul><li><a data-href-tpl="tel:{phone_e164}"><mark class="tbc" data-tpl="{phone_display}">(416) 000-0000</mark></a></li><li><a data-href-tpl="mailto:{email}"><mark class="tbc" data-tpl="{email}">ali@alibayatrealty.com</mark></a></li><li><a href="#about">About Ali</a></li><li><a href="#resources">Resources</a></li></ul></div>
     </div>
     <div class="legal">
       <p>Not intended to solicit properties currently listed for sale or buyers or sellers currently under contract with a brokerage. <mark class="tbc" data-note="footer-disclaimer">Final disclaimer wording from brokerage</mark></p><p>Century 21 Heritage Group Ltd., Brokerage. Independently owned and operated. ®/™ trademarks owned by Century 21 Real Estate LLC used under license or authorized sub-license.</p><p>The trademarks REALTOR®, REALTORS® and the REALTOR® logo are controlled by The Canadian Real Estate Association (CREA) and identify real estate professionals who are members of CREA. Used under license.</p>
@@ -2097,9 +2117,9 @@ Not used
           <span class="muted"><mark class="tbc" data-tpl="{brokerage_address_line}{brokerage_franchise_note}">[Brokerage address] · Independently owned and operated</mark></span>
         </div>
       </div>
-      <div><h4>صفحات فارسی</h4><ul><li><a href="#fa-home">خانه</a></li><li><a href="#fa-buy">خرید خانه</a></li><li><a href="#fa-sell">فروش خانه</a></li><li><a href="#fa-invest">سرمایه‌گذاری</a></li><li><a href="#fa-resources">منابع آموزشی</a></li><li><a href="#fa-about">درباره‌ی علی</a></li><li><a href="#fa-contact">تماس</a></li></ul></div>
-      <div><h4>محله‌ها</h4><ul><li><a href="#fa-north-york">املاک نورث‌یورک</a></li><li><a href="#fa-thornhill">املاک تورنهیل</a></li><li><a href="#fa-richmond-hill">املاک ریچموند هیل</a></li><li><a href="#fa-vaughan">املاک وان</a></li><li><a href="#fa-toronto">املاک تورنتو</a></li></ul></div>
-      <div><h4>تماس</h4><ul><li><span dir="ltr"><mark class="tbc" data-tpl="{phone_display}">(416) 000-0000</mark></span></li><li><span dir="ltr"><mark class="tbc" data-tpl="{email}">ali@alibayatrealty.com</mark></span></li></ul></div>
+      <div><h2>صفحات فارسی</h2><ul><li><a href="#fa-home">خانه</a></li><li><a href="#fa-buy">خرید خانه</a></li><li><a href="#fa-sell">فروش خانه</a></li><li><a href="#fa-invest">سرمایه‌گذاری</a></li><li><a href="#fa-resources">منابع آموزشی</a></li><li><a href="#fa-about">درباره‌ی علی</a></li><li><a href="#fa-contact">تماس</a></li></ul></div>
+      <div><h2>محله‌ها</h2><ul><li><a href="#fa-north-york">املاک نورث‌یورک</a></li><li><a href="#fa-thornhill">املاک تورنهیل</a></li><li><a href="#fa-richmond-hill">املاک ریچموند هیل</a></li><li><a href="#fa-vaughan">املاک وان</a></li><li><a href="#fa-toronto">املاک تورنتو</a></li></ul></div>
+      <div><h2>تماس</h2><ul><li><span dir="ltr"><a data-href-tpl="tel:{phone_e164}"><mark class="tbc" data-tpl="{phone_display}">(416) 000-0000</mark></a></span></li><li><span dir="ltr"><a data-href-tpl="mailto:{email}"><mark class="tbc" data-tpl="{email}">ali@alibayatrealty.com</mark></a></span></li></ul></div>
     </div>
     <div data-legal-from-en></div>
   </div>
@@ -2430,7 +2450,7 @@ let activeCat="all";
 function renderKC(){
   if(!document.getElementById("chips"))return;
   document.getElementById("chips").innerHTML=[{id:"all",name:"All"},...CATS].map(c=>`<button class="chip" type="button" data-cat="${c.id}" aria-pressed="${c.id===activeCat}">${c.name}</button>`).join("");
-  document.getElementById("kc").innerHTML=CATS.filter(c=>activeCat==="all"||c.id===activeCat).map(c=>`<section class="kc-cat"><div class="intro"><h2>${c.name}</h2><p>${c.d}</p></div><div class="arts">${ARTS.filter(a=>a.c===c.id).map(a=>{const tag=a.href?"a":"div";return `<${tag} class="art"${a.href?` href="${a.href}"`:""}><h3>${a.t}</h3><span class="status${a.pub?" pub":""}">${a.pub?"Live":"Planned"}</span><p>${a.d}</p><span class="url">${a.u}</span></${tag}>`}).join("")}</div></section>`).join("")}
+  document.getElementById("kc").innerHTML=CATS.filter(c=>activeCat==="all"||c.id===activeCat).map(c=>`<section class="kc-cat"><div class="intro"><h2>${c.name}</h2><p>${c.d}</p></div><div class="arts">${ARTS.filter(a=>a.c===c.id).map(a=>{const tag=a.href?"a":"div";return `<${tag} class="art"${a.href?` href="${a.href}"`:""}><h3>${a.t}</h3><span class="status${a.pub?" pub":""}">${a.pub?"Live":"Planned"}</span><p>${a.d}</p></${tag}>`}).join("")}</div></section>`).join("")}
 document.addEventListener("click",e=>{const b=e.target.closest("[data-cat]");if(!b||!document.getElementById("chips"))return;activeCat=b.dataset.cat;renderKC()});
 
 /* ---------- Land transfer tax estimator ---------- */

@@ -1,6 +1,6 @@
 # Ali Bayat Realty: verification report
 
-Output verified: `dist/` · production domain `https://alibayatrealty.com` · 2026-11-05
+Output verified: `dist/` · production domain `https://alibayatrealty.com` · 2026-11-11
 
 ## Final gate status: **PASS WITH OWNER INPUT REQUIRED**
 
@@ -18,7 +18,7 @@ All engineering checks pass. Every remaining failure needs Ali's information, an
 | 8 | Navigation works on desktop, tablet and mobile | ✅ pass |
 | 9 | Accessibility: axe-core, keyboard, focus, contrast, mobile, reduced motion | ❌ fail (external) |
 | 10 | Lead form: production endpoint, payload contract, consent, honest states | ✅ pass |
-| 11 | Production safety: no placeholders, invented facts or interim content | ❌ fail (legal, owner) |
+| 11 | Production safety: no placeholders, invented facts or interim content | ❌ fail (legal) |
 | 12 | Content governance: author, review status, dates, sources, indexability | ❌ fail (owner) |
 | 13 | Internal linking: no orphans, pillars connected, contextual links | ✅ pass |
 | 14 | Performance budget: weight, requests, DOM size, layout shift, render-blocking | ✅ pass |
@@ -50,10 +50,10 @@ All engineering checks pass. Every remaining failure needs Ali's information, an
 
 ## Internal links
 **3. Zero broken internal links: PASS**
-- 1841 links and assets across 32 pages → 34 unique internal targets, 0 broken
+- 1913 links and assets across 32 pages → 34 unique internal targets, 0 broken
 
 **13. Internal linking: no orphans, pillars connected, contextual links: PASS**
-- contextual inbound links (main content only): / 18, /contact/ 15, /fa/ 14, /fa/contact/ 13, /invest/ 12, /fa/invest/ 11, /buy/ 10, /neighbourhoods/north-york/ 10, /neighbourhoods/vaughan/ 10, /sell/ 9, /neighbourhoods/thornhill/ 9, /fa/buy/ 9, /fa/neighbourhoods/ 9, /neighbourhoods/ 8, /neighbourhoods/richmond-hill/ 8, /neighbourhoods/toronto/ 8, /resources/buying/land-transfer-tax-toronto-york-region/ 8, /fa/sell/ 8, /fa/neighbourhoods/north-york/ 8, /fa/neighbourhoods/vaughan/ 8, /fa/neighbourhoods/thornhill/ 7, /fa/neighbourhoods/richmond-hill/ 7, /fa/neighbourhoods/toronto/ 7, /fa/resources/buying/land-transfer-tax-toronto-york-region/ 7, /resources/ 3, /fa/resources/ 2, /privacy/ 2, /about/ 1, /fa/about/ 1, /terms/ 0, /accessibility/ 0
+- contextual inbound links (main content only): / 18, /contact/ 15, /fa/ 14, /fa/contact/ 13, /invest/ 12, /fa/invest/ 11, /buy/ 10, /neighbourhoods/north-york/ 10, /neighbourhoods/vaughan/ 10, /sell/ 9, /neighbourhoods/thornhill/ 9, /fa/buy/ 9, /fa/neighbourhoods/ 9, /neighbourhoods/ 8, /neighbourhoods/richmond-hill/ 8, /neighbourhoods/toronto/ 8, /resources/buying/land-transfer-tax-toronto-york-region/ 8, /fa/sell/ 8, /fa/neighbourhoods/north-york/ 8, /fa/neighbourhoods/vaughan/ 8, /fa/neighbourhoods/thornhill/ 7, /fa/neighbourhoods/richmond-hill/ 7, /fa/neighbourhoods/toronto/ 7, /fa/resources/buying/land-transfer-tax-toronto-york-region/ 7, /resources/ 2, /fa/resources/ 2, /privacy/ 2, /about/ 1, /fa/about/ 1, /terms/ 0, /accessibility/ 0
 
 ## Accessibility
 **8. Navigation works on desktop, tablet and mobile: PASS**
@@ -145,22 +145,18 @@ All engineering checks pass. Every remaining failure needs Ali's information, an
 
 ## Production safety
 **11. Production safety: no placeholders, invented facts or interim content: FAIL**
-- spec patterns in published pages: [Brokerage: 0, [to be written / to be written: 0, draft for Ali: 2, Preview only: 0, 000000: 0, (416) 000-0000: 0, [year]: 0, [City]: 0, nan / NaN: 0, TBC: 0, TODO: 0, FIXME: 0
-- every remaining hit comes from a managed placeholder awaiting the owner input listed above; none leak outside it
+- spec patterns in published pages: [Brokerage: 0, [to be written / to be written: 0, draft for Ali: 0, Preview only: 0, 000000: 0, (416) 000-0000: 0, [year]: 0, [City]: 0, nan / NaN: 0, TBC: 0, TODO: 0, FIXME: 0
 - ✗ [legal] needs consent-wording (1 page: /contact/)
 - ✗ [legal] needs consent-wording-fa (1 page: /fa/contact/)
-- ✗ [owner] needs ltt-guide-review (3 pages: /, /resources/, /resources/buying/land-transfer-tax-toronto-york-region/)
-- ✗ [owner] needs ltt-guide-review-fa (1 page: /fa/resources/buying/land-transfer-tax-toronto-york-region/)
 - ✗ [legal] needs referral-disclosure (2 pages: /fa/invest/, /invest/)
 - ✗ [legal] /privacy/: privacy-policy is interim, not final
 - ✗ [legal] /terms/: terms-of-use is interim, not final
-- ✗ [legal] /accessibility/: accessibility-statement is interim, not final
 
 | Pattern | Occurrences in published pages |
 |---|---|
 | `[Brokerage` | 0 |
 | `[to be written / to be written` | 0 |
-| `draft for Ali` | 2 |
+| `draft for Ali` | 0 |
 | `Preview only` | 0 |
 | `000000` | 0 |
 | `(416) 000-0000` | 0 |
@@ -176,16 +172,16 @@ Every occurrence above comes from a managed placeholder (awaiting the owner inpu
 ## Performance
 **14. Performance budget: weight, requests, DOM size, layout shift, render-blocking: PASS**
 - site.js 21 KB (prototype code stripped), site.css 39 KB, both cached across pages; scripts deferred; no images
-- largest page /invest/ 49 KB HTML; most DOM /invest/ 862 elements; max same-origin requests 3; max layout shift 0.000
+- largest page /invest/ 49 KB HTML; most DOM /invest/ 864 elements; max same-origin requests 4; max layout shift 0.000
 - third-party request on every page: fonts.googleapis.com, fonts.gstatic.com (Google Fonts). Recommendation: self-host the three font families
 
 ## Reproducibility
 **15. Reproducible, machine-independent build: PASS**
-- two clean rebuilds skipped (--skip-rebuild)
+- two clean builds byte-identical to each other and to the output under test (37 files); pinned dependencies; no machine paths
 
 ## Remaining blockers
 
-### Requires Ali's information or approval (30)
+### Requires Ali's information or approval (28)
 - /: not yet reviewed and approved by Ali
 - /about/: not yet reviewed and approved by Ali
 - /buy/: not yet reviewed and approved by Ali
@@ -214,14 +210,11 @@ Every occurrence above comes from a managed placeholder (awaiting the owner inpu
 - /resources/: not yet reviewed and approved by Ali
 - /resources/buying/land-transfer-tax-toronto-york-region/: not yet reviewed and approved by Ali
 - /sell/: not yet reviewed and approved by Ali
-- needs ltt-guide-review (3 pages: /, /resources/, /resources/buying/land-transfer-tax-toronto-york-region/)
-- needs ltt-guide-review-fa (1 page: /fa/resources/buying/land-transfer-tax-toronto-york-region/)
 
 ### Requires an external service or access (1)
 - axe-core is not installed, so the full axe rule set did NOT run. Run `npm install` (package.json pins axe-core) and re-verify
 
-### Requires legal / brokerage review (6)
-- /accessibility/: accessibility-statement is interim, not final
+### Requires legal / brokerage review (5)
 - /privacy/: privacy-policy is interim, not final
 - /terms/: terms-of-use is interim, not final
 - needs consent-wording (1 page: /contact/)
