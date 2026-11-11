@@ -212,7 +212,7 @@ TRANSFORM_JS = r"""
 }
 """
 
-FAVICON = """<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><rect width="64" height="64" rx="12" fill="#14213D"/><g transform="translate(8 14) scale(0.3)"><path d="M12 114 L12 62 Q12 24 50 6 Q88 24 88 62 L88 114 M24 78 L76 78 M106 10 L106 114 M106 10 L128 10 Q150 10 150 35 Q150 60 128 60 L106 60 M106 60 L132 60 Q156 60 156 87 Q156 114 132 114 L106 114" fill="none" stroke="#F7F5F0" stroke-width="14" stroke-linejoin="round"/></g></svg>
+FAVICON = """<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><rect width="64" height="64" rx="12" fill="#14213D"/><text x="32" y="43" text-anchor="middle" font-family="Playfair Display, Georgia, 'Times New Roman', serif" font-size="30" letter-spacing="1" fill="#F7F5F0">AB</text></svg>
 """
 FONTS = ('<link rel="preconnect" href="https://fonts.googleapis.com">\n'
          '<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>\n'
