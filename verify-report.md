@@ -46,7 +46,7 @@ All engineering checks pass. Every remaining failure needs Ali's information, an
 ## Sitemap
 **5. Sitemap: only intended canonical indexable URLs, accurate lastmod: PASS**
 - 28 URLs, all canonical and indexable; noindex, planned and held-back pages excluded
-- lastmod present on 0 of 28 (only from real publish/update dates; omitted otherwise, never the build date)
+- lastmod present on 26 of 28 (only from real publish/update dates; omitted otherwise, never the build date)
 
 ## Internal links
 **3. Zero broken internal links: PASS**
@@ -77,77 +77,49 @@ All engineering checks pass. Every remaining failure needs Ali's information, an
 
 ## Content governance
 **12. Content governance: author, review status, dates, sources, indexability: FAIL**
-- 32 pages registered; 0 approved as built; author = Ali Bayat
+- 32 pages registered; 28 approved as built; author = Ali Bayat
 - approvals are tied to each page's exact content; dates come only from Ali's approvals (python build.py approve …)
-- ✗ [owner] /: not yet reviewed and approved by Ali
-- ✗ [owner] /about/: not yet reviewed and approved by Ali
-- ✗ [owner] /buy/: not yet reviewed and approved by Ali
-- ✗ [owner] /sell/: not yet reviewed and approved by Ali
 - ✗ [owner] /invest/: not yet reviewed and approved by Ali
-- ✗ [owner] /neighbourhoods/: not yet reviewed and approved by Ali
-- ✗ [owner] /neighbourhoods/north-york/: not yet reviewed and approved by Ali
-- ✗ [owner] /neighbourhoods/thornhill/: not yet reviewed and approved by Ali
-- ✗ [owner] /neighbourhoods/richmond-hill/: not yet reviewed and approved by Ali
-- ✗ [owner] /neighbourhoods/vaughan/: not yet reviewed and approved by Ali
-- ✗ [owner] /neighbourhoods/toronto/: not yet reviewed and approved by Ali
-- ✗ [owner] /resources/: not yet reviewed and approved by Ali
-- ✗ [owner] /resources/buying/land-transfer-tax-toronto-york-region/: not yet reviewed and approved by Ali
-- ✗ [owner] /contact/: not yet reviewed and approved by Ali
-- ✗ [owner] /fa/: not yet reviewed and approved by Ali
-- ✗ [owner] /fa/buy/: not yet reviewed and approved by Ali
-- ✗ [owner] /fa/sell/: not yet reviewed and approved by Ali
 - ✗ [owner] /fa/invest/: not yet reviewed and approved by Ali
-- ✗ [owner] /fa/neighbourhoods/: not yet reviewed and approved by Ali
-- ✗ [owner] /fa/neighbourhoods/north-york/: not yet reviewed and approved by Ali
-- ✗ [owner] /fa/neighbourhoods/thornhill/: not yet reviewed and approved by Ali
-- ✗ [owner] /fa/neighbourhoods/richmond-hill/: not yet reviewed and approved by Ali
-- ✗ [owner] /fa/neighbourhoods/vaughan/: not yet reviewed and approved by Ali
-- ✗ [owner] /fa/neighbourhoods/toronto/: not yet reviewed and approved by Ali
-- ✗ [owner] /fa/resources/: not yet reviewed and approved by Ali
-- ✗ [owner] /fa/resources/buying/land-transfer-tax-toronto-york-region/: not yet reviewed and approved by Ali
-- ✗ [owner] /fa/about/: not yet reviewed and approved by Ali
-- ✗ [owner] /fa/contact/: not yet reviewed and approved by Ali
 
 | Page | Type | Author | Review | Published | Updated | Source / data period | Indexable |
 |---|---|---|---|---|---|---|---|
-| `/` | home | Ali Bayat | draft | n/a | n/a | n/a | yes |
-| `/about/` | profile | Ali Bayat | draft | n/a | n/a | n/a | yes |
-| `/buy/` | service | Ali Bayat | draft | n/a | n/a | n/a | yes |
-| `/sell/` | service | Ali Bayat | draft | n/a | n/a | n/a | yes |
+| `/` | home | Ali Bayat | approved | 2026-11-11 | n/a | n/a | yes |
+| `/about/` | profile | Ali Bayat | approved | 2026-11-11 | n/a | n/a | yes |
+| `/buy/` | service | Ali Bayat | approved | 2026-11-11 | n/a | n/a | yes |
+| `/sell/` | service | Ali Bayat | approved | 2026-11-11 | n/a | n/a | yes |
 | `/invest/` | service | Ali Bayat | draft | n/a | n/a | n/a | yes |
-| `/neighbourhoods/` | hub | Ali Bayat | draft | n/a | n/a | n/a | yes |
-| `/neighbourhoods/north-york/` | neighbourhood-guide | Ali Bayat | draft | n/a | n/a | n/a | yes |
-| `/neighbourhoods/thornhill/` | neighbourhood-guide | Ali Bayat | draft | n/a | n/a | n/a | yes |
-| `/neighbourhoods/richmond-hill/` | neighbourhood-guide | Ali Bayat | draft | n/a | n/a | n/a | yes |
-| `/neighbourhoods/vaughan/` | neighbourhood-guide | Ali Bayat | draft | n/a | n/a | n/a | yes |
-| `/neighbourhoods/toronto/` | neighbourhood-guide | Ali Bayat | draft | n/a | n/a | n/a | yes |
-| `/resources/` | hub | Ali Bayat | draft | n/a | n/a | n/a | yes |
-| `/resources/buying/land-transfer-tax-toronto-york-region/` | guide | Ali Bayat | draft | n/a | n/a | City of Toronto, MLTT rates and fees; City of Toronto, MLTT rebates; Ontario, calculating land transfer tax; Ontario, refunds for first-time homebuyers (Ontario rates in effect since January 1, 2017; City of Toronto MLTT rates in effect from April 1, 2026; verified 2026-10-01) | yes |
-| `/contact/` | contact | Ali Bayat | draft | n/a | n/a | n/a | yes |
-| `/fa/` | home | Ali Bayat | draft | n/a | n/a | n/a | yes |
-| `/fa/buy/` | service | Ali Bayat | draft | n/a | n/a | n/a | yes |
-| `/fa/sell/` | service | Ali Bayat | draft | n/a | n/a | n/a | yes |
+| `/neighbourhoods/` | hub | Ali Bayat | approved | 2026-11-11 | n/a | n/a | yes |
+| `/neighbourhoods/north-york/` | neighbourhood-guide | Ali Bayat | approved | 2026-11-11 | n/a | n/a | yes |
+| `/neighbourhoods/thornhill/` | neighbourhood-guide | Ali Bayat | approved | 2026-11-11 | n/a | n/a | yes |
+| `/neighbourhoods/richmond-hill/` | neighbourhood-guide | Ali Bayat | approved | 2026-11-11 | n/a | n/a | yes |
+| `/neighbourhoods/vaughan/` | neighbourhood-guide | Ali Bayat | approved | 2026-11-11 | n/a | n/a | yes |
+| `/neighbourhoods/toronto/` | neighbourhood-guide | Ali Bayat | approved | 2026-11-11 | n/a | n/a | yes |
+| `/resources/` | hub | Ali Bayat | approved | 2026-11-11 | n/a | n/a | yes |
+| `/resources/buying/land-transfer-tax-toronto-york-region/` | guide | Ali Bayat | approved | 2026-11-11 | n/a | City of Toronto, MLTT rates and fees; City of Toronto, MLTT rebates; Ontario, calculating land transfer tax; Ontario, refunds for first-time homebuyers (Ontario rates in effect since January 1, 2017; City of Toronto MLTT rates in effect from April 1, 2026; verified 2026-10-01) | yes |
+| `/contact/` | contact | Ali Bayat | approved | 2026-11-11 | n/a | n/a | yes |
+| `/fa/` | home | Ali Bayat | approved | 2026-11-11 | n/a | n/a | yes |
+| `/fa/buy/` | service | Ali Bayat | approved | 2026-11-11 | n/a | n/a | yes |
+| `/fa/sell/` | service | Ali Bayat | approved | 2026-11-11 | n/a | n/a | yes |
 | `/fa/invest/` | service | Ali Bayat | draft | n/a | n/a | n/a | yes |
-| `/fa/neighbourhoods/` | hub | Ali Bayat | draft | n/a | n/a | n/a | yes |
-| `/fa/neighbourhoods/north-york/` | neighbourhood-guide | Ali Bayat | draft | n/a | n/a | n/a | yes |
-| `/fa/neighbourhoods/thornhill/` | neighbourhood-guide | Ali Bayat | draft | n/a | n/a | n/a | yes |
-| `/fa/neighbourhoods/richmond-hill/` | neighbourhood-guide | Ali Bayat | draft | n/a | n/a | n/a | yes |
-| `/fa/neighbourhoods/vaughan/` | neighbourhood-guide | Ali Bayat | draft | n/a | n/a | n/a | yes |
-| `/fa/neighbourhoods/toronto/` | neighbourhood-guide | Ali Bayat | draft | n/a | n/a | n/a | yes |
-| `/fa/resources/` | hub | Ali Bayat | draft | n/a | n/a | n/a | yes |
-| `/fa/resources/buying/land-transfer-tax-toronto-york-region/` | guide | Ali Bayat | draft | n/a | n/a | City of Toronto, MLTT rates and fees; City of Toronto, MLTT rebates; Ontario, calculating land transfer tax; Ontario, refunds for first-time homebuyers (Ontario rates in effect since January 1, 2017; City of Toronto MLTT rates in effect from April 1, 2026; verified 2026-10-01) | yes |
-| `/fa/about/` | profile | Ali Bayat | draft | n/a | n/a | n/a | yes |
-| `/fa/contact/` | contact | Ali Bayat | draft | n/a | n/a | n/a | yes |
+| `/fa/neighbourhoods/` | hub | Ali Bayat | approved | 2026-11-11 | n/a | n/a | yes |
+| `/fa/neighbourhoods/north-york/` | neighbourhood-guide | Ali Bayat | approved | 2026-11-11 | n/a | n/a | yes |
+| `/fa/neighbourhoods/thornhill/` | neighbourhood-guide | Ali Bayat | approved | 2026-11-11 | n/a | n/a | yes |
+| `/fa/neighbourhoods/richmond-hill/` | neighbourhood-guide | Ali Bayat | approved | 2026-11-11 | n/a | n/a | yes |
+| `/fa/neighbourhoods/vaughan/` | neighbourhood-guide | Ali Bayat | approved | 2026-11-11 | n/a | n/a | yes |
+| `/fa/neighbourhoods/toronto/` | neighbourhood-guide | Ali Bayat | approved | 2026-11-11 | n/a | n/a | yes |
+| `/fa/resources/` | hub | Ali Bayat | approved | 2026-11-11 | n/a | n/a | yes |
+| `/fa/resources/buying/land-transfer-tax-toronto-york-region/` | guide | Ali Bayat | approved | 2026-11-11 | n/a | City of Toronto, MLTT rates and fees; City of Toronto, MLTT rebates; Ontario, calculating land transfer tax; Ontario, refunds for first-time homebuyers (Ontario rates in effect since January 1, 2017; City of Toronto MLTT rates in effect from April 1, 2026; verified 2026-10-01) | yes |
+| `/fa/about/` | profile | Ali Bayat | approved | 2026-11-11 | n/a | n/a | yes |
+| `/fa/contact/` | contact | Ali Bayat | approved | 2026-11-11 | n/a | n/a | yes |
 | `/privacy/` | legal | Ali Bayat | draft | n/a | n/a | n/a | no |
 | `/terms/` | legal | Ali Bayat | draft | n/a | n/a | n/a | no |
-| `/accessibility/` | legal | Ali Bayat | draft | n/a | n/a | n/a | no |
-| `/404.html` | system | Ali Bayat | draft | n/a | n/a | n/a | no |
+| `/accessibility/` | legal | Ali Bayat | approved | 2026-11-11 | n/a | n/a | no |
+| `/404.html` | system | Ali Bayat | approved | 2026-11-11 | n/a | n/a | no |
 
 ## Production safety
 **11. Production safety: no placeholders, invented facts or interim content: FAIL**
 - spec patterns in published pages: [Brokerage: 0, [to be written / to be written: 0, draft for Ali: 0, Preview only: 0, 000000: 0, (416) 000-0000: 0, [year]: 0, [City]: 0, nan / NaN: 0, TBC: 0, TODO: 0, FIXME: 0
-- ✗ [legal] needs consent-wording (1 page: /contact/)
-- ✗ [legal] needs consent-wording-fa (1 page: /fa/contact/)
 - ✗ [legal] needs referral-disclosure (2 pages: /fa/invest/, /invest/)
 - ✗ [legal] /privacy/: privacy-policy is interim, not final
 - ✗ [legal] /terms/: terms-of-use is interim, not final
@@ -181,44 +153,16 @@ Every occurrence above comes from a managed placeholder (awaiting the owner inpu
 
 ## Remaining blockers
 
-### Requires Ali's information or approval (28)
-- /: not yet reviewed and approved by Ali
-- /about/: not yet reviewed and approved by Ali
-- /buy/: not yet reviewed and approved by Ali
-- /contact/: not yet reviewed and approved by Ali
-- /fa/: not yet reviewed and approved by Ali
-- /fa/about/: not yet reviewed and approved by Ali
-- /fa/buy/: not yet reviewed and approved by Ali
-- /fa/contact/: not yet reviewed and approved by Ali
+### Requires Ali's information or approval (2)
 - /fa/invest/: not yet reviewed and approved by Ali
-- /fa/neighbourhoods/: not yet reviewed and approved by Ali
-- /fa/neighbourhoods/north-york/: not yet reviewed and approved by Ali
-- /fa/neighbourhoods/richmond-hill/: not yet reviewed and approved by Ali
-- /fa/neighbourhoods/thornhill/: not yet reviewed and approved by Ali
-- /fa/neighbourhoods/toronto/: not yet reviewed and approved by Ali
-- /fa/neighbourhoods/vaughan/: not yet reviewed and approved by Ali
-- /fa/resources/: not yet reviewed and approved by Ali
-- /fa/resources/buying/land-transfer-tax-toronto-york-region/: not yet reviewed and approved by Ali
-- /fa/sell/: not yet reviewed and approved by Ali
 - /invest/: not yet reviewed and approved by Ali
-- /neighbourhoods/: not yet reviewed and approved by Ali
-- /neighbourhoods/north-york/: not yet reviewed and approved by Ali
-- /neighbourhoods/richmond-hill/: not yet reviewed and approved by Ali
-- /neighbourhoods/thornhill/: not yet reviewed and approved by Ali
-- /neighbourhoods/toronto/: not yet reviewed and approved by Ali
-- /neighbourhoods/vaughan/: not yet reviewed and approved by Ali
-- /resources/: not yet reviewed and approved by Ali
-- /resources/buying/land-transfer-tax-toronto-york-region/: not yet reviewed and approved by Ali
-- /sell/: not yet reviewed and approved by Ali
 
 ### Requires an external service or access (1)
 - axe-core is not installed, so the full axe rule set did NOT run. Run `npm install` (package.json pins axe-core) and re-verify
 
-### Requires legal / brokerage review (5)
+### Requires legal / brokerage review (3)
 - /privacy/: privacy-policy is interim, not final
 - /terms/: terms-of-use is interim, not final
-- needs consent-wording (1 page: /contact/)
-- needs consent-wording-fa (1 page: /fa/contact/)
 - needs referral-disclosure (2 pages: /fa/invest/, /invest/)
 
 ### Engineering defect (0)

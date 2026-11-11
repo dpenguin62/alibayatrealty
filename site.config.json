@@ -29,6 +29,8 @@
   "referral_disclosure": null
  },
  "approved": [
+  "consent-wording",
+  "consent-wording-fa",
   "contact-channels",
   "experience-claim",
   "footer-disclaimer",

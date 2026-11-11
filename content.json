@@ -5,35 +5,35 @@
  },
  "pages": {
   "home": {
-   "review_status": "draft",
-   "approved_hash": null,
-   "reviewed_by": null,
-   "reviewed_at": null,
-   "published_at": null,
+   "review_status": "approved",
+   "approved_hash": "3d8f643bab2687dc",
+   "reviewed_by": "Ali Bayat",
+   "reviewed_at": "2026-11-11",
+   "published_at": "2026-11-11",
    "updated_at": null
   },
   "about": {
-   "review_status": "draft",
-   "approved_hash": null,
-   "reviewed_by": null,
-   "reviewed_at": null,
-   "published_at": null,
+   "review_status": "approved",
+   "approved_hash": "cc15a7ea63a9893e",
+   "reviewed_by": "Ali Bayat",
+   "reviewed_at": "2026-11-11",
+   "published_at": "2026-11-11",
    "updated_at": null
   },
   "buy": {
-   "review_status": "draft",
-   "approved_hash": null,
-   "reviewed_by": null,
-   "reviewed_at": null,
-   "published_at": null,
+   "review_status": "approved",
+   "approved_hash": "f3b78eef67252f2b",
+   "reviewed_by": "Ali Bayat",
+   "reviewed_at": "2026-11-11",
+   "published_at": "2026-11-11",
    "updated_at": null
   },
   "sell": {
-   "review_status": "draft",
-   "approved_hash": null,
-   "reviewed_by": null,
-   "reviewed_at": null,
-   "published_at": null,
+   "review_status": "approved",
+   "approved_hash": "16d11447508a32f0",
+   "reviewed_by": "Ali Bayat",
+   "reviewed_at": "2026-11-11",
+   "published_at": "2026-11-11",
    "updated_at": null
   },
   "invest": {
@@ -45,75 +45,75 @@
    "updated_at": null
   },
   "neighbourhoods": {
-   "review_status": "draft",
-   "approved_hash": null,
-   "reviewed_by": null,
-   "reviewed_at": null,
-   "published_at": null,
+   "review_status": "approved",
+   "approved_hash": "e497f50715b9e89d",
+   "reviewed_by": "Ali Bayat",
+   "reviewed_at": "2026-11-11",
+   "published_at": "2026-11-11",
    "updated_at": null
   },
   "north-york": {
-   "review_status": "draft",
-   "approved_hash": null,
-   "reviewed_by": null,
-   "reviewed_at": null,
-   "published_at": null,
+   "review_status": "approved",
+   "approved_hash": "c2edf6e07a8d4ea2",
+   "reviewed_by": "Ali Bayat",
+   "reviewed_at": "2026-11-11",
+   "published_at": "2026-11-11",
    "updated_at": null
   },
   "thornhill": {
-   "review_status": "draft",
-   "approved_hash": null,
-   "reviewed_by": null,
-   "reviewed_at": null,
-   "published_at": null,
+   "review_status": "approved",
+   "approved_hash": "7512e7015acc12f0",
+   "reviewed_by": "Ali Bayat",
+   "reviewed_at": "2026-11-11",
+   "published_at": "2026-11-11",
    "updated_at": null
   },
   "richmond-hill": {
-   "review_status": "draft",
-   "approved_hash": null,
-   "reviewed_by": null,
-   "reviewed_at": null,
-   "published_at": null,
+   "review_status": "approved",
+   "approved_hash": "845e9b88989484f5",
+   "reviewed_by": "Ali Bayat",
+   "reviewed_at": "2026-11-11",
+   "published_at": "2026-11-11",
    "updated_at": null
   },
   "vaughan": {
-   "review_status": "draft",
-   "approved_hash": null,
-   "reviewed_by": null,
-   "reviewed_at": null,
-   "published_at": null,
+   "review_status": "approved",
+   "approved_hash": "58468212976d1283",
+   "reviewed_by": "Ali Bayat",
+   "reviewed_at": "2026-11-11",
+   "published_at": "2026-11-11",
    "updated_at": null
   },
   "toronto": {
-   "review_status": "draft",
-   "approved_hash": null,
-   "reviewed_by": null,
-   "reviewed_at": null,
-   "published_at": null,
+   "review_status": "approved",
+   "approved_hash": "cbe49cbc7e369c8e",
+   "reviewed_by": "Ali Bayat",
+   "reviewed_at": "2026-11-11",
+   "published_at": "2026-11-11",
    "updated_at": null
   },
   "resources": {
-   "review_status": "draft",
-   "approved_hash": null,
-   "reviewed_by": null,
-   "reviewed_at": null,
-   "published_at": null,
+   "review_status": "approved",
+   "approved_hash": "0f7e20cf527fdcbd",
+   "reviewed_by": "Ali Bayat",
+   "reviewed_at": "2026-11-11",
+   "published_at": "2026-11-11",
    "updated_at": null
   },
   "guide-land-transfer-tax": {
-   "review_status": "draft",
-   "approved_hash": null,
-   "reviewed_by": null,
-   "reviewed_at": null,
-   "published_at": null,
+   "review_status": "approved",
+   "approved_hash": "a3754a8efe85bafa",
+   "reviewed_by": "Ali Bayat",
+   "reviewed_at": "2026-11-11",
+   "published_at": "2026-11-11",
    "updated_at": null
   },
   "contact": {
-   "review_status": "draft",
-   "approved_hash": null,
-   "reviewed_by": null,
-   "reviewed_at": null,
-   "published_at": null,
+   "review_status": "approved",
+   "approved_hash": "5549ee0b69189008",
+   "reviewed_by": "Ali Bayat",
+   "reviewed_at": "2026-11-11",
+   "published_at": "2026-11-11",
    "updated_at": null
   },
   "privacy": {
@@ -133,20 +133,111 @@
    "updated_at": null
   },
   "accessibility": {
-   "review_status": "draft",
-   "approved_hash": null,
-   "reviewed_by": null,
-   "reviewed_at": null,
-   "published_at": null,
+   "review_status": "approved",
+   "approved_hash": "7a3863c823923925",
+   "reviewed_by": "Ali Bayat",
+   "reviewed_at": "2026-11-11",
+   "published_at": "2026-11-11",
    "updated_at": null
   },
   "not-found": {
-   "review_status": "draft",
-   "approved_hash": null,
-   "reviewed_by": null,
-   "reviewed_at": null,
-   "published_at": null,
+   "review_status": "approved",
+   "approved_hash": "65c5629ec4899129",
+   "reviewed_by": "Ali Bayat",
+   "reviewed_at": "2026-11-11",
+   "published_at": "2026-11-11",
    "updated_at": null
+  },
+  "fa-home": {
+   "review_status": "approved",
+   "approved_hash": "587390ed44689bbe",
+   "reviewed_by": "Ali Bayat",
+   "reviewed_at": "2026-11-11",
+   "published_at": "2026-11-11"
+  },
+  "fa-buy": {
+   "review_status": "approved",
+   "approved_hash": "2d89338d15c16f33",
+   "reviewed_by": "Ali Bayat",
+   "reviewed_at": "2026-11-11",
+   "published_at": "2026-11-11"
+  },
+  "fa-sell": {
+   "review_status": "approved",
+   "approved_hash": "a17a655ad496ab86",
+   "reviewed_by": "Ali Bayat",
+   "reviewed_at": "2026-11-11",
+   "published_at": "2026-11-11"
+  },
+  "fa-neighbourhoods": {
+   "review_status": "approved",
+   "approved_hash": "463022fe39407c87",
+   "reviewed_by": "Ali Bayat",
+   "reviewed_at": "2026-11-11",
+   "published_at": "2026-11-11"
+  },
+  "fa-north-york": {
+   "review_status": "approved",
+   "approved_hash": "4c8f8759aff8d135",
+   "reviewed_by": "Ali Bayat",
+   "reviewed_at": "2026-11-11",
+   "published_at": "2026-11-11"
+  },
+  "fa-thornhill": {
+   "review_status": "approved",
+   "approved_hash": "337e61686d11147f",
+   "reviewed_by": "Ali Bayat",
+   "reviewed_at": "2026-11-11",
+   "published_at": "2026-11-11"
+  },
+  "fa-richmond-hill": {
+   "review_status": "approved",
+   "approved_hash": "3c6c0710ad3f8a3d",
+   "reviewed_by": "Ali Bayat",
+   "reviewed_at": "2026-11-11",
+   "published_at": "2026-11-11"
+  },
+  "fa-vaughan": {
+   "review_status": "approved",
+   "approved_hash": "ef61225f785a9ffd",
+   "reviewed_by": "Ali Bayat",
+   "reviewed_at": "2026-11-11",
+   "published_at": "2026-11-11"
+  },
+  "fa-toronto": {
+   "review_status": "approved",
+   "approved_hash": "9a64359ab61735d8",
+   "reviewed_by": "Ali Bayat",
+   "reviewed_at": "2026-11-11",
+   "published_at": "2026-11-11"
+  },
+  "fa-resources": {
+   "review_status": "approved",
+   "approved_hash": "d107864200a50bfc",
+   "reviewed_by": "Ali Bayat",
+   "reviewed_at": "2026-11-11",
+   "published_at": "2026-11-11"
+  },
+  "fa-guide-land-transfer-tax": {
+   "review_status": "approved",
+   "approved_hash": "ab4f20846b2791f2",
+   "reviewed_by": "Ali Bayat",
+   "reviewed_at": "2026-11-11",
+   "published_at": "2026-11-11"
+  },
+  "fa-about": {
+   "review_status": "approved",
+   "approved_hash": "641a85d2fcd533e3",
+   "reviewed_by": "Ali Bayat",
+   "reviewed_at": "2026-11-11",
+   "published_at": "2026-11-11"
+  },
+  "fa-contact": {
+   "review_status": "approved",
+   "approved_hash": "3ba52455b638257d",
+   "reviewed_by": "Ali Bayat",
+   "reviewed_at": "2026-11-11",
+   "published_at": "2026-11-11"
   }
  }
 }
