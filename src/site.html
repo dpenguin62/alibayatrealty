@@ -125,6 +125,8 @@ p{margin:0}
 .portrait .frame::after{bottom:-2px;right:-2px;border-left:0;border-top:0}
 .portrait .ph{text-align:center;display:grid;gap:.5rem;padding:1.5rem;position:relative}
 .portrait .ab{font-family:var(--display);font-weight:300;font-size:clamp(3.6rem,8vw,5.5rem);line-height:1;color:var(--lake)}
+.portrait.photo img{width:100%;height:100%;object-fit:cover;object-position:50% 12%;display:block;grid-area:1/1}
+.byline img.av{object-fit:cover}
 .portrait .dir{font-family:var(--mono);font-size:.68rem;color:var(--muted);max-width:26ch;margin-inline:auto;line-height:1.5}
 .idcard{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:1rem 1.1rem;display:grid;gap:.25rem}
 .idcard b{font-family:var(--display);font-weight:400;font-size:1.25rem}
@@ -587,10 +589,7 @@ article.teaser:hover h3{text-decoration:none}
         <div class="meta"><span><mark class="tbc" data-tpl="Licensed since {start_year}">Licensed since [year]</mark></span><span><mark class="tbc" data-tpl="RECO #{reco_number}">RECO #[000000]</mark></span><span>TRREB member</span><span><b>English &amp; <a href="#fa-home" lang="fa" hreflang="fa">فارسی</a></b></span></div>
       </div>
       <div class="side">
-        <div class="portrait" role="img" aria-label="Placeholder for Ali Bayat's professional portrait">
-          <span class="frame" aria-hidden="true"></span>
-          <div class="ph"><span class="ab">AB</span><span class="dir">Portrait to come: natural light, on a North York street, business casual</span></div>
-        </div>
+        <div class="portrait photo"><img src="/assets/img/ali-bayat.jpg" alt="Ali Bayat, REALTOR®" width="900" height="1200" decoding="async"></div>
         <div class="idcard"><b>Ali Bayat</b><span class="small muted">REALTOR® · Century 21 Heritage Group</span><span class="small muted">North York, Thornhill, Richmond Hill, Vaughan &amp; Toronto</span></div>
       </div>
     </div>
@@ -700,7 +699,7 @@ article.teaser:hover h3{text-decoration:none}
       <p class="lede">Ali Bayat is a real estate salesperson and REALTOR® with Century 21 Heritage Group Ltd., Brokerage, licensed in Ontario since 2016. He helps buyers, sellers, landlords and investors across North York, Thornhill, Richmond Hill, Vaughan and Toronto, and works with clients in English and Farsi.</p>
       <div class="row"><a class="btn" href="#contact">Talk to Ali</a></div>
     </div>
-    <div class="portrait" role="img" aria-label="Placeholder for Ali Bayat's professional portrait"><span class="frame" aria-hidden="true"></span><div class="ph"><span class="ab">AB</span><span class="dir">Portrait to come: head and shoulders, relaxed, outdoors in the GTA</span></div></div>
+    <div class="portrait photo"><img src="/assets/img/ali-bayat.jpg" alt="Ali Bayat, REALTOR®" width="900" height="1200" decoding="async"></div>
   </div></header>
   <section class="band">
     <div class="wrap two">
@@ -1169,7 +1168,7 @@ article.teaser:hover h3{text-decoration:none}
     <span class="label accent">Buying guide</span>
     <h1 tabindex="-1">Land transfer tax in Toronto <em>vs. York Region</em></h1>
     <p class="lede">Why the same purchase price costs more to close on in North York than in Vaughan, Richmond Hill or Thornhill, and how to estimate yours.</p>
-    <div class="byline"><span class="av" aria-hidden="true">AB</span><div class="small"><b>Ali Bayat</b><br><span class="muted">Rates verified against official sources on October 1, 2026 · <mark class="tbc" data-approve="ltt-guide-review">Reviewed by Ali</mark></span><br><span class="muted" data-meta="dates"></span></div></div>
+    <div class="byline"><img class="av" src="/assets/img/ali-bayat-headshot.jpg" alt="" width="44" height="44" decoding="async"><div class="small"><b>Ali Bayat</b><br><span class="muted">Rates verified against official sources on October 1, 2026 · <mark class="tbc" data-approve="ltt-guide-review">Reviewed by Ali</mark></span><br><span class="muted" data-meta="dates"></span></div></div>
   </div></header>
   <section class="band tight">
     <div class="wrap two">
@@ -1276,7 +1275,7 @@ article.teaser:hover h3{text-decoration:none}
         </div>
       </div>
       <aside class="aside">
-        <div class="box" style="grid-template-columns:72px 1fr;align-items:center"><div class="portrait" style="aspect-ratio:1;border-radius:50%"><span class="ab" style="font-family:var(--display);color:var(--lake);font-size:1.6rem">AB</span></div><div><b style="font-family:var(--display);font-weight:400;font-size:1.2rem">Ali Bayat</b><p class="small">Replies personally, <mark class="tbc" data-approve="reply-time">usually within one business day</mark></p></div></div>
+        <div class="box" style="grid-template-columns:72px 1fr;align-items:center"><div class="portrait photo" style="aspect-ratio:1;border-radius:50%"><img src="/assets/img/ali-bayat-headshot.jpg" alt="" width="240" height="240" decoding="async"></div><div><b style="font-family:var(--display);font-weight:400;font-size:1.2rem">Ali Bayat</b><p class="small">Replies personally, <mark class="tbc" data-approve="reply-time">usually within one business day</mark></p></div></div>
         <div class="box">
           <div class="clines">
             <div><small>Phone / text</small><span><a data-href-tpl="tel:{phone_e164}"><mark class="tbc" data-tpl="{phone_display}">(416) 000-0000</mark></a></span></div>
@@ -1306,7 +1305,7 @@ article.teaser:hover h3{text-decoration:none}
         <div class="meta"><span><mark class="tbc" data-tpl="دارای مجوز از {start_year}">دارای مجوز از [year]</mark></span><span><mark class="tbc" data-tpl="RECO #{reco_number}">RECO #[000000]</mark></span><span>عضو TRREB</span><span><b>فارسی و <a href="#home" lang="en" hreflang="en">English</a></b></span></div>
       </div>
       <div class="side">
-        <div class="portrait" role="img" aria-label="Placeholder for Ali Bayat's professional portrait"><span class="frame" aria-hidden="true"></span><div class="ph"><span class="ab">AB</span><span class="dir">Portrait to come</span></div></div>
+        <div class="portrait photo"><img src="/assets/img/ali-bayat.jpg" alt="Ali Bayat, REALTOR®" width="900" height="1200" decoding="async"></div>
         <div class="idcard"><b>علی بیات</b><span class="small muted" dir="ltr" style="text-align:right">REALTOR® · Century 21 Heritage Group</span><span class="small muted">نورث‌یورک، تورنهیل، ریچموند هیل، وان و تورنتو</span></div>
       </div>
     </div>
@@ -1409,7 +1408,7 @@ article.teaser:hover h3{text-decoration:none}
     <span class="label accent">راهنمای خرید</span>
     <h1 tabindex="-1">مالیات انتقال زمین در تورنتو <em>و منطقه‌ی یورک</em></h1>
     <p class="lede">چرا خرید با قیمت یکسان در نورث‌یورک هزینه‌ی بستن معامله‌ی بیشتری از وان، ریچموند هیل یا تورنهیل دارد، و چطور مبلغ خودتان را برآورد کنید.</p>
-    <div class="byline"><span class="av" aria-hidden="true">AB</span><div class="small"><b>علی بیات</b><br><span class="muted">نرخ‌ها در تاریخ ۱ اکتبر ۲۰۲۶ با منابع رسمی تطبیق داده شده است · <mark class="tbc" data-approve="ltt-guide-review-fa">بازبینی‌شده توسط علی</mark></span><br><span class="muted" data-meta="dates"></span></div></div>
+    <div class="byline"><img class="av" src="/assets/img/ali-bayat-headshot.jpg" alt="" width="44" height="44" decoding="async"><div class="small"><b>علی بیات</b><br><span class="muted">نرخ‌ها در تاریخ ۱ اکتبر ۲۰۲۶ با منابع رسمی تطبیق داده شده است · <mark class="tbc" data-approve="ltt-guide-review-fa">بازبینی‌شده توسط علی</mark></span><br><span class="muted" data-meta="dates"></span></div></div>
   </div></header>
   <section class="band tight">
     <div class="wrap two">
@@ -1735,7 +1734,7 @@ article.teaser:hover h3{text-decoration:none}
       <p class="lede">علی بیات مشاور املاک (<bdi>Salesperson</bdi> و <bdi>REALTOR®</bdi>) در Century 21 Heritage Group Ltd., Brokerage است و از سال 2016 در انتاریو مجوز فعالیت دارد. او به خریداران، فروشندگان، صاحب‌خانه‌ها و سرمایه‌گذاران در نورث‌یورک، تورنهیل، ریچموند هیل، وان و تورنتو کمک می‌کند و به دو زبان فارسی و انگلیسی کار می‌کند.</p>
       <div class="row"><a class="btn" href="#fa-contact" data-cta="about-head">گفتگو با علی</a></div>
     </div>
-    <div class="portrait" role="img" aria-label="Placeholder for Ali Bayat's professional portrait"><span class="frame" aria-hidden="true"></span><div class="ph"><span class="ab">AB</span><span class="dir">Portrait to come</span></div></div>
+    <div class="portrait photo"><img src="/assets/img/ali-bayat.jpg" alt="Ali Bayat, REALTOR®" width="900" height="1200" decoding="async"></div>
   </div></header>
   <section class="band">
     <div class="wrap two">
@@ -1847,7 +1846,7 @@ article.teaser:hover h3{text-decoration:none}
         </div>
       </div>
       <aside class="aside">
-        <div class="box" style="grid-template-columns:72px 1fr;align-items:center"><div class="portrait" style="aspect-ratio:1;border-radius:50%"><span class="ab" style="font-family:var(--display);color:var(--lake);font-size:1.6rem">AB</span></div><div><b style="font-family:var(--display);font-weight:400;font-size:1.2rem">علی بیات</b><p class="small">شخصاً پاسخ می‌دهد، <mark class="tbc" data-approve="reply-time">معمولاً ظرف یک روز کاری</mark></p></div></div>
+        <div class="box" style="grid-template-columns:72px 1fr;align-items:center"><div class="portrait photo" style="aspect-ratio:1;border-radius:50%"><img src="/assets/img/ali-bayat-headshot.jpg" alt="" width="240" height="240" decoding="async"></div><div><b style="font-family:var(--display);font-weight:400;font-size:1.2rem">علی بیات</b><p class="small">شخصاً پاسخ می‌دهد، <mark class="tbc" data-approve="reply-time">معمولاً ظرف یک روز کاری</mark></p></div></div>
         <div class="box">
           <div class="clines">
             <div><small>تلفن / پیامک</small><span><span dir="ltr"><a data-href-tpl="tel:{phone_e164}"><mark class="tbc" data-tpl="{phone_display}">(416) 000-0000</mark></a></span></span></div>

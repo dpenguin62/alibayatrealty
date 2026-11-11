@@ -484,6 +484,7 @@ def build():
     if OUT.exists():
         shutil.rmtree(OUT)
     (OUT / "assets").mkdir(parents=True)
+    shutil.copytree(ROOT / "src" / "img", OUT / "assets" / "img")
     (OUT / "favicon.svg").write_text(FAVICON, encoding="utf8")
 
     built, warnings, unresolved, pages_html, hashes = [], [], {}, {}, {}

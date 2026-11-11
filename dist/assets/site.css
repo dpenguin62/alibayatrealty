@@ -122,6 +122,8 @@ p{margin:0}
 .portrait .frame::after{bottom:-2px;right:-2px;border-left:0;border-top:0}
 .portrait .ph{text-align:center;display:grid;gap:.5rem;padding:1.5rem;position:relative}
 .portrait .ab{font-family:var(--display);font-weight:300;font-size:clamp(3.6rem,8vw,5.5rem);line-height:1;color:var(--lake)}
+.portrait.photo img{width:100%;height:100%;object-fit:cover;object-position:50% 12%;display:block;grid-area:1/1}
+.byline img.av{object-fit:cover}
 .portrait .dir{font-family:var(--mono);font-size:.68rem;color:var(--muted);max-width:26ch;margin-inline:auto;line-height:1.5}
 .idcard{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:1rem 1.1rem;display:grid;gap:.25rem}
 .idcard b{font-family:var(--display);font-weight:400;font-size:1.25rem}
