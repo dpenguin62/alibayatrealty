@@ -287,6 +287,8 @@ p{margin:0}
 .phases p{color:var(--muted);font-size:.96rem}
 .phases .ask{font-size:.9rem;border-inline-start:2px solid var(--brass);padding-inline-start:.8rem;color:var(--ink)}
 @media (max-width:820px){.phases{grid-template-columns:1fr;gap:1.75rem;padding-inline-start:2rem}.phases::before{inset-inline:9px auto;top:0;bottom:0;width:2px;height:auto}.phases li{padding-inline-end:0}.phases .pt{position:absolute;inset-inline-start:-2rem;top:.2rem}}
+.duo{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1rem;align-items:start}
+@media (max-width:760px){.duo{grid-template-columns:1fr}}
 .trio{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1rem;align-items:start}
 @media (max-width:920px){.trio{grid-template-columns:1fr}}
 
@@ -297,6 +299,10 @@ p{margin:0}
 @keyframes pin-drop{from{opacity:0;transform:translateY(-46px)}to{opacity:1;transform:none}}
 .draw-in .pulse{opacity:0;transform-box:fill-box;transform-origin:center;animation:pin-pulse 1.8s ease-out 2.8s 3}
 @keyframes pin-pulse{0%{opacity:0;transform:scale(.6)}15%{opacity:.7}100%{opacity:0;transform:scale(1.9)}}
+.draw-in .sign{transform-origin:483px 156px;animation:sign-swing 1.6s ease-out 2s both}
+@keyframes sign-swing{0%{opacity:0;transform:rotate(-14deg)}25%{opacity:1;transform:rotate(9deg)}50%{transform:rotate(-5deg)}75%{transform:rotate(2deg)}100%{opacity:1;transform:none}}
+.draw-in .bar{transform-box:fill-box;transform-origin:50% 100%;animation:bar-grow .7s cubic-bezier(.3,1.3,.5,1) both;animation-delay:calc(1.9s + var(--i,0)*.18s)}
+@keyframes bar-grow{from{transform:scaleY(0)}to{transform:none}}
 .phases.rv li{opacity:0;transform:translateY(14px);transition:opacity .6s ease,transform .6s ease;transition-delay:calc(var(--i,0)*.15s + .1s)}
 .phases.rv.in li{opacity:1;transform:none}
 @media (min-width:821px){.phases.rv::after{display:block;transform:scaleX(0);transform-origin:left;transition:transform 1.3s cubic-bezier(.65,0,.35,1)}[dir="rtl"] .phases.rv::after{transform-origin:right}.phases.rv.in::after{transform:scaleX(1)}}
@@ -637,13 +643,6 @@ article.teaser:hover h3{text-decoration:none}
     </div>
   </section>
 
-  <section class="strip" aria-labelledby="strip-t">
-    <div class="wrap">
-      <div class="strip-scroll" data-strip></div>
-      <div class="cap"><span class="label" id="strip-t">Where I work · housing along the Yonge corridor, south to north</span><span class="label">Tap an area</span></div>
-    </div>
-  </section>
-
   <section class="band">
     <div class="wrap railed">
       <div class="rail"><span class="label">How I help</span></div>
@@ -652,18 +651,17 @@ article.teaser:hover h3{text-decoration:none}
         <div class="svc three">
           <article>
             <h3>Buying</h3>
-            <ol class="mini-steps"><li>Set a budget that includes closing costs</li><li>Compare areas on what matters to you</li><li>Evaluate each home before you commit</li><li>Offer with a clear strategy and limits</li></ol>
-            <div class="row"><a class="link" href="#buy">How buying works <span class="ar" aria-hidden="true">→</span></a><a class="link" href="#contact" data-interest="buy">Start your home search <span class="ar" aria-hidden="true">→</span></a></div>
+            <p class="muted">A budget that includes closing costs, areas compared on what matters to you, and an offer strategy with clear limits.</p>
+            <div class="row"><a class="link" href="#buy">How buying works <span class="ar" aria-hidden="true">→</span></a></div>
           </article>
           <article>
             <h3>Selling</h3>
-            <ol class="mini-steps"><li>Price from real comparable sales</li><li>Prepare with a practical fix-or-skip list</li><li>Launch with a planned first week</li><li>Negotiate terms as well as price</li></ol>
-            <div class="row"><a class="link" href="#sell">How selling works <span class="ar" aria-hidden="true">→</span></a><a class="link" href="#contact" data-interest="sell">Discuss selling your home <span class="ar" aria-hidden="true">→</span></a></div>
+            <p class="muted">A price from real comparable sales, a practical fix-or-skip list, and a planned first week on the market.</p>
+            <div class="row"><a class="link" href="#sell">How selling works <span class="ar" aria-hidden="true">→</span></a></div>
           </article>
           <article>
             <h3>Investing</h3>
-            <p class="muted small">Evaluate income-producing properties with a focus on the numbers.</p>
-            <ol class="mini-steps"><li>Estimate realistic rental income</li><li>Account for every operating cost</li><li>Model financing and cash flow</li><li>Weigh the risks before you commit</li></ol>
+            <p class="muted">Rental income, operating costs, financing and cash flow, all run before you commit.</p>
             <div class="row"><a class="link" href="#invest">Explore investment properties <span class="ar" aria-hidden="true">→</span></a></div>
           </article>
         </div>
@@ -676,7 +674,7 @@ article.teaser:hover h3{text-decoration:none}
     <div class="wrap railed">
       <div class="rail"><span class="label">Local knowledge</span></div>
       <div class="main">
-        <div class="head-row"><div><h2>Most of my market sits along <em>one street.</em></h2><p class="lede">Yonge Street runs from downtown through North York, Thornhill and Richmond Hill. Vaughan sits to the west, linked by subway and Highway 7. Each area works differently for buyers and sellers.</p></div></div>
+        <div class="head-row"><div><h2>Most of my market sits along <em>one street.</em></h2><p class="lede">Yonge Street runs from downtown through North York, Thornhill and Richmond Hill, with Vaughan to the west. Each area works differently for buyers and sellers.</p></div></div>
         <div class="areas-grid">
           <figure class="linemap" data-linemap></figure>
           <div>
@@ -696,11 +694,7 @@ article.teaser:hover h3{text-decoration:none}
           <div class="dwg wide" data-dwg="strip2" data-noframe><span class="grid-bg"></span></div>
           <div class="in"><span class="label accent">Buying guide · with calculator</span><h3>Land transfer tax: why the same price costs more to close in North York than in Vaughan</h3><p class="muted">Toronto adds its own tax on top of Ontario's. Here's how both work, and a calculator to estimate yours.</p><span class="status pub">Published<mark class="tbc" data-note="ltt-guide-review"> · draft for Ali's review</mark></span></div>
         </a>
-        <div class="teasers">
-          <a class="teaser" href="#sell"><span class="label accent">Selling</span><h3>How I price, prepare and launch a home for sale</h3><p>The comparable sales behind the price, a practical fix-or-skip walk-through, and a planned first week on the market.</p></a>
-          <a class="teaser" href="#invest"><span class="label accent">Investing · with calculator</span><h3>Run the numbers on an income property</h3><p>Income, operating costs, financing and cash flow in one estimate, with every assumption on the table.</p></a>
-          <a class="teaser" href="#thornhill"><span class="label accent">Neighbourhood guide</span><h3>Thornhill: the Vaughan side vs. the Markham side</h3><p>One community split between two cities, and why the side you buy on affects property taxes and city services.</p></a>
-        </div>
+        <div class="row"><a class="link" href="#resources">All guides <span class="ar" aria-hidden="true">→</span></a></div>
       </div>
     </div>
   </section>
@@ -717,12 +711,6 @@ article.teaser:hover h3{text-decoration:none}
           <div><h3>Every side of home improvement</h3><p>Repairs, renovations and upgrades: what's worth doing, what it should cost and who to call.</p></div>
         </div>
         <div class="row"><a class="link" href="#about">More about how I work <span class="ar" aria-hidden="true">→</span></a></div>
-        <div class="verify">
-          <div><span class="label">Registration</span><b>RECO registrant</b><p><mark class="tbc" data-tpl="Registration no. {reco_number}">Registration no. [000000]</mark>. Every Ontario agent can be looked up on <a href="https://www.reco.on.ca" rel="noopener">RECO's public register</a>.</p></div>
-          <div><span class="label">Brokerage</span><b><mark class="tbc" data-tpl="{brokerage_name}">[Brokerage name]</mark></b><p>Ali works through a registered brokerage, as Ontario law requires.</p></div>
-          <div><span class="label">Languages</span><b>English &amp; Farsi</b><p>Meetings, documents explained and negotiations handled in either language.</p></div>
-          <div><span class="label">Client reviews</span><b>Coming</b><p>Only verified reviews from real clients will be shown here, with a link to their source.</p></div>
-        </div>
       </div>
     </div>
   </section>
@@ -864,25 +852,28 @@ article.teaser:hover h3{text-decoration:none}
 
 <!-- ============ SELL ============ -->
 <div class="page" data-page="sell" data-title="Selling a Home in Toronto & the GTA | Ali Bayat" hidden>
-  <header class="page-head"><div class="wrap">
+  <header class="page-head split"><div class="wrap"><div>
     <nav class="crumbs" aria-label="Breadcrumb"><a href="#home">Home</a><span aria-hidden="true">/</span><span>Sell</span></nav>
     <span class="label accent">For sellers</span>
     <h1 tabindex="-1">Selling a home in Toronto <em>and the GTA</em></h1>
     <p class="lede">A good sale comes from an evidence-based price, a well-prepared home and a launch that reaches the right buyers. Here's how I approach each part.</p>
     <div class="row"><a class="btn" href="#contact" data-interest="sell">Let's talk about your home's value</a></div>
+  </div><div class="dwg wide draw-in" data-dwg="sellscene" data-noframe><span class="grid-bg"></span></div>
   </div></header>
-  <section class="band tight"><div class="wrap"><div class="timeline" data-timeline="sell"></div></div></section>
+  <section class="band tight"><div class="wrap stack" style="gap:2rem">
+    <h2>How selling works, <em>in four stages</em></h2>
+    <ol class="phases" data-phases="sell" data-reveal></ol>
+  </div></section>
   <section class="band tight" style="padding-top:0">
-    <div class="wrap two">
-      <ol class="steps" data-steps="sell"></ol>
-      <aside class="aside">
+    <div class="wrap">
+      <div class="trio">
         <div class="box">
           <h3>What a pricing conversation covers</h3>
           <ul class="plain"><li>Recent comparable sales near you</li><li>Active, expired and withdrawn listings</li><li>Your home's condition and updates</li><li>Your timeline and your next move</li><li>Estimated selling costs and net proceeds</li></ul>
         </div>
         <div class="box"><h3>Related</h3><ul class="nolist small"><li><a class="link" href="#neighbourhoods">What buyers look for in each neighbourhood <span class="ar" aria-hidden="true">→</span></a></li><li><a class="link" href="#invest">Selling an income property? How investors evaluate it <span class="ar" aria-hidden="true">→</span></a></li></ul></div>
         <div class="box tint"><h3>A realistic promise</h3><p>The market sets the final price. My job is to price with evidence, present your home well, and negotiate carefully so you get the strongest result the market offers at the time.</p></div>
-      </aside>
+      </div>
     </div>
   </section>
   <section class="cta-band"><div class="wrap">
@@ -893,12 +884,13 @@ article.teaser:hover h3{text-decoration:none}
 
 <!-- ============ INVEST ============ -->
 <div class="page" data-page="invest" data-title="Investment Properties &amp; Real Estate Investing in the GTA | Ali Bayat" hidden>
-  <header class="page-head"><div class="wrap">
+  <header class="page-head split"><div class="wrap"><div>
     <nav class="crumbs" aria-label="Breadcrumb"><a href="#home">Home</a><span aria-hidden="true">/</span><span>Invest</span></nav>
     <span class="label accent">For investors</span>
     <h1 tabindex="-1">Investing in GTA real estate <em>with a focus on the numbers.</em></h1>
     <p class="lede">I help investors evaluate income-producing properties across Toronto and York Region by looking beyond the asking price — including income, expenses, financing, cash flow and long-term potential.</p>
     <div class="row"><a class="btn" href="#contact" data-interest="invest" data-request="analysis">Request an Investment Property Analysis</a><button type="button" class="link" data-jump="inv-calc">Try the investment calculator <span class="ar" aria-hidden="true">→</span></button></div>
+  </div><div class="dwg wide draw-in" data-dwg="investscene" data-noframe><span class="grid-bg"></span></div>
   </div></header>
 
   <!-- A · Overview -->
@@ -907,16 +899,10 @@ article.teaser:hover h3{text-decoration:none}
       <div class="rail"><span class="label">Overview</span></div>
       <div class="main">
         <h2>Real estate is more than <em>the purchase price.</em></h2>
-        <div class="two">
+        <div>
           <div class="prose">
             <p>Two properties at the same price can perform very differently once they're rented. What a property earns, what it costs to run, how it's financed and how often it sits empty all decide whether it supports itself or needs money from you every month.</p>
-            <p>My approach is the same one I bring to buying and selling: help you make a clearer decision by understanding the numbers behind the property. For an investment, that means putting every assumption on the table, testing the ones that matter most, and being honest about what the numbers can't tell you.</p>
             <p class="small muted">I'm a licensed real estate professional, not a financial advisor, accountant, lawyer or mortgage broker. The analysis I provide is real estate education and property analysis. It doesn't replace legal, tax, accounting, mortgage or financial advice.</p>
-            <div class="row"><a class="btn" href="#contact" data-interest="invest">Talk to Ali about an investment property</a></div>
-          </div>
-          <div class="box">
-            <h3>What an investor needs to understand</h3>
-            <ol class="mini-steps"><li>Purchase price</li><li>Rental income</li><li>Operating expenses</li><li>Financing</li><li>Vacancy</li><li>Maintenance</li><li>Net operating income</li><li>Cash flow</li><li>Long-term appreciation potential</li></ol>
           </div>
         </div>
       </div>
@@ -965,30 +951,20 @@ article.teaser:hover h3{text-decoration:none}
       <div class="main">
         <div class="head-row"><div><h2>Considering a property? <em>Let's look at the numbers.</em></h2><p class="lede">A structured review of a specific property, built on assumptions you can see and question. Six steps, in this order.</p></div></div>
         <div class="timeline t6">
-          <div class="phase"><span class="pt" aria-hidden="true"></span><h3>Property</h3><ul><li><button type="button" data-step="inv-1">Price, type, location</button></li></ul></div>
-          <div class="phase"><span class="pt" aria-hidden="true"></span><h3>Income</h3><ul><li><button type="button" data-step="inv-2">Realistic rents</button></li></ul></div>
-          <div class="phase"><span class="pt" aria-hidden="true"></span><h3>Expenses</h3><ul><li><button type="button" data-step="inv-3">Costs, vacancy, upkeep</button></li></ul></div>
-          <div class="phase"><span class="pt" aria-hidden="true"></span><h3>Financing</h3><ul><li><button type="button" data-step="inv-4">Mortgage and debt service</button></li></ul></div>
-          <div class="phase"><span class="pt" aria-hidden="true"></span><h3>Returns</h3><ul><li><button type="button" data-step="inv-5">NOI, cap rate, cash flow</button></li></ul></div>
-          <div class="phase"><span class="pt" aria-hidden="true"></span><h3>Decision</h3><ul><li><button type="button" data-step="inv-6">Assumptions and risks</button></li></ul></div>
+          <div class="phase"><span class="pt" aria-hidden="true"></span><h3>Property</h3><ul><li>Price, type, location</li></ul></div>
+          <div class="phase"><span class="pt" aria-hidden="true"></span><h3>Income</h3><ul><li>Realistic rents</li></ul></div>
+          <div class="phase"><span class="pt" aria-hidden="true"></span><h3>Expenses</h3><ul><li>Costs, vacancy, upkeep</li></ul></div>
+          <div class="phase"><span class="pt" aria-hidden="true"></span><h3>Financing</h3><ul><li>Mortgage and debt service</li></ul></div>
+          <div class="phase"><span class="pt" aria-hidden="true"></span><h3>Returns</h3><ul><li>NOI, cap rate, cash flow</li></ul></div>
+          <div class="phase"><span class="pt" aria-hidden="true"></span><h3>Decision</h3><ul><li>Assumptions and risks</li></ul></div>
         </div>
-        <div class="two">
-          <ol class="steps">
-            <li id="inv-1"><div class="k"><span>Step · 01</span><h3>Property</h3></div><div class="d"><p>Review the purchase price, property type and location: how many units, their size and condition, how the property is currently used, and what comparable properties have sold for.</p><p class="ask">Is the current use confirmed with the municipality, or only described in the listing?</p></div></li>
-            <li id="inv-2"><div class="k"><span>Step · 02</span><h3>Income</h3></div><div class="d"><p>Estimate realistic rental income using appropriate market evidence: comparable rentals, existing leases and the current rent roll. Projected rents and actual rents are kept separate.</p><p class="ask">Are current rents at market, and what do the existing leases allow?</p></div></li>
-            <li id="inv-3"><div class="k"><span>Step · 03</span><h3>Expenses</h3></div><div class="d"><p>Account for operating costs, vacancy and maintenance: property tax, insurance, utilities the owner pays, repairs, and any management or other recurring costs.</p><p class="ask">What does the seller's expense summary leave out?</p></div></li>
-            <li id="inv-4"><div class="k"><span>Step · 04</span><h3>Financing</h3></div><div class="d"><p>Model the mortgage and debt-service assumptions: down payment, interest rate and amortization. Your mortgage professional confirms what you actually qualify for.</p><p class="ask">How does the result change if the rate is one point higher?</p></div></li>
-            <li id="inv-5"><div class="k"><span>Step · 05</span><h3>Returns</h3></div><div class="d"><p>Calculate NOI, cap rate, cash flow and cash-on-cash return, with each figure traced back to the assumptions that produced it.</p></div></li>
-            <li id="inv-6"><div class="k"><span>Step · 06</span><h3>Decision</h3></div><div class="d"><p>Identify the assumptions, risks and questions that should be investigated further, and which professionals should look at them, before you commit to anything.</p><p class="ask">Which single assumption, if it's wrong, would change the decision?</p></div></li>
-          </ol>
-          <aside class="aside">
+        <div class="duo">
             <div class="box">
               <h3>What an analysis covers</h3>
               <ul class="plain"><li>The income and expense assumptions, written out</li><li>One or more financing scenarios</li><li>Estimated NOI, cap rate, cash flow and cash-on-cash return</li><li>A list of items to verify: zoning and legal unit status, leases, building condition</li></ul>
             </div>
             <div class="box tint"><h3>What it isn't</h3><p>It isn't an appraisal, a mortgage approval, or tax, legal or financial advice, and it can't guarantee rent, cash flow, appreciation or returns. It's a clear, honest starting point for your decision.</p></div>
-          </aside>
-        </div>
+          </div>
         <div class="row"><a class="btn" href="#contact" data-interest="invest" data-request="analysis">Request an Investment Property Analysis</a></div>
       </div>
     </div>
@@ -1046,26 +1022,8 @@ article.teaser:hover h3{text-decoration:none}
     </div>
   </section>
 
-  <!-- F · Education -->
-  <section class="band surface">
-    <div class="wrap railed">
-      <div class="rail"><span class="label">Investor education</span></div>
-      <div class="main">
-        <div class="head-row"><div><h2>The fundamentals, <em>one guide at a time.</em></h2><p class="lede">Plain-language guides for investors are being written now. Each will explain one idea well, with worked examples.</p></div><a class="link" href="#resources" data-cat="investment">All investment resources <span class="ar" aria-hidden="true">→</span></a></div>
-        <div class="teasers">
-          <article class="teaser"><span class="label accent">Fundamentals</span><h3>What is cap rate?</h3><p>What it measures, what it ignores, and why it's only a starting point.</p><span class="status">Planned</span></article>
-          <article class="teaser"><span class="label accent">Fundamentals</span><h3>How to calculate cash flow</h3><p>From gross rent to what's left after expenses and the mortgage.</p><span class="status">Planned</span></article>
-          <article class="teaser"><span class="label accent">Strategy</span><h3>Cash flow vs. appreciation</h3><p>Two different reasons to own a property, and the risks of each.</p><span class="status">Planned</span></article>
-          <article class="teaser"><span class="label accent">Expenses</span><h3>Five expenses investors often overlook</h3><p>The costs that rarely appear in a listing's income summary.</p><span class="status">Coming soon</span></article>
-          <article class="teaser"><span class="label accent">Property types</span><h3>How to analyze a fourplex</h3><p>Rents, expenses and financing for a four-unit property, step by step.</p><span class="status">Planned</span></article>
-          <article class="teaser"><span class="label accent">Due diligence</span><h3>Questions to ask before buying an income property</h3><p>About the units, the tenants, the leases and the building.</p><span class="status">Planned</span></article>
-        </div>
-      </div>
-    </div>
-  </section>
-
   <!-- G · GTA focus -->
-  <section class="band">
+  <section class="band surface">
     <div class="wrap railed">
       <div class="rail"><span class="label">GTA focus</span></div>
       <div class="main">
@@ -1079,10 +1037,6 @@ article.teaser:hover h3{text-decoration:none}
             <li><a href="#vaughan"><div class="dwg" data-dwg="town"></div><div><span class="label">York Region</span><h3>Vaughan</h3><p>Several distinct markets plus a growing condo district at the VMC, where pre-construction terms need careful review.</p></div><span class="go">Guide →</span></a></li>
           </ul>
           <aside class="aside">
-            <div class="box">
-              <h3>What location changes in the numbers</h3>
-              <ul class="ticks"><li><span>Achievable rents and tenant demand</span></li><li><span>Typical property types and their age</span></li><li><span>Neighbourhood characteristics, such as transit and schools</span></li><li><span>Property tax and municipal rules, which differ between cities</span></li><li><span>Future resale and who the likely buyers are</span></li></ul>
-            </div>
             <div class="box tint"><h3>No "best" area</h3><p>There's no single best place to invest. The right fit depends on your budget, timeline and how much risk you're comfortable with, so each property is analyzed on its own numbers.</p></div>
           </aside>
         </div>
@@ -1091,19 +1045,11 @@ article.teaser:hover h3{text-decoration:none}
   </section>
 
   <!-- H · Network -->
-  <section class="band surface">
+  <section class="band">
     <div class="wrap railed">
       <div class="rail"><span class="label">Investor network</span></div>
       <div class="main">
-        <div class="head-row"><div><h2>Investing usually takes <em>a team.</em></h2><p class="lede">A single purchase can involve several professionals, each responsible for a different part of the decision.</p></div></div>
-        <div class="verify v3">
-          <div><span class="label">Financing</span><b>Mortgage professionals</b><p>Confirm what you qualify for, the rate, and the lender's rules for rental properties.</p></div>
-          <div><span class="label">Tax</span><b>Accountants</b><p>Advise on how rental income, expenses and ownership structure affect your taxes.</p></div>
-          <div><span class="label">Legal</span><b>Real estate lawyers</b><p>Review title, existing leases, zoning searches and the closing documents.</p></div>
-          <div><span class="label">Operations</span><b>Property managers</b><p>Handle tenants, rent collection and day-to-day upkeep if you'd rather not.</p></div>
-          <div><span class="label">Condition</span><b>Contractors</b><p>Price repairs and upgrades, and flag what an inspection should look at closely.</p></div>
-          <div><span class="label">The property</span><b>Real estate professionals</b><p>Find and evaluate properties, analyze the numbers and negotiate the purchase. That's my part.</p></div>
-        </div>
+        <div class="head-row"><div><h2>Investing usually takes <em>a team.</em></h2><p class="lede">A single purchase can involve a mortgage professional, an accountant, a real estate lawyer, a property manager and a contractor, each responsible for a different part of the decision. Finding and evaluating the property, analyzing the numbers and negotiating the purchase is my part.</p></div></div>
         <p class="pull">I can help coordinate the real estate side of the process and connect clients with appropriate professionals where needed.</p>
         <p class="small muted">Any introduction is a suggestion; you choose who to work with, and each professional is responsible for their own advice. <mark class="tbc" data-tpl="{referral_disclosure}" data-note="referral-disclosure">Disclose any referral arrangements as RECO rules require</mark></p>
       </div>
@@ -1367,18 +1313,17 @@ article.teaser:hover h3{text-decoration:none}
         <div class="svc three">
           <article>
             <h3>خرید</h3>
-            <ol class="mini-steps"><li>بودجه‌ای که هزینه‌های بستن معامله را هم در بر بگیرد</li><li>مقایسه‌ی محله‌ها بر اساس آنچه برای شما مهم است</li><li>بررسی دقیق هر خانه پیش از تصمیم</li><li>پیشنهاد خرید با استراتژی و سقف مشخص</li></ol>
+            <p class="muted">بودجه‌ای با احتساب هزینه‌های بستن معامله، مقایسه‌ی محله‌ها بر اساس آنچه برای شما مهم است، و پیشنهاد خرید با استراتژی و سقف مشخص.</p>
             <div class="row"><a class="link" href="#fa-buy">مراحل خرید <span class="ar" aria-hidden="true">←</span></a></div>
           </article>
           <article>
             <h3>فروش</h3>
-            <ol class="mini-steps"><li>قیمت‌گذاری بر اساس فروش‌های مشابه واقعی</li><li>آماده‌سازی خانه با فهرستی عملی از تعمیرات لازم و غیرلازم</li><li>عرضه با برنامه‌ای مشخص برای هفته‌ی اول</li><li>مذاکره روی شرایط، نه فقط قیمت</li></ol>
+            <p class="muted">قیمت‌گذاری بر اساس فروش‌های مشابه واقعی، فهرستی عملی از تعمیرات لازم و غیرلازم، و برنامه‌ای مشخص برای هفته‌ی اول.</p>
             <div class="row"><a class="link" href="#fa-sell">مراحل فروش <span class="ar" aria-hidden="true">←</span></a></div>
           </article>
           <article>
             <h3>سرمایه‌گذاری</h3>
-            <p class="muted small">ارزیابی ملک‌های درآمدزا با تمرکز بر اعداد.</p>
-            <ol class="mini-steps"><li>برآورد واقع‌بینانه‌ی درآمد اجاره</li><li>محاسبه‌ی همه‌ی هزینه‌های جاری</li><li>بررسی وام و جریان نقدی</li><li>سنجیدن ریسک‌ها پیش از تصمیم</li></ol>
+            <p class="muted">درآمد اجاره، هزینه‌های جاری، وام و جریان نقدی؛ همه پیش از تصمیم محاسبه می‌شود.</p>
             <div class="row"><a class="link" href="#fa-invest">تحلیل ملک سرمایه‌گذاری <span class="ar" aria-hidden="true">←</span></a></div>
           </article>
         </div>
@@ -1557,25 +1502,28 @@ article.teaser:hover h3{text-decoration:none}
 </div>
 
 <div class="page" data-page="fa-sell" lang="fa" dir="rtl" data-title="فروش خانه در تورنتو و GTA | علی بیات، مشاور املاک فارسی‌زبان" hidden>
-  <header class="page-head"><div class="wrap">
+  <header class="page-head split"><div class="wrap"><div>
     <nav class="crumbs" aria-label="Breadcrumb"><a href="#fa-home">خانه</a><span aria-hidden="true">/</span><span>فروش</span></nav>
     <span class="label accent">برای فروشندگان</span>
     <h1 tabindex="-1">فروش خانه در تورنتو <em>و منطقه‌ی بزرگ تورنتو (GTA)</em></h1>
     <p class="lede">یک فروش خوب حاصل قیمتی مبتنی بر شواهد، خانه‌ای آماده و عرضه‌ای است که به خریداران مناسب برسد. روش من برای هر بخش این است.</p>
     <div class="row"><a class="btn" href="#fa-contact" data-interest="sell">درباره‌ی ارزش خانه‌تان صحبت کنیم</a></div>
+  </div><div class="dwg wide draw-in" data-dwg="sellscene" data-noframe><span class="grid-bg"></span></div>
   </div></header>
-  <section class="band tight"><div class="wrap"><div class="timeline" data-timeline="fa-sell"></div></div></section>
+  <section class="band tight"><div class="wrap stack" style="gap:2rem">
+    <h2>روند فروش، <em>در چهار مرحله</em></h2>
+    <ol class="phases" data-phases="fa-sell" data-reveal></ol>
+  </div></section>
   <section class="band tight" style="padding-top:0">
-    <div class="wrap two">
-      <ol class="steps" data-steps="fa-sell"></ol>
-      <aside class="aside">
+    <div class="wrap">
+      <div class="trio">
         <div class="box">
           <h3>یک گفتگوی قیمت‌گذاری شامل چه چیزهایی است</h3>
           <ul class="plain"><li>فروش‌های مشابه اخیر در نزدیکی شما</li><li>ملک‌های در حال فروش، منقضی‌شده و پس‌گرفته‌شده</li><li>وضعیت و به‌روزرسانی‌های خانه‌ی شما</li><li>زمان‌بندی و قدم بعدی شما</li><li>برآورد هزینه‌های فروش و مبلغ خالص</li></ul>
         </div>
         <div class="box"><h3>مطالب مرتبط</h3><ul class="nolist small"><li><a class="link" href="#fa-neighbourhoods">خریداران در هر محله دنبال چه هستند <span class="ar" aria-hidden="true">←</span></a></li><li><a class="link" href="#fa-invest">ملک درآمدزا می‌فروشید؟ سرمایه‌گذاران چطور آن را ارزیابی می‌کنند <span class="ar" aria-hidden="true">←</span></a></li></ul></div>
         <div class="box tint"><h3>یک قول واقع‌بینانه</h3><p>قیمت نهایی را بازار تعیین می‌کند. کار من قیمت‌گذاری بر اساس شواهد، معرفی درست خانه‌ی شما و مذاکره‌ی دقیق است تا بهترین نتیجه‌ای را که بازار در آن زمان می‌دهد بگیرید.</p></div>
-      </aside>
+      </div>
     </div>
   </section>
   <section class="cta-band"><div class="wrap">
@@ -1585,12 +1533,13 @@ article.teaser:hover h3{text-decoration:none}
 </div>
 
 <div class="page" data-page="fa-invest" lang="fa" dir="rtl" data-title="سرمایه‌گذاری در املاک تورنتو | تحلیل ملک درآمدزا به فارسی" hidden>
-  <header class="page-head"><div class="wrap">
+  <header class="page-head split"><div class="wrap"><div>
     <nav class="crumbs" aria-label="Breadcrumb"><a href="#fa-home">خانه</a><span aria-hidden="true">/</span><span>سرمایه‌گذاری</span></nav>
     <span class="label accent">برای سرمایه‌گذاران</span>
     <h1 tabindex="-1">سرمایه‌گذاری در املاک تورنتو <em>با تمرکز بر اعداد.</em></h1>
     <p class="lede">به سرمایه‌گذاران کمک می‌کنم ملک‌های درآمدزا را در تورنتو و منطقه‌ی یورک فراتر از قیمت درخواستی ارزیابی کنند: درآمد، هزینه‌ها، وام، جریان نقدی و پتانسیل بلندمدت.</p>
     <div class="row"><a class="btn" href="#fa-contact" data-interest="invest" data-request="analysis">درخواست تحلیل ملک سرمایه‌گذاری</a><button type="button" class="link" data-jump="fa-inv-calc">امتحان ماشین‌حساب سرمایه‌گذاری <span class="ar" aria-hidden="true">←</span></button></div>
+  </div><div class="dwg wide draw-in" data-dwg="investscene" data-noframe><span class="grid-bg"></span></div>
   </div></header>
 
   <section class="band">
@@ -1598,16 +1547,10 @@ article.teaser:hover h3{text-decoration:none}
       <div class="rail"><span class="label">نگاه کلی</span></div>
       <div class="main">
         <h2>ارزش یک ملک فقط <em>قیمت خرید آن نیست.</em></h2>
-        <div class="two">
+        <div>
           <div class="prose">
             <p>دو ملک با قیمت یکسان، وقتی اجاره داده شوند می‌توانند عملکرد کاملاً متفاوتی داشته باشند. اینکه ملک چقدر درآمد دارد، اداره‌اش چقدر هزینه دارد، چطور تأمین مالی شده و چند وقت خالی می‌ماند، تعیین می‌کند که خرج خودش را درمی‌آورد یا هر ماه از جیب شما پول می‌خواهد.</p>
-            <p>روش من همان روشی است که در خرید و فروش به کار می‌برم: کمک به تصمیمی روشن‌تر با فهم اعداد پشت ملک. در سرمایه‌گذاری یعنی همه‌ی فرض‌ها را روی میز بگذاریم، مهم‌ترین‌هایشان را بیازماییم و صادقانه بگوییم اعداد چه چیزی را نمی‌توانند بگویند.</p>
             <p class="small muted">من مشاور املاک دارای مجوز هستم، نه مشاور مالی، حسابدار، وکیل یا کارگزار وام. تحلیلی که ارائه می‌دهم آموزش و تحلیل املاک است و جایگزین مشاوره‌ی حقوقی، مالیاتی، حسابداری، وام یا مالی نیست.</p>
-            <div class="row"><a class="btn" href="#fa-contact" data-interest="invest">گفتگو با علی درباره‌ی یک ملک سرمایه‌گذاری</a></div>
-          </div>
-          <div class="box">
-            <h3>آنچه یک سرمایه‌گذار باید بداند</h3>
-            <ol class="mini-steps"><li>قیمت خرید</li><li>درآمد اجاره</li><li>هزینه‌های جاری</li><li>تأمین مالی</li><li>خالی ماندن واحد</li><li>نگهداری</li><li>درآمد خالص عملیاتی (NOI)</li><li>جریان نقدی</li><li>پتانسیل رشد ارزش در بلندمدت</li></ol>
           </div>
         </div>
       </div>
@@ -1653,30 +1596,20 @@ article.teaser:hover h3{text-decoration:none}
       <div class="main">
         <div class="head-row"><div><h2>ملکی را در نظر دارید؟ <em>بیایید اعداد را ببینیم.</em></h2><p class="lede">بررسی ساختاریافته‌ی یک ملک مشخص، بر پایه‌ی فرض‌هایی که می‌توانید ببینید و درباره‌شان بپرسید. شش قدم، به همین ترتیب.</p></div></div>
         <div class="timeline t6">
-          <div class="phase"><span class="pt" aria-hidden="true"></span><h3>ملک</h3><ul><li><button type="button" data-step="fa-inv-1">قیمت، نوع، موقعیت</button></li></ul></div>
-          <div class="phase"><span class="pt" aria-hidden="true"></span><h3>درآمد</h3><ul><li><button type="button" data-step="fa-inv-2">اجاره‌های واقع‌بینانه</button></li></ul></div>
-          <div class="phase"><span class="pt" aria-hidden="true"></span><h3>هزینه‌ها</h3><ul><li><button type="button" data-step="fa-inv-3">هزینه‌ها، خالی ماندن، نگهداری</button></li></ul></div>
-          <div class="phase"><span class="pt" aria-hidden="true"></span><h3>تأمین مالی</h3><ul><li><button type="button" data-step="fa-inv-4">وام و اقساط</button></li></ul></div>
-          <div class="phase"><span class="pt" aria-hidden="true"></span><h3>بازده</h3><ul><li><button type="button" data-step="fa-inv-5">NOI، Cap rate، جریان نقدی</button></li></ul></div>
-          <div class="phase"><span class="pt" aria-hidden="true"></span><h3>تصمیم</h3><ul><li><button type="button" data-step="fa-inv-6">فرض‌ها و ریسک‌ها</button></li></ul></div>
+          <div class="phase"><span class="pt" aria-hidden="true"></span><h3>ملک</h3><ul><li>قیمت، نوع، موقعیت</li></ul></div>
+          <div class="phase"><span class="pt" aria-hidden="true"></span><h3>درآمد</h3><ul><li>اجاره‌های واقع‌بینانه</li></ul></div>
+          <div class="phase"><span class="pt" aria-hidden="true"></span><h3>هزینه‌ها</h3><ul><li>هزینه‌ها، خالی ماندن، نگهداری</li></ul></div>
+          <div class="phase"><span class="pt" aria-hidden="true"></span><h3>تأمین مالی</h3><ul><li>وام و اقساط</li></ul></div>
+          <div class="phase"><span class="pt" aria-hidden="true"></span><h3>بازده</h3><ul><li>NOI، Cap rate، جریان نقدی</li></ul></div>
+          <div class="phase"><span class="pt" aria-hidden="true"></span><h3>تصمیم</h3><ul><li>فرض‌ها و ریسک‌ها</li></ul></div>
         </div>
-        <div class="two">
-          <ol class="steps">
-            <li id="fa-inv-1"><div class="k"><span>قدم · ۰۱</span><h3>ملک</h3></div><div class="d"><p>بررسی قیمت خرید، نوع و موقعیت ملک: تعداد واحدها، اندازه و وضعیت‌شان، کاربری فعلی ملک، و قیمت فروش ملک‌های مشابه.</p><p class="ask">آیا کاربری فعلی از طرف شهرداری تأیید شده، یا فقط در آگهی آمده است؟</p></div></li>
-            <li id="fa-inv-2"><div class="k"><span>قدم · ۰۲</span><h3>درآمد</h3></div><div class="d"><p>برآورد واقع‌بینانه‌ی درآمد اجاره با شواهد مناسب بازار: اجاره‌های مشابه، قراردادهای موجود و فهرست اجاره‌های فعلی. اجاره‌ی پیش‌بینی‌شده و اجاره‌ی واقعی جدا نگه داشته می‌شوند.</p><p class="ask">آیا اجاره‌های فعلی در سطح بازار است و قراردادهای موجود چه اجازه‌ای می‌دهند؟</p></div></li>
-            <li id="fa-inv-3"><div class="k"><span>قدم · ۰۳</span><h3>هزینه‌ها</h3></div><div class="d"><p>در نظر گرفتن هزینه‌های جاری، خالی ماندن و نگهداری: مالیات ملک، بیمه، قبوضی که مالک می‌پردازد، تعمیرات و هر هزینه‌ی مدیریت یا هزینه‌ی تکرارشونده‌ی دیگر.</p><p class="ask">خلاصه‌ی هزینه‌های فروشنده چه چیزهایی را جا انداخته است؟</p></div></li>
-            <li id="fa-inv-4"><div class="k"><span>قدم · ۰۴</span><h3>تأمین مالی</h3></div><div class="d"><p>مدل‌سازی فرض‌های وام و اقساط: پیش‌پرداخت، نرخ بهره و مدت بازپرداخت. اینکه واقعاً واجد شرایط چه وامی هستید را متخصص وام شما تأیید می‌کند.</p><p class="ask">اگر نرخ بهره یک درصد بالاتر باشد، نتیجه چطور تغییر می‌کند؟</p></div></li>
-            <li id="fa-inv-5"><div class="k"><span>قدم · ۰۵</span><h3>بازده</h3></div><div class="d"><p>محاسبه‌ی NOI، نرخ بازده سرمایه (Cap rate)، جریان نقدی و بازده نقدی (Cash-on-cash)، به‌طوری که هر عدد به فرض‌هایی که آن را ساخته‌اند قابل ردیابی باشد.</p></div></li>
-            <li id="fa-inv-6"><div class="k"><span>قدم · ۰۶</span><h3>تصمیم</h3></div><div class="d"><p>مشخص کردن فرض‌ها، ریسک‌ها و پرسش‌هایی که باید بیشتر بررسی شوند، و اینکه کدام متخصص‌ها باید آن‌ها را ببینند، پیش از هر تعهدی.</p><p class="ask">اگر کدام فرض اشتباه باشد، تصمیم عوض می‌شود؟</p></div></li>
-          </ol>
-          <aside class="aside">
+        <div class="duo">
             <div class="box">
               <h3>یک تحلیل شامل چه چیزهایی است</h3>
               <ul class="plain"><li>فرض‌های درآمد و هزینه، به‌صورت مکتوب</li><li>یک یا چند سناریوی تأمین مالی</li><li>برآورد NOI، Cap rate، جریان نقدی و بازده نقدی</li><li>فهرست مواردی که باید بررسی شوند: منطقه‌بندی و وضعیت قانونی واحدها، قراردادهای اجاره، وضعیت ساختمان</li></ul>
             </div>
             <div class="box tint"><h3>آنچه نیست</h3><p>این تحلیل ارزیابی رسمی (Appraisal)، تأیید وام، یا مشاوره‌ی مالیاتی، حقوقی یا مالی نیست و نمی‌تواند اجاره، جریان نقدی، رشد ارزش یا بازده را تضمین کند. یک نقطه‌ی شروع روشن و صادقانه برای تصمیم شماست.</p></div>
-          </aside>
-        </div>
+          </div>
         <div class="row"><a class="btn" href="#fa-contact" data-interest="invest" data-request="analysis" data-cta="analysis">درخواست تحلیل ملک سرمایه‌گذاری</a></div>
       </div>
     </div>
@@ -1758,15 +1691,7 @@ article.teaser:hover h3{text-decoration:none}
     <div class="wrap railed">
       <div class="rail"><span class="label">شبکه‌ی متخصصان</span></div>
       <div class="main">
-        <div class="head-row"><div><h2>سرمایه‌گذاری معمولاً <em>یک تیم می‌خواهد.</em></h2><p class="lede">یک خرید می‌تواند چند متخصص را درگیر کند که هر کدام مسئول بخشی از تصمیم‌اند.</p></div></div>
-        <div class="verify v3">
-          <div><span class="label">تأمین مالی</span><b>متخصصان وام مسکن</b><p>تأیید می‌کنند واجد شرایط چه وامی هستید، نرخ چقدر است و قوانین وام‌دهنده برای ملک اجاره‌ای چیست.</p></div>
-          <div><span class="label">مالیات</span><b>حسابداران</b><p>درباره‌ی تأثیر درآمد اجاره، هزینه‌ها و ساختار مالکیت بر مالیات شما مشاوره می‌دهند.</p></div>
-          <div><span class="label">حقوقی</span><b>وکلای املاک</b><p>سند، قراردادهای اجاره‌ی موجود، استعلام‌های منطقه‌بندی و مدارک بستن معامله را بررسی می‌کنند.</p></div>
-          <div><span class="label">اداره‌ی ملک</span><b>مدیران املاک</b><p>اگر نخواهید خودتان درگیر شوید، مستأجران، دریافت اجاره و نگهداری روزمره را مدیریت می‌کنند.</p></div>
-          <div><span class="label">وضعیت ساختمان</span><b>پیمانکاران</b><p>هزینه‌ی تعمیرات و ارتقا را برآورد می‌کنند و مشخص می‌کنند بازرسی باید به چه چیزهایی دقیق‌تر نگاه کند.</p></div>
-          <div><span class="label">خود ملک</span><b>مشاوران املاک</b><p>پیدا کردن و ارزیابی ملک، تحلیل اعداد و مذاکره برای خرید. این بخش کار من است.</p></div>
-        </div>
+        <div class="head-row"><div><h2>سرمایه‌گذاری معمولاً <em>یک تیم می‌خواهد.</em></h2><p class="lede">یک خرید می‌تواند متخصص وام مسکن، حسابدار، وکیل املاک، مدیر ملک و پیمانکار را درگیر کند که هر کدام مسئول بخشی از تصمیم‌اند. پیدا کردن و ارزیابی ملک، تحلیل اعداد و مذاکره برای خرید بخش کار من است.</p></div></div>
         <p class="pull">می‌توانم بخش املاکِ این روند را هماهنگ کنم و در صورت نیاز، مشتریان را با متخصصان مناسب آشنا کنم.</p>
         <p class="small muted">هر معرفی فقط یک پیشنهاد است؛ انتخاب با شماست و هر متخصص مسئول مشاوره‌ی خودش است. <mark class="tbc" data-tpl="{referral_disclosure}" data-note="referral-disclosure">Disclose any referral arrangements as RECO rules require</mark></p>
       </div>
@@ -2227,21 +2152,30 @@ function stripSVG(){
     <text x="${x+150}" y="280" text-anchor="middle" font-family="Inter, sans-serif" font-size="12" fill="currentColor" opacity=".6">${TYPES[k]}</text></a>`});
   const w=seq.length*W;
   return `<svg viewBox="-10 0 ${w+20} 300" role="img" aria-label="Elevation drawings of typical housing from Toronto north along Yonge Street to Richmond Hill, and west to Vaughan"><line x1="-10" y1="221" x2="${w+10}" y2="221" stroke="currentColor" stroke-width="1.6"/>${g}<text x="${w}" y="296" text-anchor="end" font-family="IBM Plex Mono, monospace" font-size="11" fill="currentColor" opacity=".6">SOUTH → NORTH · NOT TO SCALE</text></svg>`}
-/* Buy page header: tower + detached house drawn in line by line, then a brass pin lands on the house. */
-function buyScene(){
+/* Page-header scenes: line drawings that draw in, then one brass accent animates (pin, sign or bars). */
+function scene(kind){
   let i=0;const len=(t,a)=>{const n=k=>+(a.match(new RegExp(k+'="([^"]+)"'))||[0,0])[1];
     if(t==="line")return Math.hypot(n("x2")-n("x1"),n("y2")-n("y1"));
     if(t==="rect")return 2*(n("width")+n("height"));
     const p=(a.match(/points="([^"]+)"/)||[0,""])[1].trim().split(/\s+/).map(q=>q.split(",").map(Number));let d=0;
     for(let j=1;j<p.length;j++)d+=Math.hypot(p[j][0]-p[j-1][0],p[j][1]-p[j-1][1]);return d};
   const seq=s=>s.replace(/<(line|rect|polyline)([^>]*)\/>/g,(m,t,a)=>`<${t}${a} style="--len:${Math.ceil(len(t,a))+1};--i:${i++}"/>`);
-  return `<svg viewBox="0 0 560 300" preserveAspectRatio="xMidYMid meet" aria-hidden="true" focusable="false"><g class="ln" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"><g transform="translate(-20,65) scale(.75)" stroke-width="2.1">${seq(D.tower())}</g><g transform="translate(240,52) scale(.8)" stroke-width="2">${seq(D.detached())}</g></g><circle class="pulse" cx="364" cy="62" r="20" fill="none" stroke="var(--brass)" stroke-width="1.5"/><g class="pin" stroke="var(--brass)" stroke-width="2.4" stroke-linejoin="round"><path d="M364 97 C353 82 345 73 345 62 a19 19 0 1 1 38 0 C383 73 375 82 364 97Z" fill="var(--draw)"/><circle cx="364" cy="62" r="6.5" fill="var(--brass)" stroke="none"/></g></svg>`}
+  const g=(tf,sw,body)=>`<g transform="${tf}" stroke-width="${sw}">${seq(body)}</g>`;
+  const S={
+   buy:()=>[g("translate(-20,65) scale(.75)",2.1,D.tower())+g("translate(240,52) scale(.8)",2,D.detached()),
+     `<circle class="pulse" cx="364" cy="62" r="20" fill="none" stroke="var(--brass)" stroke-width="1.5"/><g class="pin" stroke="var(--brass)" stroke-width="2.4" stroke-linejoin="round"><path d="M364 97 C353 82 345 73 345 62 a19 19 0 1 1 38 0 C383 73 375 82 364 97Z" fill="var(--draw)"/><circle cx="364" cy="62" r="6.5" fill="var(--brass)" stroke="none"/></g>`],
+   sell:()=>[g("translate(10,39) scale(.85)",1.9,D.bay())+g("",1.7,L(340,260,545,260)+L(452,260,452,148)+L(446,156,516,156)),
+     `<g class="sign" stroke="var(--brass)" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round" fill="none"><line x1="466" y1="156" x2="466" y2="170"/><line x1="500" y1="156" x2="500" y2="170"/><rect x="458" y="170" width="50" height="34" rx="2" fill="var(--draw)"/><line x1="468" y1="182" x2="498" y2="182"/><line x1="468" y1="192" x2="488" y2="192"/></g>`],
+   invest:()=>[g("translate(-40,39) scale(.85)",1.9,D.triplex())+g("translate(120,39) scale(.85)",1.9,D.duplex())+g("",1.7,L(395,260,548,260)),
+     [[418,222,38],[462,196,64],[506,164,96]].map(([x,y,h],j)=>`<rect class="bar" x="${x}" y="${y}" width="28" height="${h}" fill="var(--brass)" style="--i:${j}"/>`).join("")]};
+  const [ln,accent]=S[kind]();
+  return `<svg viewBox="0 0 560 300" preserveAspectRatio="xMidYMid meet" aria-hidden="true" focusable="false"><g class="ln" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round">${ln}</g>${accent}</svg>`}
 function fillDwgs(root){
   root.querySelectorAll("[data-strip]:not([data-done])").forEach(el=>{el.innerHTML=stripSVG();el.dataset.done=1});
   root.querySelectorAll(".dwg[data-dwg]:not([data-done])").forEach(el=>{
     const k=el.dataset.dwg;let svg;
     if(k==="strip2"){svg=`<svg viewBox="0 0 800 290" preserveAspectRatio="xMidYMid meet" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"><g transform="translate(0,0)">${D.tower()}</g><g transform="translate(400,0)">${D.detached()}</g></g><line x1="400" y1="20" x2="400" y2="270" stroke="currentColor" stroke-dasharray="4 6" opacity=".5"/><text x="390" y="40" text-anchor="end" font-family="IBM Plex Mono, monospace" font-size="12" fill="currentColor">CITY OF TORONTO</text><text x="410" y="40" font-family="IBM Plex Mono, monospace" font-size="12" fill="currentColor">YORK REGION</text><text x="400" y="284" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="11" fill="currentColor" opacity=".6">STEELES AVE</text></svg>`}
-    else if(k==="buyscene")svg=buyScene();
+    else if(/scene$/.test(k))svg=scene(k.replace("scene",""));
     else svg=dwgSVG(k);
     const ttl=el.dataset.ttl?`<div class="ttl"><span class="label">${el.dataset.ttl}</span><span class="label">${el.dataset.no||""}</span></div>`:"";
     const tag=el.dataset.photo?`<span class="photo-tag">Photo to come: ${el.dataset.photo}</span>`:"";
@@ -2426,24 +2360,6 @@ function renderAreaFa(a){
 
 /* ---------- Buy / Sell processes ---------- */
 const PROC={
- "fa-sell":[
-  ["برنامه‌ریزی",[["analysis","تحلیل بازار","فروش‌های مشابه اخیر، ملک‌های در حال فروش و ملک‌هایی که فروش نرفته‌اند را بررسی می‌کنم. این نشان می‌دهد خریداران اطراف شما همین حالا چطور رفتار می‌کنند.",""],
-    ["pricing","استراتژی قیمت‌گذاری","قیمت و روش را با هم انتخاب می‌کنیم؛ مثلاً قیمت‌گذاری مطابق بازار یا تعیین روز پیشنهادها (Offer Date). فروش‌های مشابهی را که پشتوانه‌ی پیشنهاد من است می‌بینید.","برای اینکه قدم بعدی‌تان عملی باشد، مبلغ خالص فروش باید چقدر باشد؟"]]],
-  ["آماده‌سازی",[["prep","آماده‌سازی ملک","یک بازدید با فهرستی عملی: چه چیزی ارزش تعمیر دارد، چه چیزی را باید رها کرد و چه چیزی فقط تمیزکاری و چیدمان می‌خواهد. اگر به استادکار نیاز داشته باشید، افرادی را معرفی می‌کنم.",""],
-    ["marketing","بازاریابی","عکاسی حرفه‌ای، توضیحات روشن، نمایش در MLS® و تبلیغات آنلاین برای خریدارانی که به احتمال زیاد به خانه‌ی شما علاقه دارند.",""]]],
-  ["عرضه",[["launch","شروع فروش","تاریخ عرضه را انتخاب می‌کنیم و هفته‌ی اول را با دقت برنامه‌ریزی می‌کنیم، چون معمولاً بیشترین علاقه‌ی خریداران در همین هفته است.",""],
-    ["showings","برنامه‌ی بازدیدها","زمان‌های بازدید متناسب با خانواده‌ی شما، دسترسی امن، و انتقال سریع بازخورد مشاوران خریدار به شما.",""]]],
-  ["تحویل",[["negotiate","مذاکره","پیشنهادها را از نظر قیمت، ودیعه، شرایط و تاریخ تحویل مقایسه می‌کنیم و هر کدام را برایتان توضیح می‌دهم تا با تصویر کامل تصمیم بگیرید.",""],
-    ["transaction","مدیریت معامله","شرایط، مهلت‌ها، مدارک و ارتباط با وکیل شما مدیریت می‌شود تا روز تحویل طبق برنامه پیش برود.",""]]]],
- sell:[
-  ["Plan",[["analysis","Market analysis","I review recent comparable sales, what's currently listed, and what hasn't sold. That shows how buyers near you are behaving right now.",""],
-    ["pricing","Pricing strategy","We choose a price and approach together, such as pricing to market or setting an offer date. You'll see the comparables behind my recommendation.","What would you need to net from this sale for your next move to work?"]]],
-  ["Prepare",[["prep","Property preparation","A walk-through with a practical list: what's worth fixing, what to leave alone, and what to simply clean and stage. If you need trades, I can suggest people to call.",""],
-    ["marketing","Marketing","Professional photography, a clear description, MLS® exposure and online promotion aimed at the buyers most likely to want your home.",""]]],
-  ["Launch",[["launch","Listing launch","We pick a launch date and plan the first week carefully, since that's usually when buyer interest is highest.",""],
-    ["showings","Showing strategy","Showing windows that suit your household, secure access, and buyer-agent feedback passed to you promptly.",""]]],
-  ["Close",[["negotiate","Negotiation","We compare offers on price, deposit, conditions and closing date, and I walk you through each one so you can decide with the full picture.",""],
-    ["transaction","Transaction management","Conditions, deadlines, paperwork and communication with your lawyer are handled so closing day stays on schedule.",""]]]]
 };
 const PHASES={
  buy:[
@@ -2451,6 +2367,16 @@ const PHASES={
   ["Search","You see recent sales in your areas before touring, then a short list that fits. For each serious contender we review comparables, condition and repair costs, plus the status certificate for condos.","What would this home cost to own each month?"],
   ["Offer","We set price, deposit, conditions and closing date for this home and this level of competition. I negotiate within limits we've agreed on together.",""],
   ["Close","I work with your lawyer, lender and inspector to keep deadlines and paperwork on track, and stay in touch after you move in.",""]],
+ sell:[
+  ["Plan","I review recent comparable sales, what's listed now and what hasn't sold, then we choose a price and approach together. You'll see the comparables behind my recommendation.","What would you need to net from this sale for your next move to work?"],
+  ["Prepare","A walk-through with a practical list: what's worth fixing, what to leave alone, and what to simply clean and stage. Then professional photography and MLS® exposure.",""],
+  ["Launch","We pick a launch date and plan the first week carefully, since that's usually when buyer interest is highest. Showings are scheduled to suit your household.",""],
+  ["Close","We compare offers on price, deposit, conditions and closing date. Then I manage deadlines and paperwork with your lawyer through to closing day.",""]],
+ "fa-sell":[
+  ["برنامه‌ریزی","فروش‌های مشابه اخیر، ملک‌های در حال فروش و ملک‌هایی که فروش نرفته‌اند را بررسی می‌کنم و بعد قیمت و روش را با هم انتخاب می‌کنیم. فروش‌های مشابهی را که پشتوانه‌ی پیشنهاد من است می‌بینید.","برای اینکه قدم بعدی‌تان عملی باشد، مبلغ خالص فروش باید چقدر باشد؟"],
+  ["آماده‌سازی","یک بازدید با فهرستی عملی: چه چیزی ارزش تعمیر دارد، چه چیزی را باید رها کرد و چه چیزی فقط تمیزکاری و چیدمان می‌خواهد. سپس عکاسی حرفه‌ای و نمایش در MLS®.",""],
+  ["عرضه","تاریخ عرضه را انتخاب می‌کنیم و هفته‌ی اول را با دقت برنامه‌ریزی می‌کنیم، چون معمولاً بیشترین علاقه‌ی خریداران در همین هفته است. بازدیدها متناسب با خانواده‌ی شما زمان‌بندی می‌شوند.",""],
+  ["تحویل","پیشنهادها را از نظر قیمت، ودیعه، شرایط و تاریخ تحویل مقایسه می‌کنیم. بعد مهلت‌ها و مدارک را با وکیل شما تا روز تحویل مدیریت می‌کنم.",""]],
  "fa-buy":[
   ["آمادگی","نیازهای شما و یک هزینه‌ی ماهانه‌ی راحت را مشخص می‌کنیم، با احتساب هزینه‌های بستن معامله. پیش‌تأیید وام را زود بگیرید تا بودجه‌تان واقعی باشد.","چه چیزی باعث می‌شود پنج سال بعد از این خرید پشیمان شوید؟"],
   ["جستجو","پیش از بازدید، فروش‌های اخیر محله‌های مورد نظرتان را می‌بینید و بعد یک فهرست کوتاه و مناسب دریافت می‌کنید. برای هر گزینه‌ی جدی، فروش‌های مشابه، وضعیت ساختمان و هزینه‌ی تعمیرات را بررسی می‌کنیم؛ برای کاندو، Status Certificate را هم.","هزینه‌ی ماهانه‌ی مالکیت این خانه چقدر خواهد بود؟"],
