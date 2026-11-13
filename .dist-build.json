@@ -728,7 +728,7 @@
   "/buy/": "5009a7a0553f8ee7",
   "/sell/": "32e5254f114d712c",
   "/invest/": "0bc45a307663efc5",
-  "/neighbourhoods/": "e497f50715b9e89d",
+  "/neighbourhoods/": "12fae0660217dde8",
   "/neighbourhoods/north-york/": "c2edf6e07a8d4ea2",
   "/neighbourhoods/thornhill/": "7512e7015acc12f0",
   "/neighbourhoods/richmond-hill/": "845e9b88989484f5",
@@ -741,7 +741,7 @@
   "/fa/buy/": "3d74ab5bc2fd187f",
   "/fa/sell/": "6a2daeb602d5658a",
   "/fa/invest/": "5f3286dc775ab28e",
-  "/fa/neighbourhoods/": "463022fe39407c87",
+  "/fa/neighbourhoods/": "b668fddbe695b9c6",
   "/fa/neighbourhoods/north-york/": "4c8f8759aff8d135",
   "/fa/neighbourhoods/thornhill/": "337e61686d11147f",
   "/fa/neighbourhoods/richmond-hill/": "3c6c0710ad3f8a3d",
@@ -797,6 +797,10 @@
   },
   {
    "category": "owner",
+   "message": "page review: /neighbourhoods/ changed since it was approved; review again"
+  },
+  {
+   "category": "owner",
    "message": "page review: /resources/buying/land-transfer-tax-toronto-york-region/ changed since it was approved; review again"
   },
   {
@@ -818,6 +822,10 @@
   {
    "category": "owner",
    "message": "page review: /fa/invest/ not yet approved by Ali"
+  },
+  {
+   "category": "owner",
+   "message": "page review: /fa/neighbourhoods/ changed since it was approved; review again"
   },
   {
    "category": "owner",
@@ -955,7 +963,7 @@
    "time_sensitive": false,
    "author": "Ali Bayat",
    "review_status": "approved",
-   "approved_matches": true,
+   "approved_matches": false,
    "reviewed_by": "Ali Bayat",
    "published_at": "2026-11-11",
    "updated_at": null,
@@ -964,7 +972,7 @@
    "sources": [],
    "indexable": true,
    "canonical": "https://www.alibayatrealty.com/neighbourhoods/",
-   "content_hash": "e497f50715b9e89d",
+   "content_hash": "12fae0660217dde8",
    "open_items": []
   },
   {
@@ -1260,7 +1268,7 @@
    "time_sensitive": false,
    "author": "Ali Bayat",
    "review_status": "approved",
-   "approved_matches": true,
+   "approved_matches": false,
    "reviewed_by": "Ali Bayat",
    "published_at": "2026-11-11",
    "updated_at": null,
@@ -1269,7 +1277,7 @@
    "sources": [],
    "indexable": true,
    "canonical": "https://www.alibayatrealty.com/fa/neighbourhoods/",
-   "content_hash": "463022fe39407c87",
+   "content_hash": "b668fddbe695b9c6",
    "open_items": []
   },
   {
@@ -1605,6 +1613,6 @@
  ],
  "assets": {
   "site.js": 22589,
-  "site.css": 45482
+  "site.css": 45656
  }
 }

@@ -205,6 +205,7 @@ p{margin:0}
 .ncard .go{font-family:var(--mono);font-size:.74rem;color:var(--lake);margin-top:.15rem}
 .credits{font-size:.74rem;line-height:1.55;color:var(--muted);margin-top:1.5rem;padding-top:.9rem;border-top:1px solid var(--line)}
 @media (min-width:901px){.areas-grid > .linemap{position:sticky;top:calc(env(safe-area-inset-top,0px) + 100px)}}
+@media (min-width:901px){.ncards.cols3{grid-template-columns:repeat(3,minmax(0,1fr))}.ncards.cols3 .wide{grid-column:span 2}.ncards.cols3 .ph,.ncards.tall .ph{height:225px}}
 @media (max-width:560px){.ncards{grid-template-columns:1fr}.ncard .ph{height:auto;aspect-ratio:16/9}.ncard.wide .ph{aspect-ratio:5/2}.ncard h3{font-size:1.3rem}}
 
 .alist{list-style:none;margin:0;padding:0;border-top:1px solid var(--line)}
