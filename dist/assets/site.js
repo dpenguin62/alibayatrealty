@@ -183,6 +183,10 @@ cf.addEventListener("submit",async e=>{e.preventDefault();const nm=document.getE
 const rf=document.getElementById("reset-form");if(rf)rf.addEventListener("click",()=>{sent.hidden=true;cf.hidden=false;document.getElementById("c-name").focus()});
 }
 /* ---------- Boot ---------- */
+/* ---------- Scroll reveal: built pages only, skipped for reduced motion; content is visible without it ---------- */
+if(STATIC&&"IntersectionObserver" in window&&!matchMedia("(prefers-reduced-motion: reduce)").matches){
+  const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target)}}),{threshold:.2});
+  document.querySelectorAll("[data-reveal]").forEach(el=>{el.classList.add("rv");io.observe(el)})}
 if(STATIC){const c=params.get("category");if(c&&CATS.some(x=>x.id===c))activeCat=c}
 renderKC();calc();invCalc();
 if(STATIC){

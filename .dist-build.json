@@ -725,7 +725,7 @@
  "hashes": {
   "/": "0499ba2b8ed171f9",
   "/about/": "535662c23a80b705",
-  "/buy/": "f3b78eef67252f2b",
+  "/buy/": "5009a7a0553f8ee7",
   "/sell/": "16d11447508a32f0",
   "/invest/": "8bcd70dbb47dc99a",
   "/neighbourhoods/": "e497f50715b9e89d",
@@ -738,7 +738,7 @@
   "/resources/buying/land-transfer-tax-toronto-york-region/": "db1ac87fda3f8a04",
   "/contact/": "2d56874668cf9c54",
   "/fa/": "618e239e00b65966",
-  "/fa/buy/": "2d89338d15c16f33",
+  "/fa/buy/": "3d74ab5bc2fd187f",
   "/fa/sell/": "a17a655ad496ab86",
   "/fa/invest/": "cab8a0f0061fb2db",
   "/fa/neighbourhoods/": "463022fe39407c87",
@@ -785,6 +785,10 @@
   },
   {
    "category": "owner",
+   "message": "page review: /buy/ changed since it was approved; review again"
+  },
+  {
+   "category": "owner",
    "message": "page review: /invest/ not yet approved by Ali"
   },
   {
@@ -798,6 +802,10 @@
   {
    "category": "owner",
    "message": "page review: /fa/ changed since it was approved; review again"
+  },
+  {
+   "category": "owner",
+   "message": "page review: /fa/buy/ changed since it was approved; review again"
   },
   {
    "category": "owner",
@@ -871,7 +879,7 @@
    "time_sensitive": false,
    "author": "Ali Bayat",
    "review_status": "approved",
-   "approved_matches": true,
+   "approved_matches": false,
    "reviewed_by": "Ali Bayat",
    "published_at": "2026-11-11",
    "updated_at": null,
@@ -880,7 +888,7 @@
    "sources": [],
    "indexable": true,
    "canonical": "https://www.alibayatrealty.com/buy/",
-   "content_hash": "f3b78eef67252f2b",
+   "content_hash": "5009a7a0553f8ee7",
    "open_items": []
   },
   {
@@ -1176,7 +1184,7 @@
    "time_sensitive": false,
    "author": "Ali Bayat",
    "review_status": "approved",
-   "approved_matches": true,
+   "approved_matches": false,
    "reviewed_by": "Ali Bayat",
    "published_at": "2026-11-11",
    "updated_at": null,
@@ -1185,7 +1193,7 @@
    "sources": [],
    "indexable": true,
    "canonical": "https://www.alibayatrealty.com/fa/buy/",
-   "content_hash": "2d89338d15c16f33",
+   "content_hash": "3d74ab5bc2fd187f",
    "open_items": []
   },
   {
@@ -1588,7 +1596,7 @@
   "reply-time"
  ],
  "assets": {
-  "site.js": 21455,
-  "site.css": 40063
+  "site.js": 21924,
+  "site.css": 42598
  }
 }
