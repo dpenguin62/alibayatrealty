@@ -72,6 +72,17 @@ p{margin:0}
 .nav a:hover{background:var(--sunk)}
 .nav a[aria-current="page"]{color:var(--lake);font-weight:600}
 .nav .talk{margin-left:.6rem}
+.has-sub{position:relative;display:inline-flex;align-items:center}
+.has-sub > a{padding-inline-end:.2rem}
+.sub-btn{all:unset;box-sizing:border-box;cursor:pointer;display:inline-grid;place-items:center;width:1.5rem;height:1.9rem;border-radius:3px;color:var(--muted)}
+.sub-btn:hover{background:var(--sunk);color:var(--ink)}
+.sub-btn:focus-visible{outline:2px solid var(--lake);outline-offset:2px}
+.sub-btn svg{transition:transform .2s ease}
+.has-sub:hover .sub-btn svg,.has-sub:focus-within .sub-btn svg,.has-sub.open .sub-btn svg{transform:rotate(180deg)}
+.sub{position:absolute;top:100%;inset-inline-start:0;z-index:40;display:none;flex-direction:column;min-width:13rem;padding:.4rem;background:var(--surface);border:1px solid var(--line);border-radius:var(--r);box-shadow:0 10px 28px rgba(20,33,61,.1)}
+.has-sub:hover .sub,.has-sub:focus-within .sub,.has-sub.open .sub{display:flex}
+.has-sub.shut .sub{display:none}
+.sub a{padding:.55rem .7rem;white-space:nowrap}
 .menu-btn{display:none;background:none;border:1.5px solid var(--line);color:var(--ink);border-radius:3px;padding:.55rem .9rem;font:600 .9rem var(--body);cursor:pointer;min-height:44px}
 .site-head .head-talk{display:none}
 @media (max-width:1000px){.nav{display:none}.menu-btn{display:inline-flex}.site-head .head-talk{display:inline-flex}.head-actions{display:flex;gap:.5rem;align-items:center}}
@@ -592,7 +603,7 @@ article.teaser:hover h3{text-decoration:none}
       <a href="#buy">Buy</a>
       <a href="#sell">Sell</a>
       <a href="#invest">Invest</a>
-      <a href="#neighbourhoods">Neighbourhoods</a>
+      <span class="has-sub"><a href="#neighbourhoods">Neighbourhoods</a><button class="sub-btn" type="button" aria-expanded="false" aria-controls="nb-sub" aria-label="Show neighbourhood guides"><svg viewBox="0 0 12 12" width="10" height="10" aria-hidden="true" focusable="false"><path d="M2 4.5 6 8.5 10 4.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button><span class="sub" id="nb-sub"><a href="#north-york">North York</a><a href="#thornhill">Thornhill</a><a href="#richmond-hill">Richmond Hill</a><a href="#vaughan">Vaughan</a><a href="#toronto">Toronto</a></span></span>
       <a href="#resources">Resources</a>
       <a href="#about">About</a>
       <a class="lang" href="#fa-home" lang="fa" hreflang="fa" data-lang-switch>فارسی</a>
@@ -2050,7 +2061,7 @@ Not used
       <a href="#fa-buy">خرید</a>
       <a href="#fa-sell">فروش</a>
       <a href="#fa-invest">سرمایه‌گذاری</a>
-      <a href="#fa-neighbourhoods">محله‌ها</a>
+      <span class="has-sub"><a href="#fa-neighbourhoods">محله‌ها</a><button class="sub-btn" type="button" aria-expanded="false" aria-controls="nb-sub" aria-label="نمایش راهنمای محله‌ها"><svg viewBox="0 0 12 12" width="10" height="10" aria-hidden="true" focusable="false"><path d="M2 4.5 6 8.5 10 4.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button><span class="sub" id="nb-sub"><a href="#fa-north-york">نورث‌یورک</a><a href="#fa-thornhill">تورنهیل</a><a href="#fa-richmond-hill">ریچموند هیل</a><a href="#fa-vaughan">وان</a><a href="#fa-toronto">تورنتو</a></span></span>
       <a href="#fa-resources">منابع</a>
       <a href="#fa-about">درباره</a>
       <a href="#fa-contact">تماس</a>
@@ -2578,6 +2589,12 @@ function closeDrawer(){dr.hidden=true;mb.setAttribute("aria-expanded","false");m
 mb.addEventListener("click",()=>{const o=dr.hidden;dr.hidden=!o;mb.setAttribute("aria-expanded",String(o));mb.textContent=o?(mb.dataset.close||"Close"):(mb.dataset.open||"Menu")});
 document.addEventListener("keydown",e=>{if(e.key==="Escape"&&!dr.hidden){closeDrawer();mb.focus()}});
 dr.addEventListener("click",e=>{if(e.target.closest("a"))closeDrawer()});
+/* Neighbourhoods dropdown: opens on hover or focus by CSS; the button toggles it for touch, Escape closes it. */
+document.querySelectorAll(".has-sub").forEach(w=>{const b=w.querySelector(".sub-btn"),set=o=>{w.classList.toggle("open",o);b.setAttribute("aria-expanded",String(o))};
+  b.addEventListener("click",()=>{w.classList.remove("shut");set(!w.classList.contains("open"))});
+  w.addEventListener("keydown",e=>{if(e.key==="Escape"){set(false);w.classList.add("shut");b.focus()}});
+  w.addEventListener("focusout",e=>{if(!w.contains(e.relatedTarget)){set(false);w.classList.remove("shut")}});
+  w.addEventListener("mouseleave",()=>w.classList.remove("shut"))});
 const bar=document.getElementById("mbar");
 function updateBar(){const on=window.scrollY>520&&!/contact$/.test(document.body.dataset.route||"");bar.classList.toggle("on",on);bar.setAttribute("aria-hidden",String(!on));bar.querySelector("a").tabIndex=on?0:-1}
 window.addEventListener("scroll",updateBar,{passive:true});

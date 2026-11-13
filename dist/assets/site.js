@@ -109,6 +109,12 @@ function closeDrawer(){dr.hidden=true;mb.setAttribute("aria-expanded","false");m
 mb.addEventListener("click",()=>{const o=dr.hidden;dr.hidden=!o;mb.setAttribute("aria-expanded",String(o));mb.textContent=o?(mb.dataset.close||"Close"):(mb.dataset.open||"Menu")});
 document.addEventListener("keydown",e=>{if(e.key==="Escape"&&!dr.hidden){closeDrawer();mb.focus()}});
 dr.addEventListener("click",e=>{if(e.target.closest("a"))closeDrawer()});
+/* Neighbourhoods dropdown: opens on hover or focus by CSS; the button toggles it for touch, Escape closes it. */
+document.querySelectorAll(".has-sub").forEach(w=>{const b=w.querySelector(".sub-btn"),set=o=>{w.classList.toggle("open",o);b.setAttribute("aria-expanded",String(o))};
+  b.addEventListener("click",()=>{w.classList.remove("shut");set(!w.classList.contains("open"))});
+  w.addEventListener("keydown",e=>{if(e.key==="Escape"){set(false);w.classList.add("shut");b.focus()}});
+  w.addEventListener("focusout",e=>{if(!w.contains(e.relatedTarget)){set(false);w.classList.remove("shut")}});
+  w.addEventListener("mouseleave",()=>w.classList.remove("shut"))});
 const bar=document.getElementById("mbar");
 function updateBar(){const on=window.scrollY>520&&!/contact$/.test(document.body.dataset.route||"");bar.classList.toggle("on",on);bar.setAttribute("aria-hidden",String(!on));bar.querySelector("a").tabIndex=on?0:-1}
 window.addEventListener("scroll",updateBar,{passive:true});

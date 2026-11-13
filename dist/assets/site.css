@@ -69,6 +69,17 @@ p{margin:0}
 .nav a:hover{background:var(--sunk)}
 .nav a[aria-current="page"]{color:var(--lake);font-weight:600}
 .nav .talk{margin-left:.6rem}
+.has-sub{position:relative;display:inline-flex;align-items:center}
+.has-sub > a{padding-inline-end:.2rem}
+.sub-btn{all:unset;box-sizing:border-box;cursor:pointer;display:inline-grid;place-items:center;width:1.5rem;height:1.9rem;border-radius:3px;color:var(--muted)}
+.sub-btn:hover{background:var(--sunk);color:var(--ink)}
+.sub-btn:focus-visible{outline:2px solid var(--lake);outline-offset:2px}
+.sub-btn svg{transition:transform .2s ease}
+.has-sub:hover .sub-btn svg,.has-sub:focus-within .sub-btn svg,.has-sub.open .sub-btn svg{transform:rotate(180deg)}
+.sub{position:absolute;top:100%;inset-inline-start:0;z-index:40;display:none;flex-direction:column;min-width:13rem;padding:.4rem;background:var(--surface);border:1px solid var(--line);border-radius:var(--r);box-shadow:0 10px 28px rgba(20,33,61,.1)}
+.has-sub:hover .sub,.has-sub:focus-within .sub,.has-sub.open .sub{display:flex}
+.has-sub.shut .sub{display:none}
+.sub a{padding:.55rem .7rem;white-space:nowrap}
 .menu-btn{display:none;background:none;border:1.5px solid var(--line);color:var(--ink);border-radius:3px;padding:.55rem .9rem;font:600 .9rem var(--body);cursor:pointer;min-height:44px}
 .site-head .head-talk{display:none}
 @media (max-width:1000px){.nav{display:none}.menu-btn{display:inline-flex}.site-head .head-talk{display:inline-flex}.head-actions{display:flex;gap:.5rem;align-items:center}}
