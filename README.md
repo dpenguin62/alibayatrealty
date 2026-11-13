@@ -1,6 +1,7 @@
 # Ali Bayat Realty website
 
-A static website: real HTML pages at real URLs, no framework, no CMS, no tracking. You own all of it.
+A static website: real HTML pages at real URLs, no framework, no CMS. The only tracking is the HubSpot
+tracking script (see `LEADS.md`). You own all of it.
 
 ```
 src/site.html       Design source + clickable prototype. Page content and layout live here.

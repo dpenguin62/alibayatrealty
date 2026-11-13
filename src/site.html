@@ -2584,6 +2584,18 @@ if(STATIC&&!attrib.landing_page){
   try{const r=document.referrer&&new URL(document.referrer);if(r&&r.origin!==location.origin)a.referrer=r.origin}catch(e){}
   attrib=a;try{sessionStorage.setItem("abr-attrib",JSON.stringify(a))}catch(e){}
 }
+/* Last touch (latest_source_campaign): replaced only when the current URL carries UTM parameters; a direct
+   visit never overwrites it. Storage may be blocked: every read and write is guarded, the value then lives
+   for this page only. */
+let lastTouch={};
+try{lastTouch=JSON.parse(sessionStorage.getItem("abr-attrib-last")||"{}")||{}}catch(e){lastTouch={}}
+if(STATIC){
+  const l={};ATTR_KEYS.forEach(k=>{const v=params.get(k);if(v)l[k]=v.slice(0,100)});
+  if(Object.keys(l).length){lastTouch=l;try{sessionStorage.setItem("abr-attrib-last",JSON.stringify(l))}catch(e){}}
+}
+/* HubSpot visitor cookie (set by the HubSpot tracking script, subject to HubSpot's consent banner).
+   Returns "" when the cookie is absent, malformed or cookies are unreadable. */
+const readHutk=()=>{try{const m=document.cookie.match(/(?:^|;\s*)hubspotutk=([a-f0-9]{32})\s*(?:;|$)/i);return m?m[1]:""}catch(e){return""}};
 
 /*<prototype>*/
 /* ---------- Router (prototype only) ---------- */
@@ -2680,25 +2692,35 @@ cf.addEventListener("submit",async e=>{e.preventDefault();const nm=document.getE
       const leadType={buy:"buyer",sell:"seller",invest:"investor",question:"general_question"}[g("interest")]||"other";
       const lang=g("language")==="fa"?"fa":"en";
       const utm=["utm_source","utm_medium","utm_campaign","utm_content"].map(g).filter(Boolean).join(" / ");
+      const latest=ATTR_KEYS.map(k=>typeof lastTouch[k]==="string"?lastTouch[k].trim():"").filter(Boolean).join(" / ");
+      const hutk=readHutk();
       const chan=(g("utm_source")+" "+g("referrer")).toLowerCase();
       const leadSource=/instagram/.test(chan)?"instagram":/facebook|fb\.com/.test(chan)?"facebook":/google/.test(chan)?"google":"website";
       const consentSrc="Website contact form ("+(g("form_version")||"unknown")+", "+location.pathname+")";
       const now=Date.now();
       const message=g("message");
       const toFields=list=>list.filter(([,v])=>v!==""&&v!=null).map(([name,value])=>({objectTypeId:"0-1",name,value:String(value)}));
-      const structured=toFields([["firstname",first],["lastname",last],["email",g("email")],["phone",g("phone")],["message",message],
+      const base=[["firstname",first],["lastname",last],["email",g("email")],["phone",g("phone")],["message",message],
         ["lead_type",leadType],["analysis_requested",g("request")==="analysis"?"true":"false"],["hs_language",lang],
         /* Lead Status is NOT sent: a repeat submission must never reset a lead Ali is already working back to "New". */["lead_source",leadSource],["source_page",g("source_page")||location.pathname],["source_cta",g("source_cta")],
         ["source_campaign",utm],["referrer_url",g("referrer")],
-        ["consent_status",g("consent")==="yes"?"given":"not_given"],["consent_source",consentSrc],["consent_version",g("consent_version")]]);
+        ["consent_status",g("consent")==="yes"?"given":"not_given"],["consent_source",consentSrc],["consent_version",g("consent_version")]];
+      const structured=toFields(base),withLatest=toFields(base.concat([["latest_source_campaign",latest]]));
       const ctx=["Interest: "+(lbl[g("interest")]||g("interest"))+(g("request")==="analysis"?" (Investment Property Analysis request)":""),
         "Reply in: "+(lang==="fa"?"Farsi":"English"),g("source_page")&&("From page: "+g("source_page")),g("source_cta")&&("Clicked: "+g("source_cta")),
-        utm&&("Campaign: "+utm),g("referrer")&&("Referrer: "+g("referrer")),"Consent: "+g("consent")+" (wording "+g("consent_version")+")"].filter(Boolean).join("\n");
+        utm&&("Campaign: "+utm),latest&&("Latest campaign: "+latest),g("referrer")&&("Referrer: "+g("referrer")),"Consent: "+g("consent")+" (wording "+g("consent_version")+")"].filter(Boolean).join("\n");
       const legacy=toFields([["firstname",first],["lastname",last],["email",g("email")],["phone",g("phone")],["message",(message?message+"\n\n":"")+"---\n"+ctx]]);
-      const post=fields=>fetch(endpoint,{method:"POST",headers:{"Content-Type":"application/json",Accept:"application/json"},
-        body:JSON.stringify({submittedAt:String(now),fields,context:{pageUri:location.href,pageName:document.title}})});
-      r=await post(structured);
-      if(r.status===400)r=await post(legacy); /* safety net: never lose a lead over a field-mapping mismatch */
+      /* context.hutk ties the submission to the visitor's HubSpot session; it is sent only when the cookie exists. */
+      const post=(fields,utk)=>fetch(endpoint,{method:"POST",headers:{"Content-Type":"application/json",Accept:"application/json"},
+        body:JSON.stringify({submittedAt:String(now),fields,context:Object.assign({pageUri:location.href,pageName:document.title},utk?{hutk:utk}:{})})});
+      /* Safety net: never lose a lead over a field-mapping or cookie mismatch. On a 400 each retry drops the
+         newest addition first: latest_source_campaign, then hutk, then the structured fields (legacy payload). */
+      const tries=[];
+      if(latest)tries.push([withLatest,hutk]);
+      tries.push([structured,hutk]);
+      if(hutk)tries.push([structured,""]);
+      tries.push([legacy,""]);
+      for(const [fields,utk] of tries){r=await post(fields,utk);if(r.status!==400)break}
     }else{
       r=await fetch(endpoint,{method:"POST",body:new FormData(cf),headers:{Accept:"application/json"}});
     }

@@ -827,7 +827,10 @@ def g10(ctx, P, N):
     try:
         c = br.new_context()
         third = []
-        c.on("request", lambda q: third.append(q.url) if not q.url.startswith((H2, "https://fonts.", test_ep)) else None)
+        # HubSpot's tracking script is expected on every page; it is blocked here so the test stays offline.
+        hs = re.compile(r"^https://([a-z0-9-]+\.)*(hs-scripts\.com|hs-analytics\.net|hs-banner\.com|hscollectedforms\.net|hsadspixel\.net|usemessages\.com|hubspot\.com|hsforms\.com)/")
+        c.route(hs, lambda route: route.abort())
+        c.on("request", lambda q: third.append(q.url) if not (q.url.startswith((H2, "https://fonts.", test_ep)) or hs.match(q.url)) else None)
         got = []
         c.route(test_ep + "**", lambda route, request: (got.append(request.post_data or ""), route.fulfill(status=200, body='{"ok":true}', content_type="application/json")))
         pg = c.new_page()
@@ -894,7 +897,7 @@ def g10(ctx, P, N):
     js_errors(ctx, P)
     N.append("stand-in endpoint (code path only; NOT the integration): payload matches lead.schema.json; consent required; "
              "source_page /invest/ and source_cta from a real click path; UTM from the landing URL; referrer reduced to its origin; "
-             "error keeps the message; no-JS POST; honeypot; no third-party requests")
+             "error keeps the message; no-JS POST; honeypot; no third-party requests other than HubSpot tracking")
 
 
 # ================================================================ PRODUCTION SAFETY
@@ -1052,7 +1055,7 @@ def g14(ctx, P, N):
     N.append(f"largest page {max(rows, key=lambda x: x[1])[0]} {max(x[1] for x in rows):.0f} KB HTML; most DOM {worst[0]} {worst[2]} elements; "
              f"max same-origin requests {max(x[3] for x in rows)}; max layout shift {max(x[4] for x in rows):.3f}")
     if third:
-        N.append(f"third-party request on every page: {', '.join(third)} (Google Fonts). Recommendation: self-host the three font families")
+        N.append(f"third-party request on every page: {', '.join(third)} (Google Fonts and, when listed, the HubSpot tracking script). Recommendation: self-host the three font families")
 
 
 # ================================================================ REPRODUCIBILITY

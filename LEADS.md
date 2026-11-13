@@ -15,12 +15,15 @@ detects the `api.hsforms.com` endpoint and sends JSON mapped to HubSpot contact 
 | utm_source + referrer | `lead_source` (website / instagram / facebook / google) |
 | source_page | `source_page` (falls back to the contact page path) |
 | source_cta | `source_cta` |
-| utm_* | `source_campaign` ("source / medium / campaign / content") |
+| utm_* (first page of the visit) | `source_campaign` ("source / medium / campaign / content"), first touch |
+| utm_* (most recent page that had them) | `latest_source_campaign` (same format), last touch. Not a form field; kept in `sessionStorage` (`abr-attrib-last`) and overwritten only when a page URL carries UTM parameters |
+| `hubspotutk` cookie | `context.hutk`, only when the cookie exists and is well-formed; omitted otherwise |
 | referrer | `referrer_url` (origin only) |
 | consent | `consent_status` (given), `consent_source`, `consent_version` (consent timestamp = HubSpot's form submission time; `consent_date` is not sent) |
 
 Every property above must exist in HubSpot AND be a hidden field on the HubSpot form, or HubSpot answers 400.
-On a 400 the site resends the old payload (context appended to `message`) so the lead is never lost.
+On a 400 the site retries, dropping the newest addition each time: first `latest_source_campaign`, then
+`hutk`, and finally it resends the old payload (context appended to `message`), so the lead is never lost.
 Lead Status is deliberately not sent, so a repeat submission never resets a lead Ali is working.
 Honeypot hits are dropped in the browser. Without JavaScript the native POST to HubSpot won't work.
 
@@ -72,7 +75,9 @@ The endpoint should then redirect back to a thank-you URL or show its own confir
 
 ## Privacy choices
 
-- No cookies, no third-party trackers, no fingerprinting.
+- The HubSpot tracking script (portal 343743815, `hubspot_portal_id` in `site.config.json`) loads on every
+  page and sets HubSpot's cookies. Consent is handled by HubSpot's cookie banner configuration, not by site
+  code. The site itself sets no cookies and does no fingerprinting; it only reads `hubspotutk` at submit.
 - UTM values and the referring site's origin are kept in `sessionStorage` (this browser tab only,
   cleared when it closes) and sent only if the visitor submits the form.
 - Referrers are reduced to their origin, never the full URL.
@@ -83,7 +88,7 @@ The endpoint should then redirect back to a thank-you URL or show its own confir
 `verify.py` gate 10 builds a throwaway copy of the site pointed at a stand-in endpoint and checks:
 success and error states, required consent, field names against this contract, the source page and
 CTA from a real click path, UTM capture, origin-only referrer, the honeypot, client-side
-validation, no-JS `POST`, and that no other third-party request is made.
+validation, no-JS `POST`, and that no third-party request other than HubSpot tracking is made.
 
 **A stand-in passing is not the integration being complete.** Gate 10 stays failed until a real
 endpoint is configured.

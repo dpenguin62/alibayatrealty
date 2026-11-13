@@ -87,6 +87,11 @@ if CONFIG_FILE.exists():
 if os.environ.get("ABR_TEST_FORM_ENDPOINT"):          # verify.py only: exercises the submit path in a throwaway build
     CONFIG["form_endpoint"] = os.environ["ABR_TEST_FORM_ENDPOINT"]
 STAGING = "--staging" in ARGS
+# HubSpot tracking script, loaded on every page. Consent is handled by HubSpot's own banner configuration.
+HS_PORTAL = str(CONFIG.get("hubspot_portal_id") or "").strip()
+assert not HS_PORTAL or HS_PORTAL.isdigit(), "hubspot_portal_id must be numeric"
+HS_TRACKING = (f'<script type="text/javascript" id="hs-script-loader" async defer src="https://js.hs-scripts.com/{HS_PORTAL}.js"></script>\n'
+               if HS_PORTAL else "")
 OUT = pathlib.Path(_arg("--out")) if _arg("--out") else ROOT / "dist"
 BASE = CONFIG["site_url"].rstrip("/")
 DETAILS = {k: v for k, v in CONFIG["details"].items() if v is not None}
@@ -527,7 +532,7 @@ def build():
                    f'<html lang="{"fa" if r.get("lang") == "fa" else "en-CA"}"{" dir=\"rtl\"" if r.get("lang") == "fa" else ""} data-static>\n<head>\n{head(r, by_key, f"/assets/site.css?v={v_css}", content_hash)}\n</head>\n'
                    f'<body data-route="{esc(expect)}">\n<a class="skip" href="#main">Skip to content</a>\n'
                    + (STAGING_BAR + "\n" if STAGING else "") + body +
-                   f'<script src="/assets/site.js?v={v_js}" defer></script>\n</body>\n</html>\n')
+                   f'<script src="/assets/site.js?v={v_js}" defer></script>\n{HS_TRACKING}</body>\n</html>\n')
             out = OUT / (r["path"].lstrip("/") if r["path"].endswith(".html") else r["path"].lstrip("/") + "index.html")
             out.parent.mkdir(parents=True, exist_ok=True)
             out.write_text(doc, encoding="utf8")
