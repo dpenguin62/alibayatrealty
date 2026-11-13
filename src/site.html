@@ -183,6 +183,22 @@ p{margin:0}
 .linemap .node:hover circle,.linemap .node:focus circle{fill:var(--lake)}
 .linemap .node:focus-visible{outline:2px solid var(--lake);outline-offset:2px}
 .linemap figcaption{font-size:.78rem;color:var(--muted);margin-top:.4rem}
+/* Neighbourhood photo cards (home) */
+.ncards{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1.75rem 1.25rem}
+.ncard.wide{grid-column:1/-1}
+.ncard a{display:grid;gap:.3rem;align-content:start;text-decoration:none}
+.ncard .ph{display:block;height:165px;border-radius:var(--r);overflow:hidden;background:var(--draw);margin-bottom:.55rem}
+.ncard img{display:block;width:100%;height:100%;object-fit:cover;transition:transform .5s ease}
+.ncard a:hover img{transform:scale(1.03)}
+.ncard a:hover h3{color:var(--lake)}
+.ncard h3{font-size:1.5rem;font-weight:300}
+.ncard .cap{font-family:var(--mono);font-size:.68rem;letter-spacing:.05em;text-transform:uppercase;color:var(--muted)}
+.ncard p{font-size:.92rem;color:var(--muted)}
+.ncard .go{font-family:var(--mono);font-size:.74rem;color:var(--lake);margin-top:.15rem}
+.credits{font-size:.74rem;line-height:1.55;color:var(--muted);margin-top:1.5rem;padding-top:.9rem;border-top:1px solid var(--line)}
+@media (min-width:901px){.areas-grid > .linemap{position:sticky;top:calc(env(safe-area-inset-top,0px) + 100px)}}
+@media (max-width:560px){.ncards{grid-template-columns:1fr}.ncard .ph{height:auto;aspect-ratio:16/9}.ncard.wide .ph{aspect-ratio:5/2}.ncard h3{font-size:1.3rem}}
+
 .alist{list-style:none;margin:0;padding:0;border-top:1px solid var(--line)}
 .alist a{display:grid;grid-template-columns:120px minmax(0,1fr) auto;gap:1.25rem;align-items:center;padding-block:1rem;border-bottom:1px solid var(--line);text-decoration:none}
 .alist a:hover h3{color:var(--lake)}
@@ -663,7 +679,10 @@ article.teaser:hover h3{text-decoration:none}
         <div class="head-row"><div><h2>Most of my market sits along <em>one street.</em></h2><p class="lede">Yonge Street runs from downtown through North York, Thornhill and Richmond Hill. Vaughan sits to the west, linked by subway and Highway 7. Each area works differently for buyers and sellers.</p></div></div>
         <div class="areas-grid">
           <figure class="linemap" data-linemap></figure>
-          <ul class="alist" data-alist></ul>
+          <div>
+            <ul class="ncards" data-ncards></ul>
+            <p class="credits">Photos from Wikimedia Commons, cropped and resized: <a href="https://commons.wikimedia.org/wiki/File:North_York_Skyline.jpg" rel="noopener">North York skyline</a> by GTD Aquitaine (public domain); <a href="https://commons.wikimedia.org/wiki/File:Conley_Park.jpg" rel="noopener">Conley Park</a> by Pakx2 (public domain); <a href="https://commons.wikimedia.org/wiki/File:Lake_Wilcox_aerial_view_2024.jpg" rel="noopener">Lake Wilcox aerial view</a> by Canmenwalker (<a href="https://creativecommons.org/licenses/by/4.0/" rel="noopener license">CC BY 4.0</a>); <a href="https://commons.wikimedia.org/wiki/File:Vaughan_Metropolitan_Centre_Skyline,_August_7_2025.jpg" rel="noopener">Vaughan Metropolitan Centre skyline</a> by Dillan Payne (<a href="https://creativecommons.org/licenses/by-sa/4.0/" rel="noopener license">CC BY-SA 4.0</a>; this cropped version is shared under the same licence); <a href="https://commons.wikimedia.org/wiki/File:Cabbagetown_houses.jpg" rel="noopener">Cabbagetown houses</a> by Jay Woodworth (<a href="https://creativecommons.org/licenses/by/2.0/" rel="noopener license">CC BY 2.0</a>).</p>
+          </div>
         </div>
       </div>
     </div>
@@ -2318,7 +2337,16 @@ function lineMap(){
     <text class="sub" x="102" y="300" font-size="10" transform="rotate(-90 102 300)">LINE 1 TO VMC</text>
     ${n("richmond-hill","Richmond Hill","Yonge & Major Mackenzie")}${n("thornhill","Thornhill","Yonge & Centre")}${n("north-york","North York","Sheppard-Yonge · Finch")}${n("toronto","Toronto","Downtown & midtown")}${n("vaughan","Vaughan","Hwy 7 & Jane",false)}
   </svg><figcaption>Schematic, not to scale.</figcaption>`}
-function renderAlists(){document.querySelectorAll("[data-alist]").forEach(el=>{el.innerHTML=AREAS.map(a=>`<li><a href="#${a.slug}"><div class="dwg" data-dwg="${a.hero}"></div><div><span class="label">${a.region}</span><h3>${a.name}</h3><p>${a.tagline}</p></div><span class="go">Guide →</span></a></li>`).join("")})}
+/* Homepage neighbourhood cards: real photos (Wikimedia Commons; credits sit under the grid). pos = per-photo crop focus. */
+const AREA_PHOTOS={
+ "north-york":{w:[800,1600],d:[1600,489],wide:1,pos:"75% 50%",cap:"Skyline from Yonge St, south of York Mills",alt:"North York's condo and office towers on the skyline, seen from Yonge Street south of York Mills"},
+ "thornhill":{w:[480,640],d:[640,426],pos:"35% 70%",cap:"Conley Park",alt:"A paved path under tall willow trees in Conley Park, Thornhill"},
+ "richmond-hill":{w:[480,800],d:[800,452],pos:"50% 45%",cap:"Lake Wilcox",alt:"Aerial view of Lake Wilcox in Richmond Hill, ringed by trees with townhouses in the foreground"},
+ "vaughan":{w:[480,800],d:[800,514],pos:"50% 0%",cap:"Vaughan Metropolitan Centre",alt:"Condo towers of the Vaughan Metropolitan Centre rising behind a tree-lined street"},
+ "toronto":{w:[480,800],d:[800,531],pos:"50% 30%",cap:"Cabbagetown",alt:"Red-brick Victorian bay-and-gable houses behind mature trees in Cabbagetown, Toronto"}};
+function renderNcards(){document.querySelectorAll("[data-ncards]").forEach(el=>{el.innerHTML=AREAS.map(a=>{const ph=AREA_PHOTOS[a.slug],u=w=>`/assets/img/areas/${a.slug}-${w}.webp`;
+  return `<li class="ncard${ph.wide?" wide":""}"><a href="#${a.slug}"><span class="ph"><img src="${u(ph.w[1])}" srcset="${ph.w.map(w=>`${u(w)} ${w}w`).join(", ")}" sizes="${ph.wide?"(max-width:900px) 100vw, 720px":"(max-width:560px) 100vw, (max-width:900px) 50vw, 350px"}" alt="${ph.alt}" width="${ph.d[0]}" height="${ph.d[1]}" loading="lazy" decoding="async" style="object-position:${ph.pos}"></span><span class="label">${a.region}</span><h3>${a.name}</h3><span class="cap">${ph.cap}</span><p>${a.tagline}</p><span class="go">Guide →</span></a></li>`}).join("")})}
+function renderAlists(){renderNcards();document.querySelectorAll("[data-alist]").forEach(el=>{el.innerHTML=AREAS.map(a=>`<li><a href="#${a.slug}"><div class="dwg" data-dwg="${a.hero}"></div><div><span class="label">${a.region}</span><h3>${a.name}</h3><p>${a.tagline}</p></div><span class="go">Guide →</span></a></li>`).join("")})}
 
 /* ---------- Area page ---------- */
 function renderArea(a){

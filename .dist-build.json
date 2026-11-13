@@ -723,7 +723,7 @@
   "/404.html"
  ],
  "hashes": {
-  "/": "0499ba2b8ed171f9",
+  "/": "771abb95ca64878b",
   "/about/": "535662c23a80b705",
   "/buy/": "5009a7a0553f8ee7",
   "/sell/": "16d11447508a32f0",
@@ -844,7 +844,7 @@
    "sources": [],
    "indexable": true,
    "canonical": "https://www.alibayatrealty.com/",
-   "content_hash": "0499ba2b8ed171f9",
+   "content_hash": "771abb95ca64878b",
    "open_items": []
   },
   {
@@ -1597,6 +1597,6 @@
  ],
  "assets": {
   "site.js": 21924,
-  "site.css": 42598
+  "site.css": 43867
  }
 }
