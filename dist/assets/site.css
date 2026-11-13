@@ -203,6 +203,11 @@ p{margin:0}
 .ncard .cap{font-family:var(--mono);font-size:.68rem;letter-spacing:.05em;text-transform:uppercase;color:var(--muted)}
 .ncard p{font-size:.92rem;color:var(--muted)}
 .ncard .go{font-family:var(--mono);font-size:.74rem;color:var(--lake);margin-top:.15rem}
+.photo-band{margin:0 0 1.75rem;display:grid;gap:.6rem}
+.photo-band img{display:block;width:100%;height:auto;aspect-ratio:2/1;object-fit:cover;object-position:50% 45%;border-radius:var(--r);background:var(--draw)}
+.photo-band figcaption{display:flex;flex-wrap:wrap;justify-content:space-between;gap:.25rem 1.5rem;font-size:.86rem;color:var(--muted)}
+.photo-band .by{font-size:.74rem}
+@media (max-width:560px){.photo-band img{aspect-ratio:16/9}}
 .credits{font-size:.74rem;line-height:1.55;color:var(--muted);margin-top:1.5rem;padding-top:.9rem;border-top:1px solid var(--line)}
 @media (min-width:901px){.areas-grid > .linemap{position:sticky;top:calc(env(safe-area-inset-top,0px) + 100px)}}
 @media (max-width:560px){.ncards{grid-template-columns:1fr}.ncard .ph{height:auto;aspect-ratio:16/9}.ncard.wide .ph{aspect-ratio:5/2}.ncard h3{font-size:1.3rem}}
