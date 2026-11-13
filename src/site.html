@@ -206,6 +206,11 @@ p{margin:0}
 .ncard .cap{font-family:var(--mono);font-size:.68rem;letter-spacing:.05em;text-transform:uppercase;color:var(--muted)}
 .ncard p{font-size:.92rem;color:var(--muted)}
 .ncard .go{font-family:var(--mono);font-size:.74rem;color:var(--lake);margin-top:.15rem}
+.photo-band{margin:0 0 1.75rem;display:grid;gap:.6rem}
+.photo-band img{display:block;width:100%;height:auto;aspect-ratio:2/1;object-fit:cover;object-position:50% 60%;border-radius:var(--r);background:var(--draw)}
+.photo-band figcaption{display:flex;flex-wrap:wrap;justify-content:space-between;gap:.25rem 1.5rem;font-size:.86rem;color:var(--muted)}
+.photo-band .by{font-size:.74rem}
+@media (max-width:560px){.photo-band img{aspect-ratio:16/9}}
 .credits{font-size:.74rem;line-height:1.55;color:var(--muted);margin-top:1.5rem;padding-top:.9rem;border-top:1px solid var(--line)}
 @media (min-width:901px){.areas-grid > .linemap{position:sticky;top:calc(env(safe-area-inset-top,0px) + 100px)}}
 @media (min-width:901px){.ncards.cols3{grid-template-columns:repeat(3,minmax(0,1fr))}.ncards.cols3 .wide{grid-column:span 2}.ncards.cols3 .ph,.ncards.tall .ph{height:225px}}
@@ -911,6 +916,10 @@ article.teaser:hover h3{text-decoration:none}
       <div class="rail"><span class="label">Overview</span></div>
       <div class="main">
         <h2>Real estate is more than <em>the purchase price.</em></h2>
+        <figure class="photo-band">
+          <img src="/assets/img/invest/richmond-hill-yonge-1450.webp" srcset="/assets/img/invest/richmond-hill-yonge-720.webp 720w, /assets/img/invest/richmond-hill-yonge-1450.webp 1450w" sizes="(max-width:1000px) 100vw, 900px" alt="Two-storey buildings with shops at street level along Yonge Street in downtown Richmond Hill, with a church spire behind" width="1450" height="725" decoding="async">
+          <figcaption><span>A mixed-use main street: Yonge Street, downtown Richmond Hill.</span><span class="by" lang="en" dir="ltr">Photo: <a href="https://commons.wikimedia.org/wiki/File:DowntownRichmondHill3.jpg" rel="noopener">Raysonho, Wikimedia Commons</a>, <a href="https://creativecommons.org/publicdomain/zero/1.0/" rel="noopener license">CC0</a>. Cropped.</span></figcaption>
+        </figure>
         <div>
           <div class="prose">
             <p>Two properties at the same price can perform very differently once they're rented. What a property earns, what it costs to run, how it's financed and how often it sits empty all decide whether it supports itself or needs money from you every month.</p>
@@ -1561,6 +1570,10 @@ article.teaser:hover h3{text-decoration:none}
       <div class="rail"><span class="label">نگاه کلی</span></div>
       <div class="main">
         <h2>ارزش یک ملک فقط <em>قیمت خرید آن نیست.</em></h2>
+        <figure class="photo-band">
+          <img src="/assets/img/invest/richmond-hill-yonge-1450.webp" srcset="/assets/img/invest/richmond-hill-yonge-720.webp 720w, /assets/img/invest/richmond-hill-yonge-1450.webp 1450w" sizes="(max-width:1000px) 100vw, 900px" alt="ساختمان‌های دوطبقه با مغازه در طبقه‌ی همکف در خیابان یانگ، مرکز ریچموند هیل، با مناره‌ی کلیسا در پس‌زمینه" width="1450" height="725" decoding="async">
+          <figcaption><span>خیابان اصلی با کاربری ترکیبی: خیابان یانگ، مرکز ریچموند هیل.</span><span class="by" lang="en" dir="ltr">Photo: <a href="https://commons.wikimedia.org/wiki/File:DowntownRichmondHill3.jpg" rel="noopener">Raysonho, Wikimedia Commons</a>, <a href="https://creativecommons.org/publicdomain/zero/1.0/" rel="noopener license">CC0</a>. Cropped.</span></figcaption>
+        </figure>
         <div>
           <div class="prose">
             <p>دو ملک با قیمت یکسان، وقتی اجاره داده شوند می‌توانند عملکرد کاملاً متفاوتی داشته باشند. اینکه ملک چقدر درآمد دارد، اداره‌اش چقدر هزینه دارد، چطور تأمین مالی شده و چند وقت خالی می‌ماند، تعیین می‌کند که خرج خودش را درمی‌آورد یا هر ماه از جیب شما پول می‌خواهد.</p>

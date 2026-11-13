@@ -727,7 +727,7 @@
   "/about/": "535662c23a80b705",
   "/buy/": "5009a7a0553f8ee7",
   "/sell/": "32e5254f114d712c",
-  "/invest/": "0bc45a307663efc5",
+  "/invest/": "615fd3c844c9f131",
   "/neighbourhoods/": "12fae0660217dde8",
   "/neighbourhoods/north-york/": "c2edf6e07a8d4ea2",
   "/neighbourhoods/thornhill/": "7512e7015acc12f0",
@@ -740,7 +740,7 @@
   "/fa/": "1f55d850c2cf34a7",
   "/fa/buy/": "3d74ab5bc2fd187f",
   "/fa/sell/": "6a2daeb602d5658a",
-  "/fa/invest/": "5f3286dc775ab28e",
+  "/fa/invest/": "36525fbf40ac4041",
   "/fa/neighbourhoods/": "b668fddbe695b9c6",
   "/fa/neighbourhoods/north-york/": "4c8f8759aff8d135",
   "/fa/neighbourhoods/thornhill/": "337e61686d11147f",
@@ -948,7 +948,7 @@
    "sources": [],
    "indexable": true,
    "canonical": "https://www.alibayatrealty.com/invest/",
-   "content_hash": "0bc45a307663efc5",
+   "content_hash": "615fd3c844c9f131",
    "open_items": [
     "referral-disclosure"
    ]
@@ -1253,7 +1253,7 @@
    "sources": [],
    "indexable": true,
    "canonical": "https://www.alibayatrealty.com/fa/invest/",
-   "content_hash": "5f3286dc775ab28e",
+   "content_hash": "36525fbf40ac4041",
    "open_items": [
     "referral-disclosure"
    ]
@@ -1613,6 +1613,6 @@
  ],
  "assets": {
   "site.js": 22589,
-  "site.css": 45656
+  "site.css": 46100
  }
 }
