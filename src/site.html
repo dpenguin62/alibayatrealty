@@ -2695,8 +2695,12 @@ cf.addEventListener("submit",async e=>{e.preventDefault();const nm=document.getE
         "Reply in: "+(lang==="fa"?"Farsi":"English"),g("source_page")&&("From page: "+g("source_page")),g("source_cta")&&("Clicked: "+g("source_cta")),
         utm&&("Campaign: "+utm),g("referrer")&&("Referrer: "+g("referrer")),"Consent: "+g("consent")+" (wording "+g("consent_version")+")"].filter(Boolean).join("\n");
       const legacy=toFields([["firstname",first],["lastname",last],["email",g("email")],["phone",g("phone")],["message",(message?message+"\n\n":"")+"---\n"+ctx]]);
+      /* hutk links the submission to this browser's HubSpot page views. The cookie only exists if the tracking code ran
+         and the visitor didn't decline HubSpot's cookie banner; a malformed value is never sent (HubSpot would 400). */
+      const hutk=(document.cookie.match(/(?:^|;\s*)hubspotutk=([0-9a-f]{32})(?:;|$)/)||[])[1];
+      const context={pageUri:location.href,pageName:document.title};if(hutk)context.hutk=hutk;
       const post=fields=>fetch(endpoint,{method:"POST",headers:{"Content-Type":"application/json",Accept:"application/json"},
-        body:JSON.stringify({submittedAt:String(now),fields,context:{pageUri:location.href,pageName:document.title}})});
+        body:JSON.stringify({submittedAt:String(now),fields,context})});
       r=await post(structured);
       if(r.status===400)r=await post(legacy); /* safety net: never lose a lead over a field-mapping mismatch */
     }else{

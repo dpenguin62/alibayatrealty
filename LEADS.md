@@ -72,7 +72,11 @@ The endpoint should then redirect back to a thank-you URL or show its own confir
 
 ## Privacy choices
 
-- No cookies, no third-party trackers, no fingerprinting.
+- HubSpot tracking code (`js.hs-scripts.com/<portal>.js`, production builds only, portal taken from `form_endpoint`)
+  records page views and sets the `hubspotutk` cookie. The form sends that cookie as `context.hutk` (only if present
+  and well-formed) so HubSpot ties the visit's page views to the contact. Cookie consent is governed by the
+  HubSpot portal's cookie banner settings; if a visitor declines, no cookie exists and no `hutk` is sent.
+  No other third-party trackers, no fingerprinting.
 - UTM values and the referring site's origin are kept in `sessionStorage` (this browser tab only,
   cleared when it closes) and sent only if the visitor submits the form.
 - Referrers are reduced to their origin, never the full URL.

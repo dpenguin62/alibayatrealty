@@ -377,6 +377,9 @@ def head(r, routes_by_key, css_href, content_hash):
         tags += [f'<link rel="alternate" hreflang="en-CA" href="{esc(url(en["path"]))}">',
                  f'<link rel="alternate" hreflang="fa" href="{esc(url(fa_["path"]))}">',
                  f'<link rel="alternate" hreflang="x-default" href="{esc(url(en["path"]))}">']
+    hs = re.match(r"https://api(?:-[a-z0-9]+)?\.hsforms\.com/submissions/v3/integration/submit/(\d+)/", CONFIG["form_endpoint"] or "")
+    if hs and not STAGING:  # HubSpot tracking code: page views + hubspotutk cookie, so form submissions link to the visit
+        tags.append(f'<script id="hs-script-loader" async defer src="https://js.hs-scripts.com/{hs.group(1)}.js"></script>')
     if not is_404:
         tags.append(f'<script type="application/ld+json">\n{ld_graph(r, routes_by_key, content_hash)}\n</script>')
     return "\n".join(tags)
