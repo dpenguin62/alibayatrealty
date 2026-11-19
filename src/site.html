@@ -4,11 +4,11 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
 <style>
-/* Layout: editorial 12-col frame with a left label rail; ivory paper, midnight navy ink, brushed-brass accent (Modern Classic brand); architectural elevation drawings as the brand's illustration system */
+/* Layout: editorial 12-col frame with a left label rail; warm off-white paper, warm charcoal ink, terracotta accent (Nov 2026 brand); architectural elevation drawings as the brand's illustration system */
 :root{
-  --paper:#F7F5F0; --surface:#FFFFFF; --sunk:#EFECE4; --draw:#ECE8DF; --ink:#14213D; --muted:#4A5A75; --line:#E2DED4;
-  --lake:#14213D; --lake-ink:#FFFFFF; --lake-soft:#E6E9F0; --brick:#8A4731;
-  --brass:#B8935A; --brass-ink:#14213D; --brass-text:#86662F; --band:#14213D; --band-ink:#F7F5F0;
+  --paper:#F4F1EC; --surface:#FFFFFF; --sunk:#ECE7E0; --draw:#E9E3DA; --ink:#2F2D2A; --muted:#5E5B57; --line:#E2DCD3;
+  --lake:#A04B27; --lake-ink:#FFFFFF; --lake-soft:#F5E6DD; --brick:#8A4731;
+  --brass:#B5562F; --brass-ink:#FFFFFF; --brass-text:#A04B27; --band:#3A3835; --band-ink:#F4F1EC;
   --flag:#F5DE84; --flag-ink:#574100; --ok:#2E6A48;
   --display:"Playfair Display", Georgia, "Times New Roman", serif;
   --body:"Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
@@ -16,9 +16,9 @@
   --frame:1240px; --r:4px; --rail:200px;
 }
 :root[data-theme="dark"]{
-  --paper:#0B1222; --surface:#111A2E; --sunk:#16203A; --draw:#131D35; --ink:#ECEEF3; --muted:#A5AFC3; --line:#253150;
-  --lake:#D9B77E; --lake-ink:#14213D; --lake-soft:#1C2742; --brick:#E0A08A;
-  --brass:#C9A46A; --brass-ink:#14213D; --brass-text:#D9B77E; --band:#1B2A4D; --band-ink:#F7F5F0;
+  --paper:#1A1816; --surface:#22201D; --sunk:#2A2724; --draw:#262320; --ink:#F1ECE6; --muted:#B5ADA4; --line:#3A3632;
+  --lake:#E08A62; --lake-ink:#1A1816; --lake-soft:#3A2A22; --brick:#E0A08A;
+  --brass:#D9774A; --brass-ink:#1A1816; --brass-text:#E08A62; --band:#2A2724; --band-ink:#F1ECE6;
   --flag:#4A3E12; --flag-ink:#F3DD8E; --ok:#7CC49A; color-scheme:dark }
 
 *{box-sizing:border-box}
@@ -260,7 +260,7 @@ p{margin:0}
 .cta-band{background:var(--band);color:var(--band-ink)}
 .cta-band .wrap{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:2rem;align-items:center;padding-block:clamp(3rem,6vw,4.5rem)}
 .cta-band h2{color:var(--band-ink)}
-.cta-band h2 em{color:var(--brass);opacity:1}
+.cta-band h2 em{color:#E08A62;opacity:1}
 .cta-band p{opacity:.9;margin-top:.8rem;max-width:52ch}
 .cta-band .btn{background:var(--brass);color:var(--brass-ink);border-color:var(--brass)}
 .cta-band .row{justify-content:flex-end}

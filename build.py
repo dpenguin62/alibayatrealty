@@ -212,7 +212,7 @@ TRANSFORM_JS = r"""
 }
 """
 
-FAVICON = """<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><rect width="64" height="64" rx="12" fill="#14213D"/><text x="32" y="43" text-anchor="middle" font-family="Playfair Display, Georgia, 'Times New Roman', serif" font-size="30" letter-spacing="1" fill="#F7F5F0">AB</text></svg>
+FAVICON = """<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><rect width="64" height="64" rx="12" fill="#B5562F"/><text x="32" y="43" text-anchor="middle" font-family="Playfair Display, Georgia, 'Times New Roman', serif" font-size="30" letter-spacing="1" fill="#FFFFFF">AB</text></svg>
 """
 FONTS = ('<link rel="preconnect" href="https://fonts.googleapis.com">\n'
          '<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>\n'
@@ -367,7 +367,7 @@ def head(r, routes_by_key, css_href, content_hash):
         else:
             tags.append('<meta name="twitter:card" content="summary">')
         tags += [f'<meta name="twitter:title" content="{esc(r["title"])}">', f'<meta name="twitter:description" content="{esc(r["desc"])}">']
-    tags += ['<link rel="icon" href="/favicon.svg" type="image/svg+xml">', '<meta name="theme-color" content="#F7F5F0">',
+    tags += ['<link rel="icon" href="/favicon.svg" type="image/svg+xml">', '<meta name="theme-color" content="#F4F1EC">',
              FONTS, f'<link rel="stylesheet" href="{css_href}">']
     if r.get("lang") == "fa":
         tags.insert(-1, '<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;600;700&display=swap">')
