@@ -6,35 +6,35 @@
  "pages": {
   "home": {
    "review_status": "approved",
-   "approved_hash": "3d8f643bab2687dc",
+   "approved_hash": "f47ad380aff78460",
    "reviewed_by": "Ali Bayat",
-   "reviewed_at": "2026-11-11",
+   "reviewed_at": "2026-11-18",
    "published_at": "2026-11-11",
-   "updated_at": null
+   "updated_at": "2026-11-18"
   },
   "about": {
    "review_status": "approved",
-   "approved_hash": "cc15a7ea63a9893e",
+   "approved_hash": "535662c23a80b705",
    "reviewed_by": "Ali Bayat",
-   "reviewed_at": "2026-11-11",
+   "reviewed_at": "2026-11-18",
    "published_at": "2026-11-11",
-   "updated_at": null
+   "updated_at": "2026-11-18"
   },
   "buy": {
    "review_status": "approved",
-   "approved_hash": "f3b78eef67252f2b",
+   "approved_hash": "5009a7a0553f8ee7",
    "reviewed_by": "Ali Bayat",
-   "reviewed_at": "2026-11-11",
+   "reviewed_at": "2026-11-18",
    "published_at": "2026-11-11",
-   "updated_at": null
+   "updated_at": "2026-11-18"
   },
   "sell": {
    "review_status": "approved",
-   "approved_hash": "16d11447508a32f0",
+   "approved_hash": "32e5254f114d712c",
    "reviewed_by": "Ali Bayat",
-   "reviewed_at": "2026-11-11",
+   "reviewed_at": "2026-11-18",
    "published_at": "2026-11-11",
-   "updated_at": null
+   "updated_at": "2026-11-18"
   },
   "invest": {
    "review_status": "draft",
@@ -46,17 +46,17 @@
   },
   "neighbourhoods": {
    "review_status": "approved",
-   "approved_hash": "e497f50715b9e89d",
+   "approved_hash": "1a31175a7a9b13dd",
    "reviewed_by": "Ali Bayat",
-   "reviewed_at": "2026-11-11",
+   "reviewed_at": "2026-11-18",
    "published_at": "2026-11-11",
-   "updated_at": null
+   "updated_at": "2026-11-18"
   },
   "north-york": {
    "review_status": "approved",
    "approved_hash": "c2edf6e07a8d4ea2",
    "reviewed_by": "Ali Bayat",
-   "reviewed_at": "2026-11-11",
+   "reviewed_at": "2026-11-18",
    "published_at": "2026-11-11",
    "updated_at": null
   },
@@ -64,7 +64,7 @@
    "review_status": "approved",
    "approved_hash": "7512e7015acc12f0",
    "reviewed_by": "Ali Bayat",
-   "reviewed_at": "2026-11-11",
+   "reviewed_at": "2026-11-18",
    "published_at": "2026-11-11",
    "updated_at": null
   },
@@ -72,7 +72,7 @@
    "review_status": "approved",
    "approved_hash": "845e9b88989484f5",
    "reviewed_by": "Ali Bayat",
-   "reviewed_at": "2026-11-11",
+   "reviewed_at": "2026-11-18",
    "published_at": "2026-11-11",
    "updated_at": null
   },
@@ -80,7 +80,7 @@
    "review_status": "approved",
    "approved_hash": "58468212976d1283",
    "reviewed_by": "Ali Bayat",
-   "reviewed_at": "2026-11-11",
+   "reviewed_at": "2026-11-18",
    "published_at": "2026-11-11",
    "updated_at": null
   },
@@ -88,7 +88,7 @@
    "review_status": "approved",
    "approved_hash": "cbe49cbc7e369c8e",
    "reviewed_by": "Ali Bayat",
-   "reviewed_at": "2026-11-11",
+   "reviewed_at": "2026-11-18",
    "published_at": "2026-11-11",
    "updated_at": null
   },
@@ -96,25 +96,25 @@
    "review_status": "approved",
    "approved_hash": "0f7e20cf527fdcbd",
    "reviewed_by": "Ali Bayat",
-   "reviewed_at": "2026-11-11",
+   "reviewed_at": "2026-11-18",
    "published_at": "2026-11-11",
    "updated_at": null
   },
   "guide-land-transfer-tax": {
    "review_status": "approved",
-   "approved_hash": "a3754a8efe85bafa",
+   "approved_hash": "db1ac87fda3f8a04",
    "reviewed_by": "Ali Bayat",
-   "reviewed_at": "2026-11-11",
+   "reviewed_at": "2026-11-18",
    "published_at": "2026-11-11",
-   "updated_at": null
+   "updated_at": "2026-11-18"
   },
   "contact": {
    "review_status": "approved",
-   "approved_hash": "5549ee0b69189008",
+   "approved_hash": "2d56874668cf9c54",
    "reviewed_by": "Ali Bayat",
-   "reviewed_at": "2026-11-11",
+   "reviewed_at": "2026-11-18",
    "published_at": "2026-11-11",
-   "updated_at": null
+   "updated_at": "2026-11-18"
   },
   "privacy": {
    "review_status": "draft",
@@ -136,7 +136,7 @@
    "review_status": "approved",
    "approved_hash": "7a3863c823923925",
    "reviewed_by": "Ali Bayat",
-   "reviewed_at": "2026-11-11",
+   "reviewed_at": "2026-11-18",
    "published_at": "2026-11-11",
    "updated_at": null
   },
@@ -144,100 +144,107 @@
    "review_status": "approved",
    "approved_hash": "65c5629ec4899129",
    "reviewed_by": "Ali Bayat",
-   "reviewed_at": "2026-11-11",
+   "reviewed_at": "2026-11-18",
    "published_at": "2026-11-11",
    "updated_at": null
   },
   "fa-home": {
    "review_status": "approved",
-   "approved_hash": "587390ed44689bbe",
+   "approved_hash": "1f55d850c2cf34a7",
    "reviewed_by": "Ali Bayat",
-   "reviewed_at": "2026-11-11",
-   "published_at": "2026-11-11"
+   "reviewed_at": "2026-11-18",
+   "published_at": "2026-11-11",
+   "updated_at": "2026-11-18"
   },
   "fa-buy": {
    "review_status": "approved",
-   "approved_hash": "2d89338d15c16f33",
+   "approved_hash": "3d74ab5bc2fd187f",
    "reviewed_by": "Ali Bayat",
-   "reviewed_at": "2026-11-11",
-   "published_at": "2026-11-11"
+   "reviewed_at": "2026-11-18",
+   "published_at": "2026-11-11",
+   "updated_at": "2026-11-18"
   },
   "fa-sell": {
    "review_status": "approved",
-   "approved_hash": "a17a655ad496ab86",
+   "approved_hash": "6a2daeb602d5658a",
    "reviewed_by": "Ali Bayat",
-   "reviewed_at": "2026-11-11",
-   "published_at": "2026-11-11"
+   "reviewed_at": "2026-11-18",
+   "published_at": "2026-11-11",
+   "updated_at": "2026-11-18"
   },
   "fa-neighbourhoods": {
    "review_status": "approved",
-   "approved_hash": "463022fe39407c87",
+   "approved_hash": "b668fddbe695b9c6",
    "reviewed_by": "Ali Bayat",
-   "reviewed_at": "2026-11-11",
-   "published_at": "2026-11-11"
+   "reviewed_at": "2026-11-18",
+   "published_at": "2026-11-11",
+   "updated_at": "2026-11-18"
   },
   "fa-north-york": {
    "review_status": "approved",
    "approved_hash": "4c8f8759aff8d135",
    "reviewed_by": "Ali Bayat",
-   "reviewed_at": "2026-11-11",
+   "reviewed_at": "2026-11-18",
    "published_at": "2026-11-11"
   },
   "fa-thornhill": {
    "review_status": "approved",
    "approved_hash": "337e61686d11147f",
    "reviewed_by": "Ali Bayat",
-   "reviewed_at": "2026-11-11",
+   "reviewed_at": "2026-11-18",
    "published_at": "2026-11-11"
   },
   "fa-richmond-hill": {
    "review_status": "approved",
    "approved_hash": "3c6c0710ad3f8a3d",
    "reviewed_by": "Ali Bayat",
-   "reviewed_at": "2026-11-11",
+   "reviewed_at": "2026-11-18",
    "published_at": "2026-11-11"
   },
   "fa-vaughan": {
    "review_status": "approved",
    "approved_hash": "ef61225f785a9ffd",
    "reviewed_by": "Ali Bayat",
-   "reviewed_at": "2026-11-11",
+   "reviewed_at": "2026-11-18",
    "published_at": "2026-11-11"
   },
   "fa-toronto": {
    "review_status": "approved",
    "approved_hash": "9a64359ab61735d8",
    "reviewed_by": "Ali Bayat",
-   "reviewed_at": "2026-11-11",
+   "reviewed_at": "2026-11-18",
    "published_at": "2026-11-11"
   },
   "fa-resources": {
    "review_status": "approved",
    "approved_hash": "d107864200a50bfc",
    "reviewed_by": "Ali Bayat",
-   "reviewed_at": "2026-11-11",
+   "reviewed_at": "2026-11-18",
    "published_at": "2026-11-11"
   },
   "fa-guide-land-transfer-tax": {
    "review_status": "approved",
-   "approved_hash": "ab4f20846b2791f2",
+   "approved_hash": "36a7b66336bd60b0",
    "reviewed_by": "Ali Bayat",
-   "reviewed_at": "2026-11-11",
-   "published_at": "2026-11-11"
+   "reviewed_at": "2026-11-18",
+   "published_at": "2026-11-11",
+   "updated_at": "2026-11-18"
   },
   "fa-about": {
    "review_status": "approved",
-   "approved_hash": "641a85d2fcd533e3",
+   "approved_hash": "924d58cec872bb5f",
    "reviewed_by": "Ali Bayat",
-   "reviewed_at": "2026-11-11",
-   "published_at": "2026-11-11"
+   "reviewed_at": "2026-11-18",
+   "published_at": "2026-11-11",
+   "updated_at": "2026-11-18"
   },
   "fa-contact": {
    "review_status": "approved",
-   "approved_hash": "3ba52455b638257d",
+   "approved_hash": "224a0d13cb891863",
    "reviewed_by": "Ali Bayat",
-   "reviewed_at": "2026-11-11",
-   "published_at": "2026-11-11"
+   "reviewed_at": "2026-11-18",
+   "published_at": "2026-11-11",
+   "updated_at": "2026-11-18"
   }
  }
 }

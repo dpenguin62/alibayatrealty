@@ -777,67 +777,11 @@
   },
   {
    "category": "owner",
-   "message": "page review: / changed since it was approved; review again"
-  },
-  {
-   "category": "owner",
-   "message": "page review: /about/ changed since it was approved; review again"
-  },
-  {
-   "category": "owner",
-   "message": "page review: /buy/ changed since it was approved; review again"
-  },
-  {
-   "category": "owner",
-   "message": "page review: /sell/ changed since it was approved; review again"
-  },
-  {
-   "category": "owner",
    "message": "page review: /invest/ not yet approved by Ali"
   },
   {
    "category": "owner",
-   "message": "page review: /neighbourhoods/ changed since it was approved; review again"
-  },
-  {
-   "category": "owner",
-   "message": "page review: /resources/buying/land-transfer-tax-toronto-york-region/ changed since it was approved; review again"
-  },
-  {
-   "category": "owner",
-   "message": "page review: /contact/ changed since it was approved; review again"
-  },
-  {
-   "category": "owner",
-   "message": "page review: /fa/ changed since it was approved; review again"
-  },
-  {
-   "category": "owner",
-   "message": "page review: /fa/buy/ changed since it was approved; review again"
-  },
-  {
-   "category": "owner",
-   "message": "page review: /fa/sell/ changed since it was approved; review again"
-  },
-  {
-   "category": "owner",
    "message": "page review: /fa/invest/ not yet approved by Ali"
-  },
-  {
-   "category": "owner",
-   "message": "page review: /fa/neighbourhoods/ changed since it was approved; review again"
-  },
-  {
-   "category": "owner",
-   "message": "page review: /fa/resources/buying/land-transfer-tax-toronto-york-region/ changed since it was approved; review again"
-  },
-  {
-   "category": "owner",
-   "message": "page review: /fa/about/ changed since it was approved; review again"
-  },
-  {
-   "category": "owner",
-   "message": "page review: /fa/contact/ changed since it was approved; review again"
   }
  ],
  "governance": [
@@ -851,10 +795,10 @@
    "time_sensitive": false,
    "author": "Ali Bayat",
    "review_status": "approved",
-   "approved_matches": false,
+   "approved_matches": true,
    "reviewed_by": "Ali Bayat",
    "published_at": "2026-11-11",
-   "updated_at": null,
+   "updated_at": "2026-11-18",
    "data_period": null,
    "verified_at": null,
    "sources": [],
@@ -873,10 +817,10 @@
    "time_sensitive": false,
    "author": "Ali Bayat",
    "review_status": "approved",
-   "approved_matches": false,
+   "approved_matches": true,
    "reviewed_by": "Ali Bayat",
    "published_at": "2026-11-11",
-   "updated_at": null,
+   "updated_at": "2026-11-18",
    "data_period": null,
    "verified_at": null,
    "sources": [],
@@ -895,10 +839,10 @@
    "time_sensitive": false,
    "author": "Ali Bayat",
    "review_status": "approved",
-   "approved_matches": false,
+   "approved_matches": true,
    "reviewed_by": "Ali Bayat",
    "published_at": "2026-11-11",
-   "updated_at": null,
+   "updated_at": "2026-11-18",
    "data_period": null,
    "verified_at": null,
    "sources": [],
@@ -917,10 +861,10 @@
    "time_sensitive": false,
    "author": "Ali Bayat",
    "review_status": "approved",
-   "approved_matches": false,
+   "approved_matches": true,
    "reviewed_by": "Ali Bayat",
    "published_at": "2026-11-11",
-   "updated_at": null,
+   "updated_at": "2026-11-18",
    "data_period": null,
    "verified_at": null,
    "sources": [],
@@ -963,10 +907,10 @@
    "time_sensitive": false,
    "author": "Ali Bayat",
    "review_status": "approved",
-   "approved_matches": false,
+   "approved_matches": true,
    "reviewed_by": "Ali Bayat",
    "published_at": "2026-11-11",
-   "updated_at": null,
+   "updated_at": "2026-11-18",
    "data_period": null,
    "verified_at": null,
    "sources": [],
@@ -1117,10 +1061,10 @@
    "time_sensitive": true,
    "author": "Ali Bayat",
    "review_status": "approved",
-   "approved_matches": false,
+   "approved_matches": true,
    "reviewed_by": "Ali Bayat",
    "published_at": "2026-11-11",
-   "updated_at": null,
+   "updated_at": "2026-11-18",
    "data_period": "Ontario rates in effect since January 1, 2017; City of Toronto MLTT rates in effect from April 1, 2026",
    "verified_at": "2026-10-01",
    "sources": [
@@ -1156,10 +1100,10 @@
    "time_sensitive": false,
    "author": "Ali Bayat",
    "review_status": "approved",
-   "approved_matches": false,
+   "approved_matches": true,
    "reviewed_by": "Ali Bayat",
    "published_at": "2026-11-11",
-   "updated_at": null,
+   "updated_at": "2026-11-18",
    "data_period": null,
    "verified_at": null,
    "sources": [],
@@ -1178,10 +1122,10 @@
    "time_sensitive": false,
    "author": "Ali Bayat",
    "review_status": "approved",
-   "approved_matches": false,
+   "approved_matches": true,
    "reviewed_by": "Ali Bayat",
    "published_at": "2026-11-11",
-   "updated_at": null,
+   "updated_at": "2026-11-18",
    "data_period": null,
    "verified_at": null,
    "sources": [],
@@ -1200,10 +1144,10 @@
    "time_sensitive": false,
    "author": "Ali Bayat",
    "review_status": "approved",
-   "approved_matches": false,
+   "approved_matches": true,
    "reviewed_by": "Ali Bayat",
    "published_at": "2026-11-11",
-   "updated_at": null,
+   "updated_at": "2026-11-18",
    "data_period": null,
    "verified_at": null,
    "sources": [],
@@ -1222,10 +1166,10 @@
    "time_sensitive": false,
    "author": "Ali Bayat",
    "review_status": "approved",
-   "approved_matches": false,
+   "approved_matches": true,
    "reviewed_by": "Ali Bayat",
    "published_at": "2026-11-11",
-   "updated_at": null,
+   "updated_at": "2026-11-18",
    "data_period": null,
    "verified_at": null,
    "sources": [],
@@ -1268,10 +1212,10 @@
    "time_sensitive": false,
    "author": "Ali Bayat",
    "review_status": "approved",
-   "approved_matches": false,
+   "approved_matches": true,
    "reviewed_by": "Ali Bayat",
    "published_at": "2026-11-11",
-   "updated_at": null,
+   "updated_at": "2026-11-18",
    "data_period": null,
    "verified_at": null,
    "sources": [],
@@ -1422,10 +1366,10 @@
    "time_sensitive": true,
    "author": "Ali Bayat",
    "review_status": "approved",
-   "approved_matches": false,
+   "approved_matches": true,
    "reviewed_by": "Ali Bayat",
    "published_at": "2026-11-11",
-   "updated_at": null,
+   "updated_at": "2026-11-18",
    "data_period": "Ontario rates in effect since January 1, 2017; City of Toronto MLTT rates in effect from April 1, 2026",
    "verified_at": "2026-10-01",
    "sources": [
@@ -1461,10 +1405,10 @@
    "time_sensitive": false,
    "author": "Ali Bayat",
    "review_status": "approved",
-   "approved_matches": false,
+   "approved_matches": true,
    "reviewed_by": "Ali Bayat",
    "published_at": "2026-11-11",
-   "updated_at": null,
+   "updated_at": "2026-11-18",
    "data_period": null,
    "verified_at": null,
    "sources": [],
@@ -1483,10 +1427,10 @@
    "time_sensitive": false,
    "author": "Ali Bayat",
    "review_status": "approved",
-   "approved_matches": false,
+   "approved_matches": true,
    "reviewed_by": "Ali Bayat",
    "published_at": "2026-11-11",
-   "updated_at": null,
+   "updated_at": "2026-11-18",
    "data_period": null,
    "verified_at": null,
    "sources": [],
