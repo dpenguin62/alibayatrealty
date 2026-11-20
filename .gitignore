@@ -1,0 +1,8 @@
+# Python cache
+__pycache__/
+*.pyc
+# Verification tooling installs
+node_modules/
+# macOS duplicate copies and metadata
+* 2.*
+.DS_Store
