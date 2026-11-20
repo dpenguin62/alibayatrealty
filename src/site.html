@@ -2,7 +2,7 @@
 <title>Ali Bayat</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&family=Plus+Jakarta+Sans:wght@600;800&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
 <style>
 /* Layout: editorial 12-col frame with a left label rail; warm off-white paper, warm charcoal ink, terracotta accent (Nov 2026 brand); architectural elevation drawings as the brand's illustration system */
 :root{
@@ -60,13 +60,14 @@ p{margin:0}
 /* Header */
 .site-head{position:sticky;top:env(safe-area-inset-top,0px);z-index:30;background:color-mix(in srgb,var(--paper) 94%,transparent);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
 .site-head .wrap{display:flex;align-items:center;justify-content:space-between;gap:1rem;height:74px}
-.brand{display:flex;align-items:center;text-decoration:none}
+.brand{display:flex;align-items:center;gap:.6rem;text-decoration:none}
+.brand .mark{width:34px;height:30px;flex-shrink:0;color:var(--ink)}
+.brand .mark .roof{stroke:var(--brass)}
 .brand .wm{display:flex;flex-direction:column;align-items:flex-start;line-height:1}
-.brand b{font-family:"Playfair Display",Georgia,serif;font-weight:400;font-size:1.3rem;letter-spacing:.14em;text-transform:uppercase;color:var(--ink)}
-.brand small{display:flex;flex-direction:column;font-size:.58rem;letter-spacing:.38em;text-transform:uppercase;color:var(--brass-text);margin-top:.45rem;font-weight:600}
-.brand small::before{content:"";display:block;width:32px;height:1px;background:var(--brass);margin-bottom:.4rem}
+.brand b{font-family:"Plus Jakarta Sans",system-ui,sans-serif;font-weight:800;font-size:1.22rem;letter-spacing:.04em;text-transform:uppercase;color:var(--ink)}
+.brand small{font-family:"Plus Jakarta Sans",system-ui,sans-serif;font-size:.56rem;letter-spacing:.32em;text-transform:uppercase;color:var(--brass-text);margin-top:.3rem;font-weight:600}
 .brand b,.site-head .btn{white-space:nowrap}
-@media (max-width:440px){.brand b{font-size:1.02rem;letter-spacing:.1em}.brand small{letter-spacing:.28em}}
+@media (max-width:440px){.brand b{font-size:1.02rem;letter-spacing:.03em}.brand small{letter-spacing:.26em}.brand .mark{width:28px;height:25px}}
 .nav{display:flex;align-items:center;gap:.15rem}
 .nav a{text-decoration:none;font-size:.94rem;padding:.5rem .7rem;border-radius:3px}
 .nav a:hover{background:var(--sunk)}
@@ -603,7 +604,7 @@ article.teaser:hover h3{text-decoration:none}
 
 <header class="site-head">
   <div class="wrap">
-    <a class="brand" href="#home" aria-label="Ali Bayat, home"><span class="wm"><b>Ali Bayat</b><small>REALTOR®</small></span></a>
+    <a class="brand" href="#home" aria-label="Ali Bayat, home"><svg class="mark" viewBox="0 0 54 48" aria-hidden="true" focusable="false"><path class="roof" d="M4 26 L27 5 L50 26" fill="none" stroke-width="6" stroke-linecap="square"/><path d="M13 30 V44 H41 V30" fill="none" stroke="currentColor" stroke-width="4"/></svg><span class="wm"><b>Ali Bayat</b><small>REALTOR®</small></span></a>
     <nav class="nav" aria-label="Main">
       <a href="#home">Home</a>
       <a href="#buy">Buy</a>
@@ -2045,7 +2046,7 @@ Not used
   <div class="wrap">
     <div class="fgrid">
       <div class="stack" style="gap:1rem">
-        <a class="brand" href="#home"><span class="wm"><b>Ali Bayat</b><small>REALTOR®</small></span></a>
+        <a class="brand" href="#home"><svg class="mark" viewBox="0 0 54 48" aria-hidden="true" focusable="false"><path class="roof" d="M4 26 L27 5 L50 26" fill="none" stroke-width="6" stroke-linecap="square"/><path d="M13 30 V44 H41 V30" fill="none" stroke="currentColor" stroke-width="4"/></svg><span class="wm"><b>Ali Bayat</b><small>REALTOR®</small></span></a>
         <p class="muted" style="max-width:34ch">Real estate advice for buyers, sellers and investors across Toronto and York Region. English and Farsi.</p>
         <div class="brokerage">
           <strong><mark class="tbc" data-tpl="Ali Bayat, {job_title}">Ali Bayat, Sales Representative</mark></strong>
@@ -2070,7 +2071,7 @@ Not used
 <template id="fa-chrome">
 <header class="site-head">
   <div class="wrap">
-    <a class="brand" dir="ltr" href="#fa-home" aria-label="علی بیات، صفحه‌ی اصلی"><span class="wm"><b>Ali Bayat</b><small>REALTOR®</small></span></a>
+    <a class="brand" dir="ltr" href="#fa-home" aria-label="علی بیات، صفحه‌ی اصلی"><svg class="mark" viewBox="0 0 54 48" aria-hidden="true" focusable="false"><path class="roof" d="M4 26 L27 5 L50 26" fill="none" stroke-width="6" stroke-linecap="square"/><path d="M13 30 V44 H41 V30" fill="none" stroke="currentColor" stroke-width="4"/></svg><span class="wm"><b>Ali Bayat</b><small>REALTOR®</small></span></a>
     <nav class="nav" aria-label="منوی اصلی">
       <a href="#fa-home">خانه</a>
       <a href="#fa-buy">خرید</a>
@@ -2107,7 +2108,7 @@ Not used
   <div class="wrap">
     <div class="fgrid">
       <div class="stack" style="gap:1rem">
-        <a class="brand" dir="ltr" href="#fa-home"><span class="wm"><b>Ali Bayat</b><small>REALTOR®</small></span></a>
+        <a class="brand" dir="ltr" href="#fa-home"><svg class="mark" viewBox="0 0 54 48" aria-hidden="true" focusable="false"><path class="roof" d="M4 26 L27 5 L50 26" fill="none" stroke-width="6" stroke-linecap="square"/><path d="M13 30 V44 H41 V30" fill="none" stroke="currentColor" stroke-width="4"/></svg><span class="wm"><b>Ali Bayat</b><small>REALTOR®</small></span></a>
         <p class="muted" style="max-width:34ch">مشاوره‌ی املاک برای خریداران، فروشندگان و سرمایه‌گذاران در تورنتو و منطقه‌ی یورک. به فارسی و انگلیسی.</p>
         <div class="brokerage" dir="ltr" style="text-align:right">
           <strong><mark class="tbc" data-tpl="Ali Bayat, {job_title}">Ali Bayat, Sales Representative</mark></strong>

@@ -212,11 +212,11 @@ TRANSFORM_JS = r"""
 }
 """
 
-FAVICON = """<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><rect width="64" height="64" rx="12" fill="#B5562F"/><text x="32" y="43" text-anchor="middle" font-family="Playfair Display, Georgia, 'Times New Roman', serif" font-size="30" letter-spacing="1" fill="#FFFFFF">AB</text></svg>
+FAVICON = """<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><rect width="64" height="64" rx="12" fill="#B5562F"/><path d="M12 34 L32 15 L52 34" fill="none" stroke="#FFFFFF" stroke-width="6" stroke-linecap="square"/><path d="M20 38 V50 H44 V38" fill="none" stroke="#FFFFFF" stroke-width="4"/></svg>
 """
 FONTS = ('<link rel="preconnect" href="https://fonts.googleapis.com">\n'
          '<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>\n'
-         '<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">')
+         '<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&family=Plus+Jakarta+Sans:wght@600;800&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">')
 STAGING_BAR = ('<div class="preview" role="note" aria-label="Staging notice"><div class="wrap"><span><span class="dot" aria-hidden="true"></span>'
                'Staging preview, not the live site. Unconfirmed details are shown as placeholders.</span></div></div>')
 

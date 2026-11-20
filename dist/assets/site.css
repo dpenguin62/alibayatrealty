@@ -57,13 +57,14 @@ p{margin:0}
 /* Header */
 .site-head{position:sticky;top:env(safe-area-inset-top,0px);z-index:30;background:color-mix(in srgb,var(--paper) 94%,transparent);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
 .site-head .wrap{display:flex;align-items:center;justify-content:space-between;gap:1rem;height:74px}
-.brand{display:flex;align-items:center;text-decoration:none}
+.brand{display:flex;align-items:center;gap:.6rem;text-decoration:none}
+.brand .mark{width:34px;height:30px;flex-shrink:0;color:var(--ink)}
+.brand .mark .roof{stroke:var(--brass)}
 .brand .wm{display:flex;flex-direction:column;align-items:flex-start;line-height:1}
-.brand b{font-family:"Playfair Display",Georgia,serif;font-weight:400;font-size:1.3rem;letter-spacing:.14em;text-transform:uppercase;color:var(--ink)}
-.brand small{display:flex;flex-direction:column;font-size:.58rem;letter-spacing:.38em;text-transform:uppercase;color:var(--brass-text);margin-top:.45rem;font-weight:600}
-.brand small::before{content:"";display:block;width:32px;height:1px;background:var(--brass);margin-bottom:.4rem}
+.brand b{font-family:"Plus Jakarta Sans",system-ui,sans-serif;font-weight:800;font-size:1.22rem;letter-spacing:.04em;text-transform:uppercase;color:var(--ink)}
+.brand small{font-family:"Plus Jakarta Sans",system-ui,sans-serif;font-size:.56rem;letter-spacing:.32em;text-transform:uppercase;color:var(--brass-text);margin-top:.3rem;font-weight:600}
 .brand b,.site-head .btn{white-space:nowrap}
-@media (max-width:440px){.brand b{font-size:1.02rem;letter-spacing:.1em}.brand small{letter-spacing:.28em}}
+@media (max-width:440px){.brand b{font-size:1.02rem;letter-spacing:.03em}.brand small{letter-spacing:.26em}.brand .mark{width:28px;height:25px}}
 .nav{display:flex;align-items:center;gap:.15rem}
 .nav a{text-decoration:none;font-size:.94rem;padding:.5rem .7rem;border-radius:3px}
 .nav a:hover{background:var(--sunk)}
