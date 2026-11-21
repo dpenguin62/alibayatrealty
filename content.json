@@ -217,10 +217,11 @@
   },
   "fa-resources": {
    "review_status": "approved",
-   "approved_hash": "d107864200a50bfc",
+   "approved_hash": "d6260ffb1bf0ffb0",
    "reviewed_by": "Ali Bayat",
-   "reviewed_at": "2026-11-18",
-   "published_at": "2026-11-11"
+   "reviewed_at": "2026-11-21",
+   "published_at": "2026-11-11",
+   "updated_at": "2026-11-21"
   },
   "fa-guide-land-transfer-tax": {
    "review_status": "approved",
@@ -354,6 +355,111 @@
   "guide-contractor": {
    "review_status": "approved",
    "approved_hash": "f5b3d3c21d034923",
+   "reviewed_by": "Ali Bayat",
+   "reviewed_at": "2026-11-21",
+   "published_at": "2026-11-21"
+  },
+  "fa-guide-first-home": {
+   "review_status": "approved",
+   "approved_hash": "22abfde20ae1c563",
+   "reviewed_by": "Ali Bayat",
+   "reviewed_at": "2026-11-21",
+   "published_at": "2026-11-21"
+  },
+  "fa-guide-pre-construction": {
+   "review_status": "approved",
+   "approved_hash": "dde74fcfb3ddfa40",
+   "reviewed_by": "Ali Bayat",
+   "reviewed_at": "2026-11-21",
+   "published_at": "2026-11-21"
+  },
+  "fa-guide-fix-before-listing": {
+   "review_status": "approved",
+   "approved_hash": "26451b9350d501be",
+   "reviewed_by": "Ali Bayat",
+   "reviewed_at": "2026-11-21",
+   "published_at": "2026-11-21"
+  },
+  "fa-guide-offer-date": {
+   "review_status": "approved",
+   "approved_hash": "d1b1a945cf5d16d2",
+   "reviewed_by": "Ali Bayat",
+   "reviewed_at": "2026-11-21",
+   "published_at": "2026-11-21"
+  },
+  "fa-guide-investment-analysis": {
+   "review_status": "approved",
+   "approved_hash": "91a87740f18bbc56",
+   "reviewed_by": "Ali Bayat",
+   "reviewed_at": "2026-11-21",
+   "published_at": "2026-11-21"
+  },
+  "fa-guide-cash-flow": {
+   "review_status": "approved",
+   "approved_hash": "8da2732246c73e71",
+   "reviewed_by": "Ali Bayat",
+   "reviewed_at": "2026-11-21",
+   "published_at": "2026-11-21"
+  },
+  "fa-guide-cap-rate": {
+   "review_status": "approved",
+   "approved_hash": "40361dfabf34d48c",
+   "reviewed_by": "Ali Bayat",
+   "reviewed_at": "2026-11-21",
+   "published_at": "2026-11-21"
+  },
+  "fa-guide-investment-financing": {
+   "review_status": "approved",
+   "approved_hash": "b8ee6bb8b706051d",
+   "reviewed_by": "Ali Bayat",
+   "reviewed_at": "2026-11-21",
+   "published_at": "2026-11-21"
+  },
+  "fa-guide-multiplexes": {
+   "review_status": "approved",
+   "approved_hash": "dabe5f1919a5ada2",
+   "reviewed_by": "Ali Bayat",
+   "reviewed_at": "2026-11-21",
+   "published_at": "2026-11-21"
+  },
+  "fa-guide-investor-strategy": {
+   "review_status": "approved",
+   "approved_hash": "d1e657c6a7f93b21",
+   "reviewed_by": "Ali Bayat",
+   "reviewed_at": "2026-11-21",
+   "published_at": "2026-11-21"
+  },
+  "fa-guide-market-toronto-york": {
+   "review_status": "approved",
+   "approved_hash": "58b9da50a0ef44ae",
+   "reviewed_by": "Ali Bayat",
+   "reviewed_at": "2026-11-21",
+   "published_at": "2026-11-21"
+  },
+  "fa-guide-market-york-region": {
+   "review_status": "approved",
+   "approved_hash": "690e8b8306aca7fe",
+   "reviewed_by": "Ali Bayat",
+   "reviewed_at": "2026-11-21",
+   "published_at": "2026-11-21"
+  },
+  "fa-guide-status-certificate": {
+   "review_status": "approved",
+   "approved_hash": "162febb429c7b0b2",
+   "reviewed_by": "Ali Bayat",
+   "reviewed_at": "2026-11-21",
+   "published_at": "2026-11-21"
+  },
+  "fa-guide-home-inspection": {
+   "review_status": "approved",
+   "approved_hash": "f68ad0828dfe088a",
+   "reviewed_by": "Ali Bayat",
+   "reviewed_at": "2026-11-21",
+   "published_at": "2026-11-21"
+  },
+  "fa-guide-contractor": {
+   "review_status": "approved",
+   "approved_hash": "5236ab733927ae0b",
    "reviewed_by": "Ali Bayat",
    "reviewed_at": "2026-11-21",
    "published_at": "2026-11-21"
