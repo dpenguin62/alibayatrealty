@@ -22,19 +22,19 @@
   },
   "buy": {
    "review_status": "approved",
-   "approved_hash": "5009a7a0553f8ee7",
+   "approved_hash": "d5daf83cbc56f769",
    "reviewed_by": "Ali Bayat",
-   "reviewed_at": "2026-11-18",
+   "reviewed_at": "2026-11-20",
    "published_at": "2026-11-11",
-   "updated_at": "2026-11-18"
+   "updated_at": "2026-11-20"
   },
   "sell": {
    "review_status": "approved",
-   "approved_hash": "32e5254f114d712c",
+   "approved_hash": "09c2c8a2fbd1c858",
    "reviewed_by": "Ali Bayat",
-   "reviewed_at": "2026-11-18",
+   "reviewed_at": "2026-11-20",
    "published_at": "2026-11-11",
-   "updated_at": "2026-11-18"
+   "updated_at": "2026-11-20"
   },
   "invest": {
    "review_status": "draft",
@@ -102,11 +102,11 @@
   },
   "guide-land-transfer-tax": {
    "review_status": "approved",
-   "approved_hash": "db1ac87fda3f8a04",
+   "approved_hash": "2111c89110056095",
    "reviewed_by": "Ali Bayat",
-   "reviewed_at": "2026-11-18",
+   "reviewed_at": "2026-11-20",
    "published_at": "2026-11-11",
-   "updated_at": "2026-11-18"
+   "updated_at": "2026-11-20"
   },
   "contact": {
    "review_status": "approved",
@@ -158,19 +158,19 @@
   },
   "fa-buy": {
    "review_status": "approved",
-   "approved_hash": "3d74ab5bc2fd187f",
+   "approved_hash": "f22e3eee2fead9f2",
    "reviewed_by": "Ali Bayat",
-   "reviewed_at": "2026-11-18",
+   "reviewed_at": "2026-11-20",
    "published_at": "2026-11-11",
-   "updated_at": "2026-11-18"
+   "updated_at": "2026-11-20"
   },
   "fa-sell": {
    "review_status": "approved",
-   "approved_hash": "6a2daeb602d5658a",
+   "approved_hash": "f46372d4f5908854",
    "reviewed_by": "Ali Bayat",
-   "reviewed_at": "2026-11-18",
+   "reviewed_at": "2026-11-20",
    "published_at": "2026-11-11",
-   "updated_at": "2026-11-18"
+   "updated_at": "2026-11-20"
   },
   "fa-neighbourhoods": {
    "review_status": "approved",
@@ -224,11 +224,11 @@
   },
   "fa-guide-land-transfer-tax": {
    "review_status": "approved",
-   "approved_hash": "36a7b66336bd60b0",
+   "approved_hash": "1705899a866a5efa",
    "reviewed_by": "Ali Bayat",
-   "reviewed_at": "2026-11-18",
+   "reviewed_at": "2026-11-20",
    "published_at": "2026-11-11",
-   "updated_at": "2026-11-18"
+   "updated_at": "2026-11-20"
   },
   "fa-about": {
    "review_status": "approved",

@@ -372,7 +372,7 @@ def g4(ctx, P, N):
         P.append("changing the URL hash swaps page content")
     for legacy, real in (("buy", "/buy/"), ("sell", "/sell/"), ("invest", "/invest/")):
         pg.goto(HOST + "/#" + legacy)
-        pg.wait_for_url("**" + real, timeout=3000)
+        pg.wait_for_url("**" + real, timeout=10000, wait_until="commit")  # the redirect, not third-party fonts, is under test
     c.close()
     js_errors(ctx, P)
     N.append("primary navigation uses real URLs; no hashchange listener anywhere; /#buy, /#sell, /#invest forward to real pages")
@@ -472,7 +472,7 @@ def blocked(rules, path):
 
 
 # ================================================================ STRUCTURED DATA
-ALLOWED = {"WebSite", "RealEstateAgent", "Person", "Organization", "Place", "WebPage", "BreadcrumbList", "ListItem", "Article", "PostalAddress", "PropertyValue", "FAQPage", "Question", "Answer"}
+ALLOWED = {"WebSite", "RealEstateAgent", "Person", "Organization", "Place", "WebPage", "BreadcrumbList", "ListItem", "Article", "PostalAddress", "PropertyValue", "City", "AdministrativeArea", "ContactPoint", "FAQPage", "Question", "Answer"}
 REQUIRED = {"WebSite": ["@id", "url", "name"], "RealEstateAgent": ["@id", "name", "url"], "Person": ["@id", "name"],
             "Organization": ["@id", "name"], "WebPage": ["@id", "url", "name", "description", "isPartOf"],
             "BreadcrumbList": ["@id", "itemListElement"], "Article": ["@id", "headline", "publisher", "mainEntityOfPage"]}
@@ -587,13 +587,14 @@ def g8(ctx, P, N):
     dest.update({"About Ali": by_key["about"]["path"], "Talk to Ali": by_key["contact"]["path"]})
     pg = br.new_page(viewport={"width": 1280, "height": 900})
     pg.goto(HOST + "/")
-    labels = [norm(t) for t in pg.locator(".nav a:not([data-lang-switch])").all_inner_texts()]
+    top = ".nav > a:not([data-lang-switch]), .nav > .has-sub > a"  # top level only; the neighbourhood dropdown is checked by the link gates
+    labels = [norm(t) for t in pg.locator(top).all_inner_texts()]
     if labels != want:
         P.append(f"desktop nav is {labels}")
     for i in range(len(labels)):
         pg.goto(HOST + "/")
         with pg.expect_navigation():
-            pg.locator(".nav a:not([data-lang-switch])").nth(i).click()
+            pg.locator(top).nth(i).click()
         if urllib.parse.urlsplit(pg.url).path != dest.get(labels[i]):
             P.append(f"desktop: {labels[i]} went to {urllib.parse.urlsplit(pg.url).path}, expected {dest.get(labels[i])}")
     for r in content_pages:

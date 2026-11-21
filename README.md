@@ -88,5 +88,10 @@ After launch:
 - **Listings:** set `features.idx` to `true` once a board-approved IDX/VOW feed exists. This publishes
   `/listings/` and the listing sections.
 - **Market data:** set `features.market-data` once a board-approved, dated, sourced feed exists.
-- **Farsi pages:** add routes per language, then add hreflang to `head()` in `build.py`.
+- **Farsi pages:** add a `fa-…` route with `alt` pointing at the English key (and vice versa); `head()` in
+  `build.py` then emits the `en-CA` / `fa` / `x-default` hreflang trio and the language-switch link automatically.
+- **Search / social profile facts** (`site.config.json`): `og_image` (+ `og_image_size`, `og_image_alt`) is the
+  1200×630 share card in `src/img/og/`; `person_image` is Ali's portrait used in structured data; `gbp_name` is
+  the Google Business Profile name exactly as Google shows it; `gbp_url` is the profile's Google Maps share link
+  (leave `null` until copied from the profile; once set it's added to `sameAs` and `hasMap`).
 - **CRM, email automation, lead scoring:** behind the form endpoint (see `LEADS.md`). No site changes needed.

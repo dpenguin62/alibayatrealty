@@ -42,5 +42,13 @@
   "https://www.instagram.com/ali_bayat_realtor/"
  ],
  "site_url_confirmed": true,
- "og_image": null
+ "og_image": "https://www.alibayatrealty.com/assets/img/og/ali-bayat-og.jpg",
+ "og_image_alt": "Ali Bayat, REALTOR® with Century 21 Heritage Group Ltd., Brokerage. North York, Thornhill, Richmond Hill, Vaughan and Toronto, in English and Farsi.",
+ "og_image_size": [
+  1200,
+  630
+ ],
+ "person_image": "/assets/img/ali-bayat.jpg",
+ "gbp_name": "Ali Bayat Realtor",
+ "gbp_url": "https://maps.google.com/?cid=16299013957114796486"
 }

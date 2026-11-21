@@ -13,7 +13,12 @@
 <meta property="og:title" content="Thornhill Real Estate Agent &amp; Neighbourhood Guide | Ali Bayat">
 <meta property="og:description" content="An established community just north of Toronto, split between two cities. Housing, transit, amenities and advice for buyers and sellers in Thornhill.">
 <meta property="og:url" content="https://www.alibayatrealty.com/neighbourhoods/thornhill/">
-<meta name="twitter:card" content="summary">
+<meta property="og:locale:alternate" content="fa_IR">
+<meta property="og:image" content="https://www.alibayatrealty.com/assets/img/og/ali-bayat-og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Ali Bayat, REALTOR® with Century 21 Heritage Group Ltd., Brokerage. North York, Thornhill, Richmond Hill, Vaughan and Toronto, in English and Farsi.">
+<meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Thornhill Real Estate Agent &amp; Neighbourhood Guide | Ali Bayat">
 <meta name="twitter:description" content="An established community just north of Toronto, split between two cities. Housing, transit, amenities and advice for buyers and sellers in Thornhill.">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
@@ -34,7 +39,10 @@
    "@id": "https://www.alibayatrealty.com/#website",
    "url": "https://www.alibayatrealty.com/",
    "name": "Ali Bayat",
-   "inLanguage": "en-CA",
+   "inLanguage": [
+    "en-CA",
+    "fa"
+   ],
    "publisher": {
     "@id": "https://www.alibayatrealty.com/#business"
    }
@@ -46,24 +54,44 @@
    "url": "https://www.alibayatrealty.com/",
    "areaServed": [
     {
-     "@type": "Place",
-     "name": "Toronto, ON"
+     "@type": "City",
+     "name": "Toronto",
+     "containedInPlace": {
+      "@type": "AdministrativeArea",
+      "name": "Ontario"
+     }
     },
     {
      "@type": "Place",
-     "name": "North York, Toronto, ON"
+     "name": "North York",
+     "containedInPlace": {
+      "@type": "City",
+      "name": "Toronto"
+     }
     },
     {
      "@type": "Place",
-     "name": "Thornhill, ON"
+     "name": "Thornhill",
+     "containedInPlace": {
+      "@type": "AdministrativeArea",
+      "name": "York Region"
+     }
     },
     {
-     "@type": "Place",
-     "name": "Richmond Hill, ON"
+     "@type": "City",
+     "name": "Richmond Hill",
+     "containedInPlace": {
+      "@type": "AdministrativeArea",
+      "name": "York Region"
+     }
     },
     {
-     "@type": "Place",
-     "name": "Vaughan, ON"
+     "@type": "City",
+     "name": "Vaughan",
+     "containedInPlace": {
+      "@type": "AdministrativeArea",
+      "name": "York Region"
+     }
     }
    ],
    "knowsLanguage": [
@@ -73,11 +101,29 @@
    "founder": {
     "@id": "https://www.alibayatrealty.com/#ali"
    },
+   "employee": {
+    "@id": "https://www.alibayatrealty.com/#ali"
+   },
+   "alternateName": "Ali Bayat Realtor",
    "telephone": "+16477797919",
    "email": "ali@alibayatrealty.com",
+   "contactPoint": {
+    "@type": "ContactPoint",
+    "contactType": "sales",
+    "areaServed": "CA-ON",
+    "availableLanguage": [
+     "English",
+     "Persian"
+    ],
+    "telephone": "+16477797919",
+    "email": "ali@alibayatrealty.com"
+   },
    "sameAs": [
-    "https://www.instagram.com/ali_bayat_realtor/"
+    "https://www.instagram.com/ali_bayat_realtor/",
+    "https://maps.google.com/?cid=16299013957114796486"
    ],
+   "hasMap": "https://maps.google.com/?cid=16299013957114796486",
+   "image": "https://www.alibayatrealty.com/assets/img/ali-bayat.jpg",
    "address": {
     "@type": "PostalAddress",
     "streetAddress": "7330 Yonge Street, Unit 116",
@@ -111,6 +157,17 @@
     "alternateName": "TRREB",
     "url": "https://trreb.ca"
    },
+   "knowsAbout": [
+    "Residential real estate",
+    "Comparable sales analysis",
+    "Ontario land transfer tax",
+    "Toronto municipal land transfer tax",
+    "Investment property analysis",
+    "Rental cash flow and cap rate",
+    "North York real estate",
+    "York Region real estate"
+   ],
+   "image": "https://www.alibayatrealty.com/assets/img/ali-bayat.jpg",
    "sameAs": [
     "https://www.instagram.com/ali_bayat_realtor/"
    ],
@@ -168,7 +225,11 @@
    },
    "about": {
     "@type": "Place",
-    "name": "Thornhill, ON"
+    "name": "Thornhill",
+    "containedInPlace": {
+     "@type": "AdministrativeArea",
+     "name": "York Region"
+    }
    },
    "author": {
     "@id": "https://www.alibayatrealty.com/#ali"

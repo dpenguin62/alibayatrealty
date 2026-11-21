@@ -44,8 +44,8 @@
   {
    "key": "buy",
    "path": "/buy/",
-   "title": "Buying a Home in Toronto & the GTA | Ali Bayat",
-   "desc": "How buying with Ali works in Toronto and York Region: goals, budget, research, evaluation, offer strategy, negotiation and closing.",
+   "title": "Buy a Home in Toronto, North York & York Region | Ali Bayat",
+   "desc": "Buying in North York, Thornhill, Richmond Hill, Vaughan or Toronto: budget and closing costs, research, offer strategy, negotiation and closing.",
    "h1": "Buying a home in Toronto and the GTA",
    "index": 1,
    "parent": "home",
@@ -61,8 +61,8 @@
   {
    "key": "sell",
    "path": "/sell/",
-   "title": "Selling a Home in Toronto & the GTA | Ali Bayat",
-   "desc": "Market analysis, pricing, preparation, marketing and negotiation for GTA sellers. Talk to Ali about your home's value.",
+   "title": "Sell Your Home in North York, Toronto & York Region | Ali Bayat",
+   "desc": "Comparable-sales pricing, preparation, marketing and negotiation for sellers in Toronto and York Region. Ask Ali for a review of your home's value.",
    "h1": "Selling a home in Toronto and the GTA",
    "index": 1,
    "parent": "home",
@@ -78,7 +78,7 @@
   {
    "key": "invest",
    "path": "/invest/",
-   "title": "Investment Properties & Real Estate Investing in the GTA | Ali Bayat",
+   "title": "Investment Property Analysis in Toronto & York Region | Ali Bayat",
    "desc": "How to evaluate income properties in Toronto and York Region: rental income, expenses, financing, cash flow and cap rate, explained plainly.",
    "h1": "Investing in GTA real estate with a focus on the numbers.",
    "index": 1,
@@ -248,8 +248,8 @@
   {
    "key": "contact",
    "path": "/contact/",
-   "title": "Contact Ali Bayat | Toronto & GTA Real Estate",
-   "desc": "Talk to Ali about buying, selling or investing in GTA real estate. Replies personally, in English or Farsi.",
+   "title": "Contact Ali Bayat, REALTOR\u00ae | North York & Thornhill",
+   "desc": "Talk to Ali about buying, selling or investing in North York, Thornhill and the GTA. Replies personally, in English or Farsi (\u0641\u0627\u0631\u0633\u06cc).",
    "h1": "Talk to Ali",
    "index": 1,
    "parent": "home",
@@ -725,9 +725,9 @@
  "hashes": {
   "/": "f47ad380aff78460",
   "/about/": "535662c23a80b705",
-  "/buy/": "5009a7a0553f8ee7",
-  "/sell/": "32e5254f114d712c",
-  "/invest/": "615fd3c844c9f131",
+  "/buy/": "d5daf83cbc56f769",
+  "/sell/": "09c2c8a2fbd1c858",
+  "/invest/": "d2210ee2278b3052",
   "/neighbourhoods/": "1a31175a7a9b13dd",
   "/neighbourhoods/north-york/": "c2edf6e07a8d4ea2",
   "/neighbourhoods/thornhill/": "7512e7015acc12f0",
@@ -735,12 +735,12 @@
   "/neighbourhoods/vaughan/": "58468212976d1283",
   "/neighbourhoods/toronto/": "cbe49cbc7e369c8e",
   "/resources/": "0f7e20cf527fdcbd",
-  "/resources/buying/land-transfer-tax-toronto-york-region/": "db1ac87fda3f8a04",
+  "/resources/buying/land-transfer-tax-toronto-york-region/": "2111c89110056095",
   "/contact/": "2d56874668cf9c54",
   "/fa/": "1f55d850c2cf34a7",
-  "/fa/buy/": "3d74ab5bc2fd187f",
-  "/fa/sell/": "6a2daeb602d5658a",
-  "/fa/invest/": "36525fbf40ac4041",
+  "/fa/buy/": "f22e3eee2fead9f2",
+  "/fa/sell/": "f46372d4f5908854",
+  "/fa/invest/": "9845d6721cccffa7",
   "/fa/neighbourhoods/": "b668fddbe695b9c6",
   "/fa/neighbourhoods/north-york/": "4c8f8759aff8d135",
   "/fa/neighbourhoods/thornhill/": "337e61686d11147f",
@@ -748,7 +748,7 @@
   "/fa/neighbourhoods/vaughan/": "ef61225f785a9ffd",
   "/fa/neighbourhoods/toronto/": "9a64359ab61735d8",
   "/fa/resources/": "d107864200a50bfc",
-  "/fa/resources/buying/land-transfer-tax-toronto-york-region/": "36a7b66336bd60b0",
+  "/fa/resources/buying/land-transfer-tax-toronto-york-region/": "1705899a866a5efa",
   "/fa/about/": "924d58cec872bb5f",
   "/fa/contact/": "224a0d13cb891863",
   "/privacy/": "509d99aa57125744",
@@ -842,13 +842,13 @@
    "approved_matches": true,
    "reviewed_by": "Ali Bayat",
    "published_at": "2026-11-11",
-   "updated_at": "2026-11-18",
+   "updated_at": "2026-11-20",
    "data_period": null,
    "verified_at": null,
    "sources": [],
    "indexable": true,
    "canonical": "https://www.alibayatrealty.com/buy/",
-   "content_hash": "5009a7a0553f8ee7",
+   "content_hash": "d5daf83cbc56f769",
    "open_items": []
   },
   {
@@ -864,13 +864,13 @@
    "approved_matches": true,
    "reviewed_by": "Ali Bayat",
    "published_at": "2026-11-11",
-   "updated_at": "2026-11-18",
+   "updated_at": "2026-11-20",
    "data_period": null,
    "verified_at": null,
    "sources": [],
    "indexable": true,
    "canonical": "https://www.alibayatrealty.com/sell/",
-   "content_hash": "32e5254f114d712c",
+   "content_hash": "09c2c8a2fbd1c858",
    "open_items": []
   },
   {
@@ -892,7 +892,7 @@
    "sources": [],
    "indexable": true,
    "canonical": "https://www.alibayatrealty.com/invest/",
-   "content_hash": "615fd3c844c9f131",
+   "content_hash": "d2210ee2278b3052",
    "open_items": [
     "referral-disclosure"
    ]
@@ -1064,7 +1064,7 @@
    "approved_matches": true,
    "reviewed_by": "Ali Bayat",
    "published_at": "2026-11-11",
-   "updated_at": "2026-11-18",
+   "updated_at": "2026-11-20",
    "data_period": "Ontario rates in effect since January 1, 2017; City of Toronto MLTT rates in effect from April 1, 2026",
    "verified_at": "2026-10-01",
    "sources": [
@@ -1087,7 +1087,7 @@
    ],
    "indexable": true,
    "canonical": "https://www.alibayatrealty.com/resources/buying/land-transfer-tax-toronto-york-region/",
-   "content_hash": "db1ac87fda3f8a04",
+   "content_hash": "2111c89110056095",
    "open_items": []
   },
   {
@@ -1147,13 +1147,13 @@
    "approved_matches": true,
    "reviewed_by": "Ali Bayat",
    "published_at": "2026-11-11",
-   "updated_at": "2026-11-18",
+   "updated_at": "2026-11-20",
    "data_period": null,
    "verified_at": null,
    "sources": [],
    "indexable": true,
    "canonical": "https://www.alibayatrealty.com/fa/buy/",
-   "content_hash": "3d74ab5bc2fd187f",
+   "content_hash": "f22e3eee2fead9f2",
    "open_items": []
   },
   {
@@ -1169,13 +1169,13 @@
    "approved_matches": true,
    "reviewed_by": "Ali Bayat",
    "published_at": "2026-11-11",
-   "updated_at": "2026-11-18",
+   "updated_at": "2026-11-20",
    "data_period": null,
    "verified_at": null,
    "sources": [],
    "indexable": true,
    "canonical": "https://www.alibayatrealty.com/fa/sell/",
-   "content_hash": "6a2daeb602d5658a",
+   "content_hash": "f46372d4f5908854",
    "open_items": []
   },
   {
@@ -1197,7 +1197,7 @@
    "sources": [],
    "indexable": true,
    "canonical": "https://www.alibayatrealty.com/fa/invest/",
-   "content_hash": "36525fbf40ac4041",
+   "content_hash": "9845d6721cccffa7",
    "open_items": [
     "referral-disclosure"
    ]
@@ -1369,7 +1369,7 @@
    "approved_matches": true,
    "reviewed_by": "Ali Bayat",
    "published_at": "2026-11-11",
-   "updated_at": "2026-11-18",
+   "updated_at": "2026-11-20",
    "data_period": "Ontario rates in effect since January 1, 2017; City of Toronto MLTT rates in effect from April 1, 2026",
    "verified_at": "2026-10-01",
    "sources": [
@@ -1392,7 +1392,7 @@
    ],
    "indexable": true,
    "canonical": "https://www.alibayatrealty.com/fa/resources/buying/land-transfer-tax-toronto-york-region/",
-   "content_hash": "36a7b66336bd60b0",
+   "content_hash": "1705899a866a5efa",
    "open_items": []
   },
   {

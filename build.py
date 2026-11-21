@@ -39,7 +39,24 @@ CONFIG = {
     "approved": [],
     "same_as": [],
     "og_image": None,
+    "og_image_alt": None,
+    "og_image_size": None,            # [width, height] of og_image
+    "person_image": None,             # site path of Ali's portrait, e.g. /assets/img/ali-bayat.jpg
+    "gbp_name": None,                 # Google Business Profile name exactly as shown on Google
+    "gbp_url": None,                  # the profile's Google Maps URL (share link); added to sameAs + hasMap
 }
+# Areas as places search engines can resolve: the city/community, then the region it belongs to.
+AREA_PLACES = {
+    "Toronto, ON": ("City", "Toronto", "Ontario"),
+    "North York, Toronto, ON": ("Place", "North York", "Toronto"),
+    "Thornhill, ON": ("Place", "Thornhill", "York Region"),
+    "Richmond Hill, ON": ("City", "Richmond Hill", "York Region"),
+    "Vaughan, ON": ("City", "Vaughan", "York Region"),
+}
+# Subjects the site actually covers (each has its own page or section). Used for Person.knowsAbout.
+KNOWS_ABOUT = ["Residential real estate", "Comparable sales analysis", "Ontario land transfer tax",
+               "Toronto municipal land transfer tax", "Investment property analysis", "Rental cash flow and cap rate",
+               "North York real estate", "York Region real estate"]
 
 # Who has to resolve each kind of blocker.
 OWNER, EXTERNAL, LEGAL, ENGINEERING = "owner", "external", "legal", "engineering"
@@ -149,8 +166,10 @@ TRANSFORM_JS = r"""
       if (d.approve && cfg.approved.includes(d.approve)) { m.replaceWith(...m.childNodes); return; }
       if (d.note && cfg.approved.includes(d.note)) { m.remove(); return; }
       const key = d.approve || d.note || keys.filter(x => !(x in cfg.values)).join('+');
-      m.setAttribute('data-unresolved', key);
       unresolved.push(key);
+      // A pending note is a reminder to Ali, not page content: production leaves it out (it stays a reported blocker).
+      if (d.note && !d.approve && !cfg.staging) { m.remove(); return; }
+      m.setAttribute('data-unresolved', key);
     });
 
     // Tap-to-call / mailto links: real href only once the confirmed value exists; otherwise plain text.
@@ -273,21 +292,44 @@ def ld_graph(r, routes_by_key, content_hash):
         person["identifier"] = {"@type": "PropertyValue", "propertyID": "RECO registration number", "value": DETAILS["reco_number"]}
     if DETAILS.get("designations") and "TRREB" in DETAILS["designations"]:
         person["memberOf"] = {"@type": "Organization", "name": "Toronto Regional Real Estate Board", "alternateName": "TRREB", "url": "https://trreb.ca"}
+    person["knowsAbout"] = KNOWS_ABOUT
+    if CONFIG["person_image"]:
+        person["image"] = url(CONFIG["person_image"])
+    same_as = list(CONFIG["same_as"]) + ([CONFIG["gbp_url"]] if CONFIG["gbp_url"] else [])
     if CONFIG["same_as"]:
         person["sameAs"] = CONFIG["same_as"]
+
+    def place(a):
+        kind, name, within = AREA_PLACES.get(a, ("Place", a, None))
+        p = {"@type": kind, "name": name}
+        if within:
+            p["containedInPlace"] = {"@type": "AdministrativeArea" if within != "Toronto" else "City", "name": within}
+        return p
     business = {"@type": "RealEstateAgent", "@id": BASE + "/#business", "name": CONFIG["site_name"], "url": BASE + "/",
-                "areaServed": [{"@type": "Place", "name": a} for a in CONFIG["areas_served"]],
-                "knowsLanguage": CONFIG["languages"], "founder": {"@id": BASE + "/#ali"}}
+                "areaServed": [place(a) for a in CONFIG["areas_served"]],
+                "knowsLanguage": CONFIG["languages"], "founder": {"@id": BASE + "/#ali"}, "employee": {"@id": BASE + "/#ali"}}
+    if CONFIG["gbp_name"] and CONFIG["gbp_name"] != CONFIG["site_name"]:
+        business["alternateName"] = CONFIG["gbp_name"]
     if "phone_e164" in DETAILS:
         business["telephone"] = DETAILS["phone_e164"]
     if "email" in DETAILS:
         business["email"] = DETAILS["email"]
-    if CONFIG["same_as"]:
-        business["sameAs"] = CONFIG["same_as"]
-    if CONFIG["og_image"]:
-        business["image"] = CONFIG["og_image"]
+    if "phone_e164" in DETAILS or "email" in DETAILS:
+        cp = {"@type": "ContactPoint", "contactType": "sales", "areaServed": "CA-ON", "availableLanguage": ["English", "Persian"]}
+        if "phone_e164" in DETAILS:
+            cp["telephone"] = DETAILS["phone_e164"]
+        if "email" in DETAILS:
+            cp["email"] = DETAILS["email"]
+        business["contactPoint"] = cp
+    if same_as:
+        business["sameAs"] = same_as
+    if CONFIG["gbp_url"]:
+        business["hasMap"] = CONFIG["gbp_url"]
+    if CONFIG["person_image"] or CONFIG["og_image"]:
+        business["image"] = url(CONFIG["person_image"]) if CONFIG["person_image"] else CONFIG["og_image"]
     graph = [{"@type": "WebSite", "@id": BASE + "/#website", "url": BASE + "/", "name": CONFIG["site_name"],
-              "inLanguage": "en-CA", "publisher": {"@id": BASE + "/#business"}}, business, person]
+              "inLanguage": ["en-CA", "fa"] if "fa" in CONFIG["languages"] else "en-CA",
+              "publisher": {"@id": BASE + "/#business"}}, business, person]
     if "brokerage_name" in DETAILS:
         brokerage = {"@type": "Organization", "@id": BASE + "/#brokerage", "name": DETAILS["brokerage_name"],
                      "legalName": DETAILS["brokerage_name"]}
@@ -305,7 +347,7 @@ def ld_graph(r, routes_by_key, content_hash):
     webpage = {"@type": "WebPage", "@id": page_url + "#webpage", "url": page_url, "name": r["title"],
                "description": r["desc"], "inLanguage": "fa" if r.get("lang") == "fa" else "en-CA", "isPartOf": {"@id": BASE + "/#website"}}
     if r.get("place"):
-        webpage["about"] = {"@type": "Place", "name": next(a for a in CONFIG["areas_served"] if a.startswith(r["place"]))}
+        webpage["about"] = place(next(a for a in CONFIG["areas_served"] if a.startswith(r["place"])))
     if live:  # authorship and dates are claimed only for pages Ali has actually approved
         webpage["author"] = {"@id": BASE + "/#ali"}
         if st.get("published_at"):
@@ -330,8 +372,10 @@ def ld_graph(r, routes_by_key, content_hash):
                       "mainEntity": [{"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": a}} for q, a in faq]})
     if r.get("type") == "article":
         art = {"@type": "Article", "@id": page_url + "#article", "headline": r["h1"], "description": r["desc"],
-               "mainEntityOfPage": {"@id": page_url + "#webpage"}, "inLanguage": "en-CA",
+               "mainEntityOfPage": {"@id": page_url + "#webpage"}, "inLanguage": "fa" if r.get("lang") == "fa" else "en-CA",
                "publisher": {"@id": BASE + "/#business"}}
+        if r.get("geo"):
+            art["spatialCoverage"] = r["geo"]
         if r.get("sources"):
             art["citation"] = [s[1] for s in r["sources"]]
         if live:
@@ -362,8 +406,16 @@ def head(r, routes_by_key, css_href, content_hash):
                  f'<meta property="og:title" content="{esc(r["title"])}">',
                  f'<meta property="og:description" content="{esc(r["desc"])}">',
                  f'<meta property="og:url" content="{esc(url(r["path"]))}">']
+        if routes_by_key.get(r.get("alt")):
+            tags.append(f'<meta property="og:locale:alternate" content="{"en_CA" if r.get("lang") == "fa" else "fa_IR"}">')
         if CONFIG["og_image"]:
-            tags += [f'<meta property="og:image" content="{esc(CONFIG["og_image"])}">', '<meta name="twitter:card" content="summary_large_image">']
+            tags += [f'<meta property="og:image" content="{esc(CONFIG["og_image"])}">']
+            if CONFIG["og_image_size"]:
+                tags += [f'<meta property="og:image:width" content="{CONFIG["og_image_size"][0]}">',
+                         f'<meta property="og:image:height" content="{CONFIG["og_image_size"][1]}">']
+            if CONFIG["og_image_alt"]:
+                tags += [f'<meta property="og:image:alt" content="{esc(CONFIG["og_image_alt"])}">']
+            tags += ['<meta name="twitter:card" content="summary_large_image">']
         else:
             tags.append('<meta name="twitter:card" content="summary">')
         tags += [f'<meta name="twitter:title" content="{esc(r["title"])}">', f'<meta name="twitter:description" content="{esc(r["desc"])}">']
@@ -511,7 +563,7 @@ def build():
             pg.evaluate("k => { location.hash = k }", r["key"])
             pg.wait_for_function("e => document.body.dataset.route === e", arg=expect)
             st = page_status(r["key"])
-            cfg = {"values": DETAILS, "approved": CONFIG["approved"], "features": CONFIG["features"],
+            cfg = {"staging": STAGING, "values": DETAILS, "approved": CONFIG["approved"], "features": CONFIG["features"],
                    "endpoint": CONFIG["form_endpoint"], "route": r["key"], "lang": r.get("lang", "en"), "altKey": r.get("alt"), "navKey": {"fa-area": "fa-neighbourhoods", "fa-guide-land-transfer-tax": "fa-resources"}.get(r.get("page", r["key"]), r["key"]),
                    "dates": {"published": fmt_date(st.get("published_at")), "updated": fmt_date(st.get("updated_at"))}}
             res = pg.evaluate(TRANSFORM_JS, cfg)
