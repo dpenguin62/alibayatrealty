@@ -88,9 +88,12 @@ After launch:
 
 ## Extension points (not built yet, on purpose)
 
-- **Investment guides:** `/invest/duplexes/`, `/triplexes/`, `/fourplexes/`, `/cash-flow/`, `/cap-rate/`
-  and `/investment-analysis/` are planned routes in `ROUTES`. They're built only when written. Use the land
-  transfer tax guide as the template (page head, byline, article body, sources, aside).
+- **Guides (Resources page):** every guide is one entry in `GUIDES` in `src/site.html`, rendered by `renderGuide()` into
+  one shared one-page layout (route page `guide`). To add one: copy an entry, change `key`/`path`/text, build it from
+  blocks (`tldr`, `stats`, `steps`, `bar`, `check`, `flags`, `vs`, `tiers`, `formula`, `take`, `cards`, `table`, `p`, `faq`),
+  list its sources, add its card to `ARTS` with `pub:1`, then build and approve. Time-sensitive guides (market notes,
+  rates, rebates) are flagged by the build once `verifiedAt` is older than 180 days. The land transfer tax guide keeps
+  its own hand-written page because of its calculator.
 - **Listings:** set `features.idx` to `true` once a board-approved IDX/VOW feed exists. This publishes
   `/listings/` and the listing sections.
 - **Market data:** set `features.market-data` once a board-approved, dated, sourced feed exists.
