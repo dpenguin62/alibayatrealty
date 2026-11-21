@@ -12,31 +12,23 @@ const CATS=[
  {id:"market",name:"GTA Market Insights",d:"Monthly notes by area, from board data."},
  {id:"areas",name:"Neighbourhood Guides",d:"What it's like to live in each community."},
  {id:"tips",name:"Real Estate Tips",d:"Short answers to common questions."}];
+/* Only published guides ship. Unwritten guides live in the prototype block below and are stripped from the
+   production build (no cards, no status labels, no unbuilt URLs in the page or in site.js). To publish one,
+   write the page, add its route, then move its entry above with href and pub:1. */
 const ARTS=[
  {c:"buying",t:"Land transfer tax in Toronto vs. York Region, with a calculator",d:"Why the same price costs more to close on in North York than in Vaughan.",u:"/resources/buying/land-transfer-tax-toronto-york-region/",href:"#guide-land-transfer-tax",pub:1},
- {c:"buying",t:"Buying your first home in Toronto: a step-by-step plan",d:"From pre-approval to closing, with the costs at each stage.",u:"/resources/buying/first-home-toronto/"},
- {c:"buying",t:"Pre-construction condos: questions to ask before you sign",d:"Deposits, occupancy fees, assignment rules and closing adjustments.",u:"/resources/buying/pre-construction-condo-questions/"},
- {c:"selling",t:"What's worth fixing before you list",d:"Which repairs pay off, which don't, and how to get them done on time.",u:"/resources/selling/what-to-fix-before-listing/"},
- {c:"selling",t:"Offer dates vs. pricing to market",d:"How each strategy works and when each tends to make sense.",u:"/resources/selling/offer-date-vs-pricing-to-market/"},
- {c:"investment",t:"Investment property analysis: a step-by-step framework",d:"The six steps from property review to a decision, with the questions to ask at each.",u:"/invest/investment-analysis/"},
- {c:"investment",t:"How to calculate cash flow on a rental property",d:"From gross rent to what's left after expenses, vacancy and the mortgage.",u:"/invest/cash-flow/"},
- {c:"investment",t:"What is cap rate, and what it doesn't tell you",d:"How to calculate it, how to compare it, and its limits.",u:"/invest/cap-rate/"},
- {c:"investment",t:"Financing an investment property: what to ask",d:"Down payments, rates and lender rules, and the questions to bring to a mortgage professional.",u:"/resources/investment/financing/"},
- {c:"investment",t:"Income properties in the GTA: duplexes, triplexes and fourplexes",d:"How each type works, and what to verify about zoning and legal units.",u:"/invest/duplexes/ · /invest/triplexes/ · /invest/fourplexes/"},
- {c:"investment",t:"Cash flow vs. appreciation: choosing an investor strategy",d:"Two reasons to own a property, the trade-offs, and the risks of each.",u:"/resources/investment/investor-strategy/"},
- {c:"market",t:"Monthly market notes: North York",d:"First report using the monthly template, once a data source is connected.",u:"/resources/market/2026-10-north-york/"},
- {c:"market",t:"Monthly market notes: York Region",d:"Vaughan, Richmond Hill and Thornhill in one monthly summary.",u:"/resources/market/2026-10-york-region/"},
  {c:"areas",t:"North York neighbourhood guide",d:"Condo corridor, bungalow streets, transit and advice.",u:"/neighbourhoods/north-york/",href:"#north-york",pub:1},
  {c:"areas",t:"Thornhill: the Vaughan side vs. the Markham side",d:"How the two halves differ on taxes, services and housing.",u:"/neighbourhoods/thornhill/",href:"#thornhill",pub:1},
+ {c:"areas",t:"Richmond Hill neighbourhood guide",d:"Downtown Richmond Hill, Oak Ridges, the Yonge corridor and the GO line.",u:"/neighbourhoods/richmond-hill/",href:"#richmond-hill",pub:1},
  {c:"areas",t:"Vaughan neighbourhood guide",d:"Woodbridge, Maple, Kleinburg and the VMC.",u:"/neighbourhoods/vaughan/",href:"#vaughan",pub:1},
- {c:"tips",t:"How to read a condo status certificate",d:"The pages that matter and the red flags to look for.",u:"/resources/tips/condo-status-certificate/"},
- {c:"tips",t:"Home inspections in the GTA: what to expect",d:"What inspectors check and how to use the report.",u:"/resources/tips/home-inspection-gta/"},
- {c:"tips",t:"Choosing a contractor after you buy",d:"Quotes, contracts, permits and payment schedules.",u:"/resources/tips/choosing-a-contractor/"}];
+ {c:"areas",t:"Toronto neighbourhood guide",d:"Victorian semis, midtown family streets, downtown condos and the extra land transfer tax.",u:"/neighbourhoods/toronto/",href:"#toronto",pub:1}];
 let activeCat="all";
 function renderKC(){
   if(!document.getElementById("chips"))return;
-  document.getElementById("chips").innerHTML=[{id:"all",name:"All"},...CATS].map(c=>`<button class="chip" type="button" data-cat="${c.id}" aria-pressed="${c.id===activeCat}">${c.name}</button>`).join("");
-  document.getElementById("kc").innerHTML=CATS.filter(c=>activeCat==="all"||c.id===activeCat).map(c=>`<section class="kc-cat"><div class="intro"><h2>${c.name}</h2><p>${c.d}</p></div><div class="arts">${ARTS.filter(a=>a.c===c.id).map(a=>{const tag=a.href?"a":"div";return `<${tag} class="art"${a.href?` href="${a.href}"`:""}><h3>${a.t}</h3><span class="status${a.pub?" pub":""}">${a.pub?"Live":"Planned"}</span><p>${a.d}</p></${tag}>`}).join("")}</div></section>`).join("")}
+  const arts=ARTS.filter(a=>a.pub||!window.__publishedOnly);  // build.py sets __publishedOnly before capturing the page
+  const cats=CATS.filter(c=>arts.some(a=>a.c===c.id));
+  document.getElementById("chips").innerHTML=[{id:"all",name:"All"},...cats].map(c=>`<button class="chip" type="button" data-cat="${c.id}" aria-pressed="${c.id===activeCat}">${c.name}</button>`).join("");
+  document.getElementById("kc").innerHTML=cats.filter(c=>activeCat==="all"||c.id===activeCat).map(c=>`<section class="kc-cat"><div class="intro"><h2>${c.name}</h2><p>${c.d}</p></div><div class="arts">${arts.filter(a=>a.c===c.id).map(a=>{const tag=a.href?"a":"div";return `<${tag} class="art"${a.href?` href="${a.href}"`:""}><h3>${a.t}</h3>${a.st?`<span class="status">${a.st}</span>`:""}<p>${a.d}</p></${tag}>`}).join("")}</div></section>`).join("")}
 document.addEventListener("click",e=>{const b=e.target.closest("[data-cat]");if(!b||!document.getElementById("chips"))return;activeCat=b.dataset.cat;renderKC()});
 /* ---------- Land transfer tax estimator ---------- */
 const ON=[[55000,.005],[250000,.01],[400000,.015],[2000000,.02],[Infinity,.025]];

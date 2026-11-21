@@ -1,6 +1,6 @@
 # Ali Bayat Realty: verification report
 
-Output verified: `dist/` · production domain `https://www.alibayatrealty.com` · 2026-11-20
+Output verified: `dist/` · production domain `https://alibayatrealty.com` · 2026-11-21
 
 ## Final gate status: **FAIL**
 
@@ -14,7 +14,7 @@ Output verified: `dist/` · production domain `https://www.alibayatrealty.com` �
 | 6 | robots.txt behaves correctly (production and staging) | ✅ pass |
 | 7 | Structured data is valid and truthful (no invented facts) | ✅ pass |
 | 8 | Navigation works on desktop, tablet and mobile | ✅ pass |
-| 9 | Accessibility: axe-core, keyboard, focus, contrast, mobile, reduced motion | ❌ fail (external) |
+| 9 | Accessibility: axe-core, keyboard, focus, contrast, mobile, reduced motion | ✅ pass |
 | 10 | Lead form: production endpoint, payload contract, consent, honest states | ✅ pass |
 | 11 | Production safety: no placeholders, invented facts or interim content | ❌ fail (legal) |
 | 12 | Content governance: author, review status, dates, sources, indexability | ❌ fail (owner) |
@@ -47,21 +47,20 @@ Output verified: `dist/` · production domain `https://www.alibayatrealty.com` �
 
 ## Internal links
 **3. Zero broken internal links: PASS**
-- 2114 links and assets across 32 pages → 34 unique internal targets, 0 broken
+- 2116 links and assets across 32 pages → 34 unique internal targets, 0 broken
 
 **13. Internal linking: no orphans, pillars connected, contextual links: PASS**
-- contextual inbound links (main content only): / 18, /contact/ 15, /fa/ 14, /fa/contact/ 13, /buy/ 12, /invest/ 12, /sell/ 11, /fa/buy/ 11, /fa/invest/ 11, /neighbourhoods/north-york/ 10, /neighbourhoods/thornhill/ 10, /neighbourhoods/vaughan/ 10, /resources/buying/land-transfer-tax-toronto-york-region/ 10, /fa/sell/ 10, /neighbourhoods/ 9, /neighbourhoods/richmond-hill/ 9, /neighbourhoods/toronto/ 9, /fa/neighbourhoods/ 9, /fa/resources/buying/land-transfer-tax-toronto-york-region/ 9, /fa/neighbourhoods/north-york/ 8, /fa/neighbourhoods/thornhill/ 8, /fa/neighbourhoods/richmond-hill/ 8, /fa/neighbourhoods/vaughan/ 8, /fa/neighbourhoods/toronto/ 8, /about/ 3, /fa/about/ 3, /resources/ 2, /fa/resources/ 2, /privacy/ 2, /terms/ 0, /accessibility/ 0
+- contextual inbound links (main content only): / 18, /contact/ 15, /fa/ 14, /fa/contact/ 13, /buy/ 12, /invest/ 12, /sell/ 11, /fa/buy/ 11, /fa/invest/ 11, /neighbourhoods/north-york/ 10, /neighbourhoods/thornhill/ 10, /neighbourhoods/richmond-hill/ 10, /neighbourhoods/vaughan/ 10, /neighbourhoods/toronto/ 10, /resources/buying/land-transfer-tax-toronto-york-region/ 10, /fa/sell/ 10, /neighbourhoods/ 9, /fa/neighbourhoods/ 9, /fa/resources/buying/land-transfer-tax-toronto-york-region/ 9, /fa/neighbourhoods/north-york/ 8, /fa/neighbourhoods/thornhill/ 8, /fa/neighbourhoods/richmond-hill/ 8, /fa/neighbourhoods/vaughan/ 8, /fa/neighbourhoods/toronto/ 8, /about/ 3, /fa/about/ 3, /resources/ 2, /fa/resources/ 2, /privacy/ 2, /terms/ 0, /accessibility/ 0
 
 ## Accessibility
 **8. Navigation works on desktop, tablet and mobile: PASS**
 - desktop 1280px: every label goes to its intended URL; correct active state on every page
 - tablet 820px and mobile 375px (touch): menu opens, every link correct, closes; no horizontal scroll on any page
 
-**9. Accessibility: axe-core, keyboard, focus, contrast, mobile, reduced motion: FAIL**
-- axe-core: not run
+**9. Accessibility: axe-core, keyboard, focus, contrast, mobile, reduced motion: PASS**
+- axe-core: 0 violation(s) across 32 pages × light/dark × 1280/375px
 - built-in checks (names, labels, ARIA, landmarks, zoom, WCAG AA contrast) on 32 pages × light/dark × 1280/375px: 0 issue(s), 0 contrast
 - keyboard: every control reachable by Tab on every page (0 page(s) with gaps); 0 control(s) without a visible focus ring; skip link, menu Enter/Tab/Escape, live calculator results, reduced motion
-- ✗ [external] axe-core is not installed, so the full axe rule set did NOT run. Run `npm install` (package.json pins axe-core) and re-verify
 
 ## Structured data
 **7. Structured data is valid and truthful (no invented facts): PASS**
@@ -74,15 +73,16 @@ Output verified: `dist/` · production domain `https://www.alibayatrealty.com` �
 
 ## Content governance
 **12. Content governance: author, review status, dates, sources, indexability: FAIL**
-- 32 pages registered; 28 approved as built; author = Ali Bayat
+- 32 pages registered; 27 approved as built; author = Ali Bayat
 - approvals are tied to each page's exact content; dates come only from Ali's approvals (python build.py approve …)
 - ✗ [owner] /invest/: not yet reviewed and approved by Ali
+- ✗ [owner] /resources/: changed after approval; needs review again
 - ✗ [owner] /fa/invest/: not yet reviewed and approved by Ali
 
 | Page | Type | Author | Review | Published | Updated | Source / data period | Indexable |
 |---|---|---|---|---|---|---|---|
 | `/` | home | Ali Bayat | approved | 2026-11-11 | 2026-11-18 | n/a | yes |
-| `/about/` | profile | Ali Bayat | approved | 2026-11-11 | 2026-11-18 | n/a | yes |
+| `/about/` | profile | Ali Bayat | approved | 2026-11-11 | 2026-11-20 | n/a | yes |
 | `/buy/` | service | Ali Bayat | approved | 2026-11-11 | 2026-11-20 | n/a | yes |
 | `/sell/` | service | Ali Bayat | approved | 2026-11-11 | 2026-11-20 | n/a | yes |
 | `/invest/` | service | Ali Bayat | draft | n/a | n/a | n/a | yes |
@@ -92,7 +92,7 @@ Output verified: `dist/` · production domain `https://www.alibayatrealty.com` �
 | `/neighbourhoods/richmond-hill/` | neighbourhood-guide | Ali Bayat | approved | 2026-11-11 | n/a | n/a | yes |
 | `/neighbourhoods/vaughan/` | neighbourhood-guide | Ali Bayat | approved | 2026-11-11 | n/a | n/a | yes |
 | `/neighbourhoods/toronto/` | neighbourhood-guide | Ali Bayat | approved | 2026-11-11 | n/a | n/a | yes |
-| `/resources/` | hub | Ali Bayat | approved | 2026-11-11 | n/a | n/a | yes |
+| `/resources/` | hub | Ali Bayat | approved (changed since) | 2026-11-11 | n/a | n/a | yes |
 | `/resources/buying/land-transfer-tax-toronto-york-region/` | guide | Ali Bayat | approved | 2026-11-11 | 2026-11-20 | City of Toronto, MLTT rates and fees; City of Toronto, MLTT rebates; Ontario, calculating land transfer tax; Ontario, refunds for first-time homebuyers (Ontario rates in effect since January 1, 2017; City of Toronto MLTT rates in effect from April 1, 2026; verified 2026-10-01) | yes |
 | `/contact/` | contact | Ali Bayat | approved | 2026-11-11 | 2026-11-18 | n/a | yes |
 | `/fa/` | home | Ali Bayat | approved | 2026-11-11 | 2026-11-18 | n/a | yes |
@@ -107,7 +107,7 @@ Output verified: `dist/` · production domain `https://www.alibayatrealty.com` �
 | `/fa/neighbourhoods/toronto/` | neighbourhood-guide | Ali Bayat | approved | 2026-11-11 | n/a | n/a | yes |
 | `/fa/resources/` | hub | Ali Bayat | approved | 2026-11-11 | n/a | n/a | yes |
 | `/fa/resources/buying/land-transfer-tax-toronto-york-region/` | guide | Ali Bayat | approved | 2026-11-11 | 2026-11-20 | City of Toronto, MLTT rates and fees; City of Toronto, MLTT rebates; Ontario, calculating land transfer tax; Ontario, refunds for first-time homebuyers (Ontario rates in effect since January 1, 2017; City of Toronto MLTT rates in effect from April 1, 2026; verified 2026-10-01) | yes |
-| `/fa/about/` | profile | Ali Bayat | approved | 2026-11-11 | 2026-11-18 | n/a | yes |
+| `/fa/about/` | profile | Ali Bayat | approved | 2026-11-11 | 2026-11-20 | n/a | yes |
 | `/fa/contact/` | contact | Ali Bayat | approved | 2026-11-11 | 2026-11-18 | n/a | yes |
 | `/privacy/` | legal | Ali Bayat | draft | n/a | n/a | n/a | no |
 | `/terms/` | legal | Ali Bayat | draft | n/a | n/a | n/a | no |
@@ -140,8 +140,8 @@ Every occurrence above comes from a managed placeholder (awaiting the owner inpu
 
 ## Performance
 **14. Performance budget: weight, requests, DOM size, layout shift, render-blocking: FAIL**
-- site.js 22 KB (prototype code stripped), site.css 45 KB, both cached across pages; scripts deferred; no images
-- largest page /invest/ 49 KB HTML; most DOM /invest/ 797 elements; max same-origin requests 9; max layout shift 0.000
+- site.js 20 KB (prototype code stripped), site.css 45 KB, both cached across pages; scripts deferred; no images
+- largest page /invest/ 49 KB HTML; most DOM /invest/ 798 elements; max same-origin requests 9; max layout shift 0.000
 - third-party request on every page: commons.wikimedia.org, creativecommons.org, fonts.googleapis.com, fonts.gstatic.com (Google Fonts). Recommendation: self-host the three font families
 - ✗ [engineering] /: 9 requests (budget 6)
 - ✗ [engineering] /neighbourhoods/: 8 requests (budget 6)
@@ -149,16 +149,17 @@ Every occurrence above comes from a managed placeholder (awaiting the owner inpu
 
 ## Reproducibility
 **15. Reproducible, machine-independent build: PASS**
-- two clean rebuilds skipped (--skip-rebuild)
+- two clean builds byte-identical to each other and to the output under test (54 files); pinned dependencies; no machine paths
 
 ## Remaining blockers
 
-### Requires Ali's information or approval (2)
+### Requires Ali's information or approval (3)
 - /fa/invest/: not yet reviewed and approved by Ali
 - /invest/: not yet reviewed and approved by Ali
+- /resources/: changed after approval; needs review again
 
-### Requires an external service or access (1)
-- axe-core is not installed, so the full axe rule set did NOT run. Run `npm install` (package.json pins axe-core) and re-verify
+### Requires an external service or access (0)
+- none
 
 ### Requires legal / brokerage review (3)
 - /privacy/: privacy-policy is interim, not final

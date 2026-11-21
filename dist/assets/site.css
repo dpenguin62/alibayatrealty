@@ -28,7 +28,7 @@ a{color:inherit}
 h1,h2,h3{font-family:var(--display);font-weight:700;line-height:1.12;text-wrap:balance;margin:0;letter-spacing:-.025em}
 h1{font-size:clamp(2.2rem,5.2vw,4.2rem);font-weight:800}
 h2{font-size:clamp(1.7rem,3.2vw,2.5rem);font-weight:700}
-h3{font-size:1.25rem;line-height:1.25;font-weight:700}
+h3,.as-h3{font-size:1.25rem;line-height:1.25;font-weight:700}
 h1 em,h2 em{font-style:italic;color:var(--brass-text)}
 p{margin:0}
 .lede{font-size:clamp(1.08rem,1.5vw,1.2rem);color:var(--muted);max-width:56ch}
@@ -199,8 +199,8 @@ p{margin:0}
 .ncard .ph{display:block;height:165px;border-radius:var(--r);overflow:hidden;background:var(--draw);margin-bottom:.55rem}
 .ncard img{display:block;width:100%;height:100%;object-fit:cover;transition:transform .5s ease}
 .ncard a:hover img{transform:scale(1.03)}
-.ncard a:hover h3{color:var(--lake)}
-.ncard h3{font-size:1.5rem;font-weight:700}
+.ncard a:hover h3,.ncard a:hover .as-h3{color:var(--lake)}
+.ncard h3,.ncard .as-h3{font-size:1.5rem;font-weight:700}
 .ncard .cap{font-family:var(--mono);font-size:.68rem;letter-spacing:.05em;text-transform:uppercase;color:var(--muted)}
 .ncard p{font-size:.92rem;color:var(--muted)}
 .ncard .go{font-family:var(--mono);font-size:.74rem;color:var(--lake);margin-top:.15rem}
@@ -212,7 +212,7 @@ p{margin:0}
 .credits{font-size:.74rem;line-height:1.55;color:var(--muted);margin-top:1.5rem;padding-top:.9rem;border-top:1px solid var(--line)}
 @media (min-width:901px){.areas-grid > .linemap{position:sticky;top:calc(env(safe-area-inset-top,0px) + 100px)}}
 @media (min-width:901px){.ncards.cols3{grid-template-columns:repeat(3,minmax(0,1fr))}.ncards.cols3 .wide{grid-column:span 2}.ncards.cols3 .ph,.ncards.tall .ph{height:225px}}
-@media (max-width:560px){.ncards{grid-template-columns:1fr}.ncard .ph{height:auto;aspect-ratio:16/9}.ncard.wide .ph{aspect-ratio:5/2}.ncard h3{font-size:1.3rem}}
+@media (max-width:560px){.ncards{grid-template-columns:1fr}.ncard .ph{height:auto;aspect-ratio:16/9}.ncard.wide .ph{aspect-ratio:5/2}.ncard h3,.ncard .as-h3{font-size:1.3rem}}
 
 .alist{list-style:none;margin:0;padding:0;border-top:1px solid var(--line)}
 .alist a{display:grid;grid-template-columns:120px minmax(0,1fr) auto;gap:1.25rem;align-items:center;padding-block:1rem;border-bottom:1px solid var(--line);text-decoration:none}
@@ -226,8 +226,8 @@ p{margin:0}
 
 /* Resources teaser */
 .feature{display:grid;grid-template-columns:1.1fr 1fr;gap:clamp(1.5rem,4vw,3rem);align-items:center;text-decoration:none;padding-bottom:2rem;border-bottom:1px solid var(--line)}
-.feature:hover h3{text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:5px}
-.feature h3{font-size:clamp(1.6rem,3vw,2.2rem);font-weight:700}
+.feature:hover h3,.feature:hover .as-h3{text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:5px}
+.feature h3,.feature .as-h3{font-size:clamp(1.6rem,3vw,2.2rem);font-weight:700}
 .feature .in{display:grid;gap:.9rem}
 @media (max-width:760px){.feature{grid-template-columns:1fr}}
 .teasers{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem}
@@ -340,7 +340,7 @@ p{margin:0}
 .aside{position:sticky;top:calc(env(safe-area-inset-top,0px) + 100px);display:grid;gap:1rem}
 @media (max-width:920px){.aside{position:static}}
 .box{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:1.4rem;display:grid;gap:.85rem;align-content:start}
-.box h3{font-size:1.2rem}
+.box h3,.box .as-h3{font-size:1.2rem}
 .box p{font-size:.94rem;color:var(--muted)}
 .box.tint{background:var(--lake-soft);border-color:transparent}
 .plain{margin:0;padding-left:1.1rem;display:grid;gap:.4rem;font-size:.94rem}
