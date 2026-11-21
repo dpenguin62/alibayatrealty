@@ -31,7 +31,7 @@ a{color:inherit}
 h1,h2,h3{font-family:var(--display);font-weight:700;line-height:1.12;text-wrap:balance;margin:0;letter-spacing:-.025em}
 h1{font-size:clamp(2.2rem,5.2vw,4.2rem);font-weight:800}
 h2{font-size:clamp(1.7rem,3.2vw,2.5rem);font-weight:700}
-h3{font-size:1.25rem;line-height:1.25;font-weight:700}
+h3,.as-h3{font-size:1.25rem;line-height:1.25;font-weight:700}
 h1 em,h2 em{font-style:italic;color:var(--brass-text)}
 p{margin:0}
 .lede{font-size:clamp(1.08rem,1.5vw,1.2rem);color:var(--muted);max-width:56ch}
@@ -80,10 +80,10 @@ p{margin:0}
 .sub-btn:focus-visible{outline:2px solid var(--lake);outline-offset:2px}
 .sub-btn svg{transition:transform .2s ease}
 .has-sub:hover .sub-btn svg,.has-sub:focus-within .sub-btn svg,.has-sub.open .sub-btn svg{transform:rotate(180deg)}
-.sub{position:absolute;top:100%;inset-inline-start:0;z-index:40;display:none;flex-direction:column;min-width:13rem;padding:.4rem;background:var(--surface);border:1px solid var(--line);border-radius:var(--r);box-shadow:0 10px 28px rgba(20,33,61,.1)}
+.has-sub .sub{position:absolute;top:100%;inset-inline-start:0;z-index:40;display:none;flex-direction:column;min-width:13rem;padding:.4rem;background:var(--surface);border:1px solid var(--line);border-radius:var(--r);box-shadow:0 10px 28px rgba(20,33,61,.1)}
 .has-sub:hover .sub,.has-sub:focus-within .sub,.has-sub.open .sub{display:flex}
 .has-sub.shut .sub{display:none}
-.sub a{padding:.55rem .7rem;white-space:nowrap}
+.has-sub .sub a{padding:.55rem .7rem;white-space:nowrap}
 .menu-btn{display:none;background:none;border:1.5px solid var(--line);color:var(--ink);border-radius:3px;padding:.55rem .9rem;font:600 .9rem var(--body);cursor:pointer;min-height:44px}
 .site-head .head-talk{display:none}
 @media (max-width:1000px){.nav{display:none}.menu-btn{display:inline-flex}.site-head .head-talk{display:inline-flex}.head-actions{display:flex;gap:.5rem;align-items:center}}
@@ -202,8 +202,8 @@ p{margin:0}
 .ncard .ph{display:block;height:165px;border-radius:var(--r);overflow:hidden;background:var(--draw);margin-bottom:.55rem}
 .ncard img{display:block;width:100%;height:100%;object-fit:cover;transition:transform .5s ease}
 .ncard a:hover img{transform:scale(1.03)}
-.ncard a:hover h3{color:var(--lake)}
-.ncard h3{font-size:1.5rem;font-weight:700}
+.ncard a:hover h3,.ncard a:hover .as-h3{color:var(--lake)}
+.ncard h3,.ncard .as-h3{font-size:1.5rem;font-weight:700}
 .ncard .cap{font-family:var(--mono);font-size:.68rem;letter-spacing:.05em;text-transform:uppercase;color:var(--muted)}
 .ncard p{font-size:.92rem;color:var(--muted)}
 .ncard .go{font-family:var(--mono);font-size:.74rem;color:var(--lake);margin-top:.15rem}
@@ -215,7 +215,7 @@ p{margin:0}
 .credits{font-size:.74rem;line-height:1.55;color:var(--muted);margin-top:1.5rem;padding-top:.9rem;border-top:1px solid var(--line)}
 @media (min-width:901px){.areas-grid > .linemap{position:sticky;top:calc(env(safe-area-inset-top,0px) + 100px)}}
 @media (min-width:901px){.ncards.cols3{grid-template-columns:repeat(3,minmax(0,1fr))}.ncards.cols3 .wide{grid-column:span 2}.ncards.cols3 .ph,.ncards.tall .ph{height:225px}}
-@media (max-width:560px){.ncards{grid-template-columns:1fr}.ncard .ph{height:auto;aspect-ratio:16/9}.ncard.wide .ph{aspect-ratio:5/2}.ncard h3{font-size:1.3rem}}
+@media (max-width:560px){.ncards{grid-template-columns:1fr}.ncard .ph{height:auto;aspect-ratio:16/9}.ncard.wide .ph{aspect-ratio:5/2}.ncard h3,.ncard .as-h3{font-size:1.3rem}}
 
 .alist{list-style:none;margin:0;padding:0;border-top:1px solid var(--line)}
 .alist a{display:grid;grid-template-columns:120px minmax(0,1fr) auto;gap:1.25rem;align-items:center;padding-block:1rem;border-bottom:1px solid var(--line);text-decoration:none}
@@ -229,8 +229,8 @@ p{margin:0}
 
 /* Resources teaser */
 .feature{display:grid;grid-template-columns:1.1fr 1fr;gap:clamp(1.5rem,4vw,3rem);align-items:center;text-decoration:none;padding-bottom:2rem;border-bottom:1px solid var(--line)}
-.feature:hover h3{text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:5px}
-.feature h3{font-size:clamp(1.6rem,3vw,2.2rem);font-weight:700}
+.feature:hover h3,.feature:hover .as-h3{text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:5px}
+.feature h3,.feature .as-h3{font-size:clamp(1.6rem,3vw,2.2rem);font-weight:700}
 .feature .in{display:grid;gap:.9rem}
 @media (max-width:760px){.feature{grid-template-columns:1fr}}
 .teasers{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem}
@@ -343,7 +343,7 @@ p{margin:0}
 .aside{position:sticky;top:calc(env(safe-area-inset-top,0px) + 100px);display:grid;gap:1rem}
 @media (max-width:920px){.aside{position:static}}
 .box{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:1.4rem;display:grid;gap:.85rem;align-content:start}
-.box h3{font-size:1.2rem}
+.box h3,.box .as-h3{font-size:1.2rem}
 .box p{font-size:.94rem;color:var(--muted)}
 .box.tint{background:var(--lake-soft);border-color:transparent}
 .plain{margin:0;padding-left:1.1rem;display:grid;gap:.4rem;font-size:.94rem}
@@ -808,7 +808,7 @@ article.teaser:hover h3{text-decoration:none}
           <p>Call or text <a href="tel:+16477797919">(647) 779-7919</a>, or email <a href="mailto:ali@alibayatrealty.com">ali@alibayatrealty.com</a>. Ali usually replies within one business day.</p>
         </div></div>
       </div>
-      <aside class="aside">
+      <div class="aside">
         <div class="box">
           <h3>Registration &amp; brokerage</h3>
           <ul class="nolist small">
@@ -819,7 +819,7 @@ article.teaser:hover h3{text-decoration:none}
           </ul>
         </div>
         <div class="box tint"><h3>Let's talk</h3><p>Tell me what you're planning. I'll reply personally.</p><a class="btn" href="#contact">Talk to Ali</a></div>
-      </aside>
+      </div><!-- /.aside -->
     </div>
   </section>
 </div>
@@ -1058,10 +1058,10 @@ article.teaser:hover h3{text-decoration:none}
             <li><a href="#richmond-hill"><div class="dwg" data-dwg="detached"></div><div><span class="label">York Region</span><h3>Richmond Hill</h3><p>Values vary widely by neighbourhood, and some northern areas fall under Oak Ridges Moraine planning rules.</p></div><span class="go">Guide →</span></a></li>
             <li><a href="#vaughan"><div class="dwg" data-dwg="town"></div><div><span class="label">York Region</span><h3>Vaughan</h3><p>Several distinct markets plus a growing condo district at the VMC, where pre-construction terms need careful review.</p></div><span class="go">Guide →</span></a></li>
           </ul>
-          <aside class="aside">
+          <div class="aside">
             <div class="box tint"><h3>No "best" area</h3><p>There's no single best place to invest. The right fit depends on your budget, timeline and how much risk you're comfortable with, so each property is analyzed on its own numbers.</p></div>
             <div class="box"><h3>Related</h3><ul class="nolist small"><li><a class="link" href="#guide-land-transfer-tax">Land transfer tax: Toronto vs. York Region <span class="ar" aria-hidden="true">→</span></a></li><li><a class="link" href="#buy">How buying with Ali works <span class="ar" aria-hidden="true">→</span></a></li><li><a class="link" href="#neighbourhoods">Neighbourhood guides <span class="ar" aria-hidden="true">→</span></a></li></ul></div>
-          </aside>
+          </div><!-- /.aside -->
         </div>
       </div>
     </div>
@@ -1147,19 +1147,19 @@ article.teaser:hover h3{text-decoration:none}
 </div>
 
 <!-- ============ RESOURCES ============ -->
-<div class="page" data-page="resources" data-title="Real Estate Guides & GTA Market Insights | Ali Bayat" hidden>
+<div class="page" data-page="resources" data-title="Toronto & York Region Real Estate Guides | Ali Bayat" hidden>
   <header class="page-head"><div class="wrap">
     <nav class="crumbs" aria-label="Breadcrumb"><a href="#home">Home</a><span aria-hidden="true">/</span><span>Resources</span></nav>
     <span class="label accent">Knowledge centre</span>
-    <h1 tabindex="-1">Guides for buying, selling <em>and understanding the GTA market</em></h1>
-    <p class="lede">Plain-language answers to the questions clients ask most, investment fundamentals, and monthly market notes by area.</p>
+    <h1 tabindex="-1">Guides for buying in Toronto and York Region, <em>and for each community</em></h1>
+    <p class="lede">Plain-language answers to the questions clients ask most, and a guide to each community I work in.</p>
     <div class="row"><a class="link" href="#buy">How buying works <span class="ar" aria-hidden="true">→</span></a><a class="link" href="#sell">How selling works <span class="ar" aria-hidden="true">→</span></a><a class="link" href="#invest">Investment property analysis <span class="ar" aria-hidden="true">→</span></a></div>
   </div></header>
   <section class="band tight">
     <div class="wrap stack" style="gap:3rem">
       <a class="feature" href="#guide-land-transfer-tax">
         <div class="dwg wide" data-dwg="strip2"><span class="grid-bg"></span></div>
-        <div class="in"><span class="label accent">Featured · Buying guide</span><h3>Land transfer tax in Toronto vs. York Region, with a calculator</h3><p class="muted">Why the same price costs more to close on in North York than in Vaughan, and how first-time buyer rebates fit in.</p><span class="status pub">Published<mark class="tbc" data-note="ltt-guide-review"> · draft for Ali's review</mark></span></div>
+        <div class="in"><span class="label accent">Featured · Buying guide</span><h2 class="as-h3">Land transfer tax in Toronto vs. York Region, with a calculator</h2><p class="muted">Why the same price costs more to close on in North York than in Vaughan, and how first-time buyer rebates fit in.</p><span class="status pub">Published<mark class="tbc" data-note="ltt-guide-review"> · draft for Ali's review</mark></span></div>
       </a>
       <div class="report" aria-label="Market report template" data-requires="market-data">
         <div class="top"><div><span class="label accent">GTA Market Insights · monthly template</span><h3 style="font-size:1.5rem;margin-top:.3rem">Market notes: <span class="ph">[Area]</span>, <span class="ph">[Month Year]</span></h3></div><span class="pill">Needs data source</span></div>
@@ -1235,10 +1235,10 @@ article.teaser:hover h3{text-decoration:none}
         <div class="row"><a class="btn" href="#contact" data-interest="buy">Talk to Ali about your budget</a></div>
         <p class="small muted">Sources, checked October 1, 2026: <a href="https://www.toronto.ca/services-payments/property-taxes-utilities/municipal-land-transfer-tax-mltt/municipal-land-transfer-tax-mltt-rates-and-fees/" rel="noopener">City of Toronto, MLTT rates and fees</a>; <a href="https://www.toronto.ca/services-payments/property-taxes-utilities/municipal-land-transfer-tax-mltt/municipal-land-transfer-tax-mltt-rebate-opportunities/" rel="noopener">City of Toronto, MLTT rebates</a>; <a href="https://www.ontario.ca/document/land-transfer-tax/calculating-land-transfer-tax" rel="noopener">Ontario, calculating land transfer tax</a>; <a href="https://www.ontario.ca/document/land-transfer-tax/land-transfer-tax-refunds-first-time-homebuyers" rel="noopener">Ontario, refunds for first-time homebuyers</a>.</p>
       </div>
-      <aside class="aside">
+      <div class="aside">
         <div class="box"><h3>Related</h3><ul class="nolist small"><li><a class="link" href="#buy">How buying with Ali works <span class="ar" aria-hidden="true">→</span></a></li><li><a class="link" href="#north-york">North York guide <span class="ar" aria-hidden="true">→</span></a></li><li><a class="link" href="#vaughan">Vaughan guide <span class="ar" aria-hidden="true">→</span></a></li><li><a class="link" href="#thornhill">Thornhill guide <span class="ar" aria-hidden="true">→</span></a></li><li><a class="link" href="#richmond-hill">Richmond Hill guide <span class="ar" aria-hidden="true">→</span></a></li><li><a class="link" href="#toronto">Toronto guide <span class="ar" aria-hidden="true">→</span></a></li><li><a class="link" href="#sell">Selling before you buy? How pricing works <span class="ar" aria-hidden="true">→</span></a></li><li><a class="link" href="#invest">Closing costs in an investment analysis <span class="ar" aria-hidden="true">→</span></a></li></ul></div>
         <div class="box tint"><h3>Comparing two areas?</h3><p>I'll put the full closing costs side by side for the homes you're considering.</p><a class="btn" href="#contact" data-interest="buy">Talk to Ali</a></div>
-      </aside>
+      </div><!-- /.aside -->
     </div>
   </section>
 </div>
@@ -1291,7 +1291,7 @@ article.teaser:hover h3{text-decoration:none}
           <button class="btn ghost sm" type="button" id="reset-form" style="width:max-content">Back to the form</button>
         </div>
       </div>
-      <aside class="aside">
+      <div class="aside">
         <div class="box" style="grid-template-columns:72px 1fr;align-items:center"><div class="portrait photo" style="aspect-ratio:1;border-radius:50%"><img src="/assets/img/ali-bayat-headshot.jpg" alt="" aria-hidden="true" width="240" height="240" decoding="async"></div><div><b style="font-family:var(--display);font-weight:600;font-size:1.2rem">Ali Bayat</b><p class="small">Replies personally, <mark class="tbc" data-approve="reply-time">usually within one business day</mark></p></div></div>
         <div class="box">
           <div class="clines">
@@ -1301,8 +1301,8 @@ article.teaser:hover h3{text-decoration:none}
             <div><small>Languages</small><span>English, Farsi</span></div>
           </div>
         </div>
-        <div class="box tint"><h3>What happens next</h3><ol class="plain"><li>Ali reads your message and replies.</li><li>You set up a short call at a time that suits you.</li><li>You leave with a clear next step. No obligation.</li></ol></div>
-      </aside>
+        <div class="box tint"><h2 class="as-h3">What happens next</h2><ol class="plain"><li>Ali reads your message and replies.</li><li>You set up a short call at a time that suits you.</li><li>You leave with a clear next step. No obligation.</li></ol></div>
+      </div><!-- /.aside -->
     </div>
   </section>
 </div>
@@ -1408,7 +1408,7 @@ article.teaser:hover h3{text-decoration:none}
     <div class="wrap stack" style="gap:3rem">
       <a class="feature" href="#fa-guide-land-transfer-tax">
         <div class="dwg wide" data-dwg="strip2"><span class="grid-bg"></span></div>
-        <div class="in"><span class="label accent">راهنمای ویژه · خرید</span><h3>مالیات انتقال زمین در تورنتو و منطقه‌ی یورک، همراه با ماشین‌حساب</h3><p class="muted">چرا خرید با قیمت یکسان در نورث‌یورک هزینه‌ی بیشتری از وان دارد، و بازپرداخت خریداران خانه‌ی اول چطور محاسبه می‌شود.</p><span class="status pub">منتشرشده</span></div>
+        <div class="in"><span class="label accent">راهنمای ویژه · خرید</span><h2 class="as-h3">مالیات انتقال زمین در تورنتو و منطقه‌ی یورک، همراه با ماشین‌حساب</h2><p class="muted">چرا خرید با قیمت یکسان در نورث‌یورک هزینه‌ی بیشتری از وان دارد، و بازپرداخت خریداران خانه‌ی اول چطور محاسبه می‌شود.</p><span class="status pub">منتشرشده</span></div>
       </a>
       <div class="stack"><section class="kc-cat"><div class="intro"><h2>راهنمای خرید</h2><p>از بودجه تا روز تحویل.</p></div><div class="arts"><a class="art" href="#fa-guide-land-transfer-tax"><h3>مالیات انتقال زمین در تورنتو و منطقه‌ی یورک، همراه با ماشین‌حساب</h3><span class="status pub">منتشرشده</span><p>چرا خرید با قیمت یکسان در نورث‌یورک هزینه‌ی بیشتری از وان دارد.</p></a><div class="art"><h3>خرید اولین خانه در تورنتو: برنامه‌ی قدم به قدم</h3><span class="status">در دست نگارش</span><p>از پیش‌تأیید وام تا روز تحویل، با هزینه‌های هر مرحله.</p></div><div class="art"><h3>کاندوی پیش‌فروش: پرسش‌هایی پیش از امضا</h3><span class="status">در دست نگارش</span><p>ودیعه‌ها، هزینه‌های دوره‌ی سکونت، قوانین واگذاری و تسویه‌های روز تحویل.</p></div></div></section><section class="kc-cat"><div class="intro"><h2>راهنمای فروش</h2><p>آماده‌سازی، قیمت‌گذاری و فروش.</p></div><div class="arts"><div class="art"><h3>چه تعمیراتی پیش از فروش ارزش دارد</h3><span class="status">در دست نگارش</span><p>کدام تعمیرات ارزشش را دارند، کدام‌ها نه، و چطور سر وقت انجامشان دهیم.</p></div><div class="art"><h3>روز پیشنهادها یا قیمت‌گذاری مطابق بازار</h3><span class="status">در دست نگارش</span><p>هر استراتژی چطور کار می‌کند و چه زمانی معمولاً منطقی است.</p></div></div></section><section class="kc-cat"><div class="intro"><h2>سرمایه‌گذاری</h2><p>تحلیل ملک‌های درآمدزا: جریان نقدی، Cap rate، وام و استراتژی.</p></div><div class="arts"><a class="art" href="#fa-invest"><h3>تحلیل ملک سرمایه‌گذاری: چارچوب شش‌مرحله‌ای</h3><span class="status pub">منتشرشده</span><p>از بررسی ملک تا تصمیم، با پرسش‌های هر مرحله.</p></a><div class="art"><h3>نرخ بازده سرمایه (Cap rate) چیست و چه چیزی را نمی‌گوید</h3><span class="status">در دست نگارش</span><p>نحوه‌ی محاسبه، مقایسه و محدودیت‌هایش.</p></div><div class="art"><h3>محاسبه‌ی جریان نقدی ملک اجاره‌ای</h3><span class="status">در دست نگارش</span><p>از اجاره‌ی ناخالص تا آنچه پس از هزینه‌ها، خالی ماندن و وام باقی می‌ماند.</p></div><div class="art"><h3>جریان نقدی یا رشد ارزش: انتخاب استراتژی</h3><span class="status">در دست نگارش</span><p>دو دلیل متفاوت برای مالکیت ملک و ریسک‌های هر کدام.</p></div></div></section><section class="kc-cat"><div class="intro"><h2>راهنمای محله‌ها</h2><p>زندگی در هر محله چطور است.</p></div><div class="arts"><a class="art" href="#fa-north-york"><h3>راهنمای نورث‌یورک</h3><span class="status pub">منتشرشده</span><p>برج‌های کاندو در امتداد خیابان یانگ و خیابان‌های آرام مسکونی چند بلوک آن‌طرف‌تر.</p></a><a class="art" href="#fa-thornhill"><h3>راهنمای تورنهیل</h3><span class="status pub">منتشرشده</span><p>محله‌ای جاافتاده درست شمال تورنتو که میان دو شهر تقسیم شده است.</p></a><a class="art" href="#fa-richmond-hill"><h3>راهنمای ریچموند هیل</h3><span class="status pub">منتشرشده</span><p>محله‌های جاافتاده، شهرک‌های جدیدتر و فضای سبز در شمال.</p></a><a class="art" href="#fa-vaughan"><h3>راهنمای وان</h3><span class="status pub">منتشرشده</span><p>محله‌های جاافتاده و یک مرکز شهر جدید که پیرامون مترو ساخته شده است.</p></a><a class="art" href="#fa-toronto"><h3>راهنمای تورنتو</h3><span class="status pub">منتشرشده</span><p>خانه‌های ویکتوریایی نیمه‌مستقل، خیابان‌های خانوادگی میدتاون و کاندوهای مرکز شهر.</p></a></div></section><section class="kc-cat"><div class="intro"><h2>نکته‌های املاک</h2><p>پاسخ کوتاه به پرسش‌های رایج.</p></div><div class="arts"><div class="art"><h3>خواندن Status Certificate کاندو</h3><span class="status">در دست نگارش</span><p>صفحه‌هایی که مهم‌اند و نشانه‌های هشدار.</p></div><div class="art"><h3>بازرسی خانه در تورنتو: چه انتظاری داشته باشید</h3><span class="status">در دست نگارش</span><p>بازرس چه چیزهایی را بررسی می‌کند و چطور از گزارش استفاده کنید.</p></div></div></section></div>
     </div>
@@ -1475,10 +1475,10 @@ article.teaser:hover h3{text-decoration:none}
         <div class="row"><a class="btn" href="#fa-contact" data-interest="buy" data-cta="guide-budget">گفتگو با علی درباره‌ی بودجه‌تان</a></div>
         <p class="small muted">منابع، بررسی‌شده در ۱ اکتبر ۲۰۲۶: <a href="https://www.toronto.ca/services-payments/property-taxes-utilities/municipal-land-transfer-tax-mltt/municipal-land-transfer-tax-mltt-rates-and-fees/" rel="noopener">City of Toronto, MLTT rates and fees</a>؛ <a href="https://www.toronto.ca/services-payments/property-taxes-utilities/municipal-land-transfer-tax-mltt/municipal-land-transfer-tax-mltt-rebate-opportunities/" rel="noopener">City of Toronto, MLTT rebates</a>؛ <a href="https://www.ontario.ca/document/land-transfer-tax/calculating-land-transfer-tax" rel="noopener">Ontario, calculating land transfer tax</a>؛ <a href="https://www.ontario.ca/document/land-transfer-tax/land-transfer-tax-refunds-first-time-homebuyers" rel="noopener">Ontario, refunds for first-time homebuyers</a>.</p>
       </div>
-      <aside class="aside">
+      <div class="aside">
         <div class="box"><h3>مطالب مرتبط</h3><ul class="nolist small"><li><a class="link" href="#fa-buy">مراحل خرید با علی <span class="ar" aria-hidden="true">←</span></a></li><li><a class="link" href="#fa-north-york">راهنمای نورث‌یورک <span class="ar" aria-hidden="true">←</span></a></li><li><a class="link" href="#fa-vaughan">راهنمای وان <span class="ar" aria-hidden="true">←</span></a></li><li><a class="link" href="#fa-thornhill">راهنمای تورنهیل <span class="ar" aria-hidden="true">←</span></a></li><li><a class="link" href="#fa-richmond-hill">راهنمای ریچموند هیل <span class="ar" aria-hidden="true">←</span></a></li><li><a class="link" href="#fa-toronto">راهنمای تورنتو <span class="ar" aria-hidden="true">←</span></a></li><li><a class="link" href="#fa-sell">قبل از خرید می‌فروشید؟ قیمت‌گذاری خانه <span class="ar" aria-hidden="true">←</span></a></li><li><a class="link" href="#fa-invest">هزینه‌های بستن معامله در تحلیل سرمایه‌گذاری <span class="ar" aria-hidden="true">←</span></a></li></ul></div>
         <div class="box tint"><h3>دو محله را مقایسه می‌کنید؟</h3><p>هزینه‌های کامل بستن معامله را برای خانه‌هایی که در نظر دارید کنار هم می‌گذارم.</p><a class="btn" href="#fa-contact" data-interest="buy" data-cta="guide-compare">گفتگو با علی</a></div>
-      </aside>
+      </div><!-- /.aside -->
     </div>
   </section>
 </div>
@@ -1707,10 +1707,10 @@ article.teaser:hover h3{text-decoration:none}
             <li><span><b>ریچموند هیل.</b> ارزش ملک‌ها از محله‌ای به محله‌ی دیگر تفاوت زیادی دارد و برخی مناطق شمالی تحت قوانین برنامه‌ریزی Oak Ridges Moraine هستند.</span></li>
             <li><span><b>وان.</b> چند بازار متمایز، به‌علاوه‌ی منطقه‌ی رو به رشد کاندو در VMC، که شرایط پیش‌فروش در آن نیاز به بررسی دقیق دارد.</span></li>
           </ul>
-          <aside class="aside">
+          <div class="aside">
             <div class="box tint"><h3>«بهترین» منطقه وجود ندارد</h3><p>هیچ‌جا به‌تنهایی بهترین مکان برای سرمایه‌گذاری نیست. انتخاب درست به بودجه، زمان‌بندی و میزان ریسکی که می‌پذیرید بستگی دارد؛ پس هر ملک بر اساس اعداد خودش تحلیل می‌شود.</p><a class="link" href="#fa-neighbourhoods">راهنمای محله‌ها <span class="ar" aria-hidden="true">←</span></a></div>
             <div class="box"><h3>مطالب مرتبط</h3><ul class="nolist small"><li><a class="link" href="#fa-guide-land-transfer-tax">مالیات انتقال زمین: تورنتو در برابر منطقه‌ی یورک <span class="ar" aria-hidden="true">←</span></a></li><li><a class="link" href="#fa-buy">مراحل خرید با علی <span class="ar" aria-hidden="true">←</span></a></li></ul></div>
-          </aside>
+          </div><!-- /.aside -->
         </div>
       </div>
     </div>
@@ -1794,7 +1794,7 @@ article.teaser:hover h3{text-decoration:none}
           <p>تماس یا پیامک به <a href="tel:+16477797919" dir="ltr">(647) 779-7919</a> یا ایمیل به <a href="mailto:ali@alibayatrealty.com" dir="ltr">ali@alibayatrealty.com</a>. علی معمولاً ظرف یک روز کاری پاسخ می‌دهد.</p>
         </div></div>
       </div>
-      <aside class="aside">
+      <div class="aside">
         <div class="box">
           <h3>ثبت و بروکریج</h3>
           <ul class="nolist small">
@@ -1805,7 +1805,7 @@ article.teaser:hover h3{text-decoration:none}
           </ul>
         </div>
         <div class="box tint"><h3>با هم صحبت کنیم</h3><p>بگویید چه برنامه‌ای دارید. شخصاً پاسخ می‌دهم.</p><a class="btn" href="#fa-contact" data-cta="about-aside">گفتگو با علی</a></div>
-      </aside>
+      </div><!-- /.aside -->
     </div>
   </section>
 </div>
@@ -1852,7 +1852,7 @@ article.teaser:hover h3{text-decoration:none}
           <p class="muted">علی شخصاً و به زبانی که انتخاب کرده‌اید پاسخ می‌دهد.</p>
         </div>
       </div>
-      <aside class="aside">
+      <div class="aside">
         <div class="box" style="grid-template-columns:72px 1fr;align-items:center"><div class="portrait photo" style="aspect-ratio:1;border-radius:50%"><img src="/assets/img/ali-bayat-headshot.jpg" alt="" aria-hidden="true" width="240" height="240" decoding="async"></div><div><b style="font-family:var(--display);font-weight:600;font-size:1.2rem">علی بیات</b><p class="small">شخصاً پاسخ می‌دهد، <mark class="tbc" data-approve="reply-time">معمولاً ظرف یک روز کاری</mark></p></div></div>
         <div class="box">
           <div class="clines">
@@ -1862,8 +1862,8 @@ article.teaser:hover h3{text-decoration:none}
             <div><small>زبان‌ها</small><span>فارسی، انگلیسی</span></div>
           </div>
         </div>
-        <div class="box tint"><h3>بعد از ارسال پیام</h3><ol class="plain"><li>علی پیام شما را می‌خواند و پاسخ می‌دهد.</li><li>یک تماس کوتاه در زمانی که برایتان مناسب است هماهنگ می‌کنید.</li><li>با یک قدم بعدی روشن پیش می‌روید، بدون هیچ تعهدی.</li></ol></div>
-      </aside>
+        <div class="box tint"><h2 class="as-h3">بعد از ارسال پیام</h2><ol class="plain"><li>علی پیام شما را می‌خواند و پاسخ می‌دهد.</li><li>یک تماس کوتاه در زمانی که برایتان مناسب است هماهنگ می‌کنید.</li><li>با یک قدم بعدی روشن پیش می‌روید، بدون هیچ تعهدی.</li></ol></div>
+      </div><!-- /.aside -->
     </div>
   </section>
 </div>
@@ -1876,7 +1876,7 @@ article.teaser:hover h3{text-decoration:none}
     <p class="lede">How personal information sent through this website is collected, used and protected.</p>
   </div></header>
   <section class="band tight"><div class="wrap two"><div class="prose">
-    <div class="box tint" data-pending="privacy-policy"><h3>Policy in preparation</h3><p>The full privacy policy is being prepared with Ali's brokerage. Until it's published, details you send through the contact form are used only to reply to your inquiry.</p></div>
+    <div class="box tint" data-pending="privacy-policy"><h2 class="as-h3">Policy in preparation</h2><p>The full privacy policy is being prepared with Ali's brokerage. Until it's published, details you send through the contact form are used only to reply to your inquiry.</p></div>
     <p class="tbc-note">Ali: final privacy policy text needed, reviewed by your brokerage (PIPEDA, plus CASL consent wording for email alerts).</p>
     <div class="row"><a class="btn" href="#contact" data-interest="question">Questions? Contact Ali</a></div>
   </div></div></section>
@@ -1889,7 +1889,7 @@ article.teaser:hover h3{text-decoration:none}
     <p class="lede">The terms that apply to using this website and its guides and calculators.</p>
   </div></header>
   <section class="band tight"><div class="wrap two"><div class="prose">
-    <div class="box tint" data-pending="terms-of-use"><h3>Terms in preparation</h3><p>The full terms of use are being prepared. The guides and calculators on this site are for general information only and are not legal, tax, financial or mortgage advice.</p></div>
+    <div class="box tint" data-pending="terms-of-use"><h2 class="as-h3">Terms in preparation</h2><p>The full terms of use are being prepared. The guides and calculators on this site are for general information only and are not legal, tax, financial or mortgage advice.</p></div>
     <p class="tbc-note">Ali: terms of use text needed, including the brokerage's required disclaimers.</p>
   </div></div></section>
 </div>
@@ -2052,6 +2052,7 @@ Not used
         <p class="muted" style="max-width:34ch">Real estate advice for buyers, sellers and investors across Toronto and York Region. English and Farsi.</p>
         <div class="brokerage">
           <strong><mark class="tbc" data-tpl="Ali Bayat, {title_display}">Ali Bayat, Sales Representative</mark></strong>
+          <span class="muted"><mark class="tbc" data-tpl="RECO #{reco_number} · Member, TRREB">RECO #[000000] · Member, TRREB</mark></span>
           <span class="muted"><mark class="tbc" data-tpl="{brokerage_name}">[Brokerage legal name], Brokerage</mark></span>
           <span class="muted"><mark class="tbc" data-tpl="{brokerage_address_line}{brokerage_franchise_note}">[Brokerage address] · Independently owned and operated</mark></span>
         </div>
@@ -2114,6 +2115,7 @@ Not used
         <p class="muted" style="max-width:34ch">مشاوره‌ی املاک برای خریداران، فروشندگان و سرمایه‌گذاران در تورنتو و منطقه‌ی یورک. به فارسی و انگلیسی.</p>
         <div class="brokerage" dir="ltr" style="text-align:right">
           <strong><mark class="tbc" data-tpl="Ali Bayat, {title_display}">Ali Bayat, Sales Representative</mark></strong>
+          <span class="muted"><mark class="tbc" data-tpl="RECO #{reco_number} · Member, TRREB">RECO #[000000] · Member, TRREB</mark></span>
           <span class="muted"><mark class="tbc" data-tpl="{brokerage_name}">[Brokerage legal name], Brokerage</mark></span>
           <span class="muted"><mark class="tbc" data-tpl="{brokerage_address_line}{brokerage_franchise_note}">[Brokerage address] · Independently owned and operated</mark></span>
         </div>
@@ -2180,7 +2182,7 @@ function stripSVG(){
     <text x="${x+150}" y="262" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="13" fill="currentColor" letter-spacing="1">${name.toUpperCase()}</text>
     <text x="${x+150}" y="280" text-anchor="middle" font-family="Inter, sans-serif" font-size="12" fill="currentColor" opacity=".6">${TYPES[k]}</text></a>`});
   const w=seq.length*W;
-  return `<svg viewBox="-10 0 ${w+20} 300" role="img" aria-label="Elevation drawings of typical housing from Toronto north along Yonge Street to Richmond Hill, and west to Vaughan"><line x1="-10" y1="221" x2="${w+10}" y2="221" stroke="currentColor" stroke-width="1.6"/>${g}<text x="${w}" y="296" text-anchor="end" font-family="IBM Plex Mono, monospace" font-size="11" fill="currentColor" opacity=".6">SOUTH → NORTH · NOT TO SCALE</text></svg>`}
+  return `<svg viewBox="-10 0 ${w+20} 300" role="group" aria-label="Elevation drawings of typical housing from Toronto north along Yonge Street to Richmond Hill, and west to Vaughan"><line x1="-10" y1="221" x2="${w+10}" y2="221" stroke="currentColor" stroke-width="1.6"/>${g}<text x="${w}" y="296" text-anchor="end" font-family="IBM Plex Mono, monospace" font-size="11" fill="currentColor" opacity=".6">SOUTH → NORTH · NOT TO SCALE</text></svg>`}
 /* Page-header scenes: line drawings that draw in, then one brass accent animates (pin, sign or bars). */
 function scene(kind){
   let i=0;const len=(t,a)=>{const n=k=>+(a.match(new RegExp(k+'="([^"]+)"'))||[0,0])[1];
@@ -2289,7 +2291,7 @@ function lineMap(){
   const nodes={"richmond-hill":[220,60],"thornhill":[220,170],"north-york":[220,280],"toronto":[220,400],"vaughan":[90,165]};
   const n=(slug,label,sub,right=true)=>{const [x,y]=nodes[slug];const tx=right?x+18:x-18,a=right?"start":"end";
     return `<a class="node" href="#${slug}" aria-label="${label}"><circle cx="${x}" cy="${y}" r="9"/><text x="${tx}" y="${y-2}" font-size="17" font-weight="600" text-anchor="${a}">${label}</text><text class="sub" x="${tx}" y="${y+16}" font-size="11" text-anchor="${a}">${sub}</text></a>`};
-  return `<svg viewBox="0 0 360 440" role="img" aria-labelledby="lm-t"><title id="lm-t">Schematic map: Yonge Street connects Toronto, North York, Thornhill and Richmond Hill; Vaughan is to the west</title>
+  return `<svg viewBox="0 0 360 440" role="group" aria-labelledby="lm-t"><title id="lm-t">Schematic map: Yonge Street connects Toronto, North York, Thornhill and Richmond Hill; Vaughan is to the west</title>
     <line class="road" x1="20" y1="222" x2="345" y2="222" stroke-width="1.5" stroke-dasharray="4 5"/>
     <text class="sub" x="345" y="214" font-size="10" text-anchor="end">STEELES AVE · TORONTO / YORK REGION</text>
     <line class="road" x1="20" y1="118" x2="345" y2="118" stroke-width="1" stroke-dasharray="2 6" opacity=".6"/>
@@ -2316,7 +2318,7 @@ const AREA_PHOTOS_FA={
 function renderNcards(){document.querySelectorAll("[data-ncards]").forEach(el=>{const fa=el.dataset.ncards==="fa",big=el.classList.contains("cols3")||el.classList.contains("tall");
   el.innerHTML=AREAS.map(a=>{const ph=AREA_PHOTOS[a.slug],t=fa?{...AREAS_FA[a.slug],...AREA_PHOTOS_FA[a.slug]}:{name:a.name,region:a.region,tagline:a.tagline,cap:ph.cap,alt:ph.alt},u=w=>`/assets/img/areas/${a.slug}-${w}.webp`;
   const sizes=ph.wide?`(max-width:900px) 100vw, ${big?780:720}px`:`(max-width:560px) 100vw, (max-width:900px) 50vw, ${big?380:350}px`;
-  return `<li class="ncard${ph.wide?" wide":""}"><a href="#${fa?"fa-":""}${a.slug}"><span class="ph"><img src="${u(ph.w[1])}" srcset="${ph.w.map(w=>`${u(w)} ${w}w`).join(", ")}" sizes="${sizes}" alt="${t.alt}" width="${ph.d[0]}" height="${ph.d[1]}" loading="lazy" decoding="async" style="object-position:${ph.pos}"></span><span class="label">${t.region}</span><h3>${t.name}</h3><span class="cap">${t.cap}</span><p>${t.tagline}</p><span class="go">${fa?"راهنما ←":"Guide →"}</span></a></li>`}).join("")})}
+  return `<li class="ncard${ph.wide?" wide":""}"><a href="#${fa?"fa-":""}${a.slug}"><span class="ph"><img src="${u(ph.w[1])}" srcset="${ph.w.map(w=>`${u(w)} ${w}w`).join(", ")}" sizes="${sizes}" alt="${t.alt}" width="${ph.d[0]}" height="${ph.d[1]}" loading="lazy" decoding="async" style="object-position:${ph.pos}"></span><span class="label">${t.region}</span>${big?`<h2 class="as-h3">${t.name}</h2>`:`<h3>${t.name}</h3>`}<span class="cap">${t.cap}</span><p>${t.tagline}</p><span class="go">${fa?"راهنما ←":"Guide →"}</span></a></li>`}).join("")})}
 function renderAlists(){renderNcards();document.querySelectorAll("[data-alist]").forEach(el=>{el.innerHTML=AREAS.map(a=>`<li><a href="#${a.slug}"><div class="dwg" data-dwg="${a.hero}"></div><div><span class="label">${a.region}</span><h3>${a.name}</h3><p>${a.tagline}</p></div><span class="go">Guide →</span></a></li>`).join("")})}
 
 /* ---------- Area page ---------- */
@@ -2350,10 +2352,10 @@ function renderArea(a){
       <section class="asec" id="guides"><h2>Related guides</h2><div class="body"><ul class="ticks"><li><span><a class="link" href="#guide-land-transfer-tax">Land transfer tax in Toronto vs. York Region</a>: ${a.region==="City of Toronto"?`buyers in ${a.name} pay both the provincial and the municipal tax.`:`buyers in ${a.name} pay the provincial tax only.`}</span></li><li><span><a class="link" href="#neighbourhoods">Compare all neighbourhood guides</a></span></li></ul></div></section>
       <section class="asec" id="listings" style="border-bottom:0" data-requires="idx"><h2>Listings</h2><div class="body"><div class="slot"><span class="pill">MLS® feed not connected</span><p class="small muted">Current ${a.name} listings will appear here, filtered automatically by area.</p><a class="link" href="#listings">Open the listing search preview <span class="ar" aria-hidden="true">→</span></a></div></div></section>
     </div>
-    <aside class="aside" style="padding-top:2.25rem">
+    <div class="aside" style="padding-top:2.25rem">
       <div class="box tint"><h3>Thinking about ${a.name}?</h3><p>I can walk you through recent sales, what your budget buys here, or what your home might sell for.</p><a class="btn" href="#contact" data-cta="area-sidebar">Talk to Ali</a></div>
       <div class="box"><h3>Other areas</h3><ul class="nolist small">${others.map(o=>`<li><a class="link" href="#${o.slug}">${o.name} <span class="ar" aria-hidden="true">→</span></a></li>`).join("")}</ul></div>
-    </aside>
+    </div><!-- /.aside -->
   </div>`}
 
 
@@ -2389,10 +2391,10 @@ function renderAreaFa(a){
       <section class="asec" id="fa-inv"><h2>سرمایه‌گذاران</h2><div class="body"><p>نکته‌های مخصوص ملک‌های درآمدزا در ${f.name}. این‌ها پرسش‌هایی برای بررسی‌اند، نه پیش‌بینی.</p>${ul(f.investor)}<a class="link" href="#fa-invest">تحلیل ملک سرمایه‌گذاری چطور انجام می‌شود ${ar}</a></div></section>
       <section class="asec" id="fa-guides" style="border-bottom:0"><h2>راهنماهای مرتبط</h2><div class="body"><ul class="ticks"><li><span><a class="link" href="#fa-guide-land-transfer-tax">مالیات انتقال زمین در تورنتو و منطقه‌ی یورک</a>: ${a.region==="City of Toronto"?`خریداران در ${f.name} هم مالیات استانی و هم مالیات شهرداری را می‌پردازند.`:`خریداران در ${f.name} فقط مالیات استانی را می‌پردازند.`}</span></li><li><span><a class="link" href="#fa-neighbourhoods">مقایسه‌ی همه‌ی محله‌ها</a></span></li></ul></div></section>
     </div>
-    <aside class="aside" style="padding-top:2.25rem">
+    <div class="aside" style="padding-top:2.25rem">
       <div class="box tint"><h3>به ${f.name} فکر می‌کنید؟</h3><p>می‌توانم فروش‌های اخیر، اینکه بودجه‌تان اینجا چه چیزی می‌خرد، یا ارزش احتمالی فروش خانه‌تان را برایتان توضیح دهم.</p><a class="btn" href="#fa-contact" data-cta="area-sidebar">گفتگو با علی</a></div>
       <div class="box"><h3>محله‌های دیگر</h3><ul class="nolist small">${others.map(o=>`<li><a class="link" href="#fa-${o.slug}">${AREAS_FA[o.slug].name} ${ar}</a></li>`).join("")}</ul></div>
-    </aside>
+    </div><!-- /.aside -->
   </div>`}
 
 /* ---------- Buy / Sell processes ---------- */
@@ -2451,8 +2453,18 @@ const CATS=[
  {id:"market",name:"GTA Market Insights",d:"Monthly notes by area, from board data."},
  {id:"areas",name:"Neighbourhood Guides",d:"What it's like to live in each community."},
  {id:"tips",name:"Real Estate Tips",d:"Short answers to common questions."}];
+/* Only published guides ship. Unwritten guides live in the prototype block below and are stripped from the
+   production build (no cards, no status labels, no unbuilt URLs in the page or in site.js). To publish one,
+   write the page, add its route, then move its entry above with href and pub:1. */
 const ARTS=[
  {c:"buying",t:"Land transfer tax in Toronto vs. York Region, with a calculator",d:"Why the same price costs more to close on in North York than in Vaughan.",u:"/resources/buying/land-transfer-tax-toronto-york-region/",href:"#guide-land-transfer-tax",pub:1},
+ {c:"areas",t:"North York neighbourhood guide",d:"Condo corridor, bungalow streets, transit and advice.",u:"/neighbourhoods/north-york/",href:"#north-york",pub:1},
+ {c:"areas",t:"Thornhill: the Vaughan side vs. the Markham side",d:"How the two halves differ on taxes, services and housing.",u:"/neighbourhoods/thornhill/",href:"#thornhill",pub:1},
+ {c:"areas",t:"Richmond Hill neighbourhood guide",d:"Downtown Richmond Hill, Oak Ridges, the Yonge corridor and the GO line.",u:"/neighbourhoods/richmond-hill/",href:"#richmond-hill",pub:1},
+ {c:"areas",t:"Vaughan neighbourhood guide",d:"Woodbridge, Maple, Kleinburg and the VMC.",u:"/neighbourhoods/vaughan/",href:"#vaughan",pub:1},
+ {c:"areas",t:"Toronto neighbourhood guide",d:"Victorian semis, midtown family streets, downtown condos and the extra land transfer tax.",u:"/neighbourhoods/toronto/",href:"#toronto",pub:1}];
+/*<prototype>*/
+ARTS.push(...[
  {c:"buying",t:"Buying your first home in Toronto: a step-by-step plan",d:"From pre-approval to closing, with the costs at each stage.",u:"/resources/buying/first-home-toronto/"},
  {c:"buying",t:"Pre-construction condos: questions to ask before you sign",d:"Deposits, occupancy fees, assignment rules and closing adjustments.",u:"/resources/buying/pre-construction-condo-questions/"},
  {c:"selling",t:"What's worth fixing before you list",d:"Which repairs pay off, which don't, and how to get them done on time.",u:"/resources/selling/what-to-fix-before-listing/"},
@@ -2465,17 +2477,18 @@ const ARTS=[
  {c:"investment",t:"Cash flow vs. appreciation: choosing an investor strategy",d:"Two reasons to own a property, the trade-offs, and the risks of each.",u:"/resources/investment/investor-strategy/"},
  {c:"market",t:"Monthly market notes: North York",d:"First report using the monthly template, once a data source is connected.",u:"/resources/market/2026-10-north-york/"},
  {c:"market",t:"Monthly market notes: York Region",d:"Vaughan, Richmond Hill and Thornhill in one monthly summary.",u:"/resources/market/2026-10-york-region/"},
- {c:"areas",t:"North York neighbourhood guide",d:"Condo corridor, bungalow streets, transit and advice.",u:"/neighbourhoods/north-york/",href:"#north-york",pub:1},
- {c:"areas",t:"Thornhill: the Vaughan side vs. the Markham side",d:"How the two halves differ on taxes, services and housing.",u:"/neighbourhoods/thornhill/",href:"#thornhill",pub:1},
- {c:"areas",t:"Vaughan neighbourhood guide",d:"Woodbridge, Maple, Kleinburg and the VMC.",u:"/neighbourhoods/vaughan/",href:"#vaughan",pub:1},
  {c:"tips",t:"How to read a condo status certificate",d:"The pages that matter and the red flags to look for.",u:"/resources/tips/condo-status-certificate/"},
  {c:"tips",t:"Home inspections in the GTA: what to expect",d:"What inspectors check and how to use the report.",u:"/resources/tips/home-inspection-gta/"},
- {c:"tips",t:"Choosing a contractor after you buy",d:"Quotes, contracts, permits and payment schedules.",u:"/resources/tips/choosing-a-contractor/"}];
+ {c:"tips",t:"Choosing a contractor after you buy",d:"Quotes, contracts, permits and payment schedules.",u:"/resources/tips/choosing-a-contractor/"}].map(a=>({...a,st:"Planned"})));
+/*</prototype>*/
 let activeCat="all";
 function renderKC(){
   if(!document.getElementById("chips"))return;
-  document.getElementById("chips").innerHTML=[{id:"all",name:"All"},...CATS].map(c=>`<button class="chip" type="button" data-cat="${c.id}" aria-pressed="${c.id===activeCat}">${c.name}</button>`).join("");
-  document.getElementById("kc").innerHTML=CATS.filter(c=>activeCat==="all"||c.id===activeCat).map(c=>`<section class="kc-cat"><div class="intro"><h2>${c.name}</h2><p>${c.d}</p></div><div class="arts">${ARTS.filter(a=>a.c===c.id).map(a=>{const tag=a.href?"a":"div";return `<${tag} class="art"${a.href?` href="${a.href}"`:""}><h3>${a.t}</h3><span class="status${a.pub?" pub":""}">${a.pub?"Live":"Planned"}</span><p>${a.d}</p></${tag}>`}).join("")}</div></section>`).join("")}
+  const arts=ARTS.filter(a=>a.pub||!window.__publishedOnly);  // build.py sets __publishedOnly before capturing the page
+  const cats=CATS.filter(c=>arts.some(a=>a.c===c.id));
+  document.getElementById("chips").innerHTML=[{id:"all",name:"All"},...cats].map(c=>`<button class="chip" type="button" data-cat="${c.id}" aria-pressed="${c.id===activeCat}">${c.name}</button>`).join("");
+  document.getElementById("kc").innerHTML=cats.filter(c=>activeCat==="all"||c.id===activeCat).map(c=>`<section class="kc-cat"><div class="intro"><h2>${c.name}</h2><p>${c.d}</p></div><div class="arts">${arts.filter(a=>a.c===c.id).map(a=>{const tag=a.href?"a":"div";return `<${tag} class="art"${a.href?` href="${a.href}"`:""}><h3>${a.t}</h3>${a.st?`<span class="status">${a.st}</span>`:""}<p>${a.d}</p></${tag}>`}).join("")}</div></section>`).join("")}
+/*<prototype>*/window.__renderKC=renderKC;/*</prototype>*/
 document.addEventListener("click",e=>{const b=e.target.closest("[data-cat]");if(!b||!document.getElementById("chips"))return;activeCat=b.dataset.cat;renderKC()});
 
 /* ---------- Land transfer tax estimator ---------- */
@@ -2543,7 +2556,7 @@ const ROUTES=[
  {key:"neighbourhoods",alt:"fa-neighbourhoods",ct:"hub",cat:"neighbourhoods",geo:"GTA",evergreen:1,path:"/neighbourhoods/",name:"Neighbourhoods",parent:"home",index:1,title:"GTA Neighbourhood Guides | Ali Bayat",desc:"Guides to North York, Thornhill, Richmond Hill, Vaughan and Toronto: housing, transit, amenities and advice for buyers and sellers.",h1:"The GTA, one community at a time"},
  ...AREAS.map(a=>({key:a.slug,alt:"fa-"+a.slug,page:"area",ct:"neighbourhood-guide",cat:"neighbourhoods",geo:a.name,evergreen:1,path:`/neighbourhoods/${a.slug}/`,name:a.name,parent:"neighbourhoods",index:1,place:a.name,title:`${a.name} Real Estate Agent & Neighbourhood Guide | Ali Bayat`,desc:`${a.tagline} Housing, transit, amenities and advice for buyers and sellers in ${a.name}.`,h1:`${a.name} real estate`})),
  {key:"listings",ct:"listings",cat:"buying",geo:"GTA",ts:1,path:"/listings/",name:"Listings",parent:"buy",index:0,requires:"idx",why:"noindex until a live IDX feed replaces the layout preview",title:"Toronto & GTA Homes for Sale | Ali Bayat",desc:"Search homes for sale and lease across Toronto, North York, Thornhill, Richmond Hill and Vaughan.",h1:"Homes for sale in Toronto and the GTA"},
- {key:"resources",alt:"fa-resources",ct:"hub",cat:"resources",geo:"GTA",evergreen:1,path:"/resources/",name:"Resources",parent:"home",index:1,title:"Real Estate Guides & GTA Market Insights | Ali Bayat",desc:"Plain-language guides on buying, selling and investing in the GTA, neighbourhood guides and monthly market notes.",h1:"Guides for buying, selling and understanding the GTA market"},
+ {key:"resources",alt:"fa-resources",ct:"hub",cat:"resources",geo:"GTA",evergreen:1,path:"/resources/",name:"Resources",parent:"home",index:1,title:"Toronto & York Region Real Estate Guides | Ali Bayat",desc:"Plain-language guides: land transfer tax in Toronto vs. York Region with a calculator, plus guides to North York, Thornhill, Richmond Hill, Vaughan and Toronto.",h1:"Guides for buying in Toronto and York Region, and for each community"},
  {key:"guide-land-transfer-tax",alt:"fa-guide-land-transfer-tax",ct:"guide",cat:"buying",geo:"Ontario; City of Toronto; York Region",ts:1,dataPeriod:"Ontario rates in effect since January 1, 2017; City of Toronto MLTT rates in effect from April 1, 2026",verifiedAt:"2026-10-01",sources:[["City of Toronto, MLTT rates and fees","https://www.toronto.ca/services-payments/property-taxes-utilities/municipal-land-transfer-tax-mltt/municipal-land-transfer-tax-mltt-rates-and-fees/"],["City of Toronto, MLTT rebates","https://www.toronto.ca/services-payments/property-taxes-utilities/municipal-land-transfer-tax-mltt/municipal-land-transfer-tax-mltt-rebate-opportunities/"],["Ontario, calculating land transfer tax","https://www.ontario.ca/document/land-transfer-tax/calculating-land-transfer-tax"],["Ontario, refunds for first-time homebuyers","https://www.ontario.ca/document/land-transfer-tax/land-transfer-tax-refunds-first-time-homebuyers"]],path:"/resources/buying/land-transfer-tax-toronto-york-region/",name:"Land transfer tax in Toronto vs. York Region",parent:"resources",type:"article",index:1,title:"Land Transfer Tax in Toronto vs. York Region (2026) | Ali Bayat",desc:"How Ontario and Toronto land transfer taxes work in 2026, why buying in North York costs more at closing than Vaughan, with a calculator.",h1:"Land transfer tax in Toronto vs. York Region"},
  {key:"contact",alt:"fa-contact",ct:"contact",cat:"general",geo:"GTA",evergreen:1,path:"/contact/",name:"Contact",parent:"home",index:1,title:"Contact Ali Bayat, REALTOR® | North York & Thornhill",desc:"Talk to Ali about buying, selling or investing in North York, Thornhill and the GTA. Replies personally, in English or Farsi (فارسی).",h1:"Talk to Ali"},
  {key:"fa-home",lang:"fa",alt:"home",ct:"home",cat:"general",geo:"GTA",evergreen:1,path:"/fa/",name:"خانه",index:1,title:"علی بیات | مشاور املاک فارسی‌زبان در تورنتو و نورث‌یورک",desc:"علی بیات، مشاور املاک فارسی‌زبان در Century 21 Heritage Group با مجوز از 2016. خرید، فروش، اجاره و سرمایه‌گذاری در نورث‌یورک، تورنهیل، ریچموند هیل، وان، تورنتو.",h1:"مشاور املاک فارسی‌زبان در تورنتو و نورث‌یورک، با اعداد واقعی."},

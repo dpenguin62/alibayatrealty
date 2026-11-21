@@ -214,9 +214,9 @@
   {
    "key": "resources",
    "path": "/resources/",
-   "title": "Real Estate Guides & GTA Market Insights | Ali Bayat",
-   "desc": "Plain-language guides on buying, selling and investing in the GTA, neighbourhood guides and monthly market notes.",
-   "h1": "Guides for buying, selling and understanding the GTA market",
+   "title": "Toronto & York Region Real Estate Guides | Ali Bayat",
+   "desc": "Plain-language guides: land transfer tax in Toronto vs. York Region with a calculator, plus guides to North York, Thornhill, Richmond Hill, Vaughan and Toronto.",
+   "h1": "Guides for buying in Toronto and York Region, and for each community",
    "index": 1,
    "parent": "home",
    "name": "Resources",
@@ -734,7 +734,7 @@
   "/neighbourhoods/richmond-hill/": "845e9b88989484f5",
   "/neighbourhoods/vaughan/": "58468212976d1283",
   "/neighbourhoods/toronto/": "cbe49cbc7e369c8e",
-  "/resources/": "0f7e20cf527fdcbd",
+  "/resources/": "02c36ed4cf3ffe43",
   "/resources/buying/land-transfer-tax-toronto-york-region/": "2111c89110056095",
   "/contact/": "2d56874668cf9c54",
   "/fa/": "1f55d850c2cf34a7",
@@ -756,17 +756,8 @@
   "/accessibility/": "7a3863c823923925",
   "/404.html": "65c5629ec4899129"
  },
- "unresolved": {
-  "referral-disclosure": [
-   "/fa/invest/",
-   "/invest/"
-  ]
- },
+ "unresolved": {},
  "blockers": [
-  {
-   "category": "legal",
-   "message": "needs referral-disclosure (2 pages: /fa/invest/, /invest/)"
-  },
   {
    "category": "legal",
    "message": "/privacy/: privacy-policy is interim, not final"
@@ -774,14 +765,6 @@
   {
    "category": "legal",
    "message": "/terms/: terms-of-use is interim, not final"
-  },
-  {
-   "category": "owner",
-   "message": "page review: /invest/ not yet approved by Ali"
-  },
-  {
-   "category": "owner",
-   "message": "page review: /fa/invest/ not yet approved by Ali"
   }
  ],
  "governance": [
@@ -882,10 +865,10 @@
    "evergreen": true,
    "time_sensitive": false,
    "author": "Ali Bayat",
-   "review_status": "draft",
-   "approved_matches": false,
-   "reviewed_by": null,
-   "published_at": null,
+   "review_status": "approved",
+   "approved_matches": true,
+   "reviewed_by": "Ali Bayat",
+   "published_at": "2026-11-21",
    "updated_at": null,
    "data_period": null,
    "verified_at": null,
@@ -893,9 +876,7 @@
    "indexable": true,
    "canonical": "https://www.alibayatrealty.com/invest/",
    "content_hash": "d2210ee2278b3052",
-   "open_items": [
-    "referral-disclosure"
-   ]
+   "open_items": []
   },
   {
    "path": "/neighbourhoods/",
@@ -1042,13 +1023,13 @@
    "approved_matches": true,
    "reviewed_by": "Ali Bayat",
    "published_at": "2026-11-11",
-   "updated_at": null,
+   "updated_at": "2026-11-21",
    "data_period": null,
    "verified_at": null,
    "sources": [],
    "indexable": true,
    "canonical": "https://www.alibayatrealty.com/resources/",
-   "content_hash": "0f7e20cf527fdcbd",
+   "content_hash": "02c36ed4cf3ffe43",
    "open_items": []
   },
   {
@@ -1187,10 +1168,10 @@
    "evergreen": true,
    "time_sensitive": false,
    "author": "Ali Bayat",
-   "review_status": "draft",
-   "approved_matches": false,
-   "reviewed_by": null,
-   "published_at": null,
+   "review_status": "approved",
+   "approved_matches": true,
+   "reviewed_by": "Ali Bayat",
+   "published_at": "2026-11-21",
    "updated_at": null,
    "data_period": null,
    "verified_at": null,
@@ -1198,9 +1179,7 @@
    "indexable": true,
    "canonical": "https://www.alibayatrealty.com/fa/invest/",
    "content_hash": "9845d6721cccffa7",
-   "open_items": [
-    "referral-disclosure"
-   ]
+   "open_items": []
   },
   {
    "path": "/fa/neighbourhoods/",
@@ -1554,10 +1533,11 @@
   "footer-disclaimer",
   "ltt-guide-review",
   "ltt-guide-review-fa",
+  "referral-disclosure",
   "reply-time"
  ],
  "assets": {
-  "site.js": 22589,
-  "site.css": 46186
+  "site.js": 20733,
+  "site.css": 46311
  }
 }

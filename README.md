@@ -71,6 +71,12 @@ python verify.py                     # all 15 gates (about 4 minutes); --skip-re
 
 ## Deploy
 
+The canonical origin is **`https://www.alibayatrealty.com`** (trailing slash on every page). Canonicals,
+hreflang, `og:url`, the sitemap and every JSON-LD `@id` use it. Hosting is Cloudflare Pages (project
+`alibayatrealty`, custom domain `www.alibayatrealty.com`); DNS is at Squarespace, where the bare domain
+`alibayatrealty.com` forwards to `https://www.alibayatrealty.com`. Moving to a no-`www` address would require moving
+DNS into Cloudflare first (and carefully copying the Google Workspace MX/SPF/DKIM/DMARC records). `vercel.json` is unused.
+
 Upload `dist/` to any static host (Netlify, Cloudflare Pages, GitHub Pages, or shared hosting).
 - Set the host's "not found" page to `/404.html`.
 - Folders contain `index.html`, so `/invest/` works without server rules.
