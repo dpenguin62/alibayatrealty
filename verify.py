@@ -33,7 +33,7 @@ OWNER, EXTERNAL, LEGAL, ENG = B.OWNER, B.EXTERNAL, B.LEGAL, B.ENGINEERING
 BASE = INFO["base"]
 PORT = 8780
 HOST = f"http://127.0.0.1:{PORT}"
-NAV_PARENT = {"area": "neighbourhoods", "guide-land-transfer-tax": "resources", "listings": "buy"}
+NAV_PARENT = {"area": "neighbourhoods", "guide-land-transfer-tax": "resources", "guide": "resources", "listings": "buy"}
 SCHEMA = json.loads((ROOT / "lead.schema.json").read_text())
 STATUS = {g["path"]: g for g in INFO["governance"]}
 
