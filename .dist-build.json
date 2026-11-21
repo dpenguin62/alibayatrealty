@@ -724,7 +724,7 @@
  ],
  "hashes": {
   "/": "f47ad380aff78460",
-  "/about/": "535662c23a80b705",
+  "/about/": "af605080d129ac77",
   "/buy/": "d5daf83cbc56f769",
   "/sell/": "09c2c8a2fbd1c858",
   "/invest/": "d2210ee2278b3052",
@@ -777,6 +777,10 @@
   },
   {
    "category": "owner",
+   "message": "page review: /about/ changed since it was approved; review again"
+  },
+  {
+   "category": "owner",
    "message": "page review: /invest/ not yet approved by Ali"
   },
   {
@@ -817,7 +821,7 @@
    "time_sensitive": false,
    "author": "Ali Bayat",
    "review_status": "approved",
-   "approved_matches": true,
+   "approved_matches": false,
    "reviewed_by": "Ali Bayat",
    "published_at": "2026-11-11",
    "updated_at": "2026-11-18",
@@ -826,7 +830,7 @@
    "sources": [],
    "indexable": true,
    "canonical": "https://www.alibayatrealty.com/about/",
-   "content_hash": "535662c23a80b705",
+   "content_hash": "af605080d129ac77",
    "open_items": []
   },
   {
@@ -1543,7 +1547,9 @@
   "phone_display",
   "phone_e164",
   "reco_number",
-  "start_year"
+  "start_year",
+  "title_display",
+  "title_display_fa"
  ],
  "approved": [
   "consent-wording",

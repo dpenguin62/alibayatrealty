@@ -32,7 +32,7 @@ CONFIG = {
     "form_endpoint": None,            # HTTPS URL that accepts the lead payload (LEADS.md)
     "features": {"idx": False, "market-data": False},
     "details": {k: None for k in (
-        "phone_display", "phone_e164", "email", "job_title", "reco_number", "start_year", "experience_phrase",
+        "phone_display", "phone_e164", "email", "job_title", "title_display", "title_display_fa", "reco_number", "start_year", "experience_phrase",
         "brokerage_name", "brokerage_address_line", "brokerage_franchise_note", "brokerage_address",
         "brokerage_url", "designations", "referral_disclosure")},
     # Wording already on the site that becomes final once approved (see README for each key).
