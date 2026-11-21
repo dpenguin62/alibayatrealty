@@ -1029,10 +1029,15 @@ def g14(ctx, P, N):
         html_kb = len(ctx["html"][r["path"]].encode()) / 1024
         dom = pg.evaluate("document.getElementsByTagName('*').length")
         cls = pg.evaluate("window.__cls")
-        same = [u for u in reqs if u.startswith(HOST)]
+        # Lazy-loaded images (loading="lazy", with width/height, checked below) are not render-critical:
+        # they're reported separately and don't count toward the request budget.
+        lazy = set(pg.evaluate("""[...document.images].filter(i=>i.loading==='lazy').flatMap(i=>[i.src,i.currentSrc,
+            ...(i.srcset||'').split(',').map(c=>c.trim().split(/\\s+/)[0]).filter(Boolean).map(u=>new URL(u,location.href).href)])"""))
+        same = [u for u in reqs if u.startswith(HOST) and u not in lazy]
+        lazy_hits = len([u for u in reqs if u in lazy])
         blocking = pg.evaluate("[...document.querySelectorAll('script[src]')].filter(s=>!s.defer&&!s.async&&s.type!=='module').length")
         imgs = pg.evaluate("[...document.images].filter(i=>!i.getAttribute('width')||!i.getAttribute('height')).length")
-        rows.append((r["path"], html_kb, dom, len(same), cls))
+        rows.append((r["path"], html_kb, dom, len(same), cls, lazy_hits))
         if html_kb > BUDGET["html_kb"]:
             P.append(f"{r['path']}: HTML {html_kb:.0f} KB (budget {BUDGET['html_kb']})")
         if dom > BUDGET["dom"]:
@@ -1049,9 +1054,9 @@ def g14(ctx, P, N):
     c.close()
     third = sorted({urllib.parse.urlsplit(u).netloc for u in re.findall(r'(?:href|src)="(https://[^"]+)"', ctx["html"]["/"]) if not u.startswith(BASE)} - {"www.reco.on.ca"})
     worst = max(rows, key=lambda x: x[2])
-    N.append(f"site.js {js_kb:.0f} KB (prototype code stripped), site.css {css_kb:.0f} KB, both cached across pages; scripts deferred; no images")
+    N.append(f"site.js {js_kb:.0f} KB (prototype code stripped), site.css {css_kb:.0f} KB, both cached across pages; scripts deferred")
     N.append(f"largest page {max(rows, key=lambda x: x[1])[0]} {max(x[1] for x in rows):.0f} KB HTML; most DOM {worst[0]} {worst[2]} elements; "
-             f"max same-origin requests {max(x[3] for x in rows)}; max layout shift {max(x[4] for x in rows):.3f}")
+             f"max same-origin requests {max(x[3] for x in rows)} (lazy-loaded images excluded; up to {max(x[5] for x in rows)} per page); max layout shift {max(x[4] for x in rows):.3f}")
     if third:
         N.append(f"third-party request on every page: {', '.join(third)} (Google Fonts). Recommendation: self-host the three font families")
 
