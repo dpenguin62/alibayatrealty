@@ -14,11 +14,11 @@
   },
   "about": {
    "review_status": "approved",
-   "approved_hash": "535662c23a80b705",
+   "approved_hash": "af605080d129ac77",
    "reviewed_by": "Ali Bayat",
-   "reviewed_at": "2026-11-18",
+   "reviewed_at": "2026-11-20",
    "published_at": "2026-11-11",
-   "updated_at": "2026-11-18"
+   "updated_at": "2026-11-20"
   },
   "buy": {
    "review_status": "approved",
@@ -232,11 +232,11 @@
   },
   "fa-about": {
    "review_status": "approved",
-   "approved_hash": "924d58cec872bb5f",
+   "approved_hash": "47d6dc81bce78593",
    "reviewed_by": "Ali Bayat",
-   "reviewed_at": "2026-11-18",
+   "reviewed_at": "2026-11-20",
    "published_at": "2026-11-11",
-   "updated_at": "2026-11-18"
+   "updated_at": "2026-11-20"
   },
   "fa-contact": {
    "review_status": "approved",

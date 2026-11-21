@@ -777,19 +777,11 @@
   },
   {
    "category": "owner",
-   "message": "page review: /about/ changed since it was approved; review again"
-  },
-  {
-   "category": "owner",
    "message": "page review: /invest/ not yet approved by Ali"
   },
   {
    "category": "owner",
    "message": "page review: /fa/invest/ not yet approved by Ali"
-  },
-  {
-   "category": "owner",
-   "message": "page review: /fa/about/ changed since it was approved; review again"
   }
  ],
  "governance": [
@@ -825,10 +817,10 @@
    "time_sensitive": false,
    "author": "Ali Bayat",
    "review_status": "approved",
-   "approved_matches": false,
+   "approved_matches": true,
    "reviewed_by": "Ali Bayat",
    "published_at": "2026-11-11",
-   "updated_at": "2026-11-18",
+   "updated_at": "2026-11-20",
    "data_period": null,
    "verified_at": null,
    "sources": [],
@@ -1413,10 +1405,10 @@
    "time_sensitive": false,
    "author": "Ali Bayat",
    "review_status": "approved",
-   "approved_matches": false,
+   "approved_matches": true,
    "reviewed_by": "Ali Bayat",
    "published_at": "2026-11-11",
-   "updated_at": "2026-11-18",
+   "updated_at": "2026-11-20",
    "data_period": null,
    "verified_at": null,
    "sources": [],
