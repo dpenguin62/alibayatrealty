@@ -71,6 +71,12 @@ python verify.py                     # all 15 gates (about 4 minutes); --skip-re
 
 ## Deploy
 
+The canonical origin is **`https://alibayatrealty.com`** (no `www`, trailing slash on every page). Canonicals,
+hreflang, `og:url`, the sitemap and every JSON-LD `@id` use it. `vercel.json` 301-redirects
+`www.alibayatrealty.com/*` to the same path and query on the apex. In the Vercel dashboard
+(Project → Settings → Domains) `alibayatrealty.com` must be the primary domain; if the dashboard still redirects
+the apex to `www`, the two redirects loop.
+
 Upload `dist/` to any static host (Netlify, Cloudflare Pages, GitHub Pages, or shared hosting).
 - Set the host's "not found" page to `/404.html`.
 - Folders contain `index.html`, so `/invest/` works without server rules.

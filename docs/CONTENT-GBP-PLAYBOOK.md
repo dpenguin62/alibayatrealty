@@ -20,7 +20,7 @@ multiplex and garden-suite bylaws before #3; keep worked examples clearly labell
 
 No phone numbers or URLs in post text (Google rejects them; use the post's button). Every image carries
 "Century 21 Heritage Group Ltd., Brokerage". Button link format:
-`https://www.alibayatrealty.com/<page>/?utm_source=google&utm_medium=gbp&utm_campaign=<week-topic>`
+`https://alibayatrealty.com/<page>/?utm_source=google&utm_medium=gbp&utm_campaign=<week-topic>`
 
 **Week 1, Update (numbers note)**
 > Buying near Steeles? The same $1,200,000 home costs about $20,950 more in land transfer tax on the Toronto
