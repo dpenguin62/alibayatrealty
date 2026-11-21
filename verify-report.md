@@ -17,7 +17,7 @@ Output verified: `dist/` · production domain `https://alibayatrealty.com` · 20
 | 9 | Accessibility: axe-core, keyboard, focus, contrast, mobile, reduced motion | ✅ pass |
 | 10 | Lead form: production endpoint, payload contract, consent, honest states | ✅ pass |
 | 11 | Production safety: no placeholders, invented facts or interim content | ❌ fail (legal) |
-| 12 | Content governance: author, review status, dates, sources, indexability | ❌ fail (owner) |
+| 12 | Content governance: author, review status, dates, sources, indexability | ✅ pass |
 | 13 | Internal linking: no orphans, pillars connected, contextual links | ✅ pass |
 | 14 | Performance budget: weight, requests, DOM size, layout shift, render-blocking | ❌ fail (engineering) |
 | 15 | Reproducible, machine-independent build | ✅ pass |
@@ -43,7 +43,7 @@ Output verified: `dist/` · production domain `https://alibayatrealty.com` · 20
 ## Sitemap
 **5. Sitemap: only intended canonical indexable URLs, accurate lastmod: PASS**
 - 28 URLs, all canonical and indexable; noindex, planned and held-back pages excluded
-- lastmod present on 26 of 28 (only from real publish/update dates; omitted otherwise, never the build date)
+- lastmod present on 28 of 28 (only from real publish/update dates; omitted otherwise, never the build date)
 
 ## Internal links
 **3. Zero broken internal links: PASS**
@@ -72,12 +72,9 @@ Output verified: `dist/` · production domain `https://alibayatrealty.com` · 20
 - stand-in endpoint (code path only; NOT the integration): payload matches lead.schema.json; consent required; source_page /invest/ and source_cta from a real click path; UTM from the landing URL; referrer reduced to its origin; error keeps the message; no-JS POST; honeypot; no third-party requests
 
 ## Content governance
-**12. Content governance: author, review status, dates, sources, indexability: FAIL**
-- 32 pages registered; 27 approved as built; author = Ali Bayat
+**12. Content governance: author, review status, dates, sources, indexability: PASS**
+- 32 pages registered; 30 approved as built; author = Ali Bayat
 - approvals are tied to each page's exact content; dates come only from Ali's approvals (python build.py approve …)
-- ✗ [owner] /invest/: not yet reviewed and approved by Ali
-- ✗ [owner] /resources/: changed after approval; needs review again
-- ✗ [owner] /fa/invest/: not yet reviewed and approved by Ali
 
 | Page | Type | Author | Review | Published | Updated | Source / data period | Indexable |
 |---|---|---|---|---|---|---|---|
@@ -85,20 +82,20 @@ Output verified: `dist/` · production domain `https://alibayatrealty.com` · 20
 | `/about/` | profile | Ali Bayat | approved | 2026-11-11 | 2026-11-20 | n/a | yes |
 | `/buy/` | service | Ali Bayat | approved | 2026-11-11 | 2026-11-20 | n/a | yes |
 | `/sell/` | service | Ali Bayat | approved | 2026-11-11 | 2026-11-20 | n/a | yes |
-| `/invest/` | service | Ali Bayat | draft | n/a | n/a | n/a | yes |
+| `/invest/` | service | Ali Bayat | approved | 2026-11-21 | n/a | n/a | yes |
 | `/neighbourhoods/` | hub | Ali Bayat | approved | 2026-11-11 | 2026-11-18 | n/a | yes |
 | `/neighbourhoods/north-york/` | neighbourhood-guide | Ali Bayat | approved | 2026-11-11 | n/a | n/a | yes |
 | `/neighbourhoods/thornhill/` | neighbourhood-guide | Ali Bayat | approved | 2026-11-11 | n/a | n/a | yes |
 | `/neighbourhoods/richmond-hill/` | neighbourhood-guide | Ali Bayat | approved | 2026-11-11 | n/a | n/a | yes |
 | `/neighbourhoods/vaughan/` | neighbourhood-guide | Ali Bayat | approved | 2026-11-11 | n/a | n/a | yes |
 | `/neighbourhoods/toronto/` | neighbourhood-guide | Ali Bayat | approved | 2026-11-11 | n/a | n/a | yes |
-| `/resources/` | hub | Ali Bayat | approved (changed since) | 2026-11-11 | n/a | n/a | yes |
+| `/resources/` | hub | Ali Bayat | approved | 2026-11-11 | 2026-11-21 | n/a | yes |
 | `/resources/buying/land-transfer-tax-toronto-york-region/` | guide | Ali Bayat | approved | 2026-11-11 | 2026-11-20 | City of Toronto, MLTT rates and fees; City of Toronto, MLTT rebates; Ontario, calculating land transfer tax; Ontario, refunds for first-time homebuyers (Ontario rates in effect since January 1, 2017; City of Toronto MLTT rates in effect from April 1, 2026; verified 2026-10-01) | yes |
 | `/contact/` | contact | Ali Bayat | approved | 2026-11-11 | 2026-11-18 | n/a | yes |
 | `/fa/` | home | Ali Bayat | approved | 2026-11-11 | 2026-11-18 | n/a | yes |
 | `/fa/buy/` | service | Ali Bayat | approved | 2026-11-11 | 2026-11-20 | n/a | yes |
 | `/fa/sell/` | service | Ali Bayat | approved | 2026-11-11 | 2026-11-20 | n/a | yes |
-| `/fa/invest/` | service | Ali Bayat | draft | n/a | n/a | n/a | yes |
+| `/fa/invest/` | service | Ali Bayat | approved | 2026-11-21 | n/a | n/a | yes |
 | `/fa/neighbourhoods/` | hub | Ali Bayat | approved | 2026-11-11 | 2026-11-18 | n/a | yes |
 | `/fa/neighbourhoods/north-york/` | neighbourhood-guide | Ali Bayat | approved | 2026-11-11 | n/a | n/a | yes |
 | `/fa/neighbourhoods/thornhill/` | neighbourhood-guide | Ali Bayat | approved | 2026-11-11 | n/a | n/a | yes |
@@ -117,7 +114,6 @@ Output verified: `dist/` · production domain `https://alibayatrealty.com` · 20
 ## Production safety
 **11. Production safety: no placeholders, invented facts or interim content: FAIL**
 - spec patterns in published pages: [Brokerage: 0, [to be written / to be written: 0, draft for Ali: 0, Preview only: 0, 000000: 0, (416) 000-0000: 0, [year]: 0, [City]: 0, nan / NaN: 0, TBC: 0, TODO: 0, FIXME: 0
-- ✗ [legal] needs referral-disclosure (2 pages: /fa/invest/, /invest/)
 - ✗ [legal] /privacy/: privacy-policy is interim, not final
 - ✗ [legal] /terms/: terms-of-use is interim, not final
 
@@ -153,18 +149,15 @@ Every occurrence above comes from a managed placeholder (awaiting the owner inpu
 
 ## Remaining blockers
 
-### Requires Ali's information or approval (3)
-- /fa/invest/: not yet reviewed and approved by Ali
-- /invest/: not yet reviewed and approved by Ali
-- /resources/: changed after approval; needs review again
+### Requires Ali's information or approval (0)
+- none
 
 ### Requires an external service or access (0)
 - none
 
-### Requires legal / brokerage review (3)
+### Requires legal / brokerage review (2)
 - /privacy/: privacy-policy is interim, not final
 - /terms/: terms-of-use is interim, not final
-- needs referral-disclosure (2 pages: /fa/invest/, /invest/)
 
 ### Engineering defect (3)
 - /: 9 requests (budget 6)
