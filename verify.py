@@ -606,7 +606,7 @@ def g8(ctx, P, N):
             P.append(f"{r['path']}: language switch goes to {sw}, expected {want_sw}")
         if r.get("lang") == "fa":
             cur = pg.eval_on_selector_all(".nav a[aria-current='page']", "e=>e.map(a=>a.getAttribute('href'))")
-            nk = {"fa-area": "fa-neighbourhoods", "fa-guide-land-transfer-tax": "fa-resources"}.get(r.get("page") or r["key"], r["key"])
+            nk = {"fa-area": "fa-neighbourhoods", "fa-guide-land-transfer-tax": "fa-resources", "fa-guide": "fa-resources"}.get(r.get("page") or r["key"], r["key"])
             if cur != [by_key[nk]["path"]] and not (r["key"] == "fa-contact" and cur == []):
                 P.append(f"{r['path']}: Farsi menu marks {cur} as current")
             continue

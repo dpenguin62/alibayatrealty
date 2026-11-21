@@ -584,7 +584,7 @@ def build():
             pg.wait_for_function("e => document.body.dataset.route === e", arg=expect)
             st = page_status(r["key"])
             cfg = {"staging": STAGING, "values": DETAILS, "approved": CONFIG["approved"], "features": CONFIG["features"],
-                   "endpoint": CONFIG["form_endpoint"], "route": r["key"], "lang": r.get("lang", "en"), "altKey": r.get("alt"), "navKey": {"fa-area": "fa-neighbourhoods", "fa-guide-land-transfer-tax": "fa-resources"}.get(r.get("page", r["key"]), r["key"]),
+                   "endpoint": CONFIG["form_endpoint"], "route": r["key"], "lang": r.get("lang", "en"), "altKey": r.get("alt"), "navKey": {"fa-area": "fa-neighbourhoods", "fa-guide-land-transfer-tax": "fa-resources", "fa-guide": "fa-resources"}.get(r.get("page", r["key"]), r["key"]),
                    "dates": {"published": fmt_date(st.get("published_at")), "updated": fmt_date(st.get("updated_at"))}}
             res = pg.evaluate(TRANSFORM_JS, cfg)
             warnings += [f'{r["path"]}: unmapped link #{w}' for w in res["warn"]]
