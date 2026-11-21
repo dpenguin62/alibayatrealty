@@ -74,23 +74,17 @@ Output verified: `dist/` · production domain `https://www.alibayatrealty.com` �
 
 ## Content governance
 **12. Content governance: author, review status, dates, sources, indexability: FAIL**
-- 32 pages registered; 22 approved as built; author = Ali Bayat
+- 32 pages registered; 28 approved as built; author = Ali Bayat
 - approvals are tied to each page's exact content; dates come only from Ali's approvals (python build.py approve …)
-- ✗ [owner] /buy/: changed after approval; needs review again
-- ✗ [owner] /sell/: changed after approval; needs review again
 - ✗ [owner] /invest/: not yet reviewed and approved by Ali
-- ✗ [owner] /resources/buying/land-transfer-tax-toronto-york-region/: changed after approval; needs review again
-- ✗ [owner] /fa/buy/: changed after approval; needs review again
-- ✗ [owner] /fa/sell/: changed after approval; needs review again
 - ✗ [owner] /fa/invest/: not yet reviewed and approved by Ali
-- ✗ [owner] /fa/resources/buying/land-transfer-tax-toronto-york-region/: changed after approval; needs review again
 
 | Page | Type | Author | Review | Published | Updated | Source / data period | Indexable |
 |---|---|---|---|---|---|---|---|
 | `/` | home | Ali Bayat | approved | 2026-11-11 | 2026-11-18 | n/a | yes |
 | `/about/` | profile | Ali Bayat | approved | 2026-11-11 | 2026-11-18 | n/a | yes |
-| `/buy/` | service | Ali Bayat | approved (changed since) | 2026-11-11 | 2026-11-18 | n/a | yes |
-| `/sell/` | service | Ali Bayat | approved (changed since) | 2026-11-11 | 2026-11-18 | n/a | yes |
+| `/buy/` | service | Ali Bayat | approved | 2026-11-11 | 2026-11-20 | n/a | yes |
+| `/sell/` | service | Ali Bayat | approved | 2026-11-11 | 2026-11-20 | n/a | yes |
 | `/invest/` | service | Ali Bayat | draft | n/a | n/a | n/a | yes |
 | `/neighbourhoods/` | hub | Ali Bayat | approved | 2026-11-11 | 2026-11-18 | n/a | yes |
 | `/neighbourhoods/north-york/` | neighbourhood-guide | Ali Bayat | approved | 2026-11-11 | n/a | n/a | yes |
@@ -99,11 +93,11 @@ Output verified: `dist/` · production domain `https://www.alibayatrealty.com` �
 | `/neighbourhoods/vaughan/` | neighbourhood-guide | Ali Bayat | approved | 2026-11-11 | n/a | n/a | yes |
 | `/neighbourhoods/toronto/` | neighbourhood-guide | Ali Bayat | approved | 2026-11-11 | n/a | n/a | yes |
 | `/resources/` | hub | Ali Bayat | approved | 2026-11-11 | n/a | n/a | yes |
-| `/resources/buying/land-transfer-tax-toronto-york-region/` | guide | Ali Bayat | approved (changed since) | 2026-11-11 | 2026-11-18 | City of Toronto, MLTT rates and fees; City of Toronto, MLTT rebates; Ontario, calculating land transfer tax; Ontario, refunds for first-time homebuyers (Ontario rates in effect since January 1, 2017; City of Toronto MLTT rates in effect from April 1, 2026; verified 2026-10-01) | yes |
+| `/resources/buying/land-transfer-tax-toronto-york-region/` | guide | Ali Bayat | approved | 2026-11-11 | 2026-11-20 | City of Toronto, MLTT rates and fees; City of Toronto, MLTT rebates; Ontario, calculating land transfer tax; Ontario, refunds for first-time homebuyers (Ontario rates in effect since January 1, 2017; City of Toronto MLTT rates in effect from April 1, 2026; verified 2026-10-01) | yes |
 | `/contact/` | contact | Ali Bayat | approved | 2026-11-11 | 2026-11-18 | n/a | yes |
 | `/fa/` | home | Ali Bayat | approved | 2026-11-11 | 2026-11-18 | n/a | yes |
-| `/fa/buy/` | service | Ali Bayat | approved (changed since) | 2026-11-11 | 2026-11-18 | n/a | yes |
-| `/fa/sell/` | service | Ali Bayat | approved (changed since) | 2026-11-11 | 2026-11-18 | n/a | yes |
+| `/fa/buy/` | service | Ali Bayat | approved | 2026-11-11 | 2026-11-20 | n/a | yes |
+| `/fa/sell/` | service | Ali Bayat | approved | 2026-11-11 | 2026-11-20 | n/a | yes |
 | `/fa/invest/` | service | Ali Bayat | draft | n/a | n/a | n/a | yes |
 | `/fa/neighbourhoods/` | hub | Ali Bayat | approved | 2026-11-11 | 2026-11-18 | n/a | yes |
 | `/fa/neighbourhoods/north-york/` | neighbourhood-guide | Ali Bayat | approved | 2026-11-11 | n/a | n/a | yes |
@@ -112,7 +106,7 @@ Output verified: `dist/` · production domain `https://www.alibayatrealty.com` �
 | `/fa/neighbourhoods/vaughan/` | neighbourhood-guide | Ali Bayat | approved | 2026-11-11 | n/a | n/a | yes |
 | `/fa/neighbourhoods/toronto/` | neighbourhood-guide | Ali Bayat | approved | 2026-11-11 | n/a | n/a | yes |
 | `/fa/resources/` | hub | Ali Bayat | approved | 2026-11-11 | n/a | n/a | yes |
-| `/fa/resources/buying/land-transfer-tax-toronto-york-region/` | guide | Ali Bayat | approved (changed since) | 2026-11-11 | 2026-11-18 | City of Toronto, MLTT rates and fees; City of Toronto, MLTT rebates; Ontario, calculating land transfer tax; Ontario, refunds for first-time homebuyers (Ontario rates in effect since January 1, 2017; City of Toronto MLTT rates in effect from April 1, 2026; verified 2026-10-01) | yes |
+| `/fa/resources/buying/land-transfer-tax-toronto-york-region/` | guide | Ali Bayat | approved | 2026-11-11 | 2026-11-20 | City of Toronto, MLTT rates and fees; City of Toronto, MLTT rebates; Ontario, calculating land transfer tax; Ontario, refunds for first-time homebuyers (Ontario rates in effect since January 1, 2017; City of Toronto MLTT rates in effect from April 1, 2026; verified 2026-10-01) | yes |
 | `/fa/about/` | profile | Ali Bayat | approved | 2026-11-11 | 2026-11-18 | n/a | yes |
 | `/fa/contact/` | contact | Ali Bayat | approved | 2026-11-11 | 2026-11-18 | n/a | yes |
 | `/privacy/` | legal | Ali Bayat | draft | n/a | n/a | n/a | no |
@@ -147,7 +141,7 @@ Every occurrence above comes from a managed placeholder (awaiting the owner inpu
 ## Performance
 **14. Performance budget: weight, requests, DOM size, layout shift, render-blocking: FAIL**
 - site.js 22 KB (prototype code stripped), site.css 45 KB, both cached across pages; scripts deferred; no images
-- largest page /invest/ 49 KB HTML; most DOM /invest/ 792 elements; max same-origin requests 9; max layout shift 0.000
+- largest page /invest/ 49 KB HTML; most DOM /invest/ 797 elements; max same-origin requests 9; max layout shift 0.000
 - third-party request on every page: commons.wikimedia.org, creativecommons.org, fonts.googleapis.com, fonts.gstatic.com (Google Fonts). Recommendation: self-host the three font families
 - ✗ [engineering] /: 9 requests (budget 6)
 - ✗ [engineering] /neighbourhoods/: 8 requests (budget 6)
@@ -159,15 +153,9 @@ Every occurrence above comes from a managed placeholder (awaiting the owner inpu
 
 ## Remaining blockers
 
-### Requires Ali's information or approval (8)
-- /buy/: changed after approval; needs review again
-- /fa/buy/: changed after approval; needs review again
+### Requires Ali's information or approval (2)
 - /fa/invest/: not yet reviewed and approved by Ali
-- /fa/resources/buying/land-transfer-tax-toronto-york-region/: changed after approval; needs review again
-- /fa/sell/: changed after approval; needs review again
 - /invest/: not yet reviewed and approved by Ali
-- /resources/buying/land-transfer-tax-toronto-york-region/: changed after approval; needs review again
-- /sell/: changed after approval; needs review again
 
 ### Requires an external service or access (1)
 - axe-core is not installed, so the full axe rule set did NOT run. Run `npm install` (package.json pins axe-core) and re-verify
