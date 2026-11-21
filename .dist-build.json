@@ -1163,9 +1163,9 @@
  "hashes": {
   "/": "f47ad380aff78460",
   "/about/": "af605080d129ac77",
-  "/buy/": "d5daf83cbc56f769",
-  "/sell/": "09c2c8a2fbd1c858",
-  "/invest/": "d2210ee2278b3052",
+  "/buy/": "e9dc161414dce212",
+  "/sell/": "ac49cac8e7efcc90",
+  "/invest/": "a725492e98334c92",
   "/neighbourhoods/": "1a31175a7a9b13dd",
   "/neighbourhoods/north-york/": "c2edf6e07a8d4ea2",
   "/neighbourhoods/thornhill/": "7512e7015acc12f0",
@@ -1176,9 +1176,9 @@
   "/resources/buying/land-transfer-tax-toronto-york-region/": "2111c89110056095",
   "/contact/": "2d56874668cf9c54",
   "/fa/": "1f55d850c2cf34a7",
-  "/fa/buy/": "f22e3eee2fead9f2",
-  "/fa/sell/": "f46372d4f5908854",
-  "/fa/invest/": "9845d6721cccffa7",
+  "/fa/buy/": "feb0e5c3e494bcc1",
+  "/fa/sell/": "88d5580b890fb864",
+  "/fa/invest/": "d043ddd9495f31e2",
   "/fa/neighbourhoods/": "b668fddbe695b9c6",
   "/fa/neighbourhoods/north-york/": "4c8f8759aff8d135",
   "/fa/neighbourhoods/thornhill/": "337e61686d11147f",
@@ -1233,6 +1233,30 @@
   {
    "category": "legal",
    "message": "/terms/: terms-of-use is interim, not final"
+  },
+  {
+   "category": "owner",
+   "message": "page review: /buy/ changed since it was approved; review again"
+  },
+  {
+   "category": "owner",
+   "message": "page review: /sell/ changed since it was approved; review again"
+  },
+  {
+   "category": "owner",
+   "message": "page review: /invest/ changed since it was approved; review again"
+  },
+  {
+   "category": "owner",
+   "message": "page review: /fa/buy/ changed since it was approved; review again"
+  },
+  {
+   "category": "owner",
+   "message": "page review: /fa/sell/ changed since it was approved; review again"
+  },
+  {
+   "category": "owner",
+   "message": "page review: /fa/invest/ changed since it was approved; review again"
   }
  ],
  "governance": [
@@ -1290,7 +1314,7 @@
    "time_sensitive": false,
    "author": "Ali Bayat",
    "review_status": "approved",
-   "approved_matches": true,
+   "approved_matches": false,
    "reviewed_by": "Ali Bayat",
    "published_at": "2026-11-11",
    "updated_at": "2026-11-20",
@@ -1299,7 +1323,7 @@
    "sources": [],
    "indexable": true,
    "canonical": "https://www.alibayatrealty.com/buy/",
-   "content_hash": "d5daf83cbc56f769",
+   "content_hash": "e9dc161414dce212",
    "open_items": []
   },
   {
@@ -1312,7 +1336,7 @@
    "time_sensitive": false,
    "author": "Ali Bayat",
    "review_status": "approved",
-   "approved_matches": true,
+   "approved_matches": false,
    "reviewed_by": "Ali Bayat",
    "published_at": "2026-11-11",
    "updated_at": "2026-11-20",
@@ -1321,7 +1345,7 @@
    "sources": [],
    "indexable": true,
    "canonical": "https://www.alibayatrealty.com/sell/",
-   "content_hash": "09c2c8a2fbd1c858",
+   "content_hash": "ac49cac8e7efcc90",
    "open_items": []
   },
   {
@@ -1334,7 +1358,7 @@
    "time_sensitive": false,
    "author": "Ali Bayat",
    "review_status": "approved",
-   "approved_matches": true,
+   "approved_matches": false,
    "reviewed_by": "Ali Bayat",
    "published_at": "2026-11-21",
    "updated_at": null,
@@ -1343,7 +1367,7 @@
    "sources": [],
    "indexable": true,
    "canonical": "https://www.alibayatrealty.com/invest/",
-   "content_hash": "d2210ee2278b3052",
+   "content_hash": "a725492e98334c92",
    "open_items": []
   },
   {
@@ -1593,7 +1617,7 @@
    "time_sensitive": false,
    "author": "Ali Bayat",
    "review_status": "approved",
-   "approved_matches": true,
+   "approved_matches": false,
    "reviewed_by": "Ali Bayat",
    "published_at": "2026-11-11",
    "updated_at": "2026-11-20",
@@ -1602,7 +1626,7 @@
    "sources": [],
    "indexable": true,
    "canonical": "https://www.alibayatrealty.com/fa/buy/",
-   "content_hash": "f22e3eee2fead9f2",
+   "content_hash": "feb0e5c3e494bcc1",
    "open_items": []
   },
   {
@@ -1615,7 +1639,7 @@
    "time_sensitive": false,
    "author": "Ali Bayat",
    "review_status": "approved",
-   "approved_matches": true,
+   "approved_matches": false,
    "reviewed_by": "Ali Bayat",
    "published_at": "2026-11-11",
    "updated_at": "2026-11-20",
@@ -1624,7 +1648,7 @@
    "sources": [],
    "indexable": true,
    "canonical": "https://www.alibayatrealty.com/fa/sell/",
-   "content_hash": "f46372d4f5908854",
+   "content_hash": "88d5580b890fb864",
    "open_items": []
   },
   {
@@ -1637,7 +1661,7 @@
    "time_sensitive": false,
    "author": "Ali Bayat",
    "review_status": "approved",
-   "approved_matches": true,
+   "approved_matches": false,
    "reviewed_by": "Ali Bayat",
    "published_at": "2026-11-21",
    "updated_at": null,
@@ -1646,7 +1670,7 @@
    "sources": [],
    "indexable": true,
    "canonical": "https://www.alibayatrealty.com/fa/invest/",
-   "content_hash": "9845d6721cccffa7",
+   "content_hash": "d043ddd9495f31e2",
    "open_items": []
   },
   {
@@ -3103,7 +3127,7 @@
   "reply-time"
  ],
  "assets": {
-  "site.js": 26602,
-  "site.css": 56015
+  "site.js": 28590,
+  "site.css": 58375
  }
 }
