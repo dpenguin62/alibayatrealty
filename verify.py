@@ -472,7 +472,7 @@ def blocked(rules, path):
 
 
 # ================================================================ STRUCTURED DATA
-ALLOWED = {"WebSite", "RealEstateAgent", "Person", "Organization", "Place", "WebPage", "BreadcrumbList", "ListItem", "Article", "PostalAddress", "PropertyValue", "City", "AdministrativeArea", "ContactPoint", "FAQPage", "Question", "Answer"}
+ALLOWED = {"WebSite", "RealEstateAgent", "Person", "Organization", "Place", "WebPage", "BreadcrumbList", "ListItem", "Article", "PostalAddress", "PropertyValue", "City", "AdministrativeArea", "ContactPoint", "FAQPage", "Question", "Answer", "WebApplication"}
 REQUIRED = {"WebSite": ["@id", "url", "name"], "RealEstateAgent": ["@id", "name", "url"], "Person": ["@id", "name"],
             "Organization": ["@id", "name"], "WebPage": ["@id", "url", "name", "description", "isPartOf"],
             "BreadcrumbList": ["@id", "itemListElement"], "Article": ["@id", "headline", "publisher", "mainEntityOfPage"]}
