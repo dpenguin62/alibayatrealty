@@ -749,7 +749,7 @@
   "/fa/neighbourhoods/toronto/": "9a64359ab61735d8",
   "/fa/resources/": "d107864200a50bfc",
   "/fa/resources/buying/land-transfer-tax-toronto-york-region/": "1705899a866a5efa",
-  "/fa/about/": "924d58cec872bb5f",
+  "/fa/about/": "47d6dc81bce78593",
   "/fa/contact/": "224a0d13cb891863",
   "/privacy/": "509d99aa57125744",
   "/terms/": "b3b53c11360f5900",
@@ -786,6 +786,10 @@
   {
    "category": "owner",
    "message": "page review: /fa/invest/ not yet approved by Ali"
+  },
+  {
+   "category": "owner",
+   "message": "page review: /fa/about/ changed since it was approved; review again"
   }
  ],
  "governance": [
@@ -1409,7 +1413,7 @@
    "time_sensitive": false,
    "author": "Ali Bayat",
    "review_status": "approved",
-   "approved_matches": true,
+   "approved_matches": false,
    "reviewed_by": "Ali Bayat",
    "published_at": "2026-11-11",
    "updated_at": "2026-11-18",
@@ -1418,7 +1422,7 @@
    "sources": [],
    "indexable": true,
    "canonical": "https://www.alibayatrealty.com/fa/about/",
-   "content_hash": "924d58cec872bb5f",
+   "content_hash": "47d6dc81bce78593",
    "open_items": []
   },
   {
@@ -1548,8 +1552,7 @@
   "phone_e164",
   "reco_number",
   "start_year",
-  "title_display",
-  "title_display_fa"
+  "title_display"
  ],
  "approved": [
   "consent-wording",
