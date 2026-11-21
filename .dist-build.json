@@ -765,14 +765,6 @@
   {
    "category": "legal",
    "message": "/terms/: terms-of-use is interim, not final"
-  },
-  {
-   "category": "owner",
-   "message": "page review: /invest/ not yet approved by Ali"
-  },
-  {
-   "category": "owner",
-   "message": "page review: /fa/invest/ not yet approved by Ali"
   }
  ],
  "governance": [
@@ -873,10 +865,10 @@
    "evergreen": true,
    "time_sensitive": false,
    "author": "Ali Bayat",
-   "review_status": "draft",
-   "approved_matches": false,
-   "reviewed_by": null,
-   "published_at": null,
+   "review_status": "approved",
+   "approved_matches": true,
+   "reviewed_by": "Ali Bayat",
+   "published_at": "2026-11-21",
    "updated_at": null,
    "data_period": null,
    "verified_at": null,
@@ -1176,10 +1168,10 @@
    "evergreen": true,
    "time_sensitive": false,
    "author": "Ali Bayat",
-   "review_status": "draft",
-   "approved_matches": false,
-   "reviewed_by": null,
-   "published_at": null,
+   "review_status": "approved",
+   "approved_matches": true,
+   "reviewed_by": "Ali Bayat",
+   "published_at": "2026-11-21",
    "updated_at": null,
    "data_period": null,
    "verified_at": null,

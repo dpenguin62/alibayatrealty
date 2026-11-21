@@ -37,11 +37,11 @@
    "updated_at": "2026-11-20"
   },
   "invest": {
-   "review_status": "draft",
-   "approved_hash": null,
-   "reviewed_by": null,
-   "reviewed_at": null,
-   "published_at": null,
+   "review_status": "approved",
+   "approved_hash": "d2210ee2278b3052",
+   "reviewed_by": "Ali Bayat",
+   "reviewed_at": "2026-11-21",
+   "published_at": "2026-11-21",
    "updated_at": null
   },
   "neighbourhoods": {
@@ -245,6 +245,13 @@
    "reviewed_at": "2026-11-18",
    "published_at": "2026-11-11",
    "updated_at": "2026-11-18"
+  },
+  "fa-invest": {
+   "review_status": "approved",
+   "approved_hash": "9845d6721cccffa7",
+   "reviewed_by": "Ali Bayat",
+   "reviewed_at": "2026-11-21",
+   "published_at": "2026-11-21"
   }
  }
 }
