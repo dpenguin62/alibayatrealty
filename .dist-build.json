@@ -756,17 +756,8 @@
   "/accessibility/": "7a3863c823923925",
   "/404.html": "65c5629ec4899129"
  },
- "unresolved": {
-  "referral-disclosure": [
-   "/fa/invest/",
-   "/invest/"
-  ]
- },
+ "unresolved": {},
  "blockers": [
-  {
-   "category": "legal",
-   "message": "needs referral-disclosure (2 pages: /fa/invest/, /invest/)"
-  },
   {
    "category": "legal",
    "message": "/privacy/: privacy-policy is interim, not final"
@@ -893,9 +884,7 @@
    "indexable": true,
    "canonical": "https://alibayatrealty.com/invest/",
    "content_hash": "d2210ee2278b3052",
-   "open_items": [
-    "referral-disclosure"
-   ]
+   "open_items": []
   },
   {
    "path": "/neighbourhoods/",
@@ -1198,9 +1187,7 @@
    "indexable": true,
    "canonical": "https://alibayatrealty.com/fa/invest/",
    "content_hash": "9845d6721cccffa7",
-   "open_items": [
-    "referral-disclosure"
-   ]
+   "open_items": []
   },
   {
    "path": "/fa/neighbourhoods/",
@@ -1554,6 +1541,7 @@
   "footer-disclaimer",
   "ltt-guide-review",
   "ltt-guide-review-fa",
+  "referral-disclosure",
   "reply-time"
  ],
  "assets": {
