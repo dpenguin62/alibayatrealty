@@ -4,13 +4,5 @@
   "installCommand": "echo 'Static site: nothing to install'",
   "buildCommand": "echo 'Static site: dist/ is already built'",
   "outputDirectory": "dist",
-  "trailingSlash": true,
-  "redirects": [
-    {
-      "source": "/:path(.*)",
-      "has": [{ "type": "host", "value": "www.alibayatrealty.com" }],
-      "destination": "https://alibayatrealty.com/:path",
-      "statusCode": 301
-    }
-  ]
+  "trailingSlash": true
 }
