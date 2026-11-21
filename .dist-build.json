@@ -214,9 +214,9 @@
   {
    "key": "resources",
    "path": "/resources/",
-   "title": "Real Estate Guides & GTA Market Insights | Ali Bayat",
-   "desc": "Plain-language guides on buying, selling and investing in the GTA, neighbourhood guides and monthly market notes.",
-   "h1": "Guides for buying, selling and understanding the GTA market",
+   "title": "Toronto & York Region Real Estate Guides | Ali Bayat",
+   "desc": "Plain-language guides: land transfer tax in Toronto vs. York Region with a calculator, plus guides to North York, Thornhill, Richmond Hill, Vaughan and Toronto.",
+   "h1": "Guides for buying in Toronto and York Region, and for each community",
    "index": 1,
    "parent": "home",
    "name": "Resources",
@@ -734,7 +734,7 @@
   "/neighbourhoods/richmond-hill/": "845e9b88989484f5",
   "/neighbourhoods/vaughan/": "58468212976d1283",
   "/neighbourhoods/toronto/": "cbe49cbc7e369c8e",
-  "/resources/": "935d14b4e91dcb68",
+  "/resources/": "02c36ed4cf3ffe43",
   "/resources/buying/land-transfer-tax-toronto-york-region/": "2111c89110056095",
   "/contact/": "2d56874668cf9c54",
   "/fa/": "1f55d850c2cf34a7",
@@ -1052,7 +1052,7 @@
    "sources": [],
    "indexable": true,
    "canonical": "https://alibayatrealty.com/resources/",
-   "content_hash": "935d14b4e91dcb68",
+   "content_hash": "02c36ed4cf3ffe43",
    "open_items": []
   },
   {
