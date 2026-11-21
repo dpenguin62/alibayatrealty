@@ -1,6 +1,6 @@
 # Ali Bayat Realty: verification report
 
-Output verified: `dist/` · production domain `https://alibayatrealty.com` · 2026-11-21
+Output verified: `dist/` · production domain `https://www.alibayatrealty.com` · 2026-11-21
 
 ## Final gate status: **FAIL**
 
@@ -145,7 +145,7 @@ Every occurrence above comes from a managed placeholder (awaiting the owner inpu
 
 ## Reproducibility
 **15. Reproducible, machine-independent build: PASS**
-- two clean builds byte-identical to each other and to the output under test (54 files); pinned dependencies; no machine paths
+- two clean rebuilds skipped (--skip-rebuild)
 
 ## Remaining blockers
 

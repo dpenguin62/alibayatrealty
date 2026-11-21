@@ -109,7 +109,7 @@ Titles, descriptions, alt text and schema don't affect approvals.
 | Phone | (647) 779-7919 / +16477797919 | (647) 779-7919 | Consistent. |
 | Address | Brokerage: 7330 Yonge St, Unit 116, Thornhill, ON L4J 7Y7 | Thornhill / North York / GTA | If clients aren't received at the brokerage address during posted hours, keep the address hidden and use service areas only. |
 | Service areas | North York, Thornhill, Richmond Hill, Vaughan, Toronto | verify | Set exactly these five in GBP. |
-| Website link | — | verify | `https://alibayatrealty.com/?utm_source=google&utm_medium=organic&utm_campaign=gbp` so GBP leads show up in the form's UTM fields. Use `/fa/` with `utm_content=fa` for Farsi posts. |
+| Website link | — | verify | `https://www.alibayatrealty.com/?utm_source=google&utm_medium=organic&utm_campaign=gbp` so GBP leads show up in the form's UTM fields. Use `/fa/` with `utm_content=fa` for Farsi posts. |
 | Categories | — | verify | Primary: Real estate agent. Secondary (only if accurate): Real estate consultant. |
 | Description | — | verify | Mention numbers-first approach, the five areas, English and Farsi, Century 21 Heritage Group. No phone number or URL in the description. |
 | Link from site to GBP | none | — | After `gbp_url` is set, schema links it. A visible "Reviews on Google" link on `/about/` is optional and safe (no star widgets, no review markup). |

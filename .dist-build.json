@@ -1,5 +1,5 @@
 {
- "base": "https://alibayatrealty.com",
+ "base": "https://www.alibayatrealty.com",
  "staging": false,
  "endpoint": "https://api.hsforms.com/submissions/v3/integration/submit/343743815/b0272653-09e3-4d87-8051-5569da1963dd",
  "features": {
@@ -786,7 +786,7 @@
    "verified_at": null,
    "sources": [],
    "indexable": true,
-   "canonical": "https://alibayatrealty.com/",
+   "canonical": "https://www.alibayatrealty.com/",
    "content_hash": "f47ad380aff78460",
    "open_items": []
   },
@@ -808,7 +808,7 @@
    "verified_at": null,
    "sources": [],
    "indexable": true,
-   "canonical": "https://alibayatrealty.com/about/",
+   "canonical": "https://www.alibayatrealty.com/about/",
    "content_hash": "af605080d129ac77",
    "open_items": []
   },
@@ -830,7 +830,7 @@
    "verified_at": null,
    "sources": [],
    "indexable": true,
-   "canonical": "https://alibayatrealty.com/buy/",
+   "canonical": "https://www.alibayatrealty.com/buy/",
    "content_hash": "d5daf83cbc56f769",
    "open_items": []
   },
@@ -852,7 +852,7 @@
    "verified_at": null,
    "sources": [],
    "indexable": true,
-   "canonical": "https://alibayatrealty.com/sell/",
+   "canonical": "https://www.alibayatrealty.com/sell/",
    "content_hash": "09c2c8a2fbd1c858",
    "open_items": []
   },
@@ -874,7 +874,7 @@
    "verified_at": null,
    "sources": [],
    "indexable": true,
-   "canonical": "https://alibayatrealty.com/invest/",
+   "canonical": "https://www.alibayatrealty.com/invest/",
    "content_hash": "d2210ee2278b3052",
    "open_items": []
   },
@@ -896,7 +896,7 @@
    "verified_at": null,
    "sources": [],
    "indexable": true,
-   "canonical": "https://alibayatrealty.com/neighbourhoods/",
+   "canonical": "https://www.alibayatrealty.com/neighbourhoods/",
    "content_hash": "1a31175a7a9b13dd",
    "open_items": []
   },
@@ -918,7 +918,7 @@
    "verified_at": null,
    "sources": [],
    "indexable": true,
-   "canonical": "https://alibayatrealty.com/neighbourhoods/north-york/",
+   "canonical": "https://www.alibayatrealty.com/neighbourhoods/north-york/",
    "content_hash": "c2edf6e07a8d4ea2",
    "open_items": []
   },
@@ -940,7 +940,7 @@
    "verified_at": null,
    "sources": [],
    "indexable": true,
-   "canonical": "https://alibayatrealty.com/neighbourhoods/thornhill/",
+   "canonical": "https://www.alibayatrealty.com/neighbourhoods/thornhill/",
    "content_hash": "7512e7015acc12f0",
    "open_items": []
   },
@@ -962,7 +962,7 @@
    "verified_at": null,
    "sources": [],
    "indexable": true,
-   "canonical": "https://alibayatrealty.com/neighbourhoods/richmond-hill/",
+   "canonical": "https://www.alibayatrealty.com/neighbourhoods/richmond-hill/",
    "content_hash": "845e9b88989484f5",
    "open_items": []
   },
@@ -984,7 +984,7 @@
    "verified_at": null,
    "sources": [],
    "indexable": true,
-   "canonical": "https://alibayatrealty.com/neighbourhoods/vaughan/",
+   "canonical": "https://www.alibayatrealty.com/neighbourhoods/vaughan/",
    "content_hash": "58468212976d1283",
    "open_items": []
   },
@@ -1006,7 +1006,7 @@
    "verified_at": null,
    "sources": [],
    "indexable": true,
-   "canonical": "https://alibayatrealty.com/neighbourhoods/toronto/",
+   "canonical": "https://www.alibayatrealty.com/neighbourhoods/toronto/",
    "content_hash": "cbe49cbc7e369c8e",
    "open_items": []
   },
@@ -1028,7 +1028,7 @@
    "verified_at": null,
    "sources": [],
    "indexable": true,
-   "canonical": "https://alibayatrealty.com/resources/",
+   "canonical": "https://www.alibayatrealty.com/resources/",
    "content_hash": "02c36ed4cf3ffe43",
    "open_items": []
   },
@@ -1067,7 +1067,7 @@
     ]
    ],
    "indexable": true,
-   "canonical": "https://alibayatrealty.com/resources/buying/land-transfer-tax-toronto-york-region/",
+   "canonical": "https://www.alibayatrealty.com/resources/buying/land-transfer-tax-toronto-york-region/",
    "content_hash": "2111c89110056095",
    "open_items": []
   },
@@ -1089,7 +1089,7 @@
    "verified_at": null,
    "sources": [],
    "indexable": true,
-   "canonical": "https://alibayatrealty.com/contact/",
+   "canonical": "https://www.alibayatrealty.com/contact/",
    "content_hash": "2d56874668cf9c54",
    "open_items": []
   },
@@ -1111,7 +1111,7 @@
    "verified_at": null,
    "sources": [],
    "indexable": true,
-   "canonical": "https://alibayatrealty.com/fa/",
+   "canonical": "https://www.alibayatrealty.com/fa/",
    "content_hash": "1f55d850c2cf34a7",
    "open_items": []
   },
@@ -1133,7 +1133,7 @@
    "verified_at": null,
    "sources": [],
    "indexable": true,
-   "canonical": "https://alibayatrealty.com/fa/buy/",
+   "canonical": "https://www.alibayatrealty.com/fa/buy/",
    "content_hash": "f22e3eee2fead9f2",
    "open_items": []
   },
@@ -1155,7 +1155,7 @@
    "verified_at": null,
    "sources": [],
    "indexable": true,
-   "canonical": "https://alibayatrealty.com/fa/sell/",
+   "canonical": "https://www.alibayatrealty.com/fa/sell/",
    "content_hash": "f46372d4f5908854",
    "open_items": []
   },
@@ -1177,7 +1177,7 @@
    "verified_at": null,
    "sources": [],
    "indexable": true,
-   "canonical": "https://alibayatrealty.com/fa/invest/",
+   "canonical": "https://www.alibayatrealty.com/fa/invest/",
    "content_hash": "9845d6721cccffa7",
    "open_items": []
   },
@@ -1199,7 +1199,7 @@
    "verified_at": null,
    "sources": [],
    "indexable": true,
-   "canonical": "https://alibayatrealty.com/fa/neighbourhoods/",
+   "canonical": "https://www.alibayatrealty.com/fa/neighbourhoods/",
    "content_hash": "b668fddbe695b9c6",
    "open_items": []
   },
@@ -1221,7 +1221,7 @@
    "verified_at": null,
    "sources": [],
    "indexable": true,
-   "canonical": "https://alibayatrealty.com/fa/neighbourhoods/north-york/",
+   "canonical": "https://www.alibayatrealty.com/fa/neighbourhoods/north-york/",
    "content_hash": "4c8f8759aff8d135",
    "open_items": []
   },
@@ -1243,7 +1243,7 @@
    "verified_at": null,
    "sources": [],
    "indexable": true,
-   "canonical": "https://alibayatrealty.com/fa/neighbourhoods/thornhill/",
+   "canonical": "https://www.alibayatrealty.com/fa/neighbourhoods/thornhill/",
    "content_hash": "337e61686d11147f",
    "open_items": []
   },
@@ -1265,7 +1265,7 @@
    "verified_at": null,
    "sources": [],
    "indexable": true,
-   "canonical": "https://alibayatrealty.com/fa/neighbourhoods/richmond-hill/",
+   "canonical": "https://www.alibayatrealty.com/fa/neighbourhoods/richmond-hill/",
    "content_hash": "3c6c0710ad3f8a3d",
    "open_items": []
   },
@@ -1287,7 +1287,7 @@
    "verified_at": null,
    "sources": [],
    "indexable": true,
-   "canonical": "https://alibayatrealty.com/fa/neighbourhoods/vaughan/",
+   "canonical": "https://www.alibayatrealty.com/fa/neighbourhoods/vaughan/",
    "content_hash": "ef61225f785a9ffd",
    "open_items": []
   },
@@ -1309,7 +1309,7 @@
    "verified_at": null,
    "sources": [],
    "indexable": true,
-   "canonical": "https://alibayatrealty.com/fa/neighbourhoods/toronto/",
+   "canonical": "https://www.alibayatrealty.com/fa/neighbourhoods/toronto/",
    "content_hash": "9a64359ab61735d8",
    "open_items": []
   },
@@ -1331,7 +1331,7 @@
    "verified_at": null,
    "sources": [],
    "indexable": true,
-   "canonical": "https://alibayatrealty.com/fa/resources/",
+   "canonical": "https://www.alibayatrealty.com/fa/resources/",
    "content_hash": "d107864200a50bfc",
    "open_items": []
   },
@@ -1370,7 +1370,7 @@
     ]
    ],
    "indexable": true,
-   "canonical": "https://alibayatrealty.com/fa/resources/buying/land-transfer-tax-toronto-york-region/",
+   "canonical": "https://www.alibayatrealty.com/fa/resources/buying/land-transfer-tax-toronto-york-region/",
    "content_hash": "1705899a866a5efa",
    "open_items": []
   },
@@ -1392,7 +1392,7 @@
    "verified_at": null,
    "sources": [],
    "indexable": true,
-   "canonical": "https://alibayatrealty.com/fa/about/",
+   "canonical": "https://www.alibayatrealty.com/fa/about/",
    "content_hash": "47d6dc81bce78593",
    "open_items": []
   },
@@ -1414,7 +1414,7 @@
    "verified_at": null,
    "sources": [],
    "indexable": true,
-   "canonical": "https://alibayatrealty.com/fa/contact/",
+   "canonical": "https://www.alibayatrealty.com/fa/contact/",
    "content_hash": "224a0d13cb891863",
    "open_items": []
   },
@@ -1436,7 +1436,7 @@
    "verified_at": null,
    "sources": [],
    "indexable": false,
-   "canonical": "https://alibayatrealty.com/privacy/",
+   "canonical": "https://www.alibayatrealty.com/privacy/",
    "content_hash": "509d99aa57125744",
    "open_items": [
     "privacy-policy"
@@ -1460,7 +1460,7 @@
    "verified_at": null,
    "sources": [],
    "indexable": false,
-   "canonical": "https://alibayatrealty.com/terms/",
+   "canonical": "https://www.alibayatrealty.com/terms/",
    "content_hash": "b3b53c11360f5900",
    "open_items": [
     "terms-of-use"
@@ -1484,7 +1484,7 @@
    "verified_at": null,
    "sources": [],
    "indexable": false,
-   "canonical": "https://alibayatrealty.com/accessibility/",
+   "canonical": "https://www.alibayatrealty.com/accessibility/",
    "content_hash": "7a3863c823923925",
    "open_items": []
   },

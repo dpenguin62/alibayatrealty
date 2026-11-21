@@ -1,6 +1,6 @@
 {
  "_readme": "Owner-confirmed facts only. Leave null until confirmed. Unset values stay visible placeholders in staging and are launch blockers in production. Approval keys for 'approved' are listed in README.md.",
- "site_url": "https://alibayatrealty.com",
+ "site_url": "https://www.alibayatrealty.com",
  "form_endpoint": "https://api.hsforms.com/submissions/v3/integration/submit/343743815/b0272653-09e3-4d87-8051-5569da1963dd",
  "features": {
   "idx": false,
@@ -44,7 +44,7 @@
   "https://www.instagram.com/ali_bayat_realtor/"
  ],
  "site_url_confirmed": true,
- "og_image": "https://alibayatrealty.com/assets/img/og/ali-bayat-og.jpg",
+ "og_image": "https://www.alibayatrealty.com/assets/img/og/ali-bayat-og.jpg",
  "og_image_alt": "Ali Bayat, REALTOR® with Century 21 Heritage Group Ltd., Brokerage. North York, Thornhill, Richmond Hill, Vaughan and Toronto, in English and Farsi.",
  "og_image_size": [
   1200,

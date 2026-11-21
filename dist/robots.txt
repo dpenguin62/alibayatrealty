@@ -18,4 +18,4 @@ Allow: /
 User-agent: *
 Allow: /
 
-Sitemap: https://alibayatrealty.com/sitemap.xml
+Sitemap: https://www.alibayatrealty.com/sitemap.xml
