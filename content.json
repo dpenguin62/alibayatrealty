@@ -22,27 +22,27 @@
   },
   "buy": {
    "review_status": "approved",
-   "approved_hash": "d5daf83cbc56f769",
+   "approved_hash": "e9dc161414dce212",
    "reviewed_by": "Ali Bayat",
-   "reviewed_at": "2026-11-20",
+   "reviewed_at": "2026-11-21",
    "published_at": "2026-11-11",
-   "updated_at": "2026-11-20"
+   "updated_at": "2026-11-21"
   },
   "sell": {
    "review_status": "approved",
-   "approved_hash": "09c2c8a2fbd1c858",
+   "approved_hash": "ac49cac8e7efcc90",
    "reviewed_by": "Ali Bayat",
-   "reviewed_at": "2026-11-20",
+   "reviewed_at": "2026-11-21",
    "published_at": "2026-11-11",
-   "updated_at": "2026-11-20"
+   "updated_at": "2026-11-21"
   },
   "invest": {
    "review_status": "approved",
-   "approved_hash": "d2210ee2278b3052",
+   "approved_hash": "a725492e98334c92",
    "reviewed_by": "Ali Bayat",
    "reviewed_at": "2026-11-21",
    "published_at": "2026-11-21",
-   "updated_at": null
+   "updated_at": "2026-11-21"
   },
   "neighbourhoods": {
    "review_status": "approved",
@@ -158,19 +158,19 @@
   },
   "fa-buy": {
    "review_status": "approved",
-   "approved_hash": "f22e3eee2fead9f2",
+   "approved_hash": "feb0e5c3e494bcc1",
    "reviewed_by": "Ali Bayat",
-   "reviewed_at": "2026-11-20",
+   "reviewed_at": "2026-11-21",
    "published_at": "2026-11-11",
-   "updated_at": "2026-11-20"
+   "updated_at": "2026-11-21"
   },
   "fa-sell": {
    "review_status": "approved",
-   "approved_hash": "f46372d4f5908854",
+   "approved_hash": "88d5580b890fb864",
    "reviewed_by": "Ali Bayat",
-   "reviewed_at": "2026-11-20",
+   "reviewed_at": "2026-11-21",
    "published_at": "2026-11-11",
-   "updated_at": "2026-11-20"
+   "updated_at": "2026-11-21"
   },
   "fa-neighbourhoods": {
    "review_status": "approved",
@@ -249,10 +249,11 @@
   },
   "fa-invest": {
    "review_status": "approved",
-   "approved_hash": "9845d6721cccffa7",
+   "approved_hash": "d043ddd9495f31e2",
    "reviewed_by": "Ali Bayat",
    "reviewed_at": "2026-11-21",
-   "published_at": "2026-11-21"
+   "published_at": "2026-11-21",
+   "updated_at": "2026-11-21"
   },
   "guide-first-home": {
    "review_status": "approved",

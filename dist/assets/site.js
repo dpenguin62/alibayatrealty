@@ -198,6 +198,21 @@ cf.addEventListener("submit",async e=>{e.preventDefault();const nm=document.getE
 const rf=document.getElementById("reset-form");if(rf)rf.addEventListener("click",()=>{sent.hidden=true;cf.hidden=false;document.getElementById("c-name").focus()});
 }
 /* ---------- Boot ---------- */
+/* ---------- How-it-works flows: autoplay while on screen (built pages); paused for reduced motion ---------- */
+if(STATIC)document.querySelectorAll(".flow").forEach(el=>{
+  const svgs=[...el.querySelectorAll(".flow-art svg")],lis=[...el.querySelectorAll(".flow-steps li")],btns=[...el.querySelectorAll(".flow-track button")],fill=el.querySelector(".flow-fill"),ctrl=el.querySelector(".flow-ctrl"),N=lis.length,fa=document.documentElement.lang==="fa";
+  const still=matchMedia("(prefers-reduced-motion: reduce)").matches;let cur=0,playing=!still,seen=false,timer=0;
+  const show=i=>{cur=i;svgs.forEach((s,k)=>{s.classList.remove("on");if(k===i){void s.getBoundingClientRect();s.classList.add("on")}});
+    lis.forEach((l,k)=>l.classList.toggle("cur",k===i));btns.forEach((b,k)=>{b.classList.toggle("done",k<i);b.classList.toggle("cur",k===i);k===i?b.setAttribute("aria-current","step"):b.removeAttribute("aria-current")});
+    fill.style.width=`calc((100% - 20px) * ${i/(N-1)})`};
+  const tick=()=>{clearTimeout(timer);if(playing&&seen&&!document.hidden)timer=setTimeout(()=>{show((cur+1)%N);tick()},cur===N-1?3400:2600)};
+  const label=()=>{ctrl.innerHTML=playing?'<svg viewBox="0 0 16 16" aria-hidden="true"><rect x="3" y="2" width="3.5" height="12" rx="1"/><rect x="9.5" y="2" width="3.5" height="12" rx="1"/></svg>':'<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M4 2.5v11l9-5.5z"/></svg>';
+    ctrl.setAttribute("aria-label",playing?(fa?"توقف انیمیشن":"Pause animation"):(fa?"پخش انیمیشن":"Play animation"))};
+  btns.forEach((b,k)=>b.addEventListener("click",()=>{show(k);tick()}));
+  if(!still){ctrl.hidden=false;label();ctrl.addEventListener("click",()=>{playing=!playing;label();tick()})}
+  document.addEventListener("visibilitychange",tick);
+  if("IntersectionObserver" in window)new IntersectionObserver(es=>es.forEach(e=>{const was=seen;seen=e.isIntersecting;if(seen&&!was)show(cur);tick()}),{threshold:.35}).observe(el);else{seen=true;tick()}
+});
 /* ---------- Scroll reveal: built pages only, skipped for reduced motion; content is visible without it ---------- */
 if(STATIC&&"IntersectionObserver" in window&&!matchMedia("(prefers-reduced-motion: reduce)").matches){
   const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target)}}),{threshold:.2});
