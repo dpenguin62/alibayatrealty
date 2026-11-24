@@ -27,7 +27,7 @@ CONFIG = {
     "site_url_confirmed": False,      # true once the domain is registered to Ali and hosting is chosen
     "site_name": "Ali Bayat",
     "agent_name": "Ali Bayat",
-    "languages": ["en", "fa"],
+    "languages": ["en-CA", "fa"],   # BCP 47 tags, as used in <html lang> and hreflang
     "areas_served": ["Toronto, ON", "North York, Toronto, ON", "Thornhill, ON", "Richmond Hill, ON", "Vaughan, ON"],
     "form_endpoint": None,            # HTTPS URL that accepts the lead payload (LEADS.md)
     "features": {"idx": False, "market-data": False},
@@ -56,7 +56,8 @@ AREA_PLACES = {
 # Subjects the site actually covers (each has its own page or section). Used for Person.knowsAbout.
 KNOWS_ABOUT = ["Residential real estate", "Comparable sales analysis", "Ontario land transfer tax",
                "Toronto municipal land transfer tax", "Investment property analysis", "Rental cash flow and cap rate",
-               "North York real estate", "York Region real estate"]
+               "North York real estate", "York Region real estate",
+               "Condominium and freehold home valuation"]
 
 # Who has to resolve each kind of blocker.
 OWNER, EXTERNAL, LEGAL, ENGINEERING = "owner", "external", "legal", "engineering"
@@ -79,6 +80,10 @@ PROHIBITED = [
     (r"Layout example|design review|Highlight items|Site plan", "prototype text"), (r"\bAli:", "note to Ali"),
     (r"@example\.(com|org|net)", "example email"), (r"\\[nt]", "escape sequence"), (r"\{[a-z_]+\}", "unfilled template"),
 ]
+
+# Crawlers named in robots.txt (search + AI answer engines). All get the same rule as "*": allow everything.
+ROBOTS_NAMED = ["Googlebot", "Bingbot", "OAI-SearchBot", "GPTBot", "ChatGPT-User", "ClaudeBot", "Claude-SearchBot",
+                "Claude-User", "PerplexityBot", "Perplexity-User", "Google-Extended", "Applebot", "Applebot-Extended"]
 
 ROOT = pathlib.Path(__file__).parent
 SRC = ROOT / "src" / "site.html"
@@ -127,6 +132,7 @@ def page_status(key):
 TRANSFORM_JS = r"""
 (cfg) => {
   const R = window.__routes, map = {};
+  if (window.__renderKC) { window.__publishedOnly = true; window.__renderKC(); }  // resources: published guides only
   R.forEach(r => { if (r.path && !r.internal && !r.planned && (!r.requires || cfg.features[r.requires])) map[r.key] = r.path; });
   const page = [...document.querySelectorAll('main [data-page]')].find(p => !p.hidden);
   // Farsi pages use the Farsi header/footer/mobile bar from <template id="fa-chrome">.
@@ -187,7 +193,8 @@ TRANSFORM_JS = r"""
 
     c.querySelectorAll('.portrait .dir').forEach(x => x.remove());
     c.querySelectorAll('.portrait[role="img"]').forEach(x => x.setAttribute('aria-label', 'Ali Bayat monogram'));
-    c.querySelectorAll('.dwg[aria-label^="Drawing placeholder"]').forEach(x => x.setAttribute('aria-label', 'Architectural drawing'));
+    // Line drawings sit beside a visible caption or heading that says the same thing: decorative.
+    c.querySelectorAll('.dwg').forEach(x => { x.removeAttribute('role'); x.removeAttribute('aria-label'); x.setAttribute('aria-hidden', 'true'); });
 
     const form = c.querySelector('#contact-form');
     if (form) {
@@ -270,6 +277,7 @@ def approved_live(r, content_hash):
 
 
 FAQS = {}  # path -> [(question, answer)], read from the built page's data-faq block
+CALCULATORS = set()  # paths whose page embeds the land transfer tax calculator (id="calc")
 
 
 def extract_faq(doc):
@@ -284,7 +292,7 @@ def extract_faq(doc):
 def ld_graph(r, routes_by_key, content_hash):
     """JSON-LD from confirmed facts only. Ali is a Person; his practice is a RealEstateAgent;
     the brokerage is an Organization, and appears only once its details are confirmed."""
-    person = {"@type": "Person", "@id": BASE + "/#ali", "name": CONFIG["agent_name"],
+    person = {"@type": "Person", "@id": BASE + "/#ali-bayat", "name": CONFIG["agent_name"],
               "url": BASE + "/about/", "knowsLanguage": CONFIG["languages"]}
     if "job_title" in DETAILS:
         person["jobTitle"] = DETAILS["job_title"]
@@ -307,7 +315,7 @@ def ld_graph(r, routes_by_key, content_hash):
         return p
     business = {"@type": "RealEstateAgent", "@id": BASE + "/#business", "name": CONFIG["site_name"], "url": BASE + "/",
                 "areaServed": [place(a) for a in CONFIG["areas_served"]],
-                "knowsLanguage": CONFIG["languages"], "founder": {"@id": BASE + "/#ali"}, "employee": {"@id": BASE + "/#ali"}}
+                "knowsLanguage": CONFIG["languages"], "founder": {"@id": BASE + "/#ali-bayat"}, "employee": {"@id": BASE + "/#ali-bayat"}}
     if CONFIG["gbp_name"] and CONFIG["gbp_name"] != CONFIG["site_name"]:
         business["alternateName"] = CONFIG["gbp_name"]
     if "phone_e164" in DETAILS:
@@ -349,7 +357,7 @@ def ld_graph(r, routes_by_key, content_hash):
     if r.get("place"):
         webpage["about"] = place(next(a for a in CONFIG["areas_served"] if a.startswith(r["place"])))
     if live:  # authorship and dates are claimed only for pages Ali has actually approved
-        webpage["author"] = {"@id": BASE + "/#ali"}
+        webpage["author"] = {"@id": BASE + "/#ali-bayat"}
         if st.get("published_at"):
             webpage["datePublished"] = st["published_at"]
         if st.get("updated_at"):
@@ -379,13 +387,25 @@ def ld_graph(r, routes_by_key, content_hash):
         if r.get("sources"):
             art["citation"] = [s[1] for s in r["sources"]]
         if live:
-            art["author"] = {"@id": BASE + "/#ali"}
+            art["author"] = {"@id": BASE + "/#ali-bayat"}
             for k, prop in (("published_at", "datePublished"), ("updated_at", "dateModified")):
                 if st.get(k):
                     art[prop] = st[k]
         if CONFIG["og_image"]:
             art["image"] = CONFIG["og_image"]
         graph.append(art)
+    if r["path"] in CALCULATORS:  # the page embeds a working calculator: describe the tool itself
+        fa = r.get("lang") == "fa"
+        app = {"@type": "WebApplication", "@id": page_url + "#calc",
+               "name": "ماشین‌حساب مالیات انتقال زمین تورنتو و منطقه‌ی یورک" if fa else
+                       "Toronto vs. York Region land transfer tax calculator",
+               "url": page_url + "#calc", "applicationCategory": "FinanceApplication", "operatingSystem": "Any",
+               "browserRequirements": "Requires JavaScript", "isAccessibleForFree": True,
+               "inLanguage": "fa" if fa else "en-CA", "isPartOf": {"@id": page_url + "#webpage"},
+               "publisher": {"@id": BASE + "/#business"}}
+        if live:
+            app["author"] = {"@id": BASE + "/#ali-bayat"}
+        graph.append(app)
     return json.dumps({"@context": "https://schema.org", "@graph": graph}, ensure_ascii=False, indent=1).replace("</", "<\\/")
 
 
@@ -564,7 +584,7 @@ def build():
             pg.wait_for_function("e => document.body.dataset.route === e", arg=expect)
             st = page_status(r["key"])
             cfg = {"staging": STAGING, "values": DETAILS, "approved": CONFIG["approved"], "features": CONFIG["features"],
-                   "endpoint": CONFIG["form_endpoint"], "route": r["key"], "lang": r.get("lang", "en"), "altKey": r.get("alt"), "navKey": {"fa-area": "fa-neighbourhoods", "fa-guide-land-transfer-tax": "fa-resources"}.get(r.get("page", r["key"]), r["key"]),
+                   "endpoint": CONFIG["form_endpoint"], "route": r["key"], "lang": r.get("lang", "en"), "altKey": r.get("alt"), "navKey": {"fa-area": "fa-neighbourhoods", "fa-guide-land-transfer-tax": "fa-resources", "fa-guide": "fa-resources"}.get(r.get("page", r["key"]), r["key"]),
                    "dates": {"published": fmt_date(st.get("published_at")), "updated": fmt_date(st.get("updated_at"))}}
             res = pg.evaluate(TRANSFORM_JS, cfg)
             warnings += [f'{r["path"]}: unmapped link #{w}' for w in res["warn"]]
@@ -574,6 +594,8 @@ def build():
             body = f'{o["header"]}\n<main id="main">\n{o["page"]}\n</main>\n{o["footer"]}\n{o["mbar"]}\n'
             content_hash = hashlib.sha1(main_text(body).encode()).hexdigest()[:16]
             FAQS[r["path"]] = extract_faq(body)
+            if 'id="calc"' in o["page"]:
+                CALCULATORS.add(r["path"])
             hashes[r["path"]] = content_hash
             doc = ('<!doctype html>\n'
                    f'<html lang="{"fa" if r.get("lang") == "fa" else "en-CA"}"{" dir=\"rtl\"" if r.get("lang") == "fa" else ""} data-static>\n<head>\n{head(r, by_key, f"/assets/site.css?v={v_css}", content_hash)}\n</head>\n'
@@ -600,7 +622,9 @@ def build():
     sm.append("</urlset>")
     (OUT / "sitemap.xml").write_text("\n".join(sm) + "\n", encoding="utf8")
     robots = ("# Staging build: keep out of search engines\nUser-agent: *\nDisallow: /\n" if STAGING
-              else f"# {CONFIG['site_name']}\nUser-agent: *\nAllow: /\n\nSitemap: {BASE}/sitemap.xml\n")
+              else f"# {CONFIG['site_name']}\n# Search engines and AI answer engines are welcome to crawl every page.\n"
+                   + "".join(f"User-agent: {ua}\n" for ua in ROBOTS_NAMED) + "Allow: /\n\n"
+                   + f"User-agent: *\nAllow: /\n\nSitemap: {BASE}/sitemap.xml\n")
     (OUT / "robots.txt").write_text(robots, encoding="utf8")
 
     blockers = validate(OUT, built, routes, pages_html, {k: v for k, v in unresolved.items()}, hashes)

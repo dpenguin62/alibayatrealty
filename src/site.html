@@ -31,7 +31,7 @@ a{color:inherit}
 h1,h2,h3{font-family:var(--display);font-weight:700;line-height:1.12;text-wrap:balance;margin:0;letter-spacing:-.025em}
 h1{font-size:clamp(2.2rem,5.2vw,4.2rem);font-weight:800}
 h2{font-size:clamp(1.7rem,3.2vw,2.5rem);font-weight:700}
-h3{font-size:1.25rem;line-height:1.25;font-weight:700}
+h3,.as-h3{font-size:1.25rem;line-height:1.25;font-weight:700}
 h1 em,h2 em{font-style:italic;color:var(--brass-text)}
 p{margin:0}
 .lede{font-size:clamp(1.08rem,1.5vw,1.2rem);color:var(--muted);max-width:56ch}
@@ -80,10 +80,10 @@ p{margin:0}
 .sub-btn:focus-visible{outline:2px solid var(--lake);outline-offset:2px}
 .sub-btn svg{transition:transform .2s ease}
 .has-sub:hover .sub-btn svg,.has-sub:focus-within .sub-btn svg,.has-sub.open .sub-btn svg{transform:rotate(180deg)}
-.sub{position:absolute;top:100%;inset-inline-start:0;z-index:40;display:none;flex-direction:column;min-width:13rem;padding:.4rem;background:var(--surface);border:1px solid var(--line);border-radius:var(--r);box-shadow:0 10px 28px rgba(20,33,61,.1)}
+.has-sub .sub{position:absolute;top:100%;inset-inline-start:0;z-index:40;display:none;flex-direction:column;min-width:13rem;padding:.4rem;background:var(--surface);border:1px solid var(--line);border-radius:var(--r);box-shadow:0 10px 28px rgba(20,33,61,.1)}
 .has-sub:hover .sub,.has-sub:focus-within .sub,.has-sub.open .sub{display:flex}
 .has-sub.shut .sub{display:none}
-.sub a{padding:.55rem .7rem;white-space:nowrap}
+.has-sub .sub a{padding:.55rem .7rem;white-space:nowrap}
 .menu-btn{display:none;background:none;border:1.5px solid var(--line);color:var(--ink);border-radius:3px;padding:.55rem .9rem;font:600 .9rem var(--body);cursor:pointer;min-height:44px}
 .site-head .head-talk{display:none}
 @media (max-width:1000px){.nav{display:none}.menu-btn{display:inline-flex}.site-head .head-talk{display:inline-flex}.head-actions{display:flex;gap:.5rem;align-items:center}}
@@ -202,8 +202,8 @@ p{margin:0}
 .ncard .ph{display:block;height:165px;border-radius:var(--r);overflow:hidden;background:var(--draw);margin-bottom:.55rem}
 .ncard img{display:block;width:100%;height:100%;object-fit:cover;transition:transform .5s ease}
 .ncard a:hover img{transform:scale(1.03)}
-.ncard a:hover h3{color:var(--lake)}
-.ncard h3{font-size:1.5rem;font-weight:700}
+.ncard a:hover h3,.ncard a:hover .as-h3{color:var(--lake)}
+.ncard h3,.ncard .as-h3{font-size:1.5rem;font-weight:700}
 .ncard .cap{font-family:var(--mono);font-size:.68rem;letter-spacing:.05em;text-transform:uppercase;color:var(--muted)}
 .ncard p{font-size:.92rem;color:var(--muted)}
 .ncard .go{font-family:var(--mono);font-size:.74rem;color:var(--lake);margin-top:.15rem}
@@ -215,7 +215,7 @@ p{margin:0}
 .credits{font-size:.74rem;line-height:1.55;color:var(--muted);margin-top:1.5rem;padding-top:.9rem;border-top:1px solid var(--line)}
 @media (min-width:901px){.areas-grid > .linemap{position:sticky;top:calc(env(safe-area-inset-top,0px) + 100px)}}
 @media (min-width:901px){.ncards.cols3{grid-template-columns:repeat(3,minmax(0,1fr))}.ncards.cols3 .wide{grid-column:span 2}.ncards.cols3 .ph,.ncards.tall .ph{height:225px}}
-@media (max-width:560px){.ncards{grid-template-columns:1fr}.ncard .ph{height:auto;aspect-ratio:16/9}.ncard.wide .ph{aspect-ratio:5/2}.ncard h3{font-size:1.3rem}}
+@media (max-width:560px){.ncards{grid-template-columns:1fr}.ncard .ph{height:auto;aspect-ratio:16/9}.ncard.wide .ph{aspect-ratio:5/2}.ncard h3,.ncard .as-h3{font-size:1.3rem}}
 
 .alist{list-style:none;margin:0;padding:0;border-top:1px solid var(--line)}
 .alist a{display:grid;grid-template-columns:120px minmax(0,1fr) auto;gap:1.25rem;align-items:center;padding-block:1rem;border-bottom:1px solid var(--line);text-decoration:none}
@@ -229,8 +229,8 @@ p{margin:0}
 
 /* Resources teaser */
 .feature{display:grid;grid-template-columns:1.1fr 1fr;gap:clamp(1.5rem,4vw,3rem);align-items:center;text-decoration:none;padding-bottom:2rem;border-bottom:1px solid var(--line)}
-.feature:hover h3{text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:5px}
-.feature h3{font-size:clamp(1.6rem,3vw,2.2rem);font-weight:700}
+.feature:hover h3,.feature:hover .as-h3{text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:5px}
+.feature h3,.feature .as-h3{font-size:clamp(1.6rem,3vw,2.2rem);font-weight:700}
 .feature .in{display:grid;gap:.9rem}
 @media (max-width:760px){.feature{grid-template-columns:1fr}}
 .teasers{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem}
@@ -294,17 +294,6 @@ p{margin:0}
 @media (max-width:820px){.timeline{grid-template-columns:1fr;gap:1.5rem;padding-left:2rem}.timeline::before{left:9px;right:auto;top:0;bottom:0;width:2px;height:auto}.phase{padding-right:0}.phase .pt{position:absolute;left:-2rem;top:.2rem}}
 
 /* Phases: the whole process in four short columns */
-.phases{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,1fr);position:relative}
-.phases::before,.phases::after{content:"";position:absolute;inset-inline:0;top:9px;height:2px;background:var(--line)}
-.phases::after{background:var(--brass);display:none}
-.phases li{position:relative;padding-inline-end:1.75rem;display:grid;gap:.6rem;align-content:start}
-.phases .pt{width:20px;height:20px;border-radius:50%;background:var(--paper);border:2px solid var(--lake);position:relative;z-index:1}
-.phases li:first-child .pt{background:var(--lake)}
-.phases .n{font-family:var(--mono);font-size:.72rem;color:var(--muted);letter-spacing:.06em;margin-top:.3rem}
-.phases h3{font-size:1.4rem}
-.phases p{color:var(--muted);font-size:.96rem}
-.phases .ask{font-size:.9rem;border-inline-start:2px solid var(--brass);padding-inline-start:.8rem;color:var(--ink)}
-@media (max-width:820px){.phases{grid-template-columns:1fr;gap:1.75rem;padding-inline-start:2rem}.phases::before{inset-inline:9px auto;top:0;bottom:0;width:2px;height:auto}.phases li{padding-inline-end:0}.phases .pt{position:absolute;inset-inline-start:-2rem;top:.2rem}}
 .duo{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1rem;align-items:start}
 @media (max-width:760px){.duo{grid-template-columns:1fr}}
 .trio{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1rem;align-items:start}
@@ -321,10 +310,45 @@ p{margin:0}
 @keyframes sign-swing{0%{opacity:0;transform:rotate(-14deg)}25%{opacity:1;transform:rotate(9deg)}50%{transform:rotate(-5deg)}75%{transform:rotate(2deg)}100%{opacity:1;transform:none}}
 .draw-in .bar{transform-box:fill-box;transform-origin:50% 100%;animation:bar-grow .7s cubic-bezier(.3,1.3,.5,1) both;animation-delay:calc(1.9s + var(--i,0)*.18s)}
 @keyframes bar-grow{from{transform:scaleY(0)}to{transform:none}}
-.phases.rv li{opacity:0;transform:translateY(14px);transition:opacity .6s ease,transform .6s ease;transition-delay:calc(var(--i,0)*.15s + .1s)}
-.phases.rv.in li{opacity:1;transform:none}
-@media (min-width:821px){.phases.rv::after{display:block;transform:scaleX(0);transform-origin:left;transition:transform 1.3s cubic-bezier(.65,0,.35,1)}[dir="rtl"] .phases.rv::after{transform-origin:right}.phases.rv.in::after{transform:scaleX(1)}}
 
+/* How-it-works flows (Buy, Sell, Invest): six steps; icon draws in, progress fills, loops while on screen. Built pages only animate; all step text is in the HTML. */
+.flow{display:grid;grid-template-columns:auto minmax(0,1fr);grid-template-areas:"art steps" "track track";gap:1.5rem clamp(1.25rem,4vw,3rem);align-items:center;background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:clamp(1.25rem,3vw,2.25rem);position:relative}
+.flow-art{grid-area:art;width:clamp(120px,15vw,168px);aspect-ratio:1;border-radius:50%;background:var(--lake-soft);position:relative}
+.flow-art svg{position:absolute;inset:0;width:100%;height:100%;opacity:0;transition:opacity .35s}
+.flow-art svg.on{opacity:1}
+.flow-art svg *{fill:none;stroke:var(--lake);stroke-width:3.2;stroke-linecap:round;stroke-linejoin:round}
+.flow-art .solid{fill:var(--surface);fill-opacity:0}
+.flow-art .draw{stroke-dasharray:1;stroke-dashoffset:1}
+.flow-art svg.on .draw{animation:flow-draw .7s ease forwards;animation-delay:var(--d,0s)}
+.flow-art svg.on .solid{animation:flow-draw .7s ease forwards,flow-fill .3s ease forwards;animation-delay:var(--d,0s),calc(var(--d,0s) + .15s)}
+@keyframes flow-draw{to{stroke-dashoffset:0}}
+@keyframes flow-fill{to{fill-opacity:1}}
+.flow-steps{grid-area:steps;list-style:none;margin:0;padding:0;display:grid;padding-inline-end:2rem}
+.flow-steps li{grid-area:1/1;display:grid;gap:.35rem;align-content:center;opacity:0;visibility:hidden;transition:opacity .4s ease,transform .4s ease,visibility 0s .4s;transform:translateY(8px)}
+.flow-steps li.cur{opacity:1;visibility:visible;transform:none;transition:opacity .4s ease,transform .4s ease}
+.flow-steps .fn{font-family:var(--mono);font-size:.72rem;letter-spacing:.06em;color:var(--lake)}
+.flow-steps h3{font-size:1.5rem}
+.flow-steps p{color:var(--muted)}
+.flow-track{grid-area:track;display:flex;justify-content:space-between;position:relative;padding-bottom:1.7rem}
+.flow-track::before,.flow-fill{content:"";position:absolute;top:9px;height:2px;inset-inline-start:10px}
+.flow-track::before{inset-inline-end:10px;background:var(--line)}
+.flow-fill{background:var(--lake);width:0;transition:width .6s ease}
+.flow-track button{all:unset;cursor:pointer;position:relative;z-index:1;display:block;width:20px;height:20px;border-radius:50%;background:var(--surface);border:2px solid var(--line);box-sizing:border-box;transition:background .3s,border-color .3s,box-shadow .3s}
+.flow-track button.done{background:var(--lake);border-color:var(--lake)}
+.flow-track button.cur{border-color:var(--lake);box-shadow:0 0 0 5px var(--lake-soft)}
+.flow-track button:focus-visible{outline:2px solid var(--lake);outline-offset:4px}
+.flow-track .lb{position:absolute;top:28px;left:50%;transform:translateX(-50%);white-space:nowrap;font-family:var(--mono);font-size:.7rem;letter-spacing:.04em;text-transform:uppercase;color:var(--muted)}
+.flow-track button.cur .lb{color:var(--ink)}
+.flow-track button:first-child .lb{left:0;transform:none}
+.flow-track button:last-child .lb{left:auto;right:0;transform:none}
+[dir="rtl"] .flow-track button:first-child .lb{left:auto;right:0}
+[dir="rtl"] .flow-track button:last-child .lb{right:auto;left:0}
+.flow-ctrl{all:unset;cursor:pointer;position:absolute;top:.75rem;inset-inline-end:.75rem;width:34px;height:34px;border-radius:50%;display:grid;place-items:center;color:var(--muted)}
+.flow-ctrl:hover{background:var(--sunk);color:var(--ink)}
+.flow-ctrl:focus-visible{outline:2px solid var(--lake)}
+.flow-ctrl svg{width:14px;height:14px;fill:currentColor}
+@media (max-width:700px){.flow{grid-template-columns:1fr;grid-template-areas:"art" "steps" "track";justify-items:center;text-align:center}.flow-steps{padding-inline-end:0;width:100%}.flow-track{width:100%;padding-bottom:0}.flow-track .lb{display:none}.flow-steps h3{font-size:1.3rem}}
+@media (prefers-reduced-motion: reduce){.flow-art .draw{stroke-dashoffset:0}.flow-art .solid{fill-opacity:1}}
 .steps{list-style:none;margin:0;padding:0;display:grid}
 .steps li{display:grid;grid-template-columns:var(--rail) minmax(0,1fr);gap:clamp(1rem,3vw,3rem);padding-block:1.6rem;border-top:1px solid var(--line);scroll-margin-top:110px}
 .steps li:last-child{border-bottom:1px solid var(--line)}
@@ -343,7 +367,7 @@ p{margin:0}
 .aside{position:sticky;top:calc(env(safe-area-inset-top,0px) + 100px);display:grid;gap:1rem}
 @media (max-width:920px){.aside{position:static}}
 .box{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:1.4rem;display:grid;gap:.85rem;align-content:start}
-.box h3{font-size:1.2rem}
+.box h3,.box .as-h3{font-size:1.2rem}
 .box p{font-size:.94rem;color:var(--muted)}
 .box.tint{background:var(--lake-soft);border-color:transparent}
 .plain{margin:0;padding-left:1.1rem;display:grid;gap:.4rem;font-size:.94rem}
@@ -588,6 +612,99 @@ article.teaser:hover h3{text-decoration:none}
 .req-note{border:1px solid var(--line);border-left:3px solid var(--lake);background:var(--surface);border-radius:3px;padding:.9rem 1.1rem;font-size:.92rem}
 .cta-band .btn.ghost{background:transparent;color:var(--band-ink);border-color:var(--band-ink)}
 .cta-band .btn.ghost:hover{background:color-mix(in srgb,var(--band-ink) 12%,transparent)}
+/* ---------- Guide kit: reusable one-page guide blocks (rendered from GUIDES by renderGuide) ---------- */
+.gk{display:grid;gap:clamp(2.25rem,5vw,3.25rem);max-width:920px}
+.gk-sec{display:grid;gap:1.1rem}
+.gk-sec > h2{font-size:clamp(1.45rem,2.4vw,1.8rem);display:flex;gap:.75rem;align-items:baseline}
+.gk-sec > h2 .k{font-family:var(--mono);font-size:.75rem;font-weight:500;color:var(--lake);letter-spacing:.06em;flex:none}
+.gk-sec > p{font-size:1.04rem;max-width:68ch}
+.gk-sec .note{font-size:.84rem;color:var(--muted);max-width:72ch}
+.gk-chips{display:flex;flex-wrap:wrap;gap:.45rem;margin-top:.2rem}
+.gk-chips span{font-family:var(--mono);font-size:.7rem;letter-spacing:.04em;border:1px solid var(--line);border-radius:999px;padding:.2rem .65rem;color:var(--muted);background:var(--surface)}
+.gk-tldr{background:var(--surface);border:1px solid var(--line);border-left:4px solid var(--lake);border-radius:var(--r);padding:1.25rem 1.4rem;display:grid;gap:.7rem}
+.gk-tldr ul{list-style:none;margin:0;padding:0;display:grid;gap:.55rem}
+.gk-tldr li{display:grid;grid-template-columns:1.6rem 1fr;gap:.5rem;font-size:1.02rem;align-items:baseline}
+.gk-tldr li::before{content:counter(gk);counter-increment:gk;font-family:var(--mono);font-size:.75rem;color:var(--lake);font-weight:500}
+.gk-tldr ul{counter-reset:gk}
+.gk-stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,190px),1fr));gap:.75rem}
+.gk-stats > div{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:1.1rem 1.15rem;display:grid;gap:.3rem;align-content:start}
+.gk-stats b{font-family:var(--display);font-size:clamp(1.65rem,3.2vw,2.15rem);font-weight:800;color:var(--lake);line-height:1.05;font-variant-numeric:tabular-nums;letter-spacing:-.01em}
+.gk-stats span{font-weight:600;font-size:.95rem}
+.gk-stats small{font-size:.8rem;color:var(--muted)}
+.gk-steps{list-style:none;margin:0;padding:0;display:grid;gap:0;position:relative}
+.gk-steps li{display:grid;grid-template-columns:2.6rem minmax(0,1fr);gap:1rem;position:relative;padding-bottom:1.4rem}
+.gk-steps li:not(:last-child)::after{content:"";position:absolute;inset-inline-start:calc(1.3rem - 1px);top:2.6rem;bottom:.2rem;width:2px;background:var(--line)}
+.gk-steps .n{width:2.6rem;height:2.6rem;border-radius:50%;background:var(--lake);color:var(--lake-ink);display:grid;place-items:center;font-family:var(--mono);font-size:.85rem;font-weight:500}
+.gk-steps .hd{display:flex;flex-wrap:wrap;gap:.35rem .75rem;align-items:baseline;padding-top:.45rem}
+.gk-steps h3{font-size:1.15rem}
+.gk-steps .when{font-family:var(--mono);font-size:.7rem;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);background:var(--sunk);border-radius:2px;padding:.12rem .45rem}
+.gk-steps p{color:var(--muted);font-size:.97rem;margin-top:.3rem;max-width:62ch}
+.gk-bar{margin:0;background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:1.25rem 1.4rem;display:grid;gap:1rem}
+.gk-bar .track{display:flex;height:28px;border-radius:3px;overflow:hidden;gap:2px;background:var(--surface)}
+.gk-bar .track span{min-width:6px}
+.gk-bar .lg{list-style:none;margin:0;padding:0;display:grid;gap:.1rem}
+.gk-bar .lg li{display:grid;grid-template-columns:.85rem minmax(0,1fr) auto;gap:.65rem;align-items:center;padding-block:.5rem;border-bottom:1px solid var(--line);font-size:.95rem;font-variant-numeric:tabular-nums}
+.gk-bar .lg li i{width:.85rem;height:.85rem;border-radius:2px}
+.gk-bar .lg li small{display:block;color:var(--muted);font-size:.8rem}
+.gk-bar .lg li.tot{border-bottom:0;padding-top:.85rem;font-family:var(--display);font-size:1.35rem;font-weight:700}
+.gk-bar .lg li.tot span{font-family:var(--body);font-size:.92rem;font-weight:600}
+.gk-bar .lg li.neg b{color:var(--muted)}
+.gk-bar figcaption{font-size:.84rem;color:var(--muted)}
+.c1{background:var(--lake)}.c2{background:var(--band)}.c3{background:var(--ok)}.c4{background:#D9A93B}.c5{background:var(--muted)}.c6{background:color-mix(in srgb,var(--lake) 45%,var(--surface))}
+.gk-check,.gk-flags{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:.6rem}
+.gk-check li,.gk-flags li{display:grid;grid-template-columns:1.5rem minmax(0,1fr);gap:.7rem;align-items:start;background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:.85rem 1rem;font-size:.95rem}
+.gk-check li b,.gk-flags li b{display:block;font-size:.98rem;margin-bottom:.15rem}
+.gk-check li span,.gk-flags li span{color:var(--muted)}
+.gk-check li::before{content:"";grid-area:1/1;width:1.5rem;height:1.5rem;border-radius:50%;background:color-mix(in srgb,var(--ok) 16%,transparent)}
+.gk-check li::after{content:"";grid-area:1/1;width:1.5rem;height:1.5rem;background:var(--ok);-webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2.6' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6.5 12.5l3.5 3.5 7.5-8'/%3E%3C/svg%3E") center/100% no-repeat;mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2.6' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6.5 12.5l3.5 3.5 7.5-8'/%3E%3C/svg%3E") center/100% no-repeat}
+.gk-check li > div,.gk-flags li > div{grid-column:2;grid-row:1}
+.gk-flags li{border-color:color-mix(in srgb,var(--lake) 35%,var(--line));background:color-mix(in srgb,var(--lake-soft) 55%,var(--surface))}
+.gk-flags li::before{content:"!";grid-area:1/1;width:1.5rem;height:1.5rem;border-radius:50%;background:var(--lake);color:var(--lake-ink);display:grid;place-items:center;font-family:var(--display);font-weight:800;font-size:.9rem}
+.gk-vs{display:grid;grid-template-columns:1fr 1fr;gap:.75rem}
+@media (max-width:700px){.gk-vs{grid-template-columns:1fr}}
+.gk-vs > div{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:1.25rem 1.3rem;display:grid;gap:.75rem;align-content:start}
+.gk-vs > div:first-child{border-top:4px solid var(--lake)}
+.gk-vs > div:last-child{border-top:4px solid var(--band)}
+.gk-vs h3{font-size:1.3rem}
+.gk-vs .tag{font-size:.92rem;color:var(--muted)}
+.gk-vs h4{font-family:var(--mono);font-size:.7rem;text-transform:uppercase;letter-spacing:.07em;color:var(--muted);font-weight:500;margin-top:.3rem}
+.gk-tiers{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,230px),1fr));gap:.75rem}
+.gk-tiers > div{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:1.15rem 1.2rem;display:grid;gap:.7rem;align-content:start}
+.gk-tiers .hd{display:flex;align-items:center;gap:.55rem}
+.gk-tiers .hd i{width:.75rem;height:.75rem;border-radius:50%}
+.gk-tiers h3{font-size:1.15rem}
+.gk-tiers p{font-size:.88rem;color:var(--muted)}
+.gk-formula{background:var(--band);color:var(--band-ink);border-radius:var(--r);padding:clamp(1.25rem,3vw,1.9rem);display:grid;gap:1.1rem}
+.gk-formula .eq{font-family:var(--display);font-size:clamp(1.3rem,3vw,1.9rem);font-weight:700;line-height:1.3}
+.gk-formula .eq em{font-style:normal;color:var(--flag)}
+.gk-formula dl{margin:0;display:grid;gap:0}
+.gk-formula dl div{display:flex;justify-content:space-between;gap:1rem;padding-block:.5rem;border-bottom:1px solid color-mix(in srgb,var(--band-ink) 18%,transparent);font-size:.95rem;font-variant-numeric:tabular-nums}
+.gk-formula dt{opacity:.85}.gk-formula dd{margin:0;font-weight:600}
+.gk-formula dl div.res{border-bottom:0;font-family:var(--display);font-size:1.3rem}
+.gk-formula p{font-size:.88rem;opacity:.85}
+.gk-take{display:grid;grid-template-columns:52px minmax(0,1fr);gap:1rem;align-items:start;background:var(--lake-soft);border-radius:var(--r);padding:1.25rem 1.4rem}
+.gk-take img{width:52px;height:52px;border-radius:50%;object-fit:cover}
+.gk-take .label{color:var(--lake)}
+.gk-take p{font-size:1.05rem;margin-top:.35rem;font-family:var(--display);font-weight:500;line-height:1.5}
+.gk-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,200px),1fr));gap:.75rem}
+.gk-cards > div{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:1.1rem 1.2rem;display:grid;gap:.4rem;align-content:start}
+.gk-cards .ic{font-family:var(--mono);font-size:.72rem;color:var(--lake);letter-spacing:.06em}
+.gk-cards h3{font-size:1.08rem}
+.gk-cards p{font-size:.9rem;color:var(--muted)}
+.gk-tbl td.hi,.gk-tbl th.hi{background:var(--lake-soft)}
+.gk-tbl td.up{color:var(--ok);font-weight:600}.gk-tbl td.down{color:var(--brass-text);font-weight:600}
+.gk-sources{font-size:.84rem;color:var(--muted);border-top:1px solid var(--line);padding-top:1rem;max-width:80ch}
+.gk-sources ol{margin:.5rem 0 0;padding-inline-start:1.2rem;display:grid;gap:.3rem}
+.gk-cta{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:1rem 2rem;align-items:center;background:var(--band);color:var(--band-ink);border-radius:var(--r);padding:clamp(1.4rem,3vw,2rem)}
+.gk-cta h2{font-size:clamp(1.3rem,2.4vw,1.6rem);color:var(--band-ink)}
+.gk-cta p{opacity:.85;margin-top:.35rem;font-size:.97rem}
+@media (max-width:640px){.gk-cta{grid-template-columns:1fr}}
+.gk-rel{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,250px),1fr));gap:.75rem}
+.gk-rel a{display:grid;gap:.3rem;text-decoration:none;background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:1rem 1.1rem}
+.gk-rel a:hover b{color:var(--lake);text-decoration:underline;text-underline-offset:3px}
+.gk-rel small{font-family:var(--mono);font-size:.66rem;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+.gk-rel b{font-size:1rem;line-height:1.35}
+.gk-faq{border-top:1px solid var(--ink);padding-top:1.5rem}
 </style>
 
 <a class="skip" href="#main">Skip to content</a>
@@ -808,7 +925,7 @@ article.teaser:hover h3{text-decoration:none}
           <p>Call or text <a href="tel:+16477797919">(647) 779-7919</a>, or email <a href="mailto:ali@alibayatrealty.com">ali@alibayatrealty.com</a>. Ali usually replies within one business day.</p>
         </div></div>
       </div>
-      <aside class="aside">
+      <div class="aside">
         <div class="box">
           <h3>Registration &amp; brokerage</h3>
           <ul class="nolist small">
@@ -819,7 +936,7 @@ article.teaser:hover h3{text-decoration:none}
           </ul>
         </div>
         <div class="box tint"><h3>Let's talk</h3><p>Tell me what you're planning. I'll reply personally.</p><a class="btn" href="#contact">Talk to Ali</a></div>
-      </aside>
+      </div><!-- /.aside -->
     </div>
   </section>
 </div>
@@ -838,8 +955,8 @@ article.teaser:hover h3{text-decoration:none}
   </div></header>
   <section class="band tight">
     <div class="wrap stack" style="gap:2rem">
-      <h2>How buying works, <em>in four stages</em></h2>
-      <ol class="phases" data-phases="buy" data-reveal></ol>
+      <h2>How buying works, <em>in six steps</em></h2>
+      <div class="flow" data-flow="buy"></div>
     </div>
   </section>
   <section class="band tight" style="padding-top:0">
@@ -879,8 +996,8 @@ article.teaser:hover h3{text-decoration:none}
   </div><div class="dwg wide draw-in" data-dwg="sellscene" data-noframe><span class="grid-bg"></span></div>
   </div></header>
   <section class="band tight"><div class="wrap stack" style="gap:2rem">
-    <h2>How selling works, <em>in four stages</em></h2>
-    <ol class="phases" data-phases="sell" data-reveal></ol>
+    <h2>How selling works, <em>in six steps</em></h2>
+    <div class="flow" data-flow="sell"></div>
   </div></section>
   <section class="band tight" style="padding-top:0">
     <div class="wrap">
@@ -930,6 +1047,12 @@ article.teaser:hover h3{text-decoration:none}
       </div>
     </div>
   </section>
+
+  <!-- A2 · How investing works -->
+  <section class="band tight"><div class="wrap stack" style="gap:2rem">
+    <h2>How investing works, <em>in six steps</em></h2>
+    <div class="flow" data-flow="invest"></div>
+  </div></section>
 
   <!-- B · What I analyze -->
   <section class="band surface">
@@ -1058,10 +1181,10 @@ article.teaser:hover h3{text-decoration:none}
             <li><a href="#richmond-hill"><div class="dwg" data-dwg="detached"></div><div><span class="label">York Region</span><h3>Richmond Hill</h3><p>Values vary widely by neighbourhood, and some northern areas fall under Oak Ridges Moraine planning rules.</p></div><span class="go">Guide →</span></a></li>
             <li><a href="#vaughan"><div class="dwg" data-dwg="town"></div><div><span class="label">York Region</span><h3>Vaughan</h3><p>Several distinct markets plus a growing condo district at the VMC, where pre-construction terms need careful review.</p></div><span class="go">Guide →</span></a></li>
           </ul>
-          <aside class="aside">
+          <div class="aside">
             <div class="box tint"><h3>No "best" area</h3><p>There's no single best place to invest. The right fit depends on your budget, timeline and how much risk you're comfortable with, so each property is analyzed on its own numbers.</p></div>
             <div class="box"><h3>Related</h3><ul class="nolist small"><li><a class="link" href="#guide-land-transfer-tax">Land transfer tax: Toronto vs. York Region <span class="ar" aria-hidden="true">→</span></a></li><li><a class="link" href="#buy">How buying with Ali works <span class="ar" aria-hidden="true">→</span></a></li><li><a class="link" href="#neighbourhoods">Neighbourhood guides <span class="ar" aria-hidden="true">→</span></a></li></ul></div>
-          </aside>
+          </div><!-- /.aside -->
         </div>
       </div>
     </div>
@@ -1147,19 +1270,19 @@ article.teaser:hover h3{text-decoration:none}
 </div>
 
 <!-- ============ RESOURCES ============ -->
-<div class="page" data-page="resources" data-title="Real Estate Guides & GTA Market Insights | Ali Bayat" hidden>
+<div class="page" data-page="resources" data-title="Toronto & York Region Real Estate Guides | Ali Bayat" hidden>
   <header class="page-head"><div class="wrap">
     <nav class="crumbs" aria-label="Breadcrumb"><a href="#home">Home</a><span aria-hidden="true">/</span><span>Resources</span></nav>
     <span class="label accent">Knowledge centre</span>
-    <h1 tabindex="-1">Guides for buying, selling <em>and understanding the GTA market</em></h1>
-    <p class="lede">Plain-language answers to the questions clients ask most, investment fundamentals, and monthly market notes by area.</p>
+    <h1 tabindex="-1">Guides for buying, selling and investing <em>in Toronto and York Region</em></h1>
+    <p class="lede">One-page answers to the questions clients ask most, with real numbers and official sources, plus a guide to each community I work in.</p>
     <div class="row"><a class="link" href="#buy">How buying works <span class="ar" aria-hidden="true">→</span></a><a class="link" href="#sell">How selling works <span class="ar" aria-hidden="true">→</span></a><a class="link" href="#invest">Investment property analysis <span class="ar" aria-hidden="true">→</span></a></div>
   </div></header>
   <section class="band tight">
     <div class="wrap stack" style="gap:3rem">
       <a class="feature" href="#guide-land-transfer-tax">
         <div class="dwg wide" data-dwg="strip2"><span class="grid-bg"></span></div>
-        <div class="in"><span class="label accent">Featured · Buying guide</span><h3>Land transfer tax in Toronto vs. York Region, with a calculator</h3><p class="muted">Why the same price costs more to close on in North York than in Vaughan, and how first-time buyer rebates fit in.</p><span class="status pub">Published<mark class="tbc" data-note="ltt-guide-review"> · draft for Ali's review</mark></span></div>
+        <div class="in"><span class="label accent">Featured · Buying guide</span><h2 class="as-h3">Land transfer tax in Toronto vs. York Region, with a calculator</h2><p class="muted">Why the same price costs more to close on in North York than in Vaughan, and how first-time buyer rebates fit in.</p><span class="status pub">Published<mark class="tbc" data-note="ltt-guide-review"> · draft for Ali's review</mark></span></div>
       </a>
       <div class="report" aria-label="Market report template" data-requires="market-data">
         <div class="top"><div><span class="label accent">GTA Market Insights · monthly template</span><h3 style="font-size:1.5rem;margin-top:.3rem">Market notes: <span class="ph">[Area]</span>, <span class="ph">[Month Year]</span></h3></div><span class="pill">Needs data source</span></div>
@@ -1235,13 +1358,17 @@ article.teaser:hover h3{text-decoration:none}
         <div class="row"><a class="btn" href="#contact" data-interest="buy">Talk to Ali about your budget</a></div>
         <p class="small muted">Sources, checked October 1, 2026: <a href="https://www.toronto.ca/services-payments/property-taxes-utilities/municipal-land-transfer-tax-mltt/municipal-land-transfer-tax-mltt-rates-and-fees/" rel="noopener">City of Toronto, MLTT rates and fees</a>; <a href="https://www.toronto.ca/services-payments/property-taxes-utilities/municipal-land-transfer-tax-mltt/municipal-land-transfer-tax-mltt-rebate-opportunities/" rel="noopener">City of Toronto, MLTT rebates</a>; <a href="https://www.ontario.ca/document/land-transfer-tax/calculating-land-transfer-tax" rel="noopener">Ontario, calculating land transfer tax</a>; <a href="https://www.ontario.ca/document/land-transfer-tax/land-transfer-tax-refunds-first-time-homebuyers" rel="noopener">Ontario, refunds for first-time homebuyers</a>.</p>
       </div>
-      <aside class="aside">
+      <div class="aside">
         <div class="box"><h3>Related</h3><ul class="nolist small"><li><a class="link" href="#buy">How buying with Ali works <span class="ar" aria-hidden="true">→</span></a></li><li><a class="link" href="#north-york">North York guide <span class="ar" aria-hidden="true">→</span></a></li><li><a class="link" href="#vaughan">Vaughan guide <span class="ar" aria-hidden="true">→</span></a></li><li><a class="link" href="#thornhill">Thornhill guide <span class="ar" aria-hidden="true">→</span></a></li><li><a class="link" href="#richmond-hill">Richmond Hill guide <span class="ar" aria-hidden="true">→</span></a></li><li><a class="link" href="#toronto">Toronto guide <span class="ar" aria-hidden="true">→</span></a></li><li><a class="link" href="#sell">Selling before you buy? How pricing works <span class="ar" aria-hidden="true">→</span></a></li><li><a class="link" href="#invest">Closing costs in an investment analysis <span class="ar" aria-hidden="true">→</span></a></li></ul></div>
         <div class="box tint"><h3>Comparing two areas?</h3><p>I'll put the full closing costs side by side for the homes you're considering.</p><a class="btn" href="#contact" data-interest="buy">Talk to Ali</a></div>
-      </aside>
+      </div><!-- /.aside -->
     </div>
   </section>
 </div>
+
+<!-- ============ GUIDES (rendered from GUIDES by renderGuide) ============ -->
+<div class="page" data-page="guide" hidden></div>
+<div class="page" data-page="fa-guide" lang="fa" dir="rtl" hidden></div>
 
 <!-- ============ CONTACT ============ -->
 <div class="page" data-page="contact" data-title="Contact Ali Bayat, REALTOR® | North York & Thornhill" hidden>
@@ -1291,7 +1418,7 @@ article.teaser:hover h3{text-decoration:none}
           <button class="btn ghost sm" type="button" id="reset-form" style="width:max-content">Back to the form</button>
         </div>
       </div>
-      <aside class="aside">
+      <div class="aside">
         <div class="box" style="grid-template-columns:72px 1fr;align-items:center"><div class="portrait photo" style="aspect-ratio:1;border-radius:50%"><img src="/assets/img/ali-bayat-headshot.jpg" alt="" aria-hidden="true" width="240" height="240" decoding="async"></div><div><b style="font-family:var(--display);font-weight:600;font-size:1.2rem">Ali Bayat</b><p class="small">Replies personally, <mark class="tbc" data-approve="reply-time">usually within one business day</mark></p></div></div>
         <div class="box">
           <div class="clines">
@@ -1301,8 +1428,8 @@ article.teaser:hover h3{text-decoration:none}
             <div><small>Languages</small><span>English, Farsi</span></div>
           </div>
         </div>
-        <div class="box tint"><h3>What happens next</h3><ol class="plain"><li>Ali reads your message and replies.</li><li>You set up a short call at a time that suits you.</li><li>You leave with a clear next step. No obligation.</li></ol></div>
-      </aside>
+        <div class="box tint"><h2 class="as-h3">What happens next</h2><ol class="plain"><li>Ali reads your message and replies.</li><li>You set up a short call at a time that suits you.</li><li>You leave with a clear next step. No obligation.</li></ol></div>
+      </div><!-- /.aside -->
     </div>
   </section>
 </div>
@@ -1408,9 +1535,9 @@ article.teaser:hover h3{text-decoration:none}
     <div class="wrap stack" style="gap:3rem">
       <a class="feature" href="#fa-guide-land-transfer-tax">
         <div class="dwg wide" data-dwg="strip2"><span class="grid-bg"></span></div>
-        <div class="in"><span class="label accent">راهنمای ویژه · خرید</span><h3>مالیات انتقال زمین در تورنتو و منطقه‌ی یورک، همراه با ماشین‌حساب</h3><p class="muted">چرا خرید با قیمت یکسان در نورث‌یورک هزینه‌ی بیشتری از وان دارد، و بازپرداخت خریداران خانه‌ی اول چطور محاسبه می‌شود.</p><span class="status pub">منتشرشده</span></div>
+        <div class="in"><span class="label accent">راهنمای ویژه · خرید</span><h2 class="as-h3">مالیات انتقال زمین در تورنتو و منطقه‌ی یورک، همراه با ماشین‌حساب</h2><p class="muted">چرا خرید با قیمت یکسان در نورث‌یورک هزینه‌ی بیشتری از وان دارد، و بازپرداخت خریداران خانه‌ی اول چطور محاسبه می‌شود.</p><span class="status pub">منتشرشده</span></div>
       </a>
-      <div class="stack"><section class="kc-cat"><div class="intro"><h2>راهنمای خرید</h2><p>از بودجه تا روز تحویل.</p></div><div class="arts"><a class="art" href="#fa-guide-land-transfer-tax"><h3>مالیات انتقال زمین در تورنتو و منطقه‌ی یورک، همراه با ماشین‌حساب</h3><span class="status pub">منتشرشده</span><p>چرا خرید با قیمت یکسان در نورث‌یورک هزینه‌ی بیشتری از وان دارد.</p></a><div class="art"><h3>خرید اولین خانه در تورنتو: برنامه‌ی قدم به قدم</h3><span class="status">در دست نگارش</span><p>از پیش‌تأیید وام تا روز تحویل، با هزینه‌های هر مرحله.</p></div><div class="art"><h3>کاندوی پیش‌فروش: پرسش‌هایی پیش از امضا</h3><span class="status">در دست نگارش</span><p>ودیعه‌ها، هزینه‌های دوره‌ی سکونت، قوانین واگذاری و تسویه‌های روز تحویل.</p></div></div></section><section class="kc-cat"><div class="intro"><h2>راهنمای فروش</h2><p>آماده‌سازی، قیمت‌گذاری و فروش.</p></div><div class="arts"><div class="art"><h3>چه تعمیراتی پیش از فروش ارزش دارد</h3><span class="status">در دست نگارش</span><p>کدام تعمیرات ارزشش را دارند، کدام‌ها نه، و چطور سر وقت انجامشان دهیم.</p></div><div class="art"><h3>روز پیشنهادها یا قیمت‌گذاری مطابق بازار</h3><span class="status">در دست نگارش</span><p>هر استراتژی چطور کار می‌کند و چه زمانی معمولاً منطقی است.</p></div></div></section><section class="kc-cat"><div class="intro"><h2>سرمایه‌گذاری</h2><p>تحلیل ملک‌های درآمدزا: جریان نقدی، Cap rate، وام و استراتژی.</p></div><div class="arts"><a class="art" href="#fa-invest"><h3>تحلیل ملک سرمایه‌گذاری: چارچوب شش‌مرحله‌ای</h3><span class="status pub">منتشرشده</span><p>از بررسی ملک تا تصمیم، با پرسش‌های هر مرحله.</p></a><div class="art"><h3>نرخ بازده سرمایه (Cap rate) چیست و چه چیزی را نمی‌گوید</h3><span class="status">در دست نگارش</span><p>نحوه‌ی محاسبه، مقایسه و محدودیت‌هایش.</p></div><div class="art"><h3>محاسبه‌ی جریان نقدی ملک اجاره‌ای</h3><span class="status">در دست نگارش</span><p>از اجاره‌ی ناخالص تا آنچه پس از هزینه‌ها، خالی ماندن و وام باقی می‌ماند.</p></div><div class="art"><h3>جریان نقدی یا رشد ارزش: انتخاب استراتژی</h3><span class="status">در دست نگارش</span><p>دو دلیل متفاوت برای مالکیت ملک و ریسک‌های هر کدام.</p></div></div></section><section class="kc-cat"><div class="intro"><h2>راهنمای محله‌ها</h2><p>زندگی در هر محله چطور است.</p></div><div class="arts"><a class="art" href="#fa-north-york"><h3>راهنمای نورث‌یورک</h3><span class="status pub">منتشرشده</span><p>برج‌های کاندو در امتداد خیابان یانگ و خیابان‌های آرام مسکونی چند بلوک آن‌طرف‌تر.</p></a><a class="art" href="#fa-thornhill"><h3>راهنمای تورنهیل</h3><span class="status pub">منتشرشده</span><p>محله‌ای جاافتاده درست شمال تورنتو که میان دو شهر تقسیم شده است.</p></a><a class="art" href="#fa-richmond-hill"><h3>راهنمای ریچموند هیل</h3><span class="status pub">منتشرشده</span><p>محله‌های جاافتاده، شهرک‌های جدیدتر و فضای سبز در شمال.</p></a><a class="art" href="#fa-vaughan"><h3>راهنمای وان</h3><span class="status pub">منتشرشده</span><p>محله‌های جاافتاده و یک مرکز شهر جدید که پیرامون مترو ساخته شده است.</p></a><a class="art" href="#fa-toronto"><h3>راهنمای تورنتو</h3><span class="status pub">منتشرشده</span><p>خانه‌های ویکتوریایی نیمه‌مستقل، خیابان‌های خانوادگی میدتاون و کاندوهای مرکز شهر.</p></a></div></section><section class="kc-cat"><div class="intro"><h2>نکته‌های املاک</h2><p>پاسخ کوتاه به پرسش‌های رایج.</p></div><div class="arts"><div class="art"><h3>خواندن Status Certificate کاندو</h3><span class="status">در دست نگارش</span><p>صفحه‌هایی که مهم‌اند و نشانه‌های هشدار.</p></div><div class="art"><h3>بازرسی خانه در تورنتو: چه انتظاری داشته باشید</h3><span class="status">در دست نگارش</span><p>بازرس چه چیزهایی را بررسی می‌کند و چطور از گزارش استفاده کنید.</p></div></div></section></div>
+      <div class="stack" data-fa-kc></div>
     </div>
   </section>
   <section class="cta-band"><div class="wrap">
@@ -1475,10 +1602,10 @@ article.teaser:hover h3{text-decoration:none}
         <div class="row"><a class="btn" href="#fa-contact" data-interest="buy" data-cta="guide-budget">گفتگو با علی درباره‌ی بودجه‌تان</a></div>
         <p class="small muted">منابع، بررسی‌شده در ۱ اکتبر ۲۰۲۶: <a href="https://www.toronto.ca/services-payments/property-taxes-utilities/municipal-land-transfer-tax-mltt/municipal-land-transfer-tax-mltt-rates-and-fees/" rel="noopener">City of Toronto, MLTT rates and fees</a>؛ <a href="https://www.toronto.ca/services-payments/property-taxes-utilities/municipal-land-transfer-tax-mltt/municipal-land-transfer-tax-mltt-rebate-opportunities/" rel="noopener">City of Toronto, MLTT rebates</a>؛ <a href="https://www.ontario.ca/document/land-transfer-tax/calculating-land-transfer-tax" rel="noopener">Ontario, calculating land transfer tax</a>؛ <a href="https://www.ontario.ca/document/land-transfer-tax/land-transfer-tax-refunds-first-time-homebuyers" rel="noopener">Ontario, refunds for first-time homebuyers</a>.</p>
       </div>
-      <aside class="aside">
+      <div class="aside">
         <div class="box"><h3>مطالب مرتبط</h3><ul class="nolist small"><li><a class="link" href="#fa-buy">مراحل خرید با علی <span class="ar" aria-hidden="true">←</span></a></li><li><a class="link" href="#fa-north-york">راهنمای نورث‌یورک <span class="ar" aria-hidden="true">←</span></a></li><li><a class="link" href="#fa-vaughan">راهنمای وان <span class="ar" aria-hidden="true">←</span></a></li><li><a class="link" href="#fa-thornhill">راهنمای تورنهیل <span class="ar" aria-hidden="true">←</span></a></li><li><a class="link" href="#fa-richmond-hill">راهنمای ریچموند هیل <span class="ar" aria-hidden="true">←</span></a></li><li><a class="link" href="#fa-toronto">راهنمای تورنتو <span class="ar" aria-hidden="true">←</span></a></li><li><a class="link" href="#fa-sell">قبل از خرید می‌فروشید؟ قیمت‌گذاری خانه <span class="ar" aria-hidden="true">←</span></a></li><li><a class="link" href="#fa-invest">هزینه‌های بستن معامله در تحلیل سرمایه‌گذاری <span class="ar" aria-hidden="true">←</span></a></li></ul></div>
         <div class="box tint"><h3>دو محله را مقایسه می‌کنید؟</h3><p>هزینه‌های کامل بستن معامله را برای خانه‌هایی که در نظر دارید کنار هم می‌گذارم.</p><a class="btn" href="#fa-contact" data-interest="buy" data-cta="guide-compare">گفتگو با علی</a></div>
-      </aside>
+      </div><!-- /.aside -->
     </div>
   </section>
 </div>
@@ -1496,8 +1623,8 @@ article.teaser:hover h3{text-decoration:none}
     <div class="dwg wide draw-in" data-dwg="buyscene" data-noframe><span class="grid-bg"></span></div>
   </div></header>
   <section class="band tight"><div class="wrap stack" style="gap:2rem">
-    <h2>روند خرید، <em>در چهار مرحله</em></h2>
-    <ol class="phases" data-phases="fa-buy" data-reveal></ol>
+    <h2>روند خرید، <em>در شش قدم</em></h2>
+    <div class="flow" data-flow="fa-buy"></div>
   </div></section>
   <section class="band tight" style="padding-top:0">
     <div class="wrap">
@@ -1535,8 +1662,8 @@ article.teaser:hover h3{text-decoration:none}
   </div><div class="dwg wide draw-in" data-dwg="sellscene" data-noframe><span class="grid-bg"></span></div>
   </div></header>
   <section class="band tight"><div class="wrap stack" style="gap:2rem">
-    <h2>روند فروش، <em>در چهار مرحله</em></h2>
-    <ol class="phases" data-phases="fa-sell" data-reveal></ol>
+    <h2>روند فروش، <em>در شش قدم</em></h2>
+    <div class="flow" data-flow="fa-sell"></div>
   </div></section>
   <section class="band tight" style="padding-top:0">
     <div class="wrap">
@@ -1584,6 +1711,11 @@ article.teaser:hover h3{text-decoration:none}
       </div>
     </div>
   </section>
+
+  <section class="band tight"><div class="wrap stack" style="gap:2rem">
+    <h2>روند سرمایه‌گذاری، <em>در شش قدم</em></h2>
+    <div class="flow" data-flow="fa-invest"></div>
+  </div></section>
 
   <section class="band surface">
     <div class="wrap railed">
@@ -1707,10 +1839,10 @@ article.teaser:hover h3{text-decoration:none}
             <li><span><b>ریچموند هیل.</b> ارزش ملک‌ها از محله‌ای به محله‌ی دیگر تفاوت زیادی دارد و برخی مناطق شمالی تحت قوانین برنامه‌ریزی Oak Ridges Moraine هستند.</span></li>
             <li><span><b>وان.</b> چند بازار متمایز، به‌علاوه‌ی منطقه‌ی رو به رشد کاندو در VMC، که شرایط پیش‌فروش در آن نیاز به بررسی دقیق دارد.</span></li>
           </ul>
-          <aside class="aside">
+          <div class="aside">
             <div class="box tint"><h3>«بهترین» منطقه وجود ندارد</h3><p>هیچ‌جا به‌تنهایی بهترین مکان برای سرمایه‌گذاری نیست. انتخاب درست به بودجه، زمان‌بندی و میزان ریسکی که می‌پذیرید بستگی دارد؛ پس هر ملک بر اساس اعداد خودش تحلیل می‌شود.</p><a class="link" href="#fa-neighbourhoods">راهنمای محله‌ها <span class="ar" aria-hidden="true">←</span></a></div>
             <div class="box"><h3>مطالب مرتبط</h3><ul class="nolist small"><li><a class="link" href="#fa-guide-land-transfer-tax">مالیات انتقال زمین: تورنتو در برابر منطقه‌ی یورک <span class="ar" aria-hidden="true">←</span></a></li><li><a class="link" href="#fa-buy">مراحل خرید با علی <span class="ar" aria-hidden="true">←</span></a></li></ul></div>
-          </aside>
+          </div><!-- /.aside -->
         </div>
       </div>
     </div>
@@ -1794,7 +1926,7 @@ article.teaser:hover h3{text-decoration:none}
           <p>تماس یا پیامک به <a href="tel:+16477797919" dir="ltr">(647) 779-7919</a> یا ایمیل به <a href="mailto:ali@alibayatrealty.com" dir="ltr">ali@alibayatrealty.com</a>. علی معمولاً ظرف یک روز کاری پاسخ می‌دهد.</p>
         </div></div>
       </div>
-      <aside class="aside">
+      <div class="aside">
         <div class="box">
           <h3>ثبت و بروکریج</h3>
           <ul class="nolist small">
@@ -1805,7 +1937,7 @@ article.teaser:hover h3{text-decoration:none}
           </ul>
         </div>
         <div class="box tint"><h3>با هم صحبت کنیم</h3><p>بگویید چه برنامه‌ای دارید. شخصاً پاسخ می‌دهم.</p><a class="btn" href="#fa-contact" data-cta="about-aside">گفتگو با علی</a></div>
-      </aside>
+      </div><!-- /.aside -->
     </div>
   </section>
 </div>
@@ -1852,7 +1984,7 @@ article.teaser:hover h3{text-decoration:none}
           <p class="muted">علی شخصاً و به زبانی که انتخاب کرده‌اید پاسخ می‌دهد.</p>
         </div>
       </div>
-      <aside class="aside">
+      <div class="aside">
         <div class="box" style="grid-template-columns:72px 1fr;align-items:center"><div class="portrait photo" style="aspect-ratio:1;border-radius:50%"><img src="/assets/img/ali-bayat-headshot.jpg" alt="" aria-hidden="true" width="240" height="240" decoding="async"></div><div><b style="font-family:var(--display);font-weight:600;font-size:1.2rem">علی بیات</b><p class="small">شخصاً پاسخ می‌دهد، <mark class="tbc" data-approve="reply-time">معمولاً ظرف یک روز کاری</mark></p></div></div>
         <div class="box">
           <div class="clines">
@@ -1862,8 +1994,8 @@ article.teaser:hover h3{text-decoration:none}
             <div><small>زبان‌ها</small><span>فارسی، انگلیسی</span></div>
           </div>
         </div>
-        <div class="box tint"><h3>بعد از ارسال پیام</h3><ol class="plain"><li>علی پیام شما را می‌خواند و پاسخ می‌دهد.</li><li>یک تماس کوتاه در زمانی که برایتان مناسب است هماهنگ می‌کنید.</li><li>با یک قدم بعدی روشن پیش می‌روید، بدون هیچ تعهدی.</li></ol></div>
-      </aside>
+        <div class="box tint"><h2 class="as-h3">بعد از ارسال پیام</h2><ol class="plain"><li>علی پیام شما را می‌خواند و پاسخ می‌دهد.</li><li>یک تماس کوتاه در زمانی که برایتان مناسب است هماهنگ می‌کنید.</li><li>با یک قدم بعدی روشن پیش می‌روید، بدون هیچ تعهدی.</li></ol></div>
+      </div><!-- /.aside -->
     </div>
   </section>
 </div>
@@ -1876,7 +2008,7 @@ article.teaser:hover h3{text-decoration:none}
     <p class="lede">How personal information sent through this website is collected, used and protected.</p>
   </div></header>
   <section class="band tight"><div class="wrap two"><div class="prose">
-    <div class="box tint" data-pending="privacy-policy"><h3>Policy in preparation</h3><p>The full privacy policy is being prepared with Ali's brokerage. Until it's published, details you send through the contact form are used only to reply to your inquiry.</p></div>
+    <div class="box tint" data-pending="privacy-policy"><h2 class="as-h3">Policy in preparation</h2><p>The full privacy policy is being prepared with Ali's brokerage. Until it's published, details you send through the contact form are used only to reply to your inquiry.</p></div>
     <p class="tbc-note">Ali: final privacy policy text needed, reviewed by your brokerage (PIPEDA, plus CASL consent wording for email alerts).</p>
     <div class="row"><a class="btn" href="#contact" data-interest="question">Questions? Contact Ali</a></div>
   </div></div></section>
@@ -1889,7 +2021,7 @@ article.teaser:hover h3{text-decoration:none}
     <p class="lede">The terms that apply to using this website and its guides and calculators.</p>
   </div></header>
   <section class="band tight"><div class="wrap two"><div class="prose">
-    <div class="box tint" data-pending="terms-of-use"><h3>Terms in preparation</h3><p>The full terms of use are being prepared. The guides and calculators on this site are for general information only and are not legal, tax, financial or mortgage advice.</p></div>
+    <div class="box tint" data-pending="terms-of-use"><h2 class="as-h3">Terms in preparation</h2><p>The full terms of use are being prepared. The guides and calculators on this site are for general information only and are not legal, tax, financial or mortgage advice.</p></div>
     <p class="tbc-note">Ali: terms of use text needed, including the brokerage's required disclaimers.</p>
   </div></div></section>
 </div>
@@ -2052,6 +2184,7 @@ Not used
         <p class="muted" style="max-width:34ch">Real estate advice for buyers, sellers and investors across Toronto and York Region. English and Farsi.</p>
         <div class="brokerage">
           <strong><mark class="tbc" data-tpl="Ali Bayat, {title_display}">Ali Bayat, Sales Representative</mark></strong>
+          <span class="muted"><mark class="tbc" data-tpl="RECO #{reco_number} · Member, TRREB">RECO #[000000] · Member, TRREB</mark></span>
           <span class="muted"><mark class="tbc" data-tpl="{brokerage_name}">[Brokerage legal name], Brokerage</mark></span>
           <span class="muted"><mark class="tbc" data-tpl="{brokerage_address_line}{brokerage_franchise_note}">[Brokerage address] · Independently owned and operated</mark></span>
         </div>
@@ -2114,6 +2247,7 @@ Not used
         <p class="muted" style="max-width:34ch">مشاوره‌ی املاک برای خریداران، فروشندگان و سرمایه‌گذاران در تورنتو و منطقه‌ی یورک. به فارسی و انگلیسی.</p>
         <div class="brokerage" dir="ltr" style="text-align:right">
           <strong><mark class="tbc" data-tpl="Ali Bayat, {title_display}">Ali Bayat, Sales Representative</mark></strong>
+          <span class="muted"><mark class="tbc" data-tpl="RECO #{reco_number} · Member, TRREB">RECO #[000000] · Member, TRREB</mark></span>
           <span class="muted"><mark class="tbc" data-tpl="{brokerage_name}">[Brokerage legal name], Brokerage</mark></span>
           <span class="muted"><mark class="tbc" data-tpl="{brokerage_address_line}{brokerage_franchise_note}">[Brokerage address] · Independently owned and operated</mark></span>
         </div>
@@ -2180,7 +2314,7 @@ function stripSVG(){
     <text x="${x+150}" y="262" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="13" fill="currentColor" letter-spacing="1">${name.toUpperCase()}</text>
     <text x="${x+150}" y="280" text-anchor="middle" font-family="Inter, sans-serif" font-size="12" fill="currentColor" opacity=".6">${TYPES[k]}</text></a>`});
   const w=seq.length*W;
-  return `<svg viewBox="-10 0 ${w+20} 300" role="img" aria-label="Elevation drawings of typical housing from Toronto north along Yonge Street to Richmond Hill, and west to Vaughan"><line x1="-10" y1="221" x2="${w+10}" y2="221" stroke="currentColor" stroke-width="1.6"/>${g}<text x="${w}" y="296" text-anchor="end" font-family="IBM Plex Mono, monospace" font-size="11" fill="currentColor" opacity=".6">SOUTH → NORTH · NOT TO SCALE</text></svg>`}
+  return `<svg viewBox="-10 0 ${w+20} 300" role="group" aria-label="Elevation drawings of typical housing from Toronto north along Yonge Street to Richmond Hill, and west to Vaughan"><line x1="-10" y1="221" x2="${w+10}" y2="221" stroke="currentColor" stroke-width="1.6"/>${g}<text x="${w}" y="296" text-anchor="end" font-family="IBM Plex Mono, monospace" font-size="11" fill="currentColor" opacity=".6">SOUTH → NORTH · NOT TO SCALE</text></svg>`}
 /* Page-header scenes: line drawings that draw in, then one brass accent animates (pin, sign or bars). */
 function scene(kind){
   let i=0;const len=(t,a)=>{const n=k=>+(a.match(new RegExp(k+'="([^"]+)"'))||[0,0])[1];
@@ -2289,7 +2423,7 @@ function lineMap(){
   const nodes={"richmond-hill":[220,60],"thornhill":[220,170],"north-york":[220,280],"toronto":[220,400],"vaughan":[90,165]};
   const n=(slug,label,sub,right=true)=>{const [x,y]=nodes[slug];const tx=right?x+18:x-18,a=right?"start":"end";
     return `<a class="node" href="#${slug}" aria-label="${label}"><circle cx="${x}" cy="${y}" r="9"/><text x="${tx}" y="${y-2}" font-size="17" font-weight="600" text-anchor="${a}">${label}</text><text class="sub" x="${tx}" y="${y+16}" font-size="11" text-anchor="${a}">${sub}</text></a>`};
-  return `<svg viewBox="0 0 360 440" role="img" aria-labelledby="lm-t"><title id="lm-t">Schematic map: Yonge Street connects Toronto, North York, Thornhill and Richmond Hill; Vaughan is to the west</title>
+  return `<svg viewBox="0 0 360 440" role="group" aria-labelledby="lm-t"><title id="lm-t">Schematic map: Yonge Street connects Toronto, North York, Thornhill and Richmond Hill; Vaughan is to the west</title>
     <line class="road" x1="20" y1="222" x2="345" y2="222" stroke-width="1.5" stroke-dasharray="4 5"/>
     <text class="sub" x="345" y="214" font-size="10" text-anchor="end">STEELES AVE · TORONTO / YORK REGION</text>
     <line class="road" x1="20" y1="118" x2="345" y2="118" stroke-width="1" stroke-dasharray="2 6" opacity=".6"/>
@@ -2316,7 +2450,7 @@ const AREA_PHOTOS_FA={
 function renderNcards(){document.querySelectorAll("[data-ncards]").forEach(el=>{const fa=el.dataset.ncards==="fa",big=el.classList.contains("cols3")||el.classList.contains("tall");
   el.innerHTML=AREAS.map(a=>{const ph=AREA_PHOTOS[a.slug],t=fa?{...AREAS_FA[a.slug],...AREA_PHOTOS_FA[a.slug]}:{name:a.name,region:a.region,tagline:a.tagline,cap:ph.cap,alt:ph.alt},u=w=>`/assets/img/areas/${a.slug}-${w}.webp`;
   const sizes=ph.wide?`(max-width:900px) 100vw, ${big?780:720}px`:`(max-width:560px) 100vw, (max-width:900px) 50vw, ${big?380:350}px`;
-  return `<li class="ncard${ph.wide?" wide":""}"><a href="#${fa?"fa-":""}${a.slug}"><span class="ph"><img src="${u(ph.w[1])}" srcset="${ph.w.map(w=>`${u(w)} ${w}w`).join(", ")}" sizes="${sizes}" alt="${t.alt}" width="${ph.d[0]}" height="${ph.d[1]}" loading="lazy" decoding="async" style="object-position:${ph.pos}"></span><span class="label">${t.region}</span><h3>${t.name}</h3><span class="cap">${t.cap}</span><p>${t.tagline}</p><span class="go">${fa?"راهنما ←":"Guide →"}</span></a></li>`}).join("")})}
+  return `<li class="ncard${ph.wide?" wide":""}"><a href="#${fa?"fa-":""}${a.slug}"><span class="ph"><img src="${u(ph.w[1])}" srcset="${ph.w.map(w=>`${u(w)} ${w}w`).join(", ")}" sizes="${sizes}" alt="${t.alt}" width="${ph.d[0]}" height="${ph.d[1]}" loading="lazy" decoding="async" style="object-position:${ph.pos}"></span><span class="label">${t.region}</span>${big?`<h2 class="as-h3">${t.name}</h2>`:`<h3>${t.name}</h3>`}<span class="cap">${t.cap}</span><p>${t.tagline}</p><span class="go">${fa?"راهنما ←":"Guide →"}</span></a></li>`}).join("")})}
 function renderAlists(){renderNcards();document.querySelectorAll("[data-alist]").forEach(el=>{el.innerHTML=AREAS.map(a=>`<li><a href="#${a.slug}"><div class="dwg" data-dwg="${a.hero}"></div><div><span class="label">${a.region}</span><h3>${a.name}</h3><p>${a.tagline}</p></div><span class="go">Guide →</span></a></li>`).join("")})}
 
 /* ---------- Area page ---------- */
@@ -2350,10 +2484,10 @@ function renderArea(a){
       <section class="asec" id="guides"><h2>Related guides</h2><div class="body"><ul class="ticks"><li><span><a class="link" href="#guide-land-transfer-tax">Land transfer tax in Toronto vs. York Region</a>: ${a.region==="City of Toronto"?`buyers in ${a.name} pay both the provincial and the municipal tax.`:`buyers in ${a.name} pay the provincial tax only.`}</span></li><li><span><a class="link" href="#neighbourhoods">Compare all neighbourhood guides</a></span></li></ul></div></section>
       <section class="asec" id="listings" style="border-bottom:0" data-requires="idx"><h2>Listings</h2><div class="body"><div class="slot"><span class="pill">MLS® feed not connected</span><p class="small muted">Current ${a.name} listings will appear here, filtered automatically by area.</p><a class="link" href="#listings">Open the listing search preview <span class="ar" aria-hidden="true">→</span></a></div></div></section>
     </div>
-    <aside class="aside" style="padding-top:2.25rem">
+    <div class="aside" style="padding-top:2.25rem">
       <div class="box tint"><h3>Thinking about ${a.name}?</h3><p>I can walk you through recent sales, what your budget buys here, or what your home might sell for.</p><a class="btn" href="#contact" data-cta="area-sidebar">Talk to Ali</a></div>
       <div class="box"><h3>Other areas</h3><ul class="nolist small">${others.map(o=>`<li><a class="link" href="#${o.slug}">${o.name} <span class="ar" aria-hidden="true">→</span></a></li>`).join("")}</ul></div>
-    </aside>
+    </div><!-- /.aside -->
   </div>`}
 
 
@@ -2389,40 +2523,76 @@ function renderAreaFa(a){
       <section class="asec" id="fa-inv"><h2>سرمایه‌گذاران</h2><div class="body"><p>نکته‌های مخصوص ملک‌های درآمدزا در ${f.name}. این‌ها پرسش‌هایی برای بررسی‌اند، نه پیش‌بینی.</p>${ul(f.investor)}<a class="link" href="#fa-invest">تحلیل ملک سرمایه‌گذاری چطور انجام می‌شود ${ar}</a></div></section>
       <section class="asec" id="fa-guides" style="border-bottom:0"><h2>راهنماهای مرتبط</h2><div class="body"><ul class="ticks"><li><span><a class="link" href="#fa-guide-land-transfer-tax">مالیات انتقال زمین در تورنتو و منطقه‌ی یورک</a>: ${a.region==="City of Toronto"?`خریداران در ${f.name} هم مالیات استانی و هم مالیات شهرداری را می‌پردازند.`:`خریداران در ${f.name} فقط مالیات استانی را می‌پردازند.`}</span></li><li><span><a class="link" href="#fa-neighbourhoods">مقایسه‌ی همه‌ی محله‌ها</a></span></li></ul></div></section>
     </div>
-    <aside class="aside" style="padding-top:2.25rem">
+    <div class="aside" style="padding-top:2.25rem">
       <div class="box tint"><h3>به ${f.name} فکر می‌کنید؟</h3><p>می‌توانم فروش‌های اخیر، اینکه بودجه‌تان اینجا چه چیزی می‌خرد، یا ارزش احتمالی فروش خانه‌تان را برایتان توضیح دهم.</p><a class="btn" href="#fa-contact" data-cta="area-sidebar">گفتگو با علی</a></div>
       <div class="box"><h3>محله‌های دیگر</h3><ul class="nolist small">${others.map(o=>`<li><a class="link" href="#fa-${o.slug}">${AREAS_FA[o.slug].name} ${ar}</a></li>`).join("")}</ul></div>
-    </aside>
+    </div><!-- /.aside -->
   </div>`}
 
 /* ---------- Buy / Sell processes ---------- */
 const PROC={
 };
-const PHASES={
- buy:[
-  ["Prepare","We pin down what you need and a monthly cost you're comfortable with, closing costs included. Get a mortgage pre-approval early so the budget is real.","What would make you regret this purchase in five years?"],
-  ["Search","You see recent sales in your areas before touring, then a short list that fits. For each serious contender we review comparables, condition and repair costs, plus the status certificate for condos.","What would this home cost to own each month?"],
-  ["Offer","We set price, deposit, conditions and closing date for this home and this level of competition. I negotiate within limits we've agreed on together.",""],
-  ["Close","I work with your lawyer, lender and inspector to keep deadlines and paperwork on track, and stay in touch after you move in.",""]],
- sell:[
-  ["Plan","I review recent comparable sales, what's listed now and what hasn't sold, then we choose a price and approach together. You'll see the comparables behind my recommendation.","What would you need to net from this sale for your next move to work?"],
-  ["Prepare","A walk-through with a practical list: what's worth fixing, what to leave alone, and what to simply clean and stage. Then professional photography and MLS® exposure.",""],
-  ["Launch","We pick a launch date and plan the first week carefully, since that's usually when buyer interest is highest. Showings are scheduled to suit your household.",""],
-  ["Close","We compare offers on price, deposit, conditions and closing date. Then I manage deadlines and paperwork with your lawyer through to closing day.",""]],
- "fa-sell":[
-  ["برنامه‌ریزی","فروش‌های مشابه اخیر، ملک‌های در حال فروش و ملک‌هایی که فروش نرفته‌اند را بررسی می‌کنم و بعد قیمت و روش را با هم انتخاب می‌کنیم. فروش‌های مشابهی را که پشتوانه‌ی پیشنهاد من است می‌بینید.","برای اینکه قدم بعدی‌تان عملی باشد، مبلغ خالص فروش باید چقدر باشد؟"],
-  ["آماده‌سازی","یک بازدید با فهرستی عملی: چه چیزی ارزش تعمیر دارد، چه چیزی را باید رها کرد و چه چیزی فقط تمیزکاری و چیدمان می‌خواهد. سپس عکاسی حرفه‌ای و نمایش در MLS®.",""],
-  ["عرضه","تاریخ عرضه را انتخاب می‌کنیم و هفته‌ی اول را با دقت برنامه‌ریزی می‌کنیم، چون معمولاً بیشترین علاقه‌ی خریداران در همین هفته است. بازدیدها متناسب با خانواده‌ی شما زمان‌بندی می‌شوند.",""],
-  ["تحویل","پیشنهادها را از نظر قیمت، ودیعه، شرایط و تاریخ تحویل مقایسه می‌کنیم. بعد مهلت‌ها و مدارک را با وکیل شما تا روز تحویل مدیریت می‌کنم.",""]],
- "fa-buy":[
-  ["آمادگی","نیازهای شما و یک هزینه‌ی ماهانه‌ی راحت را مشخص می‌کنیم، با احتساب هزینه‌های بستن معامله. پیش‌تأیید وام را زود بگیرید تا بودجه‌تان واقعی باشد.","چه چیزی باعث می‌شود پنج سال بعد از این خرید پشیمان شوید؟"],
-  ["جستجو","پیش از بازدید، فروش‌های اخیر محله‌های مورد نظرتان را می‌بینید و بعد یک فهرست کوتاه و مناسب دریافت می‌کنید. برای هر گزینه‌ی جدی، فروش‌های مشابه، وضعیت ساختمان و هزینه‌ی تعمیرات را بررسی می‌کنیم؛ برای کاندو، Status Certificate را هم.","هزینه‌ی ماهانه‌ی مالکیت این خانه چقدر خواهد بود؟"],
-  ["پیشنهاد","قیمت، ودیعه، شرایط و تاریخ تحویل را متناسب با همین خانه و میزان رقابت تعیین می‌کنیم. در چارچوب سقفی که با هم توافق کرده‌ایم از طرف شما مذاکره می‌کنم.",""],
-  ["تحویل","با وکیل، وام‌دهنده و بازرس کار می‌کنم تا مهلت‌ها و مدارک سر وقت انجام شوند، و بعد از نقل‌مکان هم در ارتباط می‌مانم.",""]]
+/* How-it-works flows: [short label, title, sentence] x6, one icon per step (120x120 line drawings). */
+const FLOW_ICONS=(()=>{const D=(d,p)=>`<path class="draw" pathLength="1" style="--d:${d}s" d="${p}"/>`,S=(d,p)=>`<path class="solid draw" pathLength="1" style="--d:${d}s" d="${p}"/>`,C=(d,cx,cy,r,f)=>`<circle class="${f?"solid ":""}draw" pathLength="1" style="--d:${d}s" cx="${cx}" cy="${cy}" r="${r}"/>`;return{
+ buy:[D(0,"M38 24h34l14 14v58H38z")+D(.25,"M72 24v14h14")+D(.4,"M47 52h30M47 63h30M47 74h18")+C(.7,84,86,15,1)+D(1.1,"M77 86l5 5 9-10"),
+  D(0,"M24 64l26-22 26 22v30H24z")+D(.35,"M44 94V78h12v16")+C(.6,80,62,17,1)+D(1,"M92 74l12 12"),
+  D(0,"M26 60l34-28 34 28v36H26z")+D(.4,"M52 96V72h16v24")+D(.7,"M68 72l8 4v24l-8-4")+D(1,"M14 104h92")+D(1.1,"M36 50h10v10H36z"),
+  D(0,"M28 22h46v78H28z")+D(.3,"M37 40h28M37 51h28M37 62h18")+D(.6,"M36 84c5-10 9-10 11 0s6 8 10-2 6-4 8 2")+S(.9,"M72 90l26-26 8 8-26 26-10 2z"),
+  D(0,"M32 28h56v72H32z")+S(.2,"M48 20h24v14H48z")+D(.4,"M42 48h10v10H42zM42 66h10v10H42zM42 84h10v10H42z")+D(.55,"M60 53h20M60 71h20M60 89h14")+D(.8,"M43 52l4 4 8-9")+D(1.1,"M43 70l4 4 8-9")+D(1.4,"M43 88l4 4 8-9"),
+  C(0,42,62,16)+C(.2,42,62,5)+D(.4,"M58 62h44M88 62v12M98 62v9")+D(.9,"M40 30v-8M58 36l6-6M24 36l-6-6M82 40l4-4")],
+ sell:[D(0,"M20 68l28-24 28 24v28H20z")+D(.35,"M40 96V80h12v16")+S(.6,"M64 30h24l14 14-24 24-14-14z")+C(1,86,42,3),
+  S(0,"M26 26h56v18H26z")+D(.35,"M82 35h10v20H54v12")+S(.6,"M50 67h8v32h-8z")+D(.9,"M18 104h84"),
+  D(0,"M22 44h76v50H22z")+D(.3,"M42 44l7-11h22l7 11")+C(.55,60,69,15)+C(.85,60,69,6)+D(1,"M84 54h6"),
+  D(0,"M26 32h68v64H26z")+D(.3,"M26 48h68")+D(.45,"M42 24v16M78 24v16")+D(.8,"M46 72l9 9 19-19"),
+  D(0,"M42 20h42v62H42z")+S(.3,"M28 34h46v68H28z")+D(.6,"M51 46v46")+D(.75,"M59 55c-2-5-17-5-17 2s17 5 17 13-15 8-17 3"),
+  D(0,"M32 106V22")+D(.25,"M32 30h62")+D(.45,"M46 30v10M84 30v10")+S(.6,"M38 40h56v34H38z")+D(1,"M54 57l8 8 15-15")],
+ invest:[C(0,56,64,34)+C(.3,56,64,22)+C(.55,56,64,9)+D(.85,"M56 64L94 26")+D(1.2,"M84 26h10v10"),
+  D(0,"M34 18h52v84H34z")+D(.3,"M42 28h36v16H42z")+D(.6,"M44 56h7v7h-7zM57 56h7v7h-7zM70 56h7v7h-7zM44 70h7v7h-7zM57 70h7v7h-7zM44 84h7v7h-7zM57 84h7v7h-7z")+D(.9,"M70 70h7v21h-7z"),
+  D(0,"M30 100V30h40v70")+D(.3,"M70 50h22v50")+D(.55,"M40 42h8v8h-8zM54 42h8v8h-8zM40 60h8v8h-8zM54 60h8v8h-8zM78 62h6v6h-6zM78 78h6v6h-6z")+D(.85,"M45 100V84h10v16")+D(1,"M18 100h84"),
+  D(0,"M20 64l26-22 26 22v32H20z")+D(.35,"M40 96V80h12v16")+C(.65,80,84,11,1)+D(1,"M88 76l16-16M97 67l6 6"),
+  D(0,"M18 62l26-22 26 22v34H18z")+D(.35,"M38 96V78h12v18")+C(.65,88,58,9)+D(.9,"M72 96c0-14 7-22 16-22s16 8 16 22"),
+  D(0,"M22 20v78h80")+D(.35,"M32 84l18-16 14 10 30-32")+D(.9,"M82 46h12v12")]}})();
+const FLOWS={
+ buy:[["Pre-approval","Pre-approval","Know your budget before you start looking."],
+  ["Search","Search","We shortlist homes that fit your needs and your numbers."],
+  ["Viewings","Viewings","See the homes in person and compare them honestly."],
+  ["Offer","Make an offer","Price, deposit and conditions, negotiated for you."],
+  ["Conditions","Conditions","Financing, home inspection, then the deal goes firm."],
+  ["Keys","Keys in hand","Closing day: your lawyer finalizes, and you get the keys."]],
+ sell:[["Value","Your home's value","A pricing plan built on recent sales nearby."],
+  ["Prep","Get it ready","Small fixes and staging that actually pay off."],
+  ["Listing","Photos and listing","Professional photos, then live on MLS®."],
+  ["Showings","Showings","Buyers tour your home and you get real feedback."],
+  ["Offers","Review offers","We compare every offer and negotiate the best terms."],
+  ["Sold","Sold","Firm deal, closing day, keys handed over."]],
+ invest:[["Goal","Set your goal","Monthly cash flow, long-term growth, or both."],
+  ["Numbers","Run the numbers","Rent, expenses and mortgage: see the real return."],
+  ["Property","Pick the property","A condo, house or multi-unit that fits the numbers."],
+  ["Buy","Buy and close","Offer, financing and closing, like any purchase."],
+  ["Rent","Rent it out","Find a good tenant with a proper Ontario lease."],
+  ["Hold","Hold and build equity","Equity grows as you pay down the mortgage."]],
+ "fa-buy":[["پیش‌تأیید","پیش‌تأیید وام","قبل از جستجو، بودجه‌تان را دقیق بدانید."],
+  ["جستجو","جستجو","خانه‌هایی را انتخاب می‌کنیم که با نیاز و بودجه شما جور باشد."],
+  ["بازدید","بازدید","خانه‌ها را از نزدیک ببینید و صادقانه مقایسه کنید."],
+  ["پیشنهاد","پیشنهاد خرید","قیمت، ودیعه و شرایط، با مذاکره از طرف شما."],
+  ["شرایط","شرایط قرارداد","تأمین مالی و بازرسی خانه، بعد قرارداد قطعی می‌شود."],
+  ["کلید","تحویل کلید","روز انتقال: وکیل کارها را نهایی می‌کند و کلید دست شماست."]],
+ "fa-sell":[["ارزش","ارزش خانه شما","قیمت‌گذاری بر اساس فروش‌های اخیر محله."],
+  ["آماده‌سازی","آماده‌سازی خانه","تعمیرات کوچک و چیدمانی که واقعاً می‌ارزد."],
+  ["آگهی","عکاسی و آگهی","عکس‌های حرفه‌ای، بعد آگهی در MLS®."],
+  ["بازدید","بازدیدها","خریداران خانه را می‌بینند و شما بازخورد واقعی می‌گیرید."],
+  ["پیشنهادها","بررسی پیشنهادها","همه پیشنهادها را مقایسه و بهترین شرایط را مذاکره می‌کنیم."],
+  ["فروش","فروخته شد","قرارداد قطعی، روز انتقال و تحویل کلید."]],
+ "fa-invest":[["هدف","هدف شما","درآمد ماهانه، رشد بلندمدت، یا هر دو."],
+  ["محاسبه","محاسبه ارقام","اجاره، هزینه‌ها و وام: بازده واقعی را ببینید."],
+  ["ملک","انتخاب ملک","کاندو، خانه یا ساختمان چندواحدی که با ارقام جور باشد."],
+  ["خرید","خرید و انتقال","پیشنهاد، تأمین مالی و انتقال، مثل هر خرید دیگر."],
+  ["اجاره","اجاره دادن","مستأجر مناسب با قرارداد اجاره استاندارد انتاریو."],
+  ["نگهداری","نگهداری و افزایش سرمایه","با پرداخت وام، سهم شما از ملک بیشتر می‌شود."]]
 };
 function renderProc(){
-  document.querySelectorAll("[data-phases]").forEach(el=>{
-    el.innerHTML=PHASES[el.dataset.phases].map(([ph,txt,ask],i)=>`<li style="--i:${i}"><span class="pt" aria-hidden="true"></span><span class="n">${String(i+1).padStart(2,"0")}</span><h3>${ph}</h3><p>${txt}</p>${ask?`<p class="ask">${ask}</p>`:""}</li>`).join("")});
+  document.querySelectorAll("[data-flow]").forEach(el=>{const k=el.dataset.flow,fa=k.startsWith("fa-"),st=FLOWS[k],ic=FLOW_ICONS[k.replace("fa-","")],n=st.length,num=i=>fa?(i+1).toLocaleString("fa"):String(i+1).padStart(2,"0");
+    el.innerHTML=`<button type="button" class="flow-ctrl" hidden></button><div class="flow-art" aria-hidden="true">${ic.map((s,i)=>`<svg viewBox="0 0 120 120"${i?"":` class="on"`}>${s}</svg>`).join("")}</div><ol class="flow-steps">${st.map(([,t,d],i)=>`<li${i?"":` class="cur"`}><span class="fn">${num(i)} / ${num(n-1)}</span><h3>${t}</h3><p>${d}</p></li>`).join("")}</ol><div class="flow-track" role="group" aria-label="${fa?"مراحل":"Steps"}"><span class="flow-fill"></span>${st.map(([l,t],i)=>`<button type="button" aria-label="${t}"${i?"":` class="cur" aria-current="step"`}><span class="lb" aria-hidden="true">${l}</span></button>`).join("")}</div>`});
   document.querySelectorAll("[data-timeline]").forEach(el=>{const k=el.dataset.timeline;
     el.innerHTML=PROC[k].map(([ph,steps])=>`<div class="phase"><span class="pt" aria-hidden="true"></span><h3>${ph}</h3><ul>${steps.map(s=>`<li><button type="button" data-step="${k}-${s[0]}">${s[1]}</button></li>`).join("")}</ul></div>`).join("")});
   document.querySelectorAll("[data-steps]").forEach(el=>{const k=el.dataset.steps;let n=0;
@@ -2451,32 +2621,43 @@ const CATS=[
  {id:"market",name:"GTA Market Insights",d:"Monthly notes by area, from board data."},
  {id:"areas",name:"Neighbourhood Guides",d:"What it's like to live in each community."},
  {id:"tips",name:"Real Estate Tips",d:"Short answers to common questions."}];
+/* Only published guides ship. Unwritten guides live in the prototype block below and are stripped from the
+   production build (no cards, no status labels, no unbuilt URLs in the page or in site.js). To publish one,
+   write the page, add its route, then move its entry above with href and pub:1. */
 const ARTS=[
  {c:"buying",t:"Land transfer tax in Toronto vs. York Region, with a calculator",d:"Why the same price costs more to close on in North York than in Vaughan.",u:"/resources/buying/land-transfer-tax-toronto-york-region/",href:"#guide-land-transfer-tax",pub:1},
- {c:"buying",t:"Buying your first home in Toronto: a step-by-step plan",d:"From pre-approval to closing, with the costs at each stage.",u:"/resources/buying/first-home-toronto/"},
- {c:"buying",t:"Pre-construction condos: questions to ask before you sign",d:"Deposits, occupancy fees, assignment rules and closing adjustments.",u:"/resources/buying/pre-construction-condo-questions/"},
- {c:"selling",t:"What's worth fixing before you list",d:"Which repairs pay off, which don't, and how to get them done on time.",u:"/resources/selling/what-to-fix-before-listing/"},
- {c:"selling",t:"Offer dates vs. pricing to market",d:"How each strategy works and when each tends to make sense.",u:"/resources/selling/offer-date-vs-pricing-to-market/"},
- {c:"investment",t:"Investment property analysis: a step-by-step framework",d:"The six steps from property review to a decision, with the questions to ask at each.",u:"/invest/investment-analysis/"},
- {c:"investment",t:"How to calculate cash flow on a rental property",d:"From gross rent to what's left after expenses, vacancy and the mortgage.",u:"/invest/cash-flow/"},
- {c:"investment",t:"What is cap rate, and what it doesn't tell you",d:"How to calculate it, how to compare it, and its limits.",u:"/invest/cap-rate/"},
- {c:"investment",t:"Financing an investment property: what to ask",d:"Down payments, rates and lender rules, and the questions to bring to a mortgage professional.",u:"/resources/investment/financing/"},
- {c:"investment",t:"Income properties in the GTA: duplexes, triplexes and fourplexes",d:"How each type works, and what to verify about zoning and legal units.",u:"/invest/duplexes/ · /invest/triplexes/ · /invest/fourplexes/"},
- {c:"investment",t:"Cash flow vs. appreciation: choosing an investor strategy",d:"Two reasons to own a property, the trade-offs, and the risks of each.",u:"/resources/investment/investor-strategy/"},
- {c:"market",t:"Monthly market notes: North York",d:"First report using the monthly template, once a data source is connected.",u:"/resources/market/2026-10-north-york/"},
- {c:"market",t:"Monthly market notes: York Region",d:"Vaughan, Richmond Hill and Thornhill in one monthly summary.",u:"/resources/market/2026-10-york-region/"},
+ {c:"buying",t:"Buying your first home in Toronto",d:"Every cost on an $800,000 first home, and the six steps from pre-approval to keys.",u:"/resources/buying/first-home-toronto/",href:"#guide-first-home",pub:1},
+ {c:"buying",t:"Pre-construction condos: what to check before you sign",d:"The 10-day cooling-off period, deposit protection, occupancy fees and the red flags.",u:"/resources/buying/pre-construction-condo-questions/",href:"#guide-pre-construction",pub:1},
+ {c:"selling",t:"What's worth fixing before you list",d:"Fix, maybe, skip: where your prep money goes furthest, and a four-week plan.",u:"/resources/selling/what-to-fix-before-listing/",href:"#guide-fix-before-listing",pub:1},
+ {c:"selling",t:"Offer dates vs. pricing to market",d:"How each strategy works, the TRESA rules, and when each tends to make sense.",u:"/resources/selling/offer-date-vs-pricing-to-market/",href:"#guide-offer-date",pub:1},
+ {c:"investment",t:"Investment property analysis: a six-step framework",d:"The six steps from property review to a decision, with the questions at each.",u:"/resources/investment/investment-analysis/",href:"#guide-investment-analysis",pub:1},
+ {c:"investment",t:"How to calculate cash flow on a rental property",d:"From gross rent to what's left after vacancy, expenses and the mortgage.",u:"/resources/investment/cash-flow/",href:"#guide-cash-flow",pub:1},
+ {c:"investment",t:"What is cap rate, and what it doesn't tell you",d:"How to calculate it, how to compare with it, and its limits.",u:"/resources/investment/cap-rate/",href:"#guide-cap-rate",pub:1},
+ {c:"investment",t:"Financing an investment property: what to ask",d:"Down payments, lender rules, and the questions to bring to a mortgage professional.",u:"/resources/investment/financing/",href:"#guide-investment-financing",pub:1},
+ {c:"investment",t:"Duplexes, triplexes and fourplexes in the GTA",d:"What's permitted, how financing changes with unit count, and what to verify.",u:"/resources/investment/duplexes-triplexes-fourplexes/",href:"#guide-multiplexes",pub:1},
+ {c:"investment",t:"Cash flow vs. appreciation: choosing a strategy",d:"Two reasons to own a property, the trade-offs, and the risks of each.",u:"/resources/investment/investor-strategy/",href:"#guide-investor-strategy",pub:1},
+ {c:"market",t:"Market notes, October 2026: Toronto vs. York Region",d:"October sales, prices and inventory in the City of Toronto and York Region.",u:"/resources/market/2026-10-toronto-york-region/",href:"#guide-market-toronto-york",pub:1},
+ {c:"market",t:"Market notes, October 2026: Vaughan, Richmond Hill and Markham",d:"Vaughan, Richmond Hill and Markham side by side for October.",u:"/resources/market/2026-10-york-region/",href:"#guide-market-york-region",pub:1},
+ {c:"tips",t:"How to read a condo status certificate",d:"The pages that matter and the red flags to look for.",u:"/resources/tips/condo-status-certificate/",href:"#guide-status-certificate",pub:1},
+ {c:"tips",t:"Home inspections in the GTA: what to expect",d:"What inspectors check and how to use the report.",u:"/resources/tips/home-inspection-gta/",href:"#guide-home-inspection",pub:1},
+ {c:"tips",t:"Choosing a contractor after you buy",d:"Quotes, contracts, permits and payment schedules.",u:"/resources/tips/choosing-a-contractor/",href:"#guide-contractor",pub:1},
  {c:"areas",t:"North York neighbourhood guide",d:"Condo corridor, bungalow streets, transit and advice.",u:"/neighbourhoods/north-york/",href:"#north-york",pub:1},
  {c:"areas",t:"Thornhill: the Vaughan side vs. the Markham side",d:"How the two halves differ on taxes, services and housing.",u:"/neighbourhoods/thornhill/",href:"#thornhill",pub:1},
+ {c:"areas",t:"Richmond Hill neighbourhood guide",d:"Downtown Richmond Hill, Oak Ridges, the Yonge corridor and the GO line.",u:"/neighbourhoods/richmond-hill/",href:"#richmond-hill",pub:1},
  {c:"areas",t:"Vaughan neighbourhood guide",d:"Woodbridge, Maple, Kleinburg and the VMC.",u:"/neighbourhoods/vaughan/",href:"#vaughan",pub:1},
- {c:"tips",t:"How to read a condo status certificate",d:"The pages that matter and the red flags to look for.",u:"/resources/tips/condo-status-certificate/"},
- {c:"tips",t:"Home inspections in the GTA: what to expect",d:"What inspectors check and how to use the report.",u:"/resources/tips/home-inspection-gta/"},
- {c:"tips",t:"Choosing a contractor after you buy",d:"Quotes, contracts, permits and payment schedules.",u:"/resources/tips/choosing-a-contractor/"}];
+ {c:"areas",t:"Toronto neighbourhood guide",d:"Victorian semis, midtown family streets, downtown condos and the extra land transfer tax.",u:"/neighbourhoods/toronto/",href:"#toronto",pub:1}];
+
 let activeCat="all";
 function renderKC(){
   if(!document.getElementById("chips"))return;
-  document.getElementById("chips").innerHTML=[{id:"all",name:"All"},...CATS].map(c=>`<button class="chip" type="button" data-cat="${c.id}" aria-pressed="${c.id===activeCat}">${c.name}</button>`).join("");
-  document.getElementById("kc").innerHTML=CATS.filter(c=>activeCat==="all"||c.id===activeCat).map(c=>`<section class="kc-cat"><div class="intro"><h2>${c.name}</h2><p>${c.d}</p></div><div class="arts">${ARTS.filter(a=>a.c===c.id).map(a=>{const tag=a.href?"a":"div";return `<${tag} class="art"${a.href?` href="${a.href}"`:""}><h3>${a.t}</h3><span class="status${a.pub?" pub":""}">${a.pub?"Live":"Planned"}</span><p>${a.d}</p></${tag}>`}).join("")}</div></section>`).join("")}
+  const arts=ARTS.filter(a=>a.pub||!window.__publishedOnly);  // build.py sets __publishedOnly before capturing the page
+  const cats=CATS.filter(c=>arts.some(a=>a.c===c.id));
+  document.getElementById("chips").innerHTML=[{id:"all",name:"All"},...cats].map(c=>`<button class="chip" type="button" data-cat="${c.id}" aria-pressed="${c.id===activeCat}">${c.name}</button>`).join("");
+  document.getElementById("kc").innerHTML=cats.filter(c=>activeCat==="all"||c.id===activeCat).map(c=>`<section class="kc-cat"><div class="intro"><h2>${c.name}</h2><p>${c.d}</p></div><div class="arts">${arts.filter(a=>a.c===c.id).map(a=>{const tag=a.href?"a":"div";return `<${tag} class="art"${a.href?` href="${STATIC?a.u:a.href}"`:""}><h3>${a.t}</h3>${a.st?`<span class="status">${a.st}</span>`:""}<p>${a.d}</p></${tag}>`}).join("")}</div></section>`).join("")}
+/*<prototype>*/window.__renderKC=renderKC;/*</prototype>*/
 document.addEventListener("click",e=>{const b=e.target.closest("[data-cat]");if(!b||!document.getElementById("chips"))return;activeCat=b.dataset.cat;renderKC()});
+/* Farsi Resources tabs: the list is static (built from GUIDES_FA); the tabs only show or hide its sections. */
+document.addEventListener("click",e=>{const b=e.target.closest("[data-fa-cat]");if(!b)return;const c=b.dataset.faCat;document.querySelectorAll("[data-fa-cat]").forEach(x=>x.setAttribute("aria-pressed",String(x===b)));document.querySelectorAll("[data-fa-sec]").forEach(x=>x.hidden=c!=="all"&&x.dataset.faSec!==c)});
 
 /* ---------- Land transfer tax estimator ---------- */
 const ON=[[55000,.005],[250000,.01],[400000,.015],[2000000,.02],[Infinity,.025]];
@@ -2532,6 +2713,546 @@ document.querySelectorAll("[data-iv]").forEach(el=>{
   if(el.dataset.iv==="money")el.addEventListener("blur",()=>{const v=parseFloat(el.value.replace(/[^0-9.]/g,""));el.value=isFinite(v)?Math.round(v).toLocaleString("en-CA"):"0"})});
 
 /*<prototype>*/
+/* ---------- Guides: one data object per guide, rendered by renderGuide() into one reusable one-page layout ----------
+   To add a guide: copy an entry, change key/path/text, pick blocks from the list below, then add a card to ARTS (pub:1)
+   and rebuild. Block types: tldr, stats, steps, bar, check, flags, vs, tiers, formula, take, cards, table, p, faq.
+   Every figure needs a source in `sources` and a date in `verifiedAt`. "take" blocks are Ali's own view; edit freely. */
+const GCAT={buying:["Buying Guides","Buying guide"],selling:["Selling Guides","Selling guide"],investment:["Investment","Investor guide"],market:["GTA Market Insights","Market notes"],tips:["Real Estate Tips","Real estate tip"]};
+const SRC={
+ cmhcPrem:["CMHC, mortgage loan insurance cost","https://www.cmhc-schl.gc.ca/consumers/home-buying/mortgage-loan-insurance-for-consumers/cmhc-mortgage-loan-insurance-cost"],
+ cmhcQuick:["CMHC, mortgage loan insurance quick reference","https://assets.cmhc-schl.gc.ca/sf/project/cmhc/pdfs/factsheets/new/cmhc-quick-reference.pdf"],
+ cmhcIncome:["CMHC, Income Property (2–4 unit rentals)","https://www.cmhc-schl.gc.ca/professionals/project-funding-and-mortgage-financing/mortgage-loan-insurance/mortgage-loan-insurance-homeownership-programs/cmhc-income-property"],
+ fin2024:["Department of Finance Canada, mortgage reforms effective December 15, 2024","https://www.canada.ca/en/department-finance/news/2024/09/the-boldest-mortgage-reforms-in-decades.html"],
+ fhsa:["Canada Revenue Agency, First Home Savings Account","https://www.canada.ca/en/revenue-agency/services/tax/individuals/topics/first-home-savings-account.html"],
+ hbp:["Canada Revenue Agency, Home Buyers' Plan","https://www.canada.ca/en/revenue-agency/services/tax/individuals/topics/rrsps-related-plans/what-home-buyers-plan.html"],
+ onRefund:["Ontario, land transfer tax refunds for first-time homebuyers","https://www.ontario.ca/document/land-transfer-tax/land-transfer-tax-refunds-first-time-homebuyers"],
+ toRebate:["City of Toronto, MLTT rebates","https://www.toronto.ca/services-payments/property-taxes-utilities/municipal-land-transfer-tax-mltt/municipal-land-transfer-tax-mltt-rebate-opportunities/"],
+ onBuy:["Ontario, what to know before buying a home","https://www.ontario.ca/page/what-know-before-buying-home"],
+ enhr:["Canada Revenue Agency, Ontario enhanced new housing rebate (Notice 346)","https://www.canada.ca/en/revenue-agency/services/forms-publications/publications/notice346/ontario-enhanced-new-housing-rebate.html"],
+ fthbGst:["Gowling WLG, Ontario expands HST relief on new homes (April 2026)","https://gowlingwlg.com/en-ca/insights-resources/articles/2026/ontario-expands-scope-of-buyers-entitled-to-hst-relief-on-new-homes"],
+ caoPre:["Condominium Authority of Ontario, pre-construction condos","https://www.condoauthorityontario.ca/before-you-buy-or-rent-a-condo/buying-a-condo/pre-construction-condos/"],
+ tarion:["Tarion, deposit protection","https://www.tarion.com/homeowners/pre-possession-coverage"],
+ condoAct:["Condominium Act, 1998","https://www.ontario.ca/laws/statute/98c19"],
+ statusLL:["Legal Line, what is a status certificate","https://www.legalline.ca/legal-answers/what-is-a-status-certificate/"],
+ statusFSR:["FirstService Residential, status certificates in Ontario","https://www.fsresidential.com/ontario/news-events/articles/what-is-a-status-certificate-in-ontario/"],
+ recoFaq:["RECO, TRESA FAQs","https://www.reco.on.ca/agents-and-brokerages/tresa-explained/tresa-faqs/"],
+ reco42:["RECO Bulletin 4.2, managing a delayed offer presentation","https://www.reco.on.ca/getmedia/4a729e64-a54e-41b8-ad6c-16ae97499219/RECO-Bulletin-4-2-Managing-a-delayed-offer-presentation-process.pdf"],
+ trreb:["TRREB Market Watch, October 2026","https://trreb.ca/wp-content/files/market-stats/market-watch/mw2610.pdf"],
+ trrebNews:["TRREB news release, November 4, 2026","https://trreb.ca/wp-content/files/news_releases/news2026/nr_market_watch_1026.pdf"],
+ boc:["Bank of Canada, rate announcement, October 28, 2026","https://www.bankofcanada.ca/2026/10/fad-press-release-2026-10-28/"],
+ multiplex:["City of Toronto, multiplex housing","https://www.toronto.ca/city-government/planning-development/planning-studies-initiatives/multiplex-housing/"],
+ planningAct:["Ontario Planning Act","https://www.ontario.ca/laws/statute/90p13"],
+ rta:["Residential Tenancies Act, 2006","https://www.ontario.ca/laws/statute/06r17"],
+ reno:["Ontario, your rights when starting home renovations or repairs","https://www.ontario.ca/page/your-rights-when-starting-home-renovations-or-repairs"],
+ renoBiz:["Ontario, guide for home renovation businesses","https://www.ontario.ca/page/guide-home-renovation-and-roofing-businesses"],
+ constructionAct:["Construction Act","https://www.ontario.ca/laws/statute/90c30"]};
+const S=(...k)=>k.map(x=>SRC[x]);
+const GUIDES=[
+/* ===== BUYING ===== */
+{key:"guide-first-home",cat:"buying",path:"/resources/buying/first-home-toronto/",name:"Buying your first home in Toronto",
+ title:"Buying Your First Home in Toronto: Every Cost, Step by Step | Ali Bayat",
+ desc:"First-time buyer guide for Toronto and York Region: down payment, CMHC insurance, land transfer tax rebates, FHSA, closing costs and the six steps to keys.",
+ h1:"Buying your first home in Toronto: <em>every cost, step by step</em>",lede:"What you need in the bank, what you'll pay at closing, and the six steps from pre-approval to keys, using a real example.",
+ chips:["4-minute read","Toronto & York Region","Updated November 2026"],geo:"Ontario; City of Toronto; York Region",
+ card:"Every cost on an $800,000 first home, and the six steps from pre-approval to keys.",
+ blocks:[
+ {t:"tldr",items:["On an $800,000 home you need at least <b>$55,000</b> down, plus roughly <b>$22,000</b> in closing costs if it's in the City of Toronto.","First-time buyers get up to <b>$8,475</b> back on land transfer tax in Toronto, or up to <b>$4,000</b> in York Region.","You qualify at your rate <b>plus 2%</b> (or 5.25%, whichever is higher), so get pre-approved before you shop."]},
+ {t:"stats",h:"The numbers that matter",items:[["5%","Minimum down payment","On the first $500,000, then 10% up to $1.5M"],["$1.5M","Price cap for insured mortgages","At $1.5M and up, 20% down is required"],["30 yrs","Max amortization for first-time buyers","Insured mortgages, since Dec 15, 2024"],["$40,000","FHSA lifetime limit","$8,000 a year, tax-deductible going in, tax-free coming out"]]},
+ {t:"bar",h:"Cash you need for an $800,000 home in North York",intro:"Example: a first-time buyer with the minimum down payment, buying in the City of Toronto.",items:[["Down payment","5% of $500,000 + 10% of $300,000",55000,1],["Land transfer tax, after rebates","Ontario $12,475 − $4,000; Toronto $12,475 − $4,475",16475,2],["Sales tax on CMHC premium","8% PST on the $29,800 premium; can't be added to the mortgage",2384,4],["Legal fees and title insurance","Typical range $2,000–$3,000; get a quote",2500,5],["Home inspection","$350–$600 per Ontario",500,6]],total:["Cash needed at closing",76859],cap:"Not included: moving, prepaid property tax and condo fee adjustments, and appliances. In York Region the land transfer tax line drops to $8,475."},
+ {t:"steps",h:"Six steps from savings to keys",items:[["Get your money organized","Month 1","Open an FHSA if you haven't, check your credit report, and gather pay stubs and two years of tax notices. Couples can each use an FHSA and the Home Buyers' Plan."],["Get pre-approved","Month 1–2","A lender checks you can carry the payment at the qualifying rate. Ask for the rate to be held while you shop."],["Shop and compare","Month 2–4","Compare total cost, not just price: land transfer tax, condo fees and commute. Use the <a class=\"link\" href=\"#guide-land-transfer-tax\">land transfer tax calculator</a> on each address."],["Make an offer","Offer day","Most buyers include conditions on financing and inspection, and a status certificate review for condos. The deposit is usually due within 24 hours of acceptance."],["Firm up","About 5 business days","Clear your conditions: inspection, final mortgage approval, lawyer's review of the status certificate."],["Close","30–90 days later","Your lawyer registers the purchase, pays the land transfer tax and claims your rebates. You send the balance a few days before closing and get the keys."]]},
+ {t:"cards",h:"Where the down payment can come from",items:[["FHSA","Up to $40,000","Contributions are tax-deductible; qualifying withdrawals are tax-free."],["RRSP: Home Buyers' Plan","Up to $60,000","Withdrawals made 2026–2028 start repaying in the fifth year after, over 15 years."],["Both together","Allowed","You can use the FHSA and the Home Buyers' Plan for the same home if you meet both sets of rules."],["Gift from family","Common","Lenders usually want a signed gift letter and proof the funds are in your account."]]},
+ {t:"formula",h:"The stress test, in one line",eq:"You qualify at <em>your rate + 2%</em> or 5.25%, whichever is higher",rows:[["Mortgage (incl. $29,800 CMHC premium)","$774,800"],["Payment at an example 4.5%, 30 years","$3,907 / month"],["Payment you must qualify at (6.5%)","$4,853 / month"]],res:["Difference the lender tests you for","+$946 / month"],note:"Example rate only. Your lender quotes the real rate; the rule is CMHC's minimum qualifying rate."},
+ {t:"take",text:"Budget for the closing costs first, then the down payment. The $20,000 or so due at closing is the number first-time buyers most often leave out."},
+ {t:"faq",items:[["How much do I need for a down payment on an $800,000 home in Toronto?","At least $55,000: 5% of the first $500,000 ($25,000) plus 10% of the remaining $300,000 ($30,000). With less than 20% down, you also pay CMHC mortgage insurance."],["Do first-time buyers pay land transfer tax in Toronto?","Yes, but they can get rebates: up to $4,000 on the Ontario tax and up to $4,475 on Toronto's municipal tax, if they meet the eligibility rules. Your lawyer claims them at closing."],["Can I use both an FHSA and the Home Buyers' Plan?","Yes. CRA allows a qualifying FHSA withdrawal and a Home Buyers' Plan withdrawal for the same home if you meet the conditions of both."]]}],
+ cta:["Want this worked out for your budget?","I'll run these numbers for the exact homes you're looking at, in English or Farsi.","Talk to Ali about buying","buy"],
+ rel:["guide-land-transfer-tax","guide-status-certificate","guide-home-inspection","buy"],
+ sources:S("cmhcQuick","cmhcPrem","fin2024","cmhcIncome","fhsa","hbp","onRefund","toRebate","onBuy")},
+
+{key:"guide-pre-construction",cat:"buying",path:"/resources/buying/pre-construction-condo-questions/",name:"Pre-construction condos: what to check before you sign",
+ title:"Pre-Construction Condos in Ontario: What to Check Before You Sign | Ali Bayat",
+ desc:"Buying a pre-construction condo in Toronto, Vaughan or Richmond Hill: the 10-day cooling-off period, deposit protection, occupancy fees and red flags.",
+ h1:"Pre-construction condos: <em>what to check before you sign</em>",lede:"You have ten days to back out. Here's what to check in them, what your deposit is protected for, and the costs that show up at occupancy.",
+ chips:["4-minute read","Ontario rules","Updated November 2026"],geo:"Ontario; Vaughan; Richmond Hill; City of Toronto",
+ card:"The 10-day cooling-off period, deposit protection, occupancy fees and the red flags.",
+ blocks:[
+ {t:"tldr",items:["You can cancel a new condo purchase within <b>10 days</b> of receiving the signed agreement and disclosure statement, for any reason.","Tarion protects condo deposits only up to <b>$20,000</b>. Ask how the rest is held.","During interim occupancy you pay a monthly fee, not a mortgage. Budget for it."]},
+ {t:"stats",h:"Four numbers to know",items:[["10 days","Cooling-off period","Starts once you have the signed agreement, disclosure statement and the Condo Buyers' Guide"],["$20,000","Tarion deposit protection","For condos; deposits must also be held in trust"],["30 days","To walk away after a missed outside date","If the builder misses the outside occupancy date"],["$80,000","Max Ontario HST relief","New homes, agreements signed Apr 1, 2026 to Mar 31, 2027, per CRA"]]},
+ {t:"steps",h:"What happens, and when",items:[["Sign and start the clock","Day 0","You sign, then receive the disclosure statement and the Condo Buyers' Guide. The 10 days start once you have all of them."],["Lawyer review","Days 1–10","Have a real estate lawyer read the agreement, the Statement of Critical Dates and the closing adjustments before day 10."],["Pay deposits","Months 0–24","Deposits are usually paid in instalments. Keep proof of every payment."],["Interim occupancy","Building ready","You move in and pay an occupancy fee: interest on the unpaid price, estimated property tax and estimated common expenses."],["Registration and final closing","Months later","The condo is registered, title transfers to you, your mortgage starts and closing adjustments are charged."]]},
+ {t:"check",h:"Check these in your 10 days",items:[["The builder's record","Look it up in the HCRA Ontario Builder Directory: licence, warranty claims and cancelled projects."],["Early termination conditions","When the builder can cancel, for example if not enough units sell or financing falls through."],["Closing adjustments","Ask for caps on development charges, utility hookups and other levies charged at closing."],["Assignment clause","Whether you can sell before closing, the fee, and whether the builder must consent."],["Occupancy fee estimate","Ask for the expected monthly fee and how long occupancy usually lasts in their buildings."],["Mortgage at closing","Your lender appraises at closing, not at signing. If values fall, you cover the gap."]]},
+ {t:"flags",h:"Red flags",items:[["Uncapped levies","Closing costs with no upper limit can add thousands."],["Deposits over $20,000 with no answer on how they're protected","Ask the builder's lawyer in writing."],["Pressure to sign before you've read the disclosure statement","The 10 days exist for a reason."],["A builder with past cancelled projects","Check the directory before you sign, not after."]]},
+ {t:"p",h:"Today's market context",text:"In October 2026, GTA condo apartments sold for an average of $621,400, down 5.8% from a year earlier, per TRREB. A unit bought at the top of the market can appraise for less at closing, which is why the mortgage line in your checklist matters."},
+ {t:"take",text:"Read the closing adjustments schedule before anything else. That's where the surprise costs live, and it's the part buyers skip."},
+ {t:"faq",items:[["Can I cancel a pre-construction condo in Ontario?","Yes, within 10 days of receiving the signed agreement of purchase and sale, the disclosure statement and Ontario's Condo Buyers' Guide, without giving a reason. After that, you're generally bound by the agreement."],["Is my pre-construction condo deposit protected?","Deposits must be held in trust, and Tarion protects up to $20,000 of a condo deposit if the builder doesn't return it. Ask how any amount above $20,000 is protected."],["What is an interim occupancy fee?","A monthly fee you pay after moving in but before the condo is registered. It is capped at interest on the unpaid purchase price plus estimated property taxes and common expenses for the unit."]]}],
+ cta:["Looking at a pre-construction unit?","Send me the agreement and I'll walk you through the deposit schedule, adjustments and assignment terms before your 10 days run out.","Talk to Ali","buy"],
+ rel:["guide-first-home","guide-status-certificate","vaughan","richmond-hill"],
+ sources:S("caoPre","tarion","onBuy","enhr","fthbGst","trreb")},
+
+/* ===== SELLING ===== */
+{key:"guide-fix-before-listing",cat:"selling",path:"/resources/selling/what-to-fix-before-listing/",name:"What's worth fixing before you list",
+ title:"What to Fix Before Selling Your Home in Toronto | Ali Bayat",
+ desc:"Which repairs pay off before you sell in Toronto and York Region, which don't, a four-week prep plan, and the paperwork buyers will ask for.",
+ h1:"What's worth fixing <em>before you list</em>",lede:"Buyers have more choice than they did a few years ago, so condition matters. Here's where your money goes furthest.",
+ chips:["3-minute read","For sellers","Updated November 2026"],geo:"City of Toronto; York Region",
+ card:"Fix, maybe, skip: where your prep money goes furthest, and a four-week plan.",
+ blocks:[
+ {t:"tldr",items:["Fix anything an inspector would flag: leaks, broken fixtures, missing alarms.","Clean, declutter, paint and light. These cost the least and change photos the most.","Skip full renovations. You rarely get the cost back, and they delay your launch."]},
+ {t:"stats",h:"Why condition matters right now",items:[["4.6","Months of inventory, GTA","October 2026, trend; buyers have options"],["31 days","Average days on market","GTA, October 2026"],["97%","Sold price vs. list price","GTA average, October 2026"]]},
+ {t:"tiers",h:"Fix, maybe, skip",items:[["Fix","c3","Things buyers and inspectors will find",["Leaks, drips and water stains","Broken windows, doors, locks and fixtures","Working smoke and carbon monoxide alarms","Burnt-out bulbs and loose outlet covers"]],["Maybe","c4","Worth it if the gap is obvious in photos",["Fresh neutral paint in busy rooms","Worn carpet in one main room","Dated light fixtures and cabinet hardware","Front door, porch and garden tidy-up"]],["Skip","c5","Rarely pays back before a sale",["Full kitchen or bathroom renovation","High-end custom finishes","Finishing a basement just to sell","Big landscaping projects"]]]},
+ {t:"steps",h:"A four-week prep plan",items:[["Walk-through and list","Week 1","Walk the home with your agent, make a fix list and get quotes. Consider a pre-listing inspection ($350–$600) so nothing surprises you on offer night."],["Repairs","Week 2","Book trades for the fix list. Use a written contract for any job over $50."],["Declutter and paint","Week 3","Pack a third of what's in each room. Paint, deep clean, swap bulbs to one colour temperature."],["Photos and launch","Week 4","Final clean, staging touches, professional photos, floor plan, then go live."]]},
+ {t:"check",h:"Paperwork buyers will ask for",items:[["Permits for past work","Additions, basements, decks and structural changes."],["Rental equipment","Water heater, furnace or AC rental contracts and buy-out amounts."],["Utility costs","A year of heating, hydro and water bills."],["Upgrades with dates","Roof, windows, furnace and AC, with receipts or warranties."]]},
+ {t:"take",text:"Spend on what shows up in photos and what an inspector would write down. Everything else is a negotiation you can handle on offer day."}],
+ cta:["Want a fix list for your home?","I'll walk through with you and tell you what's worth doing for your street and price point, and what isn't.","Book a walk-through","sell"],
+ rel:["guide-offer-date","guide-contractor","guide-home-inspection","sell"],
+ sources:S("trreb","onBuy","reno")},
+
+{key:"guide-offer-date",cat:"selling",path:"/resources/selling/offer-date-vs-pricing-to-market/",name:"Offer dates vs. pricing to market",
+ title:"Offer Date vs. Pricing to Market: Which Selling Strategy? | Ali Bayat",
+ desc:"How holding offers works under Ontario's TRESA rules, when listing at market value works better, and what October 2026 GTA data says about each strategy.",
+ h1:"Offer dates vs. <em>pricing to market</em>",lede:"Two ways to launch a listing. Which works depends on your home type and how much competition buyers face right now.",
+ chips:["3-minute read","For sellers","Ontario rules"],geo:"City of Toronto; York Region",
+ card:"How each strategy works, the TRESA rules, and when each tends to make sense.",
+ blocks:[
+ {t:"tldr",items:["An offer date lists below value and holds offers to a set day to create competition. It only works when buyers are competing.","Pricing to market lists at expected value and takes offers any time. It suits higher inventory.","In October 2026, semis sold at 101% of list on average, detached homes at 97%."]},
+ {t:"vs",h:"Side by side",a:["Offer date","List below expected value; review all offers at one set time.",["Few similar homes for sale nearby","Property types selling over asking","Homes that photograph and show well"],["If no one bids, you've anchored buyers low","Bully offers need a plan in writing","Relisting at a higher price looks like a failed sale"]],b:["Price to market","List at expected value; review offers as they arrive.",["Plenty of choice for buyers","Condos and higher-priced homes","Sellers who want a predictable process"],["Overpricing makes the home sit","Days on market become a negotiating point","Less chance of a bidding war"]]},
+ {t:"table",h:"What October 2026 says by home type",intro:"GTA, all TRREB areas. Higher sold-to-list and fewer days on market mean more buyer competition.",head:["Home type","Avg. sold vs. list","Avg. days on market","Leans toward"],rows:[["Semi-detached","101%","22","Offer date can work"],["Townhouse (freehold)","99%","28","Depends on the street"],["Detached","97%","29","Price to market"],["All home types","97%","31","Price to market"]],note:"Source: TRREB Market Watch, October 2026."},
+ {t:"cards",h:"The rules under TRESA",items:[["Written direction","Required","Your agent can hold offers only on your written instructions."],["Bully offers","Plan ahead","Your direction must say how pre-emptive offers will be handled. A listing note alone isn't enough."],["Changing the date","New direction","You can change it, but everyone who showed interest must be told in writing."],["Sharing offer details","Your choice","You can direct your brokerage to share offer details, without names, with competing buyers."]]},
+ {t:"take",text:"Choose the strategy from the numbers for your home type and street, not from what worked for a neighbour two years ago."}],
+ cta:["Not sure which fits your home?","I'll pull recent sales on your street and show you which approach the data supports.","Ask Ali about your strategy","sell"],
+ rel:["guide-fix-before-listing","guide-market-toronto-york","sell","guide-market-york-region"],
+ sources:S("trreb","reco42","recoFaq")},
+
+/* ===== INVESTMENT ===== */
+{key:"guide-investment-analysis",cat:"investment",path:"/resources/investment/investment-analysis/",name:"Investment property analysis: a six-step framework",
+ title:"How to Analyze an Investment Property in the GTA: 6 Steps | Ali Bayat",
+ desc:"A six-step framework for analyzing rental properties in Toronto and York Region: legal units, rent, expenses, financing, returns and risks.",
+ h1:"Investment property analysis: <em>a six-step framework</em>",lede:"The six questions I answer before recommending any income property, in the order that saves you the most time.",
+ chips:["3-minute read","For investors","Toronto & York Region"],geo:"Toronto & York Region",
+ card:"The six steps from property review to a decision, with the questions at each.",
+ blocks:[
+ {t:"tldr",items:["Start with what's legal. Rent from a unit that isn't legal is a risk, not income.","Use real rent comparables and full expenses, including vacancy and repairs.","Decide on cash flow and risk, not on appreciation you hope for."]},
+ {t:"steps",h:"The six steps",items:[["The property and its legal status","Step 1","How many units are legal and permitted? Any open permits or work orders? Units first occupied after November 15, 2018 aren't under the rent increase guideline."],["Rent","Step 2","Comparable rents for the same unit type nearby, current leases, and how long tenants have stayed."],["Expenses","Step 3","Property tax, insurance, utilities you pay, condo fees, repairs, vacancy and management."],["Financing","Step 4","Down payment, rate, amortization, and how much of the rent the lender will count."],["Returns","Step 5","Net operating income, cap rate, monthly cash flow and cash-on-cash return."],["Risks and exit","Step 6","What happens if rates rise, rent falls or a big repair comes up, and who buys it from you later."]]},
+ {t:"cards",h:"Go deeper on each step",items:[["Step 2–3","Cash flow","<a class=\"link\" href=\"#guide-cash-flow\">How to calculate cash flow</a>, with a worked example."],["Step 5","Cap rate","<a class=\"link\" href=\"#guide-cap-rate\">What cap rate tells you</a>, and what it doesn't."],["Step 4","Financing","<a class=\"link\" href=\"#guide-investment-financing\">What lenders require</a> for rentals and 2–4 unit homes."],["Step 1","Multi-unit homes","<a class=\"link\" href=\"#guide-multiplexes\">Duplexes, triplexes and fourplexes</a> and what to verify."]]},
+ {t:"take",text:"Do steps 1 and 3 before you get excited about the rent. A unit that isn't legal, or expenses the listing left out, can sink a deal that looks good on paper."}],
+ cta:["Have a property in mind?","Send the address or listing and I'll run all six steps for you.","Request an analysis","invest"],
+ rel:["invest","guide-cash-flow","guide-cap-rate","guide-investor-strategy"],
+ sources:S("rta","cmhcIncome","multiplex")},
+
+{key:"guide-cash-flow",cat:"investment",path:"/resources/investment/cash-flow/",name:"How to calculate cash flow on a rental property",
+ title:"How to Calculate Rental Property Cash Flow (Toronto Example) | Ali Bayat",
+ desc:"Rental cash flow step by step, from gross rent to what's left after vacancy, expenses and the mortgage, with a $600,000 GTA condo example.",
+ h1:"How to calculate cash flow <em>on a rental property</em>",lede:"From gross rent to what's left after vacancy, expenses and the mortgage, using a $600,000 condo as the example.",
+ chips:["3-minute read","For investors","Worked example"],geo:"Toronto & York Region",
+ card:"From gross rent to what's left after vacancy, expenses and the mortgage.",
+ blocks:[
+ {t:"tldr",items:["Cash flow = rent − vacancy − operating expenses − mortgage payments.","At 20% down and today's rates, many GTA condos are cash-flow negative.","Part of every payment pays down the loan. That's equity, but it isn't cash in your pocket."]},
+ {t:"bar",h:"Where $31,800 of rent goes",intro:"Example: a $600,000 condo (the GTA average condo apartment sold for $621,400 in October 2026, per TRREB), 20% down, $2,650/month rent. Rent, fees and the rate are assumptions for illustration.",items:[["Vacancy allowance","3% of gross rent",954,5],["Condo fees","$600 a month",7200,2],["Property tax","Estimate",3000,6],["Insurance and repairs","$500 insurance, $1,000 repairs",1500,4],["Mortgage payments","$480,000 at an example 4.5%, 25 years",31880,1]],total:["Annual cash flow","−$12,734"],totalNeg:1,cap:"Gross rent $31,800 a year. Net operating income (rent minus vacancy and expenses, before the mortgage) is $19,146."},
+ {t:"stats",h:"The same deal, three ways",items:[["−$1,061","Per month, cash flow","What you top up from your own pocket"],["$10,697","Loan paid down, year 1","Part of your payments builds equity"],["−$2,037","Cash flow + paydown","The real cost of holding, before any price change"]]},
+ {t:"check",h:"Expenses people forget",items:[["Vacancy","Even one month empty is 8% of a year's rent."],["Repairs and replacements","Appliances, flooring, paint between tenants."],["Special assessments","Condo buildings can levy owners for major repairs."],["Closing costs","Land transfer tax and legal fees come out of your cash up front."]]},
+ {t:"take",text:"Negative cash flow isn't automatically a bad deal, but you should know the exact monthly number before you buy, and be sure you can carry it if rates rise."}],
+ cta:["Want this run on a real listing?","Send me the address and I'll build the full cash flow with real rents and fees.","Request an analysis","invest"],
+ rel:["guide-cap-rate","guide-investment-financing","guide-investor-strategy","invest"],
+ sources:S("cmhcIncome","trreb")},
+
+{key:"guide-cap-rate",cat:"investment",path:"/resources/investment/cap-rate/",name:"What is cap rate, and what it doesn't tell you",
+ title:"What Is Cap Rate? How to Calculate It, and Its Limits | Ali Bayat",
+ desc:"Cap rate explained with a GTA example: how to calculate it, how to compare properties with it, and the four things it leaves out.",
+ h1:"What is cap rate, <em>and what it doesn't tell you</em>",lede:"Cap rate is the quickest way to compare income properties. It's also easy to misread.",
+ chips:["2-minute read","For investors","Formula + example"],geo:"Toronto & York Region",
+ card:"How to calculate it, how to compare with it, and its limits.",
+ blocks:[
+ {t:"formula",h:"The formula",eq:"Cap rate = <em>net operating income</em> ÷ price",rows:[["Gross rent","$31,800"],["− Vacancy (3%)","−$954"],["− Operating expenses","−$11,700"],["= Net operating income","$19,146"],["÷ Price","$600,000"]],res:["Cap rate","3.19%"],note:"Same example as the cash flow guide. Net operating income excludes mortgage payments."},
+ {t:"cards",h:"What cap rate leaves out",items:[["Financing","Not included","Two buyers of the same property get the same cap rate, whatever their mortgage."],["Price changes","Not included","Appreciation or a falling market isn't in the number."],["Condition","Not included","A roof due next year doesn't show up in this year's NOI."],["Rent upside","Not included","Below-market rents, or units first occupied after Nov 15, 2018 that aren't under the rent guideline."]]},
+ {t:"vs",h:"Cap rate vs. cash-on-cash return",a:["Cap rate","NOI ÷ price",["Comparing properties to each other","Quick screening of listings"],["Ignores your mortgage and down payment"]],b:["Cash-on-cash","Annual cash flow ÷ cash you invested",["Comparing to other uses of your money","Seeing the effect of your financing"],["Changes with every rate and down payment"]]},
+ {t:"take",text:"Use cap rate to compare listings, then cash flow to decide. A property can have a decent cap rate and still cost you every month."}],
+ cta:["Comparing a few properties?","Send me the listings and I'll put their cap rates and cash flow side by side.","Request an analysis","invest"],
+ rel:["guide-cash-flow","guide-investment-analysis","guide-investor-strategy","invest"],
+ sources:S("rta")},
+
+{key:"guide-investment-financing",cat:"investment",path:"/resources/investment/financing/",name:"Financing an investment property: what to ask",
+ title:"Financing an Investment Property in Ontario: Down Payments & Rules | Ali Bayat",
+ desc:"Minimum down payments for rental and 2–4 unit properties, how much rent lenders count, qualifying rules, and the questions to ask your mortgage professional.",
+ h1:"Financing an investment property: <em>what to ask</em>",lede:"Down payments, how much of the rent a lender will count, and the questions to bring to your mortgage professional.",
+ chips:["3-minute read","For investors","CMHC rules"],geo:"Canada; Ontario",
+ card:"Down payments, lender rules, and the questions to bring to a mortgage professional.",
+ blocks:[
+ {t:"tldr",items:["Live in it? A 1–2 unit home can be bought with as little as 5% down; 3–4 units need 10%.","Don't live in it? Plan on at least 20% down.","Lenders count only part of the rent, often 50% for insured rental loans."]},
+ {t:"table",h:"Minimum down payment by situation",head:["Situation","Minimum down","Notes"],rows:[["You live in it, 1–2 units","5% of first $500,000, 10% above","Insured; price under $1.5M"],["You live in it, 3–4 units","10%","Insured; up to 90% loan-to-value"],["Rental you don't live in, 2–4 units","20%","CMHC Income Property; price under $1M; 25-year max"],["Rental condo or house","20%","Typical for non-owner-occupied"]],note:"CMHC rules. Lenders can require more."},
+ {t:"stats",h:"Lender rules for 2–4 unit rentals (CMHC)",items:[["50%","Of gross rent counted","Toward qualifying, on CMHC Income Property loans"],["39% / 44%","Max GDS / TDS","Debt service ratios"],["600","Minimum credit score",""],["+2%","Qualifying rate","Your rate + 2%, or 5.25%, whichever is higher"]]},
+ {t:"check",h:"Questions to ask your mortgage professional",items:[["How much rent will you count?","And whether it's added to income or subtracted from expenses."],["What if I own other properties?","How existing mortgages and rents affect what you can borrow."],["Prepayment and penalty terms","What it costs to sell or refinance early."],["Fixed or variable?","The Bank of Canada raised its rate to 2.5% on October 28, 2026."]]},
+ {t:"take",text:"Talk to a mortgage professional before you shop, not after you find the property. The rent they'll count decides what you can buy."}],
+ cta:["Need a mortgage professional?","I can introduce you to people I work with, and run the numbers on the property alongside them.","Talk to Ali","invest"],
+ rel:["guide-multiplexes","guide-cash-flow","guide-investment-analysis","invest"],
+ sources:S("cmhcQuick","cmhcIncome","boc")},
+
+{key:"guide-multiplexes",cat:"investment",path:"/resources/investment/duplexes-triplexes-fourplexes/",name:"Duplexes, triplexes and fourplexes in the GTA",
+ title:"Duplexes, Triplexes & Fourplexes in Toronto and York Region | Ali Bayat",
+ desc:"Buying a multi-unit home in the GTA: Toronto's multiplex rules, Ontario's three-unit permission, financing by unit count, and how to verify units are legal.",
+ h1:"Duplexes, triplexes and fourplexes <em>in the GTA</em>",lede:"Multi-unit homes can pay their own way, if the units are legal. Here's what's permitted and what to check.",
+ chips:["3-minute read","For investors","Toronto & York Region"],geo:"City of Toronto; York Region",
+ card:"What's permitted, how financing changes with unit count, and what to verify.",
+ blocks:[
+ {t:"stats",h:"What's permitted",items:[["4 units","Toronto, citywide","Multiplexes permitted as of right in low-rise neighbourhoods"],["6 units","Parts of Toronto","Toronto & East York district and Ward 23; in force since 2025"],["3 units","Most of Ontario","On serviced residential lots, under the Planning Act"]]},
+ {t:"tiers",h:"How unit count changes things",items:[["Duplex","c1","2 units",["Insured with 5% down if you live in one unit","Often a house with a legal second suite","Simplest to manage"]],["Triplex","c2","3 units",["10% minimum down if you live in it","Fire separation and code rules get stricter","More rent, more management"]],["Fourplex","c3","4 units",["Largest size still financed as residential","10% down owner-occupied, 20% if not","Check zoning, parking and permits closely"]]]},
+ {t:"check",h:"Verify before you count the rent",items:[["Permits and final inspections","For each unit, from the city's building department."],["Zoning for that address","Permissions vary; check the specific lot."],["Fire separations and exits","Required between units; costly to add later."],["Existing leases","Rents, start dates, and whether units are under the rent guideline."],["Separate meters","Who pays utilities changes your expenses."],["Insurance","Confirm the insurer knows the number of units."]]},
+ {t:"flags",h:"Red flags in listings",items:[["\"Potential\" or \"in-law\" suite","Usually means it isn't a legal unit."],["No permits on file for a basement apartment","You inherit the risk."],["Rents far above comparables","Ask for leases and payment history."]]},
+ {t:"take",text:"Ask for permits before you ask for rents. A legal fourplex and a house with three unpermitted units are different investments at the same price."}],
+ cta:["Looking at a multi-unit property?","I'll check what's legal and run the numbers before you make an offer.","Request an analysis","invest"],
+ rel:["guide-investment-financing","guide-investment-analysis","toronto","invest"],
+ sources:S("multiplex","planningAct","cmhcQuick","cmhcIncome","rta")},
+
+{key:"guide-investor-strategy",cat:"investment",path:"/resources/investment/investor-strategy/",name:"Cash flow vs. appreciation: choosing a strategy",
+ title:"Cash Flow vs. Appreciation: Choosing a Real Estate Strategy | Ali Bayat",
+ desc:"Two reasons to own investment property in the GTA, the trade-offs and risks of each, and what falling prices in 2026 mean for appreciation plans.",
+ h1:"Cash flow vs. appreciation: <em>choosing a strategy</em>",lede:"Two different reasons to own a property. Knowing which one you're buying for changes what you buy.",
+ chips:["2-minute read","For investors","GTA market, 2026"],geo:"Toronto & York Region",
+ card:"Two reasons to own a property, the trade-offs, and the risks of each.",
+ blocks:[
+ {t:"vs",h:"Two strategies",a:["Cash flow","Rent covers every cost, with money left over.",["You want income now","You can't carry a monthly shortfall","Multi-unit homes, larger down payments"],["Fewer properties qualify in the GTA","More management work","Tenant and repair risk"]],b:["Appreciation","You accept a shortfall today for value growth later.",["Long time horizon","Stable income to cover shortfalls","Areas with transit or growth plans"],["Prices can fall","Higher rates widen the shortfall","Gains only show up when you sell"]]},
+ {t:"stats",h:"Appreciation isn't guaranteed",items:[["−4.3%","GTA benchmark price","MLS® HPI composite, Oct 2026 vs. Oct 2025"],["−2.7%","GTA average price","Year over year, October 2026"],["2.5%","Bank of Canada policy rate","Raised October 28, 2026"]]},
+ {t:"check",h:"Questions to decide",items:[["How much can I top up each month?","For how many years, if rates rise?"],["When might I need this money back?","A short horizon favours cash flow."],["How much work do I want?","More units means more calls."],["What's my plan if prices fall 10%?","Hold, rent longer, or sell?"]]},
+ {t:"take",text:"Pick one strategy per property and buy for it. The deals that go wrong are the ones bought for appreciation that the owner can't afford to hold."}],
+ cta:["Not sure which strategy fits you?","Let's talk through your timeline and budget before you look at listings.","Talk to Ali","invest"],
+ rel:["guide-cash-flow","guide-cap-rate","guide-market-toronto-york","invest"],
+ sources:S("trreb","trrebNews","boc")},
+
+/* ===== MARKET ===== */
+{key:"guide-market-toronto-york",cat:"market",path:"/resources/market/2026-10-toronto-york-region/",name:"Market notes, October 2026: Toronto vs. York Region",
+ title:"GTA Real Estate Market, October 2026: Toronto vs. York Region | Ali Bayat",
+ desc:"October 2026 TRREB numbers for the City of Toronto and York Region: sales, prices, days on market and inventory, and what they mean for buyers and sellers.",
+ h1:"Market notes, October 2026: <em>Toronto vs. York Region</em>",lede:"Sales and prices were down from a year ago, and buyers had more choice. Here's how the two sides of Steeles compare.",
+ chips:["2-minute read","TRREB data","Released November 4, 2026"],geo:"City of Toronto; York Region",
+ card:"October sales, prices and inventory in the City of Toronto and York Region.",
+ blocks:[
+ {t:"stats",h:"GTA at a glance, October 2026",items:[["5,603","Sales","−7.9% vs. October 2025"],["$1,024,108","Average price","−2.7% year over year"],["−4.3%","MLS® HPI benchmark","Year over year"],["4.6","Months of inventory","Trend; more choice for buyers"]]},
+ {t:"table",h:"Toronto vs. York Region",head:["October 2026","City of Toronto","York Region"],rows:[["Sales","2,184","1,038"],["Average price","$1,075,627","$1,142,789"],["Median price","$835,000","$1,050,000"],["Sold vs. list price","98%","97%"],["Average days on market","30","33"],["Months of inventory","4.6","5.0"]],note:"Source: TRREB Market Watch, October 2026. All home types."},
+ {t:"table",h:"GTA by home type",head:["Home type","Sales","Average price","Avg. price vs. Oct 2025"],rows:[["Detached","2,693","$1,310,627","−3.2%"],["Semi-detached","546","$1,024,907","−0.8%"],["Freehold townhouse","508","$905,385","−5.0%*"],["Condo apartment","1,385","$621,400","−5.8%"]],note:"*TRREB reports townhouses (freehold and condo) together for the year-over-year change."},
+ {t:"cards",h:"What it means",items:[["Buyers","More choice, more time","Inventory is up and prices are lower than last year. Conditions on financing and inspection are realistic again."],["Sellers","Price for today","Buyers are comparing. Price from recent sales, not last year's peak, and prepare the home well."],["Investors","Rates moved up","The Bank of Canada raised its rate to 2.5% on October 28. Re-run cash flow at today's rates."]]},
+ {t:"take",text:"Averages hide a lot. Semis are still selling over asking while condos sit, so look at your property type and street before you decide anything."}],
+ cta:["Want the numbers for your street?","I'll pull recent sales and active listings for your exact area and home type.","Ask Ali","question"],
+ rel:["guide-market-york-region","guide-offer-date","north-york","toronto"],
+ sources:S("trreb","trrebNews","boc")},
+
+{key:"guide-market-york-region",cat:"market",path:"/resources/market/2026-10-york-region/",name:"Market notes, October 2026: Vaughan, Richmond Hill and Markham",
+ title:"York Region Real Estate, October 2026: Vaughan, Richmond Hill, Markham | Ali Bayat",
+ desc:"October 2026 TRREB numbers for Vaughan, Richmond Hill and Markham: sales, average and median prices, days on market and months of inventory.",
+ h1:"Market notes, October 2026: <em>Vaughan, Richmond Hill and Markham</em>",lede:"Three York Region cities side by side, with what the numbers mean if you're buying or selling north of Steeles.",
+ chips:["2-minute read","TRREB data","Released November 4, 2026"],geo:"Vaughan; Richmond Hill; Markham",
+ card:"Vaughan, Richmond Hill and Markham side by side for October.",
+ blocks:[
+ {t:"stats",h:"York Region, October 2026",items:[["1,038","Sales","All home types"],["$1,050,000","Median price","Average $1,142,789"],["33 days","Average days on market","GTA average is 31"],["5.0","Months of inventory","Higher than the GTA's 4.6"]]},
+ {t:"table",h:"Three cities side by side",head:["October 2026","Vaughan","Richmond Hill","Markham"],rows:[["Sales","263","185","260"],["Average price","$1,201,704","$1,193,772","$1,117,006"],["Median price","$1,135,000","$1,150,000","$1,050,000"],["Sold vs. list","97%","98%","98%"],["Avg. days on market","33","31","30"],["Months of inventory","4.8","5.5","4.1"]],note:"Source: TRREB Market Watch, October 2026. All home types. Thornhill is split between Vaughan and Markham."},
+ {t:"cards",h:"What stands out",items:[["Markham","Tightest of the three","Lowest inventory (4.1 months) and fastest sales."],["Richmond Hill","Most choice","5.5 months of inventory: buyers can take their time and negotiate."],["Vaughan","Highest average price","But homes took a bit longer to sell, 33 days on average."]]},
+ {t:"take",text:"If you're comparing a home in Vaughan with one in North York, remember York Region has no municipal land transfer tax. That can be worth $16,000 or more at closing."}],
+ cta:["Buying or selling in York Region?","I'll show you what similar homes on your street sold for this fall.","Ask Ali","question"],
+ rel:["guide-market-toronto-york","guide-land-transfer-tax","vaughan","richmond-hill"],
+ sources:S("trreb","trrebNews")},
+
+/* ===== TIPS ===== */
+{key:"guide-status-certificate",cat:"tips",path:"/resources/tips/condo-status-certificate/",name:"How to read a condo status certificate",
+ title:"How to Read a Condo Status Certificate in Ontario | Ali Bayat",
+ desc:"What's in an Ontario condo status certificate, the pages that matter, the red flags to look for, and how the 10-day delivery rule affects your offer.",
+ h1:"How to read a <em>condo status certificate</em>",lede:"The condo's financial health in one package. Here are the pages that matter and the red flags to look for.",
+ chips:["2-minute read","Resale condos","Ontario rules"],geo:"Ontario",
+ card:"The pages that matter and the red flags to look for.",
+ blocks:[
+ {t:"stats",h:"The basics",items:[["10 days","For the condo to deliver it","After it receives the request and payment"],["$100","Maximum fee","Including taxes; rush service can cost extra"],["Condition","Make your offer subject to it","With time for your lawyer to review"]]},
+ {t:"cards",h:"The pages that matter",items:[["Common expenses","Fees and arrears","Current monthly fees, any increase planned, and anything owed on the unit."],["Reserve fund","The savings account","The balance and the latest reserve fund study. Is the plan on track?"],["Special assessments","Extra charges","Any levied or planned, and why."],["Legal proceedings","Lawsuits","Any judgments or court actions involving the corporation."],["Budget and financials","Where money goes","The current budget and audited statements."],["Rules and insurance","Your daily life","Declaration, by-laws and rules (pets, rentals, short-term stays) and the insurance policies."]]},
+ {t:"flags",h:"Red flags",items:[["Reserve fund below the study's plan","Often leads to fee hikes or a special assessment."],["A special assessment, or one being discussed","Ask who pays: you or the seller."],["Ongoing lawsuits","Can affect fees, insurance and resale."],["Large fee increase announced","Budget for it now."],["Rules that block your plans","Rentals, pets or renovations you're counting on."]]},
+ {t:"take",text:"Give your lawyer the full certificate, not a summary, and give them time. A resale condo offer should always include a status certificate condition."}],
+ cta:["Buying a resale condo?","I'll make sure your offer has the right conditions and time for review.","Talk to Ali","buy"],
+ rel:["guide-first-home","guide-home-inspection","guide-pre-construction","north-york"],
+ sources:S("statusFSR","statusLL","condoAct","onBuy")},
+
+{key:"guide-home-inspection",cat:"tips",path:"/resources/tips/home-inspection-gta/",name:"Home inspections in the GTA: what to expect",
+ title:"Home Inspections in Toronto & the GTA: What to Expect | Ali Bayat",
+ desc:"What a home inspection in Ontario costs, what inspectors check, what they don't, and how to use the report in your offer and negotiation.",
+ h1:"Home inspections in the GTA: <em>what to expect</em>",lede:"What it costs, what the inspector looks at, what they don't, and how to use the report.",
+ chips:["2-minute read","For buyers and sellers","Ontario"],geo:"Ontario; City of Toronto; York Region",
+ card:"What inspectors check and how to use the report.",
+ blocks:[
+ {t:"stats",h:"Before you book",items:[["$350–$600","Typical fee","Per the Government of Ontario; larger homes cost more"],["Go along","Attend the inspection","Ontario recommends it; ask questions as you go"],["Not licensed","In Ontario","Inspectors aren't required to be licensed or insured: ask"]]},
+ {t:"cards",h:"What they check",items:[["Structure","Foundation and framing","Cracks, movement and signs of water."],["Roof and exterior","Shingles, flashing, grading","Age, wear and where water drains."],["Plumbing","Supply, drains, water heater","Leaks, pipe materials and water pressure."],["Electrical","Panel and wiring","Capacity, safety issues and older wiring types."],["Heating and cooling","Furnace, AC","Age, condition and service history."],["Interior","Windows, doors, attic","Insulation, ventilation and moisture."]]},
+ {t:"flags",h:"What an inspection isn't",items:[["Not pass or fail","It's a visual report on condition."],["Not a code or zoning check","It won't tell you if a unit is legal."],["Not behind walls","Mould and hidden damage can be missed."],["Not a warranty","Nothing is guaranteed after closing."]]},
+ {t:"steps",h:"Using the report",items:[["Sort the findings","Same day","Safety issues, big-ticket items, and routine maintenance."],["Get quotes for big items","Within your condition period","A roofer's or electrician's quote beats a guess."],["Decide","Before conditions expire","Proceed, ask for a price reduction or credit, or walk away."]]},
+ {t:"take",text:"Hire your own inspector and walk the house with them. An hour of questions is worth more than the 40-page report."}],
+ cta:["Buying soon?","I'll help you set the right inspection condition and timeline in your offer.","Talk to Ali","buy"],
+ rel:["guide-status-certificate","guide-first-home","guide-contractor","buy"],
+ sources:S("onBuy")},
+
+{key:"guide-contractor",cat:"tips",path:"/resources/tips/choosing-a-contractor/",name:"Choosing a contractor after you buy",
+ title:"Choosing a Contractor in Ontario: Quotes, Contracts & Permits | Ali Bayat",
+ desc:"How to hire a contractor in Ontario: written contracts, the 10-day cooling-off period, deposits, permits, licences and the scams to avoid.",
+ h1:"Choosing a contractor <em>after you buy</em>",lede:"Quotes, contracts, permits and payment schedules, and your rights under Ontario law.",
+ chips:["2-minute read","Homeowners","Ontario rules"],geo:"Ontario",
+ card:"Quotes, contracts, permits and payment schedules.",
+ blocks:[
+ {t:"stats",h:"Your rights in Ontario",items:[["$50+","Needs a written contract","Any home renovation contract over $50"],["10 days","To cancel","If you signed the contract at your home"],["10%","Estimate overrun limit","The final price can't exceed the estimate by more than 10% without your agreement"],["≤10%","Suggested deposit","Ontario recommends no more than 10% up front"]]},
+ {t:"steps",h:"Hiring, step by step",items:[["Get three written quotes","Week 1","Same scope for each, so you can compare."],["Check them out","Week 1–2","References, the province's Consumer Beware List, WSIB coverage and, for electrical work, an ESA licence."],["Sign a full contract","Before work starts","Scope, materials, price with tax, start and finish dates, payment schedule, warranty and cleanup."],["See the permit","Before work starts","If they're getting it, see it before construction begins."],["Pay as work is done","During the job","Tie payments to finished stages. Never pay in full up front."]]},
+ {t:"flags",h:"Common scams",items:[["Door-to-door \"good deal\"","Pressure to sign today, or a free inspection that finds urgent repairs."],["Big deposit \"for materials\"","Then the contractor disappears."],["Cash, no paperwork","No contract, no permit, no receipt."]]},
+ {t:"take",text:"A contractor who won't put it in writing won't stand behind it either. The contract protects both of you."}],
+ cta:["Just bought and planning work?","I can share trades my clients have used, and help you check what needs a permit.","Talk to Ali","question"],
+ rel:["guide-home-inspection","guide-fix-before-listing","guide-multiplexes","about"],
+ sources:S("reno","renoBiz","constructionAct")}
+];
+const GBY=Object.fromEntries(GUIDES.map(g=>[g.key,g]));
+/* ---------- Farsi guides: same blocks as GUIDES, keyed by the English key. Digits are converted to Persian when rendered. ---------- */
+const GCAT_FA={buying:["راهنمای خرید","راهنمای خرید"],selling:["راهنمای فروش","راهنمای فروش"],investment:["سرمایه‌گذاری","راهنمای سرمایه‌گذار"],market:["گزارش بازار","گزارش بازار"],tips:["نکته‌های املاک","نکته‌ی املاک"]};
+const GUIDES_FA={
+"guide-first-home":{name:"خرید اولین خانه در تورنتو",
+ title:"خرید اولین خانه در تورنتو: همه‌ی هزینه‌ها، قدم به قدم | علی بیات",
+ desc:"راهنمای خریدار خانه‌ی اول در تورنتو و منطقه‌ی یورک به فارسی: پیش‌پرداخت، بیمه‌ی وام CMHC، بازپرداخت مالیات انتقال زمین، FHSA و هزینه‌های روز تحویل.",
+ h1:"خرید اولین خانه در تورنتو: <em>همه‌ی هزینه‌ها، قدم به قدم</em>",lede:"چقدر پول لازم دارید، روز تحویل چه می‌پردازید، و شش قدم از پیش‌تأیید وام تا گرفتن کلید، با یک مثال واقعی.",
+ chips:["۴ دقیقه مطالعه","تورنتو و منطقه‌ی یورک","به‌روز در نوامبر ۲۰۲۶"],card:"همه‌ی هزینه‌های یک خانه‌ی 800,000 دلاری و شش قدم تا گرفتن کلید.",
+ blocks:[
+ {t:"tldr",items:["برای یک خانه‌ی 800,000 دلاری دست‌کم <b>55,000 دلار</b> پیش‌پرداخت لازم است، و اگر خانه در شهر تورنتو باشد حدود <b>22,000 دلار</b> هم هزینه‌ی روز تحویل.","خریداران خانه‌ی اول در تورنتو تا <b>8,475 دلار</b> و در منطقه‌ی یورک تا <b>4,000 دلار</b> از مالیات انتقال زمین را پس می‌گیرند.","وام را با نرخ شما <b>به‌علاوه‌ی ۲٪</b> (یا 5.25٪، هر کدام بیشتر باشد) تأیید می‌کنند؛ پس پیش از خانه‌گردی پیش‌تأیید بگیرید."]},
+ {t:"stats",h:"عددهایی که مهم‌اند",items:[["5٪","حداقل پیش‌پرداخت","روی 500,000 دلار اول، و 10٪ برای بقیه تا 1.5 میلیون"],["1.5M$","سقف قیمت برای وام بیمه‌شده","از 1.5 میلیون دلار به بالا 20٪ پیش‌پرداخت لازم است"],["30 سال","حداکثر دوره‌ی بازپرداخت برای خانه‌ی اول","وام‌های بیمه‌شده، از 15 دسامبر 2024"],["40,000 دلار","سقف کل FHSA","سالی 8,000 دلار؛ واریز آن از مالیات کم می‌شود و برداشتش بدون مالیات است"]]},
+ {t:"bar",h:"پول نقدی که برای یک خانه‌ی 800,000 دلاری در نورث‌یورک لازم دارید",intro:"مثال: خریدار خانه‌ی اول با حداقل پیش‌پرداخت، در شهر تورنتو.",items:[["پیش‌پرداخت","5٪ از 500,000 دلار + 10٪ از 300,000 دلار",55000,1],["مالیات انتقال زمین، پس از بازپرداخت","انتاریو 12,475 − 4,000؛ تورنتو 12,475 − 4,475",16475,2],["مالیات فروش روی بیمه‌ی CMHC","8٪ PST روی حق‌بیمه‌ی 29,800 دلاری؛ به وام اضافه نمی‌شود",2384,4],["هزینه‌ی وکیل و بیمه‌ی سند","معمولاً 2,000 تا 3,000 دلار؛ استعلام بگیرید",2500,5],["بازرسی خانه","350 تا 600 دلار طبق دولت انتاریو",500,6]],total:["پول نقد لازم در روز تحویل",76859],cap:"در این عدد نیامده: اسباب‌کشی، تسویه‌ی مالیات ملک و شارژ ساختمانِ پیش‌پرداخت‌شده، و لوازم خانه. در منطقه‌ی یورک ردیف مالیات انتقال زمین به 8,475 دلار کاهش می‌یابد."},
+ {t:"steps",h:"شش قدم از پس‌انداز تا کلید",items:[["پول‌تان را مرتب کنید","ماه ۱","اگر FHSA ندارید باز کنید، گزارش اعتباری‌تان را ببینید و فیش حقوقی و برگه‌های مالیاتی دو سال اخیر را آماده کنید. زوج‌ها هر کدام می‌توانند از FHSA و طرح Home Buyers' Plan استفاده کنند."],["پیش‌تأیید وام بگیرید","ماه ۱ تا ۲","وام‌دهنده بررسی می‌کند که قسط را با نرخ آزمون از پس برمی‌آیید. بخواهید نرخ را در مدت خانه‌گردی برایتان نگه دارد."],["بگردید و مقایسه کنید","ماه ۲ تا ۴","هزینه‌ی کل را مقایسه کنید، نه فقط قیمت را: مالیات انتقال زمین، شارژ ساختمان و رفت‌وآمد. برای هر نشانی از <a class=\"link\" href=\"#fa-guide-land-transfer-tax\">ماشین‌حساب مالیات انتقال زمین</a> استفاده کنید."],["پیشنهاد بدهید","روز پیشنهاد","بیشتر خریداران شرط تأمین وام و بازرسی می‌گذارند و برای کاندو، شرط بررسی Status Certificate. ودیعه معمولاً ظرف ۲۴ ساعت پس از قبول پیشنهاد پرداخت می‌شود."],["قطعی کنید","حدود ۵ روز کاری","شرط‌ها را برطرف کنید: بازرسی، تأیید نهایی وام، و بررسی Status Certificate توسط وکیل."],["تحویل بگیرید","۳۰ تا ۹۰ روز بعد","وکیل شما خرید را ثبت می‌کند، مالیات انتقال زمین را می‌پردازد و بازپرداخت‌ها را درخواست می‌کند. شما باقی مبلغ را چند روز پیش از تحویل می‌فرستید و کلید را می‌گیرید."]]},
+ {t:"cards",h:"پیش‌پرداخت از کجا می‌آید",items:[["FHSA","تا 40,000 دلار","واریزی‌ها از درآمد مشمول مالیات کم می‌شود و برداشتِ واجد شرایط بدون مالیات است."],["RRSP: طرح Home Buyers' Plan","تا 60,000 دلار","برداشت‌های 2026 تا 2028 از سال پنجم بعد، طی 15 سال، بازپرداخت می‌شوند."],["هر دو با هم","مجاز است","اگر شرایط هر دو را داشته باشید، می‌توانید از FHSA و Home Buyers' Plan برای یک خانه استفاده کنید."],["هدیه از خانواده","رایج","وام‌دهنده‌ها معمولاً نامه‌ی امضاشده‌ی هدیه و مدرک واریز پول به حساب شما را می‌خواهند."]]},
+ {t:"formula",h:"تست استرس، در یک خط",eq:"تأیید وام با <em>نرخ شما + 2٪</em> یا 5.25٪، هر کدام بیشتر باشد",rows:[["وام (همراه 29,800 دلار حق‌بیمه‌ی CMHC)","774,800 دلار"],["قسط با نرخ نمونه‌ی 4.5٪، 30 ساله","ماهانه 3,907 دلار"],["قسطی که باید با آن تأیید شوید (6.5٪)","ماهانه 4,853 دلار"]],res:["تفاوتی که وام‌دهنده می‌سنجد","ماهانه 946+ دلار"],note:"نرخ فقط برای مثال است. نرخ واقعی را وام‌دهنده اعلام می‌کند؛ قاعده، حداقل نرخ آزمون CMHC است."},
+ {t:"take",text:"اول هزینه‌های روز تحویل را بودجه‌بندی کنید، بعد پیش‌پرداخت را. حدود 20,000 دلاری که روز تحویل لازم است همان عددی است که خریداران خانه‌ی اول بیشتر از همه فراموش می‌کنند."},
+ {t:"faq",items:[["برای خانه‌ی 800,000 دلاری در تورنتو چقدر پیش‌پرداخت لازم است؟","دست‌کم 55,000 دلار: 5٪ از 500,000 دلار اول (25,000 دلار) به‌علاوه‌ی 10٪ از 300,000 دلار باقی‌مانده (30,000 دلار). با پیش‌پرداخت کمتر از 20٪، بیمه‌ی وام CMHC هم می‌پردازید."],["آیا خریداران خانه‌ی اول در تورنتو مالیات انتقال زمین می‌پردازند؟","بله، اما اگر واجد شرایط باشند بازپرداخت می‌گیرند: تا 4,000 دلار از مالیات انتاریو و تا 4,475 دلار از مالیات شهرداری تورنتو. وکیل شما آن را روز تحویل درخواست می‌کند."],["آیا می‌توانم هم از FHSA و هم از Home Buyers' Plan استفاده کنم؟","بله. CRA اجازه می‌دهد برای یک خانه هم برداشت واجد شرایط از FHSA و هم برداشت از Home Buyers' Plan داشته باشید، اگر شرایط هر دو را داشته باشید."]]}],
+ cta:["می‌خواهید این حساب برای بودجه‌ی خودتان انجام شود؟","این عددها را برای خانه‌هایی که می‌بینید حساب می‌کنم، به فارسی یا انگلیسی.","درباره‌ی خرید با علی صحبت کنید"]},
+
+"guide-pre-construction":{name:"کاندوی پیش‌فروش: پیش از امضا چه چیزهایی را بررسی کنیم",
+ title:"کاندوی پیش‌فروش در انتاریو: پیش از امضا چه بررسی کنیم | علی بیات",
+ desc:"خرید کاندوی پیش‌فروش در تورنتو، وان یا ریچموند هیل به فارسی: مهلت ۱۰ روزه‌ی انصراف، حمایت از ودیعه، هزینه‌ی دوره‌ی سکونت و نشانه‌های هشدار.",
+ h1:"کاندوی پیش‌فروش: <em>پیش از امضا چه چیزهایی را بررسی کنیم</em>",lede:"ده روز فرصت انصراف دارید. در این ده روز چه چیزی را بررسی کنید، ودیعه‌تان تا چه سقفی حمایت می‌شود، و چه هزینه‌هایی هنگام سکونت پیدا می‌شود.",
+ chips:["۴ دقیقه مطالعه","قوانین انتاریو","به‌روز در نوامبر ۲۰۲۶"],card:"مهلت ۱۰ روزه‌ی انصراف، حمایت از ودیعه، هزینه‌ی دوره‌ی سکونت و نشانه‌های هشدار.",
+ blocks:[
+ {t:"tldr",items:["تا <b>10 روز</b> پس از دریافت قرارداد امضاشده و Disclosure Statement می‌توانید بدون دلیل از خرید کاندوی نوساز انصراف دهید.","Tarion ودیعه‌ی کاندو را فقط تا <b>20,000 دلار</b> حمایت می‌کند. بپرسید باقی آن چطور نگهداری می‌شود.","در دوره‌ی سکونت پیش از ثبت (Interim occupancy) قسط وام نمی‌دهید، بلکه هزینه‌ی ماهانه‌ی سکونت می‌پردازید. برایش بودجه بگذارید."]},
+ {t:"stats",h:"چهار عدد که باید بدانید",items:[["10 روز","مهلت انصراف","از زمانی که قرارداد امضاشده، Disclosure Statement و راهنمای خریدار کاندو را دریافت کنید"],["20,000 دلار","حمایت Tarion از ودیعه","برای کاندو؛ ودیعه باید در حساب امانی هم نگهداری شود"],["30 روز","برای فسخ پس از گذشتن تاریخ نهایی","اگر سازنده تاریخ نهایی سکونت را رد کند"],["80,000 دلار","حداکثر تخفیف HST انتاریو","خانه‌ی نوساز، قراردادهای 1 آوریل 2026 تا 31 مارس 2027، طبق CRA"]]},
+ {t:"steps",h:"چه اتفاقی، چه زمانی",items:[["امضا و شروع مهلت","روز ۰","امضا می‌کنید، سپس Disclosure Statement و راهنمای خریدار کاندو را دریافت می‌کنید. ده روز از زمانی شروع می‌شود که همه‌ی این‌ها را داشته باشید."],["بررسی وکیل","روز ۱ تا ۱۰","پیش از روز دهم، وکیل املاک قرارداد، Statement of Critical Dates و تسویه‌های روز تحویل را بخواند."],["پرداخت ودیعه‌ها","ماه ۰ تا ۲۴","ودیعه معمولاً در چند قسط پرداخت می‌شود. مدرک همه‌ی پرداخت‌ها را نگه دارید."],["دوره‌ی سکونت پیش از ثبت","آماده شدن ساختمان","نقل مکان می‌کنید و هزینه‌ی سکونت می‌پردازید: بهره‌ی مبلغ پرداخت‌نشده، برآورد مالیات ملک و برآورد شارژ ساختمان."],["ثبت و تحویل نهایی","چند ماه بعد","کاندو ثبت می‌شود، سند به نام شما منتقل می‌شود، وام‌تان شروع می‌شود و تسویه‌های روز تحویل اعمال می‌شود."]]},
+ {t:"check",h:"در این ۱۰ روز این‌ها را بررسی کنید",items:[["سابقه‌ی سازنده","در Ontario Builder Directory سازمان HCRA ببینید: مجوز، شکایت‌های گارانتی و پروژه‌های لغوشده."],["شرایط لغو زودهنگام","سازنده در چه حالتی می‌تواند لغو کند، مثلاً اگر واحدها به اندازه‌ی کافی فروش نروند یا تأمین مالی جور نشود."],["تسویه‌های روز تحویل","برای Development charges، هزینه‌ی اتصال خدمات و دیگر عوارض روز تحویل سقف بخواهید."],["بند واگذاری (Assignment)","آیا می‌توانید پیش از تحویل بفروشید، هزینه‌اش چقدر است و آیا رضایت سازنده لازم است."],["برآورد هزینه‌ی سکونت","مبلغ ماهانه‌ی مورد انتظار را بپرسید و این‌که دوره‌ی سکونت در ساختمان‌های قبلی‌شان معمولاً چقدر طول کشیده است."],["وام در روز تحویل","وام‌دهنده ارزش ملک را روز تحویل می‌سنجد، نه روز امضا. اگر قیمت‌ها پایین بیاید، اختلاف را شما می‌پردازید."]]},
+ {t:"flags",h:"نشانه‌های هشدار",items:[["عوارض بدون سقف","هزینه‌های روز تحویل بدون سقف می‌تواند هزاران دلار اضافه کند."],["ودیعه‌ی بیش از 20,000 دلار بدون پاسخ روشن درباره‌ی حمایت از آن","کتبی از وکیل سازنده بپرسید."],["فشار برای امضا پیش از خواندن Disclosure Statement","آن ده روز دلیل دارد."],["سازنده‌ای با پروژه‌های لغوشده در گذشته","پیش از امضا فهرست را ببینید، نه بعد."]]},
+ {t:"p",h:"وضعیت امروز بازار",text:"در اکتبر 2026، میانگین قیمت فروش آپارتمان‌های کاندو در GTA طبق TRREB برابر 621,400 دلار بود؛ 5.8٪ کمتر از یک سال قبل. واحدی که در اوج بازار خریده شده ممکن است روز تحویل ارزیابی پایین‌تری بگیرد؛ برای همین ردیف وام در فهرست بالا اهمیت دارد."},
+ {t:"take",text:"پیش از هر چیز، جدول تسویه‌های روز تحویل را بخوانید. هزینه‌های غافلگیرکننده همان‌جاست، و همان بخشی است که خریداران از آن می‌گذرند."},
+ {t:"faq",items:[["آیا می‌توانم از خرید کاندوی پیش‌فروش در انتاریو انصراف دهم؟","بله، تا 10 روز پس از دریافت قرارداد امضاشده، Disclosure Statement و راهنمای خریدار کاندوی انتاریو، بدون ذکر دلیل. پس از آن معمولاً به قرارداد متعهد هستید."],["آیا ودیعه‌ی کاندوی پیش‌فروش من حمایت می‌شود؟","ودیعه باید در حساب امانی نگهداری شود و اگر سازنده آن را پس ندهد، Tarion تا 20,000 دلار از ودیعه‌ی کاندو را حمایت می‌کند. بپرسید مبلغ بالاتر از 20,000 دلار چطور حمایت می‌شود."],["هزینه‌ی دوره‌ی سکونت (Interim occupancy fee) چیست؟","هزینه‌ی ماهانه‌ای که پس از نقل مکان و پیش از ثبت کاندو می‌پردازید. سقف آن بهره‌ی مبلغ پرداخت‌نشده به‌علاوه‌ی برآورد مالیات ملک و شارژ ساختمان واحد است."]]}],
+ cta:["به یک واحد پیش‌فروش فکر می‌کنید؟","قرارداد را بفرستید تا پیش از پایان ده روز، برنامه‌ی ودیعه، تسویه‌ها و شرایط واگذاری را با هم مرور کنیم.","با علی صحبت کنید"]},
+
+"guide-fix-before-listing":{name:"چه تعمیراتی پیش از فروش ارزش دارد",
+ title:"پیش از فروش خانه در تورنتو چه چیزهایی را تعمیر کنیم | علی بیات",
+ desc:"کدام تعمیرات پیش از فروش در تورنتو و منطقه‌ی یورک ارزش دارد و کدام نه، برنامه‌ی چهارهفته‌ای آماده‌سازی، و مدارکی که خریداران می‌خواهند.",
+ h1:"چه تعمیراتی <em>پیش از فروش ارزش دارد</em>",lede:"خریداران امروز نسبت به چند سال پیش انتخاب بیشتری دارند، پس وضعیت خانه مهم است. پول آماده‌سازی‌تان کجا بیشترین اثر را دارد.",
+ chips:["۳ دقیقه مطالعه","برای فروشندگان","به‌روز در نوامبر ۲۰۲۶"],card:"تعمیر کنید، شاید، رها کنید: پول آماده‌سازی کجا بیشترین اثر را دارد، و برنامه‌ی چهارهفته‌ای.",
+ blocks:[
+ {t:"tldr",items:["هر چیزی را که بازرس گزارش می‌کند تعمیر کنید: نشتی، وسایل خراب، آژیرهای ناموجود.","تمیزکاری، خلوت کردن، رنگ و نور. کمترین هزینه را دارند و بیشترین تغییر را در عکس‌ها ایجاد می‌کنند.","بازسازی کامل نکنید. معمولاً هزینه‌اش برنمی‌گردد و عرضه را عقب می‌اندازد."]},
+ {t:"stats",h:"چرا وضعیت خانه الان مهم است",items:[["4.6","ماه موجودی، GTA","اکتبر 2026، روند؛ خریداران گزینه دارند"],["31 روز","میانگین روزهای عرضه","GTA، اکتبر 2026"],["97٪","قیمت فروش نسبت به قیمت اعلامی","میانگین GTA، اکتبر 2026"]]},
+ {t:"tiers",h:"تعمیر کنید، شاید، رها کنید",items:[["تعمیر کنید","c3","چیزهایی که خریدار و بازرس پیدا می‌کنند",["نشتی، چکه و لکه‌ی آب","پنجره، در، قفل و وسایل خراب","آژیر دود و مونوکسید کربن سالم","لامپ‌های سوخته و قاب پریز شل"]],["شاید","c4","اگر کمبود در عکس‌ها آشکار است ارزش دارد",["رنگ خنثای تازه در اتاق‌های پرتردد","موکت فرسوده در یک اتاق اصلی","چراغ‌ها و دستگیره‌های کابینت قدیمی","مرتب کردن در ورودی، ایوان و باغچه"]],["رها کنید","c5","معمولاً پیش از فروش برنمی‌گردد",["بازسازی کامل آشپزخانه یا حمام","متریال گران و سفارشی","تکمیل زیرزمین فقط برای فروش","پروژه‌های بزرگ محوطه‌سازی"]]]},
+ {t:"steps",h:"برنامه‌ی چهارهفته‌ای آماده‌سازی",items:[["بازدید و فهرست","هفته‌ی ۱","با مشاورتان خانه را بگردید، فهرست تعمیرات بنویسید و استعلام قیمت بگیرید. بازرسی پیش از فروش (350 تا 600 دلار) را در نظر بگیرید تا شب پیشنهادها غافلگیر نشوید."],["تعمیرات","هفته‌ی ۲","برای فهرست تعمیرات استادکار بگیرید. برای هر کار بالای 50 دلار قرارداد کتبی داشته باشید."],["خلوت کردن و رنگ","هفته‌ی ۳","یک‌سوم وسایل هر اتاق را جمع کنید. رنگ، تمیزکاری عمیق، و لامپ‌ها را هم‌رنگ کنید."],["عکس و عرضه","هفته‌ی ۴","تمیزکاری نهایی، چیدمان، عکس حرفه‌ای، نقشه‌ی طبقات، و بعد عرضه."]]},
+ {t:"check",h:"مدارکی که خریداران می‌خواهند",items:[["مجوز کارهای قبلی","الحاقیه، زیرزمین، دک و تغییرات سازه‌ای."],["تجهیزات اجاره‌ای","قرارداد اجاره‌ی آبگرمکن، کوره یا کولر و مبلغ خرید آن."],["هزینه‌ی قبوض","یک سال قبض گاز، برق و آب."],["به‌روزرسانی‌ها با تاریخ","سقف، پنجره‌ها، کوره و کولر، همراه رسید یا گارانتی."]]},
+ {t:"take",text:"پول را خرج چیزهایی کنید که در عکس‌ها دیده می‌شود و بازرس یادداشت می‌کند. بقیه را می‌شود روز پیشنهادها مذاکره کرد."}],
+ cta:["فهرست تعمیرات خانه‌ی خودتان را می‌خواهید؟","با هم خانه را می‌گردیم و می‌گویم برای خیابان و رده‌ی قیمتی شما چه چیزی ارزش انجام دارد و چه چیزی نه.","وقت بازدید بگیرید"]},
+
+"guide-offer-date":{name:"روز پیشنهادها یا قیمت‌گذاری مطابق بازار",
+ title:"روز پیشنهادها یا قیمت‌گذاری مطابق بازار: کدام استراتژی فروش؟ | علی بیات",
+ desc:"نگه داشتن پیشنهادها طبق قوانین TRESA انتاریو چطور کار می‌کند، چه زمانی قیمت‌گذاری مطابق بازار بهتر است، و داده‌های اکتبر 2026 GTA چه می‌گوید.",
+ h1:"روز پیشنهادها یا <em>قیمت‌گذاری مطابق بازار</em>",lede:"دو راه برای عرضه‌ی خانه. کدام جواب می‌دهد به نوع خانه و میزان رقابت خریداران در همین حالا بستگی دارد.",
+ chips:["۳ دقیقه مطالعه","برای فروشندگان","قوانین انتاریو"],card:"هر استراتژی چطور کار می‌کند، قوانین TRESA، و چه زمانی کدام منطقی است.",
+ blocks:[
+ {t:"tldr",items:["در روش روز پیشنهادها، خانه پایین‌تر از ارزش عرضه می‌شود و پیشنهادها تا روز مشخصی نگه داشته می‌شوند تا رقابت ایجاد شود. فقط وقتی جواب می‌دهد که خریداران رقابت کنند.","در قیمت‌گذاری مطابق بازار، خانه با ارزش مورد انتظار عرضه می‌شود و هر زمان پیشنهاد پذیرفته می‌شود. برای بازار با عرضه‌ی بیشتر مناسب است.","در اکتبر 2026، خانه‌های نیمه‌مستقل به‌طور میانگین 101٪ و خانه‌های مستقل 97٪ قیمت اعلامی فروش رفتند."]},
+ {t:"vs",h:"کنار هم",a:["روز پیشنهادها","پایین‌تر از ارزش مورد انتظار عرضه کنید؛ همه‌ی پیشنهادها را در یک زمان مشخص بررسی کنید.",["خانه‌های مشابه کمی در اطراف برای فروش هست","نوع ملکی که بالاتر از قیمت اعلامی فروش می‌رود","خانه‌هایی که در عکس و بازدید خوب دیده می‌شوند"],["اگر کسی پیشنهاد ندهد، ذهن خریداران را روی قیمت پایین برده‌اید","برای پیشنهادهای زودهنگام (Bully offer) دستور کتبی لازم است","عرضه‌ی دوباره با قیمت بالاتر شبیه فروش ناموفق به نظر می‌رسد"]],b:["قیمت مطابق بازار","با ارزش مورد انتظار عرضه کنید؛ پیشنهادها را همان زمان رسیدن بررسی کنید.",["خریداران انتخاب زیادی دارند","کاندوها و خانه‌های گران‌تر","فروشندگانی که روند قابل پیش‌بینی می‌خواهند"],["قیمت بالا باعث ماندن خانه در بازار می‌شود","روزهای عرضه به ابزار مذاکره تبدیل می‌شود","احتمال رقابت چندپیشنهادی کمتر است"]]},
+ {t:"table",h:"اکتبر 2026 بر اساس نوع خانه چه می‌گوید",intro:"GTA، همه‌ی مناطق TRREB. نسبت بالاتر قیمت فروش به قیمت اعلامی و روزهای کمتر یعنی رقابت بیشتر خریداران.",head:["نوع خانه","فروش نسبت به قیمت اعلامی","میانگین روزهای عرضه","تمایل به"],rows:[["نیمه‌مستقل","101٪","22","روز پیشنهادها می‌تواند جواب دهد"],["تاون‌هاوس (فری‌هولد)","99٪","28","بستگی به خیابان دارد"],["مستقل","97٪","29","قیمت مطابق بازار"],["همه‌ی انواع","97٪","31","قیمت مطابق بازار"]],note:"منبع: TRREB Market Watch، اکتبر 2026."},
+ {t:"cards",h:"قوانین TRESA",items:[["دستور کتبی","لازم است","مشاور شما فقط با دستور کتبی شما می‌تواند پیشنهادها را نگه دارد."],["پیشنهاد زودهنگام","از پیش برنامه بریزید","دستور شما باید بگوید با پیشنهادهای زودهنگام چه می‌شود. یک یادداشت در آگهی کافی نیست."],["تغییر تاریخ","دستور جدید","می‌توانید تاریخ را تغییر دهید، اما باید به همه‌ی کسانی که ابراز علاقه کرده‌اند کتبی خبر داده شود."],["اعلام جزئیات پیشنهادها","انتخاب شماست","می‌توانید به کارگزاری‌تان دستور دهید جزئیات پیشنهادها را، بدون نام، به خریداران رقیب بگوید."]]},
+ {t:"take",text:"استراتژی را از روی عددهای نوع خانه و خیابان خودتان انتخاب کنید، نه از روی آنچه دو سال پیش برای همسایه جواب داد."}],
+ cta:["مطمئن نیستید کدام برای خانه‌ی شما مناسب است؟","فروش‌های اخیر خیابان شما را درمی‌آورم و نشان می‌دهم داده‌ها از کدام روش پشتیبانی می‌کند.","درباره‌ی استراتژی‌تان از علی بپرسید"]},
+
+"guide-investment-analysis":{name:"تحلیل ملک سرمایه‌گذاری: چارچوب شش‌مرحله‌ای",
+ title:"تحلیل ملک سرمایه‌گذاری در GTA در شش مرحله | علی بیات",
+ desc:"چارچوب شش‌مرحله‌ای برای تحلیل ملک اجاره‌ای در تورنتو و منطقه‌ی یورک به فارسی: واحدهای قانونی، اجاره، هزینه‌ها، وام، بازده و ریسک.",
+ h1:"تحلیل ملک سرمایه‌گذاری: <em>چارچوب شش‌مرحله‌ای</em>",lede:"شش پرسشی که پیش از پیشنهاد هر ملک درآمدزا جواب می‌دهم، به ترتیبی که بیشترین وقت را صرفه‌جویی می‌کند.",
+ chips:["۳ دقیقه مطالعه","برای سرمایه‌گذاران","تورنتو و منطقه‌ی یورک"],card:"شش مرحله از بررسی ملک تا تصمیم، با پرسش‌های هر مرحله.",
+ blocks:[
+ {t:"tldr",items:["از وضعیت قانونی شروع کنید. اجاره از واحدی که قانونی نیست ریسک است، نه درآمد.","از اجاره‌های مشابه واقعی و همه‌ی هزینه‌ها، از جمله خالی ماندن و تعمیرات، استفاده کنید.","بر اساس جریان نقدی و ریسک تصمیم بگیرید، نه رشد قیمتی که امیدش را دارید."]},
+ {t:"steps",h:"شش مرحله",items:[["ملک و وضعیت قانونی آن","مرحله‌ی ۱","چند واحد قانونی و مجاز است؟ مجوز باز یا دستور کار (Work order) دارد؟ واحدهایی که اولین بار پس از 15 نوامبر 2018 سکونت داشته‌اند مشمول سقف افزایش اجاره نیستند."],["اجاره","مرحله‌ی ۲","اجاره‌ی واحدهای مشابه در نزدیکی، قراردادهای فعلی، و این‌که مستأجرها چقدر مانده‌اند."],["هزینه‌ها","مرحله‌ی ۳","مالیات ملک، بیمه، قبوضی که شما می‌پردازید، شارژ ساختمان، تعمیرات، خالی ماندن و مدیریت."],["تأمین مالی","مرحله‌ی ۴","پیش‌پرداخت، نرخ، دوره‌ی بازپرداخت، و این‌که وام‌دهنده چه مقدار از اجاره را حساب می‌کند."],["بازده","مرحله‌ی ۵","درآمد خالص عملیاتی (NOI)، نرخ بازده سرمایه (Cap rate)، جریان نقدی ماهانه و بازده نقدی."],["ریسک‌ها و خروج","مرحله‌ی ۶","اگر نرخ بالا برود، اجاره پایین بیاید یا تعمیر بزرگی پیش بیاید چه می‌شود، و بعدها چه کسی از شما می‌خرد."]]},
+ {t:"cards",h:"هر مرحله را عمیق‌تر ببینید",items:[["مرحله‌ی ۲ و ۳","جریان نقدی","<a class=\"link\" href=\"#fa-guide-cash-flow\">محاسبه‌ی جریان نقدی</a> با یک مثال کامل."],["مرحله‌ی ۵","نرخ بازده سرمایه","<a class=\"link\" href=\"#fa-guide-cap-rate\">Cap rate چه می‌گوید</a> و چه نمی‌گوید."],["مرحله‌ی ۴","تأمین مالی","<a class=\"link\" href=\"#fa-guide-investment-financing\">وام‌دهنده‌ها چه می‌خواهند</a> برای ملک اجاره‌ای و خانه‌های ۲ تا ۴ واحدی."],["مرحله‌ی ۱","خانه‌های چندواحدی","<a class=\"link\" href=\"#fa-guide-multiplexes\">دوپلکس، تریپلکس و فورپلکس</a> و آنچه باید بررسی کرد."]]},
+ {t:"take",text:"پیش از آن‌که از اجاره ذوق کنید، مرحله‌ی ۱ و ۳ را انجام دهید. واحدی که قانونی نیست، یا هزینه‌هایی که آگهی جا انداخته، می‌تواند معامله‌ای را که روی کاغذ خوب است خراب کند."}],
+ cta:["ملک مشخصی در نظر دارید؟","نشانی یا آگهی را بفرستید تا هر شش مرحله را برایتان انجام دهم.","درخواست تحلیل"]},
+
+"guide-cash-flow":{name:"محاسبه‌ی جریان نقدی ملک اجاره‌ای",
+ title:"محاسبه‌ی جریان نقدی ملک اجاره‌ای (با مثال تورنتو) | علی بیات",
+ desc:"جریان نقدی ملک اجاره‌ای قدم به قدم به فارسی، از اجاره‌ی ناخالص تا آنچه پس از خالی ماندن، هزینه‌ها و وام باقی می‌ماند، با مثال یک کاندوی 600,000 دلاری.",
+ h1:"محاسبه‌ی جریان نقدی <em>ملک اجاره‌ای</em>",lede:"از اجاره‌ی ناخالص تا آنچه پس از خالی ماندن، هزینه‌ها و وام باقی می‌ماند، با مثال یک کاندوی 600,000 دلاری.",
+ chips:["۳ دقیقه مطالعه","برای سرمایه‌گذاران","مثال کامل"],card:"از اجاره‌ی ناخالص تا آنچه پس از خالی ماندن، هزینه‌ها و وام باقی می‌ماند.",
+ blocks:[
+ {t:"tldr",items:["جریان نقدی = اجاره − خالی ماندن − هزینه‌های عملیاتی − قسط وام.","با 20٪ پیش‌پرداخت و نرخ‌های امروز، جریان نقدی بسیاری از کاندوهای GTA منفی است.","بخشی از هر قسط اصل وام را کم می‌کند. این سرمایه است، اما پول نقد در جیب شما نیست."]},
+ {t:"bar",h:"31,800 دلار اجاره کجا می‌رود",intro:"مثال: یک کاندوی 600,000 دلاری (میانگین قیمت فروش آپارتمان کاندو در GTA در اکتبر 2026 طبق TRREB برابر 621,400 دلار بود)، 20٪ پیش‌پرداخت، اجاره‌ی ماهانه‌ی 2,650 دلار. اجاره، شارژ و نرخ برای توضیح فرض شده‌اند.",items:[["پیش‌بینی خالی ماندن","3٪ از اجاره‌ی ناخالص",954,5],["شارژ ساختمان","ماهانه 600 دلار",7200,2],["مالیات ملک","برآورد",3000,6],["بیمه و تعمیرات","بیمه 500 دلار، تعمیرات 1,000 دلار",1500,4],["قسط وام","480,000 دلار با نرخ نمونه‌ی 4.5٪، 25 ساله",31880,1]],total:["جریان نقدی سالانه","−12,734 دلار"],totalNeg:1,cap:"اجاره‌ی ناخالص سالانه 31,800 دلار. درآمد خالص عملیاتی (اجاره منهای خالی ماندن و هزینه‌ها، پیش از وام) 19,146 دلار است."},
+ {t:"stats",h:"یک معامله، از سه زاویه",items:[["−1,061 دلار","جریان نقدی ماهانه","مبلغی که از جیب خودتان اضافه می‌کنید"],["10,697 دلار","کاهش اصل وام، سال اول","بخشی از قسط‌ها سرمایه می‌سازد"],["−2,037 دلار","جریان نقدی + کاهش اصل وام","هزینه‌ی واقعی نگهداری، پیش از هر تغییر قیمت"]]},
+ {t:"check",h:"هزینه‌هایی که فراموش می‌شوند",items:[["خالی ماندن","حتی یک ماه خالی یعنی 8٪ اجاره‌ی سال."],["تعمیر و تعویض","لوازم، کفپوش، رنگ بین مستأجرها."],["هزینه‌ی ویژه (Special assessment)","ساختمان‌های کاندو می‌توانند برای تعمیرات بزرگ از مالکان پول بگیرند."],["هزینه‌های خرید","مالیات انتقال زمین و هزینه‌ی وکیل از ابتدا از پول نقد شما کم می‌شود."]]},
+ {t:"take",text:"جریان نقدی منفی خودبه‌خود معامله‌ی بدی نیست، اما باید پیش از خرید عدد دقیق ماهانه را بدانید و مطمئن باشید اگر نرخ بالا رفت از پسش برمی‌آیید."}],
+ cta:["می‌خواهید این حساب روی یک آگهی واقعی انجام شود؟","نشانی را بفرستید تا جریان نقدی کامل را با اجاره و شارژ واقعی بسازم.","درخواست تحلیل"]},
+
+"guide-cap-rate":{name:"نرخ بازده سرمایه (Cap rate) چیست و چه چیزی را نمی‌گوید",
+ title:"نرخ بازده سرمایه (Cap rate) چیست؟ محاسبه و محدودیت‌ها | علی بیات",
+ desc:"Cap rate به فارسی با مثال GTA: چطور محاسبه کنیم، چطور ملک‌ها را با آن مقایسه کنیم، و چهار چیزی که در آن نیست.",
+ h1:"نرخ بازده سرمایه چیست <em>و چه چیزی را نمی‌گوید</em>",lede:"Cap rate سریع‌ترین راه مقایسه‌ی ملک‌های درآمدزاست. اشتباه خواندنش هم آسان است.",
+ chips:["۲ دقیقه مطالعه","برای سرمایه‌گذاران","فرمول + مثال"],card:"نحوه‌ی محاسبه، مقایسه و محدودیت‌هایش.",
+ blocks:[
+ {t:"formula",h:"فرمول",eq:"Cap rate = <em>درآمد خالص عملیاتی</em> ÷ قیمت",rows:[["اجاره‌ی ناخالص","31,800 دلار"],["− خالی ماندن (3٪)","−954 دلار"],["− هزینه‌های عملیاتی","−11,700 دلار"],["= درآمد خالص عملیاتی","19,146 دلار"],["÷ قیمت","600,000 دلار"]],res:["نرخ بازده سرمایه","3.19٪"],note:"همان مثال راهنمای جریان نقدی. درآمد خالص عملیاتی قسط وام را شامل نمی‌شود."},
+ {t:"cards",h:"آنچه Cap rate نشان نمی‌دهد",items:[["تأمین مالی","در آن نیست","دو خریدار یک ملک، با هر وامی، Cap rate یکسان دارند."],["تغییر قیمت","در آن نیست","رشد قیمت یا افت بازار در این عدد نیست."],["وضعیت ملک","در آن نیست","سقفی که سال بعد باید عوض شود در NOI امسال دیده نمی‌شود."],["امکان افزایش اجاره","در آن نیست","اجاره‌های زیر قیمت بازار، یا واحدهایی که اولین بار پس از 15 نوامبر 2018 سکونت داشته‌اند و مشمول سقف افزایش نیستند."]]},
+ {t:"vs",h:"Cap rate در برابر بازده نقدی",a:["Cap rate","NOI ÷ قیمت",["مقایسه‌ی ملک‌ها با یکدیگر","غربال سریع آگهی‌ها"],["وام و پیش‌پرداخت شما را نادیده می‌گیرد"]],b:["بازده نقدی (Cash-on-cash)","جریان نقدی سالانه ÷ پول نقدی که گذاشته‌اید",["مقایسه با کاربردهای دیگر پول‌تان","دیدن اثر نحوه‌ی تأمین مالی"],["با هر تغییر نرخ و پیش‌پرداخت عوض می‌شود"]]},
+ {t:"take",text:"با Cap rate آگهی‌ها را مقایسه کنید، و با جریان نقدی تصمیم بگیرید. ملکی می‌تواند Cap rate مناسبی داشته باشد و باز هم هر ماه از جیب شما هزینه بخواهد."}],
+ cta:["چند ملک را مقایسه می‌کنید؟","آگهی‌ها را بفرستید تا Cap rate و جریان نقدی‌شان را کنار هم بگذارم.","درخواست تحلیل"]},
+
+"guide-investment-financing":{name:"تأمین مالی ملک سرمایه‌گذاری: چه بپرسیم",
+ title:"وام ملک سرمایه‌گذاری در انتاریو: پیش‌پرداخت و قوانین | علی بیات",
+ desc:"حداقل پیش‌پرداخت برای ملک اجاره‌ای و خانه‌های ۲ تا ۴ واحدی، چه مقدار از اجاره را وام‌دهنده حساب می‌کند، قوانین تأیید وام، و پرسش‌هایی برای مشاور وام.",
+ h1:"تأمین مالی ملک سرمایه‌گذاری: <em>چه بپرسیم</em>",lede:"پیش‌پرداخت، چه مقدار از اجاره را وام‌دهنده حساب می‌کند، و پرسش‌هایی که باید از مشاور وام‌تان بپرسید.",
+ chips:["۳ دقیقه مطالعه","برای سرمایه‌گذاران","قوانین CMHC"],card:"پیش‌پرداخت، قوانین وام‌دهنده‌ها، و پرسش‌هایی برای مشاور وام.",
+ blocks:[
+ {t:"tldr",items:["خودتان ساکن می‌شوید؟ خانه‌ی ۱ تا ۲ واحدی را می‌شود با 5٪ پیش‌پرداخت خرید؛ ۳ تا ۴ واحد 10٪ لازم دارد.","ساکن نمی‌شوید؟ دست‌کم 20٪ پیش‌پرداخت در نظر بگیرید.","وام‌دهنده‌ها فقط بخشی از اجاره را حساب می‌کنند؛ برای وام‌های اجاره‌ای بیمه‌شده اغلب 50٪."]},
+ {t:"table",h:"حداقل پیش‌پرداخت در هر وضعیت",head:["وضعیت","حداقل پیش‌پرداخت","توضیح"],rows:[["خودتان ساکن می‌شوید، ۱ تا ۲ واحد","5٪ از 500,000 دلار اول، 10٪ بقیه","بیمه‌شده؛ قیمت زیر 1.5 میلیون"],["خودتان ساکن می‌شوید، ۳ تا ۴ واحد","10٪","بیمه‌شده؛ تا 90٪ ارزش ملک"],["ملک اجاره‌ای بدون سکونت شما، ۲ تا ۴ واحد","20٪","CMHC Income Property؛ قیمت زیر 1 میلیون؛ حداکثر 25 سال"],["کاندو یا خانه‌ی اجاره‌ای","20٪","معمول برای ملک بدون سکونت مالک"]],note:"قوانین CMHC. وام‌دهنده‌ها می‌توانند بیشتر بخواهند."},
+ {t:"stats",h:"قوانین وام‌دهنده برای ملک اجاره‌ای ۲ تا ۴ واحدی (CMHC)",items:[["50٪","از اجاره‌ی ناخالص حساب می‌شود","برای تأیید وام، در وام‌های CMHC Income Property"],["39٪ / 44٪","حداکثر GDS / TDS","نسبت‌های بازپرداخت بدهی"],["600","حداقل امتیاز اعتباری",""],["2٪+","نرخ آزمون","نرخ شما + 2٪، یا 5.25٪، هر کدام بیشتر باشد"]]},
+ {t:"check",h:"پرسش‌هایی برای مشاور وام",items:[["چه مقدار از اجاره را حساب می‌کنید؟","و این‌که به درآمد اضافه می‌شود یا از هزینه‌ها کم می‌شود."],["اگر ملک‌های دیگری داشته باشم چه؟","وام‌ها و اجاره‌های فعلی چه اثری بر سقف وام دارند."],["شرایط پیش‌پرداخت و جریمه","فروش یا تمدید زودتر از موعد چقدر هزینه دارد."],["ثابت یا متغیر؟","بانک کانادا در 28 اکتبر 2026 نرخ را به 2.5٪ افزایش داد."]]},
+ {t:"take",text:"پیش از گشتن با مشاور وام صحبت کنید، نه بعد از پیدا کردن ملک. مقدار اجاره‌ای که حساب می‌کنند تعیین می‌کند چه چیزی را می‌توانید بخرید."}],
+ cta:["مشاور وام لازم دارید؟","می‌توانم شما را به افرادی که با آن‌ها کار می‌کنم معرفی کنم و هم‌زمان عددهای ملک را حساب کنم.","با علی صحبت کنید"]},
+
+"guide-multiplexes":{name:"دوپلکس، تریپلکس و فورپلکس در GTA",
+ title:"دوپلکس، تریپلکس و فورپلکس در تورنتو و منطقه‌ی یورک | علی بیات",
+ desc:"خرید خانه‌ی چندواحدی در GTA به فارسی: قوانین مولتی‌پلکس تورنتو، مجوز سه واحد در انتاریو، تأمین مالی بر اساس تعداد واحد، و بررسی قانونی بودن واحدها.",
+ h1:"دوپلکس، تریپلکس و فورپلکس <em>در GTA</em>",lede:"خانه‌های چندواحدی می‌توانند هزینه‌ی خودشان را دربیاورند، به شرط این‌که واحدها قانونی باشند. چه چیزی مجاز است و چه باید بررسی کرد.",
+ chips:["۳ دقیقه مطالعه","برای سرمایه‌گذاران","تورنتو و منطقه‌ی یورک"],card:"چه چیزی مجاز است، تأمین مالی با تعداد واحد چطور تغییر می‌کند، و چه باید بررسی کرد.",
+ blocks:[
+ {t:"stats",h:"چه چیزی مجاز است",items:[["4 واحد","تورنتو، در تمام شهر","مولتی‌پلکس در محله‌های کم‌ارتفاع بدون نیاز به تغییر کاربری مجاز است"],["6 واحد","بخش‌هایی از تورنتو","ناحیه‌ی Toronto & East York و Ward 23؛ اجرایی از 2025"],["3 واحد","بیشتر نقاط انتاریو","روی زمین‌های مسکونی دارای خدمات شهری، طبق Planning Act"]]},
+ {t:"tiers",h:"تعداد واحد چه چیزی را تغییر می‌دهد",items:[["دوپلکس","c1","۲ واحد",["با سکونت در یک واحد، بیمه‌شده با 5٪ پیش‌پرداخت","اغلب خانه‌ای با یک سوئیت دوم قانونی","ساده‌ترین مدیریت"]],["تریپلکس","c2","۳ واحد",["با سکونت خودتان حداقل 10٪ پیش‌پرداخت","قوانین جداسازی آتش و ساختمان سخت‌تر می‌شود","اجاره‌ی بیشتر، مدیریت بیشتر"]],["فورپلکس","c3","۴ واحد",["بزرگ‌ترین اندازه‌ای که هنوز وام مسکونی می‌گیرد","با سکونت 10٪ پیش‌پرداخت، بدون سکونت 20٪","منطقه‌بندی، پارکینگ و مجوزها را با دقت بررسی کنید"]]]},
+ {t:"check",h:"پیش از حساب کردن اجاره بررسی کنید",items:[["مجوزها و بازرسی نهایی","برای هر واحد، از اداره‌ی ساختمان شهرداری."],["منطقه‌بندی همان نشانی","مجوزها فرق دارد؛ همان زمین را بررسی کنید."],["جداسازی آتش و راه خروج","بین واحدها لازم است؛ افزودنش بعداً گران است."],["قراردادهای اجاره‌ی فعلی","اجاره، تاریخ شروع، و این‌که واحدها مشمول سقف افزایش اجاره هستند یا نه."],["کنتورهای جدا","این‌که چه کسی قبوض را می‌پردازد هزینه‌های شما را تغییر می‌دهد."],["بیمه","مطمئن شوید بیمه‌گر از تعداد واحدها خبر دارد."]]},
+ {t:"flags",h:"نشانه‌های هشدار در آگهی‌ها",items:[["سوئیت «بالقوه» یا «In-law»","معمولاً یعنی واحد قانونی نیست."],["مجوزی برای آپارتمان زیرزمین ثبت نشده","ریسک آن به شما می‌رسد."],["اجاره‌های خیلی بالاتر از موارد مشابه","قرارداد و سابقه‌ی پرداخت را بخواهید."]]},
+ {t:"take",text:"پیش از پرسیدن اجاره، مجوزها را بخواهید. یک فورپلکس قانونی و خانه‌ای با سه واحد بدون مجوز، با یک قیمت، دو سرمایه‌گذاری متفاوت‌اند."}],
+ cta:["به یک ملک چندواحدی فکر می‌کنید؟","پیش از پیشنهاد دادن، قانونی بودن را بررسی می‌کنم و عددها را حساب می‌کنم.","درخواست تحلیل"]},
+
+"guide-investor-strategy":{name:"جریان نقدی یا رشد ارزش: انتخاب استراتژی",
+ title:"جریان نقدی یا رشد ارزش: انتخاب استراتژی سرمایه‌گذاری املاک | علی بیات",
+ desc:"دو دلیل برای داشتن ملک سرمایه‌گذاری در GTA، مزایا و ریسک هر کدام، و این‌که افت قیمت‌ها در 2026 برای برنامه‌های رشد ارزش چه معنایی دارد.",
+ h1:"جریان نقدی یا رشد ارزش: <em>انتخاب استراتژی</em>",lede:"دو دلیل متفاوت برای داشتن ملک. این‌که برای کدام می‌خرید، آنچه می‌خرید را تغییر می‌دهد.",
+ chips:["۲ دقیقه مطالعه","برای سرمایه‌گذاران","بازار GTA، ۲۰۲۶"],card:"دو دلیل برای داشتن ملک، مزایا و معایب، و ریسک هر کدام.",
+ blocks:[
+ {t:"vs",h:"دو استراتژی",a:["جریان نقدی","اجاره همه‌ی هزینه‌ها را می‌پوشاند و چیزی هم باقی می‌ماند.",["همین حالا درآمد می‌خواهید","نمی‌توانید کسری ماهانه را تحمل کنید","خانه‌های چندواحدی، پیش‌پرداخت بیشتر"],["ملک‌های کمتری در GTA این شرط را دارند","کار مدیریتی بیشتر","ریسک مستأجر و تعمیرات"]],b:["رشد ارزش","امروز کسری را می‌پذیرید به امید رشد ارزش در آینده.",["افق زمانی طولانی","درآمد پایدار برای پوشاندن کسری","مناطقی با برنامه‌ی حمل‌ونقل یا رشد"],["قیمت‌ها ممکن است پایین بیاید","نرخ بالاتر کسری را بیشتر می‌کند","سود فقط هنگام فروش دیده می‌شود"]]},
+ {t:"stats",h:"رشد ارزش تضمین‌شده نیست",items:[["−4.3٪","قیمت شاخص GTA","MLS® HPI کامپوزیت، اکتبر 2026 در برابر اکتبر 2025"],["−2.7٪","میانگین قیمت GTA","سالانه، اکتبر 2026"],["2.5٪","نرخ سیاستی بانک کانادا","افزایش در 28 اکتبر 2026"]]},
+ {t:"check",h:"پرسش‌هایی برای تصمیم",items:[["هر ماه چقدر می‌توانم اضافه بگذارم؟","و برای چند سال، اگر نرخ بالا برود؟"],["کی ممکن است این پول را لازم داشته باشم؟","افق کوتاه به نفع جریان نقدی است."],["چقدر کار می‌خواهم؟","واحد بیشتر یعنی تماس بیشتر."],["اگر قیمت 10٪ افت کند برنامه‌ام چیست؟","نگه دارم، بیشتر اجاره بدهم، یا بفروشم؟"]]},
+ {t:"take",text:"برای هر ملک یک استراتژی انتخاب کنید و بر اساس آن بخرید. معامله‌هایی که خراب می‌شوند همان‌هایی‌اند که برای رشد ارزش خریده شده‌اند و مالک توان نگه داشتن‌شان را ندارد."}],
+ cta:["مطمئن نیستید کدام استراتژی برای شماست؟","پیش از دیدن آگهی‌ها، درباره‌ی افق زمانی و بودجه‌تان صحبت کنیم.","با علی صحبت کنید"]},
+
+"guide-market-toronto-york":{name:"گزارش بازار، اکتبر ۲۰۲۶: تورنتو در برابر منطقه‌ی یورک",
+ title:"بازار املاک GTA، اکتبر 2026: تورنتو در برابر منطقه‌ی یورک | علی بیات",
+ desc:"عددهای TRREB برای اکتبر 2026 در شهر تورنتو و منطقه‌ی یورک به فارسی: فروش، قیمت، روزهای عرضه و موجودی، و معنای آن برای خریداران و فروشندگان.",
+ h1:"گزارش بازار، اکتبر ۲۰۲۶: <em>تورنتو در برابر منطقه‌ی یورک</em>",lede:"فروش و قیمت‌ها نسبت به سال قبل کمتر بود و خریداران انتخاب بیشتری داشتند. دو طرف خیابان استیلز این‌طور مقایسه می‌شوند.",
+ chips:["۲ دقیقه مطالعه","داده‌های TRREB","انتشار ۴ نوامبر ۲۰۲۶"],card:"فروش، قیمت و موجودی اکتبر در شهر تورنتو و منطقه‌ی یورک.",
+ blocks:[
+ {t:"stats",h:"نگاه کلی به GTA، اکتبر 2026",items:[["5,603","فروش","7.9٪− نسبت به اکتبر 2025"],["1,024,108 دلار","میانگین قیمت","2.7٪− سالانه"],["−4.3٪","شاخص MLS® HPI","سالانه"],["4.6","ماه موجودی","روند؛ انتخاب بیشتر برای خریداران"]]},
+ {t:"table",h:"تورنتو در برابر منطقه‌ی یورک",head:["اکتبر 2026","شهر تورنتو","منطقه‌ی یورک"],rows:[["فروش","2,184","1,038"],["میانگین قیمت","1,075,627 دلار","1,142,789 دلار"],["میانه‌ی قیمت","835,000 دلار","1,050,000 دلار"],["قیمت فروش نسبت به اعلامی","98٪","97٪"],["میانگین روزهای عرضه","30","33"],["ماه موجودی","4.6","5.0"]],note:"منبع: TRREB Market Watch، اکتبر 2026. همه‌ی انواع خانه."},
+ {t:"table",h:"GTA بر اساس نوع خانه",head:["نوع خانه","فروش","میانگین قیمت","تغییر نسبت به اکتبر 2025"],rows:[["مستقل","2,693","1,310,627 دلار","−3.2٪"],["نیمه‌مستقل","546","1,024,907 دلار","−0.8٪"],["تاون‌هاوس فری‌هولد","508","905,385 دلار","−5.0٪*"],["آپارتمان کاندو","1,385","621,400 دلار","−5.8٪"]],note:"*TRREB تغییر سالانه‌ی تاون‌هاوس‌ها (فری‌هولد و کاندو) را با هم گزارش می‌کند."},
+ {t:"cards",h:"معنای این عددها",items:[["خریداران","انتخاب بیشتر، وقت بیشتر","موجودی بالاتر و قیمت‌ها پایین‌تر از سال قبل است. شرط وام و بازرسی دوباره واقع‌بینانه است."],["فروشندگان","قیمت امروز را بگذارید","خریداران مقایسه می‌کنند. بر اساس فروش‌های اخیر قیمت بگذارید، نه اوج سال قبل، و خانه را خوب آماده کنید."],["سرمایه‌گذاران","نرخ بالا رفت","بانک کانادا در 28 اکتبر نرخ را به 2.5٪ رساند. جریان نقدی را با نرخ امروز دوباره حساب کنید."]]},
+ {t:"take",text:"میانگین‌ها خیلی چیزها را پنهان می‌کنند. خانه‌های نیمه‌مستقل هنوز بالاتر از قیمت اعلامی فروش می‌روند در حالی که کاندوها می‌مانند؛ پس پیش از هر تصمیمی، نوع ملک و خیابان خودتان را ببینید."}],
+ cta:["عددهای خیابان خودتان را می‌خواهید؟","فروش‌های اخیر و آگهی‌های فعال منطقه و نوع خانه‌ی شما را درمی‌آورم.","از علی بپرسید"]},
+
+"guide-market-york-region":{name:"گزارش بازار، اکتبر ۲۰۲۶: وان، ریچموند هیل و مارکهام",
+ title:"بازار املاک منطقه‌ی یورک، اکتبر 2026: وان، ریچموند هیل، مارکهام | علی بیات",
+ desc:"عددهای TRREB برای اکتبر 2026 در وان، ریچموند هیل و مارکهام به فارسی: فروش، میانگین و میانه‌ی قیمت، روزهای عرضه و ماه‌های موجودی.",
+ h1:"گزارش بازار، اکتبر ۲۰۲۶: <em>وان، ریچموند هیل و مارکهام</em>",lede:"سه شهر منطقه‌ی یورک کنار هم، با معنای این عددها اگر در شمال استیلز می‌خرید یا می‌فروشید.",
+ chips:["۲ دقیقه مطالعه","داده‌های TRREB","انتشار ۴ نوامبر ۲۰۲۶"],card:"وان، ریچموند هیل و مارکهام کنار هم برای اکتبر.",
+ blocks:[
+ {t:"stats",h:"منطقه‌ی یورک، اکتبر 2026",items:[["1,038","فروش","همه‌ی انواع خانه"],["1,050,000 دلار","میانه‌ی قیمت","میانگین 1,142,789 دلار"],["33 روز","میانگین روزهای عرضه","میانگین GTA برابر 31 است"],["5.0","ماه موجودی","بالاتر از 4.6 در GTA"]]},
+ {t:"table",h:"سه شهر کنار هم",head:["اکتبر 2026","وان","ریچموند هیل","مارکهام"],rows:[["فروش","263","185","260"],["میانگین قیمت","1,201,704 دلار","1,193,772 دلار","1,117,006 دلار"],["میانه‌ی قیمت","1,135,000 دلار","1,150,000 دلار","1,050,000 دلار"],["فروش نسبت به قیمت اعلامی","97٪","98٪","98٪"],["میانگین روزهای عرضه","33","31","30"],["ماه موجودی","4.8","5.5","4.1"]],note:"منبع: TRREB Market Watch، اکتبر 2026. همه‌ی انواع خانه. تورنهیل بین وان و مارکهام تقسیم شده است."},
+ {t:"cards",h:"آنچه برجسته است",items:[["مارکهام","تنگ‌ترین بازار از این سه","کمترین موجودی (4.1 ماه) و سریع‌ترین فروش."],["ریچموند هیل","بیشترین انتخاب","5.5 ماه موجودی: خریداران وقت دارند و می‌توانند مذاکره کنند."],["وان","بالاترین میانگین قیمت","اما فروش کمی بیشتر طول کشید، به‌طور میانگین 33 روز."]]},
+ {t:"take",text:"اگر خانه‌ای در وان را با خانه‌ای در نورث‌یورک مقایسه می‌کنید، یادتان باشد منطقه‌ی یورک مالیات انتقال زمین شهرداری ندارد. این می‌تواند روز تحویل 16,000 دلار یا بیشتر ارزش داشته باشد."}],
+ cta:["در منطقه‌ی یورک می‌خرید یا می‌فروشید؟","نشان می‌دهم خانه‌های مشابه در خیابان شما این پاییز چند فروش رفتند.","از علی بپرسید"]},
+
+"guide-status-certificate":{name:"خواندن Status Certificate کاندو",
+ title:"خواندن Status Certificate کاندو در انتاریو | علی بیات",
+ desc:"Status Certificate کاندو در انتاریو به فارسی: چه چیزی در آن است، صفحه‌هایی که مهم‌اند، نشانه‌های هشدار، و اثر مهلت ۱۰ روزه بر پیشنهاد شما.",
+ h1:"خواندن <em>Status Certificate کاندو</em>",lede:"سلامت مالی ساختمان در یک بسته. صفحه‌هایی که مهم‌اند و نشانه‌های هشداری که باید دنبالشان بگردید.",
+ chips:["۲ دقیقه مطالعه","کاندوی دست‌دوم","قوانین انتاریو"],card:"صفحه‌هایی که مهم‌اند و نشانه‌های هشدار.",
+ blocks:[
+ {t:"stats",h:"اصول اولیه",items:[["10 روز","مهلت تحویل توسط ساختمان","پس از دریافت درخواست و پرداخت"],["100 دلار","حداکثر هزینه","با مالیات؛ تحویل فوری ممکن است هزینه‌ی بیشتری داشته باشد"],["شرط","پیشنهادتان را مشروط به آن کنید","با زمان کافی برای بررسی وکیل"]]},
+ {t:"cards",h:"صفحه‌هایی که مهم‌اند",items:[["شارژ ساختمان","مبلغ و بدهی","شارژ ماهانه‌ی فعلی، افزایش برنامه‌ریزی‌شده، و بدهی معوق واحد."],["صندوق ذخیره","حساب پس‌انداز ساختمان","موجودی و آخرین مطالعه‌ی صندوق ذخیره. آیا برنامه سر جایش است؟"],["هزینه‌ی ویژه (Special assessment)","پرداخت‌های اضافه","هر هزینه‌ی ویژه‌ی وضع‌شده یا برنامه‌ریزی‌شده، و دلیل آن."],["دعاوی حقوقی","پرونده‌ها","هر حکم یا پرونده‌ی دادگاهی مربوط به ساختمان."],["بودجه و صورت‌های مالی","پول کجا می‌رود","بودجه‌ی فعلی و صورت‌های مالی حسابرسی‌شده."],["قوانین و بیمه","زندگی روزمره‌ی شما","اساسنامه، آیین‌نامه‌ها و قوانین (حیوان خانگی، اجاره، اجاره‌ی کوتاه‌مدت) و بیمه‌نامه‌ها."]]},
+ {t:"flags",h:"نشانه‌های هشدار",items:[["صندوق ذخیره پایین‌تر از برنامه‌ی مطالعه","اغلب به افزایش شارژ یا هزینه‌ی ویژه می‌رسد."],["هزینه‌ی ویژه، یا بحث درباره‌ی آن","بپرسید چه کسی می‌پردازد: شما یا فروشنده."],["دعاوی جاری","می‌تواند بر شارژ، بیمه و فروش مجدد اثر بگذارد."],["اعلام افزایش بزرگ شارژ","از همین حالا برایش بودجه بگذارید."],["قوانینی که مانع برنامه‌های شماست","اجاره، حیوان خانگی یا بازسازی‌ای که رویش حساب کرده‌اید."]]},
+ {t:"take",text:"کل گواهی را به وکیل‌تان بدهید، نه خلاصه را، و به او وقت بدهید. پیشنهاد خرید کاندوی دست‌دوم همیشه باید شرط Status Certificate داشته باشد."}],
+ cta:["کاندوی دست‌دوم می‌خرید؟","مطمئن می‌شوم پیشنهادتان شرط‌های درست و زمان کافی برای بررسی دارد.","با علی صحبت کنید"]},
+
+"guide-home-inspection":{name:"بازرسی خانه در GTA: چه انتظاری داشته باشید",
+ title:"بازرسی خانه در تورنتو و GTA: چه انتظاری داشته باشید | علی بیات",
+ desc:"بازرسی خانه در انتاریو به فارسی: هزینه، آنچه بازرس بررسی می‌کند و نمی‌کند، و استفاده از گزارش در پیشنهاد و مذاکره.",
+ h1:"بازرسی خانه در GTA: <em>چه انتظاری داشته باشید</em>",lede:"هزینه‌اش چقدر است، بازرس به چه چیزهایی نگاه می‌کند، به چه چیزهایی نه، و چطور از گزارش استفاده کنید.",
+ chips:["۲ دقیقه مطالعه","برای خریداران و فروشندگان","انتاریو"],card:"بازرس چه چیزهایی را بررسی می‌کند و چطور از گزارش استفاده کنیم.",
+ blocks:[
+ {t:"stats",h:"پیش از رزرو",items:[["350 تا 600 دلار","هزینه‌ی معمول","طبق دولت انتاریو؛ خانه‌های بزرگ‌تر گران‌ترند"],["همراه شوید","در بازرسی حاضر باشید","دولت انتاریو توصیه می‌کند؛ در حین کار سؤال بپرسید"],["بدون مجوز","در انتاریو","بازرس‌ها ملزم به داشتن مجوز یا بیمه نیستند؛ بپرسید"]]},
+ {t:"cards",h:"آنچه بررسی می‌کنند",items:[["سازه","فونداسیون و اسکلت","ترک، جابه‌جایی و نشانه‌های آب."],["سقف و نما","شینگل، فلاشینگ، شیب زمین","عمر، فرسودگی و مسیر آب."],["لوله‌کشی","آب، فاضلاب، آبگرمکن","نشتی، جنس لوله‌ها و فشار آب."],["برق","تابلو و سیم‌کشی","ظرفیت، مشکلات ایمنی و سیم‌کشی‌های قدیمی."],["گرمایش و سرمایش","کوره، کولر","عمر، وضعیت و سابقه‌ی سرویس."],["داخل خانه","پنجره، در، زیرشیروانی","عایق، تهویه و رطوبت."]]},
+ {t:"flags",h:"بازرسی چه چیزی نیست",items:[["قبول یا رد نیست","گزارشی دیداری از وضعیت است."],["بررسی قانون ساختمان یا منطقه‌بندی نیست","نمی‌گوید واحدی قانونی است یا نه."],["پشت دیوار را نمی‌بیند","کپک و آسیب پنهان ممکن است دیده نشود."],["گارانتی نیست","پس از تحویل چیزی تضمین نمی‌شود."]]},
+ {t:"steps",h:"استفاده از گزارش",items:[["یافته‌ها را دسته‌بندی کنید","همان روز","مسائل ایمنی، موارد پرهزینه، و نگهداری معمول."],["برای موارد بزرگ استعلام بگیرید","در مهلت شرط","استعلام قیمت از یک سقف‌کار یا برق‌کار بهتر از حدس است."],["تصمیم بگیرید","پیش از پایان مهلت شرط‌ها","ادامه دهید، کاهش قیمت یا اعتبار بخواهید، یا کنار بکشید."]]},
+ {t:"take",text:"بازرس خودتان را بگیرید و همراهش خانه را بگردید. یک ساعت پرسش ارزشش از گزارش ۴۰ صفحه‌ای بیشتر است."}],
+ cta:["به‌زودی خرید می‌کنید؟","کمک می‌کنم شرط و زمان‌بندی درست بازرسی را در پیشنهادتان بگذارید.","با علی صحبت کنید"]},
+
+"guide-contractor":{name:"انتخاب پیمانکار پس از خرید",
+ title:"انتخاب پیمانکار در انتاریو: استعلام، قرارداد و مجوز | علی بیات",
+ desc:"استخدام پیمانکار در انتاریو به فارسی: قرارداد کتبی، مهلت ۱۰ روزه‌ی انصراف، ودیعه، مجوزها، گواهی‌نامه‌ها و کلاهبرداری‌هایی که باید از آن‌ها دوری کرد.",
+ h1:"انتخاب پیمانکار <em>پس از خرید</em>",lede:"استعلام قیمت، قرارداد، مجوز و برنامه‌ی پرداخت، و حقوق شما طبق قانون انتاریو.",
+ chips:["۲ دقیقه مطالعه","مالکان خانه","قوانین انتاریو"],card:"استعلام، قرارداد، مجوز و برنامه‌ی پرداخت.",
+ blocks:[
+ {t:"stats",h:"حقوق شما در انتاریو",items:[["50+ دلار","قرارداد کتبی لازم است","هر قرارداد بازسازی خانه بالای 50 دلار"],["10 روز","برای انصراف","اگر قرارداد را در خانه‌ی خودتان امضا کرده باشید"],["10٪","سقف فراتر رفتن از برآورد","قیمت نهایی بدون موافقت شما نمی‌تواند بیش از 10٪ از برآورد بیشتر شود"],["≤10٪","ودیعه‌ی پیشنهادی","انتاریو توصیه می‌کند بیش از 10٪ پیش‌پرداخت ندهید"]]},
+ {t:"steps",h:"استخدام، قدم به قدم",items:[["سه استعلام کتبی بگیرید","هفته‌ی ۱","با شرح کار یکسان، تا بتوانید مقایسه کنید."],["بررسی‌شان کنید","هفته‌ی ۱ تا ۲","معرف‌ها، فهرست Consumer Beware استان، پوشش WSIB و برای کار برقی، مجوز ESA."],["قرارداد کامل امضا کنید","پیش از شروع کار","شرح کار، متریال، قیمت با مالیات، تاریخ شروع و پایان، برنامه‌ی پرداخت، گارانتی و نظافت."],["مجوز را ببینید","پیش از شروع کار","اگر آن‌ها مجوز می‌گیرند، پیش از شروع ساخت آن را ببینید."],["همراه پیشرفت کار بپردازید","در طول کار","پرداخت‌ها را به مراحل تمام‌شده گره بزنید. هرگز همه‌ی مبلغ را از اول ندهید."]]},
+ {t:"flags",h:"کلاهبرداری‌های رایج",items:[["«قیمت خوب» در خانه‌به‌خانه","فشار برای امضای همان روز، یا بازرسی رایگانی که تعمیر فوری پیدا می‌کند."],["ودیعه‌ی بزرگ «برای متریال»","و بعد پیمانکار ناپدید می‌شود."],["نقدی، بدون کاغذ","بدون قرارداد، بدون مجوز، بدون رسید."]]},
+ {t:"take",text:"پیمانکاری که حاضر نیست چیزی را مکتوب کند، پای آن هم نمی‌ایستد. قرارداد از هر دو طرف محافظت می‌کند."}],
+ cta:["تازه خریده‌اید و کار در برنامه دارید؟","می‌توانم استادکارهایی را که مشتری‌هایم با آن‌ها کار کرده‌اند معرفی کنم و کمک کنم ببینید چه کاری مجوز لازم دارد.","با علی صحبت کنید"]}
+};
+
+/* ---------- Farsi Resources page: same categories and order as ARTS, Farsi titles; build.py captures the rendered list ---------- */
+const FA_KC_CATS=[["buying","راهنمای خرید","از بودجه تا روز تحویل."],["selling","راهنمای فروش","آماده‌سازی، قیمت‌گذاری و فروش."],["investment","سرمایه‌گذاری","تحلیل ملک‌های درآمدزا: جریان نقدی، Cap rate، وام و استراتژی."],["market","گزارش بازار","گزارش ماهانه‌ی هر منطقه، بر اساس داده‌های هیئت املاک."],["areas","راهنمای محله‌ها","زندگی در هر محله چطور است."],["tips","نکته‌های املاک","پاسخ کوتاه به پرسش‌های رایج."]];
+const FA_KC_EXTRA={"guide-land-transfer-tax":["مالیات انتقال زمین در تورنتو و منطقه‌ی یورک، همراه با ماشین‌حساب","چرا خرید با قیمت یکسان در نورث‌یورک هزینه‌ی بیشتری از وان دارد."],"north-york":["راهنمای نورث‌یورک","برج‌های کاندو در امتداد خیابان یانگ و خیابان‌های آرام مسکونی چند بلوک آن‌طرف‌تر."],"thornhill":["راهنمای تورنهیل","محله‌ای جاافتاده درست شمال تورنتو که میان دو شهر تقسیم شده است."],"richmond-hill":["راهنمای ریچموند هیل","محله‌های جاافتاده، شهرک‌های جدیدتر و فضای سبز در شمال."],"vaughan":["راهنمای وان","محله‌های جاافتاده و یک مرکز شهر جدید که پیرامون مترو ساخته شده است."],"toronto":["راهنمای تورنتو","خانه‌های ویکتوریایی نیمه‌مستقل، خیابان‌های خانوادگی میدتاون و کاندوهای مرکز شهر."]};
+function renderKCFa(){
+  const box=document.querySelector("[data-fa-kc]");if(!box)return;
+  const fd=t=>t.replace(/[0-9]/g,x=>"۰۱۲۳۴۵۶۷۸۹"[x]);
+  const items=ARTS.filter(a=>a.pub&&a.href).map(a=>{const k=a.href.slice(1),f=GUIDES_FA[k],x=FA_KC_EXTRA[k];return (f||x)&&ROUTES.some(r=>r.key==="fa-"+k)?{c:a.c,k,t:f?f.name:x[0],d:f?f.card:x[1]}:null}).filter(Boolean);
+  const cats=FA_KC_CATS.filter(c=>items.some(i=>i.c===c[0]));
+  box.innerHTML=`<div class="chips" role="group" aria-label="دسته‌بندی راهنماها">${[["all","همه"],...cats].map(c=>`<button class="chip" type="button" data-fa-cat="${c[0]}" aria-pressed="${c[0]==="all"}">${c[1]}</button>`).join("")}</div>`
+   +cats.map(([id,name,intro])=>`<section class="kc-cat" data-fa-sec="${id}"><div class="intro"><h2>${name}</h2><p>${intro}</p></div><div class="arts">${items.filter(i=>i.c===id).map(i=>`<a class="art" href="#fa-${i.k}"><h3>${fd(i.t)}</h3><p>${fd(i.d)}</p></a>`).join("")}</div></section>`).join("")}
+function renderGuide(g,fa){
+  /* fa: the GUIDES_FA entry for a Farsi page. Structure, figures, sources and CTA interest come from the English guide g. */
+  const T=fa?{short:"خلاصه",best:"بهترین زمان",watch:"مراقب باشید",take:"نظر علی",tbl:"جدول",faq:"پاسخ‌های کوتاه",rel:"مطالب مرتبط",home:"خانه",res:"منابع",by:"علی بیات",chk:"عددها در 21 نوامبر 2026 با منابع زیر تطبیق داده شده است",src:"<b>منابع</b>، بررسی‌شده در 21 نوامبر 2026. این راهنما اطلاعات عمومی است، نه مشاوره‌ی حقوقی، مالیاتی یا مالی."}
+   :{short:"The short version",best:"Works best when",watch:"Watch out for",take:"Ali's take",tbl:"Table",faq:"Quick answers",rel:"Related",home:"Home",res:"Resources",by:"Ali Bayat",chk:"Figures checked against the sources below on November 21, 2026",src:"<b>Sources</b>, checked November 21, 2026. This guide is general information, not legal, tax or financial advice."};
+  const P=fa?"fa-":"",d=fa||g;
+  const R=k=>ROUTES.find(r=>r.key===k),money=n=>typeof n!=="number"?n:fa?`${n.toLocaleString("en-CA")} دلار`:n.toLocaleString("en-CA",{style:"currency",currency:"CAD",maximumFractionDigits:0});
+  const ul=a=>`<ul class="ticks">${a.map(x=>`<li><span>${x}</span></li>`).join("")}</ul>`;
+  let n=0;
+  const sec=(b,inner)=>{const k=b.h?String(++n).padStart(2,"0"):"";return `<section class="gk-sec">${b.h?`<h2><span class="k" aria-hidden="true">${k}</span>${b.h}</h2>`:""}${b.intro?`<p>${b.intro}</p>`:""}${inner}${b.note?`<p class="note">${b.note}</p>`:""}</section>`};
+  const B={
+   tldr:b=>`<div class="gk-tldr"><span class="label accent">${T.short}</span><ul>${b.items.map(x=>`<li><span>${x}</span></li>`).join("")}</ul></div>`,
+   stats:b=>sec(b,`<div class="gk-stats">${b.items.map(([v,l,s])=>`<div><b>${v}</b><span>${l}</span>${s?`<small>${s}</small>`:""}</div>`).join("")}</div>`),
+   steps:b=>sec(b,`<ol class="gk-steps">${b.items.map(([t,w,d],i)=>`<li><span class="n" aria-hidden="true">${String(i+1).padStart(2,"0")}</span><div><div class="hd"><h3>${t}</h3><span class="when">${w}</span></div><p>${d}</p></div></li>`).join("")}</ol>`),
+   bar:b=>{const sum=b.items.reduce((a,x)=>a+x[2],0);return sec(b,`<figure class="gk-bar"><div class="track" aria-hidden="true">${b.items.map(x=>`<span class="c${x[3]}" style="flex:${x[2]}"></span>`).join("")}</div><ul class="lg">${b.items.map(([l,s,v,c])=>`<li><i class="c${c}" aria-hidden="true"></i><span>${l}<small>${s}</small></span><b>${money(v)}</b></li>`).join("")}<li class="tot${b.totalNeg?" neg":""}"><i aria-hidden="true"></i><span>${b.total[0]}</span><b>${money(b.total[1])}</b></li></ul>${b.cap?`<figcaption>${b.cap}</figcaption>`:""}</figure>`)},
+   check:b=>sec(b,`<ul class="gk-check">${b.items.map(([t,d])=>`<li><div><b>${t}</b><span>${d}</span></div></li>`).join("")}</ul>`),
+   flags:b=>sec(b,`<ul class="gk-flags">${b.items.map(([t,d])=>`<li><div><b>${t}</b><span>${d}</span></div></li>`).join("")}</ul>`),
+   vs:b=>sec(b,`<div class="gk-vs">${[b.a,b.b].map(([t,tag,good,bad])=>`<div><h3>${t}</h3><p class="tag">${tag}</p><h4>${T.best}</h4>${ul(good)}<h4>${T.watch}</h4>${ul(bad)}</div>`).join("")}</div>`),
+   tiers:b=>sec(b,`<div class="gk-tiers">${b.items.map(([t,c,d,li])=>`<div><div class="hd"><i class="${c}" aria-hidden="true"></i><h3>${t}</h3></div><p>${d}</p>${ul(li)}</div>`).join("")}</div>`),
+   formula:b=>sec({...b,note:""},`<div class="gk-formula"><p class="eq">${b.eq}</p><dl>${b.rows.map(([k,v])=>`<div><dt>${k}</dt><dd>${v}</dd></div>`).join("")}${b.res?`<div class="res"><dt>${b.res[0]}</dt><dd>${b.res[1]}</dd></div>`:""}</dl>${b.note?`<p>${b.note}</p>`:""}</div>`),
+   take:b=>`<aside class="gk-take" aria-label="${T.take}"><img src="/assets/img/ali-bayat-headshot.jpg" alt="" aria-hidden="true" width="52" height="52" decoding="async" loading="lazy"><div><span class="label">${T.take}</span><p>${b.text}</p></div></aside>`,
+   cards:b=>sec(b,`<div class="gk-cards">${b.items.map(([ic,t,d])=>`<div><span class="ic">${ic}</span><h3>${t}</h3><p>${d}</p></div>`).join("")}</div>`),
+   table:b=>sec(b,`<div class="tbl-wrap gk-tbl" tabindex="0" role="region" aria-label="${b.h||T.tbl}"><table><thead><tr>${b.head.map((h,i)=>`<th${i?' class="r"':""}>${h}</th>`).join("")}</tr></thead><tbody>${b.rows.map(r=>`<tr>${r.map((c,i)=>`<td${i?' class="r"':""}>${c}</td>`).join("")}</tr>`).join("")}</tbody></table></div>`),
+   p:b=>sec(b,`<p>${b.text}</p>`),
+   faq:b=>`<div class="asec gk-faq" style="border-bottom:0"><h2>${T.faq}</h2><div class="body faq" data-faq>${b.items.map(([q,a])=>`<h3>${q}</h3><p>${a}</p>`).join("")}</div></div>`};
+  const [catName,catLabel]=(fa?GCAT_FA:GCAT)[g.cat];
+  const AREA_KEYS=["toronto","north-york","vaughan","richmond-hill","thornhill"];
+  const relFa=k=>{const gg=GBY[k],r=R("fa-"+k);if(!r)return"";const f=GUIDES_FA[k];
+    const [lab,name]=f?[GCAT_FA[gg.cat][1],f.name]:k==="guide-land-transfer-tax"?["راهنمای خرید","مالیات انتقال زمین: تورنتو و منطقه‌ی یورک"]:AREA_KEYS.includes(k)?["راهنمای محله","راهنمای "+r.name]:["خدمات",{buy:"خرید خانه با علی چطور پیش می‌رود",sell:"فروش خانه با علی چطور پیش می‌رود",invest:"تحلیل ملک سرمایه‌گذاری",about:"درباره‌ی علی"}[k]||r.name];
+    return `<a href="#fa-${k}"><small>${lab}</small><b>${name}</b></a>`};
+  const rel=fa?g.rel.map(relFa).join(""):g.rel.map(k=>{const gg=GBY[k],r=R(k);if(!r)return"";const lab=gg?GCAT[gg.cat][1]:k==="guide-land-transfer-tax"?"Buying guide":["toronto","north-york","vaughan","richmond-hill","thornhill"].includes(k)?"Neighbourhood guide":"Service";return `<a href="#${k}"><small>${lab}</small><b>${gg?gg.name:r.name==="Buy"?"How buying with Ali works":r.name==="Sell"?"How selling with Ali works":r.name==="Invest"?"Investment property analysis":r.name==="About"?"About Ali":k==="guide-land-transfer-tax"?"Land transfer tax: Toronto vs. York Region":r.name+" guide"}</b></a>`}).join("");
+  const html=`<header class="page-head"><div class="wrap">
+    <nav class="crumbs" aria-label="Breadcrumb"><a href="#${P}home">${T.home}</a><span aria-hidden="true">/</span><a href="#${P}resources">${T.res}</a><span aria-hidden="true">/</span><span>${catName}</span></nav>
+    <span class="label accent">${catLabel}</span>
+    <h1 tabindex="-1">${d.h1}</h1>
+    <p class="lede">${d.lede}</p>
+    <div class="byline"><img class="av" src="/assets/img/ali-bayat-headshot.jpg" alt="" aria-hidden="true" width="44" height="44" decoding="async"><div class="small"><b>${T.by}</b><br><span class="muted">${T.chk}</span><br><span class="muted" data-meta="dates"></span></div></div>
+    <div class="gk-chips">${d.chips.map(c=>`<span>${c}</span>`).join("")}</div>
+  </div></header>
+  <section class="band tight"><div class="wrap gk">
+    ${d.blocks.map(b=>B[b.t](b)).join("\n")}
+    <div class="gk-cta"><div><h2>${d.cta[0]}</h2><p>${d.cta[1]}</p></div><a class="btn" href="#${P}contact" data-interest="${g.cta[3]}">${d.cta[2]}</a></div>
+    <section class="gk-sec"><h2>${T.rel}</h2><div class="gk-rel">${rel}</div></section>
+    <div class="gk-sources">${T.src}<ol>@@SRC@@</ol></div>
+  </div></section>`;
+  /* Farsi pages: Persian digits in visible text only (never in links or attributes). Source titles stay in English. */
+  const out=fa?html.replace(/>([^<]+)</g,(m,t)=>">"+t.replace(/[0-9]/g,x=>"۰۱۲۳۴۵۶۷۸۹"[x])+"<"):html;
+  return out.replace("@@SRC@@",g.sources.map(([t,u])=>`<li><a href="${u}" rel="noopener"${fa?' lang="en" dir="ltr"':""}>${t}</a></li>`).join(""))}
+
 /* ---------- Routes: one source of truth for URLs, titles, descriptions, H1s and indexing ---------- */
 /* Used by the prototype router, the internal SEO table and build.py (static, crawlable pages). */
 const ROUTES=[
@@ -2543,7 +3264,7 @@ const ROUTES=[
  {key:"neighbourhoods",alt:"fa-neighbourhoods",ct:"hub",cat:"neighbourhoods",geo:"GTA",evergreen:1,path:"/neighbourhoods/",name:"Neighbourhoods",parent:"home",index:1,title:"GTA Neighbourhood Guides | Ali Bayat",desc:"Guides to North York, Thornhill, Richmond Hill, Vaughan and Toronto: housing, transit, amenities and advice for buyers and sellers.",h1:"The GTA, one community at a time"},
  ...AREAS.map(a=>({key:a.slug,alt:"fa-"+a.slug,page:"area",ct:"neighbourhood-guide",cat:"neighbourhoods",geo:a.name,evergreen:1,path:`/neighbourhoods/${a.slug}/`,name:a.name,parent:"neighbourhoods",index:1,place:a.name,title:`${a.name} Real Estate Agent & Neighbourhood Guide | Ali Bayat`,desc:`${a.tagline} Housing, transit, amenities and advice for buyers and sellers in ${a.name}.`,h1:`${a.name} real estate`})),
  {key:"listings",ct:"listings",cat:"buying",geo:"GTA",ts:1,path:"/listings/",name:"Listings",parent:"buy",index:0,requires:"idx",why:"noindex until a live IDX feed replaces the layout preview",title:"Toronto & GTA Homes for Sale | Ali Bayat",desc:"Search homes for sale and lease across Toronto, North York, Thornhill, Richmond Hill and Vaughan.",h1:"Homes for sale in Toronto and the GTA"},
- {key:"resources",alt:"fa-resources",ct:"hub",cat:"resources",geo:"GTA",evergreen:1,path:"/resources/",name:"Resources",parent:"home",index:1,title:"Real Estate Guides & GTA Market Insights | Ali Bayat",desc:"Plain-language guides on buying, selling and investing in the GTA, neighbourhood guides and monthly market notes.",h1:"Guides for buying, selling and understanding the GTA market"},
+ {key:"resources",alt:"fa-resources",ct:"hub",cat:"resources",geo:"GTA",evergreen:1,path:"/resources/",name:"Resources",parent:"home",index:1,title:"Toronto & York Region Real Estate Guides | Ali Bayat",desc:"One-page guides for Toronto and York Region: first-home costs, land transfer tax, selling strategy, investment analysis, market notes and neighbourhoods.",h1:"Guides for buying, selling and investing in Toronto and York Region"},
  {key:"guide-land-transfer-tax",alt:"fa-guide-land-transfer-tax",ct:"guide",cat:"buying",geo:"Ontario; City of Toronto; York Region",ts:1,dataPeriod:"Ontario rates in effect since January 1, 2017; City of Toronto MLTT rates in effect from April 1, 2026",verifiedAt:"2026-10-01",sources:[["City of Toronto, MLTT rates and fees","https://www.toronto.ca/services-payments/property-taxes-utilities/municipal-land-transfer-tax-mltt/municipal-land-transfer-tax-mltt-rates-and-fees/"],["City of Toronto, MLTT rebates","https://www.toronto.ca/services-payments/property-taxes-utilities/municipal-land-transfer-tax-mltt/municipal-land-transfer-tax-mltt-rebate-opportunities/"],["Ontario, calculating land transfer tax","https://www.ontario.ca/document/land-transfer-tax/calculating-land-transfer-tax"],["Ontario, refunds for first-time homebuyers","https://www.ontario.ca/document/land-transfer-tax/land-transfer-tax-refunds-first-time-homebuyers"]],path:"/resources/buying/land-transfer-tax-toronto-york-region/",name:"Land transfer tax in Toronto vs. York Region",parent:"resources",type:"article",index:1,title:"Land Transfer Tax in Toronto vs. York Region (2026) | Ali Bayat",desc:"How Ontario and Toronto land transfer taxes work in 2026, why buying in North York costs more at closing than Vaughan, with a calculator.",h1:"Land transfer tax in Toronto vs. York Region"},
  {key:"contact",alt:"fa-contact",ct:"contact",cat:"general",geo:"GTA",evergreen:1,path:"/contact/",name:"Contact",parent:"home",index:1,title:"Contact Ali Bayat, REALTOR® | North York & Thornhill",desc:"Talk to Ali about buying, selling or investing in North York, Thornhill and the GTA. Replies personally, in English or Farsi (فارسی).",h1:"Talk to Ali"},
  {key:"fa-home",lang:"fa",alt:"home",ct:"home",cat:"general",geo:"GTA",evergreen:1,path:"/fa/",name:"خانه",index:1,title:"علی بیات | مشاور املاک فارسی‌زبان در تورنتو و نورث‌یورک",desc:"علی بیات، مشاور املاک فارسی‌زبان در Century 21 Heritage Group با مجوز از 2016. خرید، فروش، اجاره و سرمایه‌گذاری در نورث‌یورک، تورنهیل، ریچموند هیل، وان، تورنتو.",h1:"مشاور املاک فارسی‌زبان در تورنتو و نورث‌یورک، با اعداد واقعی."},
@@ -2561,9 +3282,9 @@ const ROUTES=[
  {key:"accessibility",ct:"legal",cat:"legal",geo:"Ontario",evergreen:1,path:"/accessibility/",name:"Accessibility",parent:"home",index:0,why:"noindex until the statement is written",title:"Accessibility | Ali Bayat",desc:"Accessibility of the Ali Bayat website and how to request information in another format.",h1:"Accessibility"},
  {key:"not-found",ct:"system",cat:"system",path:"/404.html",name:"Page not found",index:0,why:"error page",title:"Page Not Found | Ali Bayat",desc:"The page you were looking for isn't here.",h1:"This page isn't here."},
 
- /* Planned: the information architecture exists, but these are NOT built or indexed until they have substantive, original content. */
- ...[["invest-duplexes","/invest/duplexes/","Duplexes"],["invest-triplexes","/invest/triplexes/","Triplexes"],["invest-fourplexes","/invest/fourplexes/","Fourplexes"],["invest-cash-flow","/invest/cash-flow/","Cash flow"],["invest-cap-rate","/invest/cap-rate/","Cap rate"],["invest-analysis","/invest/investment-analysis/","Investment property analysis"]]
-   .map(([key,path,name])=>({key,path,name,parent:"invest",planned:1,ct:"guide",cat:"investment",geo:"Toronto & York Region",index:0,why:"planned; not built until written",title:"",desc:"",h1:""})),
+ /* Guides rendered from GUIDES (one reusable layout, page "guide"). */
+ ...GUIDES.map(g=>({key:g.key,alt:"fa-"+g.key,page:"guide",ct:"guide",cat:g.cat,geo:g.geo,ts:1,dataPeriod:g.cat==="market"?"October 2026 (TRREB Market Watch, released November 4, 2026)":"Rules and rates in effect November 2026",verifiedAt:"2026-11-21",sources:g.sources,path:g.path,name:g.name,parent:"resources",type:"article",index:1,title:g.title,desc:g.desc,h1:g.h1.replace(/<[^>]+>/g,"")})),
+ ...GUIDES.map(g=>{const f=GUIDES_FA[g.key];return {key:"fa-"+g.key,lang:"fa",alt:g.key,page:"fa-guide",ct:"guide",cat:g.cat,geo:g.geo,ts:1,dataPeriod:g.cat==="market"?"October 2026 (TRREB Market Watch, released November 4, 2026)":"Rules and rates in effect November 2026",verifiedAt:"2026-11-21",sources:g.sources,path:"/fa"+g.path,name:f.name,parent:"fa-resources",type:"article",index:1,title:f.title,desc:f.desc,h1:f.h1.replace(/<[^>]+>/g,"")}}),
  {key:"site-plan",ct:"internal",cat:"internal",path:"",name:"Site plan",internal:1,index:0,why:"internal; not published",title:"Site Plan & Launch Notes | Ali Bayat (internal)",desc:"",h1:"Site plan, SEO and launch notes"}
 ];
 window.__routes=ROUTES;
@@ -2591,14 +3312,16 @@ if(STATIC&&!attrib.landing_page){
 /*<prototype>*/
 /* ---------- Router (prototype only) ---------- */
 const pages=[...document.querySelectorAll("[data-page]")],areaPage=document.querySelector('[data-page="area"]'),faAreaPage=document.querySelector('[data-page="fa-area"]');
-const navMap={area:"neighbourhoods","guide-land-transfer-tax":"resources",listings:"buy"};
+const navMap={area:"neighbourhoods","guide-land-transfer-tax":"resources",guide:"resources","fa-guide":"fa-resources",listings:"buy"};
 function route(){
   const h=(location.hash||"#home").slice(1)||"home";if(h==="main")return;
-  const area=AREAS.find(a=>a.slug===h),faArea=AREAS.find(a=>"fa-"+a.slug===h);let key=area?"area":faArea?"fa-area":h;
+  const area=AREAS.find(a=>a.slug===h),faArea=AREAS.find(a=>"fa-"+a.slug===h),guide=GBY[h],faGuide=h.startsWith("fa-")&&GUIDES_FA[h.slice(3)]?GBY[h.slice(3)]:null;let key=area?"area":faArea?"fa-area":guide?"guide":faGuide?"fa-guide":h;
   if(!pages.some(p=>p.dataset.page===key))key="home";
   pages.forEach(p=>p.hidden=p.dataset.page!==key);
   if(area){areaPage.innerHTML=renderArea(area);fillDwgs(areaPage);document.title=`${area.name} Real Estate Agent & Neighbourhood Guide | Ali Bayat`}
   else if(faArea){faAreaPage.innerHTML=renderAreaFa(faArea);fillDwgs(faAreaPage);document.title=ROUTES.find(r=>r.key===h).title}
+  else if(guide){document.querySelector('[data-page="guide"]').innerHTML=renderGuide(guide);document.title=guide.title}
+  else if(faGuide){document.querySelector('[data-page="fa-guide"]').innerHTML=renderGuide(faGuide,GUIDES_FA[faGuide.key]);document.title=GUIDES_FA[faGuide.key].title}
   else document.title=pages.find(p=>p.dataset.page===key).dataset.title;
   const nk=navMap[key]||key;
   document.querySelectorAll(".nav a, .drawer a").forEach(a=>a.getAttribute("href")==="#"+nk&&!a.classList.contains("btn")?a.setAttribute("aria-current","page"):a.removeAttribute("aria-current"));
@@ -2713,6 +3436,21 @@ const rf=document.getElementById("reset-form");if(rf)rf.addEventListener("click"
 }
 
 /* ---------- Boot ---------- */
+/* ---------- How-it-works flows: autoplay while on screen (built pages); paused for reduced motion ---------- */
+if(STATIC)document.querySelectorAll(".flow").forEach(el=>{
+  const svgs=[...el.querySelectorAll(".flow-art svg")],lis=[...el.querySelectorAll(".flow-steps li")],btns=[...el.querySelectorAll(".flow-track button")],fill=el.querySelector(".flow-fill"),ctrl=el.querySelector(".flow-ctrl"),N=lis.length,fa=document.documentElement.lang==="fa";
+  const still=matchMedia("(prefers-reduced-motion: reduce)").matches;let cur=0,playing=!still,seen=false,timer=0;
+  const show=i=>{cur=i;svgs.forEach((s,k)=>{s.classList.remove("on");if(k===i){void s.getBoundingClientRect();s.classList.add("on")}});
+    lis.forEach((l,k)=>l.classList.toggle("cur",k===i));btns.forEach((b,k)=>{b.classList.toggle("done",k<i);b.classList.toggle("cur",k===i);k===i?b.setAttribute("aria-current","step"):b.removeAttribute("aria-current")});
+    fill.style.width=`calc((100% - 20px) * ${i/(N-1)})`};
+  const tick=()=>{clearTimeout(timer);if(playing&&seen&&!document.hidden)timer=setTimeout(()=>{show((cur+1)%N);tick()},cur===N-1?3400:2600)};
+  const label=()=>{ctrl.innerHTML=playing?'<svg viewBox="0 0 16 16" aria-hidden="true"><rect x="3" y="2" width="3.5" height="12" rx="1"/><rect x="9.5" y="2" width="3.5" height="12" rx="1"/></svg>':'<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M4 2.5v11l9-5.5z"/></svg>';
+    ctrl.setAttribute("aria-label",playing?(fa?"توقف انیمیشن":"Pause animation"):(fa?"پخش انیمیشن":"Play animation"))};
+  btns.forEach((b,k)=>b.addEventListener("click",()=>{show(k);tick()}));
+  if(!still){ctrl.hidden=false;label();ctrl.addEventListener("click",()=>{playing=!playing;label();tick()})}
+  document.addEventListener("visibilitychange",tick);
+  if("IntersectionObserver" in window)new IntersectionObserver(es=>es.forEach(e=>{const was=seen;seen=e.isIntersecting;if(seen&&!was)show(cur);tick()}),{threshold:.35}).observe(el);else{seen=true;tick()}
+});
 /* ---------- Scroll reveal: built pages only, skipped for reduced motion; content is visible without it ---------- */
 if(STATIC&&"IntersectionObserver" in window&&!matchMedia("(prefers-reduced-motion: reduce)").matches){
   const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target)}}),{threshold:.2});
@@ -2722,7 +3460,7 @@ if(STATIC&&"IntersectionObserver" in window&&!matchMedia("(prefers-reduced-motio
 if(!STATIC){document.querySelectorAll("[data-linemap]").forEach(el=>el.innerHTML=lineMap());renderAlists();renderProc();renderListings(false);fillDwgs(document)}
 /*</prototype>*/
 if(STATIC){const c=params.get("category");if(c&&CATS.some(x=>x.id===c))activeCat=c}
-renderKC();calc();invCalc();
+renderKC();/*<prototype>*/renderKCFa();/*</prototype>*/calc();invCalc();
 if(STATIC){
   const to=LEGACY[location.hash.slice(1)];
   if(to&&location.pathname==="/"){location.replace(to);return}

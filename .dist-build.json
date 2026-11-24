@@ -214,9 +214,9 @@
   {
    "key": "resources",
    "path": "/resources/",
-   "title": "Real Estate Guides & GTA Market Insights | Ali Bayat",
-   "desc": "Plain-language guides on buying, selling and investing in the GTA, neighbourhood guides and monthly market notes.",
-   "h1": "Guides for buying, selling and understanding the GTA market",
+   "title": "Toronto & York Region Real Estate Guides | Ali Bayat",
+   "desc": "One-page guides for Toronto and York Region: first-home costs, land transfer tax, selling strategy, investment analysis, market notes and neighbourhoods.",
+   "h1": "Guides for buying, selling and investing in Toronto and York Region",
    "index": 1,
    "parent": "home",
    "name": "Resources",
@@ -569,106 +569,514 @@
    "alt": null
   },
   {
-   "key": "invest-duplexes",
-   "path": "/invest/duplexes/",
-   "title": "",
-   "desc": "",
-   "h1": "",
-   "index": 0,
-   "parent": "invest",
-   "name": "Duplexes",
-   "type": null,
+   "key": "guide-first-home",
+   "path": "/resources/buying/first-home-toronto/",
+   "title": "Buying Your First Home in Toronto: Every Cost, Step by Step | Ali Bayat",
+   "desc": "First-time buyer guide for Toronto and York Region: down payment, CMHC insurance, land transfer tax rebates, FHSA, closing costs and the six steps to keys.",
+   "h1": "Buying your first home in Toronto: every cost, step by step",
+   "index": 1,
+   "parent": "resources",
+   "name": "Buying your first home in Toronto",
+   "type": "article",
    "requires": null,
    "internal": null,
-   "page": null,
-   "planned": 1,
+   "page": "guide",
+   "planned": null,
    "lang": null,
-   "alt": null
+   "alt": "fa-guide-first-home"
   },
   {
-   "key": "invest-triplexes",
-   "path": "/invest/triplexes/",
-   "title": "",
-   "desc": "",
-   "h1": "",
-   "index": 0,
-   "parent": "invest",
-   "name": "Triplexes",
-   "type": null,
+   "key": "guide-pre-construction",
+   "path": "/resources/buying/pre-construction-condo-questions/",
+   "title": "Pre-Construction Condos in Ontario: What to Check Before You Sign | Ali Bayat",
+   "desc": "Buying a pre-construction condo in Toronto, Vaughan or Richmond Hill: the 10-day cooling-off period, deposit protection, occupancy fees and red flags.",
+   "h1": "Pre-construction condos: what to check before you sign",
+   "index": 1,
+   "parent": "resources",
+   "name": "Pre-construction condos: what to check before you sign",
+   "type": "article",
    "requires": null,
    "internal": null,
-   "page": null,
-   "planned": 1,
+   "page": "guide",
+   "planned": null,
    "lang": null,
-   "alt": null
+   "alt": "fa-guide-pre-construction"
   },
   {
-   "key": "invest-fourplexes",
-   "path": "/invest/fourplexes/",
-   "title": "",
-   "desc": "",
-   "h1": "",
-   "index": 0,
-   "parent": "invest",
-   "name": "Fourplexes",
-   "type": null,
+   "key": "guide-fix-before-listing",
+   "path": "/resources/selling/what-to-fix-before-listing/",
+   "title": "What to Fix Before Selling Your Home in Toronto | Ali Bayat",
+   "desc": "Which repairs pay off before you sell in Toronto and York Region, which don't, a four-week prep plan, and the paperwork buyers will ask for.",
+   "h1": "What's worth fixing before you list",
+   "index": 1,
+   "parent": "resources",
+   "name": "What's worth fixing before you list",
+   "type": "article",
    "requires": null,
    "internal": null,
-   "page": null,
-   "planned": 1,
+   "page": "guide",
+   "planned": null,
    "lang": null,
-   "alt": null
+   "alt": "fa-guide-fix-before-listing"
   },
   {
-   "key": "invest-cash-flow",
-   "path": "/invest/cash-flow/",
-   "title": "",
-   "desc": "",
-   "h1": "",
-   "index": 0,
-   "parent": "invest",
-   "name": "Cash flow",
-   "type": null,
+   "key": "guide-offer-date",
+   "path": "/resources/selling/offer-date-vs-pricing-to-market/",
+   "title": "Offer Date vs. Pricing to Market: Which Selling Strategy? | Ali Bayat",
+   "desc": "How holding offers works under Ontario's TRESA rules, when listing at market value works better, and what October 2026 GTA data says about each strategy.",
+   "h1": "Offer dates vs. pricing to market",
+   "index": 1,
+   "parent": "resources",
+   "name": "Offer dates vs. pricing to market",
+   "type": "article",
    "requires": null,
    "internal": null,
-   "page": null,
-   "planned": 1,
+   "page": "guide",
+   "planned": null,
    "lang": null,
-   "alt": null
+   "alt": "fa-guide-offer-date"
   },
   {
-   "key": "invest-cap-rate",
-   "path": "/invest/cap-rate/",
-   "title": "",
-   "desc": "",
-   "h1": "",
-   "index": 0,
-   "parent": "invest",
-   "name": "Cap rate",
-   "type": null,
+   "key": "guide-investment-analysis",
+   "path": "/resources/investment/investment-analysis/",
+   "title": "How to Analyze an Investment Property in the GTA: 6 Steps | Ali Bayat",
+   "desc": "A six-step framework for analyzing rental properties in Toronto and York Region: legal units, rent, expenses, financing, returns and risks.",
+   "h1": "Investment property analysis: a six-step framework",
+   "index": 1,
+   "parent": "resources",
+   "name": "Investment property analysis: a six-step framework",
+   "type": "article",
    "requires": null,
    "internal": null,
-   "page": null,
-   "planned": 1,
+   "page": "guide",
+   "planned": null,
    "lang": null,
-   "alt": null
+   "alt": "fa-guide-investment-analysis"
   },
   {
-   "key": "invest-analysis",
-   "path": "/invest/investment-analysis/",
-   "title": "",
-   "desc": "",
-   "h1": "",
-   "index": 0,
-   "parent": "invest",
-   "name": "Investment property analysis",
-   "type": null,
+   "key": "guide-cash-flow",
+   "path": "/resources/investment/cash-flow/",
+   "title": "How to Calculate Rental Property Cash Flow (Toronto Example) | Ali Bayat",
+   "desc": "Rental cash flow step by step, from gross rent to what's left after vacancy, expenses and the mortgage, with a $600,000 GTA condo example.",
+   "h1": "How to calculate cash flow on a rental property",
+   "index": 1,
+   "parent": "resources",
+   "name": "How to calculate cash flow on a rental property",
+   "type": "article",
    "requires": null,
    "internal": null,
-   "page": null,
-   "planned": 1,
+   "page": "guide",
+   "planned": null,
    "lang": null,
-   "alt": null
+   "alt": "fa-guide-cash-flow"
+  },
+  {
+   "key": "guide-cap-rate",
+   "path": "/resources/investment/cap-rate/",
+   "title": "What Is Cap Rate? How to Calculate It, and Its Limits | Ali Bayat",
+   "desc": "Cap rate explained with a GTA example: how to calculate it, how to compare properties with it, and the four things it leaves out.",
+   "h1": "What is cap rate, and what it doesn't tell you",
+   "index": 1,
+   "parent": "resources",
+   "name": "What is cap rate, and what it doesn't tell you",
+   "type": "article",
+   "requires": null,
+   "internal": null,
+   "page": "guide",
+   "planned": null,
+   "lang": null,
+   "alt": "fa-guide-cap-rate"
+  },
+  {
+   "key": "guide-investment-financing",
+   "path": "/resources/investment/financing/",
+   "title": "Financing an Investment Property in Ontario: Down Payments & Rules | Ali Bayat",
+   "desc": "Minimum down payments for rental and 2\u20134 unit properties, how much rent lenders count, qualifying rules, and the questions to ask your mortgage professional.",
+   "h1": "Financing an investment property: what to ask",
+   "index": 1,
+   "parent": "resources",
+   "name": "Financing an investment property: what to ask",
+   "type": "article",
+   "requires": null,
+   "internal": null,
+   "page": "guide",
+   "planned": null,
+   "lang": null,
+   "alt": "fa-guide-investment-financing"
+  },
+  {
+   "key": "guide-multiplexes",
+   "path": "/resources/investment/duplexes-triplexes-fourplexes/",
+   "title": "Duplexes, Triplexes & Fourplexes in Toronto and York Region | Ali Bayat",
+   "desc": "Buying a multi-unit home in the GTA: Toronto's multiplex rules, Ontario's three-unit permission, financing by unit count, and how to verify units are legal.",
+   "h1": "Duplexes, triplexes and fourplexes in the GTA",
+   "index": 1,
+   "parent": "resources",
+   "name": "Duplexes, triplexes and fourplexes in the GTA",
+   "type": "article",
+   "requires": null,
+   "internal": null,
+   "page": "guide",
+   "planned": null,
+   "lang": null,
+   "alt": "fa-guide-multiplexes"
+  },
+  {
+   "key": "guide-investor-strategy",
+   "path": "/resources/investment/investor-strategy/",
+   "title": "Cash Flow vs. Appreciation: Choosing a Real Estate Strategy | Ali Bayat",
+   "desc": "Two reasons to own investment property in the GTA, the trade-offs and risks of each, and what falling prices in 2026 mean for appreciation plans.",
+   "h1": "Cash flow vs. appreciation: choosing a strategy",
+   "index": 1,
+   "parent": "resources",
+   "name": "Cash flow vs. appreciation: choosing a strategy",
+   "type": "article",
+   "requires": null,
+   "internal": null,
+   "page": "guide",
+   "planned": null,
+   "lang": null,
+   "alt": "fa-guide-investor-strategy"
+  },
+  {
+   "key": "guide-market-toronto-york",
+   "path": "/resources/market/2026-10-toronto-york-region/",
+   "title": "GTA Real Estate Market, October 2026: Toronto vs. York Region | Ali Bayat",
+   "desc": "October 2026 TRREB numbers for the City of Toronto and York Region: sales, prices, days on market and inventory, and what they mean for buyers and sellers.",
+   "h1": "Market notes, October 2026: Toronto vs. York Region",
+   "index": 1,
+   "parent": "resources",
+   "name": "Market notes, October 2026: Toronto vs. York Region",
+   "type": "article",
+   "requires": null,
+   "internal": null,
+   "page": "guide",
+   "planned": null,
+   "lang": null,
+   "alt": "fa-guide-market-toronto-york"
+  },
+  {
+   "key": "guide-market-york-region",
+   "path": "/resources/market/2026-10-york-region/",
+   "title": "York Region Real Estate, October 2026: Vaughan, Richmond Hill, Markham | Ali Bayat",
+   "desc": "October 2026 TRREB numbers for Vaughan, Richmond Hill and Markham: sales, average and median prices, days on market and months of inventory.",
+   "h1": "Market notes, October 2026: Vaughan, Richmond Hill and Markham",
+   "index": 1,
+   "parent": "resources",
+   "name": "Market notes, October 2026: Vaughan, Richmond Hill and Markham",
+   "type": "article",
+   "requires": null,
+   "internal": null,
+   "page": "guide",
+   "planned": null,
+   "lang": null,
+   "alt": "fa-guide-market-york-region"
+  },
+  {
+   "key": "guide-status-certificate",
+   "path": "/resources/tips/condo-status-certificate/",
+   "title": "How to Read a Condo Status Certificate in Ontario | Ali Bayat",
+   "desc": "What's in an Ontario condo status certificate, the pages that matter, the red flags to look for, and how the 10-day delivery rule affects your offer.",
+   "h1": "How to read a condo status certificate",
+   "index": 1,
+   "parent": "resources",
+   "name": "How to read a condo status certificate",
+   "type": "article",
+   "requires": null,
+   "internal": null,
+   "page": "guide",
+   "planned": null,
+   "lang": null,
+   "alt": "fa-guide-status-certificate"
+  },
+  {
+   "key": "guide-home-inspection",
+   "path": "/resources/tips/home-inspection-gta/",
+   "title": "Home Inspections in Toronto & the GTA: What to Expect | Ali Bayat",
+   "desc": "What a home inspection in Ontario costs, what inspectors check, what they don't, and how to use the report in your offer and negotiation.",
+   "h1": "Home inspections in the GTA: what to expect",
+   "index": 1,
+   "parent": "resources",
+   "name": "Home inspections in the GTA: what to expect",
+   "type": "article",
+   "requires": null,
+   "internal": null,
+   "page": "guide",
+   "planned": null,
+   "lang": null,
+   "alt": "fa-guide-home-inspection"
+  },
+  {
+   "key": "guide-contractor",
+   "path": "/resources/tips/choosing-a-contractor/",
+   "title": "Choosing a Contractor in Ontario: Quotes, Contracts & Permits | Ali Bayat",
+   "desc": "How to hire a contractor in Ontario: written contracts, the 10-day cooling-off period, deposits, permits, licences and the scams to avoid.",
+   "h1": "Choosing a contractor after you buy",
+   "index": 1,
+   "parent": "resources",
+   "name": "Choosing a contractor after you buy",
+   "type": "article",
+   "requires": null,
+   "internal": null,
+   "page": "guide",
+   "planned": null,
+   "lang": null,
+   "alt": "fa-guide-contractor"
+  },
+  {
+   "key": "fa-guide-first-home",
+   "path": "/fa/resources/buying/first-home-toronto/",
+   "title": "\u062e\u0631\u06cc\u062f \u0627\u0648\u0644\u06cc\u0646 \u062e\u0627\u0646\u0647 \u062f\u0631 \u062a\u0648\u0631\u0646\u062a\u0648: \u0647\u0645\u0647\u200c\u06cc \u0647\u0632\u06cc\u0646\u0647\u200c\u0647\u0627\u060c \u0642\u062f\u0645 \u0628\u0647 \u0642\u062f\u0645 | \u0639\u0644\u06cc \u0628\u06cc\u0627\u062a",
+   "desc": "\u0631\u0627\u0647\u0646\u0645\u0627\u06cc \u062e\u0631\u06cc\u062f\u0627\u0631 \u062e\u0627\u0646\u0647\u200c\u06cc \u0627\u0648\u0644 \u062f\u0631 \u062a\u0648\u0631\u0646\u062a\u0648 \u0648 \u0645\u0646\u0637\u0642\u0647\u200c\u06cc \u06cc\u0648\u0631\u06a9 \u0628\u0647 \u0641\u0627\u0631\u0633\u06cc: \u067e\u06cc\u0634\u200c\u067e\u0631\u062f\u0627\u062e\u062a\u060c \u0628\u06cc\u0645\u0647\u200c\u06cc \u0648\u0627\u0645 CMHC\u060c \u0628\u0627\u0632\u067e\u0631\u062f\u0627\u062e\u062a \u0645\u0627\u0644\u06cc\u0627\u062a \u0627\u0646\u062a\u0642\u0627\u0644 \u0632\u0645\u06cc\u0646\u060c FHSA \u0648 \u0647\u0632\u06cc\u0646\u0647\u200c\u0647\u0627\u06cc \u0631\u0648\u0632 \u062a\u062d\u0648\u06cc\u0644.",
+   "h1": "\u062e\u0631\u06cc\u062f \u0627\u0648\u0644\u06cc\u0646 \u062e\u0627\u0646\u0647 \u062f\u0631 \u062a\u0648\u0631\u0646\u062a\u0648: \u0647\u0645\u0647\u200c\u06cc \u0647\u0632\u06cc\u0646\u0647\u200c\u0647\u0627\u060c \u0642\u062f\u0645 \u0628\u0647 \u0642\u062f\u0645",
+   "index": 1,
+   "parent": "fa-resources",
+   "name": "\u062e\u0631\u06cc\u062f \u0627\u0648\u0644\u06cc\u0646 \u062e\u0627\u0646\u0647 \u062f\u0631 \u062a\u0648\u0631\u0646\u062a\u0648",
+   "type": "article",
+   "requires": null,
+   "internal": null,
+   "page": "fa-guide",
+   "planned": null,
+   "lang": "fa",
+   "alt": "guide-first-home"
+  },
+  {
+   "key": "fa-guide-pre-construction",
+   "path": "/fa/resources/buying/pre-construction-condo-questions/",
+   "title": "\u06a9\u0627\u0646\u062f\u0648\u06cc \u067e\u06cc\u0634\u200c\u0641\u0631\u0648\u0634 \u062f\u0631 \u0627\u0646\u062a\u0627\u0631\u06cc\u0648: \u067e\u06cc\u0634 \u0627\u0632 \u0627\u0645\u0636\u0627 \u0686\u0647 \u0628\u0631\u0631\u0633\u06cc \u06a9\u0646\u06cc\u0645 | \u0639\u0644\u06cc \u0628\u06cc\u0627\u062a",
+   "desc": "\u062e\u0631\u06cc\u062f \u06a9\u0627\u0646\u062f\u0648\u06cc \u067e\u06cc\u0634\u200c\u0641\u0631\u0648\u0634 \u062f\u0631 \u062a\u0648\u0631\u0646\u062a\u0648\u060c \u0648\u0627\u0646 \u06cc\u0627 \u0631\u06cc\u0686\u0645\u0648\u0646\u062f \u0647\u06cc\u0644 \u0628\u0647 \u0641\u0627\u0631\u0633\u06cc: \u0645\u0647\u0644\u062a \u06f1\u06f0 \u0631\u0648\u0632\u0647\u200c\u06cc \u0627\u0646\u0635\u0631\u0627\u0641\u060c \u062d\u0645\u0627\u06cc\u062a \u0627\u0632 \u0648\u062f\u06cc\u0639\u0647\u060c \u0647\u0632\u06cc\u0646\u0647\u200c\u06cc \u062f\u0648\u0631\u0647\u200c\u06cc \u0633\u06a9\u0648\u0646\u062a \u0648 \u0646\u0634\u0627\u0646\u0647\u200c\u0647\u0627\u06cc \u0647\u0634\u062f\u0627\u0631.",
+   "h1": "\u06a9\u0627\u0646\u062f\u0648\u06cc \u067e\u06cc\u0634\u200c\u0641\u0631\u0648\u0634: \u067e\u06cc\u0634 \u0627\u0632 \u0627\u0645\u0636\u0627 \u0686\u0647 \u0686\u06cc\u0632\u0647\u0627\u06cc\u06cc \u0631\u0627 \u0628\u0631\u0631\u0633\u06cc \u06a9\u0646\u06cc\u0645",
+   "index": 1,
+   "parent": "fa-resources",
+   "name": "\u06a9\u0627\u0646\u062f\u0648\u06cc \u067e\u06cc\u0634\u200c\u0641\u0631\u0648\u0634: \u067e\u06cc\u0634 \u0627\u0632 \u0627\u0645\u0636\u0627 \u0686\u0647 \u0686\u06cc\u0632\u0647\u0627\u06cc\u06cc \u0631\u0627 \u0628\u0631\u0631\u0633\u06cc \u06a9\u0646\u06cc\u0645",
+   "type": "article",
+   "requires": null,
+   "internal": null,
+   "page": "fa-guide",
+   "planned": null,
+   "lang": "fa",
+   "alt": "guide-pre-construction"
+  },
+  {
+   "key": "fa-guide-fix-before-listing",
+   "path": "/fa/resources/selling/what-to-fix-before-listing/",
+   "title": "\u067e\u06cc\u0634 \u0627\u0632 \u0641\u0631\u0648\u0634 \u062e\u0627\u0646\u0647 \u062f\u0631 \u062a\u0648\u0631\u0646\u062a\u0648 \u0686\u0647 \u0686\u06cc\u0632\u0647\u0627\u06cc\u06cc \u0631\u0627 \u062a\u0639\u0645\u06cc\u0631 \u06a9\u0646\u06cc\u0645 | \u0639\u0644\u06cc \u0628\u06cc\u0627\u062a",
+   "desc": "\u06a9\u062f\u0627\u0645 \u062a\u0639\u0645\u06cc\u0631\u0627\u062a \u067e\u06cc\u0634 \u0627\u0632 \u0641\u0631\u0648\u0634 \u062f\u0631 \u062a\u0648\u0631\u0646\u062a\u0648 \u0648 \u0645\u0646\u0637\u0642\u0647\u200c\u06cc \u06cc\u0648\u0631\u06a9 \u0627\u0631\u0632\u0634 \u062f\u0627\u0631\u062f \u0648 \u06a9\u062f\u0627\u0645 \u0646\u0647\u060c \u0628\u0631\u0646\u0627\u0645\u0647\u200c\u06cc \u0686\u0647\u0627\u0631\u0647\u0641\u062a\u0647\u200c\u0627\u06cc \u0622\u0645\u0627\u062f\u0647\u200c\u0633\u0627\u0632\u06cc\u060c \u0648 \u0645\u062f\u0627\u0631\u06a9\u06cc \u06a9\u0647 \u062e\u0631\u06cc\u062f\u0627\u0631\u0627\u0646 \u0645\u06cc\u200c\u062e\u0648\u0627\u0647\u0646\u062f.",
+   "h1": "\u0686\u0647 \u062a\u0639\u0645\u06cc\u0631\u0627\u062a\u06cc \u067e\u06cc\u0634 \u0627\u0632 \u0641\u0631\u0648\u0634 \u0627\u0631\u0632\u0634 \u062f\u0627\u0631\u062f",
+   "index": 1,
+   "parent": "fa-resources",
+   "name": "\u0686\u0647 \u062a\u0639\u0645\u06cc\u0631\u0627\u062a\u06cc \u067e\u06cc\u0634 \u0627\u0632 \u0641\u0631\u0648\u0634 \u0627\u0631\u0632\u0634 \u062f\u0627\u0631\u062f",
+   "type": "article",
+   "requires": null,
+   "internal": null,
+   "page": "fa-guide",
+   "planned": null,
+   "lang": "fa",
+   "alt": "guide-fix-before-listing"
+  },
+  {
+   "key": "fa-guide-offer-date",
+   "path": "/fa/resources/selling/offer-date-vs-pricing-to-market/",
+   "title": "\u0631\u0648\u0632 \u067e\u06cc\u0634\u0646\u0647\u0627\u062f\u0647\u0627 \u06cc\u0627 \u0642\u06cc\u0645\u062a\u200c\u06af\u0630\u0627\u0631\u06cc \u0645\u0637\u0627\u0628\u0642 \u0628\u0627\u0632\u0627\u0631: \u06a9\u062f\u0627\u0645 \u0627\u0633\u062a\u0631\u0627\u062a\u0698\u06cc \u0641\u0631\u0648\u0634\u061f | \u0639\u0644\u06cc \u0628\u06cc\u0627\u062a",
+   "desc": "\u0646\u06af\u0647 \u062f\u0627\u0634\u062a\u0646 \u067e\u06cc\u0634\u0646\u0647\u0627\u062f\u0647\u0627 \u0637\u0628\u0642 \u0642\u0648\u0627\u0646\u06cc\u0646 TRESA \u0627\u0646\u062a\u0627\u0631\u06cc\u0648 \u0686\u0637\u0648\u0631 \u06a9\u0627\u0631 \u0645\u06cc\u200c\u06a9\u0646\u062f\u060c \u0686\u0647 \u0632\u0645\u0627\u0646\u06cc \u0642\u06cc\u0645\u062a\u200c\u06af\u0630\u0627\u0631\u06cc \u0645\u0637\u0627\u0628\u0642 \u0628\u0627\u0632\u0627\u0631 \u0628\u0647\u062a\u0631 \u0627\u0633\u062a\u060c \u0648 \u062f\u0627\u062f\u0647\u200c\u0647\u0627\u06cc \u0627\u06a9\u062a\u0628\u0631 2026 GTA \u0686\u0647 \u0645\u06cc\u200c\u06af\u0648\u06cc\u062f.",
+   "h1": "\u0631\u0648\u0632 \u067e\u06cc\u0634\u0646\u0647\u0627\u062f\u0647\u0627 \u06cc\u0627 \u0642\u06cc\u0645\u062a\u200c\u06af\u0630\u0627\u0631\u06cc \u0645\u0637\u0627\u0628\u0642 \u0628\u0627\u0632\u0627\u0631",
+   "index": 1,
+   "parent": "fa-resources",
+   "name": "\u0631\u0648\u0632 \u067e\u06cc\u0634\u0646\u0647\u0627\u062f\u0647\u0627 \u06cc\u0627 \u0642\u06cc\u0645\u062a\u200c\u06af\u0630\u0627\u0631\u06cc \u0645\u0637\u0627\u0628\u0642 \u0628\u0627\u0632\u0627\u0631",
+   "type": "article",
+   "requires": null,
+   "internal": null,
+   "page": "fa-guide",
+   "planned": null,
+   "lang": "fa",
+   "alt": "guide-offer-date"
+  },
+  {
+   "key": "fa-guide-investment-analysis",
+   "path": "/fa/resources/investment/investment-analysis/",
+   "title": "\u062a\u062d\u0644\u06cc\u0644 \u0645\u0644\u06a9 \u0633\u0631\u0645\u0627\u06cc\u0647\u200c\u06af\u0630\u0627\u0631\u06cc \u062f\u0631 GTA \u062f\u0631 \u0634\u0634 \u0645\u0631\u062d\u0644\u0647 | \u0639\u0644\u06cc \u0628\u06cc\u0627\u062a",
+   "desc": "\u0686\u0627\u0631\u0686\u0648\u0628 \u0634\u0634\u200c\u0645\u0631\u062d\u0644\u0647\u200c\u0627\u06cc \u0628\u0631\u0627\u06cc \u062a\u062d\u0644\u06cc\u0644 \u0645\u0644\u06a9 \u0627\u062c\u0627\u0631\u0647\u200c\u0627\u06cc \u062f\u0631 \u062a\u0648\u0631\u0646\u062a\u0648 \u0648 \u0645\u0646\u0637\u0642\u0647\u200c\u06cc \u06cc\u0648\u0631\u06a9 \u0628\u0647 \u0641\u0627\u0631\u0633\u06cc: \u0648\u0627\u062d\u062f\u0647\u0627\u06cc \u0642\u0627\u0646\u0648\u0646\u06cc\u060c \u0627\u062c\u0627\u0631\u0647\u060c \u0647\u0632\u06cc\u0646\u0647\u200c\u0647\u0627\u060c \u0648\u0627\u0645\u060c \u0628\u0627\u0632\u062f\u0647 \u0648 \u0631\u06cc\u0633\u06a9.",
+   "h1": "\u062a\u062d\u0644\u06cc\u0644 \u0645\u0644\u06a9 \u0633\u0631\u0645\u0627\u06cc\u0647\u200c\u06af\u0630\u0627\u0631\u06cc: \u0686\u0627\u0631\u0686\u0648\u0628 \u0634\u0634\u200c\u0645\u0631\u062d\u0644\u0647\u200c\u0627\u06cc",
+   "index": 1,
+   "parent": "fa-resources",
+   "name": "\u062a\u062d\u0644\u06cc\u0644 \u0645\u0644\u06a9 \u0633\u0631\u0645\u0627\u06cc\u0647\u200c\u06af\u0630\u0627\u0631\u06cc: \u0686\u0627\u0631\u0686\u0648\u0628 \u0634\u0634\u200c\u0645\u0631\u062d\u0644\u0647\u200c\u0627\u06cc",
+   "type": "article",
+   "requires": null,
+   "internal": null,
+   "page": "fa-guide",
+   "planned": null,
+   "lang": "fa",
+   "alt": "guide-investment-analysis"
+  },
+  {
+   "key": "fa-guide-cash-flow",
+   "path": "/fa/resources/investment/cash-flow/",
+   "title": "\u0645\u062d\u0627\u0633\u0628\u0647\u200c\u06cc \u062c\u0631\u06cc\u0627\u0646 \u0646\u0642\u062f\u06cc \u0645\u0644\u06a9 \u0627\u062c\u0627\u0631\u0647\u200c\u0627\u06cc (\u0628\u0627 \u0645\u062b\u0627\u0644 \u062a\u0648\u0631\u0646\u062a\u0648) | \u0639\u0644\u06cc \u0628\u06cc\u0627\u062a",
+   "desc": "\u062c\u0631\u06cc\u0627\u0646 \u0646\u0642\u062f\u06cc \u0645\u0644\u06a9 \u0627\u062c\u0627\u0631\u0647\u200c\u0627\u06cc \u0642\u062f\u0645 \u0628\u0647 \u0642\u062f\u0645 \u0628\u0647 \u0641\u0627\u0631\u0633\u06cc\u060c \u0627\u0632 \u0627\u062c\u0627\u0631\u0647\u200c\u06cc \u0646\u0627\u062e\u0627\u0644\u0635 \u062a\u0627 \u0622\u0646\u0686\u0647 \u067e\u0633 \u0627\u0632 \u062e\u0627\u0644\u06cc \u0645\u0627\u0646\u062f\u0646\u060c \u0647\u0632\u06cc\u0646\u0647\u200c\u0647\u0627 \u0648 \u0648\u0627\u0645 \u0628\u0627\u0642\u06cc \u0645\u06cc\u200c\u0645\u0627\u0646\u062f\u060c \u0628\u0627 \u0645\u062b\u0627\u0644 \u06cc\u06a9 \u06a9\u0627\u0646\u062f\u0648\u06cc 600,000 \u062f\u0644\u0627\u0631\u06cc.",
+   "h1": "\u0645\u062d\u0627\u0633\u0628\u0647\u200c\u06cc \u062c\u0631\u06cc\u0627\u0646 \u0646\u0642\u062f\u06cc \u0645\u0644\u06a9 \u0627\u062c\u0627\u0631\u0647\u200c\u0627\u06cc",
+   "index": 1,
+   "parent": "fa-resources",
+   "name": "\u0645\u062d\u0627\u0633\u0628\u0647\u200c\u06cc \u062c\u0631\u06cc\u0627\u0646 \u0646\u0642\u062f\u06cc \u0645\u0644\u06a9 \u0627\u062c\u0627\u0631\u0647\u200c\u0627\u06cc",
+   "type": "article",
+   "requires": null,
+   "internal": null,
+   "page": "fa-guide",
+   "planned": null,
+   "lang": "fa",
+   "alt": "guide-cash-flow"
+  },
+  {
+   "key": "fa-guide-cap-rate",
+   "path": "/fa/resources/investment/cap-rate/",
+   "title": "\u0646\u0631\u062e \u0628\u0627\u0632\u062f\u0647 \u0633\u0631\u0645\u0627\u06cc\u0647 (Cap rate) \u0686\u06cc\u0633\u062a\u061f \u0645\u062d\u0627\u0633\u0628\u0647 \u0648 \u0645\u062d\u062f\u0648\u062f\u06cc\u062a\u200c\u0647\u0627 | \u0639\u0644\u06cc \u0628\u06cc\u0627\u062a",
+   "desc": "Cap rate \u0628\u0647 \u0641\u0627\u0631\u0633\u06cc \u0628\u0627 \u0645\u062b\u0627\u0644 GTA: \u0686\u0637\u0648\u0631 \u0645\u062d\u0627\u0633\u0628\u0647 \u06a9\u0646\u06cc\u0645\u060c \u0686\u0637\u0648\u0631 \u0645\u0644\u06a9\u200c\u0647\u0627 \u0631\u0627 \u0628\u0627 \u0622\u0646 \u0645\u0642\u0627\u06cc\u0633\u0647 \u06a9\u0646\u06cc\u0645\u060c \u0648 \u0686\u0647\u0627\u0631 \u0686\u06cc\u0632\u06cc \u06a9\u0647 \u062f\u0631 \u0622\u0646 \u0646\u06cc\u0633\u062a.",
+   "h1": "\u0646\u0631\u062e \u0628\u0627\u0632\u062f\u0647 \u0633\u0631\u0645\u0627\u06cc\u0647 \u0686\u06cc\u0633\u062a \u0648 \u0686\u0647 \u0686\u06cc\u0632\u06cc \u0631\u0627 \u0646\u0645\u06cc\u200c\u06af\u0648\u06cc\u062f",
+   "index": 1,
+   "parent": "fa-resources",
+   "name": "\u0646\u0631\u062e \u0628\u0627\u0632\u062f\u0647 \u0633\u0631\u0645\u0627\u06cc\u0647 (Cap rate) \u0686\u06cc\u0633\u062a \u0648 \u0686\u0647 \u0686\u06cc\u0632\u06cc \u0631\u0627 \u0646\u0645\u06cc\u200c\u06af\u0648\u06cc\u062f",
+   "type": "article",
+   "requires": null,
+   "internal": null,
+   "page": "fa-guide",
+   "planned": null,
+   "lang": "fa",
+   "alt": "guide-cap-rate"
+  },
+  {
+   "key": "fa-guide-investment-financing",
+   "path": "/fa/resources/investment/financing/",
+   "title": "\u0648\u0627\u0645 \u0645\u0644\u06a9 \u0633\u0631\u0645\u0627\u06cc\u0647\u200c\u06af\u0630\u0627\u0631\u06cc \u062f\u0631 \u0627\u0646\u062a\u0627\u0631\u06cc\u0648: \u067e\u06cc\u0634\u200c\u067e\u0631\u062f\u0627\u062e\u062a \u0648 \u0642\u0648\u0627\u0646\u06cc\u0646 | \u0639\u0644\u06cc \u0628\u06cc\u0627\u062a",
+   "desc": "\u062d\u062f\u0627\u0642\u0644 \u067e\u06cc\u0634\u200c\u067e\u0631\u062f\u0627\u062e\u062a \u0628\u0631\u0627\u06cc \u0645\u0644\u06a9 \u0627\u062c\u0627\u0631\u0647\u200c\u0627\u06cc \u0648 \u062e\u0627\u0646\u0647\u200c\u0647\u0627\u06cc \u06f2 \u062a\u0627 \u06f4 \u0648\u0627\u062d\u062f\u06cc\u060c \u0686\u0647 \u0645\u0642\u062f\u0627\u0631 \u0627\u0632 \u0627\u062c\u0627\u0631\u0647 \u0631\u0627 \u0648\u0627\u0645\u200c\u062f\u0647\u0646\u062f\u0647 \u062d\u0633\u0627\u0628 \u0645\u06cc\u200c\u06a9\u0646\u062f\u060c \u0642\u0648\u0627\u0646\u06cc\u0646 \u062a\u0623\u06cc\u06cc\u062f \u0648\u0627\u0645\u060c \u0648 \u067e\u0631\u0633\u0634\u200c\u0647\u0627\u06cc\u06cc \u0628\u0631\u0627\u06cc \u0645\u0634\u0627\u0648\u0631 \u0648\u0627\u0645.",
+   "h1": "\u062a\u0623\u0645\u06cc\u0646 \u0645\u0627\u0644\u06cc \u0645\u0644\u06a9 \u0633\u0631\u0645\u0627\u06cc\u0647\u200c\u06af\u0630\u0627\u0631\u06cc: \u0686\u0647 \u0628\u067e\u0631\u0633\u06cc\u0645",
+   "index": 1,
+   "parent": "fa-resources",
+   "name": "\u062a\u0623\u0645\u06cc\u0646 \u0645\u0627\u0644\u06cc \u0645\u0644\u06a9 \u0633\u0631\u0645\u0627\u06cc\u0647\u200c\u06af\u0630\u0627\u0631\u06cc: \u0686\u0647 \u0628\u067e\u0631\u0633\u06cc\u0645",
+   "type": "article",
+   "requires": null,
+   "internal": null,
+   "page": "fa-guide",
+   "planned": null,
+   "lang": "fa",
+   "alt": "guide-investment-financing"
+  },
+  {
+   "key": "fa-guide-multiplexes",
+   "path": "/fa/resources/investment/duplexes-triplexes-fourplexes/",
+   "title": "\u062f\u0648\u067e\u0644\u06a9\u0633\u060c \u062a\u0631\u06cc\u067e\u0644\u06a9\u0633 \u0648 \u0641\u0648\u0631\u067e\u0644\u06a9\u0633 \u062f\u0631 \u062a\u0648\u0631\u0646\u062a\u0648 \u0648 \u0645\u0646\u0637\u0642\u0647\u200c\u06cc \u06cc\u0648\u0631\u06a9 | \u0639\u0644\u06cc \u0628\u06cc\u0627\u062a",
+   "desc": "\u062e\u0631\u06cc\u062f \u062e\u0627\u0646\u0647\u200c\u06cc \u0686\u0646\u062f\u0648\u0627\u062d\u062f\u06cc \u062f\u0631 GTA \u0628\u0647 \u0641\u0627\u0631\u0633\u06cc: \u0642\u0648\u0627\u0646\u06cc\u0646 \u0645\u0648\u0644\u062a\u06cc\u200c\u067e\u0644\u06a9\u0633 \u062a\u0648\u0631\u0646\u062a\u0648\u060c \u0645\u062c\u0648\u0632 \u0633\u0647 \u0648\u0627\u062d\u062f \u062f\u0631 \u0627\u0646\u062a\u0627\u0631\u06cc\u0648\u060c \u062a\u0623\u0645\u06cc\u0646 \u0645\u0627\u0644\u06cc \u0628\u0631 \u0627\u0633\u0627\u0633 \u062a\u0639\u062f\u0627\u062f \u0648\u0627\u062d\u062f\u060c \u0648 \u0628\u0631\u0631\u0633\u06cc \u0642\u0627\u0646\u0648\u0646\u06cc \u0628\u0648\u062f\u0646 \u0648\u0627\u062d\u062f\u0647\u0627.",
+   "h1": "\u062f\u0648\u067e\u0644\u06a9\u0633\u060c \u062a\u0631\u06cc\u067e\u0644\u06a9\u0633 \u0648 \u0641\u0648\u0631\u067e\u0644\u06a9\u0633 \u062f\u0631 GTA",
+   "index": 1,
+   "parent": "fa-resources",
+   "name": "\u062f\u0648\u067e\u0644\u06a9\u0633\u060c \u062a\u0631\u06cc\u067e\u0644\u06a9\u0633 \u0648 \u0641\u0648\u0631\u067e\u0644\u06a9\u0633 \u062f\u0631 GTA",
+   "type": "article",
+   "requires": null,
+   "internal": null,
+   "page": "fa-guide",
+   "planned": null,
+   "lang": "fa",
+   "alt": "guide-multiplexes"
+  },
+  {
+   "key": "fa-guide-investor-strategy",
+   "path": "/fa/resources/investment/investor-strategy/",
+   "title": "\u062c\u0631\u06cc\u0627\u0646 \u0646\u0642\u062f\u06cc \u06cc\u0627 \u0631\u0634\u062f \u0627\u0631\u0632\u0634: \u0627\u0646\u062a\u062e\u0627\u0628 \u0627\u0633\u062a\u0631\u0627\u062a\u0698\u06cc \u0633\u0631\u0645\u0627\u06cc\u0647\u200c\u06af\u0630\u0627\u0631\u06cc \u0627\u0645\u0644\u0627\u06a9 | \u0639\u0644\u06cc \u0628\u06cc\u0627\u062a",
+   "desc": "\u062f\u0648 \u062f\u0644\u06cc\u0644 \u0628\u0631\u0627\u06cc \u062f\u0627\u0634\u062a\u0646 \u0645\u0644\u06a9 \u0633\u0631\u0645\u0627\u06cc\u0647\u200c\u06af\u0630\u0627\u0631\u06cc \u062f\u0631 GTA\u060c \u0645\u0632\u0627\u06cc\u0627 \u0648 \u0631\u06cc\u0633\u06a9 \u0647\u0631 \u06a9\u062f\u0627\u0645\u060c \u0648 \u0627\u06cc\u0646\u200c\u06a9\u0647 \u0627\u0641\u062a \u0642\u06cc\u0645\u062a\u200c\u0647\u0627 \u062f\u0631 2026 \u0628\u0631\u0627\u06cc \u0628\u0631\u0646\u0627\u0645\u0647\u200c\u0647\u0627\u06cc \u0631\u0634\u062f \u0627\u0631\u0632\u0634 \u0686\u0647 \u0645\u0639\u0646\u0627\u06cc\u06cc \u062f\u0627\u0631\u062f.",
+   "h1": "\u062c\u0631\u06cc\u0627\u0646 \u0646\u0642\u062f\u06cc \u06cc\u0627 \u0631\u0634\u062f \u0627\u0631\u0632\u0634: \u0627\u0646\u062a\u062e\u0627\u0628 \u0627\u0633\u062a\u0631\u0627\u062a\u0698\u06cc",
+   "index": 1,
+   "parent": "fa-resources",
+   "name": "\u062c\u0631\u06cc\u0627\u0646 \u0646\u0642\u062f\u06cc \u06cc\u0627 \u0631\u0634\u062f \u0627\u0631\u0632\u0634: \u0627\u0646\u062a\u062e\u0627\u0628 \u0627\u0633\u062a\u0631\u0627\u062a\u0698\u06cc",
+   "type": "article",
+   "requires": null,
+   "internal": null,
+   "page": "fa-guide",
+   "planned": null,
+   "lang": "fa",
+   "alt": "guide-investor-strategy"
+  },
+  {
+   "key": "fa-guide-market-toronto-york",
+   "path": "/fa/resources/market/2026-10-toronto-york-region/",
+   "title": "\u0628\u0627\u0632\u0627\u0631 \u0627\u0645\u0644\u0627\u06a9 GTA\u060c \u0627\u06a9\u062a\u0628\u0631 2026: \u062a\u0648\u0631\u0646\u062a\u0648 \u062f\u0631 \u0628\u0631\u0627\u0628\u0631 \u0645\u0646\u0637\u0642\u0647\u200c\u06cc \u06cc\u0648\u0631\u06a9 | \u0639\u0644\u06cc \u0628\u06cc\u0627\u062a",
+   "desc": "\u0639\u062f\u062f\u0647\u0627\u06cc TRREB \u0628\u0631\u0627\u06cc \u0627\u06a9\u062a\u0628\u0631 2026 \u062f\u0631 \u0634\u0647\u0631 \u062a\u0648\u0631\u0646\u062a\u0648 \u0648 \u0645\u0646\u0637\u0642\u0647\u200c\u06cc \u06cc\u0648\u0631\u06a9 \u0628\u0647 \u0641\u0627\u0631\u0633\u06cc: \u0641\u0631\u0648\u0634\u060c \u0642\u06cc\u0645\u062a\u060c \u0631\u0648\u0632\u0647\u0627\u06cc \u0639\u0631\u0636\u0647 \u0648 \u0645\u0648\u062c\u0648\u062f\u06cc\u060c \u0648 \u0645\u0639\u0646\u0627\u06cc \u0622\u0646 \u0628\u0631\u0627\u06cc \u062e\u0631\u06cc\u062f\u0627\u0631\u0627\u0646 \u0648 \u0641\u0631\u0648\u0634\u0646\u062f\u06af\u0627\u0646.",
+   "h1": "\u06af\u0632\u0627\u0631\u0634 \u0628\u0627\u0632\u0627\u0631\u060c \u0627\u06a9\u062a\u0628\u0631 \u06f2\u06f0\u06f2\u06f6: \u062a\u0648\u0631\u0646\u062a\u0648 \u062f\u0631 \u0628\u0631\u0627\u0628\u0631 \u0645\u0646\u0637\u0642\u0647\u200c\u06cc \u06cc\u0648\u0631\u06a9",
+   "index": 1,
+   "parent": "fa-resources",
+   "name": "\u06af\u0632\u0627\u0631\u0634 \u0628\u0627\u0632\u0627\u0631\u060c \u0627\u06a9\u062a\u0628\u0631 \u06f2\u06f0\u06f2\u06f6: \u062a\u0648\u0631\u0646\u062a\u0648 \u062f\u0631 \u0628\u0631\u0627\u0628\u0631 \u0645\u0646\u0637\u0642\u0647\u200c\u06cc \u06cc\u0648\u0631\u06a9",
+   "type": "article",
+   "requires": null,
+   "internal": null,
+   "page": "fa-guide",
+   "planned": null,
+   "lang": "fa",
+   "alt": "guide-market-toronto-york"
+  },
+  {
+   "key": "fa-guide-market-york-region",
+   "path": "/fa/resources/market/2026-10-york-region/",
+   "title": "\u0628\u0627\u0632\u0627\u0631 \u0627\u0645\u0644\u0627\u06a9 \u0645\u0646\u0637\u0642\u0647\u200c\u06cc \u06cc\u0648\u0631\u06a9\u060c \u0627\u06a9\u062a\u0628\u0631 2026: \u0648\u0627\u0646\u060c \u0631\u06cc\u0686\u0645\u0648\u0646\u062f \u0647\u06cc\u0644\u060c \u0645\u0627\u0631\u06a9\u0647\u0627\u0645 | \u0639\u0644\u06cc \u0628\u06cc\u0627\u062a",
+   "desc": "\u0639\u062f\u062f\u0647\u0627\u06cc TRREB \u0628\u0631\u0627\u06cc \u0627\u06a9\u062a\u0628\u0631 2026 \u062f\u0631 \u0648\u0627\u0646\u060c \u0631\u06cc\u0686\u0645\u0648\u0646\u062f \u0647\u06cc\u0644 \u0648 \u0645\u0627\u0631\u06a9\u0647\u0627\u0645 \u0628\u0647 \u0641\u0627\u0631\u0633\u06cc: \u0641\u0631\u0648\u0634\u060c \u0645\u06cc\u0627\u0646\u06af\u06cc\u0646 \u0648 \u0645\u06cc\u0627\u0646\u0647\u200c\u06cc \u0642\u06cc\u0645\u062a\u060c \u0631\u0648\u0632\u0647\u0627\u06cc \u0639\u0631\u0636\u0647 \u0648 \u0645\u0627\u0647\u200c\u0647\u0627\u06cc \u0645\u0648\u062c\u0648\u062f\u06cc.",
+   "h1": "\u06af\u0632\u0627\u0631\u0634 \u0628\u0627\u0632\u0627\u0631\u060c \u0627\u06a9\u062a\u0628\u0631 \u06f2\u06f0\u06f2\u06f6: \u0648\u0627\u0646\u060c \u0631\u06cc\u0686\u0645\u0648\u0646\u062f \u0647\u06cc\u0644 \u0648 \u0645\u0627\u0631\u06a9\u0647\u0627\u0645",
+   "index": 1,
+   "parent": "fa-resources",
+   "name": "\u06af\u0632\u0627\u0631\u0634 \u0628\u0627\u0632\u0627\u0631\u060c \u0627\u06a9\u062a\u0628\u0631 \u06f2\u06f0\u06f2\u06f6: \u0648\u0627\u0646\u060c \u0631\u06cc\u0686\u0645\u0648\u0646\u062f \u0647\u06cc\u0644 \u0648 \u0645\u0627\u0631\u06a9\u0647\u0627\u0645",
+   "type": "article",
+   "requires": null,
+   "internal": null,
+   "page": "fa-guide",
+   "planned": null,
+   "lang": "fa",
+   "alt": "guide-market-york-region"
+  },
+  {
+   "key": "fa-guide-status-certificate",
+   "path": "/fa/resources/tips/condo-status-certificate/",
+   "title": "\u062e\u0648\u0627\u0646\u062f\u0646 Status Certificate \u06a9\u0627\u0646\u062f\u0648 \u062f\u0631 \u0627\u0646\u062a\u0627\u0631\u06cc\u0648 | \u0639\u0644\u06cc \u0628\u06cc\u0627\u062a",
+   "desc": "Status Certificate \u06a9\u0627\u0646\u062f\u0648 \u062f\u0631 \u0627\u0646\u062a\u0627\u0631\u06cc\u0648 \u0628\u0647 \u0641\u0627\u0631\u0633\u06cc: \u0686\u0647 \u0686\u06cc\u0632\u06cc \u062f\u0631 \u0622\u0646 \u0627\u0633\u062a\u060c \u0635\u0641\u062d\u0647\u200c\u0647\u0627\u06cc\u06cc \u06a9\u0647 \u0645\u0647\u0645\u200c\u0627\u0646\u062f\u060c \u0646\u0634\u0627\u0646\u0647\u200c\u0647\u0627\u06cc \u0647\u0634\u062f\u0627\u0631\u060c \u0648 \u0627\u062b\u0631 \u0645\u0647\u0644\u062a \u06f1\u06f0 \u0631\u0648\u0632\u0647 \u0628\u0631 \u067e\u06cc\u0634\u0646\u0647\u0627\u062f \u0634\u0645\u0627.",
+   "h1": "\u062e\u0648\u0627\u0646\u062f\u0646 Status Certificate \u06a9\u0627\u0646\u062f\u0648",
+   "index": 1,
+   "parent": "fa-resources",
+   "name": "\u062e\u0648\u0627\u0646\u062f\u0646 Status Certificate \u06a9\u0627\u0646\u062f\u0648",
+   "type": "article",
+   "requires": null,
+   "internal": null,
+   "page": "fa-guide",
+   "planned": null,
+   "lang": "fa",
+   "alt": "guide-status-certificate"
+  },
+  {
+   "key": "fa-guide-home-inspection",
+   "path": "/fa/resources/tips/home-inspection-gta/",
+   "title": "\u0628\u0627\u0632\u0631\u0633\u06cc \u062e\u0627\u0646\u0647 \u062f\u0631 \u062a\u0648\u0631\u0646\u062a\u0648 \u0648 GTA: \u0686\u0647 \u0627\u0646\u062a\u0638\u0627\u0631\u06cc \u062f\u0627\u0634\u062a\u0647 \u0628\u0627\u0634\u06cc\u062f | \u0639\u0644\u06cc \u0628\u06cc\u0627\u062a",
+   "desc": "\u0628\u0627\u0632\u0631\u0633\u06cc \u062e\u0627\u0646\u0647 \u062f\u0631 \u0627\u0646\u062a\u0627\u0631\u06cc\u0648 \u0628\u0647 \u0641\u0627\u0631\u0633\u06cc: \u0647\u0632\u06cc\u0646\u0647\u060c \u0622\u0646\u0686\u0647 \u0628\u0627\u0632\u0631\u0633 \u0628\u0631\u0631\u0633\u06cc \u0645\u06cc\u200c\u06a9\u0646\u062f \u0648 \u0646\u0645\u06cc\u200c\u06a9\u0646\u062f\u060c \u0648 \u0627\u0633\u062a\u0641\u0627\u062f\u0647 \u0627\u0632 \u06af\u0632\u0627\u0631\u0634 \u062f\u0631 \u067e\u06cc\u0634\u0646\u0647\u0627\u062f \u0648 \u0645\u0630\u0627\u06a9\u0631\u0647.",
+   "h1": "\u0628\u0627\u0632\u0631\u0633\u06cc \u062e\u0627\u0646\u0647 \u062f\u0631 GTA: \u0686\u0647 \u0627\u0646\u062a\u0638\u0627\u0631\u06cc \u062f\u0627\u0634\u062a\u0647 \u0628\u0627\u0634\u06cc\u062f",
+   "index": 1,
+   "parent": "fa-resources",
+   "name": "\u0628\u0627\u0632\u0631\u0633\u06cc \u062e\u0627\u0646\u0647 \u062f\u0631 GTA: \u0686\u0647 \u0627\u0646\u062a\u0638\u0627\u0631\u06cc \u062f\u0627\u0634\u062a\u0647 \u0628\u0627\u0634\u06cc\u062f",
+   "type": "article",
+   "requires": null,
+   "internal": null,
+   "page": "fa-guide",
+   "planned": null,
+   "lang": "fa",
+   "alt": "guide-home-inspection"
+  },
+  {
+   "key": "fa-guide-contractor",
+   "path": "/fa/resources/tips/choosing-a-contractor/",
+   "title": "\u0627\u0646\u062a\u062e\u0627\u0628 \u067e\u06cc\u0645\u0627\u0646\u06a9\u0627\u0631 \u062f\u0631 \u0627\u0646\u062a\u0627\u0631\u06cc\u0648: \u0627\u0633\u062a\u0639\u0644\u0627\u0645\u060c \u0642\u0631\u0627\u0631\u062f\u0627\u062f \u0648 \u0645\u062c\u0648\u0632 | \u0639\u0644\u06cc \u0628\u06cc\u0627\u062a",
+   "desc": "\u0627\u0633\u062a\u062e\u062f\u0627\u0645 \u067e\u06cc\u0645\u0627\u0646\u06a9\u0627\u0631 \u062f\u0631 \u0627\u0646\u062a\u0627\u0631\u06cc\u0648 \u0628\u0647 \u0641\u0627\u0631\u0633\u06cc: \u0642\u0631\u0627\u0631\u062f\u0627\u062f \u06a9\u062a\u0628\u06cc\u060c \u0645\u0647\u0644\u062a \u06f1\u06f0 \u0631\u0648\u0632\u0647\u200c\u06cc \u0627\u0646\u0635\u0631\u0627\u0641\u060c \u0648\u062f\u06cc\u0639\u0647\u060c \u0645\u062c\u0648\u0632\u0647\u0627\u060c \u06af\u0648\u0627\u0647\u06cc\u200c\u0646\u0627\u0645\u0647\u200c\u0647\u0627 \u0648 \u06a9\u0644\u0627\u0647\u0628\u0631\u062f\u0627\u0631\u06cc\u200c\u0647\u0627\u06cc\u06cc \u06a9\u0647 \u0628\u0627\u06cc\u062f \u0627\u0632 \u0622\u0646\u200c\u0647\u0627 \u062f\u0648\u0631\u06cc \u06a9\u0631\u062f.",
+   "h1": "\u0627\u0646\u062a\u062e\u0627\u0628 \u067e\u06cc\u0645\u0627\u0646\u06a9\u0627\u0631 \u067e\u0633 \u0627\u0632 \u062e\u0631\u06cc\u062f",
+   "index": 1,
+   "parent": "fa-resources",
+   "name": "\u0627\u0646\u062a\u062e\u0627\u0628 \u067e\u06cc\u0645\u0627\u0646\u06a9\u0627\u0631 \u067e\u0633 \u0627\u0632 \u062e\u0631\u06cc\u062f",
+   "type": "article",
+   "requires": null,
+   "internal": null,
+   "page": "fa-guide",
+   "planned": null,
+   "lang": "fa",
+   "alt": "guide-contractor"
   },
   {
    "key": "site-plan",
@@ -720,53 +1128,104 @@
   "/privacy/",
   "/terms/",
   "/accessibility/",
-  "/404.html"
+  "/404.html",
+  "/resources/buying/first-home-toronto/",
+  "/resources/buying/pre-construction-condo-questions/",
+  "/resources/selling/what-to-fix-before-listing/",
+  "/resources/selling/offer-date-vs-pricing-to-market/",
+  "/resources/investment/investment-analysis/",
+  "/resources/investment/cash-flow/",
+  "/resources/investment/cap-rate/",
+  "/resources/investment/financing/",
+  "/resources/investment/duplexes-triplexes-fourplexes/",
+  "/resources/investment/investor-strategy/",
+  "/resources/market/2026-10-toronto-york-region/",
+  "/resources/market/2026-10-york-region/",
+  "/resources/tips/condo-status-certificate/",
+  "/resources/tips/home-inspection-gta/",
+  "/resources/tips/choosing-a-contractor/",
+  "/fa/resources/buying/first-home-toronto/",
+  "/fa/resources/buying/pre-construction-condo-questions/",
+  "/fa/resources/selling/what-to-fix-before-listing/",
+  "/fa/resources/selling/offer-date-vs-pricing-to-market/",
+  "/fa/resources/investment/investment-analysis/",
+  "/fa/resources/investment/cash-flow/",
+  "/fa/resources/investment/cap-rate/",
+  "/fa/resources/investment/financing/",
+  "/fa/resources/investment/duplexes-triplexes-fourplexes/",
+  "/fa/resources/investment/investor-strategy/",
+  "/fa/resources/market/2026-10-toronto-york-region/",
+  "/fa/resources/market/2026-10-york-region/",
+  "/fa/resources/tips/condo-status-certificate/",
+  "/fa/resources/tips/home-inspection-gta/",
+  "/fa/resources/tips/choosing-a-contractor/"
  ],
  "hashes": {
   "/": "f47ad380aff78460",
   "/about/": "af605080d129ac77",
-  "/buy/": "d5daf83cbc56f769",
-  "/sell/": "09c2c8a2fbd1c858",
-  "/invest/": "d2210ee2278b3052",
+  "/buy/": "e9dc161414dce212",
+  "/sell/": "ac49cac8e7efcc90",
+  "/invest/": "a725492e98334c92",
   "/neighbourhoods/": "1a31175a7a9b13dd",
   "/neighbourhoods/north-york/": "c2edf6e07a8d4ea2",
   "/neighbourhoods/thornhill/": "7512e7015acc12f0",
   "/neighbourhoods/richmond-hill/": "845e9b88989484f5",
   "/neighbourhoods/vaughan/": "58468212976d1283",
   "/neighbourhoods/toronto/": "cbe49cbc7e369c8e",
-  "/resources/": "0f7e20cf527fdcbd",
+  "/resources/": "0c82d1579fc2c923",
   "/resources/buying/land-transfer-tax-toronto-york-region/": "2111c89110056095",
   "/contact/": "2d56874668cf9c54",
   "/fa/": "1f55d850c2cf34a7",
-  "/fa/buy/": "f22e3eee2fead9f2",
-  "/fa/sell/": "f46372d4f5908854",
-  "/fa/invest/": "9845d6721cccffa7",
+  "/fa/buy/": "feb0e5c3e494bcc1",
+  "/fa/sell/": "88d5580b890fb864",
+  "/fa/invest/": "d043ddd9495f31e2",
   "/fa/neighbourhoods/": "b668fddbe695b9c6",
   "/fa/neighbourhoods/north-york/": "4c8f8759aff8d135",
   "/fa/neighbourhoods/thornhill/": "337e61686d11147f",
   "/fa/neighbourhoods/richmond-hill/": "3c6c0710ad3f8a3d",
   "/fa/neighbourhoods/vaughan/": "ef61225f785a9ffd",
   "/fa/neighbourhoods/toronto/": "9a64359ab61735d8",
-  "/fa/resources/": "d107864200a50bfc",
+  "/fa/resources/": "d6260ffb1bf0ffb0",
   "/fa/resources/buying/land-transfer-tax-toronto-york-region/": "1705899a866a5efa",
   "/fa/about/": "47d6dc81bce78593",
   "/fa/contact/": "224a0d13cb891863",
   "/privacy/": "509d99aa57125744",
   "/terms/": "b3b53c11360f5900",
   "/accessibility/": "7a3863c823923925",
-  "/404.html": "65c5629ec4899129"
+  "/404.html": "65c5629ec4899129",
+  "/resources/buying/first-home-toronto/": "d1657e63070ef39f",
+  "/resources/buying/pre-construction-condo-questions/": "b2518f90e00d483a",
+  "/resources/selling/what-to-fix-before-listing/": "99ab267b4b0fb970",
+  "/resources/selling/offer-date-vs-pricing-to-market/": "227883faccceb492",
+  "/resources/investment/investment-analysis/": "c2d33b482dc0dbbe",
+  "/resources/investment/cash-flow/": "c6d30311df44cb5a",
+  "/resources/investment/cap-rate/": "656addd0fbcf6f50",
+  "/resources/investment/financing/": "8d9cf77a1601e240",
+  "/resources/investment/duplexes-triplexes-fourplexes/": "938e6e5c1481df57",
+  "/resources/investment/investor-strategy/": "b888cfa79e85c240",
+  "/resources/market/2026-10-toronto-york-region/": "49b6edc78d2e2ebe",
+  "/resources/market/2026-10-york-region/": "a79b18fc217e5b44",
+  "/resources/tips/condo-status-certificate/": "87f1a47b55197b57",
+  "/resources/tips/home-inspection-gta/": "5ac8144d5c0101df",
+  "/resources/tips/choosing-a-contractor/": "f5b3d3c21d034923",
+  "/fa/resources/buying/first-home-toronto/": "22abfde20ae1c563",
+  "/fa/resources/buying/pre-construction-condo-questions/": "dde74fcfb3ddfa40",
+  "/fa/resources/selling/what-to-fix-before-listing/": "26451b9350d501be",
+  "/fa/resources/selling/offer-date-vs-pricing-to-market/": "d1b1a945cf5d16d2",
+  "/fa/resources/investment/investment-analysis/": "91a87740f18bbc56",
+  "/fa/resources/investment/cash-flow/": "8da2732246c73e71",
+  "/fa/resources/investment/cap-rate/": "40361dfabf34d48c",
+  "/fa/resources/investment/financing/": "b8ee6bb8b706051d",
+  "/fa/resources/investment/duplexes-triplexes-fourplexes/": "dabe5f1919a5ada2",
+  "/fa/resources/investment/investor-strategy/": "d1e657c6a7f93b21",
+  "/fa/resources/market/2026-10-toronto-york-region/": "58b9da50a0ef44ae",
+  "/fa/resources/market/2026-10-york-region/": "690e8b8306aca7fe",
+  "/fa/resources/tips/condo-status-certificate/": "162febb429c7b0b2",
+  "/fa/resources/tips/home-inspection-gta/": "f68ad0828dfe088a",
+  "/fa/resources/tips/choosing-a-contractor/": "5236ab733927ae0b"
  },
- "unresolved": {
-  "referral-disclosure": [
-   "/fa/invest/",
-   "/invest/"
-  ]
- },
+ "unresolved": {},
  "blockers": [
-  {
-   "category": "legal",
-   "message": "needs referral-disclosure (2 pages: /fa/invest/, /invest/)"
-  },
   {
    "category": "legal",
    "message": "/privacy/: privacy-policy is interim, not final"
@@ -774,14 +1233,6 @@
   {
    "category": "legal",
    "message": "/terms/: terms-of-use is interim, not final"
-  },
-  {
-   "category": "owner",
-   "message": "page review: /invest/ not yet approved by Ali"
-  },
-  {
-   "category": "owner",
-   "message": "page review: /fa/invest/ not yet approved by Ali"
   }
  ],
  "governance": [
@@ -842,13 +1293,13 @@
    "approved_matches": true,
    "reviewed_by": "Ali Bayat",
    "published_at": "2026-11-11",
-   "updated_at": "2026-11-20",
+   "updated_at": "2026-11-21",
    "data_period": null,
    "verified_at": null,
    "sources": [],
    "indexable": true,
    "canonical": "https://www.alibayatrealty.com/buy/",
-   "content_hash": "d5daf83cbc56f769",
+   "content_hash": "e9dc161414dce212",
    "open_items": []
   },
   {
@@ -864,13 +1315,13 @@
    "approved_matches": true,
    "reviewed_by": "Ali Bayat",
    "published_at": "2026-11-11",
-   "updated_at": "2026-11-20",
+   "updated_at": "2026-11-21",
    "data_period": null,
    "verified_at": null,
    "sources": [],
    "indexable": true,
    "canonical": "https://www.alibayatrealty.com/sell/",
-   "content_hash": "09c2c8a2fbd1c858",
+   "content_hash": "ac49cac8e7efcc90",
    "open_items": []
   },
   {
@@ -882,20 +1333,18 @@
    "evergreen": true,
    "time_sensitive": false,
    "author": "Ali Bayat",
-   "review_status": "draft",
-   "approved_matches": false,
-   "reviewed_by": null,
-   "published_at": null,
-   "updated_at": null,
+   "review_status": "approved",
+   "approved_matches": true,
+   "reviewed_by": "Ali Bayat",
+   "published_at": "2026-11-21",
+   "updated_at": "2026-11-21",
    "data_period": null,
    "verified_at": null,
    "sources": [],
    "indexable": true,
    "canonical": "https://www.alibayatrealty.com/invest/",
-   "content_hash": "d2210ee2278b3052",
-   "open_items": [
-    "referral-disclosure"
-   ]
+   "content_hash": "a725492e98334c92",
+   "open_items": []
   },
   {
    "path": "/neighbourhoods/",
@@ -1042,13 +1491,13 @@
    "approved_matches": true,
    "reviewed_by": "Ali Bayat",
    "published_at": "2026-11-11",
-   "updated_at": null,
+   "updated_at": "2026-11-21",
    "data_period": null,
    "verified_at": null,
    "sources": [],
    "indexable": true,
    "canonical": "https://www.alibayatrealty.com/resources/",
-   "content_hash": "0f7e20cf527fdcbd",
+   "content_hash": "0c82d1579fc2c923",
    "open_items": []
   },
   {
@@ -1147,13 +1596,13 @@
    "approved_matches": true,
    "reviewed_by": "Ali Bayat",
    "published_at": "2026-11-11",
-   "updated_at": "2026-11-20",
+   "updated_at": "2026-11-21",
    "data_period": null,
    "verified_at": null,
    "sources": [],
    "indexable": true,
    "canonical": "https://www.alibayatrealty.com/fa/buy/",
-   "content_hash": "f22e3eee2fead9f2",
+   "content_hash": "feb0e5c3e494bcc1",
    "open_items": []
   },
   {
@@ -1169,13 +1618,13 @@
    "approved_matches": true,
    "reviewed_by": "Ali Bayat",
    "published_at": "2026-11-11",
-   "updated_at": "2026-11-20",
+   "updated_at": "2026-11-21",
    "data_period": null,
    "verified_at": null,
    "sources": [],
    "indexable": true,
    "canonical": "https://www.alibayatrealty.com/fa/sell/",
-   "content_hash": "f46372d4f5908854",
+   "content_hash": "88d5580b890fb864",
    "open_items": []
   },
   {
@@ -1187,20 +1636,18 @@
    "evergreen": true,
    "time_sensitive": false,
    "author": "Ali Bayat",
-   "review_status": "draft",
-   "approved_matches": false,
-   "reviewed_by": null,
-   "published_at": null,
-   "updated_at": null,
+   "review_status": "approved",
+   "approved_matches": true,
+   "reviewed_by": "Ali Bayat",
+   "published_at": "2026-11-21",
+   "updated_at": "2026-11-21",
    "data_period": null,
    "verified_at": null,
    "sources": [],
    "indexable": true,
    "canonical": "https://www.alibayatrealty.com/fa/invest/",
-   "content_hash": "9845d6721cccffa7",
-   "open_items": [
-    "referral-disclosure"
-   ]
+   "content_hash": "d043ddd9495f31e2",
+   "open_items": []
   },
   {
    "path": "/fa/neighbourhoods/",
@@ -1347,13 +1794,13 @@
    "approved_matches": true,
    "reviewed_by": "Ali Bayat",
    "published_at": "2026-11-11",
-   "updated_at": null,
+   "updated_at": "2026-11-21",
    "data_period": null,
    "verified_at": null,
    "sources": [],
    "indexable": true,
    "canonical": "https://www.alibayatrealty.com/fa/resources/",
-   "content_hash": "d107864200a50bfc",
+   "content_hash": "d6260ffb1bf0ffb0",
    "open_items": []
   },
   {
@@ -1530,6 +1977,1104 @@
    "canonical": null,
    "content_hash": "65c5629ec4899129",
    "open_items": []
+  },
+  {
+   "path": "/resources/buying/first-home-toronto/",
+   "key": "guide-first-home",
+   "content_type": "guide",
+   "category": "buying",
+   "geography": "Ontario; City of Toronto; York Region",
+   "evergreen": false,
+   "time_sensitive": true,
+   "author": "Ali Bayat",
+   "review_status": "approved",
+   "approved_matches": true,
+   "reviewed_by": "Ali Bayat",
+   "published_at": "2026-11-21",
+   "updated_at": null,
+   "data_period": "Rules and rates in effect November 2026",
+   "verified_at": "2026-11-21",
+   "sources": [
+    [
+     "CMHC, mortgage loan insurance quick reference",
+     "https://assets.cmhc-schl.gc.ca/sf/project/cmhc/pdfs/factsheets/new/cmhc-quick-reference.pdf"
+    ],
+    [
+     "CMHC, mortgage loan insurance cost",
+     "https://www.cmhc-schl.gc.ca/consumers/home-buying/mortgage-loan-insurance-for-consumers/cmhc-mortgage-loan-insurance-cost"
+    ],
+    [
+     "Department of Finance Canada, mortgage reforms effective December 15, 2024",
+     "https://www.canada.ca/en/department-finance/news/2024/09/the-boldest-mortgage-reforms-in-decades.html"
+    ],
+    [
+     "CMHC, Income Property (2\u20134 unit rentals)",
+     "https://www.cmhc-schl.gc.ca/professionals/project-funding-and-mortgage-financing/mortgage-loan-insurance/mortgage-loan-insurance-homeownership-programs/cmhc-income-property"
+    ],
+    [
+     "Canada Revenue Agency, First Home Savings Account",
+     "https://www.canada.ca/en/revenue-agency/services/tax/individuals/topics/first-home-savings-account.html"
+    ],
+    [
+     "Canada Revenue Agency, Home Buyers' Plan",
+     "https://www.canada.ca/en/revenue-agency/services/tax/individuals/topics/rrsps-related-plans/what-home-buyers-plan.html"
+    ],
+    [
+     "Ontario, land transfer tax refunds for first-time homebuyers",
+     "https://www.ontario.ca/document/land-transfer-tax/land-transfer-tax-refunds-first-time-homebuyers"
+    ],
+    [
+     "City of Toronto, MLTT rebates",
+     "https://www.toronto.ca/services-payments/property-taxes-utilities/municipal-land-transfer-tax-mltt/municipal-land-transfer-tax-mltt-rebate-opportunities/"
+    ],
+    [
+     "Ontario, what to know before buying a home",
+     "https://www.ontario.ca/page/what-know-before-buying-home"
+    ]
+   ],
+   "indexable": true,
+   "canonical": "https://www.alibayatrealty.com/resources/buying/first-home-toronto/",
+   "content_hash": "d1657e63070ef39f",
+   "open_items": []
+  },
+  {
+   "path": "/resources/buying/pre-construction-condo-questions/",
+   "key": "guide-pre-construction",
+   "content_type": "guide",
+   "category": "buying",
+   "geography": "Ontario; Vaughan; Richmond Hill; City of Toronto",
+   "evergreen": false,
+   "time_sensitive": true,
+   "author": "Ali Bayat",
+   "review_status": "approved",
+   "approved_matches": true,
+   "reviewed_by": "Ali Bayat",
+   "published_at": "2026-11-21",
+   "updated_at": null,
+   "data_period": "Rules and rates in effect November 2026",
+   "verified_at": "2026-11-21",
+   "sources": [
+    [
+     "Condominium Authority of Ontario, pre-construction condos",
+     "https://www.condoauthorityontario.ca/before-you-buy-or-rent-a-condo/buying-a-condo/pre-construction-condos/"
+    ],
+    [
+     "Tarion, deposit protection",
+     "https://www.tarion.com/homeowners/pre-possession-coverage"
+    ],
+    [
+     "Ontario, what to know before buying a home",
+     "https://www.ontario.ca/page/what-know-before-buying-home"
+    ],
+    [
+     "Canada Revenue Agency, Ontario enhanced new housing rebate (Notice 346)",
+     "https://www.canada.ca/en/revenue-agency/services/forms-publications/publications/notice346/ontario-enhanced-new-housing-rebate.html"
+    ],
+    [
+     "Gowling WLG, Ontario expands HST relief on new homes (April 2026)",
+     "https://gowlingwlg.com/en-ca/insights-resources/articles/2026/ontario-expands-scope-of-buyers-entitled-to-hst-relief-on-new-homes"
+    ],
+    [
+     "TRREB Market Watch, October 2026",
+     "https://trreb.ca/wp-content/files/market-stats/market-watch/mw2610.pdf"
+    ]
+   ],
+   "indexable": true,
+   "canonical": "https://www.alibayatrealty.com/resources/buying/pre-construction-condo-questions/",
+   "content_hash": "b2518f90e00d483a",
+   "open_items": []
+  },
+  {
+   "path": "/resources/selling/what-to-fix-before-listing/",
+   "key": "guide-fix-before-listing",
+   "content_type": "guide",
+   "category": "selling",
+   "geography": "City of Toronto; York Region",
+   "evergreen": false,
+   "time_sensitive": true,
+   "author": "Ali Bayat",
+   "review_status": "approved",
+   "approved_matches": true,
+   "reviewed_by": "Ali Bayat",
+   "published_at": "2026-11-21",
+   "updated_at": null,
+   "data_period": "Rules and rates in effect November 2026",
+   "verified_at": "2026-11-21",
+   "sources": [
+    [
+     "TRREB Market Watch, October 2026",
+     "https://trreb.ca/wp-content/files/market-stats/market-watch/mw2610.pdf"
+    ],
+    [
+     "Ontario, what to know before buying a home",
+     "https://www.ontario.ca/page/what-know-before-buying-home"
+    ],
+    [
+     "Ontario, your rights when starting home renovations or repairs",
+     "https://www.ontario.ca/page/your-rights-when-starting-home-renovations-or-repairs"
+    ]
+   ],
+   "indexable": true,
+   "canonical": "https://www.alibayatrealty.com/resources/selling/what-to-fix-before-listing/",
+   "content_hash": "99ab267b4b0fb970",
+   "open_items": []
+  },
+  {
+   "path": "/resources/selling/offer-date-vs-pricing-to-market/",
+   "key": "guide-offer-date",
+   "content_type": "guide",
+   "category": "selling",
+   "geography": "City of Toronto; York Region",
+   "evergreen": false,
+   "time_sensitive": true,
+   "author": "Ali Bayat",
+   "review_status": "approved",
+   "approved_matches": true,
+   "reviewed_by": "Ali Bayat",
+   "published_at": "2026-11-21",
+   "updated_at": null,
+   "data_period": "Rules and rates in effect November 2026",
+   "verified_at": "2026-11-21",
+   "sources": [
+    [
+     "TRREB Market Watch, October 2026",
+     "https://trreb.ca/wp-content/files/market-stats/market-watch/mw2610.pdf"
+    ],
+    [
+     "RECO Bulletin 4.2, managing a delayed offer presentation",
+     "https://www.reco.on.ca/getmedia/4a729e64-a54e-41b8-ad6c-16ae97499219/RECO-Bulletin-4-2-Managing-a-delayed-offer-presentation-process.pdf"
+    ],
+    [
+     "RECO, TRESA FAQs",
+     "https://www.reco.on.ca/agents-and-brokerages/tresa-explained/tresa-faqs/"
+    ]
+   ],
+   "indexable": true,
+   "canonical": "https://www.alibayatrealty.com/resources/selling/offer-date-vs-pricing-to-market/",
+   "content_hash": "227883faccceb492",
+   "open_items": []
+  },
+  {
+   "path": "/resources/investment/investment-analysis/",
+   "key": "guide-investment-analysis",
+   "content_type": "guide",
+   "category": "investment",
+   "geography": "Toronto & York Region",
+   "evergreen": false,
+   "time_sensitive": true,
+   "author": "Ali Bayat",
+   "review_status": "approved",
+   "approved_matches": true,
+   "reviewed_by": "Ali Bayat",
+   "published_at": "2026-11-21",
+   "updated_at": null,
+   "data_period": "Rules and rates in effect November 2026",
+   "verified_at": "2026-11-21",
+   "sources": [
+    [
+     "Residential Tenancies Act, 2006",
+     "https://www.ontario.ca/laws/statute/06r17"
+    ],
+    [
+     "CMHC, Income Property (2\u20134 unit rentals)",
+     "https://www.cmhc-schl.gc.ca/professionals/project-funding-and-mortgage-financing/mortgage-loan-insurance/mortgage-loan-insurance-homeownership-programs/cmhc-income-property"
+    ],
+    [
+     "City of Toronto, multiplex housing",
+     "https://www.toronto.ca/city-government/planning-development/planning-studies-initiatives/multiplex-housing/"
+    ]
+   ],
+   "indexable": true,
+   "canonical": "https://www.alibayatrealty.com/resources/investment/investment-analysis/",
+   "content_hash": "c2d33b482dc0dbbe",
+   "open_items": []
+  },
+  {
+   "path": "/resources/investment/cash-flow/",
+   "key": "guide-cash-flow",
+   "content_type": "guide",
+   "category": "investment",
+   "geography": "Toronto & York Region",
+   "evergreen": false,
+   "time_sensitive": true,
+   "author": "Ali Bayat",
+   "review_status": "approved",
+   "approved_matches": true,
+   "reviewed_by": "Ali Bayat",
+   "published_at": "2026-11-21",
+   "updated_at": null,
+   "data_period": "Rules and rates in effect November 2026",
+   "verified_at": "2026-11-21",
+   "sources": [
+    [
+     "CMHC, Income Property (2\u20134 unit rentals)",
+     "https://www.cmhc-schl.gc.ca/professionals/project-funding-and-mortgage-financing/mortgage-loan-insurance/mortgage-loan-insurance-homeownership-programs/cmhc-income-property"
+    ],
+    [
+     "TRREB Market Watch, October 2026",
+     "https://trreb.ca/wp-content/files/market-stats/market-watch/mw2610.pdf"
+    ]
+   ],
+   "indexable": true,
+   "canonical": "https://www.alibayatrealty.com/resources/investment/cash-flow/",
+   "content_hash": "c6d30311df44cb5a",
+   "open_items": []
+  },
+  {
+   "path": "/resources/investment/cap-rate/",
+   "key": "guide-cap-rate",
+   "content_type": "guide",
+   "category": "investment",
+   "geography": "Toronto & York Region",
+   "evergreen": false,
+   "time_sensitive": true,
+   "author": "Ali Bayat",
+   "review_status": "approved",
+   "approved_matches": true,
+   "reviewed_by": "Ali Bayat",
+   "published_at": "2026-11-21",
+   "updated_at": null,
+   "data_period": "Rules and rates in effect November 2026",
+   "verified_at": "2026-11-21",
+   "sources": [
+    [
+     "Residential Tenancies Act, 2006",
+     "https://www.ontario.ca/laws/statute/06r17"
+    ]
+   ],
+   "indexable": true,
+   "canonical": "https://www.alibayatrealty.com/resources/investment/cap-rate/",
+   "content_hash": "656addd0fbcf6f50",
+   "open_items": []
+  },
+  {
+   "path": "/resources/investment/financing/",
+   "key": "guide-investment-financing",
+   "content_type": "guide",
+   "category": "investment",
+   "geography": "Canada; Ontario",
+   "evergreen": false,
+   "time_sensitive": true,
+   "author": "Ali Bayat",
+   "review_status": "approved",
+   "approved_matches": true,
+   "reviewed_by": "Ali Bayat",
+   "published_at": "2026-11-21",
+   "updated_at": null,
+   "data_period": "Rules and rates in effect November 2026",
+   "verified_at": "2026-11-21",
+   "sources": [
+    [
+     "CMHC, mortgage loan insurance quick reference",
+     "https://assets.cmhc-schl.gc.ca/sf/project/cmhc/pdfs/factsheets/new/cmhc-quick-reference.pdf"
+    ],
+    [
+     "CMHC, Income Property (2\u20134 unit rentals)",
+     "https://www.cmhc-schl.gc.ca/professionals/project-funding-and-mortgage-financing/mortgage-loan-insurance/mortgage-loan-insurance-homeownership-programs/cmhc-income-property"
+    ],
+    [
+     "Bank of Canada, rate announcement, October 28, 2026",
+     "https://www.bankofcanada.ca/2026/10/fad-press-release-2026-10-28/"
+    ]
+   ],
+   "indexable": true,
+   "canonical": "https://www.alibayatrealty.com/resources/investment/financing/",
+   "content_hash": "8d9cf77a1601e240",
+   "open_items": []
+  },
+  {
+   "path": "/resources/investment/duplexes-triplexes-fourplexes/",
+   "key": "guide-multiplexes",
+   "content_type": "guide",
+   "category": "investment",
+   "geography": "City of Toronto; York Region",
+   "evergreen": false,
+   "time_sensitive": true,
+   "author": "Ali Bayat",
+   "review_status": "approved",
+   "approved_matches": true,
+   "reviewed_by": "Ali Bayat",
+   "published_at": "2026-11-21",
+   "updated_at": null,
+   "data_period": "Rules and rates in effect November 2026",
+   "verified_at": "2026-11-21",
+   "sources": [
+    [
+     "City of Toronto, multiplex housing",
+     "https://www.toronto.ca/city-government/planning-development/planning-studies-initiatives/multiplex-housing/"
+    ],
+    [
+     "Ontario Planning Act",
+     "https://www.ontario.ca/laws/statute/90p13"
+    ],
+    [
+     "CMHC, mortgage loan insurance quick reference",
+     "https://assets.cmhc-schl.gc.ca/sf/project/cmhc/pdfs/factsheets/new/cmhc-quick-reference.pdf"
+    ],
+    [
+     "CMHC, Income Property (2\u20134 unit rentals)",
+     "https://www.cmhc-schl.gc.ca/professionals/project-funding-and-mortgage-financing/mortgage-loan-insurance/mortgage-loan-insurance-homeownership-programs/cmhc-income-property"
+    ],
+    [
+     "Residential Tenancies Act, 2006",
+     "https://www.ontario.ca/laws/statute/06r17"
+    ]
+   ],
+   "indexable": true,
+   "canonical": "https://www.alibayatrealty.com/resources/investment/duplexes-triplexes-fourplexes/",
+   "content_hash": "938e6e5c1481df57",
+   "open_items": []
+  },
+  {
+   "path": "/resources/investment/investor-strategy/",
+   "key": "guide-investor-strategy",
+   "content_type": "guide",
+   "category": "investment",
+   "geography": "Toronto & York Region",
+   "evergreen": false,
+   "time_sensitive": true,
+   "author": "Ali Bayat",
+   "review_status": "approved",
+   "approved_matches": true,
+   "reviewed_by": "Ali Bayat",
+   "published_at": "2026-11-21",
+   "updated_at": null,
+   "data_period": "Rules and rates in effect November 2026",
+   "verified_at": "2026-11-21",
+   "sources": [
+    [
+     "TRREB Market Watch, October 2026",
+     "https://trreb.ca/wp-content/files/market-stats/market-watch/mw2610.pdf"
+    ],
+    [
+     "TRREB news release, November 4, 2026",
+     "https://trreb.ca/wp-content/files/news_releases/news2026/nr_market_watch_1026.pdf"
+    ],
+    [
+     "Bank of Canada, rate announcement, October 28, 2026",
+     "https://www.bankofcanada.ca/2026/10/fad-press-release-2026-10-28/"
+    ]
+   ],
+   "indexable": true,
+   "canonical": "https://www.alibayatrealty.com/resources/investment/investor-strategy/",
+   "content_hash": "b888cfa79e85c240",
+   "open_items": []
+  },
+  {
+   "path": "/resources/market/2026-10-toronto-york-region/",
+   "key": "guide-market-toronto-york",
+   "content_type": "guide",
+   "category": "market",
+   "geography": "City of Toronto; York Region",
+   "evergreen": false,
+   "time_sensitive": true,
+   "author": "Ali Bayat",
+   "review_status": "approved",
+   "approved_matches": true,
+   "reviewed_by": "Ali Bayat",
+   "published_at": "2026-11-21",
+   "updated_at": null,
+   "data_period": "October 2026 (TRREB Market Watch, released November 4, 2026)",
+   "verified_at": "2026-11-21",
+   "sources": [
+    [
+     "TRREB Market Watch, October 2026",
+     "https://trreb.ca/wp-content/files/market-stats/market-watch/mw2610.pdf"
+    ],
+    [
+     "TRREB news release, November 4, 2026",
+     "https://trreb.ca/wp-content/files/news_releases/news2026/nr_market_watch_1026.pdf"
+    ],
+    [
+     "Bank of Canada, rate announcement, October 28, 2026",
+     "https://www.bankofcanada.ca/2026/10/fad-press-release-2026-10-28/"
+    ]
+   ],
+   "indexable": true,
+   "canonical": "https://www.alibayatrealty.com/resources/market/2026-10-toronto-york-region/",
+   "content_hash": "49b6edc78d2e2ebe",
+   "open_items": []
+  },
+  {
+   "path": "/resources/market/2026-10-york-region/",
+   "key": "guide-market-york-region",
+   "content_type": "guide",
+   "category": "market",
+   "geography": "Vaughan; Richmond Hill; Markham",
+   "evergreen": false,
+   "time_sensitive": true,
+   "author": "Ali Bayat",
+   "review_status": "approved",
+   "approved_matches": true,
+   "reviewed_by": "Ali Bayat",
+   "published_at": "2026-11-21",
+   "updated_at": null,
+   "data_period": "October 2026 (TRREB Market Watch, released November 4, 2026)",
+   "verified_at": "2026-11-21",
+   "sources": [
+    [
+     "TRREB Market Watch, October 2026",
+     "https://trreb.ca/wp-content/files/market-stats/market-watch/mw2610.pdf"
+    ],
+    [
+     "TRREB news release, November 4, 2026",
+     "https://trreb.ca/wp-content/files/news_releases/news2026/nr_market_watch_1026.pdf"
+    ]
+   ],
+   "indexable": true,
+   "canonical": "https://www.alibayatrealty.com/resources/market/2026-10-york-region/",
+   "content_hash": "a79b18fc217e5b44",
+   "open_items": []
+  },
+  {
+   "path": "/resources/tips/condo-status-certificate/",
+   "key": "guide-status-certificate",
+   "content_type": "guide",
+   "category": "tips",
+   "geography": "Ontario",
+   "evergreen": false,
+   "time_sensitive": true,
+   "author": "Ali Bayat",
+   "review_status": "approved",
+   "approved_matches": true,
+   "reviewed_by": "Ali Bayat",
+   "published_at": "2026-11-21",
+   "updated_at": null,
+   "data_period": "Rules and rates in effect November 2026",
+   "verified_at": "2026-11-21",
+   "sources": [
+    [
+     "FirstService Residential, status certificates in Ontario",
+     "https://www.fsresidential.com/ontario/news-events/articles/what-is-a-status-certificate-in-ontario/"
+    ],
+    [
+     "Legal Line, what is a status certificate",
+     "https://www.legalline.ca/legal-answers/what-is-a-status-certificate/"
+    ],
+    [
+     "Condominium Act, 1998",
+     "https://www.ontario.ca/laws/statute/98c19"
+    ],
+    [
+     "Ontario, what to know before buying a home",
+     "https://www.ontario.ca/page/what-know-before-buying-home"
+    ]
+   ],
+   "indexable": true,
+   "canonical": "https://www.alibayatrealty.com/resources/tips/condo-status-certificate/",
+   "content_hash": "87f1a47b55197b57",
+   "open_items": []
+  },
+  {
+   "path": "/resources/tips/home-inspection-gta/",
+   "key": "guide-home-inspection",
+   "content_type": "guide",
+   "category": "tips",
+   "geography": "Ontario; City of Toronto; York Region",
+   "evergreen": false,
+   "time_sensitive": true,
+   "author": "Ali Bayat",
+   "review_status": "approved",
+   "approved_matches": true,
+   "reviewed_by": "Ali Bayat",
+   "published_at": "2026-11-21",
+   "updated_at": null,
+   "data_period": "Rules and rates in effect November 2026",
+   "verified_at": "2026-11-21",
+   "sources": [
+    [
+     "Ontario, what to know before buying a home",
+     "https://www.ontario.ca/page/what-know-before-buying-home"
+    ]
+   ],
+   "indexable": true,
+   "canonical": "https://www.alibayatrealty.com/resources/tips/home-inspection-gta/",
+   "content_hash": "5ac8144d5c0101df",
+   "open_items": []
+  },
+  {
+   "path": "/resources/tips/choosing-a-contractor/",
+   "key": "guide-contractor",
+   "content_type": "guide",
+   "category": "tips",
+   "geography": "Ontario",
+   "evergreen": false,
+   "time_sensitive": true,
+   "author": "Ali Bayat",
+   "review_status": "approved",
+   "approved_matches": true,
+   "reviewed_by": "Ali Bayat",
+   "published_at": "2026-11-21",
+   "updated_at": null,
+   "data_period": "Rules and rates in effect November 2026",
+   "verified_at": "2026-11-21",
+   "sources": [
+    [
+     "Ontario, your rights when starting home renovations or repairs",
+     "https://www.ontario.ca/page/your-rights-when-starting-home-renovations-or-repairs"
+    ],
+    [
+     "Ontario, guide for home renovation businesses",
+     "https://www.ontario.ca/page/guide-home-renovation-and-roofing-businesses"
+    ],
+    [
+     "Construction Act",
+     "https://www.ontario.ca/laws/statute/90c30"
+    ]
+   ],
+   "indexable": true,
+   "canonical": "https://www.alibayatrealty.com/resources/tips/choosing-a-contractor/",
+   "content_hash": "f5b3d3c21d034923",
+   "open_items": []
+  },
+  {
+   "path": "/fa/resources/buying/first-home-toronto/",
+   "key": "fa-guide-first-home",
+   "content_type": "guide",
+   "category": "buying",
+   "geography": "Ontario; City of Toronto; York Region",
+   "evergreen": false,
+   "time_sensitive": true,
+   "author": "Ali Bayat",
+   "review_status": "approved",
+   "approved_matches": true,
+   "reviewed_by": "Ali Bayat",
+   "published_at": "2026-11-21",
+   "updated_at": null,
+   "data_period": "Rules and rates in effect November 2026",
+   "verified_at": "2026-11-21",
+   "sources": [
+    [
+     "CMHC, mortgage loan insurance quick reference",
+     "https://assets.cmhc-schl.gc.ca/sf/project/cmhc/pdfs/factsheets/new/cmhc-quick-reference.pdf"
+    ],
+    [
+     "CMHC, mortgage loan insurance cost",
+     "https://www.cmhc-schl.gc.ca/consumers/home-buying/mortgage-loan-insurance-for-consumers/cmhc-mortgage-loan-insurance-cost"
+    ],
+    [
+     "Department of Finance Canada, mortgage reforms effective December 15, 2024",
+     "https://www.canada.ca/en/department-finance/news/2024/09/the-boldest-mortgage-reforms-in-decades.html"
+    ],
+    [
+     "CMHC, Income Property (2\u20134 unit rentals)",
+     "https://www.cmhc-schl.gc.ca/professionals/project-funding-and-mortgage-financing/mortgage-loan-insurance/mortgage-loan-insurance-homeownership-programs/cmhc-income-property"
+    ],
+    [
+     "Canada Revenue Agency, First Home Savings Account",
+     "https://www.canada.ca/en/revenue-agency/services/tax/individuals/topics/first-home-savings-account.html"
+    ],
+    [
+     "Canada Revenue Agency, Home Buyers' Plan",
+     "https://www.canada.ca/en/revenue-agency/services/tax/individuals/topics/rrsps-related-plans/what-home-buyers-plan.html"
+    ],
+    [
+     "Ontario, land transfer tax refunds for first-time homebuyers",
+     "https://www.ontario.ca/document/land-transfer-tax/land-transfer-tax-refunds-first-time-homebuyers"
+    ],
+    [
+     "City of Toronto, MLTT rebates",
+     "https://www.toronto.ca/services-payments/property-taxes-utilities/municipal-land-transfer-tax-mltt/municipal-land-transfer-tax-mltt-rebate-opportunities/"
+    ],
+    [
+     "Ontario, what to know before buying a home",
+     "https://www.ontario.ca/page/what-know-before-buying-home"
+    ]
+   ],
+   "indexable": true,
+   "canonical": "https://www.alibayatrealty.com/fa/resources/buying/first-home-toronto/",
+   "content_hash": "22abfde20ae1c563",
+   "open_items": []
+  },
+  {
+   "path": "/fa/resources/buying/pre-construction-condo-questions/",
+   "key": "fa-guide-pre-construction",
+   "content_type": "guide",
+   "category": "buying",
+   "geography": "Ontario; Vaughan; Richmond Hill; City of Toronto",
+   "evergreen": false,
+   "time_sensitive": true,
+   "author": "Ali Bayat",
+   "review_status": "approved",
+   "approved_matches": true,
+   "reviewed_by": "Ali Bayat",
+   "published_at": "2026-11-21",
+   "updated_at": null,
+   "data_period": "Rules and rates in effect November 2026",
+   "verified_at": "2026-11-21",
+   "sources": [
+    [
+     "Condominium Authority of Ontario, pre-construction condos",
+     "https://www.condoauthorityontario.ca/before-you-buy-or-rent-a-condo/buying-a-condo/pre-construction-condos/"
+    ],
+    [
+     "Tarion, deposit protection",
+     "https://www.tarion.com/homeowners/pre-possession-coverage"
+    ],
+    [
+     "Ontario, what to know before buying a home",
+     "https://www.ontario.ca/page/what-know-before-buying-home"
+    ],
+    [
+     "Canada Revenue Agency, Ontario enhanced new housing rebate (Notice 346)",
+     "https://www.canada.ca/en/revenue-agency/services/forms-publications/publications/notice346/ontario-enhanced-new-housing-rebate.html"
+    ],
+    [
+     "Gowling WLG, Ontario expands HST relief on new homes (April 2026)",
+     "https://gowlingwlg.com/en-ca/insights-resources/articles/2026/ontario-expands-scope-of-buyers-entitled-to-hst-relief-on-new-homes"
+    ],
+    [
+     "TRREB Market Watch, October 2026",
+     "https://trreb.ca/wp-content/files/market-stats/market-watch/mw2610.pdf"
+    ]
+   ],
+   "indexable": true,
+   "canonical": "https://www.alibayatrealty.com/fa/resources/buying/pre-construction-condo-questions/",
+   "content_hash": "dde74fcfb3ddfa40",
+   "open_items": []
+  },
+  {
+   "path": "/fa/resources/selling/what-to-fix-before-listing/",
+   "key": "fa-guide-fix-before-listing",
+   "content_type": "guide",
+   "category": "selling",
+   "geography": "City of Toronto; York Region",
+   "evergreen": false,
+   "time_sensitive": true,
+   "author": "Ali Bayat",
+   "review_status": "approved",
+   "approved_matches": true,
+   "reviewed_by": "Ali Bayat",
+   "published_at": "2026-11-21",
+   "updated_at": null,
+   "data_period": "Rules and rates in effect November 2026",
+   "verified_at": "2026-11-21",
+   "sources": [
+    [
+     "TRREB Market Watch, October 2026",
+     "https://trreb.ca/wp-content/files/market-stats/market-watch/mw2610.pdf"
+    ],
+    [
+     "Ontario, what to know before buying a home",
+     "https://www.ontario.ca/page/what-know-before-buying-home"
+    ],
+    [
+     "Ontario, your rights when starting home renovations or repairs",
+     "https://www.ontario.ca/page/your-rights-when-starting-home-renovations-or-repairs"
+    ]
+   ],
+   "indexable": true,
+   "canonical": "https://www.alibayatrealty.com/fa/resources/selling/what-to-fix-before-listing/",
+   "content_hash": "26451b9350d501be",
+   "open_items": []
+  },
+  {
+   "path": "/fa/resources/selling/offer-date-vs-pricing-to-market/",
+   "key": "fa-guide-offer-date",
+   "content_type": "guide",
+   "category": "selling",
+   "geography": "City of Toronto; York Region",
+   "evergreen": false,
+   "time_sensitive": true,
+   "author": "Ali Bayat",
+   "review_status": "approved",
+   "approved_matches": true,
+   "reviewed_by": "Ali Bayat",
+   "published_at": "2026-11-21",
+   "updated_at": null,
+   "data_period": "Rules and rates in effect November 2026",
+   "verified_at": "2026-11-21",
+   "sources": [
+    [
+     "TRREB Market Watch, October 2026",
+     "https://trreb.ca/wp-content/files/market-stats/market-watch/mw2610.pdf"
+    ],
+    [
+     "RECO Bulletin 4.2, managing a delayed offer presentation",
+     "https://www.reco.on.ca/getmedia/4a729e64-a54e-41b8-ad6c-16ae97499219/RECO-Bulletin-4-2-Managing-a-delayed-offer-presentation-process.pdf"
+    ],
+    [
+     "RECO, TRESA FAQs",
+     "https://www.reco.on.ca/agents-and-brokerages/tresa-explained/tresa-faqs/"
+    ]
+   ],
+   "indexable": true,
+   "canonical": "https://www.alibayatrealty.com/fa/resources/selling/offer-date-vs-pricing-to-market/",
+   "content_hash": "d1b1a945cf5d16d2",
+   "open_items": []
+  },
+  {
+   "path": "/fa/resources/investment/investment-analysis/",
+   "key": "fa-guide-investment-analysis",
+   "content_type": "guide",
+   "category": "investment",
+   "geography": "Toronto & York Region",
+   "evergreen": false,
+   "time_sensitive": true,
+   "author": "Ali Bayat",
+   "review_status": "approved",
+   "approved_matches": true,
+   "reviewed_by": "Ali Bayat",
+   "published_at": "2026-11-21",
+   "updated_at": null,
+   "data_period": "Rules and rates in effect November 2026",
+   "verified_at": "2026-11-21",
+   "sources": [
+    [
+     "Residential Tenancies Act, 2006",
+     "https://www.ontario.ca/laws/statute/06r17"
+    ],
+    [
+     "CMHC, Income Property (2\u20134 unit rentals)",
+     "https://www.cmhc-schl.gc.ca/professionals/project-funding-and-mortgage-financing/mortgage-loan-insurance/mortgage-loan-insurance-homeownership-programs/cmhc-income-property"
+    ],
+    [
+     "City of Toronto, multiplex housing",
+     "https://www.toronto.ca/city-government/planning-development/planning-studies-initiatives/multiplex-housing/"
+    ]
+   ],
+   "indexable": true,
+   "canonical": "https://www.alibayatrealty.com/fa/resources/investment/investment-analysis/",
+   "content_hash": "91a87740f18bbc56",
+   "open_items": []
+  },
+  {
+   "path": "/fa/resources/investment/cash-flow/",
+   "key": "fa-guide-cash-flow",
+   "content_type": "guide",
+   "category": "investment",
+   "geography": "Toronto & York Region",
+   "evergreen": false,
+   "time_sensitive": true,
+   "author": "Ali Bayat",
+   "review_status": "approved",
+   "approved_matches": true,
+   "reviewed_by": "Ali Bayat",
+   "published_at": "2026-11-21",
+   "updated_at": null,
+   "data_period": "Rules and rates in effect November 2026",
+   "verified_at": "2026-11-21",
+   "sources": [
+    [
+     "CMHC, Income Property (2\u20134 unit rentals)",
+     "https://www.cmhc-schl.gc.ca/professionals/project-funding-and-mortgage-financing/mortgage-loan-insurance/mortgage-loan-insurance-homeownership-programs/cmhc-income-property"
+    ],
+    [
+     "TRREB Market Watch, October 2026",
+     "https://trreb.ca/wp-content/files/market-stats/market-watch/mw2610.pdf"
+    ]
+   ],
+   "indexable": true,
+   "canonical": "https://www.alibayatrealty.com/fa/resources/investment/cash-flow/",
+   "content_hash": "8da2732246c73e71",
+   "open_items": []
+  },
+  {
+   "path": "/fa/resources/investment/cap-rate/",
+   "key": "fa-guide-cap-rate",
+   "content_type": "guide",
+   "category": "investment",
+   "geography": "Toronto & York Region",
+   "evergreen": false,
+   "time_sensitive": true,
+   "author": "Ali Bayat",
+   "review_status": "approved",
+   "approved_matches": true,
+   "reviewed_by": "Ali Bayat",
+   "published_at": "2026-11-21",
+   "updated_at": null,
+   "data_period": "Rules and rates in effect November 2026",
+   "verified_at": "2026-11-21",
+   "sources": [
+    [
+     "Residential Tenancies Act, 2006",
+     "https://www.ontario.ca/laws/statute/06r17"
+    ]
+   ],
+   "indexable": true,
+   "canonical": "https://www.alibayatrealty.com/fa/resources/investment/cap-rate/",
+   "content_hash": "40361dfabf34d48c",
+   "open_items": []
+  },
+  {
+   "path": "/fa/resources/investment/financing/",
+   "key": "fa-guide-investment-financing",
+   "content_type": "guide",
+   "category": "investment",
+   "geography": "Canada; Ontario",
+   "evergreen": false,
+   "time_sensitive": true,
+   "author": "Ali Bayat",
+   "review_status": "approved",
+   "approved_matches": true,
+   "reviewed_by": "Ali Bayat",
+   "published_at": "2026-11-21",
+   "updated_at": null,
+   "data_period": "Rules and rates in effect November 2026",
+   "verified_at": "2026-11-21",
+   "sources": [
+    [
+     "CMHC, mortgage loan insurance quick reference",
+     "https://assets.cmhc-schl.gc.ca/sf/project/cmhc/pdfs/factsheets/new/cmhc-quick-reference.pdf"
+    ],
+    [
+     "CMHC, Income Property (2\u20134 unit rentals)",
+     "https://www.cmhc-schl.gc.ca/professionals/project-funding-and-mortgage-financing/mortgage-loan-insurance/mortgage-loan-insurance-homeownership-programs/cmhc-income-property"
+    ],
+    [
+     "Bank of Canada, rate announcement, October 28, 2026",
+     "https://www.bankofcanada.ca/2026/10/fad-press-release-2026-10-28/"
+    ]
+   ],
+   "indexable": true,
+   "canonical": "https://www.alibayatrealty.com/fa/resources/investment/financing/",
+   "content_hash": "b8ee6bb8b706051d",
+   "open_items": []
+  },
+  {
+   "path": "/fa/resources/investment/duplexes-triplexes-fourplexes/",
+   "key": "fa-guide-multiplexes",
+   "content_type": "guide",
+   "category": "investment",
+   "geography": "City of Toronto; York Region",
+   "evergreen": false,
+   "time_sensitive": true,
+   "author": "Ali Bayat",
+   "review_status": "approved",
+   "approved_matches": true,
+   "reviewed_by": "Ali Bayat",
+   "published_at": "2026-11-21",
+   "updated_at": null,
+   "data_period": "Rules and rates in effect November 2026",
+   "verified_at": "2026-11-21",
+   "sources": [
+    [
+     "City of Toronto, multiplex housing",
+     "https://www.toronto.ca/city-government/planning-development/planning-studies-initiatives/multiplex-housing/"
+    ],
+    [
+     "Ontario Planning Act",
+     "https://www.ontario.ca/laws/statute/90p13"
+    ],
+    [
+     "CMHC, mortgage loan insurance quick reference",
+     "https://assets.cmhc-schl.gc.ca/sf/project/cmhc/pdfs/factsheets/new/cmhc-quick-reference.pdf"
+    ],
+    [
+     "CMHC, Income Property (2\u20134 unit rentals)",
+     "https://www.cmhc-schl.gc.ca/professionals/project-funding-and-mortgage-financing/mortgage-loan-insurance/mortgage-loan-insurance-homeownership-programs/cmhc-income-property"
+    ],
+    [
+     "Residential Tenancies Act, 2006",
+     "https://www.ontario.ca/laws/statute/06r17"
+    ]
+   ],
+   "indexable": true,
+   "canonical": "https://www.alibayatrealty.com/fa/resources/investment/duplexes-triplexes-fourplexes/",
+   "content_hash": "dabe5f1919a5ada2",
+   "open_items": []
+  },
+  {
+   "path": "/fa/resources/investment/investor-strategy/",
+   "key": "fa-guide-investor-strategy",
+   "content_type": "guide",
+   "category": "investment",
+   "geography": "Toronto & York Region",
+   "evergreen": false,
+   "time_sensitive": true,
+   "author": "Ali Bayat",
+   "review_status": "approved",
+   "approved_matches": true,
+   "reviewed_by": "Ali Bayat",
+   "published_at": "2026-11-21",
+   "updated_at": null,
+   "data_period": "Rules and rates in effect November 2026",
+   "verified_at": "2026-11-21",
+   "sources": [
+    [
+     "TRREB Market Watch, October 2026",
+     "https://trreb.ca/wp-content/files/market-stats/market-watch/mw2610.pdf"
+    ],
+    [
+     "TRREB news release, November 4, 2026",
+     "https://trreb.ca/wp-content/files/news_releases/news2026/nr_market_watch_1026.pdf"
+    ],
+    [
+     "Bank of Canada, rate announcement, October 28, 2026",
+     "https://www.bankofcanada.ca/2026/10/fad-press-release-2026-10-28/"
+    ]
+   ],
+   "indexable": true,
+   "canonical": "https://www.alibayatrealty.com/fa/resources/investment/investor-strategy/",
+   "content_hash": "d1e657c6a7f93b21",
+   "open_items": []
+  },
+  {
+   "path": "/fa/resources/market/2026-10-toronto-york-region/",
+   "key": "fa-guide-market-toronto-york",
+   "content_type": "guide",
+   "category": "market",
+   "geography": "City of Toronto; York Region",
+   "evergreen": false,
+   "time_sensitive": true,
+   "author": "Ali Bayat",
+   "review_status": "approved",
+   "approved_matches": true,
+   "reviewed_by": "Ali Bayat",
+   "published_at": "2026-11-21",
+   "updated_at": null,
+   "data_period": "October 2026 (TRREB Market Watch, released November 4, 2026)",
+   "verified_at": "2026-11-21",
+   "sources": [
+    [
+     "TRREB Market Watch, October 2026",
+     "https://trreb.ca/wp-content/files/market-stats/market-watch/mw2610.pdf"
+    ],
+    [
+     "TRREB news release, November 4, 2026",
+     "https://trreb.ca/wp-content/files/news_releases/news2026/nr_market_watch_1026.pdf"
+    ],
+    [
+     "Bank of Canada, rate announcement, October 28, 2026",
+     "https://www.bankofcanada.ca/2026/10/fad-press-release-2026-10-28/"
+    ]
+   ],
+   "indexable": true,
+   "canonical": "https://www.alibayatrealty.com/fa/resources/market/2026-10-toronto-york-region/",
+   "content_hash": "58b9da50a0ef44ae",
+   "open_items": []
+  },
+  {
+   "path": "/fa/resources/market/2026-10-york-region/",
+   "key": "fa-guide-market-york-region",
+   "content_type": "guide",
+   "category": "market",
+   "geography": "Vaughan; Richmond Hill; Markham",
+   "evergreen": false,
+   "time_sensitive": true,
+   "author": "Ali Bayat",
+   "review_status": "approved",
+   "approved_matches": true,
+   "reviewed_by": "Ali Bayat",
+   "published_at": "2026-11-21",
+   "updated_at": null,
+   "data_period": "October 2026 (TRREB Market Watch, released November 4, 2026)",
+   "verified_at": "2026-11-21",
+   "sources": [
+    [
+     "TRREB Market Watch, October 2026",
+     "https://trreb.ca/wp-content/files/market-stats/market-watch/mw2610.pdf"
+    ],
+    [
+     "TRREB news release, November 4, 2026",
+     "https://trreb.ca/wp-content/files/news_releases/news2026/nr_market_watch_1026.pdf"
+    ]
+   ],
+   "indexable": true,
+   "canonical": "https://www.alibayatrealty.com/fa/resources/market/2026-10-york-region/",
+   "content_hash": "690e8b8306aca7fe",
+   "open_items": []
+  },
+  {
+   "path": "/fa/resources/tips/condo-status-certificate/",
+   "key": "fa-guide-status-certificate",
+   "content_type": "guide",
+   "category": "tips",
+   "geography": "Ontario",
+   "evergreen": false,
+   "time_sensitive": true,
+   "author": "Ali Bayat",
+   "review_status": "approved",
+   "approved_matches": true,
+   "reviewed_by": "Ali Bayat",
+   "published_at": "2026-11-21",
+   "updated_at": null,
+   "data_period": "Rules and rates in effect November 2026",
+   "verified_at": "2026-11-21",
+   "sources": [
+    [
+     "FirstService Residential, status certificates in Ontario",
+     "https://www.fsresidential.com/ontario/news-events/articles/what-is-a-status-certificate-in-ontario/"
+    ],
+    [
+     "Legal Line, what is a status certificate",
+     "https://www.legalline.ca/legal-answers/what-is-a-status-certificate/"
+    ],
+    [
+     "Condominium Act, 1998",
+     "https://www.ontario.ca/laws/statute/98c19"
+    ],
+    [
+     "Ontario, what to know before buying a home",
+     "https://www.ontario.ca/page/what-know-before-buying-home"
+    ]
+   ],
+   "indexable": true,
+   "canonical": "https://www.alibayatrealty.com/fa/resources/tips/condo-status-certificate/",
+   "content_hash": "162febb429c7b0b2",
+   "open_items": []
+  },
+  {
+   "path": "/fa/resources/tips/home-inspection-gta/",
+   "key": "fa-guide-home-inspection",
+   "content_type": "guide",
+   "category": "tips",
+   "geography": "Ontario; City of Toronto; York Region",
+   "evergreen": false,
+   "time_sensitive": true,
+   "author": "Ali Bayat",
+   "review_status": "approved",
+   "approved_matches": true,
+   "reviewed_by": "Ali Bayat",
+   "published_at": "2026-11-21",
+   "updated_at": null,
+   "data_period": "Rules and rates in effect November 2026",
+   "verified_at": "2026-11-21",
+   "sources": [
+    [
+     "Ontario, what to know before buying a home",
+     "https://www.ontario.ca/page/what-know-before-buying-home"
+    ]
+   ],
+   "indexable": true,
+   "canonical": "https://www.alibayatrealty.com/fa/resources/tips/home-inspection-gta/",
+   "content_hash": "f68ad0828dfe088a",
+   "open_items": []
+  },
+  {
+   "path": "/fa/resources/tips/choosing-a-contractor/",
+   "key": "fa-guide-contractor",
+   "content_type": "guide",
+   "category": "tips",
+   "geography": "Ontario",
+   "evergreen": false,
+   "time_sensitive": true,
+   "author": "Ali Bayat",
+   "review_status": "approved",
+   "approved_matches": true,
+   "reviewed_by": "Ali Bayat",
+   "published_at": "2026-11-21",
+   "updated_at": null,
+   "data_period": "Rules and rates in effect November 2026",
+   "verified_at": "2026-11-21",
+   "sources": [
+    [
+     "Ontario, your rights when starting home renovations or repairs",
+     "https://www.ontario.ca/page/your-rights-when-starting-home-renovations-or-repairs"
+    ],
+    [
+     "Ontario, guide for home renovation businesses",
+     "https://www.ontario.ca/page/guide-home-renovation-and-roofing-businesses"
+    ],
+    [
+     "Construction Act",
+     "https://www.ontario.ca/laws/statute/90c30"
+    ]
+   ],
+   "indexable": true,
+   "canonical": "https://www.alibayatrealty.com/fa/resources/tips/choosing-a-contractor/",
+   "content_hash": "5236ab733927ae0b",
+   "open_items": []
   }
  ],
  "details": [
@@ -1554,10 +3099,11 @@
   "footer-disclaimer",
   "ltt-guide-review",
   "ltt-guide-review-fa",
+  "referral-disclosure",
   "reply-time"
  ],
  "assets": {
-  "site.js": 22589,
-  "site.css": 46186
+  "site.js": 28590,
+  "site.css": 58375
  }
 }

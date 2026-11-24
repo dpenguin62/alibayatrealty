@@ -12,32 +12,41 @@ const CATS=[
  {id:"market",name:"GTA Market Insights",d:"Monthly notes by area, from board data."},
  {id:"areas",name:"Neighbourhood Guides",d:"What it's like to live in each community."},
  {id:"tips",name:"Real Estate Tips",d:"Short answers to common questions."}];
+/* Only published guides ship. Unwritten guides live in the prototype block below and are stripped from the
+   production build (no cards, no status labels, no unbuilt URLs in the page or in site.js). To publish one,
+   write the page, add its route, then move its entry above with href and pub:1. */
 const ARTS=[
  {c:"buying",t:"Land transfer tax in Toronto vs. York Region, with a calculator",d:"Why the same price costs more to close on in North York than in Vaughan.",u:"/resources/buying/land-transfer-tax-toronto-york-region/",href:"#guide-land-transfer-tax",pub:1},
- {c:"buying",t:"Buying your first home in Toronto: a step-by-step plan",d:"From pre-approval to closing, with the costs at each stage.",u:"/resources/buying/first-home-toronto/"},
- {c:"buying",t:"Pre-construction condos: questions to ask before you sign",d:"Deposits, occupancy fees, assignment rules and closing adjustments.",u:"/resources/buying/pre-construction-condo-questions/"},
- {c:"selling",t:"What's worth fixing before you list",d:"Which repairs pay off, which don't, and how to get them done on time.",u:"/resources/selling/what-to-fix-before-listing/"},
- {c:"selling",t:"Offer dates vs. pricing to market",d:"How each strategy works and when each tends to make sense.",u:"/resources/selling/offer-date-vs-pricing-to-market/"},
- {c:"investment",t:"Investment property analysis: a step-by-step framework",d:"The six steps from property review to a decision, with the questions to ask at each.",u:"/invest/investment-analysis/"},
- {c:"investment",t:"How to calculate cash flow on a rental property",d:"From gross rent to what's left after expenses, vacancy and the mortgage.",u:"/invest/cash-flow/"},
- {c:"investment",t:"What is cap rate, and what it doesn't tell you",d:"How to calculate it, how to compare it, and its limits.",u:"/invest/cap-rate/"},
- {c:"investment",t:"Financing an investment property: what to ask",d:"Down payments, rates and lender rules, and the questions to bring to a mortgage professional.",u:"/resources/investment/financing/"},
- {c:"investment",t:"Income properties in the GTA: duplexes, triplexes and fourplexes",d:"How each type works, and what to verify about zoning and legal units.",u:"/invest/duplexes/ · /invest/triplexes/ · /invest/fourplexes/"},
- {c:"investment",t:"Cash flow vs. appreciation: choosing an investor strategy",d:"Two reasons to own a property, the trade-offs, and the risks of each.",u:"/resources/investment/investor-strategy/"},
- {c:"market",t:"Monthly market notes: North York",d:"First report using the monthly template, once a data source is connected.",u:"/resources/market/2026-10-north-york/"},
- {c:"market",t:"Monthly market notes: York Region",d:"Vaughan, Richmond Hill and Thornhill in one monthly summary.",u:"/resources/market/2026-10-york-region/"},
+ {c:"buying",t:"Buying your first home in Toronto",d:"Every cost on an $800,000 first home, and the six steps from pre-approval to keys.",u:"/resources/buying/first-home-toronto/",href:"#guide-first-home",pub:1},
+ {c:"buying",t:"Pre-construction condos: what to check before you sign",d:"The 10-day cooling-off period, deposit protection, occupancy fees and the red flags.",u:"/resources/buying/pre-construction-condo-questions/",href:"#guide-pre-construction",pub:1},
+ {c:"selling",t:"What's worth fixing before you list",d:"Fix, maybe, skip: where your prep money goes furthest, and a four-week plan.",u:"/resources/selling/what-to-fix-before-listing/",href:"#guide-fix-before-listing",pub:1},
+ {c:"selling",t:"Offer dates vs. pricing to market",d:"How each strategy works, the TRESA rules, and when each tends to make sense.",u:"/resources/selling/offer-date-vs-pricing-to-market/",href:"#guide-offer-date",pub:1},
+ {c:"investment",t:"Investment property analysis: a six-step framework",d:"The six steps from property review to a decision, with the questions at each.",u:"/resources/investment/investment-analysis/",href:"#guide-investment-analysis",pub:1},
+ {c:"investment",t:"How to calculate cash flow on a rental property",d:"From gross rent to what's left after vacancy, expenses and the mortgage.",u:"/resources/investment/cash-flow/",href:"#guide-cash-flow",pub:1},
+ {c:"investment",t:"What is cap rate, and what it doesn't tell you",d:"How to calculate it, how to compare with it, and its limits.",u:"/resources/investment/cap-rate/",href:"#guide-cap-rate",pub:1},
+ {c:"investment",t:"Financing an investment property: what to ask",d:"Down payments, lender rules, and the questions to bring to a mortgage professional.",u:"/resources/investment/financing/",href:"#guide-investment-financing",pub:1},
+ {c:"investment",t:"Duplexes, triplexes and fourplexes in the GTA",d:"What's permitted, how financing changes with unit count, and what to verify.",u:"/resources/investment/duplexes-triplexes-fourplexes/",href:"#guide-multiplexes",pub:1},
+ {c:"investment",t:"Cash flow vs. appreciation: choosing a strategy",d:"Two reasons to own a property, the trade-offs, and the risks of each.",u:"/resources/investment/investor-strategy/",href:"#guide-investor-strategy",pub:1},
+ {c:"market",t:"Market notes, October 2026: Toronto vs. York Region",d:"October sales, prices and inventory in the City of Toronto and York Region.",u:"/resources/market/2026-10-toronto-york-region/",href:"#guide-market-toronto-york",pub:1},
+ {c:"market",t:"Market notes, October 2026: Vaughan, Richmond Hill and Markham",d:"Vaughan, Richmond Hill and Markham side by side for October.",u:"/resources/market/2026-10-york-region/",href:"#guide-market-york-region",pub:1},
+ {c:"tips",t:"How to read a condo status certificate",d:"The pages that matter and the red flags to look for.",u:"/resources/tips/condo-status-certificate/",href:"#guide-status-certificate",pub:1},
+ {c:"tips",t:"Home inspections in the GTA: what to expect",d:"What inspectors check and how to use the report.",u:"/resources/tips/home-inspection-gta/",href:"#guide-home-inspection",pub:1},
+ {c:"tips",t:"Choosing a contractor after you buy",d:"Quotes, contracts, permits and payment schedules.",u:"/resources/tips/choosing-a-contractor/",href:"#guide-contractor",pub:1},
  {c:"areas",t:"North York neighbourhood guide",d:"Condo corridor, bungalow streets, transit and advice.",u:"/neighbourhoods/north-york/",href:"#north-york",pub:1},
  {c:"areas",t:"Thornhill: the Vaughan side vs. the Markham side",d:"How the two halves differ on taxes, services and housing.",u:"/neighbourhoods/thornhill/",href:"#thornhill",pub:1},
+ {c:"areas",t:"Richmond Hill neighbourhood guide",d:"Downtown Richmond Hill, Oak Ridges, the Yonge corridor and the GO line.",u:"/neighbourhoods/richmond-hill/",href:"#richmond-hill",pub:1},
  {c:"areas",t:"Vaughan neighbourhood guide",d:"Woodbridge, Maple, Kleinburg and the VMC.",u:"/neighbourhoods/vaughan/",href:"#vaughan",pub:1},
- {c:"tips",t:"How to read a condo status certificate",d:"The pages that matter and the red flags to look for.",u:"/resources/tips/condo-status-certificate/"},
- {c:"tips",t:"Home inspections in the GTA: what to expect",d:"What inspectors check and how to use the report.",u:"/resources/tips/home-inspection-gta/"},
- {c:"tips",t:"Choosing a contractor after you buy",d:"Quotes, contracts, permits and payment schedules.",u:"/resources/tips/choosing-a-contractor/"}];
+ {c:"areas",t:"Toronto neighbourhood guide",d:"Victorian semis, midtown family streets, downtown condos and the extra land transfer tax.",u:"/neighbourhoods/toronto/",href:"#toronto",pub:1}];
 let activeCat="all";
 function renderKC(){
   if(!document.getElementById("chips"))return;
-  document.getElementById("chips").innerHTML=[{id:"all",name:"All"},...CATS].map(c=>`<button class="chip" type="button" data-cat="${c.id}" aria-pressed="${c.id===activeCat}">${c.name}</button>`).join("");
-  document.getElementById("kc").innerHTML=CATS.filter(c=>activeCat==="all"||c.id===activeCat).map(c=>`<section class="kc-cat"><div class="intro"><h2>${c.name}</h2><p>${c.d}</p></div><div class="arts">${ARTS.filter(a=>a.c===c.id).map(a=>{const tag=a.href?"a":"div";return `<${tag} class="art"${a.href?` href="${a.href}"`:""}><h3>${a.t}</h3><span class="status${a.pub?" pub":""}">${a.pub?"Live":"Planned"}</span><p>${a.d}</p></${tag}>`}).join("")}</div></section>`).join("")}
+  const arts=ARTS.filter(a=>a.pub||!window.__publishedOnly);  // build.py sets __publishedOnly before capturing the page
+  const cats=CATS.filter(c=>arts.some(a=>a.c===c.id));
+  document.getElementById("chips").innerHTML=[{id:"all",name:"All"},...cats].map(c=>`<button class="chip" type="button" data-cat="${c.id}" aria-pressed="${c.id===activeCat}">${c.name}</button>`).join("");
+  document.getElementById("kc").innerHTML=cats.filter(c=>activeCat==="all"||c.id===activeCat).map(c=>`<section class="kc-cat"><div class="intro"><h2>${c.name}</h2><p>${c.d}</p></div><div class="arts">${arts.filter(a=>a.c===c.id).map(a=>{const tag=a.href?"a":"div";return `<${tag} class="art"${a.href?` href="${STATIC?a.u:a.href}"`:""}><h3>${a.t}</h3>${a.st?`<span class="status">${a.st}</span>`:""}<p>${a.d}</p></${tag}>`}).join("")}</div></section>`).join("")}
 document.addEventListener("click",e=>{const b=e.target.closest("[data-cat]");if(!b||!document.getElementById("chips"))return;activeCat=b.dataset.cat;renderKC()});
+/* Farsi Resources tabs: the list is static (built from GUIDES_FA); the tabs only show or hide its sections. */
+document.addEventListener("click",e=>{const b=e.target.closest("[data-fa-cat]");if(!b)return;const c=b.dataset.faCat;document.querySelectorAll("[data-fa-cat]").forEach(x=>x.setAttribute("aria-pressed",String(x===b)));document.querySelectorAll("[data-fa-sec]").forEach(x=>x.hidden=c!=="all"&&x.dataset.faSec!==c)});
 /* ---------- Land transfer tax estimator ---------- */
 const ON=[[55000,.005],[250000,.01],[400000,.015],[2000000,.02],[Infinity,.025]];
 const TO=[[55000,.005],[250000,.01],[400000,.015],[2000000,.02],[3000000,.025],[4000000,.044],[5000000,.0545],[10000000,.065],[20000000,.0755],[Infinity,.086]];
@@ -92,7 +101,7 @@ document.querySelectorAll("[data-iv]").forEach(el=>{
 /* ---------- Mode: the prototype uses the hash router; built pages (data-static) are real URLs ---------- */
 const STATIC=document.documentElement.hasAttribute("data-static");
 const params=new URLSearchParams(location.search);
-const LEGACY={"home":"/","about":"/about/","buy":"/buy/","sell":"/sell/","invest":"/invest/","neighbourhoods":"/neighbourhoods/","north-york":"/neighbourhoods/north-york/","thornhill":"/neighbourhoods/thornhill/","richmond-hill":"/neighbourhoods/richmond-hill/","vaughan":"/neighbourhoods/vaughan/","toronto":"/neighbourhoods/toronto/","resources":"/resources/","guide-land-transfer-tax":"/resources/buying/land-transfer-tax-toronto-york-region/","contact":"/contact/","fa-home":"/fa/","fa-buy":"/fa/buy/","fa-sell":"/fa/sell/","fa-invest":"/fa/invest/","fa-neighbourhoods":"/fa/neighbourhoods/","fa-north-york":"/fa/neighbourhoods/north-york/","fa-thornhill":"/fa/neighbourhoods/thornhill/","fa-richmond-hill":"/fa/neighbourhoods/richmond-hill/","fa-vaughan":"/fa/neighbourhoods/vaughan/","fa-toronto":"/fa/neighbourhoods/toronto/","fa-resources":"/fa/resources/","fa-guide-land-transfer-tax":"/fa/resources/buying/land-transfer-tax-toronto-york-region/","fa-about":"/fa/about/","fa-contact":"/fa/contact/","privacy":"/privacy/","terms":"/terms/","accessibility":"/accessibility/"}; /* build.py fills: old prototype hash -> real URL */
+const LEGACY={"home":"/","about":"/about/","buy":"/buy/","sell":"/sell/","invest":"/invest/","neighbourhoods":"/neighbourhoods/","north-york":"/neighbourhoods/north-york/","thornhill":"/neighbourhoods/thornhill/","richmond-hill":"/neighbourhoods/richmond-hill/","vaughan":"/neighbourhoods/vaughan/","toronto":"/neighbourhoods/toronto/","resources":"/resources/","guide-land-transfer-tax":"/resources/buying/land-transfer-tax-toronto-york-region/","contact":"/contact/","fa-home":"/fa/","fa-buy":"/fa/buy/","fa-sell":"/fa/sell/","fa-invest":"/fa/invest/","fa-neighbourhoods":"/fa/neighbourhoods/","fa-north-york":"/fa/neighbourhoods/north-york/","fa-thornhill":"/fa/neighbourhoods/thornhill/","fa-richmond-hill":"/fa/neighbourhoods/richmond-hill/","fa-vaughan":"/fa/neighbourhoods/vaughan/","fa-toronto":"/fa/neighbourhoods/toronto/","fa-resources":"/fa/resources/","fa-guide-land-transfer-tax":"/fa/resources/buying/land-transfer-tax-toronto-york-region/","fa-about":"/fa/about/","fa-contact":"/fa/contact/","privacy":"/privacy/","terms":"/terms/","accessibility":"/accessibility/","guide-first-home":"/resources/buying/first-home-toronto/","guide-pre-construction":"/resources/buying/pre-construction-condo-questions/","guide-fix-before-listing":"/resources/selling/what-to-fix-before-listing/","guide-offer-date":"/resources/selling/offer-date-vs-pricing-to-market/","guide-investment-analysis":"/resources/investment/investment-analysis/","guide-cash-flow":"/resources/investment/cash-flow/","guide-cap-rate":"/resources/investment/cap-rate/","guide-investment-financing":"/resources/investment/financing/","guide-multiplexes":"/resources/investment/duplexes-triplexes-fourplexes/","guide-investor-strategy":"/resources/investment/investor-strategy/","guide-market-toronto-york":"/resources/market/2026-10-toronto-york-region/","guide-market-york-region":"/resources/market/2026-10-york-region/","guide-status-certificate":"/resources/tips/condo-status-certificate/","guide-home-inspection":"/resources/tips/home-inspection-gta/","guide-contractor":"/resources/tips/choosing-a-contractor/","fa-guide-first-home":"/fa/resources/buying/first-home-toronto/","fa-guide-pre-construction":"/fa/resources/buying/pre-construction-condo-questions/","fa-guide-fix-before-listing":"/fa/resources/selling/what-to-fix-before-listing/","fa-guide-offer-date":"/fa/resources/selling/offer-date-vs-pricing-to-market/","fa-guide-investment-analysis":"/fa/resources/investment/investment-analysis/","fa-guide-cash-flow":"/fa/resources/investment/cash-flow/","fa-guide-cap-rate":"/fa/resources/investment/cap-rate/","fa-guide-investment-financing":"/fa/resources/investment/financing/","fa-guide-multiplexes":"/fa/resources/investment/duplexes-triplexes-fourplexes/","fa-guide-investor-strategy":"/fa/resources/investment/investor-strategy/","fa-guide-market-toronto-york":"/fa/resources/market/2026-10-toronto-york-region/","fa-guide-market-york-region":"/fa/resources/market/2026-10-york-region/","fa-guide-status-certificate":"/fa/resources/tips/condo-status-certificate/","fa-guide-home-inspection":"/fa/resources/tips/home-inspection-gta/","fa-guide-contractor":"/fa/resources/tips/choosing-a-contractor/"}; /* build.py fills: old prototype hash -> real URL */
 /* ---------- First-party attribution: no cookies, no third parties, this browser tab only ---------- */
 const ATTR_KEYS=["utm_source","utm_medium","utm_campaign","utm_content"];
 let attrib={};
@@ -189,6 +198,21 @@ cf.addEventListener("submit",async e=>{e.preventDefault();const nm=document.getE
 const rf=document.getElementById("reset-form");if(rf)rf.addEventListener("click",()=>{sent.hidden=true;cf.hidden=false;document.getElementById("c-name").focus()});
 }
 /* ---------- Boot ---------- */
+/* ---------- How-it-works flows: autoplay while on screen (built pages); paused for reduced motion ---------- */
+if(STATIC)document.querySelectorAll(".flow").forEach(el=>{
+  const svgs=[...el.querySelectorAll(".flow-art svg")],lis=[...el.querySelectorAll(".flow-steps li")],btns=[...el.querySelectorAll(".flow-track button")],fill=el.querySelector(".flow-fill"),ctrl=el.querySelector(".flow-ctrl"),N=lis.length,fa=document.documentElement.lang==="fa";
+  const still=matchMedia("(prefers-reduced-motion: reduce)").matches;let cur=0,playing=!still,seen=false,timer=0;
+  const show=i=>{cur=i;svgs.forEach((s,k)=>{s.classList.remove("on");if(k===i){void s.getBoundingClientRect();s.classList.add("on")}});
+    lis.forEach((l,k)=>l.classList.toggle("cur",k===i));btns.forEach((b,k)=>{b.classList.toggle("done",k<i);b.classList.toggle("cur",k===i);k===i?b.setAttribute("aria-current","step"):b.removeAttribute("aria-current")});
+    fill.style.width=`calc((100% - 20px) * ${i/(N-1)})`};
+  const tick=()=>{clearTimeout(timer);if(playing&&seen&&!document.hidden)timer=setTimeout(()=>{show((cur+1)%N);tick()},cur===N-1?3400:2600)};
+  const label=()=>{ctrl.innerHTML=playing?'<svg viewBox="0 0 16 16" aria-hidden="true"><rect x="3" y="2" width="3.5" height="12" rx="1"/><rect x="9.5" y="2" width="3.5" height="12" rx="1"/></svg>':'<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M4 2.5v11l9-5.5z"/></svg>';
+    ctrl.setAttribute("aria-label",playing?(fa?"توقف انیمیشن":"Pause animation"):(fa?"پخش انیمیشن":"Play animation"))};
+  btns.forEach((b,k)=>b.addEventListener("click",()=>{show(k);tick()}));
+  if(!still){ctrl.hidden=false;label();ctrl.addEventListener("click",()=>{playing=!playing;label();tick()})}
+  document.addEventListener("visibilitychange",tick);
+  if("IntersectionObserver" in window)new IntersectionObserver(es=>es.forEach(e=>{const was=seen;seen=e.isIntersecting;if(seen&&!was)show(cur);tick()}),{threshold:.35}).observe(el);else{seen=true;tick()}
+});
 /* ---------- Scroll reveal: built pages only, skipped for reduced motion; content is visible without it ---------- */
 if(STATIC&&"IntersectionObserver" in window&&!matchMedia("(prefers-reduced-motion: reduce)").matches){
   const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target)}}),{threshold:.2});
