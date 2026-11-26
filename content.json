@@ -54,43 +54,43 @@
   },
   "north-york": {
    "review_status": "approved",
-   "approved_hash": "c2edf6e07a8d4ea2",
+   "approved_hash": "120ebb5610ce0c74",
    "reviewed_by": "Ali Bayat",
-   "reviewed_at": "2026-11-18",
+   "reviewed_at": "2026-11-25",
    "published_at": "2026-11-11",
-   "updated_at": null
+   "updated_at": "2026-11-25"
   },
   "thornhill": {
    "review_status": "approved",
-   "approved_hash": "7512e7015acc12f0",
+   "approved_hash": "79832808def7d517",
    "reviewed_by": "Ali Bayat",
-   "reviewed_at": "2026-11-18",
+   "reviewed_at": "2026-11-25",
    "published_at": "2026-11-11",
-   "updated_at": null
+   "updated_at": "2026-11-25"
   },
   "richmond-hill": {
    "review_status": "approved",
-   "approved_hash": "845e9b88989484f5",
+   "approved_hash": "3de1fa6250734f0c",
    "reviewed_by": "Ali Bayat",
-   "reviewed_at": "2026-11-18",
+   "reviewed_at": "2026-11-25",
    "published_at": "2026-11-11",
-   "updated_at": null
+   "updated_at": "2026-11-25"
   },
   "vaughan": {
    "review_status": "approved",
-   "approved_hash": "58468212976d1283",
+   "approved_hash": "74841286844de924",
    "reviewed_by": "Ali Bayat",
-   "reviewed_at": "2026-11-18",
+   "reviewed_at": "2026-11-25",
    "published_at": "2026-11-11",
-   "updated_at": null
+   "updated_at": "2026-11-25"
   },
   "toronto": {
    "review_status": "approved",
-   "approved_hash": "cbe49cbc7e369c8e",
+   "approved_hash": "cfd33dc50b135b31",
    "reviewed_by": "Ali Bayat",
-   "reviewed_at": "2026-11-18",
+   "reviewed_at": "2026-11-25",
    "published_at": "2026-11-11",
-   "updated_at": null
+   "updated_at": "2026-11-25"
   },
   "resources": {
    "review_status": "approved",
@@ -182,38 +182,43 @@
   },
   "fa-north-york": {
    "review_status": "approved",
-   "approved_hash": "4c8f8759aff8d135",
+   "approved_hash": "c4e248aae5cd68b2",
    "reviewed_by": "Ali Bayat",
-   "reviewed_at": "2026-11-18",
-   "published_at": "2026-11-11"
+   "reviewed_at": "2026-11-25",
+   "published_at": "2026-11-11",
+   "updated_at": "2026-11-25"
   },
   "fa-thornhill": {
    "review_status": "approved",
-   "approved_hash": "337e61686d11147f",
+   "approved_hash": "35f5000b58415551",
    "reviewed_by": "Ali Bayat",
-   "reviewed_at": "2026-11-18",
-   "published_at": "2026-11-11"
+   "reviewed_at": "2026-11-25",
+   "published_at": "2026-11-11",
+   "updated_at": "2026-11-25"
   },
   "fa-richmond-hill": {
    "review_status": "approved",
-   "approved_hash": "3c6c0710ad3f8a3d",
+   "approved_hash": "5c2f6b32e9da39fe",
    "reviewed_by": "Ali Bayat",
-   "reviewed_at": "2026-11-18",
-   "published_at": "2026-11-11"
+   "reviewed_at": "2026-11-25",
+   "published_at": "2026-11-11",
+   "updated_at": "2026-11-25"
   },
   "fa-vaughan": {
    "review_status": "approved",
-   "approved_hash": "ef61225f785a9ffd",
+   "approved_hash": "b022cbab1cda163b",
    "reviewed_by": "Ali Bayat",
-   "reviewed_at": "2026-11-18",
-   "published_at": "2026-11-11"
+   "reviewed_at": "2026-11-25",
+   "published_at": "2026-11-11",
+   "updated_at": "2026-11-25"
   },
   "fa-toronto": {
    "review_status": "approved",
-   "approved_hash": "9a64359ab61735d8",
+   "approved_hash": "ede7bf96f2053ef4",
    "reviewed_by": "Ali Bayat",
-   "reviewed_at": "2026-11-18",
-   "published_at": "2026-11-11"
+   "reviewed_at": "2026-11-25",
+   "published_at": "2026-11-11",
+   "updated_at": "2026-11-25"
   },
   "fa-resources": {
    "review_status": "approved",
