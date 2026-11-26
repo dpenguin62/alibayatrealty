@@ -461,6 +461,53 @@ p{margin:0}
 .ticks{list-style:none;padding:0;margin:0;display:grid;gap:.55rem}
 .ticks li{display:grid;grid-template-columns:1rem 1fr;gap:.6rem;align-items:baseline;font-size:.96rem}
 .ticks li::before{content:"";width:.5rem;height:.5rem;border:1.5px solid var(--lake);border-radius:50%}
+/* --- Neighbourhood guides: key rule, comparison tables, role rows --- */
+.asec .body.wide{max-width:none}
+.rule{display:grid;grid-template-columns:auto minmax(0,1fr);gap:.75rem 1.25rem;align-items:center;margin-top:1.25rem;padding:1.1rem 1.25rem;background:var(--lake-soft);border-inline-start:3px solid var(--lake);border-radius:var(--r)}
+.rule .big{font-family:var(--display);font-size:clamp(2rem,6vw,2.75rem);font-weight:700;line-height:1;color:var(--lake);font-variant-numeric:tabular-nums;white-space:nowrap}
+.rule p{margin:0;font-size:.97rem}.rule p+p{margin-top:.4rem}
+.rule .split{grid-column:1/-1;display:grid;grid-template-columns:1fr 1fr;gap:.6rem;margin:0}
+.rule .split div{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:.6rem .85rem}
+.rule .split dt{font-family:var(--mono);font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.rule .split dd{margin:.15rem 0 0;font-family:var(--display);font-size:1.15rem;font-weight:600}
+@media (max-width:560px){.rule{grid-template-columns:1fr}}
+.cmp-wrap{border:1px solid var(--line);border-radius:var(--r);background:var(--surface);overflow:hidden}
+.cmp{font-size:.9rem}
+.cmp caption{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.cmp th,.cmp td{text-align:start;line-height:1.45}
+.cmp th[scope="row"]{font-size:inherit;letter-spacing:0;text-transform:none;background:transparent;color:var(--ink);font-weight:600;width:38%}
+.cmp th[scope="row"] b{display:block;font-family:var(--display);font-size:1.02rem}
+.cmp th[scope="row"] .sub{display:block;font-weight:400;color:var(--muted);font-size:.85rem;margin-top:.2rem}
+.cmp tbody tr:last-child > *{border-bottom:0}
+@media (max-width:640px){
+ .cmp thead{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+ .cmp,.cmp tbody,.cmp tr,.cmp th,.cmp td{display:block;width:auto}
+ .cmp tr{padding:.85rem 1rem;border-bottom:1px solid var(--line)}
+ .cmp tbody tr:last-child{border-bottom:0}
+ .cmp th,.cmp td{border:0;padding:0}
+ .cmp th[scope="row"]{width:auto;margin-bottom:.5rem}
+ .cmp td+td{margin-top:.5rem}
+ .cmp td::before{content:attr(data-label);display:block;font-family:var(--mono);font-size:.66rem;letter-spacing:.07em;text-transform:uppercase;color:var(--muted);margin-bottom:.1rem}
+ [lang="fa"] .cmp td::before{letter-spacing:0;text-transform:none;font-family:inherit;font-size:.78rem}
+}
+.compare-stack{display:grid;gap:clamp(2.25rem,5vw,3.5rem)}
+.compare-stack h2{font-size:clamp(1.4rem,2.6vw,1.9rem)}
+.compare-stack > div{display:grid;gap:1rem;min-width:0}
+.compare-stack .lede-sm{margin:0;color:var(--muted);max-width:60ch}
+.roles{border:1px solid var(--line);border-radius:var(--r);background:var(--surface)}
+.role{display:grid;grid-template-columns:9.5rem minmax(0,1fr);gap:1rem;padding:1rem 1.1rem;border-bottom:1px solid var(--line)}
+.role:last-child{border-bottom:0}
+.role .who{display:grid;gap:.35rem;align-content:start}
+.role .who .link{font-size:.85rem}
+@media (max-width:600px){.role{grid-template-columns:1fr;gap:.6rem}}
+.checks b{font-weight:600}
+.linemap.here{max-width:340px;width:100%;justify-self:end}
+.linemap.here svg{max-height:340px}
+.linemap .node.on circle{fill:var(--lake);stroke:var(--lake)}
+.linemap .node.on text:first-of-type{fill:var(--lake);font-weight:700}
+@media (max-width:860px){.linemap.here{justify-self:start}}
+[dir="rtl"] .linemap.here{justify-self:start}
+@media (max-width:860px){[dir="rtl"] .linemap.here{justify-self:end}}
 .slot{border:1.5px dashed var(--line);border-radius:var(--r);padding:1.25rem;display:grid;gap:1rem;background:var(--surface)}
 .tiles{display:grid;grid-template-columns:repeat(4,1fr);gap:.75rem}
 @media (max-width:640px){.tiles{grid-template-columns:repeat(2,1fr)}}

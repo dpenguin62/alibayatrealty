@@ -1166,12 +1166,12 @@
   "/buy/": "e9dc161414dce212",
   "/sell/": "ac49cac8e7efcc90",
   "/invest/": "a725492e98334c92",
-  "/neighbourhoods/": "1a31175a7a9b13dd",
-  "/neighbourhoods/north-york/": "120ebb5610ce0c74",
-  "/neighbourhoods/thornhill/": "79832808def7d517",
-  "/neighbourhoods/richmond-hill/": "3de1fa6250734f0c",
-  "/neighbourhoods/vaughan/": "74841286844de924",
-  "/neighbourhoods/toronto/": "cfd33dc50b135b31",
+  "/neighbourhoods/": "f96ee8a338d679e7",
+  "/neighbourhoods/north-york/": "49a93937023acaf9",
+  "/neighbourhoods/thornhill/": "7858b761f608b72f",
+  "/neighbourhoods/richmond-hill/": "f4a679220bc6843e",
+  "/neighbourhoods/vaughan/": "e4d5f2cfc83ac088",
+  "/neighbourhoods/toronto/": "8bfc4b9878b3f69c",
   "/resources/": "0c82d1579fc2c923",
   "/resources/buying/land-transfer-tax-toronto-york-region/": "30c65d0542ff4653",
   "/contact/": "2d56874668cf9c54",
@@ -1179,12 +1179,12 @@
   "/fa/buy/": "feb0e5c3e494bcc1",
   "/fa/sell/": "88d5580b890fb864",
   "/fa/invest/": "d043ddd9495f31e2",
-  "/fa/neighbourhoods/": "b668fddbe695b9c6",
-  "/fa/neighbourhoods/north-york/": "c4e248aae5cd68b2",
-  "/fa/neighbourhoods/thornhill/": "35f5000b58415551",
-  "/fa/neighbourhoods/richmond-hill/": "5c2f6b32e9da39fe",
-  "/fa/neighbourhoods/vaughan/": "b022cbab1cda163b",
-  "/fa/neighbourhoods/toronto/": "ede7bf96f2053ef4",
+  "/fa/neighbourhoods/": "b65908aa150218f8",
+  "/fa/neighbourhoods/north-york/": "32019f51c7b4567c",
+  "/fa/neighbourhoods/thornhill/": "f48324c508b862af",
+  "/fa/neighbourhoods/richmond-hill/": "8ca1c0dd084a18e6",
+  "/fa/neighbourhoods/vaughan/": "b7432d4be48fc7f2",
+  "/fa/neighbourhoods/toronto/": "abe7b05e9763b5e3",
   "/fa/resources/": "d6260ffb1bf0ffb0",
   "/fa/resources/buying/land-transfer-tax-toronto-york-region/": "b65bb7897c086f8d",
   "/fa/about/": "47d6dc81bce78593",
@@ -1233,6 +1233,54 @@
   {
    "category": "legal",
    "message": "/terms/: terms-of-use is interim, not final"
+  },
+  {
+   "category": "owner",
+   "message": "page review: /neighbourhoods/ changed since it was approved; review again"
+  },
+  {
+   "category": "owner",
+   "message": "page review: /neighbourhoods/north-york/ changed since it was approved; review again"
+  },
+  {
+   "category": "owner",
+   "message": "page review: /neighbourhoods/thornhill/ changed since it was approved; review again"
+  },
+  {
+   "category": "owner",
+   "message": "page review: /neighbourhoods/richmond-hill/ changed since it was approved; review again"
+  },
+  {
+   "category": "owner",
+   "message": "page review: /neighbourhoods/vaughan/ changed since it was approved; review again"
+  },
+  {
+   "category": "owner",
+   "message": "page review: /neighbourhoods/toronto/ changed since it was approved; review again"
+  },
+  {
+   "category": "owner",
+   "message": "page review: /fa/neighbourhoods/ changed since it was approved; review again"
+  },
+  {
+   "category": "owner",
+   "message": "page review: /fa/neighbourhoods/north-york/ changed since it was approved; review again"
+  },
+  {
+   "category": "owner",
+   "message": "page review: /fa/neighbourhoods/thornhill/ changed since it was approved; review again"
+  },
+  {
+   "category": "owner",
+   "message": "page review: /fa/neighbourhoods/richmond-hill/ changed since it was approved; review again"
+  },
+  {
+   "category": "owner",
+   "message": "page review: /fa/neighbourhoods/vaughan/ changed since it was approved; review again"
+  },
+  {
+   "category": "owner",
+   "message": "page review: /fa/neighbourhoods/toronto/ changed since it was approved; review again"
   }
  ],
  "governance": [
@@ -1356,7 +1404,7 @@
    "time_sensitive": false,
    "author": "Ali Bayat",
    "review_status": "approved",
-   "approved_matches": true,
+   "approved_matches": false,
    "reviewed_by": "Ali Bayat",
    "published_at": "2026-11-11",
    "updated_at": "2026-11-18",
@@ -1365,7 +1413,7 @@
    "sources": [],
    "indexable": true,
    "canonical": "https://www.alibayatrealty.com/neighbourhoods/",
-   "content_hash": "1a31175a7a9b13dd",
+   "content_hash": "f96ee8a338d679e7",
    "open_items": []
   },
   {
@@ -1378,7 +1426,7 @@
    "time_sensitive": false,
    "author": "Ali Bayat",
    "review_status": "approved",
-   "approved_matches": true,
+   "approved_matches": false,
    "reviewed_by": "Ali Bayat",
    "published_at": "2026-11-11",
    "updated_at": "2026-11-25",
@@ -1387,7 +1435,7 @@
    "sources": [],
    "indexable": true,
    "canonical": "https://www.alibayatrealty.com/neighbourhoods/north-york/",
-   "content_hash": "120ebb5610ce0c74",
+   "content_hash": "49a93937023acaf9",
    "open_items": []
   },
   {
@@ -1400,7 +1448,7 @@
    "time_sensitive": false,
    "author": "Ali Bayat",
    "review_status": "approved",
-   "approved_matches": true,
+   "approved_matches": false,
    "reviewed_by": "Ali Bayat",
    "published_at": "2026-11-11",
    "updated_at": "2026-11-25",
@@ -1409,7 +1457,7 @@
    "sources": [],
    "indexable": true,
    "canonical": "https://www.alibayatrealty.com/neighbourhoods/thornhill/",
-   "content_hash": "79832808def7d517",
+   "content_hash": "7858b761f608b72f",
    "open_items": []
   },
   {
@@ -1422,7 +1470,7 @@
    "time_sensitive": false,
    "author": "Ali Bayat",
    "review_status": "approved",
-   "approved_matches": true,
+   "approved_matches": false,
    "reviewed_by": "Ali Bayat",
    "published_at": "2026-11-11",
    "updated_at": "2026-11-25",
@@ -1431,7 +1479,7 @@
    "sources": [],
    "indexable": true,
    "canonical": "https://www.alibayatrealty.com/neighbourhoods/richmond-hill/",
-   "content_hash": "3de1fa6250734f0c",
+   "content_hash": "f4a679220bc6843e",
    "open_items": []
   },
   {
@@ -1444,7 +1492,7 @@
    "time_sensitive": false,
    "author": "Ali Bayat",
    "review_status": "approved",
-   "approved_matches": true,
+   "approved_matches": false,
    "reviewed_by": "Ali Bayat",
    "published_at": "2026-11-11",
    "updated_at": "2026-11-25",
@@ -1453,7 +1501,7 @@
    "sources": [],
    "indexable": true,
    "canonical": "https://www.alibayatrealty.com/neighbourhoods/vaughan/",
-   "content_hash": "74841286844de924",
+   "content_hash": "e4d5f2cfc83ac088",
    "open_items": []
   },
   {
@@ -1466,7 +1514,7 @@
    "time_sensitive": false,
    "author": "Ali Bayat",
    "review_status": "approved",
-   "approved_matches": true,
+   "approved_matches": false,
    "reviewed_by": "Ali Bayat",
    "published_at": "2026-11-11",
    "updated_at": "2026-11-25",
@@ -1475,7 +1523,7 @@
    "sources": [],
    "indexable": true,
    "canonical": "https://www.alibayatrealty.com/neighbourhoods/toronto/",
-   "content_hash": "cfd33dc50b135b31",
+   "content_hash": "8bfc4b9878b3f69c",
    "open_items": []
   },
   {
@@ -1659,7 +1707,7 @@
    "time_sensitive": false,
    "author": "Ali Bayat",
    "review_status": "approved",
-   "approved_matches": true,
+   "approved_matches": false,
    "reviewed_by": "Ali Bayat",
    "published_at": "2026-11-11",
    "updated_at": "2026-11-18",
@@ -1668,7 +1716,7 @@
    "sources": [],
    "indexable": true,
    "canonical": "https://www.alibayatrealty.com/fa/neighbourhoods/",
-   "content_hash": "b668fddbe695b9c6",
+   "content_hash": "b65908aa150218f8",
    "open_items": []
   },
   {
@@ -1681,7 +1729,7 @@
    "time_sensitive": false,
    "author": "Ali Bayat",
    "review_status": "approved",
-   "approved_matches": true,
+   "approved_matches": false,
    "reviewed_by": "Ali Bayat",
    "published_at": "2026-11-11",
    "updated_at": "2026-11-25",
@@ -1690,7 +1738,7 @@
    "sources": [],
    "indexable": true,
    "canonical": "https://www.alibayatrealty.com/fa/neighbourhoods/north-york/",
-   "content_hash": "c4e248aae5cd68b2",
+   "content_hash": "32019f51c7b4567c",
    "open_items": []
   },
   {
@@ -1703,7 +1751,7 @@
    "time_sensitive": false,
    "author": "Ali Bayat",
    "review_status": "approved",
-   "approved_matches": true,
+   "approved_matches": false,
    "reviewed_by": "Ali Bayat",
    "published_at": "2026-11-11",
    "updated_at": "2026-11-25",
@@ -1712,7 +1760,7 @@
    "sources": [],
    "indexable": true,
    "canonical": "https://www.alibayatrealty.com/fa/neighbourhoods/thornhill/",
-   "content_hash": "35f5000b58415551",
+   "content_hash": "f48324c508b862af",
    "open_items": []
   },
   {
@@ -1725,7 +1773,7 @@
    "time_sensitive": false,
    "author": "Ali Bayat",
    "review_status": "approved",
-   "approved_matches": true,
+   "approved_matches": false,
    "reviewed_by": "Ali Bayat",
    "published_at": "2026-11-11",
    "updated_at": "2026-11-25",
@@ -1734,7 +1782,7 @@
    "sources": [],
    "indexable": true,
    "canonical": "https://www.alibayatrealty.com/fa/neighbourhoods/richmond-hill/",
-   "content_hash": "5c2f6b32e9da39fe",
+   "content_hash": "8ca1c0dd084a18e6",
    "open_items": []
   },
   {
@@ -1747,7 +1795,7 @@
    "time_sensitive": false,
    "author": "Ali Bayat",
    "review_status": "approved",
-   "approved_matches": true,
+   "approved_matches": false,
    "reviewed_by": "Ali Bayat",
    "published_at": "2026-11-11",
    "updated_at": "2026-11-25",
@@ -1756,7 +1804,7 @@
    "sources": [],
    "indexable": true,
    "canonical": "https://www.alibayatrealty.com/fa/neighbourhoods/vaughan/",
-   "content_hash": "b022cbab1cda163b",
+   "content_hash": "b7432d4be48fc7f2",
    "open_items": []
   },
   {
@@ -1769,7 +1817,7 @@
    "time_sensitive": false,
    "author": "Ali Bayat",
    "review_status": "approved",
-   "approved_matches": true,
+   "approved_matches": false,
    "reviewed_by": "Ali Bayat",
    "published_at": "2026-11-11",
    "updated_at": "2026-11-25",
@@ -1778,7 +1826,7 @@
    "sources": [],
    "indexable": true,
    "canonical": "https://www.alibayatrealty.com/fa/neighbourhoods/toronto/",
-   "content_hash": "ede7bf96f2053ef4",
+   "content_hash": "abe7b05e9763b5e3",
    "open_items": []
   },
   {
@@ -3104,6 +3152,6 @@
  ],
  "assets": {
   "site.js": 30246,
-  "site.css": 67969
+  "site.css": 71479
  }
 }
