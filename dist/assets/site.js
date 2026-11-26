@@ -53,9 +53,11 @@ const TO=[[55000,.005],[250000,.01],[400000,.015],[2000000,.02],[3000000,.025],[
 function tiered(p,br){let t=0,prev=0;for(const [cap,r] of br){if(p>prev)t+=(Math.min(p,cap)-prev)*r;prev=cap}return Math.round(t*100)/100}
 window.__ltt={tiered,ON,TO};
 const fmt=n=>n.toLocaleString("en-CA",{style:"currency",currency:"CAD",maximumFractionDigits:0});
+/* Number typed in any keyboard: Persian ۰-۹ and Arabic-Indic ٠-٩ digits, Persian decimal mark ٫; separators and $ dropped. */
+const toNum=s=>parseFloat(String(s).replace(/[۰-۹]/g,d=>d.charCodeAt(0)-1776).replace(/[٠-٩]/g,d=>d.charCodeAt(0)-1632).replace(/٫/g,".").replace(/[^0-9.]/g,""));
 function calc(){
   if(!document.getElementById("lt-price"))return;
-  const raw=document.getElementById("lt-price").value.replace(/[^0-9.]/g,"");const p=Math.max(0,parseFloat(raw)||0);
+  const p=Math.max(0,toNum(document.getElementById("lt-price").value)||0);
   const inTO=document.getElementById("lt-to").checked,first=document.getElementById("lt-first").checked;
   const on=tiered(p,ON),reb=first?Math.min(on,4000):0,to=inTO?tiered(p,TO):0;
   document.getElementById("o-on").textContent=fmt(on);
@@ -66,10 +68,10 @@ function calc(){
   document.getElementById("o-note").textContent=inTO&&first?(FA?"بازپرداخت ویژه‌ی خریداران خانه‌ی اول تورنتو ممکن است این مبلغ را باز هم کاهش دهد؛ در این محاسبه منظور نشده است. وکیل شما مبلغ نهایی را تأیید می‌کند.":"Toronto's first-time buyer rebate may lower this further; it isn't included here. Your lawyer will confirm."):inTO?(FA?"خرید همین خانه در منطقه‌ی یورک، مالیات شهرداری نمایش‌داده‌شده در بالا را صرفه‌جویی می‌کند.":"Buying the same home in York Region would save the municipal tax shown above."):(FA?"خارج از شهر تورنتو، مالیات انتقال زمین شهرداری وجود ندارد.":"No municipal land transfer tax outside the City of Toronto.")}
 const pr=document.getElementById("lt-price");
 if(pr){pr.addEventListener("input",calc);
-pr.addEventListener("blur",()=>{const v=parseFloat(pr.value.replace(/[^0-9.]/g,""));if(v)pr.value=Math.round(v).toLocaleString("en-CA")});
+pr.addEventListener("blur",()=>{const v=toNum(pr.value);if(v)pr.value=Math.round(v).toLocaleString("en-CA")});
 ["lt-to","lt-on","lt-first"].forEach(id=>document.getElementById(id).addEventListener("change",calc))}
 /* ---------- Investment property estimator (educational) ---------- */
-const ivNum=id=>{const v=parseFloat(document.getElementById(id).value.replace(/[^0-9.]/g,""));return isFinite(v)&&v>0?v:0};
+const ivNum=id=>{const v=toNum(document.getElementById(id).value);return isFinite(v)&&v>0?v:0};
 const pctF=n=>isFinite(n)?(n<0?"−":"")+(Math.round(Math.abs(n)*100)/100).toLocaleString("en-CA",{minimumFractionDigits:2,maximumFractionDigits:2})+"%":"—";
 const fmtS=n=>(n<0?"−":"")+fmt(Math.abs(n));
 function mortgageAnnual(loan,ratePct,years){
@@ -97,7 +99,7 @@ function invCalc(){
 window.__inv={mortgageAnnual,invCalc};
 document.querySelectorAll("[data-iv]").forEach(el=>{
   el.addEventListener(el.tagName==="SELECT"?"change":"input",invCalc);
-  if(el.dataset.iv==="money")el.addEventListener("blur",()=>{const v=parseFloat(el.value.replace(/[^0-9.]/g,""));el.value=isFinite(v)?Math.round(v).toLocaleString("en-CA"):"0"})});
+  if(el.dataset.iv==="money")el.addEventListener("blur",()=>{const v=toNum(el.value);el.value=isFinite(v)?Math.round(v).toLocaleString("en-CA"):"0"})});
 /* ---------- Mode: the prototype uses the hash router; built pages (data-static) are real URLs ---------- */
 const STATIC=document.documentElement.hasAttribute("data-static");
 const params=new URLSearchParams(location.search);

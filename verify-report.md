@@ -1,6 +1,6 @@
 # Ali Bayat Realty: verification report
 
-Output verified: `dist/` · production domain `https://www.alibayatrealty.com` · 2026-11-25
+Output verified: `dist/` · production domain `https://www.alibayatrealty.com` · 2026-11-26
 
 ## Final gate status: **PASS WITH OWNER INPUT REQUIRED**
 
@@ -50,7 +50,7 @@ All engineering checks pass. Every remaining failure needs Ali's information, an
 
 ## Internal links
 **3. Zero broken internal links: PASS**
-- 4112 links and assets across 62 pages → 64 unique internal targets, 0 broken
+- 4236 links and assets across 62 pages → 70 unique internal targets, 0 broken
 
 **13. Internal linking: no orphans, pillars connected, contextual links: PASS**
 - contextual inbound links (main content only): / 33, /contact/ 30, /fa/ 29, /fa/contact/ 28, /invest/ 18, /resources/ 17, /fa/invest/ 17, /fa/resources/ 17, /buy/ 14, /sell/ 13, /fa/buy/ 13, /neighbourhoods/north-york/ 12, /neighbourhoods/richmond-hill/ 12, /neighbourhoods/vaughan/ 12, /neighbourhoods/toronto/ 12, /resources/buying/land-transfer-tax-toronto-york-region/ 12, /fa/sell/ 12, /fa/resources/buying/land-transfer-tax-toronto-york-region/ 11, /neighbourhoods/thornhill/ 10, /fa/neighbourhoods/north-york/ 10, /fa/neighbourhoods/richmond-hill/ 10, /fa/neighbourhoods/vaughan/ 10, /fa/neighbourhoods/toronto/ 10, /neighbourhoods/ 9, /fa/neighbourhoods/ 9, /fa/neighbourhoods/thornhill/ 8, /resources/market/2026-10-toronto-york-region/ 6, /resources/market/2026-10-york-region/ 6, /fa/resources/market/2026-10-toronto-york-region/ 6, /fa/resources/market/2026-10-york-region/ 6, /resources/investment/cash-flow/ 5, /resources/tips/home-inspection-gta/ 5, /fa/resources/investment/cash-flow/ 5, /fa/resources/tips/home-inspection-gta/ 5, /about/ 4, /fa/about/ 4, /resources/buying/first-home-toronto/ 4, /resources/investment/investment-analysis/ 4, /resources/investment/cap-rate/ 4, /resources/investment/financing/ 4, /resources/investment/duplexes-triplexes-fourplexes/ 4, /resources/investment/investor-strategy/ 4, /resources/tips/condo-status-certificate/ 4, /fa/resources/buying/first-home-toronto/ 4, /fa/resources/investment/investment-analysis/ 4, /fa/resources/investment/cap-rate/ 4, /fa/resources/investment/financing/ 4, /fa/resources/investment/duplexes-triplexes-fourplexes/ 4, /fa/resources/investment/investor-strategy/ 4, /fa/resources/tips/condo-status-certificate/ 4, /resources/selling/what-to-fix-before-listing/ 3, /resources/selling/offer-date-vs-pricing-to-market/ 3, /resources/tips/choosing-a-contractor/ 3, /fa/resources/selling/what-to-fix-before-listing/ 3, /fa/resources/selling/offer-date-vs-pricing-to-market/ 3, /fa/resources/tips/choosing-a-contractor/ 3, /privacy/ 2, /resources/buying/pre-construction-condo-questions/ 2, /fa/resources/buying/pre-construction-condo-questions/ 2, /terms/ 0, /accessibility/ 0
@@ -169,13 +169,14 @@ Every occurrence above comes from a managed placeholder (awaiting the owner inpu
 
 ## Performance
 **14. Performance budget: weight, requests, DOM size, layout shift, render-blocking: PASS**
-- site.js 28 KB (prototype code stripped), site.css 57 KB, both cached across pages; scripts deferred
-- largest page /invest/ 53 KB HTML; most DOM /invest/ 878 elements; max same-origin requests 4 (lazy-loaded images excluded; up to 5 per page); max layout shift 0.000
-- third-party request on every page: commons.wikimedia.org, creativecommons.org, fonts.googleapis.com, fonts.gstatic.com (Google Fonts). Recommendation: self-host the three font families
+- site.js 28 KB (prototype code stripped), site.css 66 KB, both cached across pages; scripts deferred
+- largest page /invest/ 53 KB HTML; most DOM /invest/ 878 elements; max same-origin requests 5 (lazy-loaded images excluded; up to 5 per page); max layout shift 0.006
+- fonts self-hosted: up to 11 woff2 files, 171 KB per page (budget 16 files, 300 KB)
+- third-party hosts referenced on the home page: commons.wikimedia.org, creativecommons.org
 
 ## Reproducibility
 **15. Reproducible, machine-independent build: PASS**
-- two clean rebuilds skipped (--skip-rebuild)
+- two clean builds byte-identical to each other and to the output under test (127 files); pinned dependencies; no machine paths
 
 ## Remaining blockers
 
