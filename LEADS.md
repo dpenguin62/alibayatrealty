@@ -1,6 +1,6 @@
 # Lead integration contract
 
-**Status: connected to HubSpot (2026-10-05), form version contact-2.** `form_endpoint` points at the HubSpot
+**Status: connected to HubSpot (2026-10-05), form version contact-3.** `form_endpoint` points at the HubSpot
 Forms API (portal 343743815, form "Website Contact Form"). The site's own bilingual form is kept; `site.js`
 detects the `api.hsforms.com` endpoint and sends JSON mapped to HubSpot contact properties:
 
@@ -10,7 +10,8 @@ detects the `api.hsforms.com` endpoint and sends JSON mapped to HubSpot contact 
 | email, phone | `email`, `phone` |
 | message | `message` (visitor's own words only) |
 | interest | `lead_type` (buyer / seller / investor / general_question / other) |
-| request=analysis | `analysis_requested` (true/false) |
+| request=analysis | `analysis_requested` (true/false). `request=pricing-check` is noted in the message context only |
+| deal_screen | **No HubSpot property yet.** Appended to `message` under a `--- Deal screen (website calculator) ---` heading in both payloads, so no HubSpot form change is needed. If you later add a `deal_screen` property and hidden form field, send it there instead |
 | language | `hs_language` (en / fa) |
 | utm_source + referrer | `lead_source` (website / instagram / facebook / google) |
 | source_page | `source_page` (falls back to the contact page path) |
@@ -46,7 +47,8 @@ Sent as `multipart/form-data` with `Accept: application/json`. Machine-readable 
 | `name`, `email` | yes | Validated in the browser; validate again on the server |
 | `phone`, `message` | no | |
 | `interest` | yes | `buy` · `sell` · `invest` · `question` |
-| `request` | no | `analysis` = Investment Property Analysis request |
+| `request` | no | `analysis` = Investment Property Analysis request; `pricing-check` = seller pricing & prep check |
+| `deal_screen` | no | Text summary of the deal screen on `/invest/` (price, rent, taxes, fees, down payment, rate, NOI, cap rate, cash flow), sent only if the visitor clicked "Send this screen to Ali" and left it ticked on the contact page. Max 1,500 characters |
 | `language` | yes | `en` · `fa` (reply language) |
 | `consent` | yes | `yes`; the visitor ticked the consent box |
 | `consent_version` | yes | Date-stamp of the consent wording the visitor saw. Change it whenever the wording changes |

@@ -26,7 +26,7 @@
 <link rel="preload" href="/assets/fonts/plus-jakarta-sans-latin-800-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/assets/fonts/inter-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/assets/fonts/ibm-plex-mono-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="/assets/site.css?v=8937713b86">
+<link rel="stylesheet" href="/assets/site.css?v=d16989f54b">
 <link rel="alternate" hreflang="en-CA" href="https://www.alibayatrealty.com/resources/buying/land-transfer-tax-toronto-york-region/">
 <link rel="alternate" hreflang="fa" href="https://www.alibayatrealty.com/fa/resources/buying/land-transfer-tax-toronto-york-region/">
 <link rel="alternate" hreflang="x-default" href="https://www.alibayatrealty.com/resources/buying/land-transfer-tax-toronto-york-region/">
@@ -224,11 +224,6 @@
    "isPartOf": {
     "@id": "https://www.alibayatrealty.com/#website"
    },
-   "author": {
-    "@id": "https://www.alibayatrealty.com/#ali-bayat"
-   },
-   "datePublished": "2026-11-11",
-   "dateModified": "2026-11-26",
    "breadcrumb": {
     "@id": "https://www.alibayatrealty.com/resources/buying/land-transfer-tax-toronto-york-region/#breadcrumb"
    }
@@ -252,11 +247,6 @@
     "https://www.ontario.ca/document/land-transfer-tax/calculating-land-transfer-tax",
     "https://www.ontario.ca/document/land-transfer-tax/land-transfer-tax-refunds-first-time-homebuyers"
    ],
-   "author": {
-    "@id": "https://www.alibayatrealty.com/#ali-bayat"
-   },
-   "datePublished": "2026-11-11",
-   "dateModified": "2026-11-26",
    "image": "https://www.alibayatrealty.com/assets/img/og/ali-bayat-og.jpg"
   },
   {
@@ -274,9 +264,6 @@
    },
    "publisher": {
     "@id": "https://www.alibayatrealty.com/#business"
-   },
-   "author": {
-    "@id": "https://www.alibayatrealty.com/#ali-bayat"
    }
   }
  ]
@@ -289,13 +276,12 @@
   <div class="wrap">
     <a class="brand" href="/" aria-label="Ali Bayat, home"><svg class="mark" viewBox="0 0 54 48" aria-hidden="true" focusable="false"><path class="roof" d="M4 26 L27 5 L50 26" fill="none" stroke-width="6" stroke-linecap="square"></path><path d="M13 30 V44 H41 V30" fill="none" stroke="currentColor" stroke-width="4"></path></svg><span class="wm"><b>Ali Bayat</b><small>REALTOR®</small></span></a>
     <nav class="nav" aria-label="Main">
-      <a href="/">Home</a>
-      <a href="/buy/">Buy</a>
-      <a href="/sell/">Sell</a>
-      <a href="/invest/">Invest</a>
+      <a class="pri" href="/buy/">Buy</a>
+      <a class="pri" href="/sell/">Sell</a>
+      <a class="pri" href="/invest/">Invest</a>
+      <span class="navsep" aria-hidden="true"></span>
       <span class="has-sub"><a href="/neighbourhoods/">Neighbourhoods</a><button class="sub-btn" type="button" aria-expanded="false" aria-controls="nb-sub" aria-label="Show neighbourhood guides"><svg viewBox="0 0 12 12" width="10" height="10" aria-hidden="true" focusable="false"><path d="M2 4.5 6 8.5 10 4.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path></svg></button><span class="sub" id="nb-sub"><a href="/neighbourhoods/north-york/">North York</a><a href="/neighbourhoods/thornhill/">Thornhill</a><a href="/neighbourhoods/richmond-hill/">Richmond Hill</a><a href="/neighbourhoods/vaughan/">Vaughan</a><a href="/neighbourhoods/toronto/">Toronto</a></span></span>
       <a href="/resources/" aria-current="page">Resources</a>
-      <a href="/about/">About</a>
       <a class="lang" href="/fa/resources/buying/land-transfer-tax-toronto-york-region/" lang="fa" hreflang="fa" data-lang-switch="">فارسی</a>
       <a class="btn sm talk" href="/contact/" data-nav="contact" style="color:var(--brass-ink)">Talk to Ali</a>
     </nav>
@@ -306,16 +292,14 @@
   </div>
   <div class="drawer" id="drawer" hidden="">
     <nav class="wrap" aria-label="Mobile">
-      <a href="/">Home</a>
       <a href="/buy/">Buy</a>
       <a href="/sell/">Sell</a>
       <a href="/invest/">Invest</a>
-      <a href="/neighbourhoods/">Neighbourhoods</a>
-      <a href="/resources/" aria-current="page">Resources</a>
-      <a href="/about/">About Ali</a>
-      <a href="/contact/">Contact</a>
-      <a class="minor lang" href="/fa/resources/buying/land-transfer-tax-toronto-york-region/" lang="fa" hreflang="fa" data-lang-switch="">فارسی · Farsi</a>
       <a class="btn" href="/contact/" style="color:var(--brass-ink)">Talk to Ali</a>
+      <a class="lang-row" href="/fa/resources/buying/land-transfer-tax-toronto-york-region/" lang="fa" hreflang="fa" data-lang-switch=""><span>فارسی · Farsi</span><small>Read the whole site in Farsi, right to left</small></a>
+      <a class="sec" href="/neighbourhoods/">Neighbourhoods</a>
+      <a class="sec" href="/resources/" aria-current="page">Resources</a>
+      <a class="sec" href="/about/">About Ali</a>
       
     </nav>
   </div>
@@ -334,23 +318,40 @@
       <div class="article-body">
         <p>Every buyer in Ontario pays the provincial land transfer tax when a purchase closes. If the home is in the City of Toronto, which includes North York, Scarborough and Etobicoke, you also pay Toronto's municipal land transfer tax. Buyers in York Region communities such as Vaughan, Richmond Hill and Thornhill pay only the provincial tax.</p>
         <p>On a $1,000,000 home, that difference is about $16,475. It's one of the most important numbers to know when you're comparing homes on either side of Steeles Avenue.</p>
-        <h2>Estimate your land transfer tax</h2>
-        <div class="calc" id="calc">
+        <h2>Compare North vs. South of Steeles at your price</h2>
+        <p>Steeles Avenue is the boundary between the City of Toronto and York Region. For the same home at the same price, buying south of it means Ontario's land transfer tax <em>plus</em> Toronto's; north of it, Ontario's alone. Enter a price to see both side by side. Thornhill straddles the line, so confirm the municipality for the exact address.</p>
+        <div class="calc ltt" id="calc">
           <div class="inputs">
-            <div class="field"><label for="lt-price">Purchase price</label><div class="money"><span aria-hidden="true">$</span><input id="lt-price" inputmode="numeric" value="1,000,000" autocomplete="off"></div></div>
-            <fieldset class="seg2"><legend>Where is the home?</legend>
-              <input type="radio" name="lt-loc" id="lt-to" value="to" checked=""><label for="lt-to">City of Toronto<br><span class="muted small" style="font-weight:400">incl. North York</span></label>
-              <input type="radio" name="lt-loc" id="lt-on" value="on"><label for="lt-on">Elsewhere in Ontario<br><span class="muted small" style="font-weight:400">e.g. Vaughan</span></label>
-            </fieldset>
+            <div class="field"><label for="lt-price">Purchase price</label><div class="money"><span aria-hidden="true">$</span><input id="lt-price" inputmode="decimal" value="1,000,000" autocomplete="off" aria-invalid="false"></div></div>
             <label class="check" for="lt-first"><input type="checkbox" id="lt-first"> I'm a first-time buyer</label>
+            <details class="opt"><summary>Add carrying costs (optional)</summary><div class="stack">
+              <div class="field"><label for="lt-tax-n">Annual property tax, North of Steeles home</label><div class="money"><span aria-hidden="true">$</span><input id="lt-tax-n" inputmode="decimal" value="" placeholder="e.g. 6,500" autocomplete="off" aria-invalid="false"></div></div>
+              <div class="field"><label for="lt-tax-s">Annual property tax, South of Steeles home</label><div class="money"><span aria-hidden="true">$</span><input id="lt-tax-s" inputmode="decimal" value="" placeholder="e.g. 6,500" autocomplete="off" aria-invalid="false"></div></div>
+              <div class="field"><label for="lt-rate">Interest rate for the financing illustration</label><div class="pct"><input id="lt-rate" inputmode="decimal" value="5" autocomplete="off" aria-invalid="false"><span aria-hidden="true">%</span></div></div>
+              <p class="small muted">Use the tax figure from each home's listing or tax bill. The calculator doesn't assume a rate for you.</p>
+            </div></details>
           </div>
           <div class="out" aria-live="polite">
-            <div class="line"><span>Ontario land transfer tax</span><span id="o-on">$16,475</span></div>
-            <div class="line" id="o-onr-row" hidden=""><span>Ontario first-time buyer rebate</span><span id="o-onr">$0</span></div>
-            <div class="line" id="o-to-row" hidden=""><span>Toronto municipal land transfer tax</span><span id="o-to">$0</span></div>
-            <div class="line" id="o-tor-row" hidden=""><span>Toronto first-time buyer rebate</span><span id="o-tor">$0</span></div>
-            <div class="line total"><span>Estimated total</span><span id="o-total">$16,475</span></div>
-            <p class="small muted" id="o-note" style="margin-top:.6rem">No municipal land transfer tax outside the City of Toronto.</p>
+            <table class="lt-cmp"><caption class="sr">Land transfer tax compared on both sides of Steeles Avenue</caption>
+              <thead><tr><td><span class="sr">Item</span></td><th scope="col">North of Steeles<small>York Region: Vaughan, Thornhill, Richmond Hill</small></th><th scope="col">South of Steeles<small>City of Toronto: North York</small></th></tr></thead>
+              <tbody>
+                <tr><th scope="row">Ontario land transfer tax</th><td id="o-n-on">$16,475</td><td id="o-s-on">$16,475</td></tr>
+                <tr id="o-onr-row" hidden=""><th scope="row">Ontario first-time buyer rebate</th><td id="o-n-onr">$0</td><td id="o-s-onr">$0</td></tr>
+                <tr><th scope="row">Toronto municipal land transfer tax</th><td id="o-n-to">—</td><td id="o-s-to">$16,475</td></tr>
+                <tr id="o-tor-row" hidden=""><th scope="row">Toronto first-time buyer rebate</th><td id="o-n-tor">—</td><td id="o-s-tor">$0</td></tr>
+                <tr class="tot"><th scope="row">Estimated total</th><td id="o-n-total">$16,475</td><td id="o-s-total">$32,950</td></tr>
+              </tbody>
+            </table>
+            <div class="gapbox">
+              <div class="line sub"><span>Extra cash at closing, South vs. North</span><span id="o-gap">$16,475</span></div>
+              <div class="line"><span>As a share of the price</span><span id="o-gap-pct">1.65%</span></div>
+              <div class="line"><span>Same gap, if financed (illustration)</span><span id="o-gap-m">$96 a month</span></div>
+              <div class="line" id="o-carry-row" hidden=""><span>Annual property tax, North minus South</span><span id="o-carry">—</span></div>
+              <div class="line" id="o-years-row" hidden=""><span>Years for a higher North tax to use up the gap</span><span id="o-years">—</span></div>
+            </div>
+            <p class="small muted" id="o-note">South of Steeles costs more to close on at this price. The difference is paid in cash at closing and can't be added to the mortgage.</p>
+            <p class="small" id="o-carry-note">Enter the annual property tax for both homes to see how carrying costs change the picture.</p>
+            <p class="small calc-warn" id="lt-warn" role="status" hidden=""></p>
           </div>
         </div>
         <p class="small muted">For a home with one or two single-family residences, using the Ontario rates and the City of Toronto rates in effect from April 1, 2026. This is an estimate, not legal or tax advice; your real estate lawyer confirms the final amount. Buying a building with three or more units, or a mixed-use property? The brackets above $2,000,000 work differently, so treat this as a rough guide only.</p>
@@ -411,6 +412,6 @@
   </div>
 </footer>
 <div class="mbar" id="mbar" aria-hidden="true"><span>Buying, selling or investing? Ask Ali.</span><a class="btn sm" href="/contact/" tabindex="-1">Talk to Ali</a></div>
-<script src="/assets/site.js?v=0ade2efafc" defer></script>
+<script src="/assets/site.js?v=a56451982f" defer></script>
 </body>
 </html>

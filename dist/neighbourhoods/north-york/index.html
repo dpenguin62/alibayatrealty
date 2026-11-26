@@ -26,7 +26,7 @@
 <link rel="preload" href="/assets/fonts/plus-jakarta-sans-latin-800-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/assets/fonts/inter-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/assets/fonts/ibm-plex-mono-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="/assets/site.css?v=8937713b86">
+<link rel="stylesheet" href="/assets/site.css?v=d16989f54b">
 <link rel="alternate" hreflang="en-CA" href="https://www.alibayatrealty.com/neighbourhoods/north-york/">
 <link rel="alternate" hreflang="fa" href="https://www.alibayatrealty.com/fa/neighbourhoods/north-york/">
 <link rel="alternate" hreflang="x-default" href="https://www.alibayatrealty.com/neighbourhoods/north-york/">
@@ -232,11 +232,6 @@
      "name": "Toronto"
     }
    },
-   "author": {
-    "@id": "https://www.alibayatrealty.com/#ali-bayat"
-   },
-   "datePublished": "2026-11-11",
-   "dateModified": "2026-11-26",
    "breadcrumb": {
     "@id": "https://www.alibayatrealty.com/neighbourhoods/north-york/#breadcrumb"
    }
@@ -251,13 +246,12 @@
   <div class="wrap">
     <a class="brand" href="/" aria-label="Ali Bayat, home"><svg class="mark" viewBox="0 0 54 48" aria-hidden="true" focusable="false"><path class="roof" d="M4 26 L27 5 L50 26" fill="none" stroke-width="6" stroke-linecap="square"></path><path d="M13 30 V44 H41 V30" fill="none" stroke="currentColor" stroke-width="4"></path></svg><span class="wm"><b>Ali Bayat</b><small>REALTOR®</small></span></a>
     <nav class="nav" aria-label="Main">
-      <a href="/">Home</a>
-      <a href="/buy/">Buy</a>
-      <a href="/sell/">Sell</a>
-      <a href="/invest/">Invest</a>
+      <a class="pri" href="/buy/">Buy</a>
+      <a class="pri" href="/sell/">Sell</a>
+      <a class="pri" href="/invest/">Invest</a>
+      <span class="navsep" aria-hidden="true"></span>
       <span class="has-sub"><a href="/neighbourhoods/" aria-current="page">Neighbourhoods</a><button class="sub-btn" type="button" aria-expanded="false" aria-controls="nb-sub" aria-label="Show neighbourhood guides"><svg viewBox="0 0 12 12" width="10" height="10" aria-hidden="true" focusable="false"><path d="M2 4.5 6 8.5 10 4.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path></svg></button><span class="sub" id="nb-sub"><a href="/neighbourhoods/north-york/">North York</a><a href="/neighbourhoods/thornhill/">Thornhill</a><a href="/neighbourhoods/richmond-hill/">Richmond Hill</a><a href="/neighbourhoods/vaughan/">Vaughan</a><a href="/neighbourhoods/toronto/">Toronto</a></span></span>
       <a href="/resources/">Resources</a>
-      <a href="/about/">About</a>
       <a class="lang" href="/fa/neighbourhoods/north-york/" lang="fa" hreflang="fa" data-lang-switch="">فارسی</a>
       <a class="btn sm talk" href="/contact/" data-nav="contact" style="color:var(--brass-ink)">Talk to Ali</a>
     </nav>
@@ -268,16 +262,14 @@
   </div>
   <div class="drawer" id="drawer" hidden="">
     <nav class="wrap" aria-label="Mobile">
-      <a href="/">Home</a>
       <a href="/buy/">Buy</a>
       <a href="/sell/">Sell</a>
       <a href="/invest/">Invest</a>
-      <a href="/neighbourhoods/" aria-current="page">Neighbourhoods</a>
-      <a href="/resources/">Resources</a>
-      <a href="/about/">About Ali</a>
-      <a href="/contact/">Contact</a>
-      <a class="minor lang" href="/fa/neighbourhoods/north-york/" lang="fa" hreflang="fa" data-lang-switch="">فارسی · Farsi</a>
       <a class="btn" href="/contact/" style="color:var(--brass-ink)">Talk to Ali</a>
+      <a class="lang-row" href="/fa/neighbourhoods/north-york/" lang="fa" hreflang="fa" data-lang-switch=""><span>فارسی · Farsi</span><small>Read the whole site in Farsi, right to left</small></a>
+      <a class="sec" href="/neighbourhoods/" aria-current="page">Neighbourhoods</a>
+      <a class="sec" href="/resources/">Resources</a>
+      <a class="sec" href="/about/">About Ali</a>
       
     </nav>
   </div>
@@ -304,13 +296,14 @@
   </svg><figcaption>Schematic, not to scale.</figcaption></figure>
   </div>
   <div class="wrap"><dl class="facts" style="margin-top:2rem;border-top:1px solid var(--line)"><div><dt>Municipality</dt><dd>City of Toronto</dd></div><div><dt>Main corridor</dt><dd>Yonge St</dd></div><div><dt>Subway</dt><dd>Lines 1 &amp; 4</dd></div><div><dt>School boards</dt><dd>TDSB, TCDSB</dd></div></dl></div>
-  <nav class="jump" aria-label="On this page"><div class="wrap"><button type="button" data-jump="ov">Overview</button><button type="button" data-jump="housing">Housing &amp; pockets</button><button type="button" data-jump="transit">Getting around</button><button type="button" data-jump="life">Lifestyle &amp; amenities</button><button type="button" data-jump="decide">Buyer, seller, investor</button><button type="button" data-jump="checks">Before you offer</button><button type="button" data-jump="guides">Related guides</button></div></nav>
+  <nav class="jump" aria-label="On this page"><div class="wrap"><button type="button" data-jump="ov">Overview</button><button type="button" data-jump="housing">Housing &amp; pockets</button><button type="button" data-jump="compare">Compare the pockets</button><button type="button" data-jump="transit">Getting around</button><button type="button" data-jump="life">Lifestyle &amp; amenities</button><button type="button" data-jump="decide">Buyer, seller, investor</button><button type="button" data-jump="checks">Before you offer</button><button type="button" data-jump="guides">Related guides</button></div></nav>
   </header>
   <div class="wrap two" style="padding-block:1.5rem 4rem">
     <div>
       <aside class="rule" aria-label="Land transfer tax"><span class="big" dir="ltr">+$16,475</span><div><p><b>City of Toronto: two land transfer taxes.</b> The municipal tax adds about $16,475 on a $1,000,000 purchase, on top of the provincial tax. <a class="link" href="/resources/buying/land-transfer-tax-toronto-york-region/">Estimate yours <span class="ar" aria-hidden="true">→</span></a></p></div></aside>
       <section class="asec" id="ov"><h2>Overview</h2><div class="body"><p>North York was its own city until it became part of Toronto in 1998. Today it covers much of the city's north end, from established family neighbourhoods to one of the busiest condo corridors in the GTA along Yonge Street.</p></div></section>
       <section class="asec" id="housing"><h2>Housing &amp; pockets</h2><div class="body wide"><p>High-rise condos cluster around North York Centre, Sheppard-Yonge and Finch. A few blocks off Yonge, many streets have original post-war bungalows alongside newer custom-built homes, with townhouses and low-rise condos in between.</p><div class="types"><figure><div class="dwg" data-dwg="tower" aria-hidden="true" data-done="1"><svg viewBox="0 0 400 290" preserveAspectRatio="xMidYMid meet" aria-hidden="true" focusable="false"><g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"><line x1="20" y1="260" x2="380" y2="260"></line><rect x="60" y="212" width="280" height="48"></rect><rect x="140" y="24" width="120" height="188"></rect><rect x="166" y="10" width="68" height="14"></rect><line x1="60" y1="222" x2="340" y2="222"></line><line x1="134" y1="38" x2="266" y2="38"></line><line x1="134" y1="51" x2="266" y2="51"></line><line x1="134" y1="64" x2="266" y2="64"></line><line x1="134" y1="77" x2="266" y2="77"></line><line x1="134" y1="90" x2="266" y2="90"></line><line x1="134" y1="103" x2="266" y2="103"></line><line x1="134" y1="116" x2="266" y2="116"></line><line x1="134" y1="129" x2="266" y2="129"></line><line x1="134" y1="142" x2="266" y2="142"></line><line x1="134" y1="155" x2="266" y2="155"></line><line x1="134" y1="168" x2="266" y2="168"></line><line x1="134" y1="181" x2="266" y2="181"></line><line x1="134" y1="194" x2="266" y2="194"></line><line x1="134" y1="207" x2="266" y2="207"></line><line x1="170" y1="24" x2="170" y2="212"></line><line x1="200" y1="24" x2="200" y2="212"></line><line x1="230" y1="24" x2="230" y2="212"></line><line x1="100" y1="222" x2="100" y2="260"></line><line x1="140" y1="222" x2="140" y2="260"></line><line x1="180" y1="222" x2="180" y2="260"></line><line x1="220" y1="222" x2="220" y2="260"></line><line x1="260" y1="222" x2="260" y2="260"></line><line x1="300" y1="222" x2="300" y2="260"></line></g></svg></div><figcaption>Condo tower</figcaption></figure><figure><div class="dwg" data-dwg="bungalow" aria-hidden="true" data-done="1"><svg viewBox="0 0 400 290" preserveAspectRatio="xMidYMid meet" aria-hidden="true" focusable="false"><g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"><line x1="20" y1="260" x2="380" y2="260"></line><rect x="60" y="172" width="280" height="88"></rect><polyline points="44,174 108,116 292,116 356,174"></polyline><line x1="44" y1="174" x2="356" y2="174"></line><rect x="250" y="94" width="20" height="24"></rect><rect x="86" y="190" width="106" height="48"></rect><line x1="121.33333333333334" y1="190" x2="121.33333333333334" y2="238"></line><line x1="156.66666666666669" y1="190" x2="156.66666666666669" y2="238"></line><rect x="214" y="190" width="30" height="70"></rect><rect x="268" y="194" width="50" height="38"></rect><line x1="293" y1="194" x2="293" y2="232"></line><line x1="0" y1="260" x2="60" y2="260"></line><line x1="340" y1="236" x2="380" y2="236"></line></g></svg></div><figcaption>Post-war bungalow</figcaption></figure><figure><div class="dwg" data-dwg="detached" aria-hidden="true" data-done="1"><svg viewBox="0 0 400 290" preserveAspectRatio="xMidYMid meet" aria-hidden="true" focusable="false"><g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"><line x1="20" y1="260" x2="380" y2="260"></line><rect x="70" y="122" width="170" height="138"></rect><polyline points="56,124 155,60 254,124"></polyline><line x1="56" y1="124" x2="254" y2="124"></line><rect x="240" y="170" width="122" height="90"></rect><polyline points="234,172 301,134 368,172"></polyline><line x1="234" y1="172" x2="368" y2="172"></line><rect x="258" y="196" width="86" height="64"></rect><line x1="258" y1="212" x2="344" y2="212"></line><line x1="258" y1="228" x2="344" y2="228"></line><line x1="258" y1="244" x2="344" y2="244"></line><rect x="88" y="142" width="44" height="40"></rect><line x1="110" y1="142" x2="110" y2="182"></line><rect x="174" y="142" width="44" height="40"></rect><line x1="196" y1="142" x2="196" y2="182"></line><rect x="142" y="198" width="30" height="62"></rect><line x1="134" y1="190" x2="180" y2="190"></line><rect x="86" y="202" width="42" height="38"></rect><line x1="107" y1="202" x2="107" y2="240"></line></g></svg></div><figcaption>Two-storey detached</figcaption></figure></div><div class="cmp-wrap"><table class="cmp" role="table"><caption>North York: housing, transit and what to check, by pocket</caption><thead role="rowgroup"><tr role="row"><th scope="col" role="columnheader">Pocket</th><th scope="col" role="columnheader">Getting around</th><th scope="col" role="columnheader">Check first</th></tr></thead><tbody role="rowgroup"><tr role="row"><th scope="row" role="rowheader"><b>Yonge corridor towers</b><span class="sub">High-rise condos at North York Centre, Sheppard-Yonge and Finch</span></th><td role="cell" data-label="Getting around">Line 1; Line 4 from Sheppard-Yonge</td><td role="cell" data-label="Check first">Monthly fees, reserve fund, rental ratio</td></tr><tr role="row"><th scope="row" role="rowheader"><b>Interior bungalow streets</b><span class="sub">Post-war bungalows and newer custom rebuilds, a few blocks off Yonge</span></th><td role="cell" data-label="Getting around">Highway 401 and the Don Valley Parkway nearby</td><td role="cell" data-label="Check first">Zoning and lot size for a renovation or rebuild</td></tr></tbody></table></div></div></section>
+      <section class="asec" id="compare"><h2>Compare the pockets</h2><div class="body wide"><div class="cmp-wrap"><table class="cmp" role="table"><caption>North York: Yonge corridor condos compared with interior bungalow streets</caption><thead role="rowgroup"><tr role="row"><th scope="col" role="columnheader">Compare</th><th scope="col" role="columnheader">Yonge corridor condo (Sheppard-Yonge, North York Centre, Finch)</th><th scope="col" role="columnheader">Interior bungalow or rebuild (a few blocks off Yonge)</th></tr></thead><tbody role="rowgroup"><tr role="row"><th scope="row" role="rowheader"><b>What you're buying</b></th><td role="cell" data-label="Yonge corridor condo (Sheppard-Yonge, North York Centre, Finch)">A unit in a building, plus a share of the common elements</td><td role="cell" data-label="Interior bungalow or rebuild (a few blocks off Yonge)">Land and a house. On many streets the lot is most of the value</td></tr><tr role="row"><th scope="row" role="rowheader"><b>Monthly carrying cost</b></th><td role="cell" data-label="Yonge corridor condo (Sheppard-Yonge, North York Centre, Finch)">Property tax plus condo fees. Fees follow the corporation's budget, so reserve fund health matters</td><td role="cell" data-label="Interior bungalow or rebuild (a few blocks off Yonge)">Property tax plus your own upkeep, with no monthly fee</td></tr><tr role="row"><th scope="row" role="rowheader"><b>Closing costs</b></th><td role="cell" data-label="Yonge corridor condo (Sheppard-Yonge, North York Centre, Finch)">Ontario and Toronto land transfer tax, plus a lawyer's review of the status certificate</td><td role="cell" data-label="Interior bungalow or rebuild (a few blocks off Yonge)">Ontario and Toronto land transfer tax, plus survey, title and inspection costs</td></tr><tr role="row"><th scope="row" role="rowheader"><b>Getting around</b></th><td role="cell" data-label="Yonge corridor condo (Sheppard-Yonge, North York Centre, Finch)">Walk to Line 1 (Line 4 from Sheppard-Yonge)</td><td role="cell" data-label="Interior bungalow or rebuild (a few blocks off Yonge)">Bus to the subway, or drive to Highway 401 and the Don Valley Parkway</td></tr><tr role="row"><th scope="row" role="rowheader"><b>Check first</b></th><td role="cell" data-label="Yonge corridor condo (Sheppard-Yonge, North York Centre, Finch)">Status certificate: reserve fund, special assessments, rental ratio, fee history</td><td role="cell" data-label="Interior bungalow or rebuild (a few blocks off Yonge)">Zoning, lot size and permits if you plan to renovate, add a unit or rebuild</td></tr><tr role="row"><th scope="row" role="rowheader"><b>Competing with</b></th><td role="cell" data-label="Yonge corridor condo (Sheppard-Yonge, North York Centre, Finch)">Other units in the same building, so pricing is relative</td><td role="cell" data-label="Interior bungalow or rebuild (a few blocks off Yonge)">Families and builders, so the lot can set the price</td></tr><tr role="row"><th scope="row" role="rowheader"><b>Investor angle</b></th><td role="cell" data-label="Yonge corridor condo (Sheppard-Yonge, North York Centre, Finch)">Rent against fees. Check the building's rental rules first</td><td role="cell" data-label="Interior bungalow or rebuild (a few blocks off Yonge)">Only count extra units that zoning and permits actually allow</td></tr></tbody></table></div><p class="small muted">Both sides of this comparison pay the same land transfer tax, since both are in the City of Toronto.</p></div></section>
       <section class="asec" id="transit"><h2>Getting around</h2><div class="body"><ul class="ticks"><li><span>Line 1 Yonge–University: North York Centre, Sheppard-Yonge and Finch stations</span></li><li><span>Line 4 Sheppard east from Sheppard-Yonge</span></li><li><span>Highway 401 and the Don Valley Parkway nearby</span></li></ul></div></section>
       <section class="asec" id="life"><h2>Lifestyle &amp; amenities</h2><div class="body"><p>Yonge Street has a wide mix of restaurants and shops, including many Persian businesses north of Sheppard. Mel Lastman Square hosts community events, and Yorkdale and Fairview are a short drive away.</p><ul class="ticks"><li><span>Mel Lastman Square and North York Civic Centre</span></li><li><span>Earl Bales Park and the West Don trails</span></li><li><span>North York Central Library</span></li><li><span>Yorkdale and Fairview shopping centres</span></li></ul></div></section>
       
@@ -321,6 +314,7 @@
     </div>
     <div class="aside" style="padding-top:2.25rem">
       <div class="box tint"><h3>Thinking about North York?</h3><p>I can walk you through recent sales, what your budget buys here, or what your home might sell for.</p><a class="btn" href="/contact/?cta=north-york:area-sidebar">Talk to Ali</a></div>
+      <div class="box"><h3>Check closing costs here</h3><div class="cc" data-cc="" style="background:none;padding:0"><div class="field"><label for="cc-price">Target price</label><div class="money"><span aria-hidden="true">$</span><input id="cc-price" inputmode="decimal" placeholder="900,000" autocomplete="off"></div></div><a class="btn ghost sm" href="/resources/buying/land-transfer-tax-toronto-york-region/" data-cc-go="">Compare North vs. South of Steeles</a><p class="small muted">Ontario and Toronto land transfer tax side by side. Nothing is sent to anyone.</p></div></div>
       <div class="box"><h3>Other areas</h3><ul class="nolist small"><li><a class="link" href="/neighbourhoods/thornhill/">Thornhill <span class="ar" aria-hidden="true">→</span></a></li><li><a class="link" href="/neighbourhoods/richmond-hill/">Richmond Hill <span class="ar" aria-hidden="true">→</span></a></li><li><a class="link" href="/neighbourhoods/vaughan/">Vaughan <span class="ar" aria-hidden="true">→</span></a></li><li><a class="link" href="/neighbourhoods/toronto/">Toronto <span class="ar" aria-hidden="true">→</span></a></li></ul></div>
     </div><!-- /.aside -->
   </div></div>
@@ -350,6 +344,6 @@
   </div>
 </footer>
 <div class="mbar" id="mbar" aria-hidden="true"><span>Buying, selling or investing? Ask Ali.</span><a class="btn sm" href="/contact/" tabindex="-1">Talk to Ali</a></div>
-<script src="/assets/site.js?v=0ade2efafc" defer></script>
+<script src="/assets/site.js?v=a56451982f" defer></script>
 </body>
 </html>
