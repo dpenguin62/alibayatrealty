@@ -48,6 +48,8 @@ document.addEventListener("click",e=>{const b=e.target.closest("[data-cat]");if(
 /* Farsi Resources tabs: the list is static (built from GUIDES_FA); the tabs only show or hide its sections. */
 document.addEventListener("click",e=>{const b=e.target.closest("[data-fa-cat]");if(!b)return;const c=b.dataset.faCat;document.querySelectorAll("[data-fa-cat]").forEach(x=>x.setAttribute("aria-pressed",String(x===b)));document.querySelectorAll("[data-fa-sec]").forEach(x=>x.hidden=c!=="all"&&x.dataset.faSec!==c)});
 /* ---------- Land transfer tax estimator ---------- */
+/* First-time buyer maximums: Ontario refund $4,000; City of Toronto MLTT rebate $4,475 (confirmed by Ali, Nov 2026). */
+const ON_FTB_MAX=4000,TO_FTB_MAX=4475;
 const ON=[[55000,.005],[250000,.01],[400000,.015],[2000000,.02],[Infinity,.025]];
 const TO=[[55000,.005],[250000,.01],[400000,.015],[2000000,.02],[3000000,.025],[4000000,.044],[5000000,.0545],[10000000,.065],[20000000,.0755],[Infinity,.086]];
 function tiered(p,br){let t=0,prev=0;for(const [cap,r] of br){if(p>prev)t+=(Math.min(p,cap)-prev)*r;prev=cap}return Math.round(t*100)/100}
@@ -59,13 +61,14 @@ function calc(){
   if(!document.getElementById("lt-price"))return;
   const p=Math.max(0,toNum(document.getElementById("lt-price").value)||0);
   const inTO=document.getElementById("lt-to").checked,first=document.getElementById("lt-first").checked;
-  const on=tiered(p,ON),reb=first?Math.min(on,4000):0,to=inTO?tiered(p,TO):0;
+  const on=tiered(p,ON),reb=first?Math.min(on,ON_FTB_MAX):0,to=inTO?tiered(p,TO):0,rebTo=first&&inTO?Math.min(to,TO_FTB_MAX):0;
   document.getElementById("o-on").textContent=fmt(on);
-  document.getElementById("o-onr-row").hidden=!first;document.getElementById("o-onr").textContent="−"+fmt(reb);
+  document.getElementById("o-onr-row").hidden=!first;document.getElementById("o-onr").textContent=(reb?"−":"")+fmt(reb);
   document.getElementById("o-to-row").hidden=!inTO;document.getElementById("o-to").textContent=fmt(to);
-  document.getElementById("o-total").textContent=fmt(on-reb+to);
+  document.getElementById("o-tor-row").hidden=!(first&&inTO);document.getElementById("o-tor").textContent=(rebTo?"−":"")+fmt(rebTo);
+  document.getElementById("o-total").textContent=fmt(on-reb+to-rebTo);
   const FA=document.documentElement.lang==="fa";
-  document.getElementById("o-note").textContent=inTO&&first?(FA?"بازپرداخت ویژه‌ی خریداران خانه‌ی اول تورنتو ممکن است این مبلغ را باز هم کاهش دهد؛ در این محاسبه منظور نشده است. وکیل شما مبلغ نهایی را تأیید می‌کند.":"Toronto's first-time buyer rebate may lower this further; it isn't included here. Your lawyer will confirm."):inTO?(FA?"خرید همین خانه در منطقه‌ی یورک، مالیات شهرداری نمایش‌داده‌شده در بالا را صرفه‌جویی می‌کند.":"Buying the same home in York Region would save the municipal tax shown above."):(FA?"خارج از شهر تورنتو، مالیات انتقال زمین شهرداری وجود ندارد.":"No municipal land transfer tax outside the City of Toronto.")}
+  document.getElementById("o-note").textContent=inTO&&first?(FA?"شامل بازپرداخت‌های خریدار خانه‌ی اول انتاریو و تورنتو، اگر واجد شرایط باشید. شرایط را وکیل شما بررسی و مبلغ نهایی را تأیید می‌کند.":"Includes the Ontario and Toronto first-time buyer rebates, if you qualify. Your lawyer checks eligibility and confirms the final amount."):inTO?(FA?"خرید همین خانه در منطقه‌ی یورک، مالیات شهرداری نمایش‌داده‌شده در بالا را صرفه‌جویی می‌کند.":"Buying the same home in York Region would save the municipal tax shown above."):first?(FA?"خارج از شهر تورنتو، مالیات انتقال زمین شهرداری وجود ندارد. شامل بازپرداخت خریدار خانه‌ی اول انتاریو، اگر واجد شرایط باشید.":"No municipal land transfer tax outside the City of Toronto. Includes the Ontario first-time buyer rebate, if you qualify."):(FA?"خارج از شهر تورنتو، مالیات انتقال زمین شهرداری وجود ندارد.":"No municipal land transfer tax outside the City of Toronto.")}
 const pr=document.getElementById("lt-price");
 if(pr){pr.addEventListener("input",calc);
 pr.addEventListener("blur",()=>{const v=toNum(pr.value);if(v)pr.value=Math.round(v).toLocaleString("en-CA")});
@@ -95,7 +98,9 @@ function invCalc(){
   const FA=document.documentElement.lang==="fa"||!!document.getElementById("iv-price").closest('[lang="fa"]');
   document.getElementById("iv-o-note").textContent=!price||!gross?(FA?"برای دیدن برآورد، قیمت خرید و درآمد اجاره را وارد کنید.":"Enter a purchase price and rental income to see an estimate.")
     :cf<0?(FA?`با این فرض‌ها، این ملک ماهانه حدود ${fmt(Math.abs(cf)/12)} علاوه بر اجاره از جیب شما هزینه می‌خواهد. برخی سرمایه‌گذاران این را در ازای رشد احتمالی ارزش ملک و بازپرداخت اصل وام می‌پذیرند، اما هیچ‌کدام تضمین‌شده نیست.`:`At these assumptions the property would need about ${fmt(Math.abs(cf)/12)} a month from you on top of the rent. Some investors accept that in exchange for potential appreciation and mortgage paydown, but neither is guaranteed.`)
-    :(FA?`با این فرض‌ها مثبت است: حدود ${fmt(cf/12)} در ماه، پیش از مالیات بر درآمد. نرخ بهره، خالی ماندن یا هزینه‌ی نگهداری بالاتری را امتحان کنید تا ببینید چقدر حاشیه دارید.`:`Positive at these assumptions, about ${fmt(cf/12)} a month before income tax. Try a higher interest rate, vacancy or maintenance figure to see how much room there is.`)}
+    :(FA?`با این فرض‌ها مثبت است: حدود ${fmt(cf/12)} در ماه، پیش از مالیات بر درآمد. نرخ بهره، خالی ماندن یا هزینه‌ی نگهداری بالاتری را امتحان کنید تا ببینید چقدر حاشیه دارید.`:`Positive at these assumptions, about ${fmt(cf/12)} a month before income tax. Try a higher interest rate, vacancy or maintenance figure to see how much room there is.`)
+  /* Rentals you won't live in generally need 20% down; flag lower entries without blocking them. */
+  if(price&&gross&&down<20){const n=document.getElementById("iv-o-note");n.textContent=(FA?"توجه: برای ملکی که خودتان در آن زندگی نمی‌کنید، معمولاً دست‌کم ۲۰٪ پیش‌پرداخت لازم است؛ شرایط را از وام‌دهنده بپرسید. ":"Note: a property you won't live in generally needs at least 20% down; check with your lender. ")+n.textContent}}
 window.__inv={mortgageAnnual,invCalc};
 document.querySelectorAll("[data-iv]").forEach(el=>{
   el.addEventListener(el.tagName==="SELECT"?"change":"input",invCalc);

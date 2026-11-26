@@ -1173,7 +1173,7 @@
   "/neighbourhoods/vaughan/": "74841286844de924",
   "/neighbourhoods/toronto/": "cfd33dc50b135b31",
   "/resources/": "0c82d1579fc2c923",
-  "/resources/buying/land-transfer-tax-toronto-york-region/": "2111c89110056095",
+  "/resources/buying/land-transfer-tax-toronto-york-region/": "30c65d0542ff4653",
   "/contact/": "2d56874668cf9c54",
   "/fa/": "1f55d850c2cf34a7",
   "/fa/buy/": "feb0e5c3e494bcc1",
@@ -1186,7 +1186,7 @@
   "/fa/neighbourhoods/vaughan/": "b022cbab1cda163b",
   "/fa/neighbourhoods/toronto/": "ede7bf96f2053ef4",
   "/fa/resources/": "d6260ffb1bf0ffb0",
-  "/fa/resources/buying/land-transfer-tax-toronto-york-region/": "1705899a866a5efa",
+  "/fa/resources/buying/land-transfer-tax-toronto-york-region/": "b65bb7897c086f8d",
   "/fa/about/": "47d6dc81bce78593",
   "/fa/contact/": "224a0d13cb891863",
   "/privacy/": "509d99aa57125744",
@@ -1233,6 +1233,14 @@
   {
    "category": "legal",
    "message": "/terms/: terms-of-use is interim, not final"
+  },
+  {
+   "category": "owner",
+   "message": "page review: /resources/buying/land-transfer-tax-toronto-york-region/ changed since it was approved; review again"
+  },
+  {
+   "category": "owner",
+   "message": "page review: /fa/resources/buying/land-transfer-tax-toronto-york-region/ changed since it was approved; review again"
   }
  ],
  "governance": [
@@ -1510,7 +1518,7 @@
    "time_sensitive": true,
    "author": "Ali Bayat",
    "review_status": "approved",
-   "approved_matches": true,
+   "approved_matches": false,
    "reviewed_by": "Ali Bayat",
    "published_at": "2026-11-11",
    "updated_at": "2026-11-20",
@@ -1536,7 +1544,7 @@
    ],
    "indexable": true,
    "canonical": "https://www.alibayatrealty.com/resources/buying/land-transfer-tax-toronto-york-region/",
-   "content_hash": "2111c89110056095",
+   "content_hash": "30c65d0542ff4653",
    "open_items": []
   },
   {
@@ -1813,7 +1821,7 @@
    "time_sensitive": true,
    "author": "Ali Bayat",
    "review_status": "approved",
-   "approved_matches": true,
+   "approved_matches": false,
    "reviewed_by": "Ali Bayat",
    "published_at": "2026-11-11",
    "updated_at": "2026-11-20",
@@ -1839,7 +1847,7 @@
    ],
    "indexable": true,
    "canonical": "https://www.alibayatrealty.com/fa/resources/buying/land-transfer-tax-toronto-york-region/",
-   "content_hash": "1705899a866a5efa",
+   "content_hash": "b65bb7897c086f8d",
    "open_items": []
   },
   {
@@ -3103,7 +3111,7 @@
   "reply-time"
  ],
  "assets": {
-  "site.js": 28764,
+  "site.js": 30010,
   "site.css": 67969
  }
 }
