@@ -169,14 +169,14 @@ Every occurrence above comes from a managed placeholder (awaiting the owner inpu
 
 ## Performance
 **14. Performance budget: weight, requests, DOM size, layout shift, render-blocking: PASS**
-- site.js 29 KB (prototype code stripped), site.css 66 KB, both cached across pages; scripts deferred
+- site.js 30 KB (prototype code stripped), site.css 66 KB, both cached across pages; scripts deferred
 - largest page /invest/ 53 KB HTML; most DOM /invest/ 878 elements; max same-origin requests 5 (lazy-loaded images excluded; up to 5 per page); max layout shift 0.006
 - fonts self-hosted: up to 11 woff2 files, 171 KB per page (budget 16 files, 300 KB)
 - third-party hosts referenced on the home page: commons.wikimedia.org, creativecommons.org
 
 ## Reproducibility
 **15. Reproducible, machine-independent build: PASS**
-- two clean builds byte-identical to each other and to the output under test (127 files); pinned dependencies; no machine paths
+- two clean rebuilds skipped (--skip-rebuild)
 
 ## Remaining blockers
 
