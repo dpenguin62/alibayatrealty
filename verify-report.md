@@ -93,7 +93,7 @@ All engineering checks pass. Every remaining failure needs Ali's information, an
 | `/neighbourhoods/vaughan/` | neighbourhood-guide | Ali Bayat | approved | 2026-11-11 | 2026-11-25 | n/a | yes |
 | `/neighbourhoods/toronto/` | neighbourhood-guide | Ali Bayat | approved | 2026-11-11 | 2026-11-25 | n/a | yes |
 | `/resources/` | hub | Ali Bayat | approved | 2026-11-11 | 2026-11-21 | n/a | yes |
-| `/resources/buying/land-transfer-tax-toronto-york-region/` | guide | Ali Bayat | approved | 2026-11-11 | 2026-11-20 | City of Toronto, MLTT rates and fees; City of Toronto, MLTT rebates; Ontario, calculating land transfer tax; Ontario, refunds for first-time homebuyers (Ontario rates in effect since January 1, 2017; City of Toronto MLTT rates in effect from April 1, 2026; verified 2026-10-01) | yes |
+| `/resources/buying/land-transfer-tax-toronto-york-region/` | guide | Ali Bayat | approved | 2026-11-11 | 2026-11-26 | City of Toronto, MLTT rates and fees; City of Toronto, MLTT rebates; Ontario, calculating land transfer tax; Ontario, refunds for first-time homebuyers (Ontario rates in effect since January 1, 2017; City of Toronto MLTT rates in effect from April 1, 2026; verified 2026-10-01) | yes |
 | `/contact/` | contact | Ali Bayat | approved | 2026-11-11 | 2026-11-18 | n/a | yes |
 | `/fa/` | home | Ali Bayat | approved | 2026-11-11 | 2026-11-18 | n/a | yes |
 | `/fa/buy/` | service | Ali Bayat | approved | 2026-11-11 | 2026-11-21 | n/a | yes |
@@ -106,7 +106,7 @@ All engineering checks pass. Every remaining failure needs Ali's information, an
 | `/fa/neighbourhoods/vaughan/` | neighbourhood-guide | Ali Bayat | approved | 2026-11-11 | 2026-11-25 | n/a | yes |
 | `/fa/neighbourhoods/toronto/` | neighbourhood-guide | Ali Bayat | approved | 2026-11-11 | 2026-11-25 | n/a | yes |
 | `/fa/resources/` | hub | Ali Bayat | approved | 2026-11-11 | 2026-11-21 | n/a | yes |
-| `/fa/resources/buying/land-transfer-tax-toronto-york-region/` | guide | Ali Bayat | approved | 2026-11-11 | 2026-11-20 | City of Toronto, MLTT rates and fees; City of Toronto, MLTT rebates; Ontario, calculating land transfer tax; Ontario, refunds for first-time homebuyers (Ontario rates in effect since January 1, 2017; City of Toronto MLTT rates in effect from April 1, 2026; verified 2026-10-01) | yes |
+| `/fa/resources/buying/land-transfer-tax-toronto-york-region/` | guide | Ali Bayat | approved | 2026-11-11 | 2026-11-26 | City of Toronto, MLTT rates and fees; City of Toronto, MLTT rebates; Ontario, calculating land transfer tax; Ontario, refunds for first-time homebuyers (Ontario rates in effect since January 1, 2017; City of Toronto MLTT rates in effect from April 1, 2026; verified 2026-10-01) | yes |
 | `/fa/about/` | profile | Ali Bayat | approved | 2026-11-11 | 2026-11-20 | n/a | yes |
 | `/fa/contact/` | contact | Ali Bayat | approved | 2026-11-11 | 2026-11-18 | n/a | yes |
 | `/privacy/` | legal | Ali Bayat | draft | n/a | n/a | n/a | no |
@@ -169,7 +169,7 @@ Every occurrence above comes from a managed placeholder (awaiting the owner inpu
 
 ## Performance
 **14. Performance budget: weight, requests, DOM size, layout shift, render-blocking: PASS**
-- site.js 28 KB (prototype code stripped), site.css 66 KB, both cached across pages; scripts deferred
+- site.js 29 KB (prototype code stripped), site.css 66 KB, both cached across pages; scripts deferred
 - largest page /invest/ 53 KB HTML; most DOM /invest/ 878 elements; max same-origin requests 5 (lazy-loaded images excluded; up to 5 per page); max layout shift 0.006
 - fonts self-hosted: up to 11 woff2 files, 171 KB per page (budget 16 files, 300 KB)
 - third-party hosts referenced on the home page: commons.wikimedia.org, creativecommons.org

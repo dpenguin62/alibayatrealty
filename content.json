@@ -102,11 +102,11 @@
   },
   "guide-land-transfer-tax": {
    "review_status": "approved",
-   "approved_hash": "2111c89110056095",
+   "approved_hash": "30c65d0542ff4653",
    "reviewed_by": "Ali Bayat",
-   "reviewed_at": "2026-11-20",
+   "reviewed_at": "2026-11-26",
    "published_at": "2026-11-11",
-   "updated_at": "2026-11-20"
+   "updated_at": "2026-11-26"
   },
   "contact": {
    "review_status": "approved",
@@ -230,11 +230,11 @@
   },
   "fa-guide-land-transfer-tax": {
    "review_status": "approved",
-   "approved_hash": "1705899a866a5efa",
+   "approved_hash": "b65bb7897c086f8d",
    "reviewed_by": "Ali Bayat",
-   "reviewed_at": "2026-11-20",
+   "reviewed_at": "2026-11-26",
    "published_at": "2026-11-11",
-   "updated_at": "2026-11-20"
+   "updated_at": "2026-11-26"
   },
   "fa-about": {
    "review_status": "approved",
