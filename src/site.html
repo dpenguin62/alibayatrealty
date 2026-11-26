@@ -73,6 +73,11 @@ p{margin:0}
 .nav a:hover{background:var(--sunk)}
 .nav a[aria-current="page"]{color:var(--lake);font-weight:600}
 .nav .talk{margin-left:.6rem}
+.nav .pri{font-weight:600}
+.nav .navsep{width:1px;height:1.1rem;background:var(--line);margin-inline:.5rem}
+.nav > a:not(.pri):not(.btn):not(.lang),.nav .has-sub > a{color:var(--muted)}
+.nav > a:not(.pri):not(.btn):not(.lang):hover,.nav .has-sub > a:hover{color:var(--ink)}
+.nav .lang{border:1px solid var(--line);margin-inline-start:.3rem}
 .has-sub{position:relative;display:inline-flex;align-items:center}
 .has-sub > a{padding-inline-end:.2rem}
 .sub-btn{all:unset;box-sizing:border-box;cursor:pointer;display:inline-grid;place-items:center;width:1.5rem;height:1.9rem;border-radius:3px;color:var(--muted)}
@@ -90,8 +95,11 @@ p{margin:0}
 @media (max-width:340px){.site-head .head-talk{display:none}}
 [tabindex="-1"]:focus{outline:none}
 .drawer{border-top:1px solid var(--line);background:var(--paper);max-height:calc(100dvh - 74px);overflow:auto}
-.drawer nav{display:grid;padding-block:.5rem 1.5rem}
+.drawer nav.wrap{display:grid;height:auto;gap:0;justify-content:stretch;align-items:stretch;padding-block:.5rem 1.5rem}
 .drawer a{text-decoration:none;font-family:var(--display);font-size:1.5rem;padding:.7rem 0;border-bottom:1px solid var(--line)}
+.drawer a.sec{font-family:var(--body);font-size:1.05rem;color:var(--muted);padding:.6rem 0}
+.drawer a.lang-row{font-family:var(--body);display:grid;gap:.1rem;font-size:1.1rem;font-weight:600;border:1px solid var(--line);border-radius:var(--r);padding:.8rem 1rem;margin-block:.9rem .5rem;background:var(--surface)}
+.drawer a.lang-row small{font-weight:400;font-size:.82rem;color:var(--muted)}
 .drawer a.minor{font-family:var(--body);font-size:.95rem;color:var(--muted);border:0;padding:.8rem 0 0}
 .drawer .btn{margin-top:1.25rem;justify-content:center;font-family:var(--body);font-size:1rem;border-bottom:1.5px solid var(--lake)}
 
@@ -610,6 +618,35 @@ button.link{background:none;border:0;padding:0;font:600 1rem var(--body);cursor:
 .calc .kpis small{font-size:.7rem;color:var(--muted);text-transform:uppercase;letter-spacing:.07em;font-weight:600}
 .calc .kpis b{font-family:var(--display);font-weight:600;font-size:1.45rem;font-variant-numeric:tabular-nums}
 .calc .neg{color:var(--brick)}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);clip-path:inset(50%);white-space:nowrap}
+.calc.ltt{grid-template-columns:minmax(0,.8fr) minmax(0,1.4fr)}
+@media (max-width:760px){.calc.ltt{grid-template-columns:1fr}}
+.lt-cmp{width:100%;border-collapse:collapse;font-size:.92rem;font-variant-numeric:tabular-nums}
+.lt-cmp th,.lt-cmp td{padding:.5rem .3rem;border-bottom:1px solid var(--line);vertical-align:baseline}
+.lt-cmp td{text-align:end;white-space:nowrap}
+.lt-cmp thead th{font-size:.82rem;line-height:1.3;vertical-align:bottom;text-align:end}
+.lt-cmp thead th small{display:block;font-weight:400;color:var(--muted);font-size:.72rem;margin-top:.15rem}
+.lt-cmp th{background:none;text-transform:none;letter-spacing:0;color:var(--ink)}
+.lt-cmp tbody th{text-align:start;font-weight:400;font-size:.9rem}
+.lt-cmp .tot th,.lt-cmp .tot td{font-family:var(--display);font-weight:600;font-size:1.1rem;padding-top:.8rem}
+.lt-cmp .tot th{font-family:var(--body);font-size:.9rem}
+.calc .gapbox{margin-top:.9rem;background:var(--sunk);border-radius:3px;padding:.35rem .9rem}
+.calc .gapbox .line:last-child{border-bottom:0}
+.calc .gapbox .line span:first-child{white-space:normal}
+.calc .gapbox .line span:last-child{text-align:end}
+.calc .opt{border-top:1px solid var(--line);padding-top:.8rem}
+.calc .opt summary{cursor:pointer;font-weight:600;font-size:.9rem;color:var(--lake);min-height:32px;display:flex;align-items:center}
+.calc .opt .stack{display:grid;gap:1rem;margin-top:.8rem}
+.calc-warn{color:var(--brick)}
+.deal-box{border:1px solid var(--line);border-inline-start:3px solid var(--lake);background:var(--lake-soft);border-radius:var(--r);padding:1rem 1.1rem;display:grid;gap:.7rem}
+.deal-box dl{margin:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:.5rem .9rem}
+.deal-box dt{font-size:.7rem;color:var(--muted);text-transform:uppercase;letter-spacing:.06em}
+.deal-box dd{margin:0;font-weight:600;font-variant-numeric:tabular-nums}
+.cc{display:grid;gap:.7rem;background:var(--lake-soft);border-radius:var(--r);padding:1.1rem 1.25rem}
+.cc > b{font-family:var(--display);font-weight:600;font-size:1.1rem}
+.cc .r{display:flex;flex-wrap:wrap;gap:.6rem;align-items:flex-end}
+.cc .field{flex:1 1 190px;max-width:280px}
+.calc .out .lev{background:color-mix(in srgb,var(--lake-soft) 70%,var(--surface));border-inline-start:3px solid var(--lake);padding:.6rem .8rem;font-size:.88rem;border-radius:3px;margin-top:.6rem}
 .timeline.t6{grid-template-columns:repeat(6,1fr)}
 .timeline.t6 .phase h3{font-size:1.2rem}
 @media (max-width:820px){.timeline.t6{grid-template-columns:1fr}}
@@ -770,13 +807,12 @@ article.teaser:hover h3{text-decoration:none}
   <div class="wrap">
     <a class="brand" href="#home" aria-label="Ali Bayat, home"><svg class="mark" viewBox="0 0 54 48" aria-hidden="true" focusable="false"><path class="roof" d="M4 26 L27 5 L50 26" fill="none" stroke-width="6" stroke-linecap="square"/><path d="M13 30 V44 H41 V30" fill="none" stroke="currentColor" stroke-width="4"/></svg><span class="wm"><b>Ali Bayat</b><small>REALTOR®</small></span></a>
     <nav class="nav" aria-label="Main">
-      <a href="#home">Home</a>
-      <a href="#buy">Buy</a>
-      <a href="#sell">Sell</a>
-      <a href="#invest">Invest</a>
+      <a class="pri" href="#buy">Buy</a>
+      <a class="pri" href="#sell">Sell</a>
+      <a class="pri" href="#invest">Invest</a>
+      <span class="navsep" aria-hidden="true"></span>
       <span class="has-sub"><a href="#neighbourhoods">Neighbourhoods</a><button class="sub-btn" type="button" aria-expanded="false" aria-controls="nb-sub" aria-label="Show neighbourhood guides"><svg viewBox="0 0 12 12" width="10" height="10" aria-hidden="true" focusable="false"><path d="M2 4.5 6 8.5 10 4.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button><span class="sub" id="nb-sub"><a href="#north-york">North York</a><a href="#thornhill">Thornhill</a><a href="#richmond-hill">Richmond Hill</a><a href="#vaughan">Vaughan</a><a href="#toronto">Toronto</a></span></span>
       <a href="#resources">Resources</a>
-      <a href="#about">About</a>
       <a class="lang" href="#fa-home" lang="fa" hreflang="fa" data-lang-switch>فارسی</a>
       <a class="btn sm talk" href="#contact" data-nav="contact" style="color:var(--brass-ink)">Talk to Ali</a>
     </nav>
@@ -787,16 +823,14 @@ article.teaser:hover h3{text-decoration:none}
   </div>
   <div class="drawer" id="drawer" hidden>
     <nav class="wrap" aria-label="Mobile">
-      <a href="#home">Home</a>
       <a href="#buy">Buy</a>
       <a href="#sell">Sell</a>
       <a href="#invest">Invest</a>
-      <a href="#neighbourhoods">Neighbourhoods</a>
-      <a href="#resources">Resources</a>
-      <a href="#about">About Ali</a>
-      <a href="#contact">Contact</a>
-      <a class="minor lang" href="#fa-home" lang="fa" hreflang="fa" data-lang-switch>فارسی · Farsi</a>
       <a class="btn" href="#contact" style="color:var(--brass-ink)">Talk to Ali</a>
+      <a class="lang-row" href="#fa-home" lang="fa" hreflang="fa" data-lang-switch><span>فارسی · Farsi</span><small>Read the whole site in Farsi, right to left</small></a>
+      <a class="sec" href="#neighbourhoods">Neighbourhoods</a>
+      <a class="sec" href="#resources">Resources</a>
+      <a class="sec" href="#about">About Ali</a>
       <a class="minor" href="#listings" data-requires="idx">Listing search (preview)</a>
     </nav>
   </div>
@@ -810,11 +844,11 @@ article.teaser:hover h3{text-decoration:none}
     <div class="wrap grid">
       <div class="copy">
         <nav class="areas" aria-label="Areas served"><a href="#north-york">North York</a><a href="#thornhill">Thornhill</a><a href="#richmond-hill">Richmond Hill</a><a href="#vaughan">Vaughan</a><a href="#toronto">Toronto</a></nav>
-        <h1 tabindex="-1">A North York real estate agent who shows you <em>the real numbers.</em></h1>
-        <p class="lede">I'm Ali Bayat, a REALTOR® with Century 21 Heritage Group in Thornhill. Since 2016, I've helped clients buy, sell and lease homes across North York, Thornhill, Richmond Hill, Vaughan and Toronto, in English or Farsi.</p>
+        <h1 tabindex="-1">Real estate along Yonge Street, <em>from North York to Richmond Hill.</em></h1>
+        <p class="lede">I'm Ali Bayat, a REALTOR® with Century 21 Heritage Group in Thornhill. Since 2016 I've worked the Yonge corridor, plus Vaughan and Toronto. I put the numbers first: closing costs that change at Steeles Avenue, carrying costs by building or street, and the subway, Viva and GO access behind each price. In English or Farsi.</p>
         <div class="row">
           <a class="btn" href="#contact" data-cta="hero">Talk to Ali</a>
-          <a class="link" href="#invest">Explore investing <span class="ar" aria-hidden="true">→</span></a>
+          <a class="link" href="#guide-land-transfer-tax">Check closing costs at your price <span class="ar" aria-hidden="true">→</span></a>
         </div>
         <div class="meta"><span><mark class="tbc" data-tpl="Licensed since {start_year}">Licensed since [year]</mark></span><span><mark class="tbc" data-tpl="RECO #{reco_number}">RECO #[000000]</mark></span><span>TRREB member</span><span><b>English &amp; <a href="#fa-home" lang="fa" hreflang="fa">فارسی</a></b></span></div>
       </div>
@@ -863,6 +897,25 @@ article.teaser:hover h3{text-decoration:none}
             <ul class="ncards" data-ncards></ul>
             <p class="credits">Photos from Wikimedia Commons, cropped and resized: <a href="https://commons.wikimedia.org/wiki/File:North_York_Skyline.jpg" rel="noopener">North York skyline</a> by GTD Aquitaine (public domain); <a href="https://commons.wikimedia.org/wiki/File:Thornhill_Panorama_2023.jpg" rel="noopener">Thornhill panorama</a> by Canmenwalker (<a href="https://creativecommons.org/licenses/by/4.0/" rel="noopener license">CC BY 4.0</a>); <a href="https://commons.wikimedia.org/wiki/File:Lake_Wilcox_aerial_view_2024.jpg" rel="noopener">Lake Wilcox aerial view</a> by Canmenwalker (<a href="https://creativecommons.org/licenses/by/4.0/" rel="noopener license">CC BY 4.0</a>); <a href="https://commons.wikimedia.org/wiki/File:Vaughan_Metropolitan_Centre_Skyline,_August_7_2025.jpg" rel="noopener">Vaughan Metropolitan Centre skyline</a> by Dillan Payne (<a href="https://creativecommons.org/licenses/by-sa/4.0/" rel="noopener license">CC BY-SA 4.0</a>; this cropped version is shared under the same licence); <a href="https://commons.wikimedia.org/wiki/File:Cabbagetown_houses.jpg" rel="noopener">Cabbagetown houses</a> by Jay Woodworth (<a href="https://creativecommons.org/licenses/by/2.0/" rel="noopener license">CC BY 2.0</a>).</p>
           </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="band">
+    <div class="wrap railed">
+      <div class="rail"><span class="label">Local mechanics</span></div>
+      <div class="main">
+        <h2>One street changes your closing costs: <em>Steeles Avenue.</em></h2>
+        <p class="lede">Steeles is where the City of Toronto ends and York Region begins. Buy the same $1,000,000 home on either side and the Toronto side costs about $16,475 more to close, before any first-time buyer rebate.</p>
+        <div class="principles">
+          <div><span class="label accent">01 · Closing costs</span><h3>Toronto adds a second tax</h3><p>South of Steeles you pay Ontario's land transfer tax and Toronto's. North of it, Ontario's alone. That's cash at closing, and it can't be added to the mortgage.</p></div>
+          <div><span class="label accent">02 · Carrying costs</span><h3>Closing savings aren't the whole story</h3><p>Property tax and condo fees vary by municipality and by building. I compare the monthly cost of each home, not only the purchase price.</p></div>
+          <div><span class="label accent">03 · Transit</span><h3>The corridor is the commute</h3><p>Line 1 at North York Centre, Viva on Yonge and the Richmond Hill GO line price the same house differently. I match your daily route to the pocket.</p></div>
+        </div>
+        <div class="cc" data-cc>
+          <b>Check it at your price.</b>
+          <div class="r"><div class="field"><label for="cc-price">Target purchase price</label><div class="money"><span aria-hidden="true">$</span><input id="cc-price" inputmode="decimal" placeholder="900,000" autocomplete="off"></div></div><a class="btn ghost" href="#guide-land-transfer-tax" data-cc-go>Compare North vs. South of Steeles</a></div>
         </div>
       </div>
     </div>
@@ -996,7 +1049,7 @@ article.teaser:hover h3{text-decoration:none}
       <span class="label accent">For buyers</span>
       <h1 tabindex="-1">Buying a home in Toronto <em>and the GTA</em></h1>
       <p class="lede">First condo or next family home, the process is the same: know what you can afford, understand the market, and don't let pressure make the decision for you.</p>
-      <div class="row"><a class="btn" href="#contact" data-interest="buy">Start your home search</a><a class="link" href="#guide-land-transfer-tax">Estimate your land transfer tax <span class="ar" aria-hidden="true">→</span></a></div>
+      <div class="row"><a class="btn" href="#contact" data-interest="buy">Start your home search</a><a class="link" href="#guide-land-transfer-tax">Compare closing costs north and south of Steeles <span class="ar" aria-hidden="true">→</span></a></div>
     </div>
     <div class="dwg wide draw-in" data-dwg="buyscene" data-noframe><span class="grid-bg"></span></div>
   </div></header>
@@ -1004,6 +1057,15 @@ article.teaser:hover h3{text-decoration:none}
     <div class="wrap stack" style="gap:2rem">
       <h2>How buying works, <em>in six steps</em></h2>
       <div class="flow" data-flow="buy"></div>
+    </div>
+  </section>
+<section class="band tight" style="padding-top:0">
+    <div class="wrap">
+      <div class="cc" data-cc>
+        <b>Not ready to talk yet? Check closing costs at your target price.</b>
+        <div class="r"><div class="field"><label for="cc-price">Target purchase price</label><div class="money"><span aria-hidden="true">$</span><input id="cc-price" inputmode="decimal" placeholder="900,000" autocomplete="off"></div></div><a class="btn ghost" href="#guide-land-transfer-tax" data-cc-go>Compare North vs. South of Steeles</a></div>
+        <p class="small muted">The same price costs thousands more to close south of Steeles Avenue, in the City of Toronto. See both side by side, with first-time buyer rebates. Nothing is sent to anyone.</p>
+      </div>
     </div>
   </section>
   <section class="band tight" style="padding-top:0">
@@ -1039,12 +1101,19 @@ article.teaser:hover h3{text-decoration:none}
     <span class="label accent">For sellers</span>
     <h1 tabindex="-1">Selling a home in Toronto <em>and the GTA</em></h1>
     <p class="lede">A good sale comes from an evidence-based price, a well-prepared home and a launch that reaches the right buyers. Here's how I approach each part.</p>
-    <div class="row"><a class="btn" href="#contact" data-interest="sell">Let's talk about your home's value</a></div>
+    <div class="row"><a class="btn" href="#contact" data-interest="sell">Let's talk about your home's value</a><a class="link" href="#contact" data-interest="sell" data-request="pricing-check" data-cta="pricing-check-head">Or start with a pricing &amp; prep check <span class="ar" aria-hidden="true">→</span></a></div>
   </div><div class="dwg wide draw-in" data-dwg="sellscene" data-noframe><span class="grid-bg"></span></div>
   </div></header>
   <section class="band tight"><div class="wrap stack" style="gap:2rem">
     <h2>How selling works, <em>in six steps</em></h2>
     <div class="flow" data-flow="sell"></div>
+  </div></section>
+<section class="band tight" style="padding-top:0"><div class="wrap">
+    <div class="cc">
+      <b>Not ready to list? Start with a pricing &amp; prep check.</b>
+      <p>Send the address and your rough timeline. I'll come back with a comparable-sales range, what's worth fixing before you list and what isn't, and an estimate of selling costs. It's a smaller step than a listing conversation, with no obligation.</p>
+      <div class="row"><a class="btn ghost" href="#contact" data-interest="sell" data-request="pricing-check" data-cta="pricing-check">Request a pricing &amp; prep check</a><a class="link" href="#guide-fix-before-listing">What's worth fixing before you list <span class="ar" aria-hidden="true">→</span></a><a class="link" href="#guide-offer-date">Offer date or priced to market? <span class="ar" aria-hidden="true">→</span></a></div>
+    </div>
   </div></section>
   <section class="band tight" style="padding-top:0">
     <div class="wrap">
@@ -1162,53 +1231,64 @@ article.teaser:hover h3{text-decoration:none}
     </div>
   </section>
 
-  <!-- E · Calculator -->
+  <!-- E · Deal screen -->
   <section class="band" id="inv-calc">
     <div class="wrap railed">
       <div class="rail"><span class="label">Calculator</span></div>
       <div class="main">
-        <div class="head-row"><div><span class="pill">Educational estimate</span><h2>Run the numbers <em>on a property.</em></h2><p class="lede">Change any figure to see how it moves the result. The example below is illustrative, not a real property.</p></div></div>
+        <div class="head-row"><div><span class="pill">Deal screen</span><h2>Screen a property <em>before you offer.</em></h2><p class="lede">Enter the price, rent, taxes, condo fees and down payment to preview rough cap rate and cash flow. The example below is illustrative, not a real property.</p></div></div>
         <div class="calc" id="inv-calc-box">
           <div class="inputs">
             <span class="grp">Purchase &amp; financing</span>
-            <div class="field"><label for="iv-price">Purchase price</label><div class="money"><span aria-hidden="true">$</span><input id="iv-price" data-iv="money" inputmode="numeric" value="1,400,000" autocomplete="off"></div></div>
+            <div class="field"><label for="iv-price">Asking price</label><div class="money"><span aria-hidden="true">$</span><input id="iv-price" data-iv="money" inputmode="decimal" value="1,400,000" autocomplete="off"></div></div>
             <div class="r2">
               <div class="field"><label for="iv-down">Down payment</label><div class="pct"><input id="iv-down" data-iv="pct" inputmode="decimal" value="20" autocomplete="off"><span aria-hidden="true">%</span></div></div>
               <div class="field"><label for="iv-rate">Interest rate</label><div class="pct"><input id="iv-rate" data-iv="pct" inputmode="decimal" value="5" autocomplete="off"><span aria-hidden="true">%</span></div></div>
             </div>
-            <div class="field"><label for="iv-amort">Amortization</label><select id="iv-amort" data-iv="sel"><option value="25" selected>25 years</option><option value="30">30 years</option></select></div>
-            <span class="grp">Income</span>
+            <span class="grp">Income &amp; core costs</span>
+            <div class="field"><label for="iv-rent">Estimated monthly rent (all units)</label><div class="money"><span aria-hidden="true">$</span><input id="iv-rent" data-iv="money" inputmode="decimal" value="6,000" autocomplete="off"></div></div>
             <div class="r2">
-              <div class="field"><label for="iv-rent">Annual rental income</label><div class="money"><span aria-hidden="true">$</span><input id="iv-rent" data-iv="money" inputmode="numeric" value="72,000" autocomplete="off"></div></div>
-              <div class="field"><label for="iv-vac">Vacancy</label><div class="pct"><input id="iv-vac" data-iv="pct" inputmode="decimal" value="4" autocomplete="off"><span aria-hidden="true">%</span></div></div>
+              <div class="field"><label for="iv-tax">Property taxes (per year)</label><div class="money"><span aria-hidden="true">$</span><input id="iv-tax" data-iv="money" inputmode="decimal" value="6,500" autocomplete="off"></div></div>
+              <div class="field"><label for="iv-condo">Condo fees (per month, 0 if none)</label><div class="money"><span aria-hidden="true">$</span><input id="iv-condo" data-iv="money" inputmode="decimal" value="0" autocomplete="off"></div></div>
             </div>
-            <span class="grp">Annual operating expenses</span>
-            <div class="r2">
-              <div class="field"><label for="iv-tax">Property taxes</label><div class="money"><span aria-hidden="true">$</span><input id="iv-tax" data-iv="money" inputmode="numeric" value="6,500" autocomplete="off"></div></div>
-              <div class="field"><label for="iv-ins">Insurance</label><div class="money"><span aria-hidden="true">$</span><input id="iv-ins" data-iv="money" inputmode="numeric" value="3,000" autocomplete="off"></div></div>
-              <div class="field"><label for="iv-maint">Maintenance</label><div class="money"><span aria-hidden="true">$</span><input id="iv-maint" data-iv="money" inputmode="numeric" value="3,600" autocomplete="off"></div></div>
-              <div class="field"><label for="iv-util">Utilities</label><div class="money"><span aria-hidden="true">$</span><input id="iv-util" data-iv="money" inputmode="numeric" value="4,800" autocomplete="off"></div></div>
-            </div>
-            <div class="field"><label for="iv-other">Other annual expenses</label><div class="money"><span aria-hidden="true">$</span><input id="iv-other" data-iv="money" inputmode="numeric" value="2,000" autocomplete="off"></div></div>
+            <details class="opt"><summary>More assumptions</summary><div class="stack">
+              <div class="r2">
+                <div class="field"><label for="iv-amort">Amortization</label><select id="iv-amort" data-iv="sel"><option value="25" selected>25 years</option><option value="30">30 years</option></select></div>
+                <div class="field"><label for="iv-vac">Vacancy</label><div class="pct"><input id="iv-vac" data-iv="pct" inputmode="decimal" value="4" autocomplete="off"><span aria-hidden="true">%</span></div></div>
+              </div>
+              <div class="r2">
+                <div class="field"><label for="iv-ins">Insurance (per year)</label><div class="money"><span aria-hidden="true">$</span><input id="iv-ins" data-iv="money" inputmode="decimal" value="3,000" autocomplete="off"></div></div>
+                <div class="field"><label for="iv-maint">Maintenance (per year)</label><div class="money"><span aria-hidden="true">$</span><input id="iv-maint" data-iv="money" inputmode="decimal" value="3,600" autocomplete="off"></div></div>
+                <div class="field"><label for="iv-util">Utilities (per year)</label><div class="money"><span aria-hidden="true">$</span><input id="iv-util" data-iv="money" inputmode="decimal" value="4,800" autocomplete="off"></div></div>
+                <div class="field"><label for="iv-other">Other annual expenses</label><div class="money"><span aria-hidden="true">$</span><input id="iv-other" data-iv="money" inputmode="decimal" value="2,000" autocomplete="off"></div></div>
+              </div>
+              <div class="field"><label for="iv-loc">Where is it? (for land transfer tax)</label><select id="iv-loc" data-iv="sel"><option value="to" selected>City of Toronto</option><option value="on">York Region / elsewhere in Ontario</option><option value="other">Leave land transfer tax out</option></select></div>
+            </div></details>
           </div>
           <div class="out" aria-live="polite">
             <div class="line"><span>Annual gross rental income</span><span id="iv-o-gross">—</span></div>
             <div class="line"><span>Vacancy allowance</span><span id="iv-o-vac">—</span></div>
             <div class="line sub"><span>Effective rental income</span><span id="iv-o-eff">—</span></div>
-            <div class="line"><span>Annual operating expenses</span><span id="iv-o-opex">—</span></div>
+            <div class="line"><span>Annual operating expenses (incl. condo fees)</span><span id="iv-o-opex">—</span></div>
             <div class="line sub"><span>Net operating income (NOI)</span><span id="iv-o-noi">—</span></div>
             <div class="line"><span>Estimated annual debt service</span><span id="iv-o-debt">—</span></div>
             <div class="line total"><span>Estimated annual cash flow</span><span id="iv-o-cf">—</span></div>
+            <div class="line"><span>Monthly cash flow</span><span id="iv-o-cfm">—</span></div>
             <div class="kpis">
               <div><small>Cap rate</small><b id="iv-o-cap">—</b></div>
               <div><small>Cash-on-cash return</small><b id="iv-o-coc">—</b></div>
             </div>
+            <div class="line" style="margin-top:.6rem"><span>Cash to close (down payment + land transfer tax)</span><span id="iv-o-cash">—</span></div>
+            <div class="line"><span>Break-even monthly rent (cash flow = $0)</span><span id="iv-o-be">—</span></div>
+            <p class="lev" id="iv-o-lev" hidden></p>
             <p class="small muted" id="iv-o-note" style="margin-top:.8rem"></p>
+            <p class="small calc-warn" id="iv-warn" role="status" hidden></p>
           </div>
         </div>
+        <div class="row" style="align-items:center;gap:.75rem 1.25rem"><a class="btn" href="#contact" data-interest="invest" data-request="analysis" data-cta="deal-screen" data-deal-send>Send this screen to Ali</a><span class="small muted" style="max-width:56ch">Your numbers only travel with your message if you click this. You'll see them on the next page before anything is sent, and you can remove them.</span></div>
         <div class="stack" style="gap:.6rem">
           <p class="small"><b>Illustration only.</b> Actual financing, expenses, taxes, insurance, vacancy, maintenance and rental income can vary significantly. This calculator is not financial, tax or legal advice.</p>
-          <p class="small muted">How it works: NOI is effective rental income minus operating expenses. Debt service assumes monthly payments with Canadian semi-annual compounding over the amortization chosen. Cap rate is NOI divided by purchase price. Cash-on-cash return is annual cash flow divided by the down payment only; closing costs, land transfer tax, legal fees and any repairs would increase the cash you put in and lower this figure. Results don't include income tax, principal repayment or any change in the property's value.</p>
+          <p class="small muted">How it works: NOI is effective rental income minus operating expenses (condo fees count at 12 times the monthly figure). Debt service assumes monthly payments with Canadian semi-annual compounding over the amortization chosen. Cap rate is NOI divided by purchase price. Cash-on-cash return is annual cash flow divided by the down payment plus land transfer tax (no first-time buyer rebate for an investment). Legal fees and repairs would add to the cash you put in and lower it. Break-even rent is the rent at which cash flow is zero. Results don't include income tax, principal repayment or any change in the property's value.</p>
         </div>
       </div>
     </div>
@@ -1368,23 +1448,40 @@ article.teaser:hover h3{text-decoration:none}
       <div class="article-body">
         <p>Every buyer in Ontario pays the provincial land transfer tax when a purchase closes. If the home is in the City of Toronto, which includes North York, Scarborough and Etobicoke, you also pay Toronto's municipal land transfer tax. Buyers in York Region communities such as Vaughan, Richmond Hill and Thornhill pay only the provincial tax.</p>
         <p>On a $1,000,000 home, that difference is about $16,475. It's one of the most important numbers to know when you're comparing homes on either side of Steeles Avenue.</p>
-        <h2>Estimate your land transfer tax</h2>
-        <div class="calc" id="calc">
+        <h2>Compare North vs. South of Steeles at your price</h2>
+        <p>Steeles Avenue is the boundary between the City of Toronto and York Region. For the same home at the same price, buying south of it means Ontario's land transfer tax <em>plus</em> Toronto's; north of it, Ontario's alone. Enter a price to see both side by side. Thornhill straddles the line, so confirm the municipality for the exact address.</p>
+        <div class="calc ltt" id="calc">
           <div class="inputs">
-            <div class="field"><label for="lt-price">Purchase price</label><div class="money"><span aria-hidden="true">$</span><input id="lt-price" inputmode="numeric" value="1,000,000" autocomplete="off"></div></div>
-            <fieldset class="seg2"><legend>Where is the home?</legend>
-              <input type="radio" name="lt-loc" id="lt-to" value="to" checked><label for="lt-to">City of Toronto<br><span class="muted small" style="font-weight:400">incl. North York</span></label>
-              <input type="radio" name="lt-loc" id="lt-on" value="on"><label for="lt-on">Elsewhere in Ontario<br><span class="muted small" style="font-weight:400">e.g. Vaughan</span></label>
-            </fieldset>
+            <div class="field"><label for="lt-price">Purchase price</label><div class="money"><span aria-hidden="true">$</span><input id="lt-price" inputmode="decimal" value="1,000,000" autocomplete="off"></div></div>
             <label class="check" for="lt-first"><input type="checkbox" id="lt-first"> I'm a first-time buyer</label>
+            <details class="opt"><summary>Add carrying costs (optional)</summary><div class="stack">
+              <div class="field"><label for="lt-tax-n">Annual property tax, North of Steeles home</label><div class="money"><span aria-hidden="true">$</span><input id="lt-tax-n" inputmode="decimal" value="" placeholder="e.g. 6,500" autocomplete="off"></div></div>
+              <div class="field"><label for="lt-tax-s">Annual property tax, South of Steeles home</label><div class="money"><span aria-hidden="true">$</span><input id="lt-tax-s" inputmode="decimal" value="" placeholder="e.g. 6,500" autocomplete="off"></div></div>
+              <div class="field"><label for="lt-rate">Interest rate for the financing illustration</label><div class="pct"><input id="lt-rate" inputmode="decimal" value="5" autocomplete="off"><span aria-hidden="true">%</span></div></div>
+              <p class="small muted">Use the tax figure from each home's listing or tax bill. The calculator doesn't assume a rate for you.</p>
+            </div></details>
           </div>
           <div class="out" aria-live="polite">
-            <div class="line"><span>Ontario land transfer tax</span><span id="o-on">—</span></div>
-            <div class="line" id="o-onr-row"><span>Ontario first-time buyer rebate</span><span id="o-onr">—</span></div>
-            <div class="line" id="o-to-row"><span>Toronto municipal land transfer tax</span><span id="o-to">—</span></div>
-            <div class="line" id="o-tor-row" hidden><span>Toronto first-time buyer rebate</span><span id="o-tor">—</span></div>
-            <div class="line total"><span>Estimated total</span><span id="o-total">—</span></div>
-            <p class="small muted" id="o-note" style="margin-top:.6rem"></p>
+            <table class="lt-cmp"><caption class="sr">Land transfer tax compared on both sides of Steeles Avenue</caption>
+              <thead><tr><td><span class="sr">Item</span></td><th scope="col">North of Steeles<small>York Region: Vaughan, Thornhill, Richmond Hill</small></th><th scope="col">South of Steeles<small>City of Toronto: North York</small></th></tr></thead>
+              <tbody>
+                <tr><th scope="row">Ontario land transfer tax</th><td id="o-n-on">—</td><td id="o-s-on">—</td></tr>
+                <tr id="o-onr-row" hidden><th scope="row">Ontario first-time buyer rebate</th><td id="o-n-onr">—</td><td id="o-s-onr">—</td></tr>
+                <tr><th scope="row">Toronto municipal land transfer tax</th><td id="o-n-to">—</td><td id="o-s-to">—</td></tr>
+                <tr id="o-tor-row" hidden><th scope="row">Toronto first-time buyer rebate</th><td id="o-n-tor">—</td><td id="o-s-tor">—</td></tr>
+                <tr class="tot"><th scope="row">Estimated total</th><td id="o-n-total">—</td><td id="o-s-total">—</td></tr>
+              </tbody>
+            </table>
+            <div class="gapbox">
+              <div class="line sub"><span>Extra cash at closing, South vs. North</span><span id="o-gap">—</span></div>
+              <div class="line"><span>As a share of the price</span><span id="o-gap-pct">—</span></div>
+              <div class="line"><span>Same gap, if financed (illustration)</span><span id="o-gap-m">—</span></div>
+              <div class="line" id="o-carry-row" hidden><span>Annual property tax, North minus South</span><span id="o-carry">—</span></div>
+              <div class="line" id="o-years-row" hidden><span>Years for a higher North tax to use up the gap</span><span id="o-years">—</span></div>
+            </div>
+            <p class="small muted" id="o-note"></p>
+            <p class="small" id="o-carry-note"></p>
+            <p class="small calc-warn" id="lt-warn" role="status" hidden></p>
           </div>
         </div>
         <p class="small muted">For a home with one or two single-family residences, using the Ontario rates and the City of Toronto rates in effect from April 1, 2026. This is an estimate, not legal or tax advice; your real estate lawyer confirms the final amount. Buying a building with three or more units, or a mixed-use property? The brackets above $2,000,000 work differently, so treat this as a rough guide only.</p>
@@ -1443,6 +1540,9 @@ article.teaser:hover h3{text-decoration:none}
           </fieldset>
           <input type="hidden" name="request" id="c-request" value="">
           <p class="req-note" id="req-note" hidden><b>Investment Property Analysis request.</b> Include the address or listing link, the asking price, current rents if you know them, and what you're hoping the property will do for you.</p>
+          <p class="req-note" id="req-note-pc" hidden><b>Pricing &amp; prep check.</b> Include the address, roughly when you'd like to sell, the home's condition and any updates, and the number you'd need to net. I'll reply with how I'd approach comparables, pricing and preparation. No obligation.</p>
+          <div class="deal-box" id="deal-box" hidden><h2 class="as-h3">Your deal screen</h2><dl data-deal-lines></dl><label class="check" for="c-deal-on"><input type="checkbox" id="c-deal-on"> <span>Include these numbers with my message</span></label></div>
+          <input type="hidden" name="deal_screen" id="c-deal" value="">
           <div class="r2">
             <div class="field"><label for="c-name">Name</label><input id="c-name" maxlength="100" name="name" autocomplete="name" required aria-describedby="e-name"><span class="err" id="e-name" hidden>Please enter your name.</span></div>
             <div class="field"><label for="c-phone">Phone <span class="muted" style="font-weight:400">(optional)</span></label><input id="c-phone" maxlength="30" name="phone" type="tel" autocomplete="tel" aria-describedby="e-phone"><span class="err" id="e-phone" hidden>Please check the phone number, or leave it empty.</span></div>
@@ -1452,7 +1552,7 @@ article.teaser:hover h3{text-decoration:none}
           <div class="field" style="max-width:260px"><label for="c-lang">Preferred language</label><select id="c-lang" name="language"><option value="en">English</option><option value="fa" lang="fa">Farsi · فارسی</option></select></div>
           <div class="field"><label class="check" for="c-consent"><input type="checkbox" id="c-consent" name="consent" value="yes" required aria-describedby="e-consent"> <span><mark class="tbc" data-approve="consent-wording">Ali can use these details to reply to this inquiry, as described in the privacy policy.</mark> <a href="#privacy">Privacy policy</a></span></label><span class="err" id="e-consent" hidden>Please confirm so Ali can reply.</span></div>
           <input type="hidden" name="consent_version" value="2026-10-01">
-          <input type="hidden" name="form_version" value="contact-2">
+          <input type="hidden" name="form_version" value="contact-3">
           <input type="hidden" name="source_page" value="">
           <input type="hidden" name="source_cta" value="">
           <input type="hidden" name="timestamp" value="">
@@ -1494,11 +1594,11 @@ article.teaser:hover h3{text-decoration:none}
     <div class="wrap grid">
       <div class="copy">
         <nav class="areas" aria-label="محدوده‌های فعالیت"><a href="#fa-north-york">نورث‌یورک</a><a href="#fa-thornhill">تورنهیل</a><a href="#fa-richmond-hill">ریچموند هیل</a><a href="#fa-vaughan">وان</a><a href="#fa-toronto">تورنتو</a></nav>
-        <h1 tabindex="-1">مشاور املاک فارسی‌زبان در تورنتو و نورث‌یورک، <em>با اعداد واقعی.</em></h1>
-        <p class="lede">من علی بیات هستم، مشاور املاک (<bdi>REALTOR®</bdi>) در Century 21 Heritage Group در تورنهیل. از سال 2016 به مشتریانم در خرید، فروش و اجاره‌ی خانه در نورث‌یورک، تورنهیل، ریچموند هیل، وان و تورنتو کمک کرده‌ام؛ به فارسی یا انگلیسی.</p>
+        <h1 tabindex="-1">املاک در امتداد خیابان یانگ، <em>از نورث‌یورک تا ریچموند هیل.</em></h1>
+        <p class="lede">من علی بیات هستم، مشاور املاک (<bdi>REALTOR®</bdi>) در Century 21 Heritage Group در تورنهیل. از سال 2016 در محور یانگ، و همچنین وان و تورنتو، کار کرده‌ام. اول اعداد را روی میز می‌گذارم: هزینه‌های بستن معامله که در خیابان استیلز تغییر می‌کنند، هزینه‌ی نگهداری هر ساختمان یا خیابان، و دسترسی به مترو، Viva و GO پشت هر قیمت. به فارسی یا انگلیسی.</p>
         <div class="row">
           <a class="btn" href="#fa-contact" data-cta="hero">گفتگو با علی</a>
-          <a class="link" href="#fa-about">درباره‌ی علی <span class="ar" aria-hidden="true">←</span></a>
+          <a class="link" href="#fa-guide-land-transfer-tax">هزینه‌ی بستن معامله را با قیمت خودتان ببینید <span class="ar" aria-hidden="true">←</span></a>
         </div>
         <div class="meta"><span><mark class="tbc" data-tpl="دارای مجوز از {start_year}">دارای مجوز از [year]</mark></span><span><mark class="tbc" data-tpl="RECO #{reco_number}">RECO #[000000]</mark></span><span>عضو TRREB</span><span><b>فارسی و <a href="#home" lang="en" hreflang="en">English</a></b></span></div>
       </div>
@@ -1532,6 +1632,43 @@ article.teaser:hover h3{text-decoration:none}
           </article>
         </div>
         <div class="unsure"><span>راهنمای محله‌ها و منابع آموزشی هم به فارسی در دسترس است.</span><span class="row" style="gap:.5rem 1.25rem"><a class="link" href="#fa-neighbourhoods">راهنمای محله‌ها <span class="ar" aria-hidden="true">←</span></a><a class="link" href="#fa-resources">منابع آموزشی <span class="ar" aria-hidden="true">←</span></a></span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="band">
+    <div class="wrap railed">
+      <div class="rail"><span class="label">سازوکار محلی</span></div>
+      <div class="main">
+        <h2>یک خیابان هزینه‌ی بستن معامله را عوض می‌کند: <em>استیلز.</em></h2>
+        <p class="lede">استیلز جایی است که شهر تورنتو تمام می‌شود و منطقه‌ی یورک شروع می‌شود. همان خانه‌ی ۱٬۰۰۰٬۰۰۰ دلاری را در دو طرف آن بخرید؛ سمت تورنتو حدود ۱۶٬۴۷۵ دلار بیشتر برای بستن معامله هزینه دارد، پیش از هر بازپرداخت خریدار خانه‌ی اول.</p>
+        <div class="principles">
+          <div><span class="label accent">۰۱ · هزینه‌ی بستن معامله</span><h3>تورنتو مالیات دومی هم اضافه می‌کند</h3><p>در جنوب استیلز مالیات انتقال زمین انتاریو و مالیات تورنتو را می‌پردازید؛ در شمال آن فقط مالیات انتاریو را. این مبلغ هنگام بستن معامله نقدی پرداخت می‌شود و به وام اضافه نمی‌شود.</p></div>
+          <div><span class="label accent">۰۲ · هزینه‌ی نگهداری</span><h3>صرفه‌جویی هنگام خرید همه‌ی ماجرا نیست</h3><p>مالیات ملک و شارژ ساختمان بسته به شهرداری و ساختمان فرق می‌کند. من هزینه‌ی ماهانه‌ی هر خانه را مقایسه می‌کنم، نه فقط قیمت خرید.</p></div>
+          <div><span class="label accent">۰۳ · رفت‌وآمد</span><h3>محور یانگ همان مسیر رفت‌وآمد است</h3><p>خط ۱ مترو در نورث‌یورک سنتر، Viva در یانگ و خط GO ریچموند هیل، یک خانه‌ی مشابه را متفاوت قیمت می‌گذارند. مسیر روزانه‌ی شما را با بخش مناسب محله تطبیق می‌دهم.</p></div>
+        </div>
+        <div class="cc" data-cc>
+          <b>با قیمت خودتان بسنجید.</b>
+          <div class="r"><div class="field"><label for="cc-price">قیمت هدف خرید</label><div class="money" dir="ltr"><span aria-hidden="true">$</span><input id="cc-price" inputmode="decimal" placeholder="900,000" autocomplete="off"></div></div><a class="btn ghost" href="#fa-guide-land-transfer-tax" data-cc-go>مقایسه‌ی دو طرف استیلز</a></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="band">
+    <div class="wrap railed">
+      <div class="rail"><span class="label">موضوع‌های پرسش‌شده</span></div>
+      <div class="main">
+        <h2>پرسش‌هایی که خریداران و سرمایه‌گذاران فارسی‌زبان <em>بیشتر می‌پرسند.</em></h2>
+        <p class="lede">هر موضوع یک راهنمای مستقل با اعداد و منبع است، به فارسی.</p>
+        <div class="svc three">
+          <article><h3>خرید از داخل یا از خارج از کانادا</h3><p class="muted">وضعیت اقامت شما، مالیات غیرمقیم و بستن معامله از راه دور.</p><div class="row"><a class="link" href="#fa-guide-buying-from-abroad">بخوانید <span class="ar" aria-hidden="true">←</span></a></div></article>
+          <article><h3>جریان نقدی پیش از خرید</h3><p class="muted">اجاره، هزینه‌ها، وام و اجاره‌ی سربه‌سر، قدم به قدم.</p><div class="row"><a class="link" href="#fa-guide-cash-flow">بخوانید <span class="ar" aria-hidden="true">←</span></a></div></article>
+          <article><h3>کاندو یا خانه‌ی مستقل</h3><p class="muted">شارژ، نگهداری، ریسک و فروش بعدی، خط به خط.</p><div class="row"><a class="link" href="#fa-guide-condo-vs-detached">بخوانید <span class="ar" aria-hidden="true">←</span></a></div></article>
+          <article><h3>هزینه‌ی بستن معامله در دو طرف استیلز</h3><p class="muted">مالیات انتقال زمین انتاریو و تورنتو، کنار هم.</p><div class="row"><a class="link" href="#fa-guide-land-transfer-tax">بخوانید <span class="ar" aria-hidden="true">←</span></a></div></article>
+          <article><h3>سه یادداشت معامله</h3><p class="muted">مثال‌هایی از اینکه اعداد چطور تصمیم را عوض می‌کنند.</p><div class="row"><a class="link" href="#fa-guide-deal-notes">بخوانید <span class="ar" aria-hidden="true">←</span></a></div></article>
+          <article><h3>اولین خانه</h3><p class="muted">همه‌ی هزینه‌ها و شش قدم تا گرفتن کلید.</p><div class="row"><a class="link" href="#fa-guide-first-home">بخوانید <span class="ar" aria-hidden="true">←</span></a></div></article>
+        </div>
       </div>
     </div>
   </section>
@@ -1619,23 +1756,40 @@ article.teaser:hover h3{text-decoration:none}
       <div class="article-body">
         <p>هر خریداری در انتاریو هنگام بستن معامله، مالیات انتقال زمین استانی (Land Transfer Tax) را می‌پردازد. اگر خانه در شهر تورنتو باشد، که شامل نورث‌یورک، اسکاربرو و اتوبیکوک هم می‌شود، مالیات انتقال زمین شهرداری تورنتو را هم می‌پردازید. خریداران در محله‌های منطقه‌ی یورک مثل وان، ریچموند هیل و تورنهیل فقط مالیات استانی را می‌پردازند.</p>
         <p>برای یک خانه‌ی ۱,۰۰۰,۰۰۰ دلاری، این تفاوت حدود ۱۶,۴۷۵ دلار است. این یکی از مهم‌ترین عددهایی است که هنگام مقایسه‌ی خانه‌های دو طرف خیابان استیلز باید بدانید.</p>
-        <h2>مالیات انتقال زمین خود را برآورد کنید</h2>
-        <div class="calc" id="calc">
+        <h2>مقایسه‌ی دو طرف استیلز با قیمت خودتان</h2>
+        <p>خیابان استیلز مرز شهر تورنتو و منطقه‌ی یورک است. برای همان خانه با همان قیمت، خرید در جنوب آن یعنی مالیات انتقال زمین انتاریو <em>به‌علاوه‌ی</em> مالیات تورنتو؛ در شمال آن فقط مالیات انتاریو. قیمت را وارد کنید تا هر دو را کنار هم ببینید. تورنهیل روی این خط قرار دارد؛ پس شهرداری نشانی دقیق را بررسی کنید.</p>
+        <div class="calc ltt" id="calc" dir="rtl">
           <div class="inputs">
-            <div class="field"><label for="lt-price">قیمت خرید</label><div class="money" dir="ltr"><span aria-hidden="true">$</span><input id="lt-price" inputmode="numeric" value="1,000,000" autocomplete="off"></div></div>
-            <fieldset class="seg2"><legend>خانه کجاست؟</legend>
-              <input type="radio" name="lt-loc" id="lt-to" value="to" checked><label for="lt-to">شهر تورنتو<br><span class="muted small" style="font-weight:400">شامل نورث‌یورک</span></label>
-              <input type="radio" name="lt-loc" id="lt-on" value="on"><label for="lt-on">جای دیگری در انتاریو<br><span class="muted small" style="font-weight:400">مثلاً وان</span></label>
-            </fieldset>
+            <div class="field"><label for="lt-price">قیمت خرید</label><div class="money" dir="ltr"><span aria-hidden="true">$</span><input id="lt-price" inputmode="decimal" value="1,000,000" autocomplete="off"></div></div>
             <label class="check" for="lt-first"><input type="checkbox" id="lt-first"> خریدار خانه‌ی اول هستم</label>
+            <details class="opt"><summary>افزودن هزینه‌ی نگهداری (اختیاری)</summary><div class="stack">
+              <div class="field"><label for="lt-tax-n">مالیات سالانه‌ی ملک، خانه‌ی شمال استیلز</label><div class="money" dir="ltr"><span aria-hidden="true">$</span><input id="lt-tax-n" inputmode="decimal" value="" placeholder="مثلاً 6,500" autocomplete="off"></div></div>
+              <div class="field"><label for="lt-tax-s">مالیات سالانه‌ی ملک، خانه‌ی جنوب استیلز</label><div class="money" dir="ltr"><span aria-hidden="true">$</span><input id="lt-tax-s" inputmode="decimal" value="" placeholder="مثلاً 6,500" autocomplete="off"></div></div>
+              <div class="field"><label for="lt-rate">نرخ بهره برای نمونه‌ی تأمین مالی</label><div class="pct" dir="ltr"><input id="lt-rate" inputmode="decimal" value="5" autocomplete="off"><span aria-hidden="true">%</span></div></div>
+              <p class="small muted">اعداد مالیات ملک را از صورت‌حساب یا آگهی هر ملک بردارید؛ ما نرخی از خودمان فرض نمی‌کنیم.</p>
+            </div></details>
           </div>
           <div class="out" aria-live="polite">
-            <div class="line"><span>مالیات انتقال زمین انتاریو</span><span id="o-on" dir="ltr">—</span></div>
-            <div class="line" id="o-onr-row"><span>بازپرداخت خریدار خانه‌ی اول انتاریو</span><span id="o-onr" dir="ltr">—</span></div>
-            <div class="line" id="o-to-row"><span>مالیات انتقال زمین شهرداری تورنتو</span><span id="o-to" dir="ltr">—</span></div>
-            <div class="line" id="o-tor-row" hidden><span>بازپرداخت خریدار خانه‌ی اول تورنتو</span><span id="o-tor" dir="ltr">—</span></div>
-            <div class="line total"><span>برآورد مجموع</span><span id="o-total" dir="ltr">—</span></div>
-            <p class="small muted" id="o-note" style="margin-top:.6rem"></p>
+            <table class="lt-cmp"><caption class="sr">مقایسه‌ی مالیات انتقال زمین در دو طرف استیلز</caption>
+              <thead><tr><td><span class="sr">مورد</span></td><th scope="col">شمال استیلز<small>منطقه‌ی یورک: وان، تورنهیل، ریچموند هیل</small></th><th scope="col">جنوب استیلز<small>شهر تورنتو: نورث‌یورک</small></th></tr></thead>
+              <tbody>
+                <tr><th scope="row">مالیات انتقال زمین انتاریو</th><td id="o-n-on" dir="ltr">—</td><td id="o-s-on" dir="ltr">—</td></tr>
+                <tr id="o-onr-row" hidden><th scope="row">بازپرداخت خریدار خانه‌ی اول انتاریو</th><td id="o-n-onr" dir="ltr">—</td><td id="o-s-onr" dir="ltr">—</td></tr>
+                <tr><th scope="row">مالیات انتقال زمین شهرداری تورنتو</th><td id="o-n-to" dir="ltr">—</td><td id="o-s-to" dir="ltr">—</td></tr>
+                <tr id="o-tor-row" hidden><th scope="row">بازپرداخت خریدار خانه‌ی اول تورنتو</th><td id="o-n-tor" dir="ltr">—</td><td id="o-s-tor" dir="ltr">—</td></tr>
+                <tr class="tot"><th scope="row">برآورد مجموع</th><td id="o-n-total" dir="ltr">—</td><td id="o-s-total" dir="ltr">—</td></tr>
+              </tbody>
+            </table>
+            <div class="gapbox">
+              <div class="line sub"><span>نقدِ بیشتر هنگام بستن معامله، جنوب نسبت به شمال</span><span id="o-gap" dir="ltr">—</span></div>
+              <div class="line"><span>سهم از قیمت خرید</span><span id="o-gap-pct" dir="ltr">—</span></div>
+              <div class="line"><span>همین مبلغ اگر وام بگیرید (نمونه)</span><span id="o-gap-m" dir="ltr">—</span></div>
+              <div class="line" id="o-carry-row" hidden><span>مالیات سالانه‌ی ملک، شمال منهای جنوب</span><span id="o-carry" dir="ltr">—</span></div>
+              <div class="line" id="o-years-row" hidden><span>سال‌هایی که مالیات بالاترِ شمال این تفاوت را جبران می‌کند</span><span id="o-years" dir="ltr">—</span></div>
+            </div>
+            <p class="small muted" id="o-note"></p>
+            <p class="small" id="o-carry-note"></p>
+            <p class="small calc-warn" id="lt-warn" role="status" hidden></p>
           </div>
         </div>
         <p class="small muted">برای خانه‌ای با یک یا دو واحد مسکونی تک‌خانواری، بر اساس نرخ‌های انتاریو و نرخ‌های شهر تورنتو که از ۱ آوریل ۲۰۲۶ اعمال می‌شوند. این یک برآورد است، نه مشاوره‌ی حقوقی یا مالیاتی؛ مبلغ نهایی را وکیل املاک شما تأیید می‌کند. ملکی با سه واحد یا بیشتر، یا ملک تجاری‌ـ‌مسکونی می‌خرید؟ پله‌های بالای ۲,۰۰۰,۰۰۰ دلار متفاوت محاسبه می‌شوند؛ پس این عدد را فقط یک برآورد کلی بدانید.</p>
@@ -1679,7 +1833,7 @@ article.teaser:hover h3{text-decoration:none}
     <span class="label accent">برای خریداران</span>
     <h1 tabindex="-1">خرید خانه در تورنتو <em>و منطقه‌ی بزرگ تورنتو (GTA)</em></h1>
     <p class="lede">چه اولین کاندوی شما باشد و چه خانه‌ی بعدی خانواده، روند یکی است: بدانید چقدر توان خرید دارید، بازار را بشناسید و اجازه ندهید فشار به جای شما تصمیم بگیرد.</p>
-    <div class="row"><a class="btn" href="#fa-contact" data-interest="buy">شروع جستجوی خانه</a><a class="link" href="#fa-guide-land-transfer-tax">محاسبه‌ی مالیات انتقال زمین <span class="ar" aria-hidden="true">←</span></a></div>
+    <div class="row"><a class="btn" href="#fa-contact" data-interest="buy">شروع جستجوی خانه</a><a class="link" href="#fa-guide-land-transfer-tax">مقایسه‌ی هزینه‌ی بستن معامله در دو طرف استیلز <span class="ar" aria-hidden="true">←</span></a></div>
     </div>
     <div class="dwg wide draw-in" data-dwg="buyscene" data-noframe><span class="grid-bg"></span></div>
   </div></header>
@@ -1687,6 +1841,15 @@ article.teaser:hover h3{text-decoration:none}
     <h2>روند خرید، <em>در شش قدم</em></h2>
     <div class="flow" data-flow="fa-buy"></div>
   </div></section>
+<section class="band tight" style="padding-top:0">
+    <div class="wrap">
+      <div class="cc" data-cc>
+        <b>هنوز آماده‌ی گفتگو نیستید؟ هزینه‌ی بستن معامله را با قیمت هدفتان ببینید.</b>
+        <div class="r"><div class="field"><label for="cc-price">قیمت هدف خرید</label><div class="money" dir="ltr"><span aria-hidden="true">$</span><input id="cc-price" inputmode="decimal" placeholder="900,000" autocomplete="off"></div></div><a class="btn ghost" href="#fa-guide-land-transfer-tax" data-cc-go>مقایسه‌ی دو طرف استیلز</a></div>
+        <p class="small muted">همان قیمت در جنوب خیابان استیلز، یعنی در شهر تورنتو، هزاران دلار بیشتر برای بستن معامله هزینه دارد. هر دو را کنار هم، با بازپرداخت خریدار خانه‌ی اول، ببینید. چیزی برای کسی ارسال نمی‌شود.</p>
+      </div>
+    </div>
+  </section>
   <section class="band tight" style="padding-top:0">
     <div class="wrap">
       <div class="trio">
@@ -1719,12 +1882,19 @@ article.teaser:hover h3{text-decoration:none}
     <span class="label accent">برای فروشندگان</span>
     <h1 tabindex="-1">فروش خانه در تورنتو <em>و منطقه‌ی بزرگ تورنتو (GTA)</em></h1>
     <p class="lede">یک فروش خوب حاصل قیمتی مبتنی بر شواهد، خانه‌ای آماده و عرضه‌ای است که به خریداران مناسب برسد. روش من برای هر بخش این است.</p>
-    <div class="row"><a class="btn" href="#fa-contact" data-interest="sell">درباره‌ی ارزش خانه‌تان صحبت کنیم</a></div>
+    <div class="row"><a class="btn" href="#fa-contact" data-interest="sell">درباره‌ی ارزش خانه‌تان صحبت کنیم</a><a class="link" href="#fa-contact" data-interest="sell" data-request="pricing-check" data-cta="pricing-check-head">یا با بررسی قیمت و آماده‌سازی شروع کنید <span class="ar" aria-hidden="true">←</span></a></div>
   </div><div class="dwg wide draw-in" data-dwg="sellscene" data-noframe><span class="grid-bg"></span></div>
   </div></header>
   <section class="band tight"><div class="wrap stack" style="gap:2rem">
     <h2>روند فروش، <em>در شش قدم</em></h2>
     <div class="flow" data-flow="fa-sell"></div>
+  </div></section>
+<section class="band tight" style="padding-top:0"><div class="wrap">
+    <div class="cc">
+      <b>هنوز آماده‌ی فهرست‌کردن نیستید؟ با بررسی قیمت و آماده‌سازی شروع کنید.</b>
+      <p>نشانی و زمان‌بندی تقریبی‌تان را بفرستید. با یک بازه‌ی قیمت بر اساس فروش‌های مشابه، فهرست کارهایی که پیش از فروش ارزشش را دارند و نیستند، و برآورد هزینه‌های فروش برمی‌گردم. این قدمی کوچک‌تر از گفتگوی فهرست‌کردن است و هیچ تعهدی ندارد.</p>
+      <div class="row"><a class="btn ghost" href="#fa-contact" data-interest="sell" data-request="pricing-check" data-cta="pricing-check">درخواست بررسی قیمت و آماده‌سازی</a><a class="link" href="#fa-guide-fix-before-listing">پیش از فروش چه کارهایی ارزشش را دارد <span class="ar" aria-hidden="true">←</span></a><a class="link" href="#fa-guide-offer-date">روز بررسی پیشنهادها یا قیمت‌گذاری در حد بازار؟ <span class="ar" aria-hidden="true">←</span></a></div>
+    </div>
   </div></section>
   <section class="band tight" style="padding-top:0">
     <div class="wrap">
@@ -1840,48 +2010,59 @@ article.teaser:hover h3{text-decoration:none}
     <div class="wrap railed">
       <div class="rail"><span class="label">ماشین‌حساب</span></div>
       <div class="main">
-        <div class="head-row"><div><span class="pill">برآورد آموزشی</span><h2>اعداد یک ملک را <em>حساب کنید.</em></h2><p class="lede">هر عددی را تغییر دهید تا ببینید نتیجه چطور عوض می‌شود. مثال زیر فرضی است، نه یک ملک واقعی.</p></div></div>
+        <div class="head-row"><div><span class="pill">غربال اولیه‌ی معامله</span><h2>اعداد یک ملک را <em>پیش از پیشنهاد حساب کنید.</em></h2><p class="lede">قیمت، اجاره، مالیات، شارژ ساختمان و پیش‌پرداخت را وارد کنید و جریان نقدی و Cap rate تقریبی را ببینید. مثال زیر فرضی است، نه یک ملک واقعی.</p></div></div>
         <div class="calc" id="inv-calc-box" dir="rtl">
           <div class="inputs">
             <span class="grp">خرید و تأمین مالی</span>
-            <div class="field"><label for="iv-price">قیمت خرید</label><div class="money" dir="ltr"><span aria-hidden="true">$</span><input id="iv-price" data-iv="money" inputmode="numeric" value="1,400,000" autocomplete="off"></div></div>
+            <div class="field"><label for="iv-price">قیمت درخواستی</label><div class="money" dir="ltr"><span aria-hidden="true">$</span><input id="iv-price" data-iv="money" inputmode="decimal" value="1,400,000" autocomplete="off"></div></div>
             <div class="r2">
               <div class="field"><label for="iv-down">پیش‌پرداخت</label><div class="pct" dir="ltr"><input id="iv-down" data-iv="pct" inputmode="decimal" value="20" autocomplete="off"><span aria-hidden="true">%</span></div></div>
               <div class="field"><label for="iv-rate">نرخ بهره</label><div class="pct" dir="ltr"><input id="iv-rate" data-iv="pct" inputmode="decimal" value="5" autocomplete="off"><span aria-hidden="true">%</span></div></div>
             </div>
-            <div class="field"><label for="iv-amort">مدت بازپرداخت</label><select id="iv-amort" data-iv="sel"><option value="25" selected>۲۵ سال</option><option value="30">۳۰ سال</option></select></div>
-            <span class="grp">درآمد</span>
+            <span class="grp">درآمد و هزینه‌های اصلی</span>
+            <div class="field"><label for="iv-rent">اجاره‌ی ماهانه‌ی برآوردی (همه‌ی واحدها)</label><div class="money" dir="ltr"><span aria-hidden="true">$</span><input id="iv-rent" data-iv="money" inputmode="decimal" value="6,000" autocomplete="off"></div></div>
             <div class="r2">
-              <div class="field"><label for="iv-rent">درآمد اجاره‌ی سالانه</label><div class="money" dir="ltr"><span aria-hidden="true">$</span><input id="iv-rent" data-iv="money" inputmode="numeric" value="72,000" autocomplete="off"></div></div>
-              <div class="field"><label for="iv-vac">خالی ماندن</label><div class="pct" dir="ltr"><input id="iv-vac" data-iv="pct" inputmode="decimal" value="4" autocomplete="off"><span aria-hidden="true">%</span></div></div>
+              <div class="field"><label for="iv-tax">مالیات ملک (سالانه)</label><div class="money" dir="ltr"><span aria-hidden="true">$</span><input id="iv-tax" data-iv="money" inputmode="decimal" value="6,500" autocomplete="off"></div></div>
+              <div class="field"><label for="iv-condo">شارژ ساختمان (ماهانه؛ اگر ندارد ۰)</label><div class="money" dir="ltr"><span aria-hidden="true">$</span><input id="iv-condo" data-iv="money" inputmode="decimal" value="0" autocomplete="off"></div></div>
             </div>
-            <span class="grp">هزینه‌های جاری سالانه</span>
-            <div class="r2">
-              <div class="field"><label for="iv-tax">مالیات ملک</label><div class="money" dir="ltr"><span aria-hidden="true">$</span><input id="iv-tax" data-iv="money" inputmode="numeric" value="6,500" autocomplete="off"></div></div>
-              <div class="field"><label for="iv-ins">بیمه</label><div class="money" dir="ltr"><span aria-hidden="true">$</span><input id="iv-ins" data-iv="money" inputmode="numeric" value="3,000" autocomplete="off"></div></div>
-              <div class="field"><label for="iv-maint">نگهداری</label><div class="money" dir="ltr"><span aria-hidden="true">$</span><input id="iv-maint" data-iv="money" inputmode="numeric" value="3,600" autocomplete="off"></div></div>
-              <div class="field"><label for="iv-util">قبوض</label><div class="money" dir="ltr"><span aria-hidden="true">$</span><input id="iv-util" data-iv="money" inputmode="numeric" value="4,800" autocomplete="off"></div></div>
-            </div>
-            <div class="field"><label for="iv-other">سایر هزینه‌های سالانه</label><div class="money" dir="ltr"><span aria-hidden="true">$</span><input id="iv-other" data-iv="money" inputmode="numeric" value="2,000" autocomplete="off"></div></div>
+            <details class="opt"><summary>فرض‌های بیشتر</summary><div class="stack">
+              <div class="r2">
+                <div class="field"><label for="iv-amort">مدت بازپرداخت</label><select id="iv-amort" data-iv="sel"><option value="25" selected>۲۵ سال</option><option value="30">۳۰ سال</option></select></div>
+                <div class="field"><label for="iv-vac">خالی ماندن</label><div class="pct" dir="ltr"><input id="iv-vac" data-iv="pct" inputmode="decimal" value="4" autocomplete="off"><span aria-hidden="true">%</span></div></div>
+              </div>
+              <div class="r2">
+                <div class="field"><label for="iv-ins">بیمه (سالانه)</label><div class="money" dir="ltr"><span aria-hidden="true">$</span><input id="iv-ins" data-iv="money" inputmode="decimal" value="3,000" autocomplete="off"></div></div>
+                <div class="field"><label for="iv-maint">نگهداری (سالانه)</label><div class="money" dir="ltr"><span aria-hidden="true">$</span><input id="iv-maint" data-iv="money" inputmode="decimal" value="3,600" autocomplete="off"></div></div>
+                <div class="field"><label for="iv-util">قبوض (سالانه)</label><div class="money" dir="ltr"><span aria-hidden="true">$</span><input id="iv-util" data-iv="money" inputmode="decimal" value="4,800" autocomplete="off"></div></div>
+                <div class="field"><label for="iv-other">سایر هزینه‌های سالانه</label><div class="money" dir="ltr"><span aria-hidden="true">$</span><input id="iv-other" data-iv="money" inputmode="decimal" value="2,000" autocomplete="off"></div></div>
+              </div>
+              <div class="field"><label for="iv-loc">محل ملک (برای مالیات انتقال زمین)</label><select id="iv-loc" data-iv="sel"><option value="to" selected>شهر تورنتو</option><option value="on">منطقه‌ی یورک / جای دیگر در انتاریو</option><option value="other">مالیات انتقال زمین را حساب نکن</option></select></div>
+            </div></details>
           </div>
           <div class="out" aria-live="polite">
             <div class="line"><span>درآمد ناخالص اجاره‌ی سالانه</span><span id="iv-o-gross" dir="ltr">—</span></div>
             <div class="line"><span>کسر بابت خالی ماندن</span><span id="iv-o-vac" dir="ltr">—</span></div>
             <div class="line sub"><span>درآمد مؤثر اجاره</span><span id="iv-o-eff" dir="ltr">—</span></div>
-            <div class="line"><span>هزینه‌های جاری سالانه</span><span id="iv-o-opex" dir="ltr">—</span></div>
+            <div class="line"><span>هزینه‌های جاری سالانه (شامل شارژ ساختمان)</span><span id="iv-o-opex" dir="ltr">—</span></div>
             <div class="line sub"><span>درآمد خالص عملیاتی (NOI)</span><span id="iv-o-noi" dir="ltr">—</span></div>
             <div class="line"><span>برآورد اقساط سالانه‌ی وام</span><span id="iv-o-debt" dir="ltr">—</span></div>
             <div class="line total"><span>برآورد جریان نقدی سالانه</span><span id="iv-o-cf" dir="ltr">—</span></div>
+            <div class="line"><span>جریان نقدی ماهانه</span><span id="iv-o-cfm" dir="ltr">—</span></div>
             <div class="kpis">
               <div><small>نرخ بازده سرمایه (Cap rate)</small><b id="iv-o-cap" dir="ltr">—</b></div>
               <div><small>بازده نقدی (Cash-on-cash)</small><b id="iv-o-coc" dir="ltr">—</b></div>
             </div>
+            <div class="line" style="margin-top:.6rem"><span>نقد لازم برای بستن معامله (پیش‌پرداخت + مالیات انتقال زمین)</span><span id="iv-o-cash" dir="ltr">—</span></div>
+            <div class="line"><span>اجاره‌ی ماهانه‌ی سربه‌سر (جریان نقدی صفر)</span><span id="iv-o-be" dir="ltr">—</span></div>
+            <p class="lev" id="iv-o-lev" hidden></p>
             <p class="small muted" id="iv-o-note" style="margin-top:.8rem"></p>
+            <p class="small calc-warn" id="iv-warn" role="status" hidden></p>
           </div>
         </div>
+        <div class="row" style="align-items:center;gap:.75rem 1.25rem"><a class="btn" href="#fa-contact" data-interest="invest" data-request="analysis" data-cta="deal-screen" data-deal-send>ارسال این بررسی برای علی</a><span class="small muted" style="max-width:56ch">اعداد شما فقط وقتی همراه پیام می‌روند که روی این دکمه بزنید؛ در صفحه‌ی بعد پیش از ارسال آن‌ها را می‌بینید و می‌توانید حذفشان کنید.</span></div>
         <div class="stack" style="gap:.6rem">
           <p class="small"><b>فقط برای نمونه.</b> تأمین مالی، هزینه‌ها، مالیات، بیمه، خالی ماندن، نگهداری و درآمد اجاره‌ی واقعی می‌تواند تفاوت زیادی داشته باشد. این ماشین‌حساب مشاوره‌ی مالی، مالیاتی یا حقوقی نیست.</p>
-          <p class="small muted">نحوه‌ی محاسبه: NOI برابر است با درآمد مؤثر اجاره منهای هزینه‌های جاری. اقساط وام با پرداخت ماهانه و ترکیب سود شش‌ماهه به روش کانادا، در مدت بازپرداخت انتخاب‌شده محاسبه می‌شود. Cap rate برابر است با NOI تقسیم بر قیمت خرید. بازده نقدی برابر است با جریان نقدی سالانه تقسیم بر پیش‌پرداخت؛ هزینه‌های بستن معامله، مالیات انتقال زمین، هزینه‌ی وکیل و تعمیرات، پول نقدی را که می‌گذارید افزایش و این عدد را کاهش می‌دهند. نتایج شامل مالیات بر درآمد، بازپرداخت اصل وام یا تغییر ارزش ملک نیست.</p>
+          <p class="small muted">نحوه‌ی محاسبه: NOI برابر است با درآمد مؤثر اجاره منهای هزینه‌های جاری (شارژ ساختمان ضرب در ۱۲ هم جزو آن است). اقساط وام با پرداخت ماهانه و ترکیب سود شش‌ماهه به روش کانادا محاسبه می‌شود. Cap rate برابر است با NOI تقسیم بر قیمت خرید. بازده نقدی برابر است با جریان نقدی سالانه تقسیم بر پیش‌پرداخت به‌علاوه‌ی مالیات انتقال زمین (بدون بازپرداخت خریدار خانه‌ی اول)؛ هزینه‌ی وکیل و تعمیرات را حساب نمی‌کند. اجاره‌ی سربه‌سر اجاره‌ای است که جریان نقدی را صفر می‌کند. نتیجه شامل مالیات بر درآمد، بازپرداخت اصل وام یا تغییر ارزش ملک نیست.</p>
         </div>
       </div>
     </div>
@@ -2021,6 +2202,9 @@ article.teaser:hover h3{text-decoration:none}
           </fieldset>
           <input type="hidden" name="request" id="c-request" value="">
           <p class="req-note" id="req-note" hidden><b>درخواست تحلیل ملک سرمایه‌گذاری.</b> نشانی یا لینک آگهی، قیمت درخواستی، اجاره‌های فعلی (اگر می‌دانید) و انتظارتان از این ملک را بنویسید.</p>
+          <p class="req-note" id="req-note-pc" hidden><b>بررسی قیمت و آماده‌سازی.</b> نشانی، زمانی که تقریباً می‌خواهید بفروشید، وضعیت خانه و تعمیرات انجام‌شده، و مبلغ خالصی که لازم دارید را بنویسید. پاسخ می‌دهم که فروش‌های مشابه، قیمت‌گذاری و آماده‌سازی را چطور بررسی می‌کنم. بدون هیچ تعهدی.</p>
+          <div class="deal-box" id="deal-box" hidden><h2 class="as-h3">بررسی معامله‌ی شما</h2><dl data-deal-lines></dl><label class="check" for="c-deal-on"><input type="checkbox" id="c-deal-on"> <span>این اعداد همراه پیام من ارسال شود</span></label></div>
+          <input type="hidden" name="deal_screen" id="c-deal" value="">
           <div class="r2">
             <div class="field"><label for="c-name">نام</label><input id="c-name" maxlength="100" name="name" autocomplete="name" required aria-describedby="e-name"><span class="err" id="e-name" hidden>لطفاً نام خود را وارد کنید.</span></div>
             <div class="field"><label for="c-phone">تلفن <span class="muted" style="font-weight:400">(اختیاری)</span></label><input id="c-phone" maxlength="30" name="phone" type="tel" autocomplete="tel" dir="ltr" aria-describedby="e-phone"><span class="err" id="e-phone" hidden>لطفاً شماره تلفن را بررسی کنید یا آن را خالی بگذارید.</span></div>
@@ -2030,7 +2214,7 @@ article.teaser:hover h3{text-decoration:none}
           <div class="field" style="max-width:260px"><label for="c-lang">زبان ترجیحی</label><select id="c-lang" name="language"><option value="fa" selected>فارسی</option><option value="en" lang="en">English</option></select></div>
           <div class="field"><label class="check" for="c-consent"><input type="checkbox" id="c-consent" name="consent" value="yes" required aria-describedby="e-consent"> <span><mark class="tbc" data-approve="consent-wording-fa">علی می‌تواند از این اطلاعات برای پاسخ به این درخواست استفاده کند، طبق آنچه در سیاست حفظ حریم خصوصی آمده است.</mark> <a href="#privacy" hreflang="en">سیاست حفظ حریم خصوصی (انگلیسی)</a></span></label><span class="err" id="e-consent" hidden>لطفاً تأیید کنید تا علی بتواند پاسخ دهد.</span></div>
           <input type="hidden" name="consent_version" value="2026-10-03-fa">
-          <input type="hidden" name="form_version" value="contact-2-fa">
+          <input type="hidden" name="form_version" value="contact-3-fa">
           <input type="hidden" name="source_page" value="">
           <input type="hidden" name="source_cta" value="">
           <input type="hidden" name="timestamp" value="">
@@ -2269,14 +2453,12 @@ Not used
   <div class="wrap">
     <a class="brand" dir="ltr" href="#fa-home" aria-label="علی بیات، صفحه‌ی اصلی"><svg class="mark" viewBox="0 0 54 48" aria-hidden="true" focusable="false"><path class="roof" d="M4 26 L27 5 L50 26" fill="none" stroke-width="6" stroke-linecap="square"/><path d="M13 30 V44 H41 V30" fill="none" stroke="currentColor" stroke-width="4"/></svg><span class="wm"><b>Ali Bayat</b><small>REALTOR®</small></span></a>
     <nav class="nav" aria-label="منوی اصلی">
-      <a href="#fa-home">خانه</a>
-      <a href="#fa-buy">خرید</a>
-      <a href="#fa-sell">فروش</a>
-      <a href="#fa-invest">سرمایه‌گذاری</a>
+      <a class="pri" href="#fa-buy">خرید</a>
+      <a class="pri" href="#fa-sell">فروش</a>
+      <a class="pri" href="#fa-invest">سرمایه‌گذاری</a>
+      <span class="navsep" aria-hidden="true"></span>
       <span class="has-sub"><a href="#fa-neighbourhoods">محله‌ها</a><button class="sub-btn" type="button" aria-expanded="false" aria-controls="nb-sub" aria-label="نمایش راهنمای محله‌ها"><svg viewBox="0 0 12 12" width="10" height="10" aria-hidden="true" focusable="false"><path d="M2 4.5 6 8.5 10 4.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button><span class="sub" id="nb-sub"><a href="#fa-north-york">نورث‌یورک</a><a href="#fa-thornhill">تورنهیل</a><a href="#fa-richmond-hill">ریچموند هیل</a><a href="#fa-vaughan">وان</a><a href="#fa-toronto">تورنتو</a></span></span>
       <a href="#fa-resources">منابع</a>
-      <a href="#fa-about">درباره</a>
-      <a href="#fa-contact">تماس</a>
       <a class="lang" href="#home" lang="en" hreflang="en" data-lang-switch>English</a>
       <a class="btn sm talk" href="#fa-contact" style="color:var(--brass-ink)">گفتگو با علی</a>
     </nav>
@@ -2287,16 +2469,14 @@ Not used
   </div>
   <div class="drawer" id="drawer" hidden>
     <nav class="wrap" aria-label="منوی موبایل">
-      <a href="#fa-home">خانه</a>
       <a href="#fa-buy">خرید</a>
       <a href="#fa-sell">فروش</a>
       <a href="#fa-invest">سرمایه‌گذاری</a>
-      <a href="#fa-neighbourhoods">محله‌ها</a>
-      <a href="#fa-resources">منابع</a>
-      <a href="#fa-about">درباره</a>
-      <a href="#fa-contact">تماس</a>
-      <a class="minor lang" href="#home" lang="en" hreflang="en" data-lang-switch>English · انگلیسی</a>
       <a class="btn" href="#fa-contact" style="color:var(--brass-ink)">گفتگو با علی</a>
+      <a class="lang-row" href="#home" lang="en" hreflang="en" data-lang-switch><span>English · انگلیسی</span></a>
+      <a class="sec" href="#fa-neighbourhoods">محله‌ها</a>
+      <a class="sec" href="#fa-resources">منابع</a>
+      <a class="sec" href="#fa-about">درباره‌ی علی</a>
     </nav>
   </div>
 </header>
@@ -2424,6 +2604,7 @@ const AREAS=[
   housing:"High-rise condos cluster around North York Centre, Sheppard-Yonge and Finch. A few blocks off Yonge, many streets have original post-war bungalows alongside newer custom-built homes, with townhouses and low-rise condos in between.",
   pockets:[["Yonge corridor towers","High-rise condos at North York Centre, Sheppard-Yonge and Finch","Line 1; Line 4 from Sheppard-Yonge","Monthly fees, reserve fund, rental ratio"],
            ["Interior bungalow streets","Post-war bungalows and newer custom rebuilds, a few blocks off Yonge","Highway 401 and the Don Valley Parkway nearby","Zoning and lot size for a renovation or rebuild"]],
+  compare:{"cap": "North York: Yonge corridor condos compared with interior bungalow streets", "heads": ["Yonge corridor condo (Sheppard-Yonge, North York Centre, Finch)", "Interior bungalow or rebuild (a few blocks off Yonge)"], "rows": [["What you're buying", "A unit in a building, plus a share of the common elements", "Land and a house. On many streets the lot is most of the value"], ["Monthly carrying cost", "Property tax plus condo fees. Fees follow the corporation's budget, so reserve fund health matters", "Property tax plus your own upkeep, with no monthly fee"], ["Closing costs", "Ontario and Toronto land transfer tax, plus a lawyer's review of the status certificate", "Ontario and Toronto land transfer tax, plus survey, title and inspection costs"], ["Getting around", "Walk to Line 1 (Line 4 from Sheppard-Yonge)", "Bus to the subway, or drive to Highway 401 and the Don Valley Parkway"], ["Check first", "Status certificate: reserve fund, special assessments, rental ratio, fee history", "Zoning, lot size and permits if you plan to renovate, add a unit or rebuild"], ["Competing with", "Other units in the same building, so pricing is relative", "Families and builders, so the lot can set the price"], ["Investor angle", "Rent against fees. Check the building's rental rules first", "Only count extra units that zoning and permits actually allow"]], "note": "Both sides of this comparison pay the same land transfer tax, since both are in the City of Toronto."},
   lifestyle:"Yonge Street has a wide mix of restaurants and shops, including many Persian businesses north of Sheppard. Mel Lastman Square hosts community events, and Yorkdale and Fairview are a short drive away.",
   transit:["Line 1 Yonge–University: North York Centre, Sheppard-Yonge and Finch stations","Line 4 Sheppard east from Sheppard-Yonge","Highway 401 and the Don Valley Parkway nearby"],
   amenities:["Mel Lastman Square and North York Civic Centre","Earl Bales Park and the West Don trails","North York Central Library","Yorkdale and Fairview shopping centres"],
@@ -2443,6 +2624,7 @@ const AREAS=[
   pockets:[["Historic village","Some of the oldest homes in the region, near Yonge and Centre","Viva on Yonge","Heritage-area rules that must be disclosed"],
            ["Established subdivisions","Detached and semi-detached homes from the 1970s to the 1990s","YRT/Viva; Highways 407, 404 and 400 nearby","Age of kitchens and baths; budget for what an inspection finds"],
            ["Yonge, Bathurst and Centre corridors","Newer condos and townhouses","Viva; Yonge North Subway Extension planned","Construction can affect nearby streets for a while"]],
+  compare:{"cap": "Thornhill: the Vaughan side compared with the Markham side", "heads": ["West of Yonge (City of Vaughan)", "East of Yonge (City of Markham)"], "rows": [["Who sets the municipal rate", "The City of Vaughan", "The City of Markham"], ["Land transfer tax", "Ontario tax only, with no municipal land transfer tax", "Ontario tax only, with no municipal land transfer tax"], ["Property tax", "Municipal, York Region and school portions. Only the municipal portion depends on the city", "Municipal, York Region and school portions. Only the municipal portion depends on the city"], ["Rules and services", "Zoning, second-suite rules and city services follow Vaughan", "Zoning, second-suite rules and city services follow Markham"], ["Check first", "Last year's tax bill for the exact address, and Vaughan's rules for what you plan to do", "Last year's tax bill for the exact address, and Markham's rules for what you plan to do"], ["Pricing", "Compare to recent sales on the same side of Yonge", "Compare to recent sales on the same side of Yonge"]], "note": "The land transfer tax is the same on both sides. What changes is the municipal tax rate and the rulebook, so always confirm the city for the exact address."},
   lifestyle:"Mature trees, ravines and parks, with shopping at Promenade and along Yonge. Community centres and places of worship serve a diverse population.",
   transit:["York Region Transit and Viva rapid transit on Yonge and Highway 7","Finch station on Line 1 is a short trip south","Highways 407, 404 and 400 nearby"],
   amenities:["Thornhill Village heritage area","Promenade Shopping Centre","Pomona Mills Park and the Don River trails","Thornhill Community Centre"],
@@ -2460,6 +2642,7 @@ const AREAS=[
   pockets:[["Old downtown and Mill Pond","Older core and established family neighbourhoods","Viva and the Richmond Hill GO line","Home age and lot size; compare within the neighbourhood"],
            ["Yonge and Highway 7 corridors","Townhouses and condos","Viva Blue on Yonge, Viva Pink on Highway 7; Langstaff GO","Subway extension toward Richmond Hill Centre is planned"],
            ["North: Oak Ridges and Lake Wilcox","Newer subdivisions, lakes and trails","Gormley GO; Highway 404","Moraine planning rules can limit additions"]],
+  compare:{"cap": "Richmond Hill: the Yonge, Major Mackenzie and GO side compared with the north end", "heads": ["Yonge, Major Mackenzie and the GO line", "North: Oak Ridges and Lake Wilcox"], "rows": [["Typical homes", "Older core, established streets, townhouses and condos on Yonge and Highway 7", "Newer subdivisions, with lakes and trails close by"], ["Getting around", "Viva Blue on Yonge, Viva Pink on Highway 7, Richmond Hill GO line (Langstaff, Richmond Hill)", "Gormley GO and Highway 404, with more driving day to day"], ["Land transfer tax", "Ontario tax only", "Ontario tax only"], ["Planning rules", "Standard city rules. A subway extension toward Richmond Hill Centre is planned", "Parts fall under Oak Ridges Moraine rules, which can limit additions and other changes"], ["Check first", "Home age, lot size and walking distance to the stop you'd actually use", "Whether the Moraine applies before you plan an addition, pool or second unit"], ["Pricing", "Compare within the neighbourhood, not city-wide", "Compare within the neighbourhood, not city-wide"]], "note": "Neither end carries Toronto's municipal land transfer tax. Match the pocket to your daily commute before you compare prices."},
   lifestyle:"Lakes and trails in the north end, the Mill Pond area near the old downtown, and a wide range of restaurants and shops along Yonge.",
   transit:["Viva Blue rapid transit on Yonge; Viva Pink along Highway 7","Richmond Hill GO line, with stations at Langstaff, Richmond Hill and Gormley","Highways 404 and 407 nearby"],
   amenities:["Richmond Green Sports Centre and Park","Lake Wilcox and the Oak Ridges Moraine trails","Mill Pond Park","Richmond Hill Centre for the Performing Arts"],
@@ -2560,13 +2743,14 @@ function cmpTable(cap,heads,rows){
   return `<div class="cmp-wrap"><table class="cmp" role="table"><caption>${cap}</caption><thead role="rowgroup"><tr role="row">${heads.map(h=>`<th scope="col" role="columnheader">${h}</th>`).join("")}</tr></thead><tbody role="rowgroup">${rows.map(r=>`<tr role="row"><th scope="row" role="rowheader">${r[0]}</th>${r.slice(1).map((c,i)=>`<td role="cell" data-label="${heads[i+1]}">${c}</td>`).join("")}</tr>`).join("")}</tbody></table></div>`}
 const ticksUl=arr=>`<ul class="ticks">${arr.map(x=>`<li><span>${x}</span></li>`).join("")}</ul>`;
 
-const U_EN={fa:false,pre:"",ar:"→",home:"Home",hub:"Neighbourhoods",
+const ccWidget=(c,href,bare)=>`<div class="cc" data-cc${bare?' style="background:none;padding:0"':""}><div class="field"><label for="cc-price">${c.l}</label><div class="money"${c.dir||""}><span aria-hidden="true">$</span><input id="cc-price" inputmode="decimal" placeholder="900,000" autocomplete="off"></div></div><a class="btn ghost sm" href="${href}" data-cc-go>${c.b}</a><p class="small muted">${c.n}</p></div>`;
+const U_EN={fa:false,pre:"",ar:"→",cc:{t:"Check closing costs here",l:"Target price",b:"Compare North vs. South of Steeles",n:"Ontario and Toronto land transfer tax side by side. Nothing is sent to anyone."},home:"Home",hub:"Neighbourhoods",
   ph:"Neighbourhoods",onThis:"On this page",
   cta:n=>`Talk to Ali about ${n}`,
-  sec:{ov:"Overview",housing:"Housing & pockets",transit:"Getting around",life:"Lifestyle & amenities",market:"Market",decide:"Buyer, seller, investor",checks:"Before you offer",guides:"Related guides",listings:"Listings"},
+  sec:{ov:"Overview",housing:"Housing & pockets",compare:"Compare the pockets",transit:"Getting around",life:"Lifestyle & amenities",market:"Market",decide:"Buyer, seller, investor",checks:"Before you offer",guides:"Related guides",listings:"Listings"},
   ruleLabel:"Land transfer tax",ruleTo:"City of Toronto: two land transfer taxes.",ruleToTxt:"The municipal tax adds about $16,475 on a $1,000,000 purchase, on top of the provincial tax.",
   ruleYork:"York Region: provincial tax only.",ruleYorkTxt:"The same $1,000,000 purchase closes about $16,475 cheaper than in the City of Toronto.",ruleLink:"Estimate yours",
-  pockCap:n=>`${n}: housing, transit and what to check, by pocket`,pock:"Pocket",around:"Getting around",first:"Check first",
+  pockCap:n=>`${n}: housing, transit and what to check, by pocket`,dim:"Compare",same:"The same on both sides",pock:"Pocket",around:"Getting around",first:"Check first",
   roleLabel:{buyer:"Buying",seller:"Selling",investor:"Investing"},how:{buyer:"How buying works",seller:"How selling works",investor:"How analysis works"},
   checkIntro:"The questions I ask before any offer here. They're things to confirm, not predictions.",
   school:"School boundaries change and vary street by street. Confirm them with the board ({boards}) for the exact address.",
@@ -2580,12 +2764,12 @@ const U_EN={fa:false,pre:"",ar:"→",home:"Home",hub:"Neighbourhoods",
   relatedCompare:"Compare all neighbourhood guides",
   side:n=>[`Thinking about ${n}?`,"I can walk you through recent sales, what your budget buys here, or what your home might sell for.","Talk to Ali"],otherAreas:"Other areas",
   crumbHome:"#home",hubHash:"#neighbourhoods",contact:"#contact",ltt:"#guide-land-transfer-tax",buyH:"#buy",sellH:"#sell",invH:"#invest"};
-const U_FA={fa:true,pre:"fa-",ar:"←",home:"خانه",hub:"محله‌ها",onThis:"در این صفحه",
+const U_FA={fa:true,pre:"fa-",ar:"←",cc:{t:"هزینه‌ی بستن معامله در اینجا",l:"قیمت هدف",b:"مقایسه‌ی دو طرف استیلز",n:"مالیات انتقال زمین انتاریو و تورنتو کنار هم. چیزی برای کسی ارسال نمی‌شود.",dir:' dir="ltr"'},home:"خانه",hub:"محله‌ها",onThis:"در این صفحه",
   cta:n=>`گفتگو با علی درباره‌ی ${n}`,
-  sec:{ov:"نگاه کلی",housing:"مسکن و بخش‌های محله",transit:"رفت‌وآمد",life:"سبک زندگی و امکانات",decide:"خریدار، فروشنده، سرمایه‌گذار",checks:"پیش از پیشنهاد",guides:"راهنماهای مرتبط"},
+  sec:{ov:"نگاه کلی",housing:"مسکن و بخش‌های محله",compare:"مقایسه‌ی بخش‌های محله",transit:"رفت‌وآمد",life:"سبک زندگی و امکانات",decide:"خریدار، فروشنده، سرمایه‌گذار",checks:"پیش از پیشنهاد",guides:"راهنماهای مرتبط"},
   ruleLabel:"مالیات انتقال زمین",ruleTo:"شهر تورنتو: دو مالیات انتقال زمین.",ruleToTxt:"مالیات شهرداری برای خرید ۱٬۰۰۰٬۰۰۰ دلاری حدود ۱۶٬۴۷۵ دلار علاوه بر مالیات استانی اضافه می‌کند.",
   ruleYork:"منطقه‌ی یورک: فقط مالیات استانی.",ruleYorkTxt:"همان خرید ۱٬۰۰۰٬۰۰۰ دلاری حدود ۱۶٬۴۷۵ دلار کمتر از شهر تورنتو هزینه‌ی بستن معامله دارد.",ruleLink:"محاسبه‌ی مالیات شما",
-  pockCap:n=>`${n}: مسکن، رفت‌وآمد و نکته‌های بررسی، به تفکیک بخش‌های محله`,pock:"بخش محله",around:"رفت‌وآمد",first:"اول بررسی کنید",
+  pockCap:n=>`${n}: مسکن، رفت‌وآمد و نکته‌های بررسی، به تفکیک بخش‌های محله`,dim:"مقایسه",same:"در هر دو طرف یکسان است",pock:"بخش محله",around:"رفت‌وآمد",first:"اول بررسی کنید",
   roleLabel:{buyer:"خریدار",seller:"فروشنده",investor:"سرمایه‌گذار"},how:{buyer:"مراحل خرید",seller:"مراحل فروش",investor:"تحلیل ملک"},
   checkIntro:"پرسش‌هایی که پیش از هر پیشنهاد در این محله می‌پرسم. این‌ها نکته‌هایی برای بررسی‌اند، نه پیش‌بینی.",
   school:"محدوده‌ی مدارس تغییر می‌کند و از خیابانی به خیابان دیگر فرق دارد. برای نشانی دقیق از هیئت آموزشی ({boards}) استعلام کنید.",
@@ -2603,7 +2787,7 @@ const U_FA={fa:true,pre:"fa-",ar:"←",home:"خانه",hub:"محله‌ها",onT
 function buildAreaPage(a,fa){
   const U=fa?U_FA:U_EN,d=fa?AREAS_FA[a.slug]:a,P=U.pre,ar=`<span class="ar" aria-hidden="true">${U.ar}</span>`,to=a.region==="City of Toronto";
   const others=AREAS.filter(x=>x.slug!==a.slug),name=d.name;
-  const secs=[["ov"],["housing"],["transit"],["life"],["market","market-data"],["decide"],["checks"],["guides"],["listings","idx"]].filter(([k])=>U.sec[k]);
+  const secs=[["ov"],["housing"],...(d.compare?[["compare"]]:[]),["transit"],["life"],["market","market-data"],["decide"],["checks"],["guides"],["listings","idx"]].filter(([k])=>U.sec[k]);
   const split=d.split?`<dl class="split">${d.split.map(([k,v])=>`<div><dt>${k}</dt><dd>${v}</dd></div>`).join("")}</dl>`:"";
   const rule=`<aside class="rule" aria-label="${U.ruleLabel}"><span class="big" dir="ltr">${to?"+$16,475":"$0"}</span><div><p><b>${to?U.ruleTo:U.ruleYork}</b> ${to?U.ruleToTxt:U.ruleYorkTxt} <a class="link" href="${U.ltt}">${U.ruleLink} ${ar}</a></p>${d.ruleNote?`<p class="small muted">${d.ruleNote}</p>`:""}</div>${split}</aside>`;
   const pockets=cmpTable(U.pockCap(name),[U.pock,U.around,U.first],d.pockets.map(([n,h,t,c])=>[`<b>${n}</b><span class="sub">${h}</span>`,t,c]));
@@ -2631,6 +2815,7 @@ function buildAreaPage(a,fa){
       ${rule}
       <section class="asec" id="${P}ov"><h2>${U.sec.ov}</h2><div class="body">${d.overview.map(p=>`<p>${p}</p>`).join("")}${perspective}</div></section>
       <section class="asec" id="${P}housing"><h2>${U.sec.housing}</h2><div class="body wide"><p>${d.housing}</p><div class="types">${a.types.map(t=>`<figure><div class="dwg" data-dwg="${t}"></div><figcaption>${(fa?TYPES_FA:TYPES)[t]}</figcaption></figure>`).join("")}</div>${pockets}</div></section>
+      ${d.compare?`<section class="asec" id="${P}compare"><h2>${U.sec.compare}</h2><div class="body wide">${cmpTable(d.compare.cap,[U.dim,...d.compare.heads],d.compare.rows.filter(r=>r[1]!==r[2]).map(r=>[`<b>${r[0]}</b>`,r[1],r[2]]))}${d.compare.rows.some(r=>r[1]===r[2])?`<h3 class="as-h3" style="margin-top:1.25rem">${U.same}</h3>${ticksUl(d.compare.rows.filter(r=>r[1]===r[2]).map(r=>`<b>${r[0]}:</b> ${r[1]}`))}`:""}${d.compare.note?`<p class="small muted">${d.compare.note}</p>`:""}</div></section>`:""}
       <section class="asec" id="${P}transit"><h2>${U.sec.transit}</h2><div class="body">${ticksUl(d.transit)}</div></section>
       <section class="asec" id="${P}life"><h2>${U.sec.life}</h2><div class="body"><p>${d.lifestyle}</p>${ticksUl(d.amenities)}</div></section>
       ${market}
@@ -2641,6 +2826,7 @@ function buildAreaPage(a,fa){
     </div>
     <div class="aside" style="padding-top:2.25rem">
       <div class="box tint"><h3>${sh}</h3><p>${sp}</p><a class="btn" href="${U.contact}" data-cta="area-sidebar">${sb}</a></div>
+      <div class="box"><h3>${U.cc.t}</h3>${ccWidget(U.cc,U.ltt,true)}</div>
       <div class="box"><h3>${U.otherAreas}</h3><ul class="nolist small">${others.map(o=>`<li><a class="link" href="#${P}${o.slug}">${fa?AREAS_FA[o.slug].name:o.name} ${ar}</a></li>`).join("")}</ul></div>
     </div><!-- /.aside -->
   </div>`}
@@ -2648,7 +2834,7 @@ function renderArea(a){return buildAreaPage(a,false)}
 function renderAreaFa(a){return buildAreaPage(a,true)}
 
 /* ---------- Farsi neighbourhood guides (same facts as AREAS, written in Persian) ---------- */
-const AREAS_FA={"north-york": {"name": "نورث‌یورک", "region": "شهر تورنتو", "where": "یانگ و شپرد", "tagline": "برج‌های کاندو در امتداد خیابان یانگ و خیابان‌های آرام مسکونی چند بلوک آن‌طرف‌تر.", "facts": [["شهرداری", "شهر تورنتو"], ["محور اصلی", "خیابان یانگ"], ["مترو", "خطوط ۱ و ۴"], ["هیئت‌های آموزشی", "TDSB و TCDSB"]], "overview": ["نورث‌یورک تا سال ۱۹۹۸ شهری مستقل بود و بعد بخشی از تورنتو شد. امروز بخش بزرگی از شمال شهر را در بر می‌گیرد؛ از محله‌های خانوادگیِ جاافتاده تا یکی از شلوغ‌ترین کریدورهای کاندو در منطقه‌ی بزرگ تورنتو در امتداد خیابان یانگ."], "housing": "کاندوهای بلندمرتبه در اطراف North York Centre، Sheppard-Yonge و Finch متمرکزند. چند بلوک دورتر از یانگ، در بسیاری از خیابان‌ها خانه‌های ویلایی یک‌طبقه‌ی پس از جنگ در کنار خانه‌های نوساز سفارشی قرار دارند و تاون‌هاوس‌ها و کاندوهای کم‌ارتفاع هم در این میان دیده می‌شوند.", "lifestyle": "خیابان یانگ پر از رستوران و مغازه‌های متنوع است، از جمله کسب‌وکارهای ایرانی فراوان در شمال شپرد. میدان Mel Lastman میزبان رویدادهای محلی است و مراکز خرید Yorkdale و Fairview با ماشین فاصله‌ی کمی دارند.", "transit": ["خط ۱ مترو (Yonge–University): ایستگاه‌های North York Centre، Sheppard-Yonge و Finch", "خط ۴ شپرد به سمت شرق از ایستگاه Sheppard-Yonge", "نزدیکی به بزرگراه 401 و Don Valley Parkway"], "amenities": ["میدان Mel Lastman و North York Civic Centre", "پارک Earl Bales و مسیرهای West Don", "کتابخانه‌ی مرکزی نورث‌یورک", "مراکز خرید Yorkdale و Fairview"], "buyer": ["عرضه‌ی کاندو زیاد است؛ واحد را با واحدهای دیگر همان ساختمان مقایسه کنید", "در خیابان‌های ویلایی ممکن است بیشتر برای زمین پول بدهید؛ آن را مثل زمین ساخت‌وساز مجدد قیمت‌گذاری کنید"], "seller": ["در کاندو، رقبای شما همان ساختمان‌اند؛ پس قیمت‌گذاری و نحوه‌ی ارائه تعیین‌کننده است", "خانه‌های روی زمین‌های بزرگ‌تر علاوه بر خانواده‌ها، سازنده‌ها را هم جذب می‌کنند", "فاصله‌ی پیاده تا ایستگاه مترو یک امتیاز واقعی فروش است؛ آن را برجسته کنید"], "investor": ["ابتدا هزینه‌ی ماهانه‌ی نگهداری را حساب کنید؛ شارژ ساختمان و قوانین اجاره درآمد را تعیین می‌کنند", "در خیابان‌های کم‌تراکم فقط روی واحدهای اضافه‌ای حساب کنید که منطقه‌بندی اجازه می‌دهد"], "pockets": [["برج‌های امتداد یانگ", "کاندوهای بلندمرتبه در North York Centre، Sheppard-Yonge و Finch", "خط ۱ مترو؛ خط ۴ از ایستگاه Sheppard-Yonge", "شارژ ماهانه، صندوق ذخیره و نسبت واحدهای اجاره‌ای"], ["خیابان‌های داخلی با خانه‌های ویلایی", "خانه‌های یک‌طبقه‌ی پس از جنگ و خانه‌های نوساز سفارشی، چند بلوک آن‌طرف‌تر از یانگ", "بزرگراه 401 و Don Valley Parkway در نزدیکی", "منطقه‌بندی و اندازه‌ی زمین برای بازسازی یا ساخت دوباره"]], "checks": ["status", "zoning", "legal"]}, "thornhill": {"name": "تورنهیل", "region": "وان و مارکهام، منطقه‌ی یورک", "where": "یانگ و سنتر", "tagline": "محله‌ای جاافتاده درست شمال تورنتو که میان دو شهر تقسیم شده است.", "facts": [["شهرداری", "وان و مارکهام"], ["محورهای اصلی", "یانگ، باترست، سنتر"], ["حمل‌ونقل", "YRT/Viva، نزدیک به خط ۱"], ["هیئت‌های آموزشی", "YRDSB و YCDSB"]], "overview": ["تورنهیل درست شمال خیابان استیلز قرار دارد، که مرز تورنتو و منطقه‌ی یورک است. تورنهیل به‌تنهایی یک شهرداری نیست، و میان خانواده‌هایی محبوب است که محله‌های جاافتاده و دسترسی سریع به تورنتو می‌خواهند."], "housing": "محدوده‌ی تاریخی دهکده در نزدیکی یانگ و سنتر برخی از قدیمی‌ترین خانه‌های منطقه را دارد. بیشتر بخش‌های دیگر خانه‌های مستقل و نیمه‌مستقل دهه‌های ۷۰ تا ۹۰ میلادی هستند، با کاندوها و تاون‌هاوس‌های جدیدتر در امتداد یانگ، باترست و خیابان سنتر.", "lifestyle": "درختان کهنسال، دره‌ها و پارک‌ها، با خرید در Promenade و در امتداد یانگ. مراکز محلی و عبادتگاه‌ها به جمعیتی متنوع خدمت می‌کنند.", "transit": ["حمل‌ونقل York Region Transit و Viva در یانگ و بزرگراه 7", "ایستگاه Finch در خط ۱ مترو با کمی فاصله در جنوب", "نزدیکی به بزرگراه‌های 407، 404 و 400"], "amenities": ["محدوده‌ی تاریخی Thornhill Village", "مرکز خرید Promenade", "پارک Pomona Mills و مسیرهای رود Don", "مرکز محلی Thornhill Community Centre"], "buyer": ["پیش از مقایسه‌ی قیمت‌ها، وان یا مارکهام بودن نشانی دقیق را مشخص کنید", "خانه‌های قدیمی‌تر ممکن است به نوسازی نیاز داشته باشند؛ برایش بودجه کنار بگذارید"], "seller": ["خریدارانی که از تورنتو به شمال می‌آیند مخاطب مهمی هستند؛ رفت‌وآمد و صرفه‌جویی مالیاتی را برجسته کنید", "آشپزخانه و حمام به‌روزشده در میان خانه‌های هم‌سن شما را متمایز می‌کند"], "investor": ["محاسبه‌هایتان را با نرخ مالیات شهرداری واقعی ملک انجام دهید", "ارزش واحد را بر اجاره‌های مشابه نزدیک بنا کنید، نه میانگین تورنهیل"], "split": [["غرب یانگ", "شهر وان"], ["شرق یانگ", "شهر مارکهام"]], "ruleNote": "نرخ مالیات ملک، خدمات شهری و قوانین واحد دوم تابع شهر است. شهرداری نشانی دقیق را بررسی کنید.", "pockets": [["محدوده‌ی تاریخی دهکده", "برخی از قدیمی‌ترین خانه‌های منطقه، نزدیک یانگ و سنتر", "Viva در یانگ", "قوانین محدوده‌ی تاریخی که باید اعلام شوند"], ["شهرک‌های جاافتاده", "خانه‌های مستقل و نیمه‌مستقل دهه‌های ۷۰ تا ۹۰ میلادی", "YRT/Viva؛ بزرگراه‌های 407، 404 و 400 در نزدیکی", "سن آشپزخانه و حمام؛ برای نتیجه‌ی بازرسی بودجه کنار بگذارید"], ["کریدورهای یانگ، باترست و سنتر", "کاندوها و تاون‌هاوس‌های جدیدتر", "Viva؛ توسعه‌ی خط مترو یانگ به شمال برنامه‌ریزی شده", "ساخت‌وساز ممکن است تا مدتی بر خیابان‌های نزدیک اثر بگذارد"]], "checks": ["legal", "metro", "heritage"]}, "richmond-hill": {"name": "ریچموند هیل", "region": "منطقه‌ی یورک", "where": "یانگ و میجر مکنزی", "tagline": "محله‌های جاافتاده، شهرک‌های جدیدتر و فضای سبز در شمال.", "facts": [["شهرداری", "شهر ریچموند هیل"], ["محور اصلی", "خیابان یانگ"], ["حمل‌ونقل", "Viva و قطار GO"], ["هیئت‌های آموزشی", "YRDSB و YCDSB"]], "overview": ["ریچموند هیل در امتداد خیابان یانگ از بزرگراه 7 تا فراتر از دریاچه‌ی Wilcox به سمت شمال کشیده شده است. این شهر ترکیبی از مرکز قدیمی، محله‌های خانوادگیِ جاافتاده و شهرک‌های جدیدتر به سمت Oak Ridges است.", "این شهر جامعه‌ی ایرانی بزرگی دارد و کسب‌وکارهای ایرانی زیادی در امتداد خیابان یانگ فعال‌اند."], "housing": "بیشتر خانه‌های مستقل و نیمه‌مستقل، با تاون‌هاوس‌ها و کاندوهای متمرکز در امتداد یانگ و بزرگراه 7. اندازه‌ی زمین و سن خانه‌ها از محله‌ای به محله‌ی دیگر تفاوت زیادی دارد.", "lifestyle": "دریاچه‌ها و مسیرهای طبیعی در شمال، محدوده‌ی Mill Pond در نزدیکی مرکز قدیمی، و رستوران‌ها و مغازه‌های متنوع در امتداد یانگ.", "transit": ["خط Viva Blue در یانگ و Viva Pink در امتداد بزرگراه 7", "خط قطار GO ریچموند هیل با ایستگاه‌های Langstaff، Richmond Hill و Gormley", "نزدیکی به بزرگراه‌های 404 و 407"], "amenities": ["مرکز ورزشی و پارک Richmond Green", "دریاچه‌ی Wilcox و مسیرهای Oak Ridges Moraine", "پارک Mill Pond", "مرکز هنرهای نمایشی ریچموند هیل"], "buyer": ["در همان محله مقایسه کنید؛ سن خانه‌ها و اندازه‌ی زمین تفاوت زیادی دارد", "دسترسی به GO و Viva را با برنامه‌ی روزانه‌تان بسنجید"], "seller": ["خریداران خانواده‌دار به محدوده‌ی مدارس و پارک‌های نزدیک توجه زیادی دارند", "دسترسی به حمل‌ونقل در نزدیکی یانگ و بزرگراه 7 ارزش برجسته کردن دارد", "بر اساس فروش‌های مشابه محله‌ی خودتان قیمت‌گذاری کنید، نه میانگین کل شهر"], "investor": ["برآورد درآمد را بر اجاره‌های مشابه نزدیک بنا کنید؛ اجاره از محله‌ای به محله‌ی دیگر خیلی فرق دارد"], "pockets": [["مرکز قدیمی و Mill Pond", "مرکز قدیمی و محله‌های خانوادگیِ جاافتاده", "Viva و خط قطار GO ریچموند هیل", "سن خانه‌ها و اندازه‌ی زمین؛ در همان محله مقایسه کنید"], ["کریدورهای یانگ و بزرگراه 7", "تاون‌هاوس و کاندو", "Viva Blue در یانگ، Viva Pink در بزرگراه 7؛ ایستگاه Langstaff", "خط مترو به سمت Richmond Hill Centre برنامه‌ریزی شده است"], ["شمال: Oak Ridges و دریاچه‌ی Wilcox", "شهرک‌های جدیدتر، دریاچه و مسیرهای طبیعی", "ایستگاه GO Gormley؛ بزرگراه 404", "قوانین Moraine ممکن است اضافه‌سازی را محدود کند"]], "checks": ["legal", "moraine", "metro"]}, "vaughan": {"name": "وان", "region": "منطقه‌ی یورک", "where": "بزرگراه 7 و جین", "tagline": "محله‌های جاافتاده و یک مرکز شهر جدید که پیرامون مترو ساخته شده است.", "facts": [["شهرداری", "شهر وان"], ["محله‌ها", "وودبریج، میپل، کلاینبرگ، کنکورد"], ["مترو", "خط ۱ تا VMC"], ["هیئت‌های آموزشی", "YRDSB و YCDSB"]], "overview": ["وان از چند محله‌ی متمایز تشکیل شده است، از جمله وودبریج، میپل، کلاینبرگ، کنکورد و نیمه‌ی غربی تورنهیل، که هر کدام حال‌وهوای خودشان را دارند.", "مرکز شهر جدیدتر وان، Vaughan Metropolitan Centre (VMC)، در اطراف بزرگراه 7 و خیابان جین قرار دارد؛ با کاندوهای بلندمرتبه و ایستگاه خط ۱ مترو، که وان را مستقیماً با ریل به تورنتو وصل می‌کند."], "housing": "بیشتر خانه‌های مستقل خانوادگی در شهرک‌های جاافتاده، ملک‌های بزرگ‌تر در مناطقی مثل کلاینبرگ، تاون‌هاوس در سراسر شهر، و بازار رو به رشد کاندو در اطراف VMC.", "lifestyle": "محله‌های حومه‌ای، مرکزهای قدیمی دهکده‌ها و جاذبه‌های بزرگ، با امکانات فراوان خرید و رستوران.", "transit": ["خط ۱ مترو تا Vaughan Metropolitan Centre", "خط Viva Orange در امتداد بزرگراه 7", "خط قطار GO بری، با ایستگاه‌هایی از جمله Maple و Rutherford", "نزدیکی به بزرگراه‌های 400، 407 و 427"], "amenities": ["مرکز خرید Vaughan Mills", "پارک تفریحی Canada's Wonderland", "مجموعه‌ی هنری McMichael در کلاینبرگ", "منطقه‌ی حفاظت‌شده‌ی Boyd و مسیرهای رود Humber"], "buyer": ["در هر محله مقایسه کنید، نه با کل وان", "اگر با ماشین رفت‌وآمد می‌کنید، مسیرتان را در ساعت شلوغی امتحان کنید"], "seller": ["خریداران اغلب خانه‌ی شما را با نوسازها مقایسه می‌کنند؛ پس وضعیت و به‌روزرسانی‌ها مهم است", "نزدیکی به مترو یا ایستگاه GO امتیاز فروش مهمی است", "زمین‌های بزرگ‌تر، مثل کلاینبرگ، فروش‌های مشابه را با دقت می‌طلبند"], "investor": ["اجاره‌ها را در همان محله‌ی مشخص مقایسه کنید، نه کل وان", "عرضه‌ی جدید کاندو در اطراف می‌تواند بر اجاره‌ی قابل دستیابی و فروش مجدد اثر بگذارد؛ پروژه‌های در دست ساخت را ببینید"], "pockets": [["Vaughan Metropolitan Centre", "کاندوهای بلندمرتبه در مرکز شهر جدید", "خط ۱ مترو تا VMC؛ Viva Orange در بزرگراه 7", "شرایط پیش‌فروش و عرضه‌ی کاندوی اطراف"], ["وودبریج، میپل و کنکورد", "خانه‌های مستقل در شهرک‌های جاافتاده، به‌علاوه‌ی تاون‌هاوس", "خط قطار GO بری (از جمله Maple و Rutherford)؛ بزرگراه‌های 400، 407 و 427", "در همان محله مقایسه کنید، نه با کل وان"], ["کلاینبرگ", "ملک‌های بزرگ‌تر", "مسیر رفت‌وآمدتان را در ساعت شلوغی امتحان کنید", "زمین‌های بزرگ خریدار خاصی دارند؛ فروش‌های مشابه را با دقت انتخاب کنید"]], "checks": ["precon", "status", "legal"]}, "toronto": {"name": "تورنتو", "region": "شهر تورنتو", "where": "مرکز شهر و میدتاون", "tagline": "خانه‌های ویکتوریایی نیمه‌مستقل، خیابان‌های خانوادگی میدتاون و کاندوهای مرکز شهر.", "facts": [["شهرداری", "شهر تورنتو"], ["ترکیب مسکن", "کاندو، نیمه‌مستقل، ردیفی"], ["حمل‌ونقل", "TTC، GO، UP Express"], ["هیئت‌های آموزشی", "TDSB و TCDSB"]], "overview": ["هسته‌ی قدیمی تورنتو برخی از شناخته‌شده‌ترین خانه‌های کانادا را دارد: خانه‌های نیمه‌مستقل و ردیفی ویکتوریایی و ادواردی، نماهای Bay-and-gable و خیابان‌های اصلی پیاده‌محور. در مرکز شهر و در امتداد خطوط مترو، کاندوها بخش بزرگی از بازار هستند."], "housing": "کاندو در مرکز شهر و در امتداد خطوط حمل‌ونقل؛ خانه‌های نیمه‌مستقل و ردیفی در محله‌های قدیمی‌تر؛ خانه‌های مستقل در بخش بزرگی از میدتاون.", "lifestyle": "محله‌های پیاده‌محور، پارک‌ها و دره‌ها، و دسترسی آسان به رستوران‌ها، فرهنگ و محل کار.", "transit": ["شبکه‌ی مترو، تراموا و اتوبوس TTC", "قطار GO و UP Express از ایستگاه Union", "بزرگراه Gardiner و Don Valley Parkway"], "amenities": ["مسیرهای کنار دریاچه و جزایر تورنتو", "High Park و شبکه‌ی دره‌ها", "بیمارستان‌ها، دانشگاه‌ها و مراکز فرهنگی بزرگ", "خیابان‌های اصلی و بازارهای محله‌ها"], "buyer": ["اول خانه یا کاندو را مشخص کنید؛ بررسی‌های لازم فرق دارد", "خانه‌های قدیمی‌تر ممکن است به نوسازی سیم‌کشی یا موارد دیگر نیاز داشته باشند؛ با دقت بازرسی کنید"], "seller": ["خریداران اغلب در یک هفته چند خانه‌ی مشابه می‌بینند؛ آماده‌سازی مهم است", "پارکینگ، به‌روزرسانی‌ها و وضعیت زیرزمین را روشن ارائه کنید", "زمان‌بندی و استراتژی پیشنهادها را بر اساس فعالیت فعلی محله تعیین کنید"], "investor": ["ساختمان‌های قدیمی‌تر ممکن است هزینه‌ی نگهداری و بیمه‌ی بالاتری داشته باشند؛ در مرحله‌ی بررسی، استعلام قیمت بگیرید"], "pockets": [["کاندوهای مرکز شهر و امتداد خطوط حمل‌ونقل", "کاندو", "مترو TTC؛ قطار GO و UP Express از Union", "گواهی وضعیت و مطالعه‌ی صندوق ذخیره"], ["هسته‌ی قدیمی", "نیمه‌مستقل و ردیفی ویکتوریایی و ادواردی، نمای Bay-and-gable", "تراموا و اتوبوس TTC؛ خیابان‌های اصلی پیاده‌محور", "وضعیت قانونی واحدهای تقسیم‌شده، سیم‌کشی، پارکینگ"], ["میدتاون", "خانه‌های مستقل در بخش بزرگی از میدتاون", "مترو و اتوبوس TTC", "فروش‌های مشابه نزدیک؛ خانه‌های قدیمی را با دقت بازرسی کنید"]], "checks": ["legal", "status"]}};
+const AREAS_FA={"north-york": {"name": "نورث‌یورک", "region": "شهر تورنتو", "where": "یانگ و شپرد", "tagline": "برج‌های کاندو در امتداد خیابان یانگ و خیابان‌های آرام مسکونی چند بلوک آن‌طرف‌تر.", "facts": [["شهرداری", "شهر تورنتو"], ["محور اصلی", "خیابان یانگ"], ["مترو", "خطوط ۱ و ۴"], ["هیئت‌های آموزشی", "TDSB و TCDSB"]], "overview": ["نورث‌یورک تا سال ۱۹۹۸ شهری مستقل بود و بعد بخشی از تورنتو شد. امروز بخش بزرگی از شمال شهر را در بر می‌گیرد؛ از محله‌های خانوادگیِ جاافتاده تا یکی از شلوغ‌ترین کریدورهای کاندو در منطقه‌ی بزرگ تورنتو در امتداد خیابان یانگ."], "housing": "کاندوهای بلندمرتبه در اطراف North York Centre، Sheppard-Yonge و Finch متمرکزند. چند بلوک دورتر از یانگ، در بسیاری از خیابان‌ها خانه‌های ویلایی یک‌طبقه‌ی پس از جنگ در کنار خانه‌های نوساز سفارشی قرار دارند و تاون‌هاوس‌ها و کاندوهای کم‌ارتفاع هم در این میان دیده می‌شوند.", "lifestyle": "خیابان یانگ پر از رستوران و مغازه‌های متنوع است، از جمله کسب‌وکارهای ایرانی فراوان در شمال شپرد. میدان Mel Lastman میزبان رویدادهای محلی است و مراکز خرید Yorkdale و Fairview با ماشین فاصله‌ی کمی دارند.", "transit": ["خط ۱ مترو (Yonge–University): ایستگاه‌های North York Centre، Sheppard-Yonge و Finch", "خط ۴ شپرد به سمت شرق از ایستگاه Sheppard-Yonge", "نزدیکی به بزرگراه 401 و Don Valley Parkway"], "amenities": ["میدان Mel Lastman و North York Civic Centre", "پارک Earl Bales و مسیرهای West Don", "کتابخانه‌ی مرکزی نورث‌یورک", "مراکز خرید Yorkdale و Fairview"], "buyer": ["عرضه‌ی کاندو زیاد است؛ واحد را با واحدهای دیگر همان ساختمان مقایسه کنید", "در خیابان‌های ویلایی ممکن است بیشتر برای زمین پول بدهید؛ آن را مثل زمین ساخت‌وساز مجدد قیمت‌گذاری کنید"], "seller": ["در کاندو، رقبای شما همان ساختمان‌اند؛ پس قیمت‌گذاری و نحوه‌ی ارائه تعیین‌کننده است", "خانه‌های روی زمین‌های بزرگ‌تر علاوه بر خانواده‌ها، سازنده‌ها را هم جذب می‌کنند", "فاصله‌ی پیاده تا ایستگاه مترو یک امتیاز واقعی فروش است؛ آن را برجسته کنید"], "investor": ["ابتدا هزینه‌ی ماهانه‌ی نگهداری را حساب کنید؛ شارژ ساختمان و قوانین اجاره درآمد را تعیین می‌کنند", "در خیابان‌های کم‌تراکم فقط روی واحدهای اضافه‌ای حساب کنید که منطقه‌بندی اجازه می‌دهد"], "pockets": [["برج‌های امتداد یانگ", "کاندوهای بلندمرتبه در North York Centre، Sheppard-Yonge و Finch", "خط ۱ مترو؛ خط ۴ از ایستگاه Sheppard-Yonge", "شارژ ماهانه، صندوق ذخیره و نسبت واحدهای اجاره‌ای"], ["خیابان‌های داخلی با خانه‌های ویلایی", "خانه‌های یک‌طبقه‌ی پس از جنگ و خانه‌های نوساز سفارشی، چند بلوک آن‌طرف‌تر از یانگ", "بزرگراه 401 و Don Valley Parkway در نزدیکی", "منطقه‌بندی و اندازه‌ی زمین برای بازسازی یا ساخت دوباره"]], "checks": ["status", "zoning", "legal"], "compare": {"cap": "نورث‌یورک: کاندوهای محور یانگ در برابر خیابان‌های داخلی با خانه‌ی ویلایی یک‌طبقه یا بازسازی", "heads": ["کاندو در محور یانگ (شپرد-یانگ، نورث‌یورک سنتر، فینچ)", "ویلایی یک‌طبقه یا بازسازی (چند بلوک آن‌طرف‌تر از یانگ)"], "rows": [["چه چیزی می‌خرید", "یک واحد در ساختمان، به‌علاوه‌ی سهمی از بخش‌های مشترک", "زمین و خانه. در بسیاری از خیابان‌ها بیشترِ ارزش از آنِ زمین است"], ["هزینه‌ی ماهانه‌ی نگهداری", "مالیات ملک به‌علاوه‌ی شارژ ساختمان. شارژ از بودجه‌ی مجموعه می‌آید، پس سلامت صندوق ذخیره مهم است", "مالیات ملک به‌علاوه‌ی نگهداری خودتان، بدون شارژ ماهانه"], ["هزینه‌های بستن معامله", "مالیات انتقال زمین انتاریو و تورنتو، به‌علاوه‌ی بررسی گواهی وضعیت (Status Certificate) توسط وکیل", "مالیات انتقال زمین انتاریو و تورنتو، به‌علاوه‌ی نقشه‌برداری، بیمه‌ی سند و بازرسی"], ["رفت‌وآمد", "پیاده تا خط ۱ مترو (خط ۴ از شپرد-یانگ)", "اتوبوس تا مترو، یا با ماشین تا بزرگراه ۴۰۱ و دان‌ولی پارک‌وی"], ["اول بررسی کنید", "گواهی وضعیت: صندوق ذخیره، هزینه‌های فوق‌العاده‌ی ارزیابی‌شده، نسبت واحدهای اجاره‌ای، سابقه‌ی شارژ", "کاربری زمین (Zoning)، اندازه‌ی زمین و مجوزها، اگر قصد بازسازی، افزودن واحد یا ساخت مجدد دارید"], ["با چه کسانی رقابت می‌کنید", "واحدهای دیگر همان ساختمان؛ پس قیمت‌گذاری نسبی است", "خانواده‌ها و سازنده‌ها؛ پس زمین می‌تواند قیمت را تعیین کند"], ["نگاه سرمایه‌گذار", "اجاره در برابر شارژ. اول مقررات اجاره‌ی ساختمان را بررسی کنید", "فقط واحدهایی را حساب کنید که کاربری زمین و مجوزها واقعاً اجازه می‌دهند"]], "note": "هر دو طرف این مقایسه مالیات انتقال زمین یکسانی می‌پردازند، چون هر دو در شهر تورنتو هستند."}}, "thornhill": {"name": "تورنهیل", "region": "وان و مارکهام، منطقه‌ی یورک", "where": "یانگ و سنتر", "tagline": "محله‌ای جاافتاده درست شمال تورنتو که میان دو شهر تقسیم شده است.", "facts": [["شهرداری", "وان و مارکهام"], ["محورهای اصلی", "یانگ، باترست، سنتر"], ["حمل‌ونقل", "YRT/Viva، نزدیک به خط ۱"], ["هیئت‌های آموزشی", "YRDSB و YCDSB"]], "overview": ["تورنهیل درست شمال خیابان استیلز قرار دارد، که مرز تورنتو و منطقه‌ی یورک است. تورنهیل به‌تنهایی یک شهرداری نیست، و میان خانواده‌هایی محبوب است که محله‌های جاافتاده و دسترسی سریع به تورنتو می‌خواهند."], "housing": "محدوده‌ی تاریخی دهکده در نزدیکی یانگ و سنتر برخی از قدیمی‌ترین خانه‌های منطقه را دارد. بیشتر بخش‌های دیگر خانه‌های مستقل و نیمه‌مستقل دهه‌های ۷۰ تا ۹۰ میلادی هستند، با کاندوها و تاون‌هاوس‌های جدیدتر در امتداد یانگ، باترست و خیابان سنتر.", "lifestyle": "درختان کهنسال، دره‌ها و پارک‌ها، با خرید در Promenade و در امتداد یانگ. مراکز محلی و عبادتگاه‌ها به جمعیتی متنوع خدمت می‌کنند.", "transit": ["حمل‌ونقل York Region Transit و Viva در یانگ و بزرگراه 7", "ایستگاه Finch در خط ۱ مترو با کمی فاصله در جنوب", "نزدیکی به بزرگراه‌های 407، 404 و 400"], "amenities": ["محدوده‌ی تاریخی Thornhill Village", "مرکز خرید Promenade", "پارک Pomona Mills و مسیرهای رود Don", "مرکز محلی Thornhill Community Centre"], "buyer": ["پیش از مقایسه‌ی قیمت‌ها، وان یا مارکهام بودن نشانی دقیق را مشخص کنید", "خانه‌های قدیمی‌تر ممکن است به نوسازی نیاز داشته باشند؛ برایش بودجه کنار بگذارید"], "seller": ["خریدارانی که از تورنتو به شمال می‌آیند مخاطب مهمی هستند؛ رفت‌وآمد و صرفه‌جویی مالیاتی را برجسته کنید", "آشپزخانه و حمام به‌روزشده در میان خانه‌های هم‌سن شما را متمایز می‌کند"], "investor": ["محاسبه‌هایتان را با نرخ مالیات شهرداری واقعی ملک انجام دهید", "ارزش واحد را بر اجاره‌های مشابه نزدیک بنا کنید، نه میانگین تورنهیل"], "split": [["غرب یانگ", "شهر وان"], ["شرق یانگ", "شهر مارکهام"]], "ruleNote": "نرخ مالیات ملک، خدمات شهری و قوانین واحد دوم تابع شهر است. شهرداری نشانی دقیق را بررسی کنید.", "pockets": [["محدوده‌ی تاریخی دهکده", "برخی از قدیمی‌ترین خانه‌های منطقه، نزدیک یانگ و سنتر", "Viva در یانگ", "قوانین محدوده‌ی تاریخی که باید اعلام شوند"], ["شهرک‌های جاافتاده", "خانه‌های مستقل و نیمه‌مستقل دهه‌های ۷۰ تا ۹۰ میلادی", "YRT/Viva؛ بزرگراه‌های 407، 404 و 400 در نزدیکی", "سن آشپزخانه و حمام؛ برای نتیجه‌ی بازرسی بودجه کنار بگذارید"], ["کریدورهای یانگ، باترست و سنتر", "کاندوها و تاون‌هاوس‌های جدیدتر", "Viva؛ توسعه‌ی خط مترو یانگ به شمال برنامه‌ریزی شده", "ساخت‌وساز ممکن است تا مدتی بر خیابان‌های نزدیک اثر بگذارد"]], "checks": ["legal", "metro", "heritage"], "compare": {"cap": "تورنهیل: سمت وان در برابر سمت مارکهام", "heads": ["غرب یانگ (شهر وان)", "شرق یانگ (شهر مارکهام)"], "rows": [["چه کسی نرخ مالیات شهرداری را تعیین می‌کند", "شهر وان", "شهر مارکهام"], ["مالیات انتقال زمین", "فقط مالیات انتاریو، بدون مالیات انتقال زمین شهرداری", "فقط مالیات انتاریو، بدون مالیات انتقال زمین شهرداری"], ["مالیات ملک", "سهم شهرداری، منطقه‌ی یورک و مدارس. فقط سهم شهرداری به شهر بستگی دارد", "سهم شهرداری، منطقه‌ی یورک و مدارس. فقط سهم شهرداری به شهر بستگی دارد"], ["مقررات و خدمات", "کاربری زمین، قوانین واحد دوم و خدمات شهری از وان پیروی می‌کند", "کاربری زمین، قوانین واحد دوم و خدمات شهری از مارکهام پیروی می‌کند"], ["اول بررسی کنید", "قبض مالیات سال گذشته‌ی همان نشانی، و قوانین وان برای کاری که قصد دارید", "قبض مالیات سال گذشته‌ی همان نشانی، و قوانین مارکهام برای کاری که قصد دارید"], ["قیمت‌گذاری", "با فروش‌های اخیر در همان سمت یانگ مقایسه کنید", "با فروش‌های اخیر در همان سمت یانگ مقایسه کنید"]], "note": "مالیات انتقال زمین در هر دو طرف یکسان است. آنچه فرق می‌کند نرخ مالیات شهرداری و مقررات است؛ پس شهر نشانی دقیق را همیشه بررسی کنید."}}, "richmond-hill": {"name": "ریچموند هیل", "region": "منطقه‌ی یورک", "where": "یانگ و میجر مکنزی", "tagline": "محله‌های جاافتاده، شهرک‌های جدیدتر و فضای سبز در شمال.", "facts": [["شهرداری", "شهر ریچموند هیل"], ["محور اصلی", "خیابان یانگ"], ["حمل‌ونقل", "Viva و قطار GO"], ["هیئت‌های آموزشی", "YRDSB و YCDSB"]], "overview": ["ریچموند هیل در امتداد خیابان یانگ از بزرگراه 7 تا فراتر از دریاچه‌ی Wilcox به سمت شمال کشیده شده است. این شهر ترکیبی از مرکز قدیمی، محله‌های خانوادگیِ جاافتاده و شهرک‌های جدیدتر به سمت Oak Ridges است.", "این شهر جامعه‌ی ایرانی بزرگی دارد و کسب‌وکارهای ایرانی زیادی در امتداد خیابان یانگ فعال‌اند."], "housing": "بیشتر خانه‌های مستقل و نیمه‌مستقل، با تاون‌هاوس‌ها و کاندوهای متمرکز در امتداد یانگ و بزرگراه 7. اندازه‌ی زمین و سن خانه‌ها از محله‌ای به محله‌ی دیگر تفاوت زیادی دارد.", "lifestyle": "دریاچه‌ها و مسیرهای طبیعی در شمال، محدوده‌ی Mill Pond در نزدیکی مرکز قدیمی، و رستوران‌ها و مغازه‌های متنوع در امتداد یانگ.", "transit": ["خط Viva Blue در یانگ و Viva Pink در امتداد بزرگراه 7", "خط قطار GO ریچموند هیل با ایستگاه‌های Langstaff، Richmond Hill و Gormley", "نزدیکی به بزرگراه‌های 404 و 407"], "amenities": ["مرکز ورزشی و پارک Richmond Green", "دریاچه‌ی Wilcox و مسیرهای Oak Ridges Moraine", "پارک Mill Pond", "مرکز هنرهای نمایشی ریچموند هیل"], "buyer": ["در همان محله مقایسه کنید؛ سن خانه‌ها و اندازه‌ی زمین تفاوت زیادی دارد", "دسترسی به GO و Viva را با برنامه‌ی روزانه‌تان بسنجید"], "seller": ["خریداران خانواده‌دار به محدوده‌ی مدارس و پارک‌های نزدیک توجه زیادی دارند", "دسترسی به حمل‌ونقل در نزدیکی یانگ و بزرگراه 7 ارزش برجسته کردن دارد", "بر اساس فروش‌های مشابه محله‌ی خودتان قیمت‌گذاری کنید، نه میانگین کل شهر"], "investor": ["برآورد درآمد را بر اجاره‌های مشابه نزدیک بنا کنید؛ اجاره از محله‌ای به محله‌ی دیگر خیلی فرق دارد"], "pockets": [["مرکز قدیمی و Mill Pond", "مرکز قدیمی و محله‌های خانوادگیِ جاافتاده", "Viva و خط قطار GO ریچموند هیل", "سن خانه‌ها و اندازه‌ی زمین؛ در همان محله مقایسه کنید"], ["کریدورهای یانگ و بزرگراه 7", "تاون‌هاوس و کاندو", "Viva Blue در یانگ، Viva Pink در بزرگراه 7؛ ایستگاه Langstaff", "خط مترو به سمت Richmond Hill Centre برنامه‌ریزی شده است"], ["شمال: Oak Ridges و دریاچه‌ی Wilcox", "شهرک‌های جدیدتر، دریاچه و مسیرهای طبیعی", "ایستگاه GO Gormley؛ بزرگراه 404", "قوانین Moraine ممکن است اضافه‌سازی را محدود کند"]], "checks": ["legal", "moraine", "metro"], "compare": {"cap": "ریچموند هیل: سمت یانگ، میجر مکنزی و قطار GO در برابر شمال شهر", "heads": ["یانگ، میجر مکنزی و خط GO", "شمال: اوک ریجز و دریاچه‌ی ویلکاکس"], "rows": [["خانه‌های رایج", "هسته‌ی قدیمی، خیابان‌های مستقر، تاون‌هاوس و کاندو در یانگ و بزرگراه ۷", "محله‌های جدیدتر، با دریاچه و مسیرهای پیاده‌روی نزدیک"], ["رفت‌وآمد", "Viva Blue در یانگ، Viva Pink در بزرگراه ۷، خط GO ریچموند هیل (ایستگاه‌های Langstaff و Richmond Hill)", "GO ایستگاه Gormley و بزرگراه ۴۰۴، با رانندگی بیشتر در روزمره"], ["مالیات انتقال زمین", "فقط مالیات انتاریو", "فقط مالیات انتاریو"], ["قوانین طرح‌ریزی", "قوانین معمول شهر. گسترش مترو به‌سمت Richmond Hill Centre در برنامه است", "بخش‌هایی مشمول قوانین Oak Ridges Moraine هستند که می‌تواند افزودن ساختمان و تغییرات دیگر را محدود کند"], ["اول بررسی کنید", "قدمت خانه، اندازه‌ی زمین و فاصله‌ی پیاده تا ایستگاهی که واقعاً استفاده می‌کنید", "پیش از برنامه‌ریزی برای الحاقیه، استخر یا واحد دوم، بررسی کنید که قوانین Moraine شامل ملک می‌شود یا نه"], ["قیمت‌گذاری", "در همان محله مقایسه کنید، نه در کل شهر", "در همان محله مقایسه کنید، نه در کل شهر"]], "note": "هیچ‌کدام از دو سمت مالیات انتقال زمین شهرداری تورنتو را ندارند. پیش از مقایسه‌ی قیمت‌ها، بخش محله را با رفت‌وآمد روزانه‌ی خودتان تطبیق دهید."}}, "vaughan": {"name": "وان", "region": "منطقه‌ی یورک", "where": "بزرگراه 7 و جین", "tagline": "محله‌های جاافتاده و یک مرکز شهر جدید که پیرامون مترو ساخته شده است.", "facts": [["شهرداری", "شهر وان"], ["محله‌ها", "وودبریج، میپل، کلاینبرگ، کنکورد"], ["مترو", "خط ۱ تا VMC"], ["هیئت‌های آموزشی", "YRDSB و YCDSB"]], "overview": ["وان از چند محله‌ی متمایز تشکیل شده است، از جمله وودبریج، میپل، کلاینبرگ، کنکورد و نیمه‌ی غربی تورنهیل، که هر کدام حال‌وهوای خودشان را دارند.", "مرکز شهر جدیدتر وان، Vaughan Metropolitan Centre (VMC)، در اطراف بزرگراه 7 و خیابان جین قرار دارد؛ با کاندوهای بلندمرتبه و ایستگاه خط ۱ مترو، که وان را مستقیماً با ریل به تورنتو وصل می‌کند."], "housing": "بیشتر خانه‌های مستقل خانوادگی در شهرک‌های جاافتاده، ملک‌های بزرگ‌تر در مناطقی مثل کلاینبرگ، تاون‌هاوس در سراسر شهر، و بازار رو به رشد کاندو در اطراف VMC.", "lifestyle": "محله‌های حومه‌ای، مرکزهای قدیمی دهکده‌ها و جاذبه‌های بزرگ، با امکانات فراوان خرید و رستوران.", "transit": ["خط ۱ مترو تا Vaughan Metropolitan Centre", "خط Viva Orange در امتداد بزرگراه 7", "خط قطار GO بری، با ایستگاه‌هایی از جمله Maple و Rutherford", "نزدیکی به بزرگراه‌های 400، 407 و 427"], "amenities": ["مرکز خرید Vaughan Mills", "پارک تفریحی Canada's Wonderland", "مجموعه‌ی هنری McMichael در کلاینبرگ", "منطقه‌ی حفاظت‌شده‌ی Boyd و مسیرهای رود Humber"], "buyer": ["در هر محله مقایسه کنید، نه با کل وان", "اگر با ماشین رفت‌وآمد می‌کنید، مسیرتان را در ساعت شلوغی امتحان کنید"], "seller": ["خریداران اغلب خانه‌ی شما را با نوسازها مقایسه می‌کنند؛ پس وضعیت و به‌روزرسانی‌ها مهم است", "نزدیکی به مترو یا ایستگاه GO امتیاز فروش مهمی است", "زمین‌های بزرگ‌تر، مثل کلاینبرگ، فروش‌های مشابه را با دقت می‌طلبند"], "investor": ["اجاره‌ها را در همان محله‌ی مشخص مقایسه کنید، نه کل وان", "عرضه‌ی جدید کاندو در اطراف می‌تواند بر اجاره‌ی قابل دستیابی و فروش مجدد اثر بگذارد؛ پروژه‌های در دست ساخت را ببینید"], "pockets": [["Vaughan Metropolitan Centre", "کاندوهای بلندمرتبه در مرکز شهر جدید", "خط ۱ مترو تا VMC؛ Viva Orange در بزرگراه 7", "شرایط پیش‌فروش و عرضه‌ی کاندوی اطراف"], ["وودبریج، میپل و کنکورد", "خانه‌های مستقل در شهرک‌های جاافتاده، به‌علاوه‌ی تاون‌هاوس", "خط قطار GO بری (از جمله Maple و Rutherford)؛ بزرگراه‌های 400، 407 و 427", "در همان محله مقایسه کنید، نه با کل وان"], ["کلاینبرگ", "ملک‌های بزرگ‌تر", "مسیر رفت‌وآمدتان را در ساعت شلوغی امتحان کنید", "زمین‌های بزرگ خریدار خاصی دارند؛ فروش‌های مشابه را با دقت انتخاب کنید"]], "checks": ["precon", "status", "legal"]}, "toronto": {"name": "تورنتو", "region": "شهر تورنتو", "where": "مرکز شهر و میدتاون", "tagline": "خانه‌های ویکتوریایی نیمه‌مستقل، خیابان‌های خانوادگی میدتاون و کاندوهای مرکز شهر.", "facts": [["شهرداری", "شهر تورنتو"], ["ترکیب مسکن", "کاندو، نیمه‌مستقل، ردیفی"], ["حمل‌ونقل", "TTC، GO، UP Express"], ["هیئت‌های آموزشی", "TDSB و TCDSB"]], "overview": ["هسته‌ی قدیمی تورنتو برخی از شناخته‌شده‌ترین خانه‌های کانادا را دارد: خانه‌های نیمه‌مستقل و ردیفی ویکتوریایی و ادواردی، نماهای Bay-and-gable و خیابان‌های اصلی پیاده‌محور. در مرکز شهر و در امتداد خطوط مترو، کاندوها بخش بزرگی از بازار هستند."], "housing": "کاندو در مرکز شهر و در امتداد خطوط حمل‌ونقل؛ خانه‌های نیمه‌مستقل و ردیفی در محله‌های قدیمی‌تر؛ خانه‌های مستقل در بخش بزرگی از میدتاون.", "lifestyle": "محله‌های پیاده‌محور، پارک‌ها و دره‌ها، و دسترسی آسان به رستوران‌ها، فرهنگ و محل کار.", "transit": ["شبکه‌ی مترو، تراموا و اتوبوس TTC", "قطار GO و UP Express از ایستگاه Union", "بزرگراه Gardiner و Don Valley Parkway"], "amenities": ["مسیرهای کنار دریاچه و جزایر تورنتو", "High Park و شبکه‌ی دره‌ها", "بیمارستان‌ها، دانشگاه‌ها و مراکز فرهنگی بزرگ", "خیابان‌های اصلی و بازارهای محله‌ها"], "buyer": ["اول خانه یا کاندو را مشخص کنید؛ بررسی‌های لازم فرق دارد", "خانه‌های قدیمی‌تر ممکن است به نوسازی سیم‌کشی یا موارد دیگر نیاز داشته باشند؛ با دقت بازرسی کنید"], "seller": ["خریداران اغلب در یک هفته چند خانه‌ی مشابه می‌بینند؛ آماده‌سازی مهم است", "پارکینگ، به‌روزرسانی‌ها و وضعیت زیرزمین را روشن ارائه کنید", "زمان‌بندی و استراتژی پیشنهادها را بر اساس فعالیت فعلی محله تعیین کنید"], "investor": ["ساختمان‌های قدیمی‌تر ممکن است هزینه‌ی نگهداری و بیمه‌ی بالاتری داشته باشند؛ در مرحله‌ی بررسی، استعلام قیمت بگیرید"], "pockets": [["کاندوهای مرکز شهر و امتداد خطوط حمل‌ونقل", "کاندو", "مترو TTC؛ قطار GO و UP Express از Union", "گواهی وضعیت و مطالعه‌ی صندوق ذخیره"], ["هسته‌ی قدیمی", "نیمه‌مستقل و ردیفی ویکتوریایی و ادواردی، نمای Bay-and-gable", "تراموا و اتوبوس TTC؛ خیابان‌های اصلی پیاده‌محور", "وضعیت قانونی واحدهای تقسیم‌شده، سیم‌کشی، پارکینگ"], ["میدتاون", "خانه‌های مستقل در بخش بزرگی از میدتاون", "مترو و اتوبوس TTC", "فروش‌های مشابه نزدیک؛ خانه‌های قدیمی را با دقت بازرسی کنید"]], "checks": ["legal", "status"]}};
 const TYPES_FA={bay:"نیمه‌مستقل Bay-and-gable",bungalow:"ویلایی یک‌طبقه‌ی پس از جنگ",tower:"برج کاندو",detached:"خانه‌ی مستقل دوطبقه",cottage:"کلبه به سبک انتاریو",town:"ردیف تاون‌هاوس"};
 
 /* ---------- Buy / Sell processes ---------- */
@@ -2763,6 +2949,9 @@ const ARTS=[
  {c:"tips",t:"How to read a condo status certificate",d:"The pages that matter and the red flags to look for.",u:"/resources/tips/condo-status-certificate/",href:"#guide-status-certificate",pub:1},
  {c:"tips",t:"Home inspections in the GTA: what to expect",d:"What inspectors check and how to use the report.",u:"/resources/tips/home-inspection-gta/",href:"#guide-home-inspection",pub:1},
  {c:"tips",t:"Choosing a contractor after you buy",d:"Quotes, contracts, permits and payment schedules.",u:"/resources/tips/choosing-a-contractor/",href:"#guide-contractor",pub:1},
+ {c:"buying",t:"Buying in Toronto from abroad: what changes",d:"Status, the 25% non-resident tax, federal limits, and closing at a distance.",u:"/resources/buying/buying-toronto-from-abroad/",href:"#guide-buying-from-abroad",pub:1},
+ {c:"buying",t:"Condo or detached along Yonge: the cost trade-offs",d:"Fees, upkeep, risk and resale compared line by line.",u:"/resources/buying/condo-vs-detached-yonge-corridor/",href:"#guide-condo-vs-detached",pub:1},
+ {c:"tips",t:"Three deal notes: how the numbers changed the decision",d:"Illustrative examples of the checks I run before an offer or a list price.",u:"/resources/tips/deal-notes-how-numbers-change-decisions/",href:"#guide-deal-notes",pub:1},
  {c:"areas",t:"North York neighbourhood guide",d:"Condo corridor, bungalow streets, transit and advice.",u:"/neighbourhoods/north-york/",href:"#north-york",pub:1},
  {c:"areas",t:"Thornhill: the Vaughan side vs. the Markham side",d:"How the two halves differ on taxes, services and housing.",u:"/neighbourhoods/thornhill/",href:"#thornhill",pub:1},
  {c:"areas",t:"Richmond Hill neighbourhood guide",d:"Downtown Richmond Hill, Oak Ridges, the Yonge corridor and the GO line.",u:"/neighbourhoods/richmond-hill/",href:"#richmond-hill",pub:1},
@@ -2781,66 +2970,184 @@ document.addEventListener("click",e=>{const b=e.target.closest("[data-cat]");if(
 /* Farsi Resources tabs: the list is static (built from GUIDES_FA); the tabs only show or hide its sections. */
 document.addEventListener("click",e=>{const b=e.target.closest("[data-fa-cat]");if(!b)return;const c=b.dataset.faCat;document.querySelectorAll("[data-fa-cat]").forEach(x=>x.setAttribute("aria-pressed",String(x===b)));document.querySelectorAll("[data-fa-sec]").forEach(x=>x.hidden=c!=="all"&&x.dataset.faSec!==c)});
 
-/* ---------- Land transfer tax estimator ---------- */
-/* First-time buyer maximums: Ontario refund $4,000; City of Toronto MLTT rebate $4,475 (confirmed by Ali, Nov 2026). */
+/* ---------- Calculators: shared parsing, tax constants, side-by-side land transfer tax, deal screen ---------- */
+/*<prototype>*/
+/* TODO(verify before publishing), land transfer tax constants below. Every figure here must match the official schedules
+   on the day you publish. Last checked against the sources listed on the guide: October 1, 2026.
+     1. ON: Ontario brackets (province-wide, residential 1-2 single-family units).
+     2. TO: City of Toronto MLTT brackets (the luxury tiers above $3M took effect April 1, 2026).
+     3. ON_FTB_MAX / TO_FTB_MAX: first-time buyer refund / rebate maximums. Eligibility rules apply (never owned a home
+        anywhere, occupy it, residency, 1-2 single-family units); the calculator only caps the amount, your lawyer confirms.
+     4. LTT_ILLUSTRATION: the rate and amortization used to turn the closing-cost gap into a monthly figure. Update the rate
+        to something close to current; it is an illustration, because land transfer tax is paid in cash at closing.
+     5. INPUT_MAX: upper limits for typed values. Anything above is capped and the visitor is told.
+   The build strips this comment from the published JavaScript; the constants themselves ship. */
+/*</prototype>*/
 const ON_FTB_MAX=4000,TO_FTB_MAX=4475;
 const ON=[[55000,.005],[250000,.01],[400000,.015],[2000000,.02],[Infinity,.025]];
 const TO=[[55000,.005],[250000,.01],[400000,.015],[2000000,.02],[3000000,.025],[4000000,.044],[5000000,.0545],[10000000,.065],[20000000,.0755],[Infinity,.086]];
+const LTT_ILLUSTRATION={rate:5,years:25};
+const INPUT_MAX={price:1e8,annual:1e7,monthly:1e6,pct:100,rate:30};
 function tiered(p,br){let t=0,prev=0;for(const [cap,r] of br){if(p>prev)t+=(Math.min(p,cap)-prev)*r;prev=cap}return Math.round(t*100)/100}
 window.__ltt={tiered,ON,TO};
-const fmt=n=>n.toLocaleString("en-CA",{style:"currency",currency:"CAD",maximumFractionDigits:0});
-/* Number typed in any keyboard: Persian ۰-۹ and Arabic-Indic ٠-٩ digits, Persian decimal mark ٫; separators and $ dropped. */
+const fmt=n=>isFinite(n)?n.toLocaleString("en-CA",{style:"currency",currency:"CAD",maximumFractionDigits:0}):"—";
+const fmtS=n=>isFinite(n)?(n<0?"−":"")+fmt(Math.abs(n)):"—";
+const pctF=n=>isFinite(n)?(n<0?"−":"")+(Math.round(Math.abs(n)*100)/100).toLocaleString("en-CA",{minimumFractionDigits:2,maximumFractionDigits:2})+"%":"—";
+/* Number typed on any keyboard: Persian ۰-۹ and Arabic-Indic ٠-٩ digits, ٫ decimal mark, ٬ thousands mark. */
 const latinDigits=s=>String(s).replace(/[۰-۹]/g,d=>d.charCodeAt(0)-1776).replace(/[٠-٩]/g,d=>d.charCodeAt(0)-1632);
-const toNum=s=>parseFloat(String(s).replace(/[۰-۹]/g,d=>d.charCodeAt(0)-1776).replace(/[٠-٩]/g,d=>d.charCodeAt(0)-1632).replace(/٫/g,".").replace(/[^0-9.]/g,""));
+/* parseAmount never returns NaN or Infinity. flag: ok | zero | blank | neg | invalid | max. Negative, invalid and blank give 0; too large is capped. */
+function parseAmount(raw,max){
+  let s=latinDigits(raw==null?"":raw).replace(/٫/g,".").replace(/CAD|[٬,\s'’$]/gi,"");
+  const neg=/^[-−–]/.test(s)||/^\(.*\)$/.test(s);
+  s=s.replace(/^[-−–+]/,"").replace(/[()]/g,"");
+  if(s==="")return{v:0,flag:"blank"};
+  if(!/^(\d+\.?\d*|\.\d+)$/.test(s))return{v:0,flag:"invalid"};
+  const v=parseFloat(s);
+  if(!isFinite(v)||v>max)return{v:max,flag:"max"};
+  if(neg&&v>0)return{v:0,flag:"neg"};
+  return{v,flag:v===0?"zero":"ok"}}
+const isFA=el=>!!(el&&el.closest('[lang="fa"]'))||document.documentElement.lang==="fa";
+/* One reader for every calculator field. Problems are collected and shown in the calculator's own live region. */
+function reader(warns,fa){
+  return (id,max)=>{const el=document.getElementById(id);if(!el)return 0;const r=parseAmount(el.value,max);
+    const bad=r.flag==="invalid"||r.flag==="neg"||r.flag==="max";el.setAttribute("aria-invalid",String(bad));
+    if(bad){const lab=document.querySelector(`label[for="${id}"]`),name=lab?lab.textContent.replace(/\(.*?\)/g,"").trim():id;
+      warns.push(fa?(r.flag==="max"?`${name}: بیشتر از سقف مجاز بود و به ${fmt(max)} کاهش یافت.`:r.flag==="neg"?`${name}: مقدار منفی استفاده نمی‌شود و صفر در نظر گرفته شد.`:`${name}: عدد قابل‌استفاده نیست و صفر در نظر گرفته شد.`)
+        :(r.flag==="max"?`${name}: capped at ${fmt(max)}.`:r.flag==="neg"?`${name}: negative amounts aren't used, so it's treated as 0.`:`${name}: that isn't a number I can use, so it's treated as 0.`))}
+    return r.v}}
+function showWarns(id,warns){const el=document.getElementById(id);if(!el)return;el.hidden=!warns.length;el.textContent=warns.join(" ")}
+function mortgageAnnual(loan,ratePct,years){
+  if(!(loan>0)||!(years>0))return 0;const n=years*12;
+  if(!(ratePct>0))return loan/n*12;
+  const i=Math.pow(1+ratePct/100/2,1/6)-1; /* Canadian fixed-rate convention: semi-annual compounding, monthly payments */
+  const a=loan*i/(1-Math.pow(1+i,-n))*12;return isFinite(a)?a:0}
+const blurMoney=(el,max)=>el.addEventListener("blur",()=>{const r=parseAmount(el.value,max);el.value=r.flag==="blank"||r.flag==="invalid"?el.value.trim():Math.round(r.v).toLocaleString("en-CA")});
+
+/* ---------- Land transfer tax: North vs. South of Steeles ---------- */
+/* South of Steeles = City of Toronto (Ontario tax + Toronto municipal tax). North = York Region (Ontario tax only). */
+function lttCompare(price,first){
+  const on=tiered(price,ON),onReb=first?Math.min(on,ON_FTB_MAX):0,to=tiered(price,TO),toReb=first?Math.min(to,TO_FTB_MAX):0;
+  const north=on-onReb,south=north+to-toReb;return{on,onReb,to,toReb,north,south,gap:south-north}}
+window.__lttCompare=lttCompare;
+const LT={
+ en:{enter:"Enter a purchase price to compare.",gap:"South of Steeles costs more to close on at this price. The difference is paid in cash at closing and can't be added to the mortgage.",
+  ftb:"Includes the Ontario and Toronto first-time buyer rebates, if you qualify. Your lawyer checks eligibility and confirms the final amount.",
+  fin:(m,r,y)=>`${fmt(m)} a month`,
+  offNone:"Enter the annual property tax for both homes to see how carrying costs change the picture.",
+  offNorth:(d,yrs)=>yrs>50?`North of Steeles carries ${fmt(d)} a year more in property tax, but that takes over 50 years to use up the closing-cost savings.`:`North of Steeles carries ${fmt(d)} a year more in property tax. At these figures that uses up the closing-cost savings in about ${yrs<1?"under a year":Math.round(yrs*10)/10+" years"}.`,
+  offSouth:"At these figures North of Steeles costs less both at closing and to carry.",
+  offEven:"At these figures the annual property tax is the same, so the closing-cost gap is the whole difference."},
+ fa:{enter:"برای مقایسه، قیمت خرید را وارد کنید.",gap:"در این قیمت، بستن معامله در جنوب استیلز هزینه‌ی بیشتری دارد. این تفاوت هنگام بستن معامله نقدی پرداخت می‌شود و به وام اضافه نمی‌شود.",
+  ftb:"شامل بازپرداخت‌های خریدار خانه‌ی اول انتاریو و تورنتو، اگر واجد شرایط باشید. شرایط را وکیل شما بررسی و مبلغ نهایی را تأیید می‌کند.",
+  fin:(m)=>`${fmt(m)} در ماه`,
+  offNone:"مالیات سالانه‌ی ملک را برای هر دو خانه وارد کنید تا اثر هزینه‌ی نگهداری را ببینید.",
+  offNorth:(d,yrs)=>yrs>50?`شمال استیلز سالانه ${fmt(d)} مالیات ملک بیشتر دارد، اما مصرف‌شدن صرفه‌جویی هزینه‌ی بستن معامله بیش از ۵۰ سال طول می‌کشد.`:`شمال استیلز سالانه ${fmt(d)} مالیات ملک بیشتر دارد. با این اعداد، صرفه‌جویی هزینه‌ی بستن معامله حدود ${yrs<1?"کمتر از یک سال":Math.round(yrs*10)/10+" سال"} طول می‌کشد تا مصرف شود.`,
+  offSouth:"با این اعداد، شمال استیلز هم هنگام بستن معامله و هم در هزینه‌ی نگهداری ارزان‌تر است.",
+  offEven:"با این اعداد، مالیات سالانه‌ی ملک یکسان است و تفاوت فقط همان هزینه‌ی بستن معامله است."}};
 function calc(){
   if(!document.getElementById("lt-price"))return;
-  const p=Math.max(0,toNum(document.getElementById("lt-price").value)||0);
-  const inTO=document.getElementById("lt-to").checked,first=document.getElementById("lt-first").checked;
-  const on=tiered(p,ON),reb=first?Math.min(on,ON_FTB_MAX):0,to=inTO?tiered(p,TO):0,rebTo=first&&inTO?Math.min(to,TO_FTB_MAX):0;
-  document.getElementById("o-on").textContent=fmt(on);
-  document.getElementById("o-onr-row").hidden=!first;document.getElementById("o-onr").textContent=(reb?"−":"")+fmt(reb);
-  document.getElementById("o-to-row").hidden=!inTO;document.getElementById("o-to").textContent=fmt(to);
-  document.getElementById("o-tor-row").hidden=!(first&&inTO);document.getElementById("o-tor").textContent=(rebTo?"−":"")+fmt(rebTo);
-  document.getElementById("o-total").textContent=fmt(on-reb+to-rebTo);
-  const FA=document.documentElement.lang==="fa";
-  document.getElementById("o-note").textContent=inTO&&first?(FA?"شامل بازپرداخت‌های خریدار خانه‌ی اول انتاریو و تورنتو، اگر واجد شرایط باشید. شرایط را وکیل شما بررسی و مبلغ نهایی را تأیید می‌کند.":"Includes the Ontario and Toronto first-time buyer rebates, if you qualify. Your lawyer checks eligibility and confirms the final amount."):inTO?(FA?"خرید همین خانه در منطقه‌ی یورک، مالیات شهرداری نمایش‌داده‌شده در بالا را صرفه‌جویی می‌کند.":"Buying the same home in York Region would save the municipal tax shown above."):first?(FA?"خارج از شهر تورنتو، مالیات انتقال زمین شهرداری وجود ندارد. شامل بازپرداخت خریدار خانه‌ی اول انتاریو، اگر واجد شرایط باشید.":"No municipal land transfer tax outside the City of Toronto. Includes the Ontario first-time buyer rebate, if you qualify."):(FA?"خارج از شهر تورنتو، مالیات انتقال زمین شهرداری وجود ندارد.":"No municipal land transfer tax outside the City of Toronto.")}
+  const fa=isFA(document.getElementById("lt-price")),T=fa?LT.fa:LT.en,W=[],rd=reader(W,fa);
+  const price=rd("lt-price",INPUT_MAX.price),first=document.getElementById("lt-first").checked;
+  const rate=rd("lt-rate",INPUT_MAX.rate),taxN=rd("lt-tax-n",INPUT_MAX.annual),taxS=rd("lt-tax-s",INPUT_MAX.annual);
+  const c=lttCompare(price,first),set=(id,t)=>{const e=document.getElementById(id);if(e)e.textContent=t};
+  set("o-n-on",fmt(c.on));set("o-s-on",fmt(c.on));set("o-n-onr",c.onReb?"−"+fmt(c.onReb):fmt(0));set("o-s-onr",c.onReb?"−"+fmt(c.onReb):fmt(0));
+  set("o-n-to","—");set("o-s-to",fmt(c.to));set("o-n-tor","—");set("o-s-tor",c.toReb?"−"+fmt(c.toReb):fmt(0));
+  set("o-n-total",fmt(c.north));set("o-s-total",fmt(c.south));
+  document.getElementById("o-onr-row").hidden=!first;document.getElementById("o-tor-row").hidden=!first;
+  set("o-gap",fmt(c.gap));
+  set("o-gap-pct",price>0?pctF(c.gap/price*100):"—");
+  const m=c.gap>0?mortgageAnnual(c.gap,rate||LTT_ILLUSTRATION.rate,LTT_ILLUSTRATION.years)/12:0;
+  set("o-gap-m",c.gap>0?T.fin(m,rate||LTT_ILLUSTRATION.rate,LTT_ILLUSTRATION.years):fmt(0));
+  const both=taxN>0&&taxS>0,row=document.getElementById("o-carry-row"),yrRow=document.getElementById("o-years-row");
+  row.hidden=!both;yrRow.hidden=!both;
+  let carry=T.offNone;
+  if(both){const d=taxN-taxS;set("o-carry",fmtS(d));
+    if(d>0){const yrs=c.gap/d;set("o-years",yrs>50?">50":String(Math.round(yrs*10)/10));carry=T.offNorth(d,yrs)}
+    else{set("o-years","—");carry=d<0?T.offSouth:T.offEven}}
+  set("o-note",!price?T.enter:(first?T.ftb+" ":"")+T.gap);
+  set("o-carry-note",carry);
+  showWarns("lt-warn",W)}
 const pr=document.getElementById("lt-price");
-if(pr){pr.addEventListener("input",calc);
-pr.addEventListener("blur",()=>{const v=toNum(pr.value);if(v)pr.value=Math.round(v).toLocaleString("en-CA")});
-["lt-to","lt-on","lt-first"].forEach(id=>document.getElementById(id).addEventListener("change",calc))}
+if(pr){["lt-price","lt-rate","lt-tax-n","lt-tax-s"].forEach(id=>document.getElementById(id).addEventListener("input",calc));
+ blurMoney(pr,INPUT_MAX.price);["lt-tax-n","lt-tax-s"].forEach(id=>blurMoney(document.getElementById(id),INPUT_MAX.annual));
+ document.getElementById("lt-first").addEventListener("change",calc)}
+/* Stage-matched entry points ("check closing costs at your price") hand the price over in the URL (built site) or the tab (prototype). */
+function lttHandoff(){
+  const el=document.getElementById("lt-price");if(!el)return;let v=STATIC?params.get("price"):null;
+  if(!v){try{v=sessionStorage.getItem("abr-price");sessionStorage.removeItem("abr-price")}catch(e){}}
+  if(!v)return;const r=parseAmount(v,INPUT_MAX.price);if(r.v>0){el.value=Math.round(r.v).toLocaleString("en-CA");
+    if(STATIC&&params.get("first")==="1")document.getElementById("lt-first").checked=true;calc()}}
+document.addEventListener("click",e=>{const a=e.target.closest("[data-cc-go]");if(!a)return;
+  const box=a.closest("[data-cc]"),inp=box&&box.querySelector("input"),r=parseAmount(inp?inp.value:"",INPUT_MAX.price);
+  if(!(r.v>0)){e.preventDefault();if(inp){inp.setAttribute("aria-invalid","true");inp.focus()}return}
+  inp.setAttribute("aria-invalid","false");const p=Math.round(r.v);
+  try{sessionStorage.setItem("abr-price",String(p))}catch(err){}
+  if(STATIC){e.preventDefault();location.href=a.getAttribute("href").split("#")[0].split("?")[0]+"?price="+p+"#calc"}});
+document.addEventListener("keydown",e=>{if(e.key!=="Enter")return;const inp=e.target.closest&&e.target.closest("[data-cc] input");if(!inp)return;e.preventDefault();const a=inp.closest("[data-cc]").querySelector("[data-cc-go]");if(a)a.click()});
+document.querySelectorAll("[data-cc] input").forEach(i=>blurMoney(i,INPUT_MAX.price));
 
-/* ---------- Investment property estimator (educational) ---------- */
-const ivNum=id=>{const v=toNum(document.getElementById(id).value);return isFinite(v)&&v>0?v:0};
-const pctF=n=>isFinite(n)?(n<0?"−":"")+(Math.round(Math.abs(n)*100)/100).toLocaleString("en-CA",{minimumFractionDigits:2,maximumFractionDigits:2})+"%":"—";
-const fmtS=n=>(n<0?"−":"")+fmt(Math.abs(n));
-function mortgageAnnual(loan,ratePct,years){
-  if(loan<=0)return 0;const n=years*12;
-  if(ratePct<=0)return loan/n*12;
-  const i=Math.pow(1+ratePct/100/2,1/6)-1; /* Canadian fixed-rate convention: semi-annual compounding, monthly payments */
-  return loan*i/(1-Math.pow(1+i,-n))*12}
+/* ---------- Investment deal screen (educational) ---------- */
+function dealCalc(){
+  const priceEl=document.getElementById("iv-price");if(!priceEl)return null;
+  const fa=isFA(priceEl),W=[],rd=reader(W,fa);
+  const price=rd("iv-price",INPUT_MAX.price),down=Math.min(100,rd("iv-down",INPUT_MAX.pct)),rate=rd("iv-rate",INPUT_MAX.rate),yrs=parseInt(document.getElementById("iv-amort").value,10)||25;
+  const rentM=rd("iv-rent",INPUT_MAX.monthly),vacP=Math.min(100,rd("iv-vac",INPUT_MAX.pct));
+  const tax=rd("iv-tax",INPUT_MAX.annual),condoM=rd("iv-condo",INPUT_MAX.monthly),ins=rd("iv-ins",INPUT_MAX.annual),maint=rd("iv-maint",INPUT_MAX.annual),util=rd("iv-util",INPUT_MAX.annual),other=rd("iv-other",INPUT_MAX.annual);
+  const loc=document.getElementById("iv-loc").value;
+  const gross=rentM*12,vac=gross*vacP/100,eff=gross-vac,opex=tax+condoM*12+ins+maint+util+other,noi=eff-opex;
+  const dpay=price*down/100,debt=mortgageAnnual(price-dpay,rate,yrs),cf=noi-debt;
+  const ltt=loc==="to"?tiered(price,ON)+tiered(price,TO):loc==="on"?tiered(price,ON):0; /* investors don't qualify for first-time buyer rebates */
+  const cash=dpay+ltt,cap=price>0?noi/price*100:NaN,coc=cash>0?cf/cash*100:NaN;
+  const beRent=vacP<100?(opex+debt)/(12*(1-vacP/100)):NaN;
+  return{fa,W,price,down,rate,yrs,rentM,vacP,tax,condoM,ins,maint,util,other,loc,gross,vac,eff,opex,noi,dpay,debt,cf,ltt,cash,cap,coc,beRent}}
 function invCalc(){
-  if(!document.getElementById("iv-price"))return;
-  const price=ivNum("iv-price"),down=Math.min(100,ivNum("iv-down")),rate=ivNum("iv-rate"),yrs=parseInt(document.getElementById("iv-amort").value,10)||25;
-  const gross=ivNum("iv-rent"),vacP=Math.min(100,ivNum("iv-vac"));
-  const opex=ivNum("iv-tax")+ivNum("iv-ins")+ivNum("iv-maint")+ivNum("iv-util")+ivNum("iv-other");
-  const vac=gross*vacP/100,eff=gross-vac,noi=eff-opex;
-  const cash=price*down/100,debt=mortgageAnnual(price-cash,rate,yrs),cf=noi-debt;
-  const set=(id,t,neg)=>{const el=document.getElementById(id);el.textContent=t;el.classList.toggle("neg",!!neg)};
-  set("iv-o-gross",fmt(gross));set("iv-o-vac",vac?"−"+fmt(vac):fmt(0));set("iv-o-eff",fmt(eff));
-  set("iv-o-opex",opex?"−"+fmt(opex):fmt(0));set("iv-o-noi",fmtS(noi),noi<0);
-  set("iv-o-debt",debt?"−"+fmt(debt):fmt(0));set("iv-o-cf",fmtS(cf),cf<0);
-  set("iv-o-cap",price>0?pctF(noi/price*100):"—",noi<0);
-  set("iv-o-coc",cash>0?pctF(cf/cash*100):"—",cf<0);
-  const FA=document.documentElement.lang==="fa"||!!document.getElementById("iv-price").closest('[lang="fa"]');
-  document.getElementById("iv-o-note").textContent=!price||!gross?(FA?"برای دیدن برآورد، قیمت خرید و درآمد اجاره را وارد کنید.":"Enter a purchase price and rental income to see an estimate.")
-    :cf<0?(FA?`با این فرض‌ها، این ملک ماهانه حدود ${fmt(Math.abs(cf)/12)} علاوه بر اجاره از جیب شما هزینه می‌خواهد. برخی سرمایه‌گذاران این را در ازای رشد احتمالی ارزش ملک و بازپرداخت اصل وام می‌پذیرند، اما هیچ‌کدام تضمین‌شده نیست.`:`At these assumptions the property would need about ${fmt(Math.abs(cf)/12)} a month from you on top of the rent. Some investors accept that in exchange for potential appreciation and mortgage paydown, but neither is guaranteed.`)
-    :(FA?`با این فرض‌ها مثبت است: حدود ${fmt(cf/12)} در ماه، پیش از مالیات بر درآمد. نرخ بهره، خالی ماندن یا هزینه‌ی نگهداری بالاتری را امتحان کنید تا ببینید چقدر حاشیه دارید.`:`Positive at these assumptions, about ${fmt(cf/12)} a month before income tax. Try a higher interest rate, vacancy or maintenance figure to see how much room there is.`)
+  const d=dealCalc();if(!d)return;const FA=d.fa;
+  const set=(id,t,neg)=>{const el=document.getElementById(id);if(!el)return;el.textContent=t;el.classList.toggle("neg",!!neg)};
+  set("iv-o-gross",fmt(d.gross));set("iv-o-vac",d.vac?"−"+fmt(d.vac):fmt(0));set("iv-o-eff",fmt(d.eff));
+  set("iv-o-opex",d.opex?"−"+fmt(d.opex):fmt(0));set("iv-o-noi",fmtS(d.noi),d.noi<0);
+  set("iv-o-debt",d.debt?"−"+fmt(d.debt):fmt(0));set("iv-o-cf",fmtS(d.cf),d.cf<0);set("iv-o-cfm",fmtS(d.cf/12),d.cf<0);
+  set("iv-o-cap",d.price>0?pctF(d.cap):"—",d.noi<0);
+  set("iv-o-coc",d.cash>0?pctF(d.coc):"—",d.cf<0);
+  set("iv-o-cash",fmt(d.cash));
+  set("iv-o-be",isFinite(d.beRent)&&d.price>0?fmt(d.beRent):"—");
+  const hasIn=d.price>0&&d.rentM>0,note=document.getElementById("iv-o-note"),lev=document.getElementById("iv-o-lev");
+  note.textContent=!hasIn?(FA?"برای دیدن برآورد، قیمت خرید و اجاره‌ی ماهانه را وارد کنید.":"Enter a purchase price and monthly rent to see an estimate.")
+    :d.cf<0?(FA?`با این فرض‌ها، این ملک ماهانه حدود ${fmt(Math.abs(d.cf)/12)} علاوه بر اجاره از جیب شما هزینه می‌خواهد. برخی سرمایه‌گذاران این را در ازای رشد احتمالی ارزش ملک و بازپرداخت اصل وام می‌پذیرند، اما هیچ‌کدام تضمین‌شده نیست.`:`At these assumptions the property would need about ${fmt(Math.abs(d.cf)/12)} a month from you on top of the rent. Some investors accept that in exchange for potential appreciation and mortgage paydown, but neither is guaranteed.`)
+    :(FA?`با این فرض‌ها مثبت است: حدود ${fmt(d.cf/12)} در ماه، پیش از مالیات بر درآمد. نرخ بهره، خالی ماندن یا هزینه‌ی نگهداری بالاتری را امتحان کنید تا ببینید چقدر حاشیه دارید.`:`Positive at these assumptions, about ${fmt(d.cf/12)} a month before income tax. Try a higher interest rate, vacancy or maintenance figure to see how much room there is.`);
   /* Rentals you won't live in generally need 20% down; flag lower entries without blocking them. */
-  if(price&&gross&&down<20){const n=document.getElementById("iv-o-note");n.textContent=(FA?"توجه: برای ملکی که خودتان در آن زندگی نمی‌کنید، معمولاً دست‌کم ۲۰٪ پیش‌پرداخت لازم است؛ شرایط را از وام‌دهنده بپرسید. ":"Note: a property you won't live in generally needs at least 20% down; check with your lender. ")+n.textContent}}
-window.__inv={mortgageAnnual,invCalc};
+  if(hasIn&&d.down<20)note.textContent=(FA?"توجه: برای ملکی که خودتان در آن زندگی نمی‌کنید، معمولاً دست‌کم ۲۰٪ پیش‌پرداخت لازم است؛ شرایط را از وام‌دهنده بپرسید. ":"Note: a property you won't live in generally needs at least 20% down; check with your lender. ")+note.textContent;
+  /* Negative leverage: the property earns less than the money costs. */
+  const neg=hasIn&&d.price>0&&d.down<100&&d.cap<d.rate;
+  lev.hidden=!neg;lev.textContent=neg?(FA?`نرخ بازده سرمایه (${pctF(d.cap)}) کمتر از نرخ بهره‌ی وام (${pctF(d.rate)}) است؛ یعنی هزینه‌ی وام از درآمد خود ملک بیشتر است و اهرم وام به جریان نقدی ضرر می‌زند.`:`Cap rate (${pctF(d.cap)}) is below the mortgage rate (${pctF(d.rate)}): borrowing costs more than the property earns, so the loan works against cash flow.`):"";
+  showWarns("iv-warn",d.W)}
+window.__inv={mortgageAnnual,invCalc,dealCalc};
 document.querySelectorAll("[data-iv]").forEach(el=>{
   el.addEventListener(el.tagName==="SELECT"?"change":"input",invCalc);
-  if(el.dataset.iv==="money")el.addEventListener("blur",()=>{const v=toNum(el.value);el.value=isFinite(v)?Math.round(v).toLocaleString("en-CA"):"0"})});
+  if(el.dataset.iv==="money")blurMoney(el,INPUT_MAX.annual)});
+/* Hand the screen to the contact form: numbers only, kept in this tab's sessionStorage (see LEADS.md). */
+function dealSnapshot(){const d=dealCalc();if(!d||!(d.price>0))return null;
+  return{v:1,price:d.price,rentM:d.rentM,tax:d.tax,condoM:d.condoM,down:d.down,rate:d.rate,yrs:d.yrs,loc:d.loc,vacP:d.vacP,ins:d.ins,maint:d.maint,util:d.util,other:d.other}}
+document.addEventListener("click",e=>{if(!e.target.closest("[data-deal-send]"))return;const s=dealSnapshot();try{if(s)sessionStorage.setItem("abr-deal",JSON.stringify(s));else sessionStorage.removeItem("abr-deal")}catch(err){}});
+/* Rebuild everything from the stored numbers, never from stored text. Returns null if nothing valid is stored. */
+function readDeal(){
+  let o=null;try{o=JSON.parse(sessionStorage.getItem("abr-deal")||"null")}catch(e){}
+  if(!o||o.v!==1)return null;const n=(k,max)=>parseAmount(o[k],max).v;
+  const d={price:n("price",INPUT_MAX.price),rentM:n("rentM",INPUT_MAX.monthly),tax:n("tax",INPUT_MAX.annual),condoM:n("condoM",INPUT_MAX.monthly),down:Math.min(100,n("down",INPUT_MAX.pct)),rate:n("rate",INPUT_MAX.rate),
+    yrs:o.yrs===30?30:25,loc:["to","on","other"].includes(o.loc)?o.loc:"to",vacP:Math.min(100,n("vacP",INPUT_MAX.pct)),ins:n("ins",INPUT_MAX.annual),maint:n("maint",INPUT_MAX.annual),util:n("util",INPUT_MAX.annual),other:n("other",INPUT_MAX.annual)};
+  if(!(d.price>0))return null;
+  d.gross=d.rentM*12;d.eff=d.gross*(1-d.vacP/100);d.opex=d.tax+d.condoM*12+d.ins+d.maint+d.util+d.other;d.noi=d.eff-d.opex;
+  d.dpay=d.price*d.down/100;d.debt=mortgageAnnual(d.price-d.dpay,d.rate,d.yrs);d.cf=d.noi-d.debt;
+  d.ltt=d.loc==="to"?tiered(d.price,ON)+tiered(d.price,TO):d.loc==="on"?tiered(d.price,ON):0;d.cash=d.dpay+d.ltt;
+  d.cap=d.noi/d.price*100;d.coc=d.cash>0?d.cf/d.cash*100:NaN;return d}
+const locName={to:"City of Toronto",on:"York Region / elsewhere in Ontario",other:"Land transfer tax not included"};
+function dealText(d){return`Price ${fmt(d.price)} · rent ${fmt(d.rentM)}/mo · property tax ${fmt(d.tax)}/yr · condo fees ${fmt(d.condoM)}/mo · maintenance ${fmt(d.maint)}/yr · insurance ${fmt(d.ins)}/yr · utilities ${fmt(d.util)}/yr · other ${fmt(d.other)}/yr · vacancy ${pctF(d.vacP)} · down payment ${pctF(d.down)} · rate ${pctF(d.rate)} · ${d.yrs}-yr amortization · ${locName[d.loc]}\nScreen result: NOI ${fmtS(d.noi)}/yr · cap rate ${pctF(d.cap)} · cash flow ${fmtS(d.cf)}/yr (${fmtS(d.cf/12)}/mo) · cash-on-cash ${pctF(d.coc)} on ${fmt(d.cash)} (down payment + land transfer tax)`}
+function initDealBox(){
+  const box=document.getElementById("deal-box");if(!box)return;const d=readDeal();if(!d){box.hidden=true;return}
+  const fa=isFA(box),dl=box.querySelector("[data-deal-lines]"),inc=document.getElementById("c-deal-on"),hid=document.getElementById("c-deal");
+  const rows=fa?[["قیمت",fmt(d.price)],["اجاره‌ی ماهانه",fmt(d.rentM)],["مالیات ملک (سالانه)",fmt(d.tax)],["شارژ ساختمان (ماهانه)",fmt(d.condoM)],["پیش‌پرداخت",pctF(d.down)],["نرخ بهره",pctF(d.rate)],["نرخ بازده سرمایه (Cap rate)",pctF(d.cap)],["جریان نقدی سالانه",fmtS(d.cf)]]
+   :[["Price",fmt(d.price)],["Rent per month",fmt(d.rentM)],["Property tax per year",fmt(d.tax)],["Condo fees per month",fmt(d.condoM)],["Down payment",pctF(d.down)],["Interest rate",pctF(d.rate)],["Cap rate",pctF(d.cap)],["Cash flow per year",fmtS(d.cf)]];
+  dl.replaceChildren(...rows.map(([k,v])=>{const w=document.createElement("div"),a=document.createElement("dt"),b=document.createElement("dd");a.textContent=k;b.textContent=v;b.dir="ltr";w.append(a,b);return w}));
+  const sync=()=>{hid.value=inc.checked?dealText(d):""};inc.addEventListener("change",sync);inc.checked=true;sync();box.hidden=false}
 
 /*<prototype>*/
 /* ---------- Guides: one data object per guide, rendered by renderGuide() into one reusable one-page layout ----------
@@ -2867,6 +3174,10 @@ const SRC={
  statusFSR:["FirstService Residential, status certificates in Ontario","https://www.fsresidential.com/ontario/news-events/articles/what-is-a-status-certificate-in-ontario/"],
  recoFaq:["RECO, TRESA FAQs","https://www.reco.on.ca/agents-and-brokerages/tresa-explained/tresa-faqs/"],
  reco42:["RECO Bulletin 4.2, managing a delayed offer presentation","https://www.reco.on.ca/getmedia/4a729e64-a54e-41b8-ad6c-16ae97499219/RECO-Bulletin-4-2-Managing-a-delayed-offer-presentation-process.pdf"],
+ nrst:["Ontario, non-resident speculation tax","https://www.ontario.ca/document/land-transfer-tax/non-resident-speculation-tax"],
+ nrstEx:["Ontario, non-resident speculation tax exemptions","https://www.ontario.ca/document/non-resident-speculation-tax/non-resident-speculation-tax-exemptions"],
+ fedBan:["Department of Finance Canada, two-year extension of the ban on foreign ownership (February 2024)","https://www.canada.ca/en/department-finance/news/2024/02/government-announces-two-year-extension-to-ban-on-foreign-ownership-of-canadian-housing.html"],
+ fedBan26:["Fasken, Budget 2026: foreign buyers ban proposed to be extended to 2029 (November 2026)","https://www.fasken.com/en/knowledge/2026/11/budget-2026-foreign-buyers-ban-extended-to-2029-with-a-proposed-exemption-for-new-homes"],
  trreb:["TRREB Market Watch, October 2026","https://trreb.ca/wp-content/files/market-stats/market-watch/mw2610.pdf"],
  trrebNews:["TRREB news release, November 4, 2026","https://trreb.ca/wp-content/files/news_releases/news2026/nr_market_watch_1026.pdf"],
  boc:["Bank of Canada, rate announcement, October 28, 2026","https://www.bankofcanada.ca/2026/10/fad-press-release-2026-10-28/"],
@@ -3122,7 +3433,55 @@ const GUIDES=[
  {t:"take",text:"A contractor who won't put it in writing won't stand behind it either. The contract protects both of you."}],
  cta:["Just bought and planning work?","I can share trades my clients have used, and help you check what needs a permit.","Talk to Ali","question"],
  rel:["guide-home-inspection","guide-fix-before-listing","guide-multiplexes","about"],
- sources:S("reno","renoBiz","constructionAct")}
+ sources:S("reno","renoBiz","constructionAct")},
+/* ===== BUYING: from abroad, condo vs detached ===== */
+{key:"guide-buying-from-abroad",cat:"buying",path:"/resources/buying/buying-toronto-from-abroad/",name:"Buying in Toronto from abroad: what changes",
+ title:"Buying in Toronto From Abroad: Status, Tax and Timeline | Ali Bayat",
+ desc:"Buying a GTA home from outside Canada: why status matters more than address, the 25% non-resident tax, federal limits, money and closing at a distance.",
+ h1:"Buying in Toronto from abroad: <em>what changes</em>",lede:"Your citizenship or permanent resident status decides the rules, not where you live. Here is the order I'd work through it, and what to budget.",
+ chips:["4-minute read","Time-sensitive rules","Updated November 2026"],geo:"Ontario; City of Toronto; York Region",
+ card:"Status, the 25% non-resident tax, federal limits, and closing at a distance.",
+ blocks:[
+ {t:"tldr",items:["<b>Status, not address.</b> Canadian citizens and permanent residents living abroad aren't subject to Ontario's non-resident speculation tax. Foreign nationals generally are.","Ontario's tax is <b>25%</b> of the price for foreign nationals and foreign corporations, with exemptions and rebates that depend on your situation.","A federal ban on many purchases by non-Canadians runs to <b>January 1, 2027</b>. Budget 2026 proposes extending it to 2029. Confirm where it stands before you offer."]},
+ {t:"stats",h:"The rules that depend on who you are",items:[["25%","Ontario non-resident speculation tax","On the purchase price, for foreign nationals and foreign corporations buying residential property in Ontario"],["Jan 1, 2027","Federal ban end date in force today","Budget 2026 proposes January 1, 2029 and an exemption for new homes. A proposal, not yet law"],["Weeks","What distance adds to the timeline","Mortgage documents, source of funds and signing from abroad all take time"]]},
+ {t:"steps",h:"From abroad, in order",items:[["Confirm your status first","Before anything","Citizen, permanent resident or neither? That decides whether the 25% tax and the federal limits apply, and which exceptions you may qualify for. Your lawyer confirms it."],["Line up money and documents","Weeks 1–4","Ask a mortgage broker early. Income earned outside Canada can be treated differently by lenders, and a larger down payment is common. Real estate transactions also require identity verification and a record of where the funds came from."],["Choose a lawyer and how you'll sign","Weeks 2–4","Your Ontario real estate lawyer handles title, closing and tax forms. If you can't be here, ask about signing remotely or giving a power of attorney."],["Budget every cost","Before you offer","Ontario and Toronto land transfer tax (the <a class=\"link\" href=\"#guide-land-transfer-tax\">calculator</a> shows both), legal fees and, for foreign nationals, the 25% tax unless an exemption applies."],["Plan the money transfer","Before closing","International transfers can take days to clear and the amount due at closing is fixed. Start early and keep records of the source."],["Plan for after closing","Before closing","Someone has to manage the property: property tax, insurance, maintenance and tenants. Rental income is taxable and non-residents face special withholding rules, so ask an accountant before you buy."]]},
+ {t:"flags",h:"Watch out for",items:[["Assuming your address decides it","Status decides, not where you live. A Canadian citizen abroad and a foreign national in Toronto are treated differently."],["Wire instructions sent by email","Confirm wiring details by phone with your lawyer's office. Fraudulent instructions are a known risk in closings."],["Buying on photos alone","Have someone you trust, or me, walk the property and the building, and still book the inspection."]]},
+ {t:"take",text:"From abroad, the risk isn't the price. It's the timeline. Start the paperwork before you start the search."},
+ {t:"faq",items:[["Do Canadian citizens living abroad pay the non-resident tax?","Ontario says its non-resident speculation tax depends on citizenship or permanent resident status, not on where you live. Ask your lawyer to check your own situation."],["Does the 25% tax replace land transfer tax?","No. It is an additional tax. Ontario and, in the City of Toronto, Toronto land transfer tax still apply."],["Can I buy a rental property from abroad?","Possibly, depending on your status and the rules in force. Rental income has its own tax treatment for non-residents, so speak to an accountant first."]]}],
+ cta:["Buying from outside Canada?","Tell me your status and timeline. I'll lay out the steps and costs for your case, in English or Farsi.","Talk to Ali about buying","buy"],
+ rel:["guide-land-transfer-tax","guide-first-home","guide-status-certificate","buy"],
+ sources:S("nrst","nrstEx","fedBan","fedBan26","onRefund","toRebate")},
+{key:"guide-condo-vs-detached",cat:"buying",path:"/resources/buying/condo-vs-detached-yonge-corridor/",name:"Condo or detached along Yonge: the cost trade-offs",
+ title:"Condo vs. Detached Along Yonge Street: Real Cost Trade-Offs | Ali Bayat",
+ desc:"Condo or detached in North York, Thornhill or Richmond Hill? Compare monthly costs, risks, closing costs and resale by what you actually pay.",
+ h1:"Condo or detached along Yonge: <em>the cost trade-offs</em>",lede:"The price gap is the smaller part of the comparison. Fees, upkeep, risk and exit decide which one is cheaper to own.",
+ chips:["4-minute read","North York to Richmond Hill","Updated November 2026"],geo:"City of Toronto; York Region",
+ card:"Fees, upkeep, risk and resale compared line by line.",
+ blocks:[
+ {t:"tldr",items:["A condo swaps <b>upkeep you control</b> for <b>fees you don't</b>. A detached home does the reverse.","Land transfer tax is the same for both at the same price in the same municipality. It changes at Steeles Avenue, not with the building type.","The question that settles it is the monthly all-in cost plus what happens if you need to sell in five years."]},
+ {t:"vs",h:"Two ways to own along the corridor",a:["Condo","Sheppard-Yonge, North York Centre, Finch, VMC",["You want a short walk to the subway or Viva","You prefer a fixed monthly fee to unpredictable repairs","You plan to live there or rent it out with the building's rules in mind"],["Fees can rise, and the reserve fund decides how much","A special assessment can land on you after you buy","Rental or pet rules are set by the building"]],b:["Detached or semi","Interior streets, Thornhill, Richmond Hill",["You want land, space or the option to renovate","You prefer to control repairs and timing","You value a lot that can carry value on its own"],["Repairs are yours: roof, furnace, foundation, water","Property tax and insurance are higher in dollar terms","Added units and rebuilds depend on zoning and permits"]]},
+ {t:"table",h:"What you pay, line by line",head:["Cost","Condo","Detached"],rows:[["Monthly fees","Condo fees, set by the corporation's budget","None"],["Property tax","Yes, on a smaller assessed value","Yes, usually the larger bill"],["Repairs and upkeep","Inside the unit; the building handles the rest through fees","All of it, so set aside a yearly budget"],["Land transfer tax","Same schedule; Toronto adds its own, York Region doesn't","Same schedule; Toronto adds its own, York Region doesn't"],["Biggest surprise","A special assessment or a fee jump","A large repair found after closing"],["How to check","Read the status certificate with your lawyer","Book a full inspection and ask about permits"],["Selling later","You compete with other units in your own building","You compete on the lot, the street and the condition"]]},
+ {t:"take",text:"Don't compare the price. Compare what you'd pay each month for five years, plus the one big risk each type carries. The answer is often different from the one the price tag gives."},
+ {t:"faq",items:[["Which is cheaper to close on?","At the same price in the same municipality, the land transfer tax is the same. A condo adds a status certificate review. A detached home adds survey and title work, and an inspection is wise for both."],["Which is better for an investor?","It depends on rent against fees for a condo, and on what zoning and permits allow for a house. Run both through the deal screen on the Invest page before comparing."]]}],
+ cta:["Torn between the two?","I'll run both on monthly cost, closing cost and resale for the exact homes you're considering.","Talk to Ali about buying","buy"],
+ rel:["guide-status-certificate","guide-home-inspection","guide-land-transfer-tax","north-york"],
+ sources:S("condoAct","statusLL","onRefund","toRebate")},
+/* ===== TIPS: deal notes (illustrative) ===== */
+{key:"guide-deal-notes",cat:"tips",path:"/resources/tips/deal-notes-how-numbers-change-decisions/",name:"Three deal notes: how the numbers changed the decision",
+ title:"Three Deal Notes: How the Numbers Changed the Decision | Ali Bayat",
+ desc:"Three worked examples: a condo with an under-funded reserve, a price set on stale comparables, and an offer that ignored closing costs across Steeles Avenue.",
+ h1:"Three deal notes: <em>how the numbers changed the decision</em>",lede:"Worked examples of the checks I run before an offer and before a list price. The situations are typical; the figures are examples.",
+ chips:["Illustrative examples","Not client files","Updated November 2026"],geo:"City of Toronto; York Region",
+ card:"A reserve-fund warning, stale comparables and a Steeles closing-cost gap, worked through.",
+ blocks:[
+ {t:"p",text:'<mark class="tbc" data-approve="deal-notes-review"><b>These are illustrative examples, not past client files.</b> The situations are typical and the prices, fees and sales figures are example numbers used to show the method. They are not real transactions or results.</mark>'},
+ {t:"table",h:"Note 1: The condo that said wait",intro:"Two similar condos near Finch. The cheaper one had a status certificate with warning signs: a reserve fund well short of the repair study, fees about to rise, and a special assessment already approved. Over five years the cheaper unit costs more.",head:["Five-year cost (example)","Unit A","Unit B"],rows:[["Purchase price","$688,000","$705,000"],["Monthly fee","$880","$690"],["Fees over 60 months","$52,800","$41,400"],["Approved special assessment","$12,000","$0"],["Total","$752,800","$746,400"]],note:"Example figures. Unit A looks $17,000 cheaper on price and ends up $6,400 more expensive, before any further fee increases. The status certificate is where this shows up. <a class=\"link\" href=\"#guide-status-certificate\">How to read one</a>."},
+ {t:"table",h:"Note 2: Pricing off last spring's sales",intro:"A North York bungalow priced from sales that were five months old. The market had moved, and every month on the market stale carries a real cost.",head:["Price source (example)","Indicated value"],rows:[["Sales from five months ago","$1,580,000"],["Sales from the last 60 days, adjusted for lot and condition","$1,490,000"],["Difference","$90,000, or 5.7%"],["Carrying cost per month while listed (mortgage interest, tax, utilities)","$9,400"]],note:"Example figures. Overpricing by 5.7% and sitting for three months costs about $28,200 in carrying costs alone, before any price reduction. That's why I price from the most recent comparables."},
+ {t:"table",h:"Note 3: The cheaper house that cost more",intro:"A buyer compares a $1,000,000 home south of Steeles with a $985,000 home north of it. The $15,000 gap in price is the small number.",head:["At closing (example)","South of Steeles (Toronto)","North of Steeles (York Region)"],rows:[["Price","$1,000,000","$985,000"],["Ontario land transfer tax","$16,475","$16,175"],["Toronto municipal land transfer tax","$16,475","$0"],["Price plus land transfer tax","$1,032,950","$1,001,175"]],note:"Land transfer tax computed from the 2026 schedules on the guide, with no rebates. The all-in gap is $31,775, more than twice the price difference. Property tax and carrying costs still need comparing; the <a class=\"link\" href=\"#guide-land-transfer-tax\">calculator</a> has fields for both."},
+ {t:"take",text:"A decision looks different once closing costs, carrying costs and risk are on the same page as the price. That's the work."}],
+ cta:["Want this done for your deal?","Send me the listing or the address. I'll run the same checks and tell you plainly what the numbers say.","Talk to Ali","question"],
+ rel:["guide-status-certificate","guide-land-transfer-tax","guide-offer-date","buy"],
+ sources:S("statusLL","statusFSR","onRefund","toRebate")}
 ];
 const GBY=Object.fromEntries(GUIDES.map(g=>[g.key,g]));
 /* ---------- Farsi guides: same blocks as GUIDES, keyed by the English key. Digits are converted to Persian when rendered. ---------- */
@@ -3322,7 +3681,44 @@ const GUIDES_FA={
  {t:"steps",h:"استخدام، قدم به قدم",items:[["سه استعلام کتبی بگیرید","هفته‌ی ۱","با شرح کار یکسان، تا بتوانید مقایسه کنید."],["بررسی‌شان کنید","هفته‌ی ۱ تا ۲","معرف‌ها، فهرست Consumer Beware استان، پوشش WSIB و برای کار برقی، مجوز ESA."],["قرارداد کامل امضا کنید","پیش از شروع کار","شرح کار، متریال، قیمت با مالیات، تاریخ شروع و پایان، برنامه‌ی پرداخت، گارانتی و نظافت."],["مجوز را ببینید","پیش از شروع کار","اگر آن‌ها مجوز می‌گیرند، پیش از شروع ساخت آن را ببینید."],["همراه پیشرفت کار بپردازید","در طول کار","پرداخت‌ها را به مراحل تمام‌شده گره بزنید. هرگز همه‌ی مبلغ را از اول ندهید."]]},
  {t:"flags",h:"کلاهبرداری‌های رایج",items:[["«قیمت خوب» در خانه‌به‌خانه","فشار برای امضای همان روز، یا بازرسی رایگانی که تعمیر فوری پیدا می‌کند."],["ودیعه‌ی بزرگ «برای متریال»","و بعد پیمانکار ناپدید می‌شود."],["نقدی، بدون کاغذ","بدون قرارداد، بدون مجوز، بدون رسید."]]},
  {t:"take",text:"پیمانکاری که حاضر نیست چیزی را مکتوب کند، پای آن هم نمی‌ایستد. قرارداد از هر دو طرف محافظت می‌کند."}],
- cta:["تازه خریده‌اید و کار در برنامه دارید؟","می‌توانم استادکارهایی را که مشتری‌هایم با آن‌ها کار کرده‌اند معرفی کنم و کمک کنم ببینید چه کاری مجوز لازم دارد.","با علی صحبت کنید"]}
+ cta:["تازه خریده‌اید و کار در برنامه دارید؟","می‌توانم استادکارهایی را که مشتری‌هایم با آن‌ها کار کرده‌اند معرفی کنم و کمک کنم ببینید چه کاری مجوز لازم دارد.","با علی صحبت کنید"]},
+"guide-buying-from-abroad":{name:"خرید در تورنتو از خارج از کانادا: چه چیزی فرق می‌کند",
+ title:"خرید خانه در تورنتو از خارج از کانادا: وضعیت اقامت، مالیات و زمان‌بندی | علی بیات",
+ desc:"خرید خانه در GTA از خارج از کانادا: چرا وضعیت اقامت مهم‌تر از نشانی است، مالیات 25٪ غیرمقیم، محدودیت‌های فدرال، انتقال پول و بستن معامله از راه دور.",
+ h1:"خرید در تورنتو از خارج از کانادا: <em>چه چیزی فرق می‌کند</em>",lede:"شهروندی یا اقامت دائم شما قواعد را تعیین می‌کند، نه جایی که زندگی می‌کنید. ترتیبی که من پیش می‌روم و بودجه‌ای که باید در نظر بگیرید.",
+ chips:["۴ دقیقه مطالعه","قوانین وابسته به زمان","به‌روز در نوامبر ۲۰۲۶"],card:"وضعیت اقامت، مالیات 25٪ غیرمقیم، محدودیت‌های فدرال و بستن معامله از راه دور.",
+ blocks:[
+ {t:"tldr",items:["<b>وضعیت، نه نشانی.</b> شهروندان و ساکنان دائم کانادا که خارج از کشور زندگی می‌کنند مشمول مالیات سفته‌بازی غیرمقیم انتاریو نیستند. اتباع خارجی معمولاً مشمول آن هستند.","مالیات انتاریو برای اتباع و شرکت‌های خارجی <b>25٪</b> قیمت خرید است، با معافیت‌ها و بازپرداخت‌هایی که به شرایط شما بستگی دارد.","ممنوعیت فدرال برای بسیاری از خریدهای غیرکانادایی‌ها تا <b>1 ژانویه 2027</b> برقرار است. بودجه‌ی 2026 تمدید تا 2029 را پیشنهاد کرده است. پیش از پیشنهاد خرید، وضعیت آن را بررسی کنید."]},
+ {t:"stats",h:"قواعدی که به هویت شما بستگی دارند",items:[["25٪","مالیات سفته‌بازی غیرمقیم انتاریو","روی قیمت خرید، برای اتباع و شرکت‌های خارجی که ملک مسکونی در انتاریو می‌خرند"],["1 ژانویه 2027","پایان ممنوعیت فدرال طبق قانون فعلی","بودجه‌ی 2026 تاریخ 1 ژانویه 2029 و معافیت خانه‌های نوساز را پیشنهاد کرده است. پیشنهاد است، هنوز قانون نشده"],["هفته‌ها","آنچه فاصله به زمان‌بندی اضافه می‌کند","مدارک وام، منبع پول و امضا از خارج از کشور همه زمان می‌برند"]]},
+ {t:"steps",h:"از خارج از کشور، به ترتیب",items:[["اول وضعیتتان را مشخص کنید","پیش از هر کاری","شهروند، ساکن دائم یا هیچ‌کدام؟ این تعیین می‌کند مالیات 25٪ و محدودیت‌های فدرال شامل شما می‌شوند یا نه و چه استثناهایی ممکن است داشته باشید. وکیل شما آن را تأیید می‌کند."],["پول و مدارک را آماده کنید","هفته‌ی 1 تا 4","زود با کارگزار وام صحبت کنید. وام‌دهنده‌ها ممکن است درآمد خارج از کانادا را متفاوت ببینند و پیش‌پرداخت بیشتر رایج است. در معامله‌های املاک تأیید هویت و ثبت منبع پول هم لازم است."],["وکیل و روش امضا را انتخاب کنید","هفته‌ی 2 تا 4","وکیل املاک انتاریو سند، بستن معامله و فرم‌های مالیاتی را انجام می‌دهد. اگر نمی‌توانید حضور داشته باشید، درباره‌ی امضای از راه دور یا وکالت‌نامه بپرسید."],["همه‌ی هزینه‌ها را بودجه‌بندی کنید","پیش از پیشنهاد","مالیات انتقال زمین انتاریو و تورنتو (<a class=\"link\" href=\"#fa-guide-land-transfer-tax\">ماشین‌حساب</a> هر دو را نشان می‌دهد)، هزینه‌ی وکیل و، برای اتباع خارجی، مالیات 25٪ مگر معافیتی شامل شود."],["انتقال پول را برنامه‌ریزی کنید","پیش از بستن معامله","انتقال‌های بین‌المللی ممکن است چند روز طول بکشد و مبلغ روز تحویل ثابت است. زود شروع کنید و سند منبع پول را نگه دارید."],["برای بعد از تحویل برنامه داشته باشید","پیش از بستن معامله","کسی باید ملک را مدیریت کند: مالیات ملک، بیمه، نگهداری و مستأجرها. درآمد اجاره مشمول مالیات است و غیرمقیم‌ها قواعد ویژه‌ی کسر مالیات دارند؛ پیش از خرید از حسابدار بپرسید."]]},
+ {t:"flags",h:"مراقب باشید",items:[["فکر اینکه نشانی شما تعیین‌کننده است","وضعیت تعیین می‌کند، نه محل زندگی. شهروند کانادایی خارج از کشور و تبعه‌ی خارجی ساکن تورنتو متفاوت برخورد می‌شوند."],["دستورالعمل واریز که با ایمیل آمده","اطلاعات واریز را تلفنی با دفتر وکیلتان تأیید کنید. دستورالعمل جعلی در بستن معامله خطری شناخته‌شده است."],["خرید فقط با عکس","کسی که به او اعتماد دارید، یا من، ملک و ساختمان را ببیند و بازرسی را هم رزرو کنید."]]},
+ {t:"take",text:"از خارج از کشور، ریسک قیمت نیست؛ زمان‌بندی است. کارهای کاغذی را پیش از شروع جستجو شروع کنید."},
+ {t:"faq",items:[["آیا شهروندان کانادا که خارج از کشور زندگی می‌کنند مالیات غیرمقیم می‌پردازند؟","انتاریو می‌گوید مالیات سفته‌بازی غیرمقیم به شهروندی یا اقامت دائم بستگی دارد، نه به محل زندگی. وضعیت خودتان را با وکیل بررسی کنید."],["آیا مالیات 25٪ جای مالیات انتقال زمین را می‌گیرد؟","نه، مالیاتی اضافی است. مالیات انتقال زمین انتاریو و، در شهر تورنتو، مالیات انتقال زمین تورنتو همچنان اعمال می‌شود."],["آیا می‌توانم از خارج از کشور ملک اجاره‌ای بخرم؟","بسته به وضعیت شما و قوانین جاری ممکن است. درآمد اجاره برای غیرمقیم‌ها مالیات ویژه دارد؛ پیش از هر کاری با حسابدار صحبت کنید."]]}],
+ cta:["از خارج از کانادا می‌خرید؟","وضعیت و زمان‌بندی‌تان را بگویید. قدم‌ها و هزینه‌ها را برای وضعیت شما، به فارسی یا انگلیسی، می‌چینم.","گفتگو با علی درباره‌ی خرید","buy"]},
+"guide-condo-vs-detached":{name:"کاندو یا خانه‌ی مستقل در محور یانگ: مقایسه‌ی هزینه‌ها",
+ title:"کاندو یا خانه‌ی مستقل در محور یانگ: مقایسه‌ی هزینه‌ی واقعی | علی بیات",
+ desc:"کاندو یا خانه‌ی مستقل در نورث‌یورک، تورنهیل یا ریچموند هیل؟ هزینه‌ی ماهانه، ریسک‌ها، هزینه‌ی بستن معامله و فروش بعدی را با آنچه واقعاً می‌پردازید مقایسه کنید.",
+ h1:"کاندو یا خانه‌ی مستقل در محور یانگ: <em>مقایسه‌ی هزینه‌ها</em>",lede:"فاصله‌ی قیمت بخش کوچک‌تر مقایسه است. شارژ، نگهداری، ریسک و راه خروج تعیین می‌کند کدام ارزان‌تر تمام می‌شود.",
+ chips:["۴ دقیقه مطالعه","از نورث‌یورک تا ریچموند هیل","به‌روز در نوامبر ۲۰۲۶"],card:"شارژ، نگهداری، ریسک و فروش بعدی، خط به خط مقایسه شده‌اند.",
+ blocks:[
+ {t:"tldr",items:["کاندو <b>نگهداری‌ای را که خودتان کنترل می‌کنید</b> با <b>شارژی که کنترل نمی‌کنید</b> عوض می‌کند. خانه‌ی مستقل برعکس است.","مالیات انتقال زمین برای هر دو، در قیمت و شهرداری یکسان، یکی است. تغییرش در خیابان استیلز است، نه با نوع ساختمان.","پرسشی که تصمیم را می‌گیرد هزینه‌ی ماهانه‌ی کل و وضعیت فروش در پنج سال بعد است."]},
+ {t:"vs",h:"دو راه برای مالک شدن در این محور",a:["کاندو","شپرد-یانگ، نورث‌یورک سنتر، فینچ، VMC",["پیاده‌روی کوتاه تا مترو یا Viva می‌خواهید","شارژ ثابت ماهانه را به تعمیرات پیش‌بینی‌نشده ترجیح می‌دهید","خودتان در آن زندگی یا با مقررات ساختمان اجاره‌اش می‌دهید"],["شارژ می‌تواند بالا برود و صندوق ذخیره مقدارش را تعیین می‌کند","ممکن است بعد از خرید هزینه‌ی فوق‌العاده‌ی ارزیابی‌شده بیاید","مقررات اجاره یا حیوان خانگی را ساختمان تعیین می‌کند"]],b:["خانه‌ی مستقل یا نیمه‌مستقل","خیابان‌های داخلی، تورنهیل، ریچموند هیل",["زمین، فضا یا امکان بازسازی می‌خواهید","کنترل تعمیرات و زمان آن‌ها را ترجیح می‌دهید","به زمینی که خودش ارزش دارد اهمیت می‌دهید"],["تعمیرات با شماست: سقف، شوفاژ، پی، آب","مالیات ملک و بیمه از نظر مبلغ بیشتر است","واحد اضافه و بازسازی به کاربری زمین و مجوز بستگی دارد"]]},
+ {t:"table",h:"آنچه می‌پردازید، خط به خط",head:["هزینه","کاندو","خانه‌ی مستقل"],rows:[["شارژ ماهانه","شارژ ساختمان، از بودجه‌ی مجموعه","ندارد"],["مالیات ملک","دارد، روی ارزش ارزیابی‌شده‌ی کمتر","دارد، معمولاً قبض بزرگ‌تر"],["تعمیرات و نگهداری","داخل واحد؛ بقیه را ساختمان با شارژ انجام می‌دهد","همه‌اش با شما؛ پس بودجه‌ی سالانه کنار بگذارید"],["مالیات انتقال زمین","همان جدول؛ تورنتو مالیات خودش را اضافه می‌کند، منطقه‌ی یورک نه","همان جدول؛ تورنتو مالیات خودش را اضافه می‌کند، منطقه‌ی یورک نه"],["بزرگ‌ترین غافلگیری","هزینه‌ی فوق‌العاده یا جهش شارژ","تعمیر بزرگی که بعد از تحویل پیدا می‌شود"],["چطور بررسی کنید","گواهی وضعیت را با وکیل بخوانید","بازرسی کامل رزرو کنید و درباره‌ی مجوزها بپرسید"],["فروش بعدی","با واحدهای دیگر ساختمان خودتان رقابت می‌کنید","روی زمین، خیابان و وضعیت خانه رقابت می‌کنید"]]},
+ {t:"take",text:"قیمت را مقایسه نکنید. آنچه پنج سال هر ماه می‌پردازید، به‌علاوه‌ی ریسک بزرگ هر نوع را مقایسه کنید. جواب اغلب با آنچه برچسب قیمت می‌گوید فرق دارد."},
+ {t:"faq",items:[["بستن معامله کدام ارزان‌تر است؟","در قیمت و شهرداری یکسان، مالیات انتقال زمین یکی است. کاندو بررسی گواهی وضعیت را اضافه می‌کند. خانه‌ی مستقل نقشه‌برداری و کارهای سند را، و بازرسی برای هر دو عاقلانه است."],["برای سرمایه‌گذار کدام بهتر است؟","در کاندو به اجاره در برابر شارژ بستگی دارد و در خانه به آنچه کاربری زمین و مجوزها اجازه می‌دهند. پیش از مقایسه هر دو را در غربال معامله‌ی صفحه‌ی سرمایه‌گذاری امتحان کنید."]]}],
+ cta:["بین این دو مردد هستید؟","هر دو را برای خانه‌های مشخصی که در نظر دارید از نظر هزینه‌ی ماهانه، هزینه‌ی بستن معامله و فروش بعدی حساب می‌کنم.","گفتگو با علی درباره‌ی خرید","buy"]},
+"guide-deal-notes":{name:"سه یادداشت معامله: اعداد چطور تصمیم را عوض کردند",
+ title:"سه یادداشت معامله: اعداد چطور تصمیم را عوض کردند | علی بیات",
+ desc:"سه مثال محاسبه‌شده: کاندویی با صندوق ذخیره‌ی ناکافی، قیمتی بر اساس فروش‌های کهنه، و پیشنهادی که هزینه‌ی بستن معامله در دو طرف استیلز را نادیده گرفت.",
+ h1:"سه یادداشت معامله: <em>اعداد چطور تصمیم را عوض کردند</em>",lede:"مثال‌هایی از بررسی‌هایی که پیش از پیشنهاد خرید و پیش از قیمت فهرست انجام می‌دهم. موقعیت‌ها معمولی‌اند؛ عددها نمونه‌اند.",
+ chips:["مثال‌های فرضی","پرونده‌ی مشتری نیست","به‌روز در نوامبر ۲۰۲۶"],card:"هشدار صندوق ذخیره، فروش‌های کهنه و فاصله‌ی هزینه‌ی بستن معامله در استیلز، محاسبه‌شده.",
+ blocks:[
+ {t:"p",text:'<mark class="tbc" data-approve="deal-notes-review-fa"><b>این‌ها مثال‌های فرضی‌اند، نه پرونده‌ی مشتریان قبلی.</b> موقعیت‌ها معمولی‌اند و قیمت‌ها، شارژها و عددهای فروش نمونه‌ای هستند که برای نشان‌دادن روش به کار رفته‌اند. معامله یا نتیجه‌ی واقعی نیستند.</mark>'},
+ {t:"table",h:"یادداشت ۱: کاندویی که گفت صبر کن",intro:"دو کاندوی مشابه نزدیک فینچ. ارزان‌تر گواهی وضعیتی با نشانه‌های هشدار داشت: صندوق ذخیره‌ای بسیار کمتر از برآورد تعمیرات، شارژی که قرار بود بالا برود و هزینه‌ی فوق‌العاده‌ی تصویب‌شده. در پنج سال، واحد ارزان‌تر گران‌تر تمام می‌شود.",head:["هزینه‌ی پنج‌ساله (نمونه)","واحد A","واحد B"],rows:[["قیمت خرید","688,000 دلار","705,000 دلار"],["شارژ ماهانه","880 دلار","690 دلار"],["شارژ در 60 ماه","52,800 دلار","41,400 دلار"],["هزینه‌ی فوق‌العاده‌ی تصویب‌شده","12,000 دلار","0 دلار"],["جمع","752,800 دلار","746,400 دلار"]],note:"عددهای نمونه. واحد A در قیمت 17,000 دلار ارزان‌تر به نظر می‌رسد و در نهایت 6,400 دلار گران‌تر است، پیش از هر افزایش بعدی شارژ. این در گواهی وضعیت دیده می‌شود. <a class=\"link\" href=\"#fa-guide-status-certificate\">چطور آن را بخوانیم</a>."},
+ {t:"table",h:"یادداشت ۲: قیمت‌گذاری با فروش‌های بهار گذشته",intro:"یک خانه‌ی ویلایی یک‌طبقه در نورث‌یورک که بر اساس فروش‌هایی پنج‌ماهه‌ی قبل قیمت‌گذاری شده بود. بازار عوض شده بود و هر ماه ماندن در بازار با قیمت کهنه هزینه‌ی واقعی دارد.",head:["منبع قیمت (نمونه)","ارزش برآوردی"],rows:[["فروش‌های پنج ماه پیش","1,580,000 دلار"],["فروش‌های 60 روز اخیر، با تعدیل برای زمین و وضعیت","1,490,000 دلار"],["تفاوت","90,000 دلار، یا 5.7٪"],["هزینه‌ی نگهداری ماهانه در زمان فهرست‌بودن (بهره‌ی وام، مالیات، قبوض)","9,400 دلار"]],note:"عددهای نمونه. قیمت‌گذاری 5.7٪ بالاتر و ماندن سه ماه در بازار فقط از نظر هزینه‌ی نگهداری حدود 28,200 دلار خرج دارد، پیش از هر کاهش قیمت. به همین دلیل از جدیدترین فروش‌های مشابه قیمت می‌گذارم."},
+ {t:"table",h:"یادداشت ۳: خانه‌ی ارزان‌تر که گران‌تر تمام شد",intro:"خریداری خانه‌ای 1,000,000 دلاری در جنوب استیلز را با خانه‌ای 985,000 دلاری در شمال آن مقایسه می‌کند. فاصله‌ی 15,000 دلاری قیمت، عدد کوچک ماجراست.",head:["هنگام بستن معامله (نمونه)","جنوب استیلز (تورنتو)","شمال استیلز (منطقه‌ی یورک)"],rows:[["قیمت","1,000,000 دلار","985,000 دلار"],["مالیات انتقال زمین انتاریو","16,475 دلار","16,175 دلار"],["مالیات انتقال زمین شهرداری تورنتو","16,475 دلار","0 دلار"],["قیمت به‌علاوه‌ی مالیات انتقال زمین","1,032,950 دلار","1,001,175 دلار"]],note:"مالیات انتقال زمین از جدول‌های 2026 همان راهنما و بدون بازپرداخت محاسبه شده است. فاصله‌ی کل 31,775 دلار است، بیش از دو برابر تفاوت قیمت. مالیات ملک و هزینه‌ی نگهداری هم باید مقایسه شود؛ <a class=\"link\" href=\"#fa-guide-land-transfer-tax\">ماشین‌حساب</a> برای هر دو فیلد دارد."},
+ {t:"take",text:"وقتی هزینه‌ی بستن معامله، هزینه‌ی نگهداری و ریسک کنار قیمت در یک صفحه می‌آیند، تصمیم شکل دیگری پیدا می‌کند. کار من همین است."}],
+ cta:["می‌خواهید برای معامله‌ی خودتان انجام شود؟","آگهی یا نشانی را بفرستید. همین بررسی‌ها را انجام می‌دهم و صریح می‌گویم اعداد چه می‌گویند.","گفتگو با علی","question"]}
 };
 
 /* ---------- Farsi Resources page: same categories and order as ARTS, Farsi titles; build.py captures the rendered list ---------- */
@@ -3386,7 +3782,7 @@ function renderGuide(g,fa){
 /* ---------- Routes: one source of truth for URLs, titles, descriptions, H1s and indexing ---------- */
 /* Used by the prototype router, the internal SEO table and build.py (static, crawlable pages). */
 const ROUTES=[
- {key:"home",alt:"fa-home",ct:"home",cat:"general",geo:"GTA",evergreen:1,path:"/",name:"Home",index:1,title:"Ali Bayat | North York & Toronto Real Estate Agent",desc:"REALTOR® licensed since 2016, Century 21 Heritage Group. Buy, sell, lease or invest in North York, Thornhill, Richmond Hill, Vaughan & Toronto. English & Farsi.",h1:"A North York real estate agent who shows you the real numbers."},
+ {key:"home",alt:"fa-home",ct:"home",cat:"general",geo:"GTA",evergreen:1,path:"/",name:"Home",index:1,title:"Ali Bayat | North York & Toronto Real Estate Agent",desc:"Ali Bayat, REALTOR® with Century 21 Heritage Group. Buy, sell or invest along Yonge Street, North York to Richmond Hill, and Vaughan & Toronto. English & Farsi.",h1:"Real estate along Yonge Street, from North York to Richmond Hill."},
  {key:"about",alt:"fa-about",ct:"profile",cat:"general",geo:"GTA",evergreen:1,path:"/about/",name:"About",parent:"home",index:1,title:"About Ali Bayat, REALTOR® | Farsi-Speaking Toronto Agent",desc:"Meet Ali Bayat: licensed since 2016, Century 21 Heritage Group, RECO #4789920. Clear numbers, straight answers, and service in English and Farsi.",h1:"Ali Bayat, Toronto & North York Real Estate Agent"},
  {key:"buy",alt:"fa-buy",ct:"service",cat:"buying",geo:"GTA",evergreen:1,path:"/buy/",name:"Buy",parent:"home",index:1,title:"Buy a Home in Toronto, North York & York Region | Ali Bayat",desc:"Buying in North York, Thornhill, Richmond Hill, Vaughan or Toronto: budget and closing costs, research, offer strategy, negotiation and closing.",h1:"Buying a home in Toronto and the GTA"},
  {key:"sell",alt:"fa-sell",ct:"service",cat:"selling",geo:"GTA",evergreen:1,path:"/sell/",name:"Sell",parent:"home",index:1,title:"Sell Your Home in North York, Toronto & York Region | Ali Bayat",desc:"Comparable-sales pricing, preparation, marketing and negotiation for sellers in Toronto and York Region. Ask Ali for a review of your home's value.",h1:"Selling a home in Toronto and the GTA"},
@@ -3397,7 +3793,7 @@ const ROUTES=[
  {key:"resources",alt:"fa-resources",ct:"hub",cat:"resources",geo:"GTA",evergreen:1,path:"/resources/",name:"Resources",parent:"home",index:1,title:"Toronto & York Region Real Estate Guides | Ali Bayat",desc:"One-page guides for Toronto and York Region: first-home costs, land transfer tax, selling strategy, investment analysis, market notes and neighbourhoods.",h1:"Guides for buying, selling and investing in Toronto and York Region"},
  {key:"guide-land-transfer-tax",alt:"fa-guide-land-transfer-tax",ct:"guide",cat:"buying",geo:"Ontario; City of Toronto; York Region",ts:1,dataPeriod:"Ontario rates in effect since January 1, 2017; City of Toronto MLTT rates in effect from April 1, 2026",verifiedAt:"2026-10-01",sources:[["City of Toronto, MLTT rates and fees","https://www.toronto.ca/services-payments/property-taxes-utilities/municipal-land-transfer-tax-mltt/municipal-land-transfer-tax-mltt-rates-and-fees/"],["City of Toronto, MLTT rebates","https://www.toronto.ca/services-payments/property-taxes-utilities/municipal-land-transfer-tax-mltt/municipal-land-transfer-tax-mltt-rebate-opportunities/"],["Ontario, calculating land transfer tax","https://www.ontario.ca/document/land-transfer-tax/calculating-land-transfer-tax"],["Ontario, refunds for first-time homebuyers","https://www.ontario.ca/document/land-transfer-tax/land-transfer-tax-refunds-first-time-homebuyers"]],path:"/resources/buying/land-transfer-tax-toronto-york-region/",name:"Land transfer tax in Toronto vs. York Region",parent:"resources",type:"article",index:1,title:"Land Transfer Tax in Toronto vs. York Region (2026) | Ali Bayat",desc:"How Ontario and Toronto land transfer taxes work in 2026, why buying in North York costs more at closing than Vaughan, with a calculator.",h1:"Land transfer tax in Toronto vs. York Region"},
  {key:"contact",alt:"fa-contact",ct:"contact",cat:"general",geo:"GTA",evergreen:1,path:"/contact/",name:"Contact",parent:"home",index:1,title:"Contact Ali Bayat, REALTOR® | North York & Thornhill",desc:"Talk to Ali about buying, selling or investing in North York, Thornhill and the GTA. Replies personally, in English or Farsi (فارسی).",h1:"Talk to Ali"},
- {key:"fa-home",lang:"fa",alt:"home",ct:"home",cat:"general",geo:"GTA",evergreen:1,path:"/fa/",name:"خانه",index:1,title:"علی بیات | مشاور املاک فارسی‌زبان در تورنتو و نورث‌یورک",desc:"علی بیات، مشاور املاک فارسی‌زبان در Century 21 Heritage Group با مجوز از 2016. خرید، فروش، اجاره و سرمایه‌گذاری در نورث‌یورک، تورنهیل، ریچموند هیل، وان، تورنتو.",h1:"مشاور املاک فارسی‌زبان در تورنتو و نورث‌یورک، با اعداد واقعی."},
+ {key:"fa-home",lang:"fa",alt:"home",ct:"home",cat:"general",geo:"GTA",evergreen:1,path:"/fa/",name:"خانه",index:1,title:"علی بیات | مشاور املاک فارسی‌زبان در تورنتو و نورث‌یورک",desc:"علی بیات، مشاور املاک فارسی‌زبان در Century 21 Heritage Group با مجوز از 2016. خرید، فروش، اجاره و سرمایه‌گذاری در نورث‌یورک، تورنهیل، ریچموند هیل، وان، تورنتو.",h1:"املاک در امتداد خیابان یانگ، از نورث‌یورک تا ریچموند هیل."},
  {key:"fa-buy",lang:"fa",alt:"buy",ct:"service",cat:"buying",geo:"GTA",evergreen:1,path:"/fa/buy/",name:"خرید",parent:"fa-home",index:1,title:"خرید خانه در تورنتو و GTA | علی بیات، مشاور املاک فارسی‌زبان",desc:"راهنمای خرید خانه در تورنتو و منطقه‌ی یورک به فارسی: بودجه، بررسی بازار، ارزیابی ملک، پیشنهاد خرید، مذاکره و تحویل، همراه با علی بیات.",h1:"خرید خانه در تورنتو و منطقه‌ی بزرگ تورنتو (GTA)"},
  {key:"fa-sell",lang:"fa",alt:"sell",ct:"service",cat:"selling",geo:"GTA",evergreen:1,path:"/fa/sell/",name:"فروش",parent:"fa-home",index:1,title:"فروش خانه در تورنتو و GTA | علی بیات، مشاور املاک فارسی‌زبان",desc:"فروش خانه در تورنتو و منطقه‌ی یورک به فارسی: تحلیل بازار، قیمت‌گذاری، آماده‌سازی، بازاریابی و مذاکره. درباره‌ی ارزش خانه‌تان با علی بیات صحبت کنید.",h1:"فروش خانه در تورنتو و منطقه‌ی بزرگ تورنتو (GTA)"},
  {key:"fa-invest",lang:"fa",alt:"invest",ct:"service",cat:"investment",geo:"Toronto & York Region",evergreen:1,path:"/fa/invest/",name:"سرمایه‌گذاری",parent:"fa-home",index:1,title:"سرمایه‌گذاری در املاک تورنتو | تحلیل ملک درآمدزا به فارسی",desc:"ارزیابی ملک‌های درآمدزا در تورنتو و منطقه‌ی یورک به فارسی: درآمد اجاره، هزینه‌ها، وام، جریان نقدی و نرخ بازده سرمایه (Cap rate)، همراه با ماشین‌حساب.",h1:"سرمایه‌گذاری در املاک تورنتو با تمرکز بر اعداد."},
@@ -3456,6 +3852,7 @@ function route(){
   const nk=navMap[key]||key;
   document.querySelectorAll(".nav a, .drawer a").forEach(a=>a.getAttribute("href")==="#"+nk&&!a.classList.contains("btn")?a.setAttribute("aria-current","page"):a.removeAttribute("aria-current"));
   document.body.dataset.route=key;closeDrawer();window.scrollTo(0,0);updateBar();
+  lttHandoff();initDealBox();
   const h1=document.querySelector(`[data-page="${key}"] h1`);if(h1&&booted)h1.focus({preventScroll:true})}
 let booted=false;
 if(!STATIC)window.addEventListener("hashchange",route);
@@ -3497,13 +3894,13 @@ document.getElementById("search-form").addEventListener("submit",e=>{e.preventDe
 /* ---------- Contact form (lead contract: see LEADS.md) ---------- */
 const cf=document.getElementById("contact-form");
 if(cf){
-const reqIn=document.getElementById("c-request"),reqNote=document.getElementById("req-note"),sent=document.getElementById("sent");
-const setRequest=v=>{reqIn.value=v||"";reqNote.hidden=v!=="analysis"};
-const setInterest=(i,req)=>{const r=document.getElementById("i-"+i);if(r)r.checked=true;setRequest(req==="analysis"?"analysis":"")};
+const reqIn=document.getElementById("c-request"),reqNote=document.getElementById("req-note"),reqNotePc=document.getElementById("req-note-pc"),sent=document.getElementById("sent");
+const setRequest=v=>{reqIn.value=v||"";reqNote.hidden=v!=="analysis";if(reqNotePc)reqNotePc.hidden=v!=="pricing-check"};
+const setInterest=(i,req)=>{const r=document.getElementById("i-"+i);if(r)r.checked=true;setRequest(req==="analysis"?"analysis":req==="pricing-check"&&i==="sell"?"pricing-check":"")};
 /* prototype: buttons on other "pages" preselect the form; built site: /contact/?interest=invest&request=analysis */
 if(!STATIC)document.addEventListener("click",e=>{const a=e.target.closest("[data-interest]");if(a)setInterest(a.dataset.interest,a.dataset.request)});
 else if(params.get("interest"))setInterest(params.get("interest").replace(/[^a-z]/g,""),params.get("request"));
-document.querySelectorAll('input[name="interest"]').forEach(r=>r.addEventListener("change",()=>{if(r.checked&&r.value!=="invest")setRequest("")}));
+document.querySelectorAll('input[name="interest"]').forEach(r=>r.addEventListener("change",()=>{if(!r.checked)return;if((reqIn.value==="analysis"&&r.value!=="invest")||(reqIn.value==="pricing-check"&&r.value!=="sell"))setRequest("")}));
 cf.noValidate=true; /* JS validates; without JS the browser's own validation applies */
 const setField=(n,v)=>{const el=cf.elements.namedItem(n);if(el&&!el.length)el.value=v||""};
 if(STATIC){
@@ -3541,14 +3938,14 @@ cf.addEventListener("submit",async e=>{e.preventDefault();const nm=document.getE
       const leadSource=/instagram/.test(chan)?"instagram":/facebook|fb\.com/.test(chan)?"facebook":/google/.test(chan)?"google":"website";
       const consentSrc="Website contact form ("+(g("form_version")||"unknown")+", "+location.pathname+")";
       const now=Date.now();
-      const message=g("message");
+      const deal=g("deal_screen"),message=g("message")+(g("deal_screen")?(g("message")?"\n\n":"")+"--- Deal screen (website calculator) ---\n"+deal:"");
       const toFields=list=>list.filter(([,v])=>v!==""&&v!=null).map(([name,value])=>({objectTypeId:"0-1",name,value:String(value)}));
       const structured=toFields([["firstname",first],["lastname",last],["email",g("email")],["phone",g("phone")],["message",message],
         ["lead_type",leadType],["analysis_requested",g("request")==="analysis"?"true":"false"],["hs_language",lang],
         /* Lead Status is NOT sent: a repeat submission must never reset a lead Ali is already working back to "New". */["lead_source",leadSource],["source_page",g("source_page")||location.pathname],["source_cta",g("source_cta")],
         ["source_campaign",utm],["referrer_url",g("referrer")],
         ["consent_status",g("consent")==="yes"?"given":"not_given"],["consent_source",consentSrc],["consent_version",g("consent_version")]]);
-      const ctx=["Interest: "+(lbl[g("interest")]||g("interest"))+(g("request")==="analysis"?" (Investment Property Analysis request)":""),
+      const ctx=["Interest: "+(lbl[g("interest")]||g("interest"))+(g("request")==="analysis"?" (Investment Property Analysis request)":g("request")==="pricing-check"?" (Pricing & prep check request)":""),
         "Reply in: "+(lang==="fa"?"Farsi":"English"),g("source_page")&&("From page: "+g("source_page")),g("source_cta")&&("Clicked: "+g("source_cta")),
         utm&&("Campaign: "+utm),g("referrer")&&("Referrer: "+g("referrer")),"Consent: "+g("consent")+" (wording "+g("consent_version")+")"].filter(Boolean).join("\n");
       const legacy=toFields([["firstname",first],["lastname",last],["email",g("email")],["phone",g("phone")],["message",(message?message+"\n\n":"")+"---\n"+ctx]]);
@@ -3591,7 +3988,7 @@ if(STATIC&&"IntersectionObserver" in window&&!matchMedia("(prefers-reduced-motio
 if(!STATIC){document.querySelectorAll("[data-linemap]").forEach(el=>el.innerHTML=lineMap());renderAlists();renderProc();renderListings(false);fillDwgs(document)}
 /*</prototype>*/
 if(STATIC){const c=params.get("category");if(c&&CATS.some(x=>x.id===c))activeCat=c}
-renderKC();/*<prototype>*/renderKCFa();/*</prototype>*/calc();invCalc();
+renderKC();/*<prototype>*/renderKCFa();/*</prototype>*/calc();invCalc();lttHandoff();initDealBox();
 if(STATIC){
   const to=LEGACY[location.hash.slice(1)];
   if(to&&location.pathname==="/"){location.replace(to);return}

@@ -26,7 +26,7 @@ All engineering checks pass. Every remaining failure needs Ali's information, an
 
 ## Routing
 **1. Every intended production URL resolves (trailing slashes, 404, planned URLs absent): PASS**
-- 62 URLs: all 200; trailing-slash redirects 301; unknown URLs 404 with the site's page
+- 68 URLs: all 200; trailing-slash redirects 301; unknown URLs 404 with the site's page
 - planned, not built (no thin pages): 
 - held back until the feature is live: /listings/
 
@@ -36,8 +36,8 @@ All engineering checks pass. Every remaining failure needs Ali's information, an
 
 ## SEO
 **2. Title, description, H1, canonical, robots and social metadata: PASS**
-- 62 pages: unique titles and descriptions; descriptions 70–160 characters; one H1 each; OG + Twitter tags
-- titles over 65 characters may be shortened in results (wording as specified): /resources/market/2026-10-york-region/ (82), /resources/investment/financing/ (78), /resources/buying/pre-construction-condo-questions/ (77), /fa/resources/market/2026-10-york-region/ (74), /resources/tips/choosing-a-contractor/ (73), /resources/market/2026-10-toronto-york-region/ (73), /resources/investment/cash-flow/ (72), /resources/investment/investor-strategy/ (71), /resources/investment/duplexes-triplexes-fourplexes/ (71), /resources/buying/first-home-toronto/ (71), /fa/resources/selling/offer-date-vs-pricing-to-market/ (71), /resources/selling/offer-date-vs-pricing-to-market/ (69), /resources/investment/investment-analysis/ (69), /fa/resources/investment/investor-strategy/ (69), /fa/resources/market/2026-10-toronto-york-region/ (68)
+- 68 pages: unique titles and descriptions; descriptions 70–160 characters; one H1 each; OG + Twitter tags
+- titles over 65 characters may be shortened in results (wording as specified): /resources/market/2026-10-york-region/ (82), /fa/resources/buying/buying-toronto-from-abroad/ (81), /resources/investment/financing/ (78), /resources/buying/pre-construction-condo-questions/ (77), /fa/resources/market/2026-10-york-region/ (74), /resources/tips/choosing-a-contractor/ (73), /resources/market/2026-10-toronto-york-region/ (73), /resources/investment/cash-flow/ (72), /resources/investment/investor-strategy/ (71), /resources/investment/duplexes-triplexes-fourplexes/ (71), /resources/buying/first-home-toronto/ (71), /resources/buying/condo-vs-detached-yonge-corridor/ (71), /fa/resources/selling/offer-date-vs-pricing-to-market/ (71), /resources/selling/offer-date-vs-pricing-to-market/ (69), /resources/investment/investment-analysis/ (69), /fa/resources/investment/investor-strategy/ (69), /fa/resources/buying/condo-vs-detached-yonge-corridor/ (69), /fa/resources/market/2026-10-toronto-york-region/ (68), /resources/buying/buying-toronto-from-abroad/ (67), /resources/tips/deal-notes-how-numbers-change-decisions/ (66)
 
 **6. robots.txt behaves correctly (production and staging): PASS**
 - production: everything crawlable, noindex pages reachable so the tag is seen, sitemap declared
@@ -45,15 +45,15 @@ All engineering checks pass. Every remaining failure needs Ali's information, an
 
 ## Sitemap
 **5. Sitemap: only intended canonical indexable URLs, accurate lastmod: PASS**
-- 58 URLs, all canonical and indexable; noindex, planned and held-back pages excluded
-- lastmod present on 58 of 58 (only from real publish/update dates; omitted otherwise, never the build date)
+- 64 URLs, all canonical and indexable; noindex, planned and held-back pages excluded
+- lastmod present on 64 of 64 (only from real publish/update dates; omitted otherwise, never the build date)
 
 ## Internal links
 **3. Zero broken internal links: PASS**
-- 4236 links and assets across 62 pages → 70 unique internal targets, 0 broken
+- 4445 links and assets across 68 pages → 76 unique internal targets, 0 broken
 
 **13. Internal linking: no orphans, pillars connected, contextual links: PASS**
-- contextual inbound links (main content only): / 33, /contact/ 30, /fa/ 29, /fa/contact/ 28, /invest/ 18, /resources/ 17, /fa/invest/ 17, /fa/resources/ 17, /buy/ 14, /sell/ 13, /fa/buy/ 13, /neighbourhoods/north-york/ 12, /neighbourhoods/richmond-hill/ 12, /neighbourhoods/vaughan/ 12, /neighbourhoods/toronto/ 12, /resources/buying/land-transfer-tax-toronto-york-region/ 12, /fa/sell/ 12, /fa/resources/buying/land-transfer-tax-toronto-york-region/ 11, /neighbourhoods/thornhill/ 10, /fa/neighbourhoods/north-york/ 10, /fa/neighbourhoods/richmond-hill/ 10, /fa/neighbourhoods/vaughan/ 10, /fa/neighbourhoods/toronto/ 10, /neighbourhoods/ 9, /fa/neighbourhoods/ 9, /fa/neighbourhoods/thornhill/ 8, /resources/market/2026-10-toronto-york-region/ 6, /resources/market/2026-10-york-region/ 6, /fa/resources/market/2026-10-toronto-york-region/ 6, /fa/resources/market/2026-10-york-region/ 6, /resources/investment/cash-flow/ 5, /resources/tips/home-inspection-gta/ 5, /fa/resources/investment/cash-flow/ 5, /fa/resources/tips/home-inspection-gta/ 5, /about/ 4, /fa/about/ 4, /resources/buying/first-home-toronto/ 4, /resources/investment/investment-analysis/ 4, /resources/investment/cap-rate/ 4, /resources/investment/financing/ 4, /resources/investment/duplexes-triplexes-fourplexes/ 4, /resources/investment/investor-strategy/ 4, /resources/tips/condo-status-certificate/ 4, /fa/resources/buying/first-home-toronto/ 4, /fa/resources/investment/investment-analysis/ 4, /fa/resources/investment/cap-rate/ 4, /fa/resources/investment/financing/ 4, /fa/resources/investment/duplexes-triplexes-fourplexes/ 4, /fa/resources/investment/investor-strategy/ 4, /fa/resources/tips/condo-status-certificate/ 4, /resources/selling/what-to-fix-before-listing/ 3, /resources/selling/offer-date-vs-pricing-to-market/ 3, /resources/tips/choosing-a-contractor/ 3, /fa/resources/selling/what-to-fix-before-listing/ 3, /fa/resources/selling/offer-date-vs-pricing-to-market/ 3, /fa/resources/tips/choosing-a-contractor/ 3, /privacy/ 2, /resources/buying/pre-construction-condo-questions/ 2, /fa/resources/buying/pre-construction-condo-questions/ 2, /terms/ 0, /accessibility/ 0
+- contextual inbound links (main content only): / 36, /contact/ 33, /fa/ 32, /fa/contact/ 31, /resources/ 20, /fa/resources/ 20, /invest/ 18, /fa/invest/ 17, /buy/ 16, /resources/buying/land-transfer-tax-toronto-york-region/ 16, /fa/resources/buying/land-transfer-tax-toronto-york-region/ 16, /fa/buy/ 15, /sell/ 13, /neighbourhoods/north-york/ 13, /neighbourhoods/richmond-hill/ 12, /neighbourhoods/vaughan/ 12, /neighbourhoods/toronto/ 12, /fa/sell/ 12, /fa/neighbourhoods/north-york/ 11, /neighbourhoods/thornhill/ 10, /fa/neighbourhoods/richmond-hill/ 10, /fa/neighbourhoods/vaughan/ 10, /fa/neighbourhoods/toronto/ 10, /neighbourhoods/ 9, /fa/neighbourhoods/ 9, /fa/neighbourhoods/thornhill/ 8, /resources/tips/condo-status-certificate/ 7, /fa/resources/tips/condo-status-certificate/ 7, /resources/market/2026-10-toronto-york-region/ 6, /resources/market/2026-10-york-region/ 6, /resources/tips/home-inspection-gta/ 6, /fa/resources/buying/first-home-toronto/ 6, /fa/resources/investment/cash-flow/ 6, /fa/resources/market/2026-10-toronto-york-region/ 6, /fa/resources/market/2026-10-york-region/ 6, /fa/resources/tips/home-inspection-gta/ 6, /resources/buying/first-home-toronto/ 5, /resources/selling/offer-date-vs-pricing-to-market/ 5, /resources/investment/cash-flow/ 5, /fa/resources/selling/offer-date-vs-pricing-to-market/ 5, /about/ 4, /fa/about/ 4, /resources/selling/what-to-fix-before-listing/ 4, /resources/investment/investment-analysis/ 4, /resources/investment/cap-rate/ 4, /resources/investment/financing/ 4, /resources/investment/duplexes-triplexes-fourplexes/ 4, /resources/investment/investor-strategy/ 4, /fa/resources/selling/what-to-fix-before-listing/ 4, /fa/resources/investment/investment-analysis/ 4, /fa/resources/investment/cap-rate/ 4, /fa/resources/investment/financing/ 4, /fa/resources/investment/duplexes-triplexes-fourplexes/ 4, /fa/resources/investment/investor-strategy/ 4, /resources/tips/choosing-a-contractor/ 3, /fa/resources/tips/choosing-a-contractor/ 3, /privacy/ 2, /resources/buying/pre-construction-condo-questions/ 2, /fa/resources/buying/pre-construction-condo-questions/ 2, /fa/resources/buying/buying-toronto-from-abroad/ 2, /fa/resources/buying/condo-vs-detached-yonge-corridor/ 2, /fa/resources/tips/deal-notes-how-numbers-change-decisions/ 2, /resources/buying/buying-toronto-from-abroad/ 1, /resources/buying/condo-vs-detached-yonge-corridor/ 1, /resources/tips/deal-notes-how-numbers-change-decisions/ 1, /terms/ 0, /accessibility/ 0
 
 ## Accessibility
 **8. Navigation works on desktop, tablet and mobile: PASS**
@@ -61,8 +61,8 @@ All engineering checks pass. Every remaining failure needs Ali's information, an
 - tablet 820px and mobile 375px (touch): menu opens, every link correct, closes; no horizontal scroll on any page
 
 **9. Accessibility: axe-core, keyboard, focus, contrast, mobile, reduced motion: PASS**
-- axe-core: 0 violation(s) across 62 pages × light/dark × 1280/375px
-- built-in checks (names, labels, ARIA, landmarks, zoom, WCAG AA contrast) on 62 pages × light/dark × 1280/375px: 0 issue(s), 0 contrast
+- axe-core: 0 violation(s) across 68 pages × light/dark × 1280/375px
+- built-in checks (names, labels, ARIA, landmarks, zoom, WCAG AA contrast) on 68 pages × light/dark × 1280/375px: 0 issue(s), 0 contrast
 - keyboard: every control reachable by Tab on every page (0 page(s) with gaps); 0 control(s) without a visible focus ring; skip link, menu Enter/Tab/Escape, live calculator results, reduced motion
 
 ## Structured data
@@ -76,39 +76,39 @@ All engineering checks pass. Every remaining failure needs Ali's information, an
 
 ## Content governance
 **12. Content governance: author, review status, dates, sources, indexability: PASS**
-- 62 pages registered; 60 approved as built; author = Ali Bayat
+- 68 pages registered; 66 approved as built; author = Ali Bayat
 - approvals are tied to each page's exact content; dates come only from Ali's approvals (python build.py approve …)
 
 | Page | Type | Author | Review | Published | Updated | Source / data period | Indexable |
 |---|---|---|---|---|---|---|---|
-| `/` | home | Ali Bayat | approved | 2026-11-11 | 2026-11-18 | n/a | yes |
+| `/` | home | Ali Bayat | approved | 2026-11-11 | 2026-11-26 | n/a | yes |
 | `/about/` | profile | Ali Bayat | approved | 2026-11-11 | 2026-11-20 | n/a | yes |
-| `/buy/` | service | Ali Bayat | approved | 2026-11-11 | 2026-11-21 | n/a | yes |
-| `/sell/` | service | Ali Bayat | approved | 2026-11-11 | 2026-11-21 | n/a | yes |
-| `/invest/` | service | Ali Bayat | approved | 2026-11-21 | 2026-11-21 | n/a | yes |
-| `/neighbourhoods/` | hub | Ali Bayat | approved | 2026-11-11 | 2026-11-18 | n/a | yes |
-| `/neighbourhoods/north-york/` | neighbourhood-guide | Ali Bayat | approved | 2026-11-11 | 2026-11-25 | n/a | yes |
-| `/neighbourhoods/thornhill/` | neighbourhood-guide | Ali Bayat | approved | 2026-11-11 | 2026-11-25 | n/a | yes |
-| `/neighbourhoods/richmond-hill/` | neighbourhood-guide | Ali Bayat | approved | 2026-11-11 | 2026-11-25 | n/a | yes |
-| `/neighbourhoods/vaughan/` | neighbourhood-guide | Ali Bayat | approved | 2026-11-11 | 2026-11-25 | n/a | yes |
-| `/neighbourhoods/toronto/` | neighbourhood-guide | Ali Bayat | approved | 2026-11-11 | 2026-11-25 | n/a | yes |
-| `/resources/` | hub | Ali Bayat | approved | 2026-11-11 | 2026-11-21 | n/a | yes |
+| `/buy/` | service | Ali Bayat | approved | 2026-11-11 | 2026-11-26 | n/a | yes |
+| `/sell/` | service | Ali Bayat | approved | 2026-11-11 | 2026-11-26 | n/a | yes |
+| `/invest/` | service | Ali Bayat | approved | 2026-11-21 | 2026-11-26 | n/a | yes |
+| `/neighbourhoods/` | hub | Ali Bayat | approved | 2026-11-11 | 2026-11-26 | n/a | yes |
+| `/neighbourhoods/north-york/` | neighbourhood-guide | Ali Bayat | approved | 2026-11-11 | 2026-11-26 | n/a | yes |
+| `/neighbourhoods/thornhill/` | neighbourhood-guide | Ali Bayat | approved | 2026-11-11 | 2026-11-26 | n/a | yes |
+| `/neighbourhoods/richmond-hill/` | neighbourhood-guide | Ali Bayat | approved | 2026-11-11 | 2026-11-26 | n/a | yes |
+| `/neighbourhoods/vaughan/` | neighbourhood-guide | Ali Bayat | approved | 2026-11-11 | 2026-11-26 | n/a | yes |
+| `/neighbourhoods/toronto/` | neighbourhood-guide | Ali Bayat | approved | 2026-11-11 | 2026-11-26 | n/a | yes |
+| `/resources/` | hub | Ali Bayat | approved | 2026-11-11 | 2026-11-26 | n/a | yes |
 | `/resources/buying/land-transfer-tax-toronto-york-region/` | guide | Ali Bayat | approved | 2026-11-11 | 2026-11-26 | City of Toronto, MLTT rates and fees; City of Toronto, MLTT rebates; Ontario, calculating land transfer tax; Ontario, refunds for first-time homebuyers (Ontario rates in effect since January 1, 2017; City of Toronto MLTT rates in effect from April 1, 2026; verified 2026-10-01) | yes |
-| `/contact/` | contact | Ali Bayat | approved | 2026-11-11 | 2026-11-18 | n/a | yes |
-| `/fa/` | home | Ali Bayat | approved | 2026-11-11 | 2026-11-18 | n/a | yes |
-| `/fa/buy/` | service | Ali Bayat | approved | 2026-11-11 | 2026-11-21 | n/a | yes |
-| `/fa/sell/` | service | Ali Bayat | approved | 2026-11-11 | 2026-11-21 | n/a | yes |
-| `/fa/invest/` | service | Ali Bayat | approved | 2026-11-21 | 2026-11-21 | n/a | yes |
-| `/fa/neighbourhoods/` | hub | Ali Bayat | approved | 2026-11-11 | 2026-11-18 | n/a | yes |
-| `/fa/neighbourhoods/north-york/` | neighbourhood-guide | Ali Bayat | approved | 2026-11-11 | 2026-11-25 | n/a | yes |
-| `/fa/neighbourhoods/thornhill/` | neighbourhood-guide | Ali Bayat | approved | 2026-11-11 | 2026-11-25 | n/a | yes |
-| `/fa/neighbourhoods/richmond-hill/` | neighbourhood-guide | Ali Bayat | approved | 2026-11-11 | 2026-11-25 | n/a | yes |
-| `/fa/neighbourhoods/vaughan/` | neighbourhood-guide | Ali Bayat | approved | 2026-11-11 | 2026-11-25 | n/a | yes |
-| `/fa/neighbourhoods/toronto/` | neighbourhood-guide | Ali Bayat | approved | 2026-11-11 | 2026-11-25 | n/a | yes |
-| `/fa/resources/` | hub | Ali Bayat | approved | 2026-11-11 | 2026-11-21 | n/a | yes |
+| `/contact/` | contact | Ali Bayat | approved | 2026-11-11 | 2026-11-26 | n/a | yes |
+| `/fa/` | home | Ali Bayat | approved | 2026-11-11 | 2026-11-26 | n/a | yes |
+| `/fa/buy/` | service | Ali Bayat | approved | 2026-11-11 | 2026-11-26 | n/a | yes |
+| `/fa/sell/` | service | Ali Bayat | approved | 2026-11-11 | 2026-11-26 | n/a | yes |
+| `/fa/invest/` | service | Ali Bayat | approved | 2026-11-21 | 2026-11-26 | n/a | yes |
+| `/fa/neighbourhoods/` | hub | Ali Bayat | approved | 2026-11-11 | 2026-11-26 | n/a | yes |
+| `/fa/neighbourhoods/north-york/` | neighbourhood-guide | Ali Bayat | approved | 2026-11-11 | 2026-11-26 | n/a | yes |
+| `/fa/neighbourhoods/thornhill/` | neighbourhood-guide | Ali Bayat | approved | 2026-11-11 | 2026-11-26 | n/a | yes |
+| `/fa/neighbourhoods/richmond-hill/` | neighbourhood-guide | Ali Bayat | approved | 2026-11-11 | 2026-11-26 | n/a | yes |
+| `/fa/neighbourhoods/vaughan/` | neighbourhood-guide | Ali Bayat | approved | 2026-11-11 | 2026-11-26 | n/a | yes |
+| `/fa/neighbourhoods/toronto/` | neighbourhood-guide | Ali Bayat | approved | 2026-11-11 | 2026-11-26 | n/a | yes |
+| `/fa/resources/` | hub | Ali Bayat | approved | 2026-11-11 | 2026-11-26 | n/a | yes |
 | `/fa/resources/buying/land-transfer-tax-toronto-york-region/` | guide | Ali Bayat | approved | 2026-11-11 | 2026-11-26 | City of Toronto, MLTT rates and fees; City of Toronto, MLTT rebates; Ontario, calculating land transfer tax; Ontario, refunds for first-time homebuyers (Ontario rates in effect since January 1, 2017; City of Toronto MLTT rates in effect from April 1, 2026; verified 2026-10-01) | yes |
 | `/fa/about/` | profile | Ali Bayat | approved | 2026-11-11 | 2026-11-20 | n/a | yes |
-| `/fa/contact/` | contact | Ali Bayat | approved | 2026-11-11 | 2026-11-18 | n/a | yes |
+| `/fa/contact/` | contact | Ali Bayat | approved | 2026-11-11 | 2026-11-26 | n/a | yes |
 | `/privacy/` | legal | Ali Bayat | draft | n/a | n/a | n/a | no |
 | `/terms/` | legal | Ali Bayat | draft | n/a | n/a | n/a | no |
 | `/accessibility/` | legal | Ali Bayat | approved | 2026-11-11 | n/a | n/a | no |
@@ -128,6 +128,9 @@ All engineering checks pass. Every remaining failure needs Ali's information, an
 | `/resources/tips/condo-status-certificate/` | guide | Ali Bayat | approved | 2026-11-21 | n/a | FirstService Residential, status certificates in Ontario; Legal Line, what is a status certificate; Condominium Act, 1998; Ontario, what to know before buying a home (Rules and rates in effect November 2026; verified 2026-11-21) | yes |
 | `/resources/tips/home-inspection-gta/` | guide | Ali Bayat | approved | 2026-11-21 | n/a | Ontario, what to know before buying a home (Rules and rates in effect November 2026; verified 2026-11-21) | yes |
 | `/resources/tips/choosing-a-contractor/` | guide | Ali Bayat | approved | 2026-11-21 | n/a | Ontario, your rights when starting home renovations or repairs; Ontario, guide for home renovation businesses; Construction Act (Rules and rates in effect November 2026; verified 2026-11-21) | yes |
+| `/resources/buying/buying-toronto-from-abroad/` | guide | Ali Bayat | approved | 2026-11-26 | n/a | Ontario, non-resident speculation tax; Ontario, non-resident speculation tax exemptions; Department of Finance Canada, two-year extension of the ban on foreign ownership (February 2024); Fasken, Budget 2026: foreign buyers ban proposed to be extended to 2029 (November 2026); Ontario, land transfer tax refunds for first-time homebuyers; City of Toronto, MLTT rebates (Rules and rates in effect November 2026; verified 2026-11-21) | yes |
+| `/resources/buying/condo-vs-detached-yonge-corridor/` | guide | Ali Bayat | approved | 2026-11-26 | n/a | Condominium Act, 1998; Legal Line, what is a status certificate; Ontario, land transfer tax refunds for first-time homebuyers; City of Toronto, MLTT rebates (Rules and rates in effect November 2026; verified 2026-11-21) | yes |
+| `/resources/tips/deal-notes-how-numbers-change-decisions/` | guide | Ali Bayat | approved | 2026-11-26 | n/a | Legal Line, what is a status certificate; FirstService Residential, status certificates in Ontario; Ontario, land transfer tax refunds for first-time homebuyers; City of Toronto, MLTT rebates (Rules and rates in effect November 2026; verified 2026-11-21) | yes |
 | `/fa/resources/buying/first-home-toronto/` | guide | Ali Bayat | approved | 2026-11-21 | n/a | CMHC, mortgage loan insurance quick reference; CMHC, mortgage loan insurance cost; Department of Finance Canada, mortgage reforms effective December 15, 2024; CMHC, Income Property (2–4 unit rentals); Canada Revenue Agency, First Home Savings Account; Canada Revenue Agency, Home Buyers' Plan; Ontario, land transfer tax refunds for first-time homebuyers; City of Toronto, MLTT rebates; Ontario, what to know before buying a home (Rules and rates in effect November 2026; verified 2026-11-21) | yes |
 | `/fa/resources/buying/pre-construction-condo-questions/` | guide | Ali Bayat | approved | 2026-11-21 | n/a | Condominium Authority of Ontario, pre-construction condos; Tarion, deposit protection; Ontario, what to know before buying a home; Canada Revenue Agency, Ontario enhanced new housing rebate (Notice 346); Gowling WLG, Ontario expands HST relief on new homes (April 2026); TRREB Market Watch, October 2026 (Rules and rates in effect November 2026; verified 2026-11-21) | yes |
 | `/fa/resources/selling/what-to-fix-before-listing/` | guide | Ali Bayat | approved | 2026-11-21 | n/a | TRREB Market Watch, October 2026; Ontario, what to know before buying a home; Ontario, your rights when starting home renovations or repairs (Rules and rates in effect November 2026; verified 2026-11-21) | yes |
@@ -143,6 +146,9 @@ All engineering checks pass. Every remaining failure needs Ali's information, an
 | `/fa/resources/tips/condo-status-certificate/` | guide | Ali Bayat | approved | 2026-11-21 | n/a | FirstService Residential, status certificates in Ontario; Legal Line, what is a status certificate; Condominium Act, 1998; Ontario, what to know before buying a home (Rules and rates in effect November 2026; verified 2026-11-21) | yes |
 | `/fa/resources/tips/home-inspection-gta/` | guide | Ali Bayat | approved | 2026-11-21 | n/a | Ontario, what to know before buying a home (Rules and rates in effect November 2026; verified 2026-11-21) | yes |
 | `/fa/resources/tips/choosing-a-contractor/` | guide | Ali Bayat | approved | 2026-11-21 | n/a | Ontario, your rights when starting home renovations or repairs; Ontario, guide for home renovation businesses; Construction Act (Rules and rates in effect November 2026; verified 2026-11-21) | yes |
+| `/fa/resources/buying/buying-toronto-from-abroad/` | guide | Ali Bayat | approved | 2026-11-26 | n/a | Ontario, non-resident speculation tax; Ontario, non-resident speculation tax exemptions; Department of Finance Canada, two-year extension of the ban on foreign ownership (February 2024); Fasken, Budget 2026: foreign buyers ban proposed to be extended to 2029 (November 2026); Ontario, land transfer tax refunds for first-time homebuyers; City of Toronto, MLTT rebates (Rules and rates in effect November 2026; verified 2026-11-21) | yes |
+| `/fa/resources/buying/condo-vs-detached-yonge-corridor/` | guide | Ali Bayat | approved | 2026-11-26 | n/a | Condominium Act, 1998; Legal Line, what is a status certificate; Ontario, land transfer tax refunds for first-time homebuyers; City of Toronto, MLTT rebates (Rules and rates in effect November 2026; verified 2026-11-21) | yes |
+| `/fa/resources/tips/deal-notes-how-numbers-change-decisions/` | guide | Ali Bayat | approved | 2026-11-26 | n/a | Legal Line, what is a status certificate; FirstService Residential, status certificates in Ontario; Ontario, land transfer tax refunds for first-time homebuyers; City of Toronto, MLTT rebates (Rules and rates in effect November 2026; verified 2026-11-21) | yes |
 
 ## Production safety
 **11. Production safety: no placeholders, invented facts or interim content: FAIL**
@@ -169,14 +175,14 @@ Every occurrence above comes from a managed placeholder (awaiting the owner inpu
 
 ## Performance
 **14. Performance budget: weight, requests, DOM size, layout shift, render-blocking: PASS**
-- site.js 30 KB (prototype code stripped), site.css 66 KB, both cached across pages; scripts deferred
-- largest page /invest/ 53 KB HTML; most DOM /invest/ 878 elements; max same-origin requests 5 (lazy-loaded images excluded; up to 5 per page); max layout shift 0.006
+- site.js 42 KB (prototype code stripped), site.css 73 KB, both cached across pages; scripts deferred
+- largest page /invest/ 55 KB HTML; most DOM /invest/ 905 elements; max same-origin requests 5 (lazy-loaded images excluded; up to 5 per page); max layout shift 0.003
 - fonts self-hosted: up to 11 woff2 files, 171 KB per page (budget 16 files, 300 KB)
 - third-party hosts referenced on the home page: commons.wikimedia.org, creativecommons.org
 
 ## Reproducibility
 **15. Reproducible, machine-independent build: PASS**
-- two clean rebuilds skipped (--skip-rebuild)
+- two clean builds byte-identical to each other and to the output under test (133 files); pinned dependencies; no machine paths
 
 ## Remaining blockers
 

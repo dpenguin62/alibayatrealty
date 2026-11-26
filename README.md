@@ -52,6 +52,7 @@ python verify.py                     # all 15 gates (about 4 minutes); --skip-re
    | `referral-disclosure` *(brokerage)* | You receive no referral fees, or set `details.referral_disclosure` to the disclosure text |
    | `consent-wording` *(legal)* | The contact form's consent sentence. Bump `consent_version` in `src/site.html` whenever it changes |
    | `mls-notice` *(only with IDX)* | MLS® / REALTOR® trademark notice |
+   | `deal-notes-review`, `deal-notes-review-fa` | The "Three deal notes" guide is illustrative: you confirm the examples are fine to publish as examples, or replace them with your own deals first |
 
 3. **Legal pages.** Replace the interim text in `src/site.html` (the `data-pending` boxes for privacy,
    terms and accessibility) with final, reviewed text.
@@ -110,3 +111,10 @@ After launch:
   the Google Business Profile name exactly as Google shows it; `gbp_url` is the profile's Google Maps share link
   (leave `null` until copied from the profile; once set it's added to `sameAs` and `hasMap`).
 - **CRM, email automation, lead scoring:** behind the form endpoint (see `LEADS.md`). No site changes needed.
+
+## Calculators and handoffs (what to re-check before publishing)
+
+- **Land transfer tax** (`/resources/buying/land-transfer-tax-toronto-york-region/`): side-by-side North vs. South of Steeles. The brackets, first-time buyer maximums, illustration rate and input caps are constants at the top of the calculator block in `src/site.html` (`ON`, `TO`, `ON_FTB_MAX`, `TO_FTB_MAX`, `LTT_ILLUSTRATION`, `INPUT_MAX`), with a `TODO(verify)` checklist above them. Verify them against the official schedules the day you publish.
+- **Deal screen** (`/invest/`): "Send this screen to Ali" stores the numbers in the visitor's tab (`sessionStorage`) and the contact page shows them with a tick box. If ticked, a text summary goes in the `deal_screen` field (see `LEADS.md`).
+- **Stage CTAs**: closing-cost check on Home, Buy and every area page (price travels in the URL to the calculator); "pricing & prep check" on Sell (`request=pricing-check`).
+- **Perf budget**: `verify.py` JS budget is 45 KB (was 30) and CSS 76 KB (was 70) to hold the calculators; about 15 KB gzipped.

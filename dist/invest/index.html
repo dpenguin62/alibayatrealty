@@ -26,7 +26,7 @@
 <link rel="preload" href="/assets/fonts/plus-jakarta-sans-latin-800-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/assets/fonts/inter-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/assets/fonts/ibm-plex-mono-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="/assets/site.css?v=8937713b86">
+<link rel="stylesheet" href="/assets/site.css?v=d16989f54b">
 <link rel="alternate" hreflang="en-CA" href="https://www.alibayatrealty.com/invest/">
 <link rel="alternate" hreflang="fa" href="https://www.alibayatrealty.com/fa/invest/">
 <link rel="alternate" hreflang="x-default" href="https://www.alibayatrealty.com/invest/">
@@ -222,7 +222,7 @@
     "@id": "https://www.alibayatrealty.com/#ali-bayat"
    },
    "datePublished": "2026-11-21",
-   "dateModified": "2026-11-21",
+   "dateModified": "2026-11-26",
    "breadcrumb": {
     "@id": "https://www.alibayatrealty.com/invest/#breadcrumb"
    }
@@ -237,13 +237,12 @@
   <div class="wrap">
     <a class="brand" href="/" aria-label="Ali Bayat, home"><svg class="mark" viewBox="0 0 54 48" aria-hidden="true" focusable="false"><path class="roof" d="M4 26 L27 5 L50 26" fill="none" stroke-width="6" stroke-linecap="square"></path><path d="M13 30 V44 H41 V30" fill="none" stroke="currentColor" stroke-width="4"></path></svg><span class="wm"><b>Ali Bayat</b><small>REALTOR®</small></span></a>
     <nav class="nav" aria-label="Main">
-      <a href="/">Home</a>
-      <a href="/buy/">Buy</a>
-      <a href="/sell/">Sell</a>
-      <a href="/invest/" aria-current="page">Invest</a>
+      <a class="pri" href="/buy/">Buy</a>
+      <a class="pri" href="/sell/">Sell</a>
+      <a class="pri" href="/invest/" aria-current="page">Invest</a>
+      <span class="navsep" aria-hidden="true"></span>
       <span class="has-sub"><a href="/neighbourhoods/">Neighbourhoods</a><button class="sub-btn" type="button" aria-expanded="false" aria-controls="nb-sub" aria-label="Show neighbourhood guides"><svg viewBox="0 0 12 12" width="10" height="10" aria-hidden="true" focusable="false"><path d="M2 4.5 6 8.5 10 4.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path></svg></button><span class="sub" id="nb-sub"><a href="/neighbourhoods/north-york/">North York</a><a href="/neighbourhoods/thornhill/">Thornhill</a><a href="/neighbourhoods/richmond-hill/">Richmond Hill</a><a href="/neighbourhoods/vaughan/">Vaughan</a><a href="/neighbourhoods/toronto/">Toronto</a></span></span>
       <a href="/resources/">Resources</a>
-      <a href="/about/">About</a>
       <a class="lang" href="/fa/invest/" lang="fa" hreflang="fa" data-lang-switch="">فارسی</a>
       <a class="btn sm talk" href="/contact/" data-nav="contact" style="color:var(--brass-ink)">Talk to Ali</a>
     </nav>
@@ -254,16 +253,14 @@
   </div>
   <div class="drawer" id="drawer" hidden="">
     <nav class="wrap" aria-label="Mobile">
-      <a href="/">Home</a>
       <a href="/buy/">Buy</a>
       <a href="/sell/">Sell</a>
       <a href="/invest/" aria-current="page">Invest</a>
-      <a href="/neighbourhoods/">Neighbourhoods</a>
-      <a href="/resources/">Resources</a>
-      <a href="/about/">About Ali</a>
-      <a href="/contact/">Contact</a>
-      <a class="minor lang" href="/fa/invest/" lang="fa" hreflang="fa" data-lang-switch="">فارسی · Farsi</a>
       <a class="btn" href="/contact/" style="color:var(--brass-ink)">Talk to Ali</a>
+      <a class="lang-row" href="/fa/invest/" lang="fa" hreflang="fa" data-lang-switch=""><span>فارسی · Farsi</span><small>Read the whole site in Farsi, right to left</small></a>
+      <a class="sec" href="/neighbourhoods/">Neighbourhoods</a>
+      <a class="sec" href="/resources/">Resources</a>
+      <a class="sec" href="/about/">About Ali</a>
       
     </nav>
   </div>
@@ -366,53 +363,64 @@
     </div>
   </section>
 
-  <!-- E · Calculator -->
+  <!-- E · Deal screen -->
   <section class="band" id="inv-calc">
     <div class="wrap railed">
       <div class="rail"><span class="label">Calculator</span></div>
       <div class="main">
-        <div class="head-row"><div><span class="pill">Educational estimate</span><h2>Run the numbers <em>on a property.</em></h2><p class="lede">Change any figure to see how it moves the result. The example below is illustrative, not a real property.</p></div></div>
+        <div class="head-row"><div><span class="pill">Deal screen</span><h2>Screen a property <em>before you offer.</em></h2><p class="lede">Enter the price, rent, taxes, condo fees and down payment to preview rough cap rate and cash flow. The example below is illustrative, not a real property.</p></div></div>
         <div class="calc" id="inv-calc-box">
           <div class="inputs">
             <span class="grp">Purchase &amp; financing</span>
-            <div class="field"><label for="iv-price">Purchase price</label><div class="money"><span aria-hidden="true">$</span><input id="iv-price" data-iv="money" inputmode="numeric" value="1,400,000" autocomplete="off"></div></div>
+            <div class="field"><label for="iv-price">Asking price</label><div class="money"><span aria-hidden="true">$</span><input id="iv-price" data-iv="money" inputmode="decimal" value="1,400,000" autocomplete="off" aria-invalid="false"></div></div>
             <div class="r2">
-              <div class="field"><label for="iv-down">Down payment</label><div class="pct"><input id="iv-down" data-iv="pct" inputmode="decimal" value="20" autocomplete="off"><span aria-hidden="true">%</span></div></div>
-              <div class="field"><label for="iv-rate">Interest rate</label><div class="pct"><input id="iv-rate" data-iv="pct" inputmode="decimal" value="5" autocomplete="off"><span aria-hidden="true">%</span></div></div>
+              <div class="field"><label for="iv-down">Down payment</label><div class="pct"><input id="iv-down" data-iv="pct" inputmode="decimal" value="20" autocomplete="off" aria-invalid="false"><span aria-hidden="true">%</span></div></div>
+              <div class="field"><label for="iv-rate">Interest rate</label><div class="pct"><input id="iv-rate" data-iv="pct" inputmode="decimal" value="5" autocomplete="off" aria-invalid="false"><span aria-hidden="true">%</span></div></div>
             </div>
-            <div class="field"><label for="iv-amort">Amortization</label><select id="iv-amort" data-iv="sel"><option value="25" selected="">25 years</option><option value="30">30 years</option></select></div>
-            <span class="grp">Income</span>
+            <span class="grp">Income &amp; core costs</span>
+            <div class="field"><label for="iv-rent">Estimated monthly rent (all units)</label><div class="money"><span aria-hidden="true">$</span><input id="iv-rent" data-iv="money" inputmode="decimal" value="6,000" autocomplete="off" aria-invalid="false"></div></div>
             <div class="r2">
-              <div class="field"><label for="iv-rent">Annual rental income</label><div class="money"><span aria-hidden="true">$</span><input id="iv-rent" data-iv="money" inputmode="numeric" value="72,000" autocomplete="off"></div></div>
-              <div class="field"><label for="iv-vac">Vacancy</label><div class="pct"><input id="iv-vac" data-iv="pct" inputmode="decimal" value="4" autocomplete="off"><span aria-hidden="true">%</span></div></div>
+              <div class="field"><label for="iv-tax">Property taxes (per year)</label><div class="money"><span aria-hidden="true">$</span><input id="iv-tax" data-iv="money" inputmode="decimal" value="6,500" autocomplete="off" aria-invalid="false"></div></div>
+              <div class="field"><label for="iv-condo">Condo fees (per month, 0 if none)</label><div class="money"><span aria-hidden="true">$</span><input id="iv-condo" data-iv="money" inputmode="decimal" value="0" autocomplete="off" aria-invalid="false"></div></div>
             </div>
-            <span class="grp">Annual operating expenses</span>
-            <div class="r2">
-              <div class="field"><label for="iv-tax">Property taxes</label><div class="money"><span aria-hidden="true">$</span><input id="iv-tax" data-iv="money" inputmode="numeric" value="6,500" autocomplete="off"></div></div>
-              <div class="field"><label for="iv-ins">Insurance</label><div class="money"><span aria-hidden="true">$</span><input id="iv-ins" data-iv="money" inputmode="numeric" value="3,000" autocomplete="off"></div></div>
-              <div class="field"><label for="iv-maint">Maintenance</label><div class="money"><span aria-hidden="true">$</span><input id="iv-maint" data-iv="money" inputmode="numeric" value="3,600" autocomplete="off"></div></div>
-              <div class="field"><label for="iv-util">Utilities</label><div class="money"><span aria-hidden="true">$</span><input id="iv-util" data-iv="money" inputmode="numeric" value="4,800" autocomplete="off"></div></div>
-            </div>
-            <div class="field"><label for="iv-other">Other annual expenses</label><div class="money"><span aria-hidden="true">$</span><input id="iv-other" data-iv="money" inputmode="numeric" value="2,000" autocomplete="off"></div></div>
+            <details class="opt"><summary>More assumptions</summary><div class="stack">
+              <div class="r2">
+                <div class="field"><label for="iv-amort">Amortization</label><select id="iv-amort" data-iv="sel"><option value="25" selected="">25 years</option><option value="30">30 years</option></select></div>
+                <div class="field"><label for="iv-vac">Vacancy</label><div class="pct"><input id="iv-vac" data-iv="pct" inputmode="decimal" value="4" autocomplete="off" aria-invalid="false"><span aria-hidden="true">%</span></div></div>
+              </div>
+              <div class="r2">
+                <div class="field"><label for="iv-ins">Insurance (per year)</label><div class="money"><span aria-hidden="true">$</span><input id="iv-ins" data-iv="money" inputmode="decimal" value="3,000" autocomplete="off" aria-invalid="false"></div></div>
+                <div class="field"><label for="iv-maint">Maintenance (per year)</label><div class="money"><span aria-hidden="true">$</span><input id="iv-maint" data-iv="money" inputmode="decimal" value="3,600" autocomplete="off" aria-invalid="false"></div></div>
+                <div class="field"><label for="iv-util">Utilities (per year)</label><div class="money"><span aria-hidden="true">$</span><input id="iv-util" data-iv="money" inputmode="decimal" value="4,800" autocomplete="off" aria-invalid="false"></div></div>
+                <div class="field"><label for="iv-other">Other annual expenses</label><div class="money"><span aria-hidden="true">$</span><input id="iv-other" data-iv="money" inputmode="decimal" value="2,000" autocomplete="off" aria-invalid="false"></div></div>
+              </div>
+              <div class="field"><label for="iv-loc">Where is it? (for land transfer tax)</label><select id="iv-loc" data-iv="sel"><option value="to" selected="">City of Toronto</option><option value="on">York Region / elsewhere in Ontario</option><option value="other">Leave land transfer tax out</option></select></div>
+            </div></details>
           </div>
           <div class="out" aria-live="polite">
             <div class="line"><span>Annual gross rental income</span><span id="iv-o-gross">$72,000</span></div>
             <div class="line"><span>Vacancy allowance</span><span id="iv-o-vac">−$2,880</span></div>
             <div class="line sub"><span>Effective rental income</span><span id="iv-o-eff">$69,120</span></div>
-            <div class="line"><span>Annual operating expenses</span><span id="iv-o-opex">−$19,900</span></div>
+            <div class="line"><span>Annual operating expenses (incl. condo fees)</span><span id="iv-o-opex">−$19,900</span></div>
             <div class="line sub"><span>Net operating income (NOI)</span><span id="iv-o-noi">$49,220</span></div>
             <div class="line"><span>Estimated annual debt service</span><span id="iv-o-debt">−$78,168</span></div>
             <div class="line total"><span>Estimated annual cash flow</span><span id="iv-o-cf" class="neg">−$28,948</span></div>
+            <div class="line"><span>Monthly cash flow</span><span id="iv-o-cfm" class="neg">−$2,412</span></div>
             <div class="kpis">
               <div><small>Cap rate</small><b id="iv-o-cap">3.52%</b></div>
-              <div><small>Cash-on-cash return</small><b id="iv-o-coc" class="neg">−10.34%</b></div>
+              <div><small>Cash-on-cash return</small><b id="iv-o-coc" class="neg">−8.80%</b></div>
             </div>
+            <div class="line" style="margin-top:.6rem"><span>Cash to close (down payment + land transfer tax)</span><span id="iv-o-cash">$328,950</span></div>
+            <div class="line"><span>Break-even monthly rent (cash flow = $0)</span><span id="iv-o-be">$8,513</span></div>
+            <p class="lev" id="iv-o-lev">Cap rate (3.52%) is below the mortgage rate (5.00%): borrowing costs more than the property earns, so the loan works against cash flow.</p>
             <p class="small muted" id="iv-o-note" style="margin-top:.8rem">At these assumptions the property would need about $2,412 a month from you on top of the rent. Some investors accept that in exchange for potential appreciation and mortgage paydown, but neither is guaranteed.</p>
+            <p class="small calc-warn" id="iv-warn" role="status" hidden=""></p>
           </div>
         </div>
+        <div class="row" style="align-items:center;gap:.75rem 1.25rem"><a class="btn" href="/contact/?interest=invest&amp;request=analysis&amp;cta=invest:deal-screen" data-deal-send="">Send this screen to Ali</a><span class="small muted" style="max-width:56ch">Your numbers only travel with your message if you click this. You'll see them on the next page before anything is sent, and you can remove them.</span></div>
         <div class="stack" style="gap:.6rem">
           <p class="small"><b>Illustration only.</b> Actual financing, expenses, taxes, insurance, vacancy, maintenance and rental income can vary significantly. This calculator is not financial, tax or legal advice.</p>
-          <p class="small muted">How it works: NOI is effective rental income minus operating expenses. Debt service assumes monthly payments with Canadian semi-annual compounding over the amortization chosen. Cap rate is NOI divided by purchase price. Cash-on-cash return is annual cash flow divided by the down payment only; closing costs, land transfer tax, legal fees and any repairs would increase the cash you put in and lower this figure. Results don't include income tax, principal repayment or any change in the property's value.</p>
+          <p class="small muted">How it works: NOI is effective rental income minus operating expenses (condo fees count at 12 times the monthly figure). Debt service assumes monthly payments with Canadian semi-annual compounding over the amortization chosen. Cap rate is NOI divided by purchase price. Cash-on-cash return is annual cash flow divided by the down payment plus land transfer tax (no first-time buyer rebate for an investment). Legal fees and repairs would add to the cash you put in and lower it. Break-even rent is the rent at which cash flow is zero. Results don't include income tax, principal repayment or any change in the property's value.</p>
         </div>
       </div>
     </div>
@@ -485,6 +493,6 @@
   </div>
 </footer>
 <div class="mbar" id="mbar" aria-hidden="true"><span>Buying, selling or investing? Ask Ali.</span><a class="btn sm" href="/contact/" tabindex="-1">Talk to Ali</a></div>
-<script src="/assets/site.js?v=0ade2efafc" defer></script>
+<script src="/assets/site.js?v=a56451982f" defer></script>
 </body>
 </html>

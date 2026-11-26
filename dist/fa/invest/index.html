@@ -26,7 +26,7 @@
 <link rel="preload" href="/assets/fonts/vazirmatn-arabic-400-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/assets/fonts/vazirmatn-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/assets/fonts/plus-jakarta-sans-latin-800-normal.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="/assets/site.css?v=8937713b86">
+<link rel="stylesheet" href="/assets/site.css?v=d16989f54b">
 <link rel="stylesheet" href="/assets/fonts-fa.css?v=7a93d5da98">
 <link rel="alternate" hreflang="en-CA" href="https://www.alibayatrealty.com/invest/">
 <link rel="alternate" hreflang="fa" href="https://www.alibayatrealty.com/fa/invest/">
@@ -223,7 +223,7 @@
     "@id": "https://www.alibayatrealty.com/#ali-bayat"
    },
    "datePublished": "2026-11-21",
-   "dateModified": "2026-11-21",
+   "dateModified": "2026-11-26",
    "breadcrumb": {
     "@id": "https://www.alibayatrealty.com/fa/invest/#breadcrumb"
    }
@@ -238,14 +238,12 @@
   <div class="wrap">
     <a class="brand" dir="ltr" href="/fa/" aria-label="علی بیات، صفحه‌ی اصلی"><svg class="mark" viewBox="0 0 54 48" aria-hidden="true" focusable="false"><path class="roof" d="M4 26 L27 5 L50 26" fill="none" stroke-width="6" stroke-linecap="square"></path><path d="M13 30 V44 H41 V30" fill="none" stroke="currentColor" stroke-width="4"></path></svg><span class="wm"><b>Ali Bayat</b><small>REALTOR®</small></span></a>
     <nav class="nav" aria-label="منوی اصلی">
-      <a href="/fa/">خانه</a>
-      <a href="/fa/buy/">خرید</a>
-      <a href="/fa/sell/">فروش</a>
-      <a href="/fa/invest/" aria-current="page">سرمایه‌گذاری</a>
+      <a class="pri" href="/fa/buy/">خرید</a>
+      <a class="pri" href="/fa/sell/">فروش</a>
+      <a class="pri" href="/fa/invest/" aria-current="page">سرمایه‌گذاری</a>
+      <span class="navsep" aria-hidden="true"></span>
       <span class="has-sub"><a href="/fa/neighbourhoods/">محله‌ها</a><button class="sub-btn" type="button" aria-expanded="false" aria-controls="nb-sub" aria-label="نمایش راهنمای محله‌ها"><svg viewBox="0 0 12 12" width="10" height="10" aria-hidden="true" focusable="false"><path d="M2 4.5 6 8.5 10 4.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path></svg></button><span class="sub" id="nb-sub"><a href="/fa/neighbourhoods/north-york/">نورث‌یورک</a><a href="/fa/neighbourhoods/thornhill/">تورنهیل</a><a href="/fa/neighbourhoods/richmond-hill/">ریچموند هیل</a><a href="/fa/neighbourhoods/vaughan/">وان</a><a href="/fa/neighbourhoods/toronto/">تورنتو</a></span></span>
       <a href="/fa/resources/">منابع</a>
-      <a href="/fa/about/">درباره</a>
-      <a href="/fa/contact/">تماس</a>
       <a class="lang" href="/invest/" lang="en" hreflang="en" data-lang-switch="">English</a>
       <a class="btn sm talk" href="/fa/contact/" style="color:var(--brass-ink)">گفتگو با علی</a>
     </nav>
@@ -256,16 +254,14 @@
   </div>
   <div class="drawer" id="drawer" hidden="">
     <nav class="wrap" aria-label="منوی موبایل">
-      <a href="/fa/">خانه</a>
       <a href="/fa/buy/">خرید</a>
       <a href="/fa/sell/">فروش</a>
       <a href="/fa/invest/" aria-current="page">سرمایه‌گذاری</a>
-      <a href="/fa/neighbourhoods/">محله‌ها</a>
-      <a href="/fa/resources/">منابع</a>
-      <a href="/fa/about/">درباره</a>
-      <a href="/fa/contact/">تماس</a>
-      <a class="minor lang" href="/invest/" lang="en" hreflang="en" data-lang-switch="">English · انگلیسی</a>
       <a class="btn" href="/fa/contact/" style="color:var(--brass-ink)">گفتگو با علی</a>
+      <a class="lang-row" href="/invest/" lang="en" hreflang="en" data-lang-switch=""><span>English · انگلیسی</span></a>
+      <a class="sec" href="/fa/neighbourhoods/">محله‌ها</a>
+      <a class="sec" href="/fa/resources/">منابع</a>
+      <a class="sec" href="/fa/about/">درباره‌ی علی</a>
     </nav>
   </div>
 </header>
@@ -366,48 +362,59 @@
     <div class="wrap railed">
       <div class="rail"><span class="label">ماشین‌حساب</span></div>
       <div class="main">
-        <div class="head-row"><div><span class="pill">برآورد آموزشی</span><h2>اعداد یک ملک را <em>حساب کنید.</em></h2><p class="lede">هر عددی را تغییر دهید تا ببینید نتیجه چطور عوض می‌شود. مثال زیر فرضی است، نه یک ملک واقعی.</p></div></div>
+        <div class="head-row"><div><span class="pill">غربال اولیه‌ی معامله</span><h2>اعداد یک ملک را <em>پیش از پیشنهاد حساب کنید.</em></h2><p class="lede">قیمت، اجاره، مالیات، شارژ ساختمان و پیش‌پرداخت را وارد کنید و جریان نقدی و Cap rate تقریبی را ببینید. مثال زیر فرضی است، نه یک ملک واقعی.</p></div></div>
         <div class="calc" id="inv-calc-box" dir="rtl">
           <div class="inputs">
             <span class="grp">خرید و تأمین مالی</span>
-            <div class="field"><label for="iv-price">قیمت خرید</label><div class="money" dir="ltr"><span aria-hidden="true">$</span><input id="iv-price" data-iv="money" inputmode="numeric" value="1,400,000" autocomplete="off"></div></div>
+            <div class="field"><label for="iv-price">قیمت درخواستی</label><div class="money" dir="ltr"><span aria-hidden="true">$</span><input id="iv-price" data-iv="money" inputmode="decimal" value="1,400,000" autocomplete="off"></div></div>
             <div class="r2">
               <div class="field"><label for="iv-down">پیش‌پرداخت</label><div class="pct" dir="ltr"><input id="iv-down" data-iv="pct" inputmode="decimal" value="20" autocomplete="off"><span aria-hidden="true">%</span></div></div>
               <div class="field"><label for="iv-rate">نرخ بهره</label><div class="pct" dir="ltr"><input id="iv-rate" data-iv="pct" inputmode="decimal" value="5" autocomplete="off"><span aria-hidden="true">%</span></div></div>
             </div>
-            <div class="field"><label for="iv-amort">مدت بازپرداخت</label><select id="iv-amort" data-iv="sel"><option value="25" selected="">۲۵ سال</option><option value="30">۳۰ سال</option></select></div>
-            <span class="grp">درآمد</span>
+            <span class="grp">درآمد و هزینه‌های اصلی</span>
+            <div class="field"><label for="iv-rent">اجاره‌ی ماهانه‌ی برآوردی (همه‌ی واحدها)</label><div class="money" dir="ltr"><span aria-hidden="true">$</span><input id="iv-rent" data-iv="money" inputmode="decimal" value="6,000" autocomplete="off"></div></div>
             <div class="r2">
-              <div class="field"><label for="iv-rent">درآمد اجاره‌ی سالانه</label><div class="money" dir="ltr"><span aria-hidden="true">$</span><input id="iv-rent" data-iv="money" inputmode="numeric" value="72,000" autocomplete="off"></div></div>
-              <div class="field"><label for="iv-vac">خالی ماندن</label><div class="pct" dir="ltr"><input id="iv-vac" data-iv="pct" inputmode="decimal" value="4" autocomplete="off"><span aria-hidden="true">%</span></div></div>
+              <div class="field"><label for="iv-tax">مالیات ملک (سالانه)</label><div class="money" dir="ltr"><span aria-hidden="true">$</span><input id="iv-tax" data-iv="money" inputmode="decimal" value="6,500" autocomplete="off"></div></div>
+              <div class="field"><label for="iv-condo">شارژ ساختمان (ماهانه؛ اگر ندارد ۰)</label><div class="money" dir="ltr"><span aria-hidden="true">$</span><input id="iv-condo" data-iv="money" inputmode="decimal" value="0" autocomplete="off"></div></div>
             </div>
-            <span class="grp">هزینه‌های جاری سالانه</span>
-            <div class="r2">
-              <div class="field"><label for="iv-tax">مالیات ملک</label><div class="money" dir="ltr"><span aria-hidden="true">$</span><input id="iv-tax" data-iv="money" inputmode="numeric" value="6,500" autocomplete="off"></div></div>
-              <div class="field"><label for="iv-ins">بیمه</label><div class="money" dir="ltr"><span aria-hidden="true">$</span><input id="iv-ins" data-iv="money" inputmode="numeric" value="3,000" autocomplete="off"></div></div>
-              <div class="field"><label for="iv-maint">نگهداری</label><div class="money" dir="ltr"><span aria-hidden="true">$</span><input id="iv-maint" data-iv="money" inputmode="numeric" value="3,600" autocomplete="off"></div></div>
-              <div class="field"><label for="iv-util">قبوض</label><div class="money" dir="ltr"><span aria-hidden="true">$</span><input id="iv-util" data-iv="money" inputmode="numeric" value="4,800" autocomplete="off"></div></div>
-            </div>
-            <div class="field"><label for="iv-other">سایر هزینه‌های سالانه</label><div class="money" dir="ltr"><span aria-hidden="true">$</span><input id="iv-other" data-iv="money" inputmode="numeric" value="2,000" autocomplete="off"></div></div>
+            <details class="opt"><summary>فرض‌های بیشتر</summary><div class="stack">
+              <div class="r2">
+                <div class="field"><label for="iv-amort">مدت بازپرداخت</label><select id="iv-amort" data-iv="sel"><option value="25" selected="">۲۵ سال</option><option value="30">۳۰ سال</option></select></div>
+                <div class="field"><label for="iv-vac">خالی ماندن</label><div class="pct" dir="ltr"><input id="iv-vac" data-iv="pct" inputmode="decimal" value="4" autocomplete="off"><span aria-hidden="true">%</span></div></div>
+              </div>
+              <div class="r2">
+                <div class="field"><label for="iv-ins">بیمه (سالانه)</label><div class="money" dir="ltr"><span aria-hidden="true">$</span><input id="iv-ins" data-iv="money" inputmode="decimal" value="3,000" autocomplete="off"></div></div>
+                <div class="field"><label for="iv-maint">نگهداری (سالانه)</label><div class="money" dir="ltr"><span aria-hidden="true">$</span><input id="iv-maint" data-iv="money" inputmode="decimal" value="3,600" autocomplete="off"></div></div>
+                <div class="field"><label for="iv-util">قبوض (سالانه)</label><div class="money" dir="ltr"><span aria-hidden="true">$</span><input id="iv-util" data-iv="money" inputmode="decimal" value="4,800" autocomplete="off"></div></div>
+                <div class="field"><label for="iv-other">سایر هزینه‌های سالانه</label><div class="money" dir="ltr"><span aria-hidden="true">$</span><input id="iv-other" data-iv="money" inputmode="decimal" value="2,000" autocomplete="off"></div></div>
+              </div>
+              <div class="field"><label for="iv-loc">محل ملک (برای مالیات انتقال زمین)</label><select id="iv-loc" data-iv="sel"><option value="to" selected="">شهر تورنتو</option><option value="on">منطقه‌ی یورک / جای دیگر در انتاریو</option><option value="other">مالیات انتقال زمین را حساب نکن</option></select></div>
+            </div></details>
           </div>
           <div class="out" aria-live="polite">
             <div class="line"><span>درآمد ناخالص اجاره‌ی سالانه</span><span id="iv-o-gross" dir="ltr">—</span></div>
             <div class="line"><span>کسر بابت خالی ماندن</span><span id="iv-o-vac" dir="ltr">—</span></div>
             <div class="line sub"><span>درآمد مؤثر اجاره</span><span id="iv-o-eff" dir="ltr">—</span></div>
-            <div class="line"><span>هزینه‌های جاری سالانه</span><span id="iv-o-opex" dir="ltr">—</span></div>
+            <div class="line"><span>هزینه‌های جاری سالانه (شامل شارژ ساختمان)</span><span id="iv-o-opex" dir="ltr">—</span></div>
             <div class="line sub"><span>درآمد خالص عملیاتی (NOI)</span><span id="iv-o-noi" dir="ltr">—</span></div>
             <div class="line"><span>برآورد اقساط سالانه‌ی وام</span><span id="iv-o-debt" dir="ltr">—</span></div>
             <div class="line total"><span>برآورد جریان نقدی سالانه</span><span id="iv-o-cf" dir="ltr">—</span></div>
+            <div class="line"><span>جریان نقدی ماهانه</span><span id="iv-o-cfm" dir="ltr">—</span></div>
             <div class="kpis">
               <div><small>نرخ بازده سرمایه (Cap rate)</small><b id="iv-o-cap" dir="ltr">—</b></div>
               <div><small>بازده نقدی (Cash-on-cash)</small><b id="iv-o-coc" dir="ltr">—</b></div>
             </div>
+            <div class="line" style="margin-top:.6rem"><span>نقد لازم برای بستن معامله (پیش‌پرداخت + مالیات انتقال زمین)</span><span id="iv-o-cash" dir="ltr">—</span></div>
+            <div class="line"><span>اجاره‌ی ماهانه‌ی سربه‌سر (جریان نقدی صفر)</span><span id="iv-o-be" dir="ltr">—</span></div>
+            <p class="lev" id="iv-o-lev" hidden=""></p>
             <p class="small muted" id="iv-o-note" style="margin-top:.8rem"></p>
+            <p class="small calc-warn" id="iv-warn" role="status" hidden=""></p>
           </div>
         </div>
+        <div class="row" style="align-items:center;gap:.75rem 1.25rem"><a class="btn" href="/fa/contact/?interest=invest&amp;request=analysis&amp;cta=fa-invest:deal-screen" data-deal-send="">ارسال این بررسی برای علی</a><span class="small muted" style="max-width:56ch">اعداد شما فقط وقتی همراه پیام می‌روند که روی این دکمه بزنید؛ در صفحه‌ی بعد پیش از ارسال آن‌ها را می‌بینید و می‌توانید حذفشان کنید.</span></div>
         <div class="stack" style="gap:.6rem">
           <p class="small"><b>فقط برای نمونه.</b> تأمین مالی، هزینه‌ها، مالیات، بیمه، خالی ماندن، نگهداری و درآمد اجاره‌ی واقعی می‌تواند تفاوت زیادی داشته باشد. این ماشین‌حساب مشاوره‌ی مالی، مالیاتی یا حقوقی نیست.</p>
-          <p class="small muted">نحوه‌ی محاسبه: NOI برابر است با درآمد مؤثر اجاره منهای هزینه‌های جاری. اقساط وام با پرداخت ماهانه و ترکیب سود شش‌ماهه به روش کانادا، در مدت بازپرداخت انتخاب‌شده محاسبه می‌شود. Cap rate برابر است با NOI تقسیم بر قیمت خرید. بازده نقدی برابر است با جریان نقدی سالانه تقسیم بر پیش‌پرداخت؛ هزینه‌های بستن معامله، مالیات انتقال زمین، هزینه‌ی وکیل و تعمیرات، پول نقدی را که می‌گذارید افزایش و این عدد را کاهش می‌دهند. نتایج شامل مالیات بر درآمد، بازپرداخت اصل وام یا تغییر ارزش ملک نیست.</p>
+          <p class="small muted">نحوه‌ی محاسبه: NOI برابر است با درآمد مؤثر اجاره منهای هزینه‌های جاری (شارژ ساختمان ضرب در ۱۲ هم جزو آن است). اقساط وام با پرداخت ماهانه و ترکیب سود شش‌ماهه به روش کانادا محاسبه می‌شود. Cap rate برابر است با NOI تقسیم بر قیمت خرید. بازده نقدی برابر است با جریان نقدی سالانه تقسیم بر پیش‌پرداخت به‌علاوه‌ی مالیات انتقال زمین (بدون بازپرداخت خریدار خانه‌ی اول)؛ هزینه‌ی وکیل و تعمیرات را حساب نمی‌کند. اجاره‌ی سربه‌سر اجاره‌ای است که جریان نقدی را صفر می‌کند. نتیجه شامل مالیات بر درآمد، بازپرداخت اصل وام یا تغییر ارزش ملک نیست.</p>
         </div>
       </div>
     </div>
@@ -477,6 +484,6 @@
   </div>
 </footer>
 <div class="mbar" id="mbar" aria-hidden="true"><span>سؤالی درباره‌ی خرید، فروش یا سرمایه‌گذاری دارید؟</span><a class="btn sm" href="/fa/contact/" tabindex="-1">گفتگو با علی</a></div>
-<script src="/assets/site.js?v=0ade2efafc" defer></script>
+<script src="/assets/site.js?v=a56451982f" defer></script>
 </body>
 </html>

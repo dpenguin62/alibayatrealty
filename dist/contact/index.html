@@ -26,7 +26,7 @@
 <link rel="preload" href="/assets/fonts/plus-jakarta-sans-latin-800-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/assets/fonts/inter-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/assets/fonts/ibm-plex-mono-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="/assets/site.css?v=8937713b86">
+<link rel="stylesheet" href="/assets/site.css?v=d16989f54b">
 <link rel="alternate" hreflang="en-CA" href="https://www.alibayatrealty.com/contact/">
 <link rel="alternate" hreflang="fa" href="https://www.alibayatrealty.com/fa/contact/">
 <link rel="alternate" hreflang="x-default" href="https://www.alibayatrealty.com/contact/">
@@ -222,7 +222,7 @@
     "@id": "https://www.alibayatrealty.com/#ali-bayat"
    },
    "datePublished": "2026-11-11",
-   "dateModified": "2026-11-18",
+   "dateModified": "2026-11-26",
    "breadcrumb": {
     "@id": "https://www.alibayatrealty.com/contact/#breadcrumb"
    }
@@ -237,13 +237,12 @@
   <div class="wrap">
     <a class="brand" href="/" aria-label="Ali Bayat, home"><svg class="mark" viewBox="0 0 54 48" aria-hidden="true" focusable="false"><path class="roof" d="M4 26 L27 5 L50 26" fill="none" stroke-width="6" stroke-linecap="square"></path><path d="M13 30 V44 H41 V30" fill="none" stroke="currentColor" stroke-width="4"></path></svg><span class="wm"><b>Ali Bayat</b><small>REALTOR®</small></span></a>
     <nav class="nav" aria-label="Main">
-      <a href="/">Home</a>
-      <a href="/buy/">Buy</a>
-      <a href="/sell/">Sell</a>
-      <a href="/invest/">Invest</a>
+      <a class="pri" href="/buy/">Buy</a>
+      <a class="pri" href="/sell/">Sell</a>
+      <a class="pri" href="/invest/">Invest</a>
+      <span class="navsep" aria-hidden="true"></span>
       <span class="has-sub"><a href="/neighbourhoods/">Neighbourhoods</a><button class="sub-btn" type="button" aria-expanded="false" aria-controls="nb-sub" aria-label="Show neighbourhood guides"><svg viewBox="0 0 12 12" width="10" height="10" aria-hidden="true" focusable="false"><path d="M2 4.5 6 8.5 10 4.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path></svg></button><span class="sub" id="nb-sub"><a href="/neighbourhoods/north-york/">North York</a><a href="/neighbourhoods/thornhill/">Thornhill</a><a href="/neighbourhoods/richmond-hill/">Richmond Hill</a><a href="/neighbourhoods/vaughan/">Vaughan</a><a href="/neighbourhoods/toronto/">Toronto</a></span></span>
       <a href="/resources/">Resources</a>
-      <a href="/about/">About</a>
       <a class="lang" href="/fa/contact/" lang="fa" hreflang="fa" data-lang-switch="">فارسی</a>
       <a class="btn sm talk" href="/contact/" data-nav="contact" style="color:var(--brass-ink)">Talk to Ali</a>
     </nav>
@@ -254,16 +253,14 @@
   </div>
   <div class="drawer" id="drawer" hidden="">
     <nav class="wrap" aria-label="Mobile">
-      <a href="/">Home</a>
       <a href="/buy/">Buy</a>
       <a href="/sell/">Sell</a>
       <a href="/invest/">Invest</a>
-      <a href="/neighbourhoods/">Neighbourhoods</a>
-      <a href="/resources/">Resources</a>
-      <a href="/about/">About Ali</a>
-      <a href="/contact/" aria-current="page">Contact</a>
-      <a class="minor lang" href="/fa/contact/" lang="fa" hreflang="fa" data-lang-switch="">فارسی · Farsi</a>
       <a class="btn" href="/contact/" style="color:var(--brass-ink)">Talk to Ali</a>
+      <a class="lang-row" href="/fa/contact/" lang="fa" hreflang="fa" data-lang-switch=""><span>فارسی · Farsi</span><small>Read the whole site in Farsi, right to left</small></a>
+      <a class="sec" href="/neighbourhoods/">Neighbourhoods</a>
+      <a class="sec" href="/resources/">Resources</a>
+      <a class="sec" href="/about/">About Ali</a>
       
     </nav>
   </div>
@@ -287,6 +284,9 @@
           </fieldset>
           <input type="hidden" name="request" id="c-request" value="">
           <p class="req-note" id="req-note" hidden=""><b>Investment Property Analysis request.</b> Include the address or listing link, the asking price, current rents if you know them, and what you're hoping the property will do for you.</p>
+          <p class="req-note" id="req-note-pc" hidden=""><b>Pricing &amp; prep check.</b> Include the address, roughly when you'd like to sell, the home's condition and any updates, and the number you'd need to net. I'll reply with how I'd approach comparables, pricing and preparation. No obligation.</p>
+          <div class="deal-box" id="deal-box" hidden=""><h2 class="as-h3">Your deal screen</h2><dl data-deal-lines=""></dl><label class="check" for="c-deal-on"><input type="checkbox" id="c-deal-on"> <span>Include these numbers with my message</span></label></div>
+          <input type="hidden" name="deal_screen" id="c-deal" value="">
           <div class="r2">
             <div class="field"><label for="c-name">Name</label><input id="c-name" maxlength="100" name="name" autocomplete="name" required="" aria-describedby="e-name"><span class="err" id="e-name" hidden="">Please enter your name.</span></div>
             <div class="field"><label for="c-phone">Phone <span class="muted" style="font-weight:400">(optional)</span></label><input id="c-phone" maxlength="30" name="phone" type="tel" autocomplete="tel" aria-describedby="e-phone"><span class="err" id="e-phone" hidden="">Please check the phone number, or leave it empty.</span></div>
@@ -296,7 +296,7 @@
           <div class="field" style="max-width:260px"><label for="c-lang">Preferred language</label><select id="c-lang" name="language"><option value="en">English</option><option value="fa" lang="fa">Farsi · فارسی</option></select></div>
           <div class="field"><label class="check" for="c-consent"><input type="checkbox" id="c-consent" name="consent" value="yes" required="" aria-describedby="e-consent"> <span>Ali can use these details to reply to this inquiry, as described in the privacy policy. <a href="/privacy/">Privacy policy</a></span></label><span class="err" id="e-consent" hidden="">Please confirm so Ali can reply.</span></div>
           <input type="hidden" name="consent_version" value="2026-10-01">
-          <input type="hidden" name="form_version" value="contact-2">
+          <input type="hidden" name="form_version" value="contact-3">
           <input type="hidden" name="source_page" value="">
           <input type="hidden" name="source_cta" value="">
           <input type="hidden" name="timestamp" value="">
@@ -353,6 +353,6 @@
   </div>
 </footer>
 <div class="mbar" id="mbar" aria-hidden="true"><span>Buying, selling or investing? Ask Ali.</span><a class="btn sm" href="/contact/" tabindex="-1">Talk to Ali</a></div>
-<script src="/assets/site.js?v=0ade2efafc" defer></script>
+<script src="/assets/site.js?v=a56451982f" defer></script>
 </body>
 </html>

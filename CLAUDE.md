@@ -52,3 +52,10 @@ Copy the repo, then replace: all facts in `site.config.json` (set unknown ones t
 - Feature flags `features.idx` / `features.market-data` stay `false` until a board-approved feed exists.
 - **Fonts are self-hosted** in `src/fonts/` (Fontsource 5.3.0 woff2, latin + latin-ext, plus arabic for Vazirmatn; OFL licences alongside). `fonts.css` is prepended to `site.css`; `fonts-fa.css` is linked only on Farsi pages. `FONT_PRELOAD` in `build.py` lists the above-the-fold faces per language; it keeps first-visit layout shift under budget, so update it if headings change font or weight. No Google Fonts requests remain (`src/site.html` still links them for the prototype only).
 - `.gitignore` excludes `node_modules/`, `__pycache__/`, macOS `* 2.*` duplicates.
+
+## Calculators and navigation (added Nov 2026)
+
+- Calculator code lives in `src/site.html` under "Calculators: shared parsing...". Every typed number goes through `parseAmount()` (never NaN/Infinity; negatives, junk and huge values are zeroed or capped and reported in the calculator's own live region). Tax constants have a `TODO(verify)` block inside `/*<prototype>*/` markers so it is stripped from shipped JS (the build rejects the string TODO in output).
+- Contact form: `request` may be `analysis` or `pricing-check`; `deal_screen` carries the optional deal-screen summary. HubSpot gets it appended to `message` (no new HubSpot property).
+- Header nav is deliberately short: Buy, Sell, Invest (primary), Neighbourhoods, Resources (secondary), language switch, Talk to Ali. Home is the logo; About is in the mobile menu and footer. `verify.py` gate 8 encodes this.
+- Area pages take an optional `compare:{cap,heads,rows,note}` in `AREAS` / `AREAS_FA`; rows whose two cells are identical render as a "same on both sides" list.

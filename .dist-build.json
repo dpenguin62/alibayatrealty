@@ -11,8 +11,8 @@
    "key": "home",
    "path": "/",
    "title": "Ali Bayat | North York & Toronto Real Estate Agent",
-   "desc": "REALTOR\u00ae licensed since 2016, Century 21 Heritage Group. Buy, sell, lease or invest in North York, Thornhill, Richmond Hill, Vaughan & Toronto. English & Farsi.",
-   "h1": "A North York real estate agent who shows you the real numbers.",
+   "desc": "Ali Bayat, REALTOR\u00ae with Century 21 Heritage Group. Buy, sell or invest along Yonge Street, North York to Richmond Hill, and Vaughan & Toronto. English & Farsi.",
+   "h1": "Real estate along Yonge Street, from North York to Richmond Hill.",
    "index": 1,
    "parent": null,
    "name": "Home",
@@ -267,7 +267,7 @@
    "path": "/fa/",
    "title": "\u0639\u0644\u06cc \u0628\u06cc\u0627\u062a | \u0645\u0634\u0627\u0648\u0631 \u0627\u0645\u0644\u0627\u06a9 \u0641\u0627\u0631\u0633\u06cc\u200c\u0632\u0628\u0627\u0646 \u062f\u0631 \u062a\u0648\u0631\u0646\u062a\u0648 \u0648 \u0646\u0648\u0631\u062b\u200c\u06cc\u0648\u0631\u06a9",
    "desc": "\u0639\u0644\u06cc \u0628\u06cc\u0627\u062a\u060c \u0645\u0634\u0627\u0648\u0631 \u0627\u0645\u0644\u0627\u06a9 \u0641\u0627\u0631\u0633\u06cc\u200c\u0632\u0628\u0627\u0646 \u062f\u0631 Century 21 Heritage Group \u0628\u0627 \u0645\u062c\u0648\u0632 \u0627\u0632 2016. \u062e\u0631\u06cc\u062f\u060c \u0641\u0631\u0648\u0634\u060c \u0627\u062c\u0627\u0631\u0647 \u0648 \u0633\u0631\u0645\u0627\u06cc\u0647\u200c\u06af\u0630\u0627\u0631\u06cc \u062f\u0631 \u0646\u0648\u0631\u062b\u200c\u06cc\u0648\u0631\u06a9\u060c \u062a\u0648\u0631\u0646\u0647\u06cc\u0644\u060c \u0631\u06cc\u0686\u0645\u0648\u0646\u062f \u0647\u06cc\u0644\u060c \u0648\u0627\u0646\u060c \u062a\u0648\u0631\u0646\u062a\u0648.",
-   "h1": "\u0645\u0634\u0627\u0648\u0631 \u0627\u0645\u0644\u0627\u06a9 \u0641\u0627\u0631\u0633\u06cc\u200c\u0632\u0628\u0627\u0646 \u062f\u0631 \u062a\u0648\u0631\u0646\u062a\u0648 \u0648 \u0646\u0648\u0631\u062b\u200c\u06cc\u0648\u0631\u06a9\u060c \u0628\u0627 \u0627\u0639\u062f\u0627\u062f \u0648\u0627\u0642\u0639\u06cc.",
+   "h1": "\u0627\u0645\u0644\u0627\u06a9 \u062f\u0631 \u0627\u0645\u062a\u062f\u0627\u062f \u062e\u06cc\u0627\u0628\u0627\u0646 \u06cc\u0627\u0646\u06af\u060c \u0627\u0632 \u0646\u0648\u0631\u062b\u200c\u06cc\u0648\u0631\u06a9 \u062a\u0627 \u0631\u06cc\u0686\u0645\u0648\u0646\u062f \u0647\u06cc\u0644.",
    "index": 1,
    "parent": null,
    "name": "\u062e\u0627\u0646\u0647",
@@ -824,6 +824,57 @@
    "alt": "fa-guide-contractor"
   },
   {
+   "key": "guide-buying-from-abroad",
+   "path": "/resources/buying/buying-toronto-from-abroad/",
+   "title": "Buying in Toronto From Abroad: Status, Tax and Timeline | Ali Bayat",
+   "desc": "Buying a GTA home from outside Canada: why status matters more than address, the 25% non-resident tax, federal limits, money and closing at a distance.",
+   "h1": "Buying in Toronto from abroad: what changes",
+   "index": 1,
+   "parent": "resources",
+   "name": "Buying in Toronto from abroad: what changes",
+   "type": "article",
+   "requires": null,
+   "internal": null,
+   "page": "guide",
+   "planned": null,
+   "lang": null,
+   "alt": "fa-guide-buying-from-abroad"
+  },
+  {
+   "key": "guide-condo-vs-detached",
+   "path": "/resources/buying/condo-vs-detached-yonge-corridor/",
+   "title": "Condo vs. Detached Along Yonge Street: Real Cost Trade-Offs | Ali Bayat",
+   "desc": "Condo or detached in North York, Thornhill or Richmond Hill? Compare monthly costs, risks, closing costs and resale by what you actually pay.",
+   "h1": "Condo or detached along Yonge: the cost trade-offs",
+   "index": 1,
+   "parent": "resources",
+   "name": "Condo or detached along Yonge: the cost trade-offs",
+   "type": "article",
+   "requires": null,
+   "internal": null,
+   "page": "guide",
+   "planned": null,
+   "lang": null,
+   "alt": "fa-guide-condo-vs-detached"
+  },
+  {
+   "key": "guide-deal-notes",
+   "path": "/resources/tips/deal-notes-how-numbers-change-decisions/",
+   "title": "Three Deal Notes: How the Numbers Changed the Decision | Ali Bayat",
+   "desc": "Three worked examples: a condo with an under-funded reserve, a price set on stale comparables, and an offer that ignored closing costs across Steeles Avenue.",
+   "h1": "Three deal notes: how the numbers changed the decision",
+   "index": 1,
+   "parent": "resources",
+   "name": "Three deal notes: how the numbers changed the decision",
+   "type": "article",
+   "requires": null,
+   "internal": null,
+   "page": "guide",
+   "planned": null,
+   "lang": null,
+   "alt": "fa-guide-deal-notes"
+  },
+  {
    "key": "fa-guide-first-home",
    "path": "/fa/resources/buying/first-home-toronto/",
    "title": "\u062e\u0631\u06cc\u062f \u0627\u0648\u0644\u06cc\u0646 \u062e\u0627\u0646\u0647 \u062f\u0631 \u062a\u0648\u0631\u0646\u062a\u0648: \u0647\u0645\u0647\u200c\u06cc \u0647\u0632\u06cc\u0646\u0647\u200c\u0647\u0627\u060c \u0642\u062f\u0645 \u0628\u0647 \u0642\u062f\u0645 | \u0639\u0644\u06cc \u0628\u06cc\u0627\u062a",
@@ -1079,6 +1130,57 @@
    "alt": "guide-contractor"
   },
   {
+   "key": "fa-guide-buying-from-abroad",
+   "path": "/fa/resources/buying/buying-toronto-from-abroad/",
+   "title": "\u062e\u0631\u06cc\u062f \u062e\u0627\u0646\u0647 \u062f\u0631 \u062a\u0648\u0631\u0646\u062a\u0648 \u0627\u0632 \u062e\u0627\u0631\u062c \u0627\u0632 \u06a9\u0627\u0646\u0627\u062f\u0627: \u0648\u0636\u0639\u06cc\u062a \u0627\u0642\u0627\u0645\u062a\u060c \u0645\u0627\u0644\u06cc\u0627\u062a \u0648 \u0632\u0645\u0627\u0646\u200c\u0628\u0646\u062f\u06cc | \u0639\u0644\u06cc \u0628\u06cc\u0627\u062a",
+   "desc": "\u062e\u0631\u06cc\u062f \u062e\u0627\u0646\u0647 \u062f\u0631 GTA \u0627\u0632 \u062e\u0627\u0631\u062c \u0627\u0632 \u06a9\u0627\u0646\u0627\u062f\u0627: \u0686\u0631\u0627 \u0648\u0636\u0639\u06cc\u062a \u0627\u0642\u0627\u0645\u062a \u0645\u0647\u0645\u200c\u062a\u0631 \u0627\u0632 \u0646\u0634\u0627\u0646\u06cc \u0627\u0633\u062a\u060c \u0645\u0627\u0644\u06cc\u0627\u062a 25\u066a \u063a\u06cc\u0631\u0645\u0642\u06cc\u0645\u060c \u0645\u062d\u062f\u0648\u062f\u06cc\u062a\u200c\u0647\u0627\u06cc \u0641\u062f\u0631\u0627\u0644\u060c \u0627\u0646\u062a\u0642\u0627\u0644 \u067e\u0648\u0644 \u0648 \u0628\u0633\u062a\u0646 \u0645\u0639\u0627\u0645\u0644\u0647 \u0627\u0632 \u0631\u0627\u0647 \u062f\u0648\u0631.",
+   "h1": "\u062e\u0631\u06cc\u062f \u062f\u0631 \u062a\u0648\u0631\u0646\u062a\u0648 \u0627\u0632 \u062e\u0627\u0631\u062c \u0627\u0632 \u06a9\u0627\u0646\u0627\u062f\u0627: \u0686\u0647 \u0686\u06cc\u0632\u06cc \u0641\u0631\u0642 \u0645\u06cc\u200c\u06a9\u0646\u062f",
+   "index": 1,
+   "parent": "fa-resources",
+   "name": "\u062e\u0631\u06cc\u062f \u062f\u0631 \u062a\u0648\u0631\u0646\u062a\u0648 \u0627\u0632 \u062e\u0627\u0631\u062c \u0627\u0632 \u06a9\u0627\u0646\u0627\u062f\u0627: \u0686\u0647 \u0686\u06cc\u0632\u06cc \u0641\u0631\u0642 \u0645\u06cc\u200c\u06a9\u0646\u062f",
+   "type": "article",
+   "requires": null,
+   "internal": null,
+   "page": "fa-guide",
+   "planned": null,
+   "lang": "fa",
+   "alt": "guide-buying-from-abroad"
+  },
+  {
+   "key": "fa-guide-condo-vs-detached",
+   "path": "/fa/resources/buying/condo-vs-detached-yonge-corridor/",
+   "title": "\u06a9\u0627\u0646\u062f\u0648 \u06cc\u0627 \u062e\u0627\u0646\u0647\u200c\u06cc \u0645\u0633\u062a\u0642\u0644 \u062f\u0631 \u0645\u062d\u0648\u0631 \u06cc\u0627\u0646\u06af: \u0645\u0642\u0627\u06cc\u0633\u0647\u200c\u06cc \u0647\u0632\u06cc\u0646\u0647\u200c\u06cc \u0648\u0627\u0642\u0639\u06cc | \u0639\u0644\u06cc \u0628\u06cc\u0627\u062a",
+   "desc": "\u06a9\u0627\u0646\u062f\u0648 \u06cc\u0627 \u062e\u0627\u0646\u0647\u200c\u06cc \u0645\u0633\u062a\u0642\u0644 \u062f\u0631 \u0646\u0648\u0631\u062b\u200c\u06cc\u0648\u0631\u06a9\u060c \u062a\u0648\u0631\u0646\u0647\u06cc\u0644 \u06cc\u0627 \u0631\u06cc\u0686\u0645\u0648\u0646\u062f \u0647\u06cc\u0644\u061f \u0647\u0632\u06cc\u0646\u0647\u200c\u06cc \u0645\u0627\u0647\u0627\u0646\u0647\u060c \u0631\u06cc\u0633\u06a9\u200c\u0647\u0627\u060c \u0647\u0632\u06cc\u0646\u0647\u200c\u06cc \u0628\u0633\u062a\u0646 \u0645\u0639\u0627\u0645\u0644\u0647 \u0648 \u0641\u0631\u0648\u0634 \u0628\u0639\u062f\u06cc \u0631\u0627 \u0628\u0627 \u0622\u0646\u0686\u0647 \u0648\u0627\u0642\u0639\u0627\u064b \u0645\u06cc\u200c\u067e\u0631\u062f\u0627\u0632\u06cc\u062f \u0645\u0642\u0627\u06cc\u0633\u0647 \u06a9\u0646\u06cc\u062f.",
+   "h1": "\u06a9\u0627\u0646\u062f\u0648 \u06cc\u0627 \u062e\u0627\u0646\u0647\u200c\u06cc \u0645\u0633\u062a\u0642\u0644 \u062f\u0631 \u0645\u062d\u0648\u0631 \u06cc\u0627\u0646\u06af: \u0645\u0642\u0627\u06cc\u0633\u0647\u200c\u06cc \u0647\u0632\u06cc\u0646\u0647\u200c\u0647\u0627",
+   "index": 1,
+   "parent": "fa-resources",
+   "name": "\u06a9\u0627\u0646\u062f\u0648 \u06cc\u0627 \u062e\u0627\u0646\u0647\u200c\u06cc \u0645\u0633\u062a\u0642\u0644 \u062f\u0631 \u0645\u062d\u0648\u0631 \u06cc\u0627\u0646\u06af: \u0645\u0642\u0627\u06cc\u0633\u0647\u200c\u06cc \u0647\u0632\u06cc\u0646\u0647\u200c\u0647\u0627",
+   "type": "article",
+   "requires": null,
+   "internal": null,
+   "page": "fa-guide",
+   "planned": null,
+   "lang": "fa",
+   "alt": "guide-condo-vs-detached"
+  },
+  {
+   "key": "fa-guide-deal-notes",
+   "path": "/fa/resources/tips/deal-notes-how-numbers-change-decisions/",
+   "title": "\u0633\u0647 \u06cc\u0627\u062f\u062f\u0627\u0634\u062a \u0645\u0639\u0627\u0645\u0644\u0647: \u0627\u0639\u062f\u0627\u062f \u0686\u0637\u0648\u0631 \u062a\u0635\u0645\u06cc\u0645 \u0631\u0627 \u0639\u0648\u0636 \u06a9\u0631\u062f\u0646\u062f | \u0639\u0644\u06cc \u0628\u06cc\u0627\u062a",
+   "desc": "\u0633\u0647 \u0645\u062b\u0627\u0644 \u0645\u062d\u0627\u0633\u0628\u0647\u200c\u0634\u062f\u0647: \u06a9\u0627\u0646\u062f\u0648\u06cc\u06cc \u0628\u0627 \u0635\u0646\u062f\u0648\u0642 \u0630\u062e\u06cc\u0631\u0647\u200c\u06cc \u0646\u0627\u06a9\u0627\u0641\u06cc\u060c \u0642\u06cc\u0645\u062a\u06cc \u0628\u0631 \u0627\u0633\u0627\u0633 \u0641\u0631\u0648\u0634\u200c\u0647\u0627\u06cc \u06a9\u0647\u0646\u0647\u060c \u0648 \u067e\u06cc\u0634\u0646\u0647\u0627\u062f\u06cc \u06a9\u0647 \u0647\u0632\u06cc\u0646\u0647\u200c\u06cc \u0628\u0633\u062a\u0646 \u0645\u0639\u0627\u0645\u0644\u0647 \u062f\u0631 \u062f\u0648 \u0637\u0631\u0641 \u0627\u0633\u062a\u06cc\u0644\u0632 \u0631\u0627 \u0646\u0627\u062f\u06cc\u062f\u0647 \u06af\u0631\u0641\u062a.",
+   "h1": "\u0633\u0647 \u06cc\u0627\u062f\u062f\u0627\u0634\u062a \u0645\u0639\u0627\u0645\u0644\u0647: \u0627\u0639\u062f\u0627\u062f \u0686\u0637\u0648\u0631 \u062a\u0635\u0645\u06cc\u0645 \u0631\u0627 \u0639\u0648\u0636 \u06a9\u0631\u062f\u0646\u062f",
+   "index": 1,
+   "parent": "fa-resources",
+   "name": "\u0633\u0647 \u06cc\u0627\u062f\u062f\u0627\u0634\u062a \u0645\u0639\u0627\u0645\u0644\u0647: \u0627\u0639\u062f\u0627\u062f \u0686\u0637\u0648\u0631 \u062a\u0635\u0645\u06cc\u0645 \u0631\u0627 \u0639\u0648\u0636 \u06a9\u0631\u062f\u0646\u062f",
+   "type": "article",
+   "requires": null,
+   "internal": null,
+   "page": "fa-guide",
+   "planned": null,
+   "lang": "fa",
+   "alt": "guide-deal-notes"
+  },
+  {
    "key": "site-plan",
    "path": "",
    "title": "Site Plan & Launch Notes | Ali Bayat (internal)",
@@ -1144,6 +1246,9 @@
   "/resources/tips/condo-status-certificate/",
   "/resources/tips/home-inspection-gta/",
   "/resources/tips/choosing-a-contractor/",
+  "/resources/buying/buying-toronto-from-abroad/",
+  "/resources/buying/condo-vs-detached-yonge-corridor/",
+  "/resources/tips/deal-notes-how-numbers-change-decisions/",
   "/fa/resources/buying/first-home-toronto/",
   "/fa/resources/buying/pre-construction-condo-questions/",
   "/fa/resources/selling/what-to-fix-before-listing/",
@@ -1158,37 +1263,40 @@
   "/fa/resources/market/2026-10-york-region/",
   "/fa/resources/tips/condo-status-certificate/",
   "/fa/resources/tips/home-inspection-gta/",
-  "/fa/resources/tips/choosing-a-contractor/"
+  "/fa/resources/tips/choosing-a-contractor/",
+  "/fa/resources/buying/buying-toronto-from-abroad/",
+  "/fa/resources/buying/condo-vs-detached-yonge-corridor/",
+  "/fa/resources/tips/deal-notes-how-numbers-change-decisions/"
  ],
  "hashes": {
-  "/": "f47ad380aff78460",
+  "/": "51db2701feb42dfe",
   "/about/": "af605080d129ac77",
-  "/buy/": "e9dc161414dce212",
-  "/sell/": "ac49cac8e7efcc90",
-  "/invest/": "a725492e98334c92",
+  "/buy/": "7f14106dded051b1",
+  "/sell/": "a962bd2b73511556",
+  "/invest/": "2c95427c4e95e3dc",
   "/neighbourhoods/": "f96ee8a338d679e7",
-  "/neighbourhoods/north-york/": "49a93937023acaf9",
-  "/neighbourhoods/thornhill/": "7858b761f608b72f",
-  "/neighbourhoods/richmond-hill/": "f4a679220bc6843e",
-  "/neighbourhoods/vaughan/": "e4d5f2cfc83ac088",
-  "/neighbourhoods/toronto/": "8bfc4b9878b3f69c",
-  "/resources/": "0c82d1579fc2c923",
-  "/resources/buying/land-transfer-tax-toronto-york-region/": "30c65d0542ff4653",
-  "/contact/": "2d56874668cf9c54",
-  "/fa/": "1f55d850c2cf34a7",
-  "/fa/buy/": "feb0e5c3e494bcc1",
-  "/fa/sell/": "88d5580b890fb864",
-  "/fa/invest/": "d043ddd9495f31e2",
+  "/neighbourhoods/north-york/": "20f43ee8f9bed0cf",
+  "/neighbourhoods/thornhill/": "6ee2838154aa96f9",
+  "/neighbourhoods/richmond-hill/": "2dc349e4cb4e6ab3",
+  "/neighbourhoods/vaughan/": "f499130e32fea807",
+  "/neighbourhoods/toronto/": "2ca9f1d87667947b",
+  "/resources/": "bce3a4c3aff876fc",
+  "/resources/buying/land-transfer-tax-toronto-york-region/": "271bc04c837af147",
+  "/contact/": "daf3e8bcf62b2401",
+  "/fa/": "954c4427c2070868",
+  "/fa/buy/": "2ccd0a214f7b9c3c",
+  "/fa/sell/": "7bdacd88173dfdaf",
+  "/fa/invest/": "95bc06d74482430e",
   "/fa/neighbourhoods/": "b65908aa150218f8",
-  "/fa/neighbourhoods/north-york/": "32019f51c7b4567c",
-  "/fa/neighbourhoods/thornhill/": "f48324c508b862af",
-  "/fa/neighbourhoods/richmond-hill/": "8ca1c0dd084a18e6",
-  "/fa/neighbourhoods/vaughan/": "b7432d4be48fc7f2",
-  "/fa/neighbourhoods/toronto/": "abe7b05e9763b5e3",
-  "/fa/resources/": "d6260ffb1bf0ffb0",
-  "/fa/resources/buying/land-transfer-tax-toronto-york-region/": "b65bb7897c086f8d",
+  "/fa/neighbourhoods/north-york/": "571d0e2ef106446e",
+  "/fa/neighbourhoods/thornhill/": "c6d6dc8c8f3d8a28",
+  "/fa/neighbourhoods/richmond-hill/": "b87d2b2c136c8419",
+  "/fa/neighbourhoods/vaughan/": "49caacd07e557c53",
+  "/fa/neighbourhoods/toronto/": "e939c0f558d65d42",
+  "/fa/resources/": "286b0a45e319afb3",
+  "/fa/resources/buying/land-transfer-tax-toronto-york-region/": "63c230e119a61e00",
   "/fa/about/": "47d6dc81bce78593",
-  "/fa/contact/": "224a0d13cb891863",
+  "/fa/contact/": "e3a462eed487ad2d",
   "/privacy/": "509d99aa57125744",
   "/terms/": "b3b53c11360f5900",
   "/accessibility/": "7a3863c823923925",
@@ -1208,6 +1316,9 @@
   "/resources/tips/condo-status-certificate/": "87f1a47b55197b57",
   "/resources/tips/home-inspection-gta/": "5ac8144d5c0101df",
   "/resources/tips/choosing-a-contractor/": "f5b3d3c21d034923",
+  "/resources/buying/buying-toronto-from-abroad/": "3b9eefb914f7ef59",
+  "/resources/buying/condo-vs-detached-yonge-corridor/": "a9d860e93a91071e",
+  "/resources/tips/deal-notes-how-numbers-change-decisions/": "a5aef98fa2eeb3ac",
   "/fa/resources/buying/first-home-toronto/": "22abfde20ae1c563",
   "/fa/resources/buying/pre-construction-condo-questions/": "dde74fcfb3ddfa40",
   "/fa/resources/selling/what-to-fix-before-listing/": "26451b9350d501be",
@@ -1222,7 +1333,10 @@
   "/fa/resources/market/2026-10-york-region/": "690e8b8306aca7fe",
   "/fa/resources/tips/condo-status-certificate/": "162febb429c7b0b2",
   "/fa/resources/tips/home-inspection-gta/": "f68ad0828dfe088a",
-  "/fa/resources/tips/choosing-a-contractor/": "5236ab733927ae0b"
+  "/fa/resources/tips/choosing-a-contractor/": "5236ab733927ae0b",
+  "/fa/resources/buying/buying-toronto-from-abroad/": "877f35568a6ff539",
+  "/fa/resources/buying/condo-vs-detached-yonge-corridor/": "d402af6af5e0b567",
+  "/fa/resources/tips/deal-notes-how-numbers-change-decisions/": "3ff9eea819e3ade9"
  },
  "unresolved": {},
  "blockers": [
@@ -1249,13 +1363,13 @@
    "approved_matches": true,
    "reviewed_by": "Ali Bayat",
    "published_at": "2026-11-11",
-   "updated_at": "2026-11-18",
+   "updated_at": "2026-11-26",
    "data_period": null,
    "verified_at": null,
    "sources": [],
    "indexable": true,
    "canonical": "https://www.alibayatrealty.com/",
-   "content_hash": "f47ad380aff78460",
+   "content_hash": "51db2701feb42dfe",
    "open_items": []
   },
   {
@@ -1293,13 +1407,13 @@
    "approved_matches": true,
    "reviewed_by": "Ali Bayat",
    "published_at": "2026-11-11",
-   "updated_at": "2026-11-21",
+   "updated_at": "2026-11-26",
    "data_period": null,
    "verified_at": null,
    "sources": [],
    "indexable": true,
    "canonical": "https://www.alibayatrealty.com/buy/",
-   "content_hash": "e9dc161414dce212",
+   "content_hash": "7f14106dded051b1",
    "open_items": []
   },
   {
@@ -1315,13 +1429,13 @@
    "approved_matches": true,
    "reviewed_by": "Ali Bayat",
    "published_at": "2026-11-11",
-   "updated_at": "2026-11-21",
+   "updated_at": "2026-11-26",
    "data_period": null,
    "verified_at": null,
    "sources": [],
    "indexable": true,
    "canonical": "https://www.alibayatrealty.com/sell/",
-   "content_hash": "ac49cac8e7efcc90",
+   "content_hash": "a962bd2b73511556",
    "open_items": []
   },
   {
@@ -1337,13 +1451,13 @@
    "approved_matches": true,
    "reviewed_by": "Ali Bayat",
    "published_at": "2026-11-21",
-   "updated_at": "2026-11-21",
+   "updated_at": "2026-11-26",
    "data_period": null,
    "verified_at": null,
    "sources": [],
    "indexable": true,
    "canonical": "https://www.alibayatrealty.com/invest/",
-   "content_hash": "a725492e98334c92",
+   "content_hash": "2c95427c4e95e3dc",
    "open_items": []
   },
   {
@@ -1387,7 +1501,7 @@
    "sources": [],
    "indexable": true,
    "canonical": "https://www.alibayatrealty.com/neighbourhoods/north-york/",
-   "content_hash": "49a93937023acaf9",
+   "content_hash": "20f43ee8f9bed0cf",
    "open_items": []
   },
   {
@@ -1409,7 +1523,7 @@
    "sources": [],
    "indexable": true,
    "canonical": "https://www.alibayatrealty.com/neighbourhoods/thornhill/",
-   "content_hash": "7858b761f608b72f",
+   "content_hash": "6ee2838154aa96f9",
    "open_items": []
   },
   {
@@ -1431,7 +1545,7 @@
    "sources": [],
    "indexable": true,
    "canonical": "https://www.alibayatrealty.com/neighbourhoods/richmond-hill/",
-   "content_hash": "f4a679220bc6843e",
+   "content_hash": "2dc349e4cb4e6ab3",
    "open_items": []
   },
   {
@@ -1453,7 +1567,7 @@
    "sources": [],
    "indexable": true,
    "canonical": "https://www.alibayatrealty.com/neighbourhoods/vaughan/",
-   "content_hash": "e4d5f2cfc83ac088",
+   "content_hash": "f499130e32fea807",
    "open_items": []
   },
   {
@@ -1475,7 +1589,7 @@
    "sources": [],
    "indexable": true,
    "canonical": "https://www.alibayatrealty.com/neighbourhoods/toronto/",
-   "content_hash": "8bfc4b9878b3f69c",
+   "content_hash": "2ca9f1d87667947b",
    "open_items": []
   },
   {
@@ -1491,13 +1605,13 @@
    "approved_matches": true,
    "reviewed_by": "Ali Bayat",
    "published_at": "2026-11-11",
-   "updated_at": "2026-11-21",
+   "updated_at": "2026-11-26",
    "data_period": null,
    "verified_at": null,
    "sources": [],
    "indexable": true,
    "canonical": "https://www.alibayatrealty.com/resources/",
-   "content_hash": "0c82d1579fc2c923",
+   "content_hash": "bce3a4c3aff876fc",
    "open_items": []
   },
   {
@@ -1536,7 +1650,7 @@
    ],
    "indexable": true,
    "canonical": "https://www.alibayatrealty.com/resources/buying/land-transfer-tax-toronto-york-region/",
-   "content_hash": "30c65d0542ff4653",
+   "content_hash": "271bc04c837af147",
    "open_items": []
   },
   {
@@ -1552,13 +1666,13 @@
    "approved_matches": true,
    "reviewed_by": "Ali Bayat",
    "published_at": "2026-11-11",
-   "updated_at": "2026-11-18",
+   "updated_at": "2026-11-26",
    "data_period": null,
    "verified_at": null,
    "sources": [],
    "indexable": true,
    "canonical": "https://www.alibayatrealty.com/contact/",
-   "content_hash": "2d56874668cf9c54",
+   "content_hash": "daf3e8bcf62b2401",
    "open_items": []
   },
   {
@@ -1574,13 +1688,13 @@
    "approved_matches": true,
    "reviewed_by": "Ali Bayat",
    "published_at": "2026-11-11",
-   "updated_at": "2026-11-18",
+   "updated_at": "2026-11-26",
    "data_period": null,
    "verified_at": null,
    "sources": [],
    "indexable": true,
    "canonical": "https://www.alibayatrealty.com/fa/",
-   "content_hash": "1f55d850c2cf34a7",
+   "content_hash": "954c4427c2070868",
    "open_items": []
   },
   {
@@ -1596,13 +1710,13 @@
    "approved_matches": true,
    "reviewed_by": "Ali Bayat",
    "published_at": "2026-11-11",
-   "updated_at": "2026-11-21",
+   "updated_at": "2026-11-26",
    "data_period": null,
    "verified_at": null,
    "sources": [],
    "indexable": true,
    "canonical": "https://www.alibayatrealty.com/fa/buy/",
-   "content_hash": "feb0e5c3e494bcc1",
+   "content_hash": "2ccd0a214f7b9c3c",
    "open_items": []
   },
   {
@@ -1618,13 +1732,13 @@
    "approved_matches": true,
    "reviewed_by": "Ali Bayat",
    "published_at": "2026-11-11",
-   "updated_at": "2026-11-21",
+   "updated_at": "2026-11-26",
    "data_period": null,
    "verified_at": null,
    "sources": [],
    "indexable": true,
    "canonical": "https://www.alibayatrealty.com/fa/sell/",
-   "content_hash": "88d5580b890fb864",
+   "content_hash": "7bdacd88173dfdaf",
    "open_items": []
   },
   {
@@ -1640,13 +1754,13 @@
    "approved_matches": true,
    "reviewed_by": "Ali Bayat",
    "published_at": "2026-11-21",
-   "updated_at": "2026-11-21",
+   "updated_at": "2026-11-26",
    "data_period": null,
    "verified_at": null,
    "sources": [],
    "indexable": true,
    "canonical": "https://www.alibayatrealty.com/fa/invest/",
-   "content_hash": "d043ddd9495f31e2",
+   "content_hash": "95bc06d74482430e",
    "open_items": []
   },
   {
@@ -1690,7 +1804,7 @@
    "sources": [],
    "indexable": true,
    "canonical": "https://www.alibayatrealty.com/fa/neighbourhoods/north-york/",
-   "content_hash": "32019f51c7b4567c",
+   "content_hash": "571d0e2ef106446e",
    "open_items": []
   },
   {
@@ -1712,7 +1826,7 @@
    "sources": [],
    "indexable": true,
    "canonical": "https://www.alibayatrealty.com/fa/neighbourhoods/thornhill/",
-   "content_hash": "f48324c508b862af",
+   "content_hash": "c6d6dc8c8f3d8a28",
    "open_items": []
   },
   {
@@ -1734,7 +1848,7 @@
    "sources": [],
    "indexable": true,
    "canonical": "https://www.alibayatrealty.com/fa/neighbourhoods/richmond-hill/",
-   "content_hash": "8ca1c0dd084a18e6",
+   "content_hash": "b87d2b2c136c8419",
    "open_items": []
   },
   {
@@ -1756,7 +1870,7 @@
    "sources": [],
    "indexable": true,
    "canonical": "https://www.alibayatrealty.com/fa/neighbourhoods/vaughan/",
-   "content_hash": "b7432d4be48fc7f2",
+   "content_hash": "49caacd07e557c53",
    "open_items": []
   },
   {
@@ -1778,7 +1892,7 @@
    "sources": [],
    "indexable": true,
    "canonical": "https://www.alibayatrealty.com/fa/neighbourhoods/toronto/",
-   "content_hash": "abe7b05e9763b5e3",
+   "content_hash": "e939c0f558d65d42",
    "open_items": []
   },
   {
@@ -1794,13 +1908,13 @@
    "approved_matches": true,
    "reviewed_by": "Ali Bayat",
    "published_at": "2026-11-11",
-   "updated_at": "2026-11-21",
+   "updated_at": "2026-11-26",
    "data_period": null,
    "verified_at": null,
    "sources": [],
    "indexable": true,
    "canonical": "https://www.alibayatrealty.com/fa/resources/",
-   "content_hash": "d6260ffb1bf0ffb0",
+   "content_hash": "286b0a45e319afb3",
    "open_items": []
   },
   {
@@ -1839,7 +1953,7 @@
    ],
    "indexable": true,
    "canonical": "https://www.alibayatrealty.com/fa/resources/buying/land-transfer-tax-toronto-york-region/",
-   "content_hash": "b65bb7897c086f8d",
+   "content_hash": "63c230e119a61e00",
    "open_items": []
   },
   {
@@ -1877,13 +1991,13 @@
    "approved_matches": true,
    "reviewed_by": "Ali Bayat",
    "published_at": "2026-11-11",
-   "updated_at": "2026-11-18",
+   "updated_at": "2026-11-26",
    "data_period": null,
    "verified_at": null,
    "sources": [],
    "indexable": true,
    "canonical": "https://www.alibayatrealty.com/fa/contact/",
-   "content_hash": "224a0d13cb891863",
+   "content_hash": "e3a462eed487ad2d",
    "open_items": []
   },
   {
@@ -2528,6 +2642,131 @@
    "open_items": []
   },
   {
+   "path": "/resources/buying/buying-toronto-from-abroad/",
+   "key": "guide-buying-from-abroad",
+   "content_type": "guide",
+   "category": "buying",
+   "geography": "Ontario; City of Toronto; York Region",
+   "evergreen": false,
+   "time_sensitive": true,
+   "author": "Ali Bayat",
+   "review_status": "approved",
+   "approved_matches": true,
+   "reviewed_by": "Ali Bayat",
+   "published_at": "2026-11-26",
+   "updated_at": null,
+   "data_period": "Rules and rates in effect November 2026",
+   "verified_at": "2026-11-21",
+   "sources": [
+    [
+     "Ontario, non-resident speculation tax",
+     "https://www.ontario.ca/document/land-transfer-tax/non-resident-speculation-tax"
+    ],
+    [
+     "Ontario, non-resident speculation tax exemptions",
+     "https://www.ontario.ca/document/non-resident-speculation-tax/non-resident-speculation-tax-exemptions"
+    ],
+    [
+     "Department of Finance Canada, two-year extension of the ban on foreign ownership (February 2024)",
+     "https://www.canada.ca/en/department-finance/news/2024/02/government-announces-two-year-extension-to-ban-on-foreign-ownership-of-canadian-housing.html"
+    ],
+    [
+     "Fasken, Budget 2026: foreign buyers ban proposed to be extended to 2029 (November 2026)",
+     "https://www.fasken.com/en/knowledge/2026/11/budget-2026-foreign-buyers-ban-extended-to-2029-with-a-proposed-exemption-for-new-homes"
+    ],
+    [
+     "Ontario, land transfer tax refunds for first-time homebuyers",
+     "https://www.ontario.ca/document/land-transfer-tax/land-transfer-tax-refunds-first-time-homebuyers"
+    ],
+    [
+     "City of Toronto, MLTT rebates",
+     "https://www.toronto.ca/services-payments/property-taxes-utilities/municipal-land-transfer-tax-mltt/municipal-land-transfer-tax-mltt-rebate-opportunities/"
+    ]
+   ],
+   "indexable": true,
+   "canonical": "https://www.alibayatrealty.com/resources/buying/buying-toronto-from-abroad/",
+   "content_hash": "3b9eefb914f7ef59",
+   "open_items": []
+  },
+  {
+   "path": "/resources/buying/condo-vs-detached-yonge-corridor/",
+   "key": "guide-condo-vs-detached",
+   "content_type": "guide",
+   "category": "buying",
+   "geography": "City of Toronto; York Region",
+   "evergreen": false,
+   "time_sensitive": true,
+   "author": "Ali Bayat",
+   "review_status": "approved",
+   "approved_matches": true,
+   "reviewed_by": "Ali Bayat",
+   "published_at": "2026-11-26",
+   "updated_at": null,
+   "data_period": "Rules and rates in effect November 2026",
+   "verified_at": "2026-11-21",
+   "sources": [
+    [
+     "Condominium Act, 1998",
+     "https://www.ontario.ca/laws/statute/98c19"
+    ],
+    [
+     "Legal Line, what is a status certificate",
+     "https://www.legalline.ca/legal-answers/what-is-a-status-certificate/"
+    ],
+    [
+     "Ontario, land transfer tax refunds for first-time homebuyers",
+     "https://www.ontario.ca/document/land-transfer-tax/land-transfer-tax-refunds-first-time-homebuyers"
+    ],
+    [
+     "City of Toronto, MLTT rebates",
+     "https://www.toronto.ca/services-payments/property-taxes-utilities/municipal-land-transfer-tax-mltt/municipal-land-transfer-tax-mltt-rebate-opportunities/"
+    ]
+   ],
+   "indexable": true,
+   "canonical": "https://www.alibayatrealty.com/resources/buying/condo-vs-detached-yonge-corridor/",
+   "content_hash": "a9d860e93a91071e",
+   "open_items": []
+  },
+  {
+   "path": "/resources/tips/deal-notes-how-numbers-change-decisions/",
+   "key": "guide-deal-notes",
+   "content_type": "guide",
+   "category": "tips",
+   "geography": "City of Toronto; York Region",
+   "evergreen": false,
+   "time_sensitive": true,
+   "author": "Ali Bayat",
+   "review_status": "approved",
+   "approved_matches": true,
+   "reviewed_by": "Ali Bayat",
+   "published_at": "2026-11-26",
+   "updated_at": null,
+   "data_period": "Rules and rates in effect November 2026",
+   "verified_at": "2026-11-21",
+   "sources": [
+    [
+     "Legal Line, what is a status certificate",
+     "https://www.legalline.ca/legal-answers/what-is-a-status-certificate/"
+    ],
+    [
+     "FirstService Residential, status certificates in Ontario",
+     "https://www.fsresidential.com/ontario/news-events/articles/what-is-a-status-certificate-in-ontario/"
+    ],
+    [
+     "Ontario, land transfer tax refunds for first-time homebuyers",
+     "https://www.ontario.ca/document/land-transfer-tax/land-transfer-tax-refunds-first-time-homebuyers"
+    ],
+    [
+     "City of Toronto, MLTT rebates",
+     "https://www.toronto.ca/services-payments/property-taxes-utilities/municipal-land-transfer-tax-mltt/municipal-land-transfer-tax-mltt-rebate-opportunities/"
+    ]
+   ],
+   "indexable": true,
+   "canonical": "https://www.alibayatrealty.com/resources/tips/deal-notes-how-numbers-change-decisions/",
+   "content_hash": "a5aef98fa2eeb3ac",
+   "open_items": []
+  },
+  {
    "path": "/fa/resources/buying/first-home-toronto/",
    "key": "fa-guide-first-home",
    "content_type": "guide",
@@ -3075,6 +3314,131 @@
    "canonical": "https://www.alibayatrealty.com/fa/resources/tips/choosing-a-contractor/",
    "content_hash": "5236ab733927ae0b",
    "open_items": []
+  },
+  {
+   "path": "/fa/resources/buying/buying-toronto-from-abroad/",
+   "key": "fa-guide-buying-from-abroad",
+   "content_type": "guide",
+   "category": "buying",
+   "geography": "Ontario; City of Toronto; York Region",
+   "evergreen": false,
+   "time_sensitive": true,
+   "author": "Ali Bayat",
+   "review_status": "approved",
+   "approved_matches": true,
+   "reviewed_by": "Ali Bayat",
+   "published_at": "2026-11-26",
+   "updated_at": null,
+   "data_period": "Rules and rates in effect November 2026",
+   "verified_at": "2026-11-21",
+   "sources": [
+    [
+     "Ontario, non-resident speculation tax",
+     "https://www.ontario.ca/document/land-transfer-tax/non-resident-speculation-tax"
+    ],
+    [
+     "Ontario, non-resident speculation tax exemptions",
+     "https://www.ontario.ca/document/non-resident-speculation-tax/non-resident-speculation-tax-exemptions"
+    ],
+    [
+     "Department of Finance Canada, two-year extension of the ban on foreign ownership (February 2024)",
+     "https://www.canada.ca/en/department-finance/news/2024/02/government-announces-two-year-extension-to-ban-on-foreign-ownership-of-canadian-housing.html"
+    ],
+    [
+     "Fasken, Budget 2026: foreign buyers ban proposed to be extended to 2029 (November 2026)",
+     "https://www.fasken.com/en/knowledge/2026/11/budget-2026-foreign-buyers-ban-extended-to-2029-with-a-proposed-exemption-for-new-homes"
+    ],
+    [
+     "Ontario, land transfer tax refunds for first-time homebuyers",
+     "https://www.ontario.ca/document/land-transfer-tax/land-transfer-tax-refunds-first-time-homebuyers"
+    ],
+    [
+     "City of Toronto, MLTT rebates",
+     "https://www.toronto.ca/services-payments/property-taxes-utilities/municipal-land-transfer-tax-mltt/municipal-land-transfer-tax-mltt-rebate-opportunities/"
+    ]
+   ],
+   "indexable": true,
+   "canonical": "https://www.alibayatrealty.com/fa/resources/buying/buying-toronto-from-abroad/",
+   "content_hash": "877f35568a6ff539",
+   "open_items": []
+  },
+  {
+   "path": "/fa/resources/buying/condo-vs-detached-yonge-corridor/",
+   "key": "fa-guide-condo-vs-detached",
+   "content_type": "guide",
+   "category": "buying",
+   "geography": "City of Toronto; York Region",
+   "evergreen": false,
+   "time_sensitive": true,
+   "author": "Ali Bayat",
+   "review_status": "approved",
+   "approved_matches": true,
+   "reviewed_by": "Ali Bayat",
+   "published_at": "2026-11-26",
+   "updated_at": null,
+   "data_period": "Rules and rates in effect November 2026",
+   "verified_at": "2026-11-21",
+   "sources": [
+    [
+     "Condominium Act, 1998",
+     "https://www.ontario.ca/laws/statute/98c19"
+    ],
+    [
+     "Legal Line, what is a status certificate",
+     "https://www.legalline.ca/legal-answers/what-is-a-status-certificate/"
+    ],
+    [
+     "Ontario, land transfer tax refunds for first-time homebuyers",
+     "https://www.ontario.ca/document/land-transfer-tax/land-transfer-tax-refunds-first-time-homebuyers"
+    ],
+    [
+     "City of Toronto, MLTT rebates",
+     "https://www.toronto.ca/services-payments/property-taxes-utilities/municipal-land-transfer-tax-mltt/municipal-land-transfer-tax-mltt-rebate-opportunities/"
+    ]
+   ],
+   "indexable": true,
+   "canonical": "https://www.alibayatrealty.com/fa/resources/buying/condo-vs-detached-yonge-corridor/",
+   "content_hash": "d402af6af5e0b567",
+   "open_items": []
+  },
+  {
+   "path": "/fa/resources/tips/deal-notes-how-numbers-change-decisions/",
+   "key": "fa-guide-deal-notes",
+   "content_type": "guide",
+   "category": "tips",
+   "geography": "City of Toronto; York Region",
+   "evergreen": false,
+   "time_sensitive": true,
+   "author": "Ali Bayat",
+   "review_status": "approved",
+   "approved_matches": true,
+   "reviewed_by": "Ali Bayat",
+   "published_at": "2026-11-26",
+   "updated_at": null,
+   "data_period": "Rules and rates in effect November 2026",
+   "verified_at": "2026-11-21",
+   "sources": [
+    [
+     "Legal Line, what is a status certificate",
+     "https://www.legalline.ca/legal-answers/what-is-a-status-certificate/"
+    ],
+    [
+     "FirstService Residential, status certificates in Ontario",
+     "https://www.fsresidential.com/ontario/news-events/articles/what-is-a-status-certificate-in-ontario/"
+    ],
+    [
+     "Ontario, land transfer tax refunds for first-time homebuyers",
+     "https://www.ontario.ca/document/land-transfer-tax/land-transfer-tax-refunds-first-time-homebuyers"
+    ],
+    [
+     "City of Toronto, MLTT rebates",
+     "https://www.toronto.ca/services-payments/property-taxes-utilities/municipal-land-transfer-tax-mltt/municipal-land-transfer-tax-mltt-rebate-opportunities/"
+    ]
+   ],
+   "indexable": true,
+   "canonical": "https://www.alibayatrealty.com/fa/resources/tips/deal-notes-how-numbers-change-decisions/",
+   "content_hash": "3ff9eea819e3ade9",
+   "open_items": []
   }
  ],
  "details": [
@@ -3095,6 +3459,8 @@
   "consent-wording",
   "consent-wording-fa",
   "contact-channels",
+  "deal-notes-review",
+  "deal-notes-review-fa",
   "experience-claim",
   "footer-disclaimer",
   "ltt-guide-review",
@@ -3103,7 +3469,7 @@
   "reply-time"
  ],
  "assets": {
-  "site.js": 30246,
-  "site.css": 71479
+  "site.js": 43368,
+  "site.css": 74750
  }
 }

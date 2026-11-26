@@ -26,7 +26,7 @@
 <link rel="preload" href="/assets/fonts/vazirmatn-arabic-400-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/assets/fonts/vazirmatn-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/assets/fonts/plus-jakarta-sans-latin-800-normal.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="/assets/site.css?v=8937713b86">
+<link rel="stylesheet" href="/assets/site.css?v=d16989f54b">
 <link rel="stylesheet" href="/assets/fonts-fa.css?v=7a93d5da98">
 <link rel="alternate" hreflang="en-CA" href="https://www.alibayatrealty.com/resources/buying/land-transfer-tax-toronto-york-region/">
 <link rel="alternate" hreflang="fa" href="https://www.alibayatrealty.com/fa/resources/buying/land-transfer-tax-toronto-york-region/">
@@ -290,14 +290,12 @@
   <div class="wrap">
     <a class="brand" dir="ltr" href="/fa/" aria-label="علی بیات، صفحه‌ی اصلی"><svg class="mark" viewBox="0 0 54 48" aria-hidden="true" focusable="false"><path class="roof" d="M4 26 L27 5 L50 26" fill="none" stroke-width="6" stroke-linecap="square"></path><path d="M13 30 V44 H41 V30" fill="none" stroke="currentColor" stroke-width="4"></path></svg><span class="wm"><b>Ali Bayat</b><small>REALTOR®</small></span></a>
     <nav class="nav" aria-label="منوی اصلی">
-      <a href="/fa/">خانه</a>
-      <a href="/fa/buy/">خرید</a>
-      <a href="/fa/sell/">فروش</a>
-      <a href="/fa/invest/">سرمایه‌گذاری</a>
+      <a class="pri" href="/fa/buy/">خرید</a>
+      <a class="pri" href="/fa/sell/">فروش</a>
+      <a class="pri" href="/fa/invest/">سرمایه‌گذاری</a>
+      <span class="navsep" aria-hidden="true"></span>
       <span class="has-sub"><a href="/fa/neighbourhoods/">محله‌ها</a><button class="sub-btn" type="button" aria-expanded="false" aria-controls="nb-sub" aria-label="نمایش راهنمای محله‌ها"><svg viewBox="0 0 12 12" width="10" height="10" aria-hidden="true" focusable="false"><path d="M2 4.5 6 8.5 10 4.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path></svg></button><span class="sub" id="nb-sub"><a href="/fa/neighbourhoods/north-york/">نورث‌یورک</a><a href="/fa/neighbourhoods/thornhill/">تورنهیل</a><a href="/fa/neighbourhoods/richmond-hill/">ریچموند هیل</a><a href="/fa/neighbourhoods/vaughan/">وان</a><a href="/fa/neighbourhoods/toronto/">تورنتو</a></span></span>
       <a href="/fa/resources/" aria-current="page">منابع</a>
-      <a href="/fa/about/">درباره</a>
-      <a href="/fa/contact/">تماس</a>
       <a class="lang" href="/resources/buying/land-transfer-tax-toronto-york-region/" lang="en" hreflang="en" data-lang-switch="">English</a>
       <a class="btn sm talk" href="/fa/contact/" style="color:var(--brass-ink)">گفتگو با علی</a>
     </nav>
@@ -308,16 +306,14 @@
   </div>
   <div class="drawer" id="drawer" hidden="">
     <nav class="wrap" aria-label="منوی موبایل">
-      <a href="/fa/">خانه</a>
       <a href="/fa/buy/">خرید</a>
       <a href="/fa/sell/">فروش</a>
       <a href="/fa/invest/">سرمایه‌گذاری</a>
-      <a href="/fa/neighbourhoods/">محله‌ها</a>
-      <a href="/fa/resources/" aria-current="page">منابع</a>
-      <a href="/fa/about/">درباره</a>
-      <a href="/fa/contact/">تماس</a>
-      <a class="minor lang" href="/resources/buying/land-transfer-tax-toronto-york-region/" lang="en" hreflang="en" data-lang-switch="">English · انگلیسی</a>
       <a class="btn" href="/fa/contact/" style="color:var(--brass-ink)">گفتگو با علی</a>
+      <a class="lang-row" href="/resources/buying/land-transfer-tax-toronto-york-region/" lang="en" hreflang="en" data-lang-switch=""><span>English · انگلیسی</span></a>
+      <a class="sec" href="/fa/neighbourhoods/">محله‌ها</a>
+      <a class="sec" href="/fa/resources/" aria-current="page">منابع</a>
+      <a class="sec" href="/fa/about/">درباره‌ی علی</a>
     </nav>
   </div>
 </header>
@@ -335,23 +331,40 @@
       <div class="article-body">
         <p>هر خریداری در انتاریو هنگام بستن معامله، مالیات انتقال زمین استانی (Land Transfer Tax) را می‌پردازد. اگر خانه در شهر تورنتو باشد، که شامل نورث‌یورک، اسکاربرو و اتوبیکوک هم می‌شود، مالیات انتقال زمین شهرداری تورنتو را هم می‌پردازید. خریداران در محله‌های منطقه‌ی یورک مثل وان، ریچموند هیل و تورنهیل فقط مالیات استانی را می‌پردازند.</p>
         <p>برای یک خانه‌ی ۱,۰۰۰,۰۰۰ دلاری، این تفاوت حدود ۱۶,۴۷۵ دلار است. این یکی از مهم‌ترین عددهایی است که هنگام مقایسه‌ی خانه‌های دو طرف خیابان استیلز باید بدانید.</p>
-        <h2>مالیات انتقال زمین خود را برآورد کنید</h2>
-        <div class="calc" id="calc">
+        <h2>مقایسه‌ی دو طرف استیلز با قیمت خودتان</h2>
+        <p>خیابان استیلز مرز شهر تورنتو و منطقه‌ی یورک است. برای همان خانه با همان قیمت، خرید در جنوب آن یعنی مالیات انتقال زمین انتاریو <em>به‌علاوه‌ی</em> مالیات تورنتو؛ در شمال آن فقط مالیات انتاریو. قیمت را وارد کنید تا هر دو را کنار هم ببینید. تورنهیل روی این خط قرار دارد؛ پس شهرداری نشانی دقیق را بررسی کنید.</p>
+        <div class="calc ltt" id="calc" dir="rtl">
           <div class="inputs">
-            <div class="field"><label for="lt-price">قیمت خرید</label><div class="money" dir="ltr"><span aria-hidden="true">$</span><input id="lt-price" inputmode="numeric" value="1,000,000" autocomplete="off"></div></div>
-            <fieldset class="seg2"><legend>خانه کجاست؟</legend>
-              <input type="radio" name="lt-loc" id="lt-to" value="to" checked=""><label for="lt-to">شهر تورنتو<br><span class="muted small" style="font-weight:400">شامل نورث‌یورک</span></label>
-              <input type="radio" name="lt-loc" id="lt-on" value="on"><label for="lt-on">جای دیگری در انتاریو<br><span class="muted small" style="font-weight:400">مثلاً وان</span></label>
-            </fieldset>
+            <div class="field"><label for="lt-price">قیمت خرید</label><div class="money" dir="ltr"><span aria-hidden="true">$</span><input id="lt-price" inputmode="decimal" value="1,000,000" autocomplete="off"></div></div>
             <label class="check" for="lt-first"><input type="checkbox" id="lt-first"> خریدار خانه‌ی اول هستم</label>
+            <details class="opt"><summary>افزودن هزینه‌ی نگهداری (اختیاری)</summary><div class="stack">
+              <div class="field"><label for="lt-tax-n">مالیات سالانه‌ی ملک، خانه‌ی شمال استیلز</label><div class="money" dir="ltr"><span aria-hidden="true">$</span><input id="lt-tax-n" inputmode="decimal" value="" placeholder="مثلاً 6,500" autocomplete="off"></div></div>
+              <div class="field"><label for="lt-tax-s">مالیات سالانه‌ی ملک، خانه‌ی جنوب استیلز</label><div class="money" dir="ltr"><span aria-hidden="true">$</span><input id="lt-tax-s" inputmode="decimal" value="" placeholder="مثلاً 6,500" autocomplete="off"></div></div>
+              <div class="field"><label for="lt-rate">نرخ بهره برای نمونه‌ی تأمین مالی</label><div class="pct" dir="ltr"><input id="lt-rate" inputmode="decimal" value="5" autocomplete="off"><span aria-hidden="true">%</span></div></div>
+              <p class="small muted">اعداد مالیات ملک را از صورت‌حساب یا آگهی هر ملک بردارید؛ ما نرخی از خودمان فرض نمی‌کنیم.</p>
+            </div></details>
           </div>
           <div class="out" aria-live="polite">
-            <div class="line"><span>مالیات انتقال زمین انتاریو</span><span id="o-on" dir="ltr">—</span></div>
-            <div class="line" id="o-onr-row"><span>بازپرداخت خریدار خانه‌ی اول انتاریو</span><span id="o-onr" dir="ltr">—</span></div>
-            <div class="line" id="o-to-row"><span>مالیات انتقال زمین شهرداری تورنتو</span><span id="o-to" dir="ltr">—</span></div>
-            <div class="line" id="o-tor-row" hidden=""><span>بازپرداخت خریدار خانه‌ی اول تورنتو</span><span id="o-tor" dir="ltr">—</span></div>
-            <div class="line total"><span>برآورد مجموع</span><span id="o-total" dir="ltr">—</span></div>
-            <p class="small muted" id="o-note" style="margin-top:.6rem"></p>
+            <table class="lt-cmp"><caption class="sr">مقایسه‌ی مالیات انتقال زمین در دو طرف استیلز</caption>
+              <thead><tr><td><span class="sr">مورد</span></td><th scope="col">شمال استیلز<small>منطقه‌ی یورک: وان، تورنهیل، ریچموند هیل</small></th><th scope="col">جنوب استیلز<small>شهر تورنتو: نورث‌یورک</small></th></tr></thead>
+              <tbody>
+                <tr><th scope="row">مالیات انتقال زمین انتاریو</th><td id="o-n-on" dir="ltr">—</td><td id="o-s-on" dir="ltr">—</td></tr>
+                <tr id="o-onr-row" hidden=""><th scope="row">بازپرداخت خریدار خانه‌ی اول انتاریو</th><td id="o-n-onr" dir="ltr">—</td><td id="o-s-onr" dir="ltr">—</td></tr>
+                <tr><th scope="row">مالیات انتقال زمین شهرداری تورنتو</th><td id="o-n-to" dir="ltr">—</td><td id="o-s-to" dir="ltr">—</td></tr>
+                <tr id="o-tor-row" hidden=""><th scope="row">بازپرداخت خریدار خانه‌ی اول تورنتو</th><td id="o-n-tor" dir="ltr">—</td><td id="o-s-tor" dir="ltr">—</td></tr>
+                <tr class="tot"><th scope="row">برآورد مجموع</th><td id="o-n-total" dir="ltr">—</td><td id="o-s-total" dir="ltr">—</td></tr>
+              </tbody>
+            </table>
+            <div class="gapbox">
+              <div class="line sub"><span>نقدِ بیشتر هنگام بستن معامله، جنوب نسبت به شمال</span><span id="o-gap" dir="ltr">—</span></div>
+              <div class="line"><span>سهم از قیمت خرید</span><span id="o-gap-pct" dir="ltr">—</span></div>
+              <div class="line"><span>همین مبلغ اگر وام بگیرید (نمونه)</span><span id="o-gap-m" dir="ltr">—</span></div>
+              <div class="line" id="o-carry-row" hidden=""><span>مالیات سالانه‌ی ملک، شمال منهای جنوب</span><span id="o-carry" dir="ltr">—</span></div>
+              <div class="line" id="o-years-row" hidden=""><span>سال‌هایی که مالیات بالاترِ شمال این تفاوت را جبران می‌کند</span><span id="o-years" dir="ltr">—</span></div>
+            </div>
+            <p class="small muted" id="o-note"></p>
+            <p class="small" id="o-carry-note"></p>
+            <p class="small calc-warn" id="lt-warn" role="status" hidden=""></p>
           </div>
         </div>
         <p class="small muted">برای خانه‌ای با یک یا دو واحد مسکونی تک‌خانواری، بر اساس نرخ‌های انتاریو و نرخ‌های شهر تورنتو که از ۱ آوریل ۲۰۲۶ اعمال می‌شوند. این یک برآورد است، نه مشاوره‌ی حقوقی یا مالیاتی؛ مبلغ نهایی را وکیل املاک شما تأیید می‌کند. ملکی با سه واحد یا بیشتر، یا ملک تجاری‌ـ‌مسکونی می‌خرید؟ پله‌های بالای ۲,۰۰۰,۰۰۰ دلار متفاوت محاسبه می‌شوند؛ پس این عدد را فقط یک برآورد کلی بدانید.</p>
@@ -412,6 +425,6 @@
   </div>
 </footer>
 <div class="mbar" id="mbar" aria-hidden="true"><span>سؤالی درباره‌ی خرید، فروش یا سرمایه‌گذاری دارید؟</span><a class="btn sm" href="/fa/contact/" tabindex="-1">گفتگو با علی</a></div>
-<script src="/assets/site.js?v=0ade2efafc" defer></script>
+<script src="/assets/site.js?v=a56451982f" defer></script>
 </body>
 </html>
