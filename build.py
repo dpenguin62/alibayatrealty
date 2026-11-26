@@ -240,9 +240,14 @@ TRANSFORM_JS = r"""
 
 FAVICON = """<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><rect width="64" height="64" rx="12" fill="#B5562F"/><path d="M12 34 L32 15 L52 34" fill="none" stroke="#FFFFFF" stroke-width="6" stroke-linecap="square"/><path d="M20 38 V50 H44 V38" fill="none" stroke="#FFFFFF" stroke-width="4"/></svg>
 """
-FONTS = ('<link rel="preconnect" href="https://fonts.googleapis.com">\n'
-         '<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>\n'
-         '<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,500;1,700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">')
+# Fonts are self-hosted (src/fonts: Fontsource woff2 + @font-face CSS, SIL OFL). Latin families are inlined at the top of
+# site.css; Vazirmatn has its own stylesheet, linked only from Farsi pages. Each page preloads the faces it shows first.
+FONTS_DIR = pathlib.Path(__file__).parent / "src" / "fonts"
+# Faces used above the fold: logo + English H1 (Jakarta 800), body/lede (Inter 400), labels (Plex Mono 400);
+# on Farsi pages headings and body are Vazirmatn 400 (Arabic + Latin subsets, e.g. "(GTA)" in an H1) plus the logo.
+FONT_PRELOAD = {"en": ["plus-jakarta-sans-latin-800-normal", "inter-latin-400-normal", "ibm-plex-mono-latin-400-normal"],
+                "fa": ["vazirmatn-arabic-400-normal", "vazirmatn-latin-400-normal", "plus-jakarta-sans-latin-800-normal"]}
+FA_FONTS_HREF = "/assets/fonts-fa.css"  # versioned with ?v= in build()
 STAGING_BAR = ('<div class="preview" role="note" aria-label="Staging notice"><div class="wrap"><span><span class="dot" aria-hidden="true"></span>'
                'Staging preview, not the live site. Unconfirmed details are shown as placeholders.</span></div></div>')
 
@@ -448,9 +453,11 @@ def head(r, routes_by_key, css_href, content_hash):
             tags.append('<meta name="twitter:card" content="summary">')
         tags += [f'<meta name="twitter:title" content="{esc(r["title"])}">', f'<meta name="twitter:description" content="{esc(r["desc"])}">']
     tags += ['<link rel="icon" href="/favicon.svg" type="image/svg+xml">', '<meta name="theme-color" content="#F4F1EC">',
-             FONTS, f'<link rel="stylesheet" href="{css_href}">']
+             *[f'<link rel="preload" href="/assets/fonts/{f}.woff2" as="font" type="font/woff2" crossorigin>'
+               for f in FONT_PRELOAD["fa" if r.get("lang") == "fa" else "en"]],
+             f'<link rel="stylesheet" href="{css_href}">']
     if r.get("lang") == "fa":
-        tags.insert(-1, '<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;600;700&display=swap">')
+        tags.append(f'<link rel="stylesheet" href="{FA_FONTS_HREF}">')
     alt = routes_by_key.get(r.get("alt"))
     if alt and not is_404:  # hreflang pairs: English <-> Farsi versions of the same page
         en, fa_ = (alt, r) if r.get("lang") == "fa" else (r, alt)
@@ -559,12 +566,18 @@ def build():
     styles = re.findall(r"<style>(.*?)</style>", src, re.S)
     scripts = re.findall(r"<script>(.*?)</script>", src, re.S)
     assert len(styles) == 2 and len(scripts) == 1, "unexpected source structure"
-    css = "/* Ali Bayat Realty: generated from src/site.html by build.py */\n" + styles[0] + "\n" + styles[1]
+    css = ("/* Ali Bayat Realty: generated from src/site.html by build.py */\n" + (FONTS_DIR / "fonts.css").read_text(encoding="utf8")
+           + styles[0] + "\n" + styles[1])
 
     if OUT.exists():
         shutil.rmtree(OUT)
     (OUT / "assets").mkdir(parents=True)
     shutil.copytree(ROOT / "src" / "img", OUT / "assets" / "img")
+    shutil.copytree(FONTS_DIR, OUT / "assets" / "fonts", ignore=shutil.ignore_patterns("*.css"))
+    fa_css = (FONTS_DIR / "fonts-fa.css").read_text(encoding="utf8")
+    (OUT / "assets" / "fonts-fa.css").write_text(fa_css, encoding="utf8")
+    global FA_FONTS_HREF
+    FA_FONTS_HREF = f"/assets/fonts-fa.css?v={hashlib.sha1(fa_css.encode()).hexdigest()[:10]}"
     (OUT / "favicon.svg").write_text(FAVICON, encoding="utf8")
 
     built, warnings, unresolved, pages_html, hashes = [], [], {}, {}, {}

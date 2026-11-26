@@ -1003,7 +1003,8 @@ def g13(ctx, P, N):
 
 
 # ================================================================ PERFORMANCE
-BUDGET = {"html_kb": 120, "js_kb": 30, "css_kb": 60, "dom": 1500, "same_origin_requests": 6, "cls": 0.05}
+# css_kb includes the self-hosted @font-face rules (~9 KB). Font files are budgeted on their own (count and bytes per page).
+BUDGET = {"html_kb": 120, "js_kb": 30, "css_kb": 70, "dom": 1500, "same_origin_requests": 6, "cls": 0.05, "fonts": 16, "font_kb": 300}
 
 
 @gate(14, "Performance budget: weight, requests, DOM size, layout shift, render-blocking", "Performance")
@@ -1033,11 +1034,15 @@ def g14(ctx, P, N):
         # they're reported separately and don't count toward the request budget.
         lazy = set(pg.evaluate("""[...document.images].filter(i=>i.loading==='lazy').flatMap(i=>[i.src,i.currentSrc,
             ...(i.srcset||'').split(',').map(c=>c.trim().split(/\\s+/)[0]).filter(Boolean).map(u=>new URL(u,location.href).href)])"""))
-        same = [u for u in reqs if u.startswith(HOST) and u not in lazy]
+        fonts = [u for u in reqs if u.startswith(HOST) and u.split("?")[0].endswith(".woff2")]
+        font_kb = sum((DIST / urllib.parse.urlsplit(u).path.lstrip("/")).stat().st_size for u in fonts) / 1024
+        same = [u for u in reqs if u.startswith(HOST) and u not in lazy and u not in fonts]
         lazy_hits = len([u for u in reqs if u in lazy])
         blocking = pg.evaluate("[...document.querySelectorAll('script[src]')].filter(s=>!s.defer&&!s.async&&s.type!=='module').length")
         imgs = pg.evaluate("[...document.images].filter(i=>!i.getAttribute('width')||!i.getAttribute('height')).length")
-        rows.append((r["path"], html_kb, dom, len(same), cls, lazy_hits))
+        rows.append((r["path"], html_kb, dom, len(same), cls, lazy_hits, len(fonts), font_kb))
+        if len(fonts) > BUDGET["fonts"] or font_kb > BUDGET["font_kb"]:
+            P.append(f"{r['path']}: {len(fonts)} font files, {font_kb:.0f} KB (budget {BUDGET['fonts']} files, {BUDGET['font_kb']} KB)")
         if html_kb > BUDGET["html_kb"]:
             P.append(f"{r['path']}: HTML {html_kb:.0f} KB (budget {BUDGET['html_kb']})")
         if dom > BUDGET["dom"]:
@@ -1057,8 +1062,9 @@ def g14(ctx, P, N):
     N.append(f"site.js {js_kb:.0f} KB (prototype code stripped), site.css {css_kb:.0f} KB, both cached across pages; scripts deferred")
     N.append(f"largest page {max(rows, key=lambda x: x[1])[0]} {max(x[1] for x in rows):.0f} KB HTML; most DOM {worst[0]} {worst[2]} elements; "
              f"max same-origin requests {max(x[3] for x in rows)} (lazy-loaded images excluded; up to {max(x[5] for x in rows)} per page); max layout shift {max(x[4] for x in rows):.3f}")
+    N.append(f"fonts self-hosted: up to {max(x[6] for x in rows)} woff2 files, {max(x[7] for x in rows):.0f} KB per page (budget {BUDGET['fonts']} files, {BUDGET['font_kb']} KB)")
     if third:
-        N.append(f"third-party request on every page: {', '.join(third)} (Google Fonts). Recommendation: self-host the three font families")
+        N.append(f"third-party hosts referenced on the home page: {', '.join(third)}")
 
 
 # ================================================================ REPRODUCIBILITY
