@@ -36,13 +36,13 @@ There is no per-gate flag; to iterate on one gate, edit `GATES` in `verify.py` t
 - `content.json` — editorial register. Each page's approval stores a hash of its exact built content; any content change invalidates the approval and `build.py` demands re-review. `published_at`/`updated_at` here are the only dates used for `lastmod` and schema. Only Ali (or someone he names) runs `approve`; don't edit review status by hand.
 - `src/site.html` — content/layout.
 
-**`dist/` is generated and committed** (deploys to Vercel as a static site, `outputDirectory: dist`, `trailingSlash: true`, no build step). Never hand-edit it; change source and rebuild, then commit the regenerated `dist/`, `.dist-build.json` and, if relevant, `content.json`.
+**`dist/` is generated and committed** (deploys from GitHub `main` to Cloudflare Pages, project `alibayatrealty`, custom domain `www.alibayatrealty.com`, serving `dist/` with no build step; `vercel.json` is unused; DNS stays at Squarespace, where the bare domain forwards to `www`). Never hand-edit it; change source and rebuild, then commit the regenerated `dist/`, `.dist-build.json` and, if relevant, `content.json`.
 
 **`verify.py`** serves `dist/` over real HTTP and runs 15 gates (links, SEO/hreflang/schema, a11y via axe-core + `verify_a11y.js`, form payload vs `lead.schema.json`, robots/sitemap, deterministic rebuilds, etc.). It imports `build` for the same config and prohibited patterns. Final status is PASS / PASS WITH OWNER INPUT REQUIRED / FAIL.
 
 ## Reusing this as a template for another site
 
-Copy the repo, then replace: all facts in `site.config.json` (set unknown ones to `null`), page content and `ROUTES` in `src/site.html`, images in `src/img/`, and reset `content.json` pages to unapproved (approvals are hash-bound and won't carry over). Also update `vercel.json`/domain, `lead.schema.json`/`LEADS.md` for the new form endpoint, drop `docs/` and `verify-report.md`, regenerate `dist/`, and rewrite this file for the new site.
+Copy the repo, then replace: all facts in `site.config.json` (set unknown ones to `null`), page content and `ROUTES` in `src/site.html`, images in `src/img/`, and reset `content.json` pages to unapproved (approvals are hash-bound and won't carry over). Also update the Cloudflare Pages project/domain, `lead.schema.json`/`LEADS.md` for the new form endpoint, drop `docs/` and `verify-report.md`, regenerate `dist/`, and rewrite this file for the new site.
 
 ## Conventions that matter
 
