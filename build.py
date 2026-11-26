@@ -255,10 +255,18 @@ def url(path):
     return BASE + path
 
 
-def fmt_date(d):
+FA_MONTHS = ["ژانویه", "فوریه", "مارس", "آوریل", "مه", "ژوئن", "ژوئیه", "اوت", "سپتامبر", "اکتبر", "نوامبر", "دسامبر"]
+FA_DIGITS = str.maketrans("0123456789", "۰۱۲۳۴۵۶۷۸۹")
+
+
+def fmt_date(d, lang="en"):
+    """'November 11, 2026' in English; '۱۱ نوامبر ۲۰۲۶' (Gregorian, Persian month names and digits) in Farsi,
+    matching the dates already written in the Farsi page copy."""
     if not d:
         return None
     dt = datetime.date.fromisoformat(d)
+    if lang == "fa":
+        return f"{dt.day} {FA_MONTHS[dt.month - 1]} {dt.year}".translate(FA_DIGITS)
     return f"{dt.strftime('%B')} {dt.day}, {dt.year}"
 
 
@@ -585,7 +593,7 @@ def build():
             st = page_status(r["key"])
             cfg = {"staging": STAGING, "values": DETAILS, "approved": CONFIG["approved"], "features": CONFIG["features"],
                    "endpoint": CONFIG["form_endpoint"], "route": r["key"], "lang": r.get("lang", "en"), "altKey": r.get("alt"), "navKey": {"fa-area": "fa-neighbourhoods", "fa-guide-land-transfer-tax": "fa-resources", "fa-guide": "fa-resources"}.get(r.get("page", r["key"]), r["key"]),
-                   "dates": {"published": fmt_date(st.get("published_at")), "updated": fmt_date(st.get("updated_at"))}}
+                   "dates": {k: fmt_date(st.get(f"{k}_at"), r.get("lang", "en")) for k in ("published", "updated")}}
             res = pg.evaluate(TRANSFORM_JS, cfg)
             warnings += [f'{r["path"]}: unmapped link #{w}' for w in res["warn"]]
             for u in res["unresolved"]:
