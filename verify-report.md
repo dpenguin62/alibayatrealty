@@ -18,8 +18,8 @@ All engineering checks pass. Every remaining failure needs Ali's information, an
 | 8 | Navigation works on desktop, tablet and mobile | ✅ pass |
 | 9 | Accessibility: axe-core, keyboard, focus, contrast, mobile, reduced motion | ✅ pass |
 | 10 | Lead form: production endpoint, payload contract, consent, honest states | ✅ pass |
-| 11 | Production safety: no placeholders, invented facts or interim content | ❌ fail (legal, owner) |
-| 12 | Content governance: author, review status, dates, sources, indexability | ❌ fail (owner) |
+| 11 | Production safety: no placeholders, invented facts or interim content | ❌ fail (legal) |
+| 12 | Content governance: author, review status, dates, sources, indexability | ✅ pass |
 | 13 | Internal linking: no orphans, pillars connected, contextual links | ✅ pass |
 | 14 | Performance budget: weight, requests, DOM size, layout shift, render-blocking | ✅ pass |
 | 15 | Reproducible, machine-independent build | ✅ pass |
@@ -46,7 +46,7 @@ All engineering checks pass. Every remaining failure needs Ali's information, an
 ## Sitemap
 **5. Sitemap: only intended canonical indexable URLs, accurate lastmod: PASS**
 - 64 URLs, all canonical and indexable; noindex, planned and held-back pages excluded
-- lastmod present on 58 of 64 (only from real publish/update dates; omitted otherwise, never the build date)
+- lastmod present on 64 of 64 (only from real publish/update dates; omitted otherwise, never the build date)
 
 ## Internal links
 **3. Zero broken internal links: PASS**
@@ -75,70 +75,40 @@ All engineering checks pass. Every remaining failure needs Ali's information, an
 - stand-in endpoint (code path only; NOT the integration): payload matches lead.schema.json; consent required; source_page /invest/ and source_cta from a real click path; UTM from the landing URL; referrer reduced to its origin; error keeps the message; no-JS POST; honeypot; no third-party requests
 
 ## Content governance
-**12. Content governance: author, review status, dates, sources, indexability: FAIL**
-- 68 pages registered; 36 approved as built; author = Ali Bayat
+**12. Content governance: author, review status, dates, sources, indexability: PASS**
+- 68 pages registered; 66 approved as built; author = Ali Bayat
 - approvals are tied to each page's exact content; dates come only from Ali's approvals (python build.py approve …)
-- ✗ [owner] /: changed after approval; needs review again
-- ✗ [owner] /buy/: changed after approval; needs review again
-- ✗ [owner] /sell/: changed after approval; needs review again
-- ✗ [owner] /invest/: changed after approval; needs review again
-- ✗ [owner] /neighbourhoods/north-york/: changed after approval; needs review again
-- ✗ [owner] /neighbourhoods/thornhill/: changed after approval; needs review again
-- ✗ [owner] /neighbourhoods/richmond-hill/: changed after approval; needs review again
-- ✗ [owner] /neighbourhoods/vaughan/: changed after approval; needs review again
-- ✗ [owner] /neighbourhoods/toronto/: changed after approval; needs review again
-- ✗ [owner] /resources/: changed after approval; needs review again
-- ✗ [owner] /resources/buying/land-transfer-tax-toronto-york-region/: changed after approval; needs review again
-- ✗ [owner] /contact/: changed after approval; needs review again
-- ✗ [owner] /fa/: changed after approval; needs review again
-- ✗ [owner] /fa/buy/: changed after approval; needs review again
-- ✗ [owner] /fa/sell/: changed after approval; needs review again
-- ✗ [owner] /fa/invest/: changed after approval; needs review again
-- ✗ [owner] /fa/neighbourhoods/north-york/: changed after approval; needs review again
-- ✗ [owner] /fa/neighbourhoods/thornhill/: changed after approval; needs review again
-- ✗ [owner] /fa/neighbourhoods/richmond-hill/: changed after approval; needs review again
-- ✗ [owner] /fa/neighbourhoods/vaughan/: changed after approval; needs review again
-- ✗ [owner] /fa/neighbourhoods/toronto/: changed after approval; needs review again
-- ✗ [owner] /fa/resources/: changed after approval; needs review again
-- ✗ [owner] /fa/resources/buying/land-transfer-tax-toronto-york-region/: changed after approval; needs review again
-- ✗ [owner] /fa/contact/: changed after approval; needs review again
-- ✗ [owner] /resources/buying/buying-toronto-from-abroad/: not yet reviewed and approved by Ali
-- ✗ [owner] /resources/buying/condo-vs-detached-yonge-corridor/: not yet reviewed and approved by Ali
-- ✗ [owner] /resources/tips/deal-notes-how-numbers-change-decisions/: not yet reviewed and approved by Ali
-- ✗ [owner] /fa/resources/buying/buying-toronto-from-abroad/: not yet reviewed and approved by Ali
-- ✗ [owner] /fa/resources/buying/condo-vs-detached-yonge-corridor/: not yet reviewed and approved by Ali
-- ✗ [owner] /fa/resources/tips/deal-notes-how-numbers-change-decisions/: not yet reviewed and approved by Ali
 
 | Page | Type | Author | Review | Published | Updated | Source / data period | Indexable |
 |---|---|---|---|---|---|---|---|
-| `/` | home | Ali Bayat | approved (changed since) | 2026-11-11 | 2026-11-18 | n/a | yes |
+| `/` | home | Ali Bayat | approved | 2026-11-11 | 2026-11-26 | n/a | yes |
 | `/about/` | profile | Ali Bayat | approved | 2026-11-11 | 2026-11-20 | n/a | yes |
-| `/buy/` | service | Ali Bayat | approved (changed since) | 2026-11-11 | 2026-11-21 | n/a | yes |
-| `/sell/` | service | Ali Bayat | approved (changed since) | 2026-11-11 | 2026-11-21 | n/a | yes |
-| `/invest/` | service | Ali Bayat | approved (changed since) | 2026-11-21 | 2026-11-21 | n/a | yes |
+| `/buy/` | service | Ali Bayat | approved | 2026-11-11 | 2026-11-26 | n/a | yes |
+| `/sell/` | service | Ali Bayat | approved | 2026-11-11 | 2026-11-26 | n/a | yes |
+| `/invest/` | service | Ali Bayat | approved | 2026-11-21 | 2026-11-26 | n/a | yes |
 | `/neighbourhoods/` | hub | Ali Bayat | approved | 2026-11-11 | 2026-11-26 | n/a | yes |
-| `/neighbourhoods/north-york/` | neighbourhood-guide | Ali Bayat | approved (changed since) | 2026-11-11 | 2026-11-26 | n/a | yes |
-| `/neighbourhoods/thornhill/` | neighbourhood-guide | Ali Bayat | approved (changed since) | 2026-11-11 | 2026-11-26 | n/a | yes |
-| `/neighbourhoods/richmond-hill/` | neighbourhood-guide | Ali Bayat | approved (changed since) | 2026-11-11 | 2026-11-26 | n/a | yes |
-| `/neighbourhoods/vaughan/` | neighbourhood-guide | Ali Bayat | approved (changed since) | 2026-11-11 | 2026-11-26 | n/a | yes |
-| `/neighbourhoods/toronto/` | neighbourhood-guide | Ali Bayat | approved (changed since) | 2026-11-11 | 2026-11-26 | n/a | yes |
-| `/resources/` | hub | Ali Bayat | approved (changed since) | 2026-11-11 | 2026-11-21 | n/a | yes |
-| `/resources/buying/land-transfer-tax-toronto-york-region/` | guide | Ali Bayat | approved (changed since) | 2026-11-11 | 2026-11-26 | City of Toronto, MLTT rates and fees; City of Toronto, MLTT rebates; Ontario, calculating land transfer tax; Ontario, refunds for first-time homebuyers (Ontario rates in effect since January 1, 2017; City of Toronto MLTT rates in effect from April 1, 2026; verified 2026-10-01) | yes |
-| `/contact/` | contact | Ali Bayat | approved (changed since) | 2026-11-11 | 2026-11-18 | n/a | yes |
-| `/fa/` | home | Ali Bayat | approved (changed since) | 2026-11-11 | 2026-11-18 | n/a | yes |
-| `/fa/buy/` | service | Ali Bayat | approved (changed since) | 2026-11-11 | 2026-11-21 | n/a | yes |
-| `/fa/sell/` | service | Ali Bayat | approved (changed since) | 2026-11-11 | 2026-11-21 | n/a | yes |
-| `/fa/invest/` | service | Ali Bayat | approved (changed since) | 2026-11-21 | 2026-11-21 | n/a | yes |
+| `/neighbourhoods/north-york/` | neighbourhood-guide | Ali Bayat | approved | 2026-11-11 | 2026-11-26 | n/a | yes |
+| `/neighbourhoods/thornhill/` | neighbourhood-guide | Ali Bayat | approved | 2026-11-11 | 2026-11-26 | n/a | yes |
+| `/neighbourhoods/richmond-hill/` | neighbourhood-guide | Ali Bayat | approved | 2026-11-11 | 2026-11-26 | n/a | yes |
+| `/neighbourhoods/vaughan/` | neighbourhood-guide | Ali Bayat | approved | 2026-11-11 | 2026-11-26 | n/a | yes |
+| `/neighbourhoods/toronto/` | neighbourhood-guide | Ali Bayat | approved | 2026-11-11 | 2026-11-26 | n/a | yes |
+| `/resources/` | hub | Ali Bayat | approved | 2026-11-11 | 2026-11-26 | n/a | yes |
+| `/resources/buying/land-transfer-tax-toronto-york-region/` | guide | Ali Bayat | approved | 2026-11-11 | 2026-11-26 | City of Toronto, MLTT rates and fees; City of Toronto, MLTT rebates; Ontario, calculating land transfer tax; Ontario, refunds for first-time homebuyers (Ontario rates in effect since January 1, 2017; City of Toronto MLTT rates in effect from April 1, 2026; verified 2026-10-01) | yes |
+| `/contact/` | contact | Ali Bayat | approved | 2026-11-11 | 2026-11-26 | n/a | yes |
+| `/fa/` | home | Ali Bayat | approved | 2026-11-11 | 2026-11-26 | n/a | yes |
+| `/fa/buy/` | service | Ali Bayat | approved | 2026-11-11 | 2026-11-26 | n/a | yes |
+| `/fa/sell/` | service | Ali Bayat | approved | 2026-11-11 | 2026-11-26 | n/a | yes |
+| `/fa/invest/` | service | Ali Bayat | approved | 2026-11-21 | 2026-11-26 | n/a | yes |
 | `/fa/neighbourhoods/` | hub | Ali Bayat | approved | 2026-11-11 | 2026-11-26 | n/a | yes |
-| `/fa/neighbourhoods/north-york/` | neighbourhood-guide | Ali Bayat | approved (changed since) | 2026-11-11 | 2026-11-26 | n/a | yes |
-| `/fa/neighbourhoods/thornhill/` | neighbourhood-guide | Ali Bayat | approved (changed since) | 2026-11-11 | 2026-11-26 | n/a | yes |
-| `/fa/neighbourhoods/richmond-hill/` | neighbourhood-guide | Ali Bayat | approved (changed since) | 2026-11-11 | 2026-11-26 | n/a | yes |
-| `/fa/neighbourhoods/vaughan/` | neighbourhood-guide | Ali Bayat | approved (changed since) | 2026-11-11 | 2026-11-26 | n/a | yes |
-| `/fa/neighbourhoods/toronto/` | neighbourhood-guide | Ali Bayat | approved (changed since) | 2026-11-11 | 2026-11-26 | n/a | yes |
-| `/fa/resources/` | hub | Ali Bayat | approved (changed since) | 2026-11-11 | 2026-11-21 | n/a | yes |
-| `/fa/resources/buying/land-transfer-tax-toronto-york-region/` | guide | Ali Bayat | approved (changed since) | 2026-11-11 | 2026-11-26 | City of Toronto, MLTT rates and fees; City of Toronto, MLTT rebates; Ontario, calculating land transfer tax; Ontario, refunds for first-time homebuyers (Ontario rates in effect since January 1, 2017; City of Toronto MLTT rates in effect from April 1, 2026; verified 2026-10-01) | yes |
+| `/fa/neighbourhoods/north-york/` | neighbourhood-guide | Ali Bayat | approved | 2026-11-11 | 2026-11-26 | n/a | yes |
+| `/fa/neighbourhoods/thornhill/` | neighbourhood-guide | Ali Bayat | approved | 2026-11-11 | 2026-11-26 | n/a | yes |
+| `/fa/neighbourhoods/richmond-hill/` | neighbourhood-guide | Ali Bayat | approved | 2026-11-11 | 2026-11-26 | n/a | yes |
+| `/fa/neighbourhoods/vaughan/` | neighbourhood-guide | Ali Bayat | approved | 2026-11-11 | 2026-11-26 | n/a | yes |
+| `/fa/neighbourhoods/toronto/` | neighbourhood-guide | Ali Bayat | approved | 2026-11-11 | 2026-11-26 | n/a | yes |
+| `/fa/resources/` | hub | Ali Bayat | approved | 2026-11-11 | 2026-11-26 | n/a | yes |
+| `/fa/resources/buying/land-transfer-tax-toronto-york-region/` | guide | Ali Bayat | approved | 2026-11-11 | 2026-11-26 | City of Toronto, MLTT rates and fees; City of Toronto, MLTT rebates; Ontario, calculating land transfer tax; Ontario, refunds for first-time homebuyers (Ontario rates in effect since January 1, 2017; City of Toronto MLTT rates in effect from April 1, 2026; verified 2026-10-01) | yes |
 | `/fa/about/` | profile | Ali Bayat | approved | 2026-11-11 | 2026-11-20 | n/a | yes |
-| `/fa/contact/` | contact | Ali Bayat | approved (changed since) | 2026-11-11 | 2026-11-18 | n/a | yes |
+| `/fa/contact/` | contact | Ali Bayat | approved | 2026-11-11 | 2026-11-26 | n/a | yes |
 | `/privacy/` | legal | Ali Bayat | draft | n/a | n/a | n/a | no |
 | `/terms/` | legal | Ali Bayat | draft | n/a | n/a | n/a | no |
 | `/accessibility/` | legal | Ali Bayat | approved | 2026-11-11 | n/a | n/a | no |
@@ -158,9 +128,9 @@ All engineering checks pass. Every remaining failure needs Ali's information, an
 | `/resources/tips/condo-status-certificate/` | guide | Ali Bayat | approved | 2026-11-21 | n/a | FirstService Residential, status certificates in Ontario; Legal Line, what is a status certificate; Condominium Act, 1998; Ontario, what to know before buying a home (Rules and rates in effect November 2026; verified 2026-11-21) | yes |
 | `/resources/tips/home-inspection-gta/` | guide | Ali Bayat | approved | 2026-11-21 | n/a | Ontario, what to know before buying a home (Rules and rates in effect November 2026; verified 2026-11-21) | yes |
 | `/resources/tips/choosing-a-contractor/` | guide | Ali Bayat | approved | 2026-11-21 | n/a | Ontario, your rights when starting home renovations or repairs; Ontario, guide for home renovation businesses; Construction Act (Rules and rates in effect November 2026; verified 2026-11-21) | yes |
-| `/resources/buying/buying-toronto-from-abroad/` | guide | Ali Bayat | draft | n/a | n/a | Ontario, non-resident speculation tax; Ontario, non-resident speculation tax exemptions; Department of Finance Canada, two-year extension of the ban on foreign ownership (February 2024); Fasken, Budget 2026: foreign buyers ban proposed to be extended to 2029 (November 2026); Ontario, land transfer tax refunds for first-time homebuyers; City of Toronto, MLTT rebates (Rules and rates in effect November 2026; verified 2026-11-21) | yes |
-| `/resources/buying/condo-vs-detached-yonge-corridor/` | guide | Ali Bayat | draft | n/a | n/a | Condominium Act, 1998; Legal Line, what is a status certificate; Ontario, land transfer tax refunds for first-time homebuyers; City of Toronto, MLTT rebates (Rules and rates in effect November 2026; verified 2026-11-21) | yes |
-| `/resources/tips/deal-notes-how-numbers-change-decisions/` | guide | Ali Bayat | draft | n/a | n/a | Legal Line, what is a status certificate; FirstService Residential, status certificates in Ontario; Ontario, land transfer tax refunds for first-time homebuyers; City of Toronto, MLTT rebates (Rules and rates in effect November 2026; verified 2026-11-21) | yes |
+| `/resources/buying/buying-toronto-from-abroad/` | guide | Ali Bayat | approved | 2026-11-26 | n/a | Ontario, non-resident speculation tax; Ontario, non-resident speculation tax exemptions; Department of Finance Canada, two-year extension of the ban on foreign ownership (February 2024); Fasken, Budget 2026: foreign buyers ban proposed to be extended to 2029 (November 2026); Ontario, land transfer tax refunds for first-time homebuyers; City of Toronto, MLTT rebates (Rules and rates in effect November 2026; verified 2026-11-21) | yes |
+| `/resources/buying/condo-vs-detached-yonge-corridor/` | guide | Ali Bayat | approved | 2026-11-26 | n/a | Condominium Act, 1998; Legal Line, what is a status certificate; Ontario, land transfer tax refunds for first-time homebuyers; City of Toronto, MLTT rebates (Rules and rates in effect November 2026; verified 2026-11-21) | yes |
+| `/resources/tips/deal-notes-how-numbers-change-decisions/` | guide | Ali Bayat | approved | 2026-11-26 | n/a | Legal Line, what is a status certificate; FirstService Residential, status certificates in Ontario; Ontario, land transfer tax refunds for first-time homebuyers; City of Toronto, MLTT rebates (Rules and rates in effect November 2026; verified 2026-11-21) | yes |
 | `/fa/resources/buying/first-home-toronto/` | guide | Ali Bayat | approved | 2026-11-21 | n/a | CMHC, mortgage loan insurance quick reference; CMHC, mortgage loan insurance cost; Department of Finance Canada, mortgage reforms effective December 15, 2024; CMHC, Income Property (2–4 unit rentals); Canada Revenue Agency, First Home Savings Account; Canada Revenue Agency, Home Buyers' Plan; Ontario, land transfer tax refunds for first-time homebuyers; City of Toronto, MLTT rebates; Ontario, what to know before buying a home (Rules and rates in effect November 2026; verified 2026-11-21) | yes |
 | `/fa/resources/buying/pre-construction-condo-questions/` | guide | Ali Bayat | approved | 2026-11-21 | n/a | Condominium Authority of Ontario, pre-construction condos; Tarion, deposit protection; Ontario, what to know before buying a home; Canada Revenue Agency, Ontario enhanced new housing rebate (Notice 346); Gowling WLG, Ontario expands HST relief on new homes (April 2026); TRREB Market Watch, October 2026 (Rules and rates in effect November 2026; verified 2026-11-21) | yes |
 | `/fa/resources/selling/what-to-fix-before-listing/` | guide | Ali Bayat | approved | 2026-11-21 | n/a | TRREB Market Watch, October 2026; Ontario, what to know before buying a home; Ontario, your rights when starting home renovations or repairs (Rules and rates in effect November 2026; verified 2026-11-21) | yes |
@@ -176,15 +146,13 @@ All engineering checks pass. Every remaining failure needs Ali's information, an
 | `/fa/resources/tips/condo-status-certificate/` | guide | Ali Bayat | approved | 2026-11-21 | n/a | FirstService Residential, status certificates in Ontario; Legal Line, what is a status certificate; Condominium Act, 1998; Ontario, what to know before buying a home (Rules and rates in effect November 2026; verified 2026-11-21) | yes |
 | `/fa/resources/tips/home-inspection-gta/` | guide | Ali Bayat | approved | 2026-11-21 | n/a | Ontario, what to know before buying a home (Rules and rates in effect November 2026; verified 2026-11-21) | yes |
 | `/fa/resources/tips/choosing-a-contractor/` | guide | Ali Bayat | approved | 2026-11-21 | n/a | Ontario, your rights when starting home renovations or repairs; Ontario, guide for home renovation businesses; Construction Act (Rules and rates in effect November 2026; verified 2026-11-21) | yes |
-| `/fa/resources/buying/buying-toronto-from-abroad/` | guide | Ali Bayat | draft | n/a | n/a | Ontario, non-resident speculation tax; Ontario, non-resident speculation tax exemptions; Department of Finance Canada, two-year extension of the ban on foreign ownership (February 2024); Fasken, Budget 2026: foreign buyers ban proposed to be extended to 2029 (November 2026); Ontario, land transfer tax refunds for first-time homebuyers; City of Toronto, MLTT rebates (Rules and rates in effect November 2026; verified 2026-11-21) | yes |
-| `/fa/resources/buying/condo-vs-detached-yonge-corridor/` | guide | Ali Bayat | draft | n/a | n/a | Condominium Act, 1998; Legal Line, what is a status certificate; Ontario, land transfer tax refunds for first-time homebuyers; City of Toronto, MLTT rebates (Rules and rates in effect November 2026; verified 2026-11-21) | yes |
-| `/fa/resources/tips/deal-notes-how-numbers-change-decisions/` | guide | Ali Bayat | draft | n/a | n/a | Legal Line, what is a status certificate; FirstService Residential, status certificates in Ontario; Ontario, land transfer tax refunds for first-time homebuyers; City of Toronto, MLTT rebates (Rules and rates in effect November 2026; verified 2026-11-21) | yes |
+| `/fa/resources/buying/buying-toronto-from-abroad/` | guide | Ali Bayat | approved | 2026-11-26 | n/a | Ontario, non-resident speculation tax; Ontario, non-resident speculation tax exemptions; Department of Finance Canada, two-year extension of the ban on foreign ownership (February 2024); Fasken, Budget 2026: foreign buyers ban proposed to be extended to 2029 (November 2026); Ontario, land transfer tax refunds for first-time homebuyers; City of Toronto, MLTT rebates (Rules and rates in effect November 2026; verified 2026-11-21) | yes |
+| `/fa/resources/buying/condo-vs-detached-yonge-corridor/` | guide | Ali Bayat | approved | 2026-11-26 | n/a | Condominium Act, 1998; Legal Line, what is a status certificate; Ontario, land transfer tax refunds for first-time homebuyers; City of Toronto, MLTT rebates (Rules and rates in effect November 2026; verified 2026-11-21) | yes |
+| `/fa/resources/tips/deal-notes-how-numbers-change-decisions/` | guide | Ali Bayat | approved | 2026-11-26 | n/a | Legal Line, what is a status certificate; FirstService Residential, status certificates in Ontario; Ontario, land transfer tax refunds for first-time homebuyers; City of Toronto, MLTT rebates (Rules and rates in effect November 2026; verified 2026-11-21) | yes |
 
 ## Production safety
 **11. Production safety: no placeholders, invented facts or interim content: FAIL**
 - spec patterns in published pages: [Brokerage: 0, [to be written / to be written: 0, draft for Ali: 0, Preview only: 0, 000000: 0, (416) 000-0000: 0, [year]: 0, [City]: 0, nan / NaN: 0, TBC: 0, TODO: 0, FIXME: 0
-- ✗ [owner] needs deal-notes-review (1 page: /resources/tips/deal-notes-how-numbers-change-decisions/)
-- ✗ [owner] needs deal-notes-review-fa (1 page: /fa/resources/tips/deal-notes-how-numbers-change-decisions/)
 - ✗ [legal] /privacy/: privacy-policy is interim, not final
 - ✗ [legal] /terms/: terms-of-use is interim, not final
 
@@ -208,7 +176,7 @@ Every occurrence above comes from a managed placeholder (awaiting the owner inpu
 ## Performance
 **14. Performance budget: weight, requests, DOM size, layout shift, render-blocking: PASS**
 - site.js 42 KB (prototype code stripped), site.css 73 KB, both cached across pages; scripts deferred
-- largest page /invest/ 55 KB HTML; most DOM /invest/ 905 elements; max same-origin requests 5 (lazy-loaded images excluded; up to 5 per page); max layout shift 0.006
+- largest page /invest/ 55 KB HTML; most DOM /invest/ 905 elements; max same-origin requests 5 (lazy-loaded images excluded; up to 5 per page); max layout shift 0.003
 - fonts self-hosted: up to 11 woff2 files, 171 KB per page (budget 16 files, 300 KB)
 - third-party hosts referenced on the home page: commons.wikimedia.org, creativecommons.org
 
@@ -218,39 +186,8 @@ Every occurrence above comes from a managed placeholder (awaiting the owner inpu
 
 ## Remaining blockers
 
-### Requires Ali's information or approval (32)
-- /: changed after approval; needs review again
-- /buy/: changed after approval; needs review again
-- /contact/: changed after approval; needs review again
-- /fa/: changed after approval; needs review again
-- /fa/buy/: changed after approval; needs review again
-- /fa/contact/: changed after approval; needs review again
-- /fa/invest/: changed after approval; needs review again
-- /fa/neighbourhoods/north-york/: changed after approval; needs review again
-- /fa/neighbourhoods/richmond-hill/: changed after approval; needs review again
-- /fa/neighbourhoods/thornhill/: changed after approval; needs review again
-- /fa/neighbourhoods/toronto/: changed after approval; needs review again
-- /fa/neighbourhoods/vaughan/: changed after approval; needs review again
-- /fa/resources/: changed after approval; needs review again
-- /fa/resources/buying/buying-toronto-from-abroad/: not yet reviewed and approved by Ali
-- /fa/resources/buying/condo-vs-detached-yonge-corridor/: not yet reviewed and approved by Ali
-- /fa/resources/buying/land-transfer-tax-toronto-york-region/: changed after approval; needs review again
-- /fa/resources/tips/deal-notes-how-numbers-change-decisions/: not yet reviewed and approved by Ali
-- /fa/sell/: changed after approval; needs review again
-- /invest/: changed after approval; needs review again
-- /neighbourhoods/north-york/: changed after approval; needs review again
-- /neighbourhoods/richmond-hill/: changed after approval; needs review again
-- /neighbourhoods/thornhill/: changed after approval; needs review again
-- /neighbourhoods/toronto/: changed after approval; needs review again
-- /neighbourhoods/vaughan/: changed after approval; needs review again
-- /resources/: changed after approval; needs review again
-- /resources/buying/buying-toronto-from-abroad/: not yet reviewed and approved by Ali
-- /resources/buying/condo-vs-detached-yonge-corridor/: not yet reviewed and approved by Ali
-- /resources/buying/land-transfer-tax-toronto-york-region/: changed after approval; needs review again
-- /resources/tips/deal-notes-how-numbers-change-decisions/: not yet reviewed and approved by Ali
-- /sell/: changed after approval; needs review again
-- needs deal-notes-review (1 page: /resources/tips/deal-notes-how-numbers-change-decisions/)
-- needs deal-notes-review-fa (1 page: /fa/resources/tips/deal-notes-how-numbers-change-decisions/)
+### Requires Ali's information or approval (0)
+- none
 
 ### Requires an external service or access (0)
 - none

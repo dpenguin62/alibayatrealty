@@ -1338,23 +1338,8 @@
   "/fa/resources/buying/condo-vs-detached-yonge-corridor/": "d402af6af5e0b567",
   "/fa/resources/tips/deal-notes-how-numbers-change-decisions/": "3ff9eea819e3ade9"
  },
- "unresolved": {
-  "deal-notes-review": [
-   "/resources/tips/deal-notes-how-numbers-change-decisions/"
-  ],
-  "deal-notes-review-fa": [
-   "/fa/resources/tips/deal-notes-how-numbers-change-decisions/"
-  ]
- },
+ "unresolved": {},
  "blockers": [
-  {
-   "category": "owner",
-   "message": "needs deal-notes-review (1 page: /resources/tips/deal-notes-how-numbers-change-decisions/)"
-  },
-  {
-   "category": "owner",
-   "message": "needs deal-notes-review-fa (1 page: /fa/resources/tips/deal-notes-how-numbers-change-decisions/)"
-  },
   {
    "category": "legal",
    "message": "/privacy/: privacy-policy is interim, not final"
@@ -1362,126 +1347,6 @@
   {
    "category": "legal",
    "message": "/terms/: terms-of-use is interim, not final"
-  },
-  {
-   "category": "owner",
-   "message": "page review: / changed since it was approved; review again"
-  },
-  {
-   "category": "owner",
-   "message": "page review: /buy/ changed since it was approved; review again"
-  },
-  {
-   "category": "owner",
-   "message": "page review: /sell/ changed since it was approved; review again"
-  },
-  {
-   "category": "owner",
-   "message": "page review: /invest/ changed since it was approved; review again"
-  },
-  {
-   "category": "owner",
-   "message": "page review: /neighbourhoods/north-york/ changed since it was approved; review again"
-  },
-  {
-   "category": "owner",
-   "message": "page review: /neighbourhoods/thornhill/ changed since it was approved; review again"
-  },
-  {
-   "category": "owner",
-   "message": "page review: /neighbourhoods/richmond-hill/ changed since it was approved; review again"
-  },
-  {
-   "category": "owner",
-   "message": "page review: /neighbourhoods/vaughan/ changed since it was approved; review again"
-  },
-  {
-   "category": "owner",
-   "message": "page review: /neighbourhoods/toronto/ changed since it was approved; review again"
-  },
-  {
-   "category": "owner",
-   "message": "page review: /resources/ changed since it was approved; review again"
-  },
-  {
-   "category": "owner",
-   "message": "page review: /resources/buying/land-transfer-tax-toronto-york-region/ changed since it was approved; review again"
-  },
-  {
-   "category": "owner",
-   "message": "page review: /contact/ changed since it was approved; review again"
-  },
-  {
-   "category": "owner",
-   "message": "page review: /fa/ changed since it was approved; review again"
-  },
-  {
-   "category": "owner",
-   "message": "page review: /fa/buy/ changed since it was approved; review again"
-  },
-  {
-   "category": "owner",
-   "message": "page review: /fa/sell/ changed since it was approved; review again"
-  },
-  {
-   "category": "owner",
-   "message": "page review: /fa/invest/ changed since it was approved; review again"
-  },
-  {
-   "category": "owner",
-   "message": "page review: /fa/neighbourhoods/north-york/ changed since it was approved; review again"
-  },
-  {
-   "category": "owner",
-   "message": "page review: /fa/neighbourhoods/thornhill/ changed since it was approved; review again"
-  },
-  {
-   "category": "owner",
-   "message": "page review: /fa/neighbourhoods/richmond-hill/ changed since it was approved; review again"
-  },
-  {
-   "category": "owner",
-   "message": "page review: /fa/neighbourhoods/vaughan/ changed since it was approved; review again"
-  },
-  {
-   "category": "owner",
-   "message": "page review: /fa/neighbourhoods/toronto/ changed since it was approved; review again"
-  },
-  {
-   "category": "owner",
-   "message": "page review: /fa/resources/ changed since it was approved; review again"
-  },
-  {
-   "category": "owner",
-   "message": "page review: /fa/resources/buying/land-transfer-tax-toronto-york-region/ changed since it was approved; review again"
-  },
-  {
-   "category": "owner",
-   "message": "page review: /fa/contact/ changed since it was approved; review again"
-  },
-  {
-   "category": "owner",
-   "message": "page review: /resources/buying/buying-toronto-from-abroad/ not yet approved by Ali"
-  },
-  {
-   "category": "owner",
-   "message": "page review: /resources/buying/condo-vs-detached-yonge-corridor/ not yet approved by Ali"
-  },
-  {
-   "category": "owner",
-   "message": "page review: /resources/tips/deal-notes-how-numbers-change-decisions/ not yet approved by Ali"
-  },
-  {
-   "category": "owner",
-   "message": "page review: /fa/resources/buying/buying-toronto-from-abroad/ not yet approved by Ali"
-  },
-  {
-   "category": "owner",
-   "message": "page review: /fa/resources/buying/condo-vs-detached-yonge-corridor/ not yet approved by Ali"
-  },
-  {
-   "category": "owner",
-   "message": "page review: /fa/resources/tips/deal-notes-how-numbers-change-decisions/ not yet approved by Ali"
   }
  ],
  "governance": [
@@ -1495,10 +1360,10 @@
    "time_sensitive": false,
    "author": "Ali Bayat",
    "review_status": "approved",
-   "approved_matches": false,
+   "approved_matches": true,
    "reviewed_by": "Ali Bayat",
    "published_at": "2026-11-11",
-   "updated_at": "2026-11-18",
+   "updated_at": "2026-11-26",
    "data_period": null,
    "verified_at": null,
    "sources": [],
@@ -1539,10 +1404,10 @@
    "time_sensitive": false,
    "author": "Ali Bayat",
    "review_status": "approved",
-   "approved_matches": false,
+   "approved_matches": true,
    "reviewed_by": "Ali Bayat",
    "published_at": "2026-11-11",
-   "updated_at": "2026-11-21",
+   "updated_at": "2026-11-26",
    "data_period": null,
    "verified_at": null,
    "sources": [],
@@ -1561,10 +1426,10 @@
    "time_sensitive": false,
    "author": "Ali Bayat",
    "review_status": "approved",
-   "approved_matches": false,
+   "approved_matches": true,
    "reviewed_by": "Ali Bayat",
    "published_at": "2026-11-11",
-   "updated_at": "2026-11-21",
+   "updated_at": "2026-11-26",
    "data_period": null,
    "verified_at": null,
    "sources": [],
@@ -1583,10 +1448,10 @@
    "time_sensitive": false,
    "author": "Ali Bayat",
    "review_status": "approved",
-   "approved_matches": false,
+   "approved_matches": true,
    "reviewed_by": "Ali Bayat",
    "published_at": "2026-11-21",
-   "updated_at": "2026-11-21",
+   "updated_at": "2026-11-26",
    "data_period": null,
    "verified_at": null,
    "sources": [],
@@ -1627,7 +1492,7 @@
    "time_sensitive": false,
    "author": "Ali Bayat",
    "review_status": "approved",
-   "approved_matches": false,
+   "approved_matches": true,
    "reviewed_by": "Ali Bayat",
    "published_at": "2026-11-11",
    "updated_at": "2026-11-26",
@@ -1649,7 +1514,7 @@
    "time_sensitive": false,
    "author": "Ali Bayat",
    "review_status": "approved",
-   "approved_matches": false,
+   "approved_matches": true,
    "reviewed_by": "Ali Bayat",
    "published_at": "2026-11-11",
    "updated_at": "2026-11-26",
@@ -1671,7 +1536,7 @@
    "time_sensitive": false,
    "author": "Ali Bayat",
    "review_status": "approved",
-   "approved_matches": false,
+   "approved_matches": true,
    "reviewed_by": "Ali Bayat",
    "published_at": "2026-11-11",
    "updated_at": "2026-11-26",
@@ -1693,7 +1558,7 @@
    "time_sensitive": false,
    "author": "Ali Bayat",
    "review_status": "approved",
-   "approved_matches": false,
+   "approved_matches": true,
    "reviewed_by": "Ali Bayat",
    "published_at": "2026-11-11",
    "updated_at": "2026-11-26",
@@ -1715,7 +1580,7 @@
    "time_sensitive": false,
    "author": "Ali Bayat",
    "review_status": "approved",
-   "approved_matches": false,
+   "approved_matches": true,
    "reviewed_by": "Ali Bayat",
    "published_at": "2026-11-11",
    "updated_at": "2026-11-26",
@@ -1737,10 +1602,10 @@
    "time_sensitive": false,
    "author": "Ali Bayat",
    "review_status": "approved",
-   "approved_matches": false,
+   "approved_matches": true,
    "reviewed_by": "Ali Bayat",
    "published_at": "2026-11-11",
-   "updated_at": "2026-11-21",
+   "updated_at": "2026-11-26",
    "data_period": null,
    "verified_at": null,
    "sources": [],
@@ -1759,7 +1624,7 @@
    "time_sensitive": true,
    "author": "Ali Bayat",
    "review_status": "approved",
-   "approved_matches": false,
+   "approved_matches": true,
    "reviewed_by": "Ali Bayat",
    "published_at": "2026-11-11",
    "updated_at": "2026-11-26",
@@ -1798,10 +1663,10 @@
    "time_sensitive": false,
    "author": "Ali Bayat",
    "review_status": "approved",
-   "approved_matches": false,
+   "approved_matches": true,
    "reviewed_by": "Ali Bayat",
    "published_at": "2026-11-11",
-   "updated_at": "2026-11-18",
+   "updated_at": "2026-11-26",
    "data_period": null,
    "verified_at": null,
    "sources": [],
@@ -1820,10 +1685,10 @@
    "time_sensitive": false,
    "author": "Ali Bayat",
    "review_status": "approved",
-   "approved_matches": false,
+   "approved_matches": true,
    "reviewed_by": "Ali Bayat",
    "published_at": "2026-11-11",
-   "updated_at": "2026-11-18",
+   "updated_at": "2026-11-26",
    "data_period": null,
    "verified_at": null,
    "sources": [],
@@ -1842,10 +1707,10 @@
    "time_sensitive": false,
    "author": "Ali Bayat",
    "review_status": "approved",
-   "approved_matches": false,
+   "approved_matches": true,
    "reviewed_by": "Ali Bayat",
    "published_at": "2026-11-11",
-   "updated_at": "2026-11-21",
+   "updated_at": "2026-11-26",
    "data_period": null,
    "verified_at": null,
    "sources": [],
@@ -1864,10 +1729,10 @@
    "time_sensitive": false,
    "author": "Ali Bayat",
    "review_status": "approved",
-   "approved_matches": false,
+   "approved_matches": true,
    "reviewed_by": "Ali Bayat",
    "published_at": "2026-11-11",
-   "updated_at": "2026-11-21",
+   "updated_at": "2026-11-26",
    "data_period": null,
    "verified_at": null,
    "sources": [],
@@ -1886,10 +1751,10 @@
    "time_sensitive": false,
    "author": "Ali Bayat",
    "review_status": "approved",
-   "approved_matches": false,
+   "approved_matches": true,
    "reviewed_by": "Ali Bayat",
    "published_at": "2026-11-21",
-   "updated_at": "2026-11-21",
+   "updated_at": "2026-11-26",
    "data_period": null,
    "verified_at": null,
    "sources": [],
@@ -1930,7 +1795,7 @@
    "time_sensitive": false,
    "author": "Ali Bayat",
    "review_status": "approved",
-   "approved_matches": false,
+   "approved_matches": true,
    "reviewed_by": "Ali Bayat",
    "published_at": "2026-11-11",
    "updated_at": "2026-11-26",
@@ -1952,7 +1817,7 @@
    "time_sensitive": false,
    "author": "Ali Bayat",
    "review_status": "approved",
-   "approved_matches": false,
+   "approved_matches": true,
    "reviewed_by": "Ali Bayat",
    "published_at": "2026-11-11",
    "updated_at": "2026-11-26",
@@ -1974,7 +1839,7 @@
    "time_sensitive": false,
    "author": "Ali Bayat",
    "review_status": "approved",
-   "approved_matches": false,
+   "approved_matches": true,
    "reviewed_by": "Ali Bayat",
    "published_at": "2026-11-11",
    "updated_at": "2026-11-26",
@@ -1996,7 +1861,7 @@
    "time_sensitive": false,
    "author": "Ali Bayat",
    "review_status": "approved",
-   "approved_matches": false,
+   "approved_matches": true,
    "reviewed_by": "Ali Bayat",
    "published_at": "2026-11-11",
    "updated_at": "2026-11-26",
@@ -2018,7 +1883,7 @@
    "time_sensitive": false,
    "author": "Ali Bayat",
    "review_status": "approved",
-   "approved_matches": false,
+   "approved_matches": true,
    "reviewed_by": "Ali Bayat",
    "published_at": "2026-11-11",
    "updated_at": "2026-11-26",
@@ -2040,10 +1905,10 @@
    "time_sensitive": false,
    "author": "Ali Bayat",
    "review_status": "approved",
-   "approved_matches": false,
+   "approved_matches": true,
    "reviewed_by": "Ali Bayat",
    "published_at": "2026-11-11",
-   "updated_at": "2026-11-21",
+   "updated_at": "2026-11-26",
    "data_period": null,
    "verified_at": null,
    "sources": [],
@@ -2062,7 +1927,7 @@
    "time_sensitive": true,
    "author": "Ali Bayat",
    "review_status": "approved",
-   "approved_matches": false,
+   "approved_matches": true,
    "reviewed_by": "Ali Bayat",
    "published_at": "2026-11-11",
    "updated_at": "2026-11-26",
@@ -2123,10 +1988,10 @@
    "time_sensitive": false,
    "author": "Ali Bayat",
    "review_status": "approved",
-   "approved_matches": false,
+   "approved_matches": true,
    "reviewed_by": "Ali Bayat",
    "published_at": "2026-11-11",
-   "updated_at": "2026-11-18",
+   "updated_at": "2026-11-26",
    "data_period": null,
    "verified_at": null,
    "sources": [],
@@ -2785,10 +2650,10 @@
    "evergreen": false,
    "time_sensitive": true,
    "author": "Ali Bayat",
-   "review_status": "draft",
-   "approved_matches": false,
-   "reviewed_by": null,
-   "published_at": null,
+   "review_status": "approved",
+   "approved_matches": true,
+   "reviewed_by": "Ali Bayat",
+   "published_at": "2026-11-26",
    "updated_at": null,
    "data_period": "Rules and rates in effect November 2026",
    "verified_at": "2026-11-21",
@@ -2832,10 +2697,10 @@
    "evergreen": false,
    "time_sensitive": true,
    "author": "Ali Bayat",
-   "review_status": "draft",
-   "approved_matches": false,
-   "reviewed_by": null,
-   "published_at": null,
+   "review_status": "approved",
+   "approved_matches": true,
+   "reviewed_by": "Ali Bayat",
+   "published_at": "2026-11-26",
    "updated_at": null,
    "data_period": "Rules and rates in effect November 2026",
    "verified_at": "2026-11-21",
@@ -2871,10 +2736,10 @@
    "evergreen": false,
    "time_sensitive": true,
    "author": "Ali Bayat",
-   "review_status": "draft",
-   "approved_matches": false,
-   "reviewed_by": null,
-   "published_at": null,
+   "review_status": "approved",
+   "approved_matches": true,
+   "reviewed_by": "Ali Bayat",
+   "published_at": "2026-11-26",
    "updated_at": null,
    "data_period": "Rules and rates in effect November 2026",
    "verified_at": "2026-11-21",
@@ -2899,9 +2764,7 @@
    "indexable": true,
    "canonical": "https://www.alibayatrealty.com/resources/tips/deal-notes-how-numbers-change-decisions/",
    "content_hash": "a5aef98fa2eeb3ac",
-   "open_items": [
-    "deal-notes-review"
-   ]
+   "open_items": []
   },
   {
    "path": "/fa/resources/buying/first-home-toronto/",
@@ -3461,10 +3324,10 @@
    "evergreen": false,
    "time_sensitive": true,
    "author": "Ali Bayat",
-   "review_status": "draft",
-   "approved_matches": false,
-   "reviewed_by": null,
-   "published_at": null,
+   "review_status": "approved",
+   "approved_matches": true,
+   "reviewed_by": "Ali Bayat",
+   "published_at": "2026-11-26",
    "updated_at": null,
    "data_period": "Rules and rates in effect November 2026",
    "verified_at": "2026-11-21",
@@ -3508,10 +3371,10 @@
    "evergreen": false,
    "time_sensitive": true,
    "author": "Ali Bayat",
-   "review_status": "draft",
-   "approved_matches": false,
-   "reviewed_by": null,
-   "published_at": null,
+   "review_status": "approved",
+   "approved_matches": true,
+   "reviewed_by": "Ali Bayat",
+   "published_at": "2026-11-26",
    "updated_at": null,
    "data_period": "Rules and rates in effect November 2026",
    "verified_at": "2026-11-21",
@@ -3547,10 +3410,10 @@
    "evergreen": false,
    "time_sensitive": true,
    "author": "Ali Bayat",
-   "review_status": "draft",
-   "approved_matches": false,
-   "reviewed_by": null,
-   "published_at": null,
+   "review_status": "approved",
+   "approved_matches": true,
+   "reviewed_by": "Ali Bayat",
+   "published_at": "2026-11-26",
    "updated_at": null,
    "data_period": "Rules and rates in effect November 2026",
    "verified_at": "2026-11-21",
@@ -3575,9 +3438,7 @@
    "indexable": true,
    "canonical": "https://www.alibayatrealty.com/fa/resources/tips/deal-notes-how-numbers-change-decisions/",
    "content_hash": "3ff9eea819e3ade9",
-   "open_items": [
-    "deal-notes-review-fa"
-   ]
+   "open_items": []
   }
  ],
  "details": [
@@ -3598,6 +3459,8 @@
   "consent-wording",
   "consent-wording-fa",
   "contact-channels",
+  "deal-notes-review",
+  "deal-notes-review-fa",
   "experience-claim",
   "footer-disclaimer",
   "ltt-guide-review",
