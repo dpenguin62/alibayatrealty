@@ -23,11 +23,11 @@
 <meta name="twitter:description" content="مالیات انتقال زمین انتاریو و تورنتو در ۲۰۲۶ چطور محاسبه می‌شود، چرا خرید در نورث‌یورک گران‌تر از وان تمام می‌شود، همراه با ماشین‌حساب.">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <meta name="theme-color" content="#F4F1EC">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,500;1,700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;600;700&display=swap">
-<link rel="stylesheet" href="/assets/site.css?v=3a14e44410">
+<link rel="preload" href="/assets/fonts/vazirmatn-arabic-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/fonts/vazirmatn-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/fonts/plus-jakarta-sans-latin-800-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/assets/site.css?v=47333f3a79">
+<link rel="stylesheet" href="/assets/fonts-fa.css?v=7a93d5da98">
 <link rel="alternate" hreflang="en-CA" href="https://www.alibayatrealty.com/resources/buying/land-transfer-tax-toronto-york-region/">
 <link rel="alternate" hreflang="fa" href="https://www.alibayatrealty.com/fa/resources/buying/land-transfer-tax-toronto-york-region/">
 <link rel="alternate" hreflang="x-default" href="https://www.alibayatrealty.com/resources/buying/land-transfer-tax-toronto-york-region/">
@@ -229,7 +229,7 @@
     "@id": "https://www.alibayatrealty.com/#ali-bayat"
    },
    "datePublished": "2026-11-11",
-   "dateModified": "2026-11-20",
+   "dateModified": "2026-11-26",
    "breadcrumb": {
     "@id": "https://www.alibayatrealty.com/fa/resources/buying/land-transfer-tax-toronto-york-region/#breadcrumb"
    }
@@ -257,7 +257,7 @@
     "@id": "https://www.alibayatrealty.com/#ali-bayat"
    },
    "datePublished": "2026-11-11",
-   "dateModified": "2026-11-20",
+   "dateModified": "2026-11-26",
    "image": "https://www.alibayatrealty.com/assets/img/og/ali-bayat-og.jpg"
   },
   {
@@ -328,7 +328,7 @@
     <span class="label accent">راهنمای خرید</span>
     <h1 tabindex="-1">مالیات انتقال زمین در تورنتو <em>و منطقه‌ی یورک</em></h1>
     <p class="lede">چرا خرید با قیمت یکسان در نورث‌یورک هزینه‌ی بستن معامله‌ی بیشتری از وان، ریچموند هیل یا تورنهیل دارد، و چطور مبلغ خودتان را برآورد کنید.</p>
-    <div class="byline"><img class="av" src="/assets/img/ali-bayat-headshot.jpg" alt="" aria-hidden="true" width="44" height="44" decoding="async"><div class="small"><b>علی بیات</b><br><span class="muted">نرخ‌ها در تاریخ ۱ اکتبر ۲۰۲۶ با منابع رسمی تطبیق داده شده است · بازبینی‌شده توسط علی</span><br><span class="muted" data-editorial="">تاریخ انتشار: November 11, 2026 · به‌روزرسانی: November 20, 2026</span></div></div>
+    <div class="byline"><img class="av" src="/assets/img/ali-bayat-headshot.jpg" alt="" aria-hidden="true" width="44" height="44" decoding="async"><div class="small"><b>علی بیات</b><br><span class="muted">نرخ‌ها در تاریخ ۱ اکتبر ۲۰۲۶ با منابع رسمی تطبیق داده شده است · بازبینی‌شده توسط علی</span><br><span class="muted" data-editorial="">تاریخ انتشار: ۱۱ نوامبر ۲۰۲۶ · به‌روزرسانی: ۲۶ نوامبر ۲۰۲۶</span></div></div>
   </div></header>
   <section class="band tight">
     <div class="wrap two">
@@ -349,11 +349,12 @@
             <div class="line"><span>مالیات انتقال زمین انتاریو</span><span id="o-on" dir="ltr">—</span></div>
             <div class="line" id="o-onr-row"><span>بازپرداخت خریدار خانه‌ی اول انتاریو</span><span id="o-onr" dir="ltr">—</span></div>
             <div class="line" id="o-to-row"><span>مالیات انتقال زمین شهرداری تورنتو</span><span id="o-to" dir="ltr">—</span></div>
+            <div class="line" id="o-tor-row" hidden=""><span>بازپرداخت خریدار خانه‌ی اول تورنتو</span><span id="o-tor" dir="ltr">—</span></div>
             <div class="line total"><span>برآورد مجموع</span><span id="o-total" dir="ltr">—</span></div>
             <p class="small muted" id="o-note" style="margin-top:.6rem"></p>
           </div>
         </div>
-        <p class="small muted">برای خانه‌ای با یک یا دو واحد مسکونی تک‌خانواری، بر اساس نرخ‌های انتاریو و نرخ‌های شهر تورنتو که از ۱ آوریل ۲۰۲۶ اعمال می‌شوند. این یک برآورد است، نه مشاوره‌ی حقوقی یا مالیاتی؛ مبلغ نهایی را وکیل املاک شما تأیید می‌کند.</p>
+        <p class="small muted">برای خانه‌ای با یک یا دو واحد مسکونی تک‌خانواری، بر اساس نرخ‌های انتاریو و نرخ‌های شهر تورنتو که از ۱ آوریل ۲۰۲۶ اعمال می‌شوند. این یک برآورد است، نه مشاوره‌ی حقوقی یا مالیاتی؛ مبلغ نهایی را وکیل املاک شما تأیید می‌کند. ملکی با سه واحد یا بیشتر، یا ملک تجاری‌ـ‌مسکونی می‌خرید؟ پله‌های بالای ۲,۰۰۰,۰۰۰ دلار متفاوت محاسبه می‌شوند؛ پس این عدد را فقط یک برآورد کلی بدانید.</p>
         <h2>این دو مالیات چطور محاسبه می‌شوند</h2>
         <p>هر دو مالیات پله‌ای محاسبه می‌شوند؛ یعنی هر بخش از قیمت با نرخ خودش مشمول مالیات است. تا ۲,۰۰۰,۰۰۰ دلار، نرخ‌های انتاریو و تورنتو یکسان است؛ به همین دلیل خرید در تورنتو تقریباً مالیات را دو برابر می‌کند. بالای ۳,۰۰۰,۰۰۰ دلار، نرخ‌های تورنتو تندتر بالا می‌روند.</p>
         <div class="tbl-wrap"><table>
@@ -411,6 +412,6 @@
   </div>
 </footer>
 <div class="mbar" id="mbar" aria-hidden="true"><span>سؤالی درباره‌ی خرید، فروش یا سرمایه‌گذاری دارید؟</span><a class="btn sm" href="/fa/contact/" tabindex="-1">گفتگو با علی</a></div>
-<script src="/assets/site.js?v=8855fdf404" defer></script>
+<script src="/assets/site.js?v=ea2bf1ebbd" defer></script>
 </body>
 </html>

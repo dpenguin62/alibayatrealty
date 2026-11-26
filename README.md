@@ -69,6 +69,12 @@ python verify.py                     # all 15 gates (about 4 minutes); --skip-re
    own, set `perspective:"…"` for that area in `src/site.html`.
 6. Run `python build.py && python verify.py` until it says **PASS**.
 
+## Fonts
+
+Plus Jakarta Sans, Inter, IBM Plex Mono and Vazirmatn are served from the site itself (`src/fonts/`, from Fontsource 5.3.0,
+SIL Open Font License), not from Google: faster first paint, and visitors' IP addresses aren't sent to Google. To change a
+weight, add its woff2 and `@font-face` rule there and rebuild.
+
 ## Deploy
 
 The canonical origin is **`https://www.alibayatrealty.com`** (trailing slash on every page). Canonicals,
