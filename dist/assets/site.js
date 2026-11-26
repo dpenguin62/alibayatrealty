@@ -56,6 +56,7 @@ function tiered(p,br){let t=0,prev=0;for(const [cap,r] of br){if(p>prev)t+=(Math
 window.__ltt={tiered,ON,TO};
 const fmt=n=>n.toLocaleString("en-CA",{style:"currency",currency:"CAD",maximumFractionDigits:0});
 /* Number typed in any keyboard: Persian ۰-۹ and Arabic-Indic ٠-٩ digits, Persian decimal mark ٫; separators and $ dropped. */
+const latinDigits=s=>String(s).replace(/[۰-۹]/g,d=>d.charCodeAt(0)-1776).replace(/[٠-٩]/g,d=>d.charCodeAt(0)-1632);
 const toNum=s=>parseFloat(String(s).replace(/[۰-۹]/g,d=>d.charCodeAt(0)-1776).replace(/[٠-٩]/g,d=>d.charCodeAt(0)-1632).replace(/٫/g,".").replace(/[^0-9.]/g,""));
 function calc(){
   if(!document.getElementById("lt-price"))return;
@@ -153,6 +154,7 @@ if(STATIC){
 }
 const sendBtn=document.getElementById("c-send"),sendErr=document.getElementById("send-error"),sentLive=document.getElementById("sent-live");
 cf.addEventListener("submit",async e=>{e.preventDefault();const nm=document.getElementById("c-name"),em=document.getElementById("c-email"),cn=document.getElementById("c-consent"),ph=document.getElementById("c-phone");
+  ph.value=latinDigits(ph.value); /* Persian/Arabic-Indic digits from a Farsi keyboard: validate and send as 0-9 */
   const pd=ph.value.replace(/[^0-9]/g,"");
   const okN=nm.value.trim().length>0,okE=/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(em.value.trim()),okC=cn.checked,okP=!ph.value.trim()||(pd.length>=7&&pd.length<=15&&/^[0-9+().\s-]+$/.test(ph.value.trim()));
   [["e-name",nm,okN],["e-email",em,okE],["e-phone",ph,okP],["e-consent",cn,okC]].forEach(([id,el,ok])=>{document.getElementById(id).hidden=ok;el.setAttribute("aria-invalid",String(!ok))});
