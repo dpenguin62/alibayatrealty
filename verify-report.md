@@ -16,7 +16,7 @@ All engineering checks pass. Every remaining failure needs Ali's information, an
 | 6 | robots.txt behaves correctly (production and staging) | ✅ pass |
 | 7 | Structured data is valid and truthful (no invented facts) | ✅ pass |
 | 8 | Navigation works on desktop, tablet and mobile | ✅ pass |
-| 9 | Accessibility: axe-core, keyboard, focus, contrast, mobile, reduced motion | ❌ fail (external) |
+| 9 | Accessibility: axe-core, keyboard, focus, contrast, mobile, reduced motion | ✅ pass |
 | 10 | Lead form: production endpoint, payload contract, consent, honest states | ✅ pass |
 | 11 | Production safety: no placeholders, invented facts or interim content | ❌ fail (legal) |
 | 12 | Content governance: author, review status, dates, sources, indexability | ✅ pass |
@@ -60,11 +60,10 @@ All engineering checks pass. Every remaining failure needs Ali's information, an
 - desktop 1280px: every label goes to its intended URL; correct active state on every page
 - tablet 820px and mobile 375px (touch): menu opens, every link correct, closes; no horizontal scroll on any page
 
-**9. Accessibility: axe-core, keyboard, focus, contrast, mobile, reduced motion: FAIL**
-- axe-core: not run
+**9. Accessibility: axe-core, keyboard, focus, contrast, mobile, reduced motion: PASS**
+- axe-core: 0 violation(s) across 62 pages × light/dark × 1280/375px
 - built-in checks (names, labels, ARIA, landmarks, zoom, WCAG AA contrast) on 62 pages × light/dark × 1280/375px: 0 issue(s), 0 contrast
 - keyboard: every control reachable by Tab on every page (0 page(s) with gaps); 0 control(s) without a visible focus ring; skip link, menu Enter/Tab/Escape, live calculator results, reduced motion
-- ✗ [external] axe-core is not installed, so the full axe rule set did NOT run. Run `npm install` (package.json pins axe-core) and re-verify
 
 ## Structured data
 **7. Structured data is valid and truthful (no invented facts): PASS**
@@ -183,8 +182,8 @@ Every occurrence above comes from a managed placeholder (awaiting the owner inpu
 ### Requires Ali's information or approval (0)
 - none
 
-### Requires an external service or access (1)
-- axe-core is not installed, so the full axe rule set did NOT run. Run `npm install` (package.json pins axe-core) and re-verify
+### Requires an external service or access (0)
+- none
 
 ### Requires legal / brokerage review (2)
 - /privacy/: privacy-policy is interim, not final
